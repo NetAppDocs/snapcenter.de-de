@@ -1,0 +1,64 @@
+---
+permalink: protect-sce/task_view_exchange_backups_in_the_topology_page.html 
+sidebar: sidebar 
+keywords:  
+summary: Wenn Sie die Datensicherung vorbereiten, ist es Ihnen eventuell hilfreich, eine grafische Darstellung aller Backups auf den primären und sekundären Speichern anzuzeigen. 
+---
+= Zeigen Sie Exchange-Backups auf der Seite Topologie an
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie die Datensicherung vorbereiten, ist es Ihnen eventuell hilfreich, eine grafische Darstellung aller Backups auf den primären und sekundären Speichern anzuzeigen.
+
+*Über diese Aufgabe*
+
+Auf der Seite Topology sehen Sie alle Backups, die für die ausgewählte Ressource oder Ressourcengruppe verfügbar sind. Sie können die Details zu diesen Backups anzeigen und sie zur Durchführung von Datensicherungsvorgängen auswählen.
+
+Mithilfe des folgenden Symbols in der Ansicht Kopien verwalten können Sie bestimmen, ob die Backups auf dem primären oder sekundären Speicher verfügbar sind (gespiegelte Kopien oder Vault-Kopien).
+
+* image:../media/topology_primary_storage.gif["Symbol für primären Speicher"] Zeigt die Anzahl der Backups an, die auf dem primären Speicher verfügbar sind.
+* image:../media/topology_mirror_secondary_storage.gif["Symbol für sekundären Speicherspiegel"] Zeigt die Anzahl der Backups an, die mit SnapMirror Technologie im sekundären Storage gespiegelt werden.
+* image:../media/topology_vault_secondary_storage.gif["Symbol für sekundären Tresor"] Zeigt die Anzahl der Backups an, die mithilfe von SnapVault Technologie auf dem sekundären Storage repliziert werden.
++
+** Die Anzahl der angezeigten Backups umfasst die Backups, die aus dem sekundären Speicher gelöscht wurden.
++
+Wenn Sie beispielsweise 6 Backups mit einer Richtlinie für die Aufbewahrung von nur 4 Backups erstellt haben, wird die Anzahl der angezeigten Backups 6 angezeigt.
+
+
+
++
+|===
+
+
+| *Best Practice:* um sicherzustellen, dass die korrekte Anzahl replizierter Backups angezeigt wird, empfehlen wir, die Topologie zu aktualisieren. 
+|===
+
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Wählen Sie auf der Seite Ressourcen die Datenbank, die Ressource oder die Ressourcengruppe aus der Dropdown-Liste *Ansicht* aus.
+. Wählen Sie die Ressource entweder in der Datenbank-Detailansicht oder in der Ansicht Ressourcengruppen-Details aus.
++
+Wenn die Ressource geschützt ist, wird die Topologieseite der ausgewählten Ressource angezeigt.
+
+. Lesen Sie den Abschnitt „Übersichtskarte“, um eine Zusammenfassung der Anzahl der Backups anzuzeigen, die auf dem primären und sekundären Speicher verfügbar sind.
++
+Im Abschnitt „Übersichtskarte“ wird die Gesamtanzahl der Backups und die Gesamtanzahl der Protokollsicherungen angezeigt.
+
++
+Durch Klicken auf die Schaltfläche *Aktualisieren* wird eine Abfrage des Speichers gestartet, um eine genaue Anzahl anzuzeigen.
+
+. Klicken Sie in der Ansicht Kopien verwalten auf *Backups* auf dem primären oder sekundären Speicher, um Details zu einem Backup anzuzeigen.
++
+Die Details der Backups werden in einem Tabellenformat angezeigt.
+
+. Wählen Sie das Backup aus der Tabelle aus, und klicken Sie dann auf die Datensicherungssymbole, um Vorgänge zum Wiederherstellen, Umbenennen und Löschen durchzuführen.
++
+
+NOTE: Sie können Backups, die sich im sekundären Speicher befinden, nicht umbenennen oder löschen. Das Löschen von Snapshot Kopien wird durch die ONTAP Aufbewahrungseinstellungen gehandhabt.
+
+

@@ -1,0 +1,173 @@
+---
+permalink: protect-scsql/task_clone_from_a_sql_server_database_backup.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können das Backup einer SQL Server Datenbank mit SnapCenter klonen. Wenn Sie auf eine ältere Version der Daten zugreifen oder diese wiederherstellen möchten, können Sie Datenbank-Backups nach Bedarf klonen. 
+---
+= Klonen aus einem Backup der SQL Server Datenbank
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können das Backup einer SQL Server Datenbank mit SnapCenter klonen. Wenn Sie auf eine ältere Version der Daten zugreifen oder diese wiederherstellen möchten, können Sie Datenbank-Backups nach Bedarf klonen.
+
+*Was Sie brauchen*
+
+* Sie sollten sich auf den Datenschutz vorbereiten, indem Sie Aufgaben wie das Hinzufügen von Hosts, die Identifizierung von Ressourcen und das Erstellen von Verbindungen zum Speichersystem abschließen.
+* Sie sollten Datenbanken oder Ressourcengruppen gesichert haben.
+* Der Sicherungstyp wie Mirror, Vault oder Mirror-Vault für Daten-LUN und Protokoll-LUN sollte dieselben sein, um sekundäre Lokatoren beim Klonen zu einem alternativen Host mithilfe von Protokoll-Backups zu erkennen.
+* Wenn das gemountete Klonlaufwerk während eines SnapCenter Klonvorgangs nicht gefunden werden kann, sollten Sie den Parameter CloneRetryTimeout von SnapCenter Server in 300 ändern.
+* Sie sollten sicherstellen, dass die Aggregate, die die Volumes hosten, sich in der Liste der zugewiesenen Aggregate der Storage Virtual Machine (SVM) befinden.
+
+
+*Über diese Aufgabe*
+
+* Stellen Sie beim Klonen auf eine eigenständige Datenbankinstanz sicher, dass der Mount-Point-Pfad vorhanden ist und dass es sich um eine dedizierte Festplatte handelt.
+* Beim Klonen in eine Failover Cluster-Instanz (FCI) stellen Sie sicher, dass die Mount-Punkte vorhanden sind, dass es sich um eine freigegebene Festplatte handelt, und der Pfad und die FCI sollten zur gleichen SQL-Ressourcengruppe gehören.
+* Stellen Sie sicher, dass nur ein VFC- oder FC-Initiator mit jedem Host verbunden ist. Der Grund dafür ist, dass SnapCenter nur einen Initiator pro Host unterstützt.
+* Wenn sich die Quelldatenbank oder die Zielinstanz auf einem gemeinsam genutzten Cluster-Volume (csv) befindet, befindet sich die geklonte Datenbank auf dem csv.
+* DER SCRIPTS_PATH wird mit dem PredefinedWindowsScriptDirectory-Schlüssel definiert, der sich in der SMCoreServiceHost.exe.Config-Datei des Plug-in-Hosts befindet.
++
+Bei Bedarf können Sie diesen Pfad ändern und den SMCore Service neu starten. Es wird empfohlen, den Standardpfad für die Sicherheit zu verwenden.
+
++
+Der Wert des Schlüssels kann von Swagger über die API angezeigt werden: API /4.7/configsettings
+
++
+Sie können die GET API verwenden, um den Wert der Taste anzuzeigen. SET-API wird nicht unterstützt.
+
+
+
+
+NOTE: Stellen Sie für virtuelle Umgebungen (VMDK/RDM) sicher, dass der Bereitstellungspunkt eine dedizierte Festplatte ist.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann *SnapCenter-Plug-in für SQL Server* aus der Liste aus.
+. Wählen Sie auf der Seite Ressourcen die Option *Datenbank* oder *Ressourcengruppe* aus der Liste *Ansicht* aus.
++
+
+NOTE: Das Klonen eines Backups einer Instanz wird nicht unterstützt.
+
+
+
+*Schritte*
+
+. Wählen Sie die Datenbank oder Ressourcengruppe aus.
+. Wählen Sie auf der Ansicht „Kopien verwalten“ das Backup entweder aus dem primären oder sekundären (gespiegelten oder ausgelagerten) Storage-System aus.
+. Wählen Sie das Backup aus, und klicken Sie dann auf *image:../media/clone_icon.gif[""]*.
+. Führen Sie auf der Seite „Klonoptionen“ die folgenden Aktionen durch:
++
+|===
+| Für dieses Feld... | Tun Sie das... 
+
+
+ a| 
+Klonserver
+ a| 
+Wählen Sie einen Host aus, auf dem der Klon erstellt werden soll.
+
+
+
+ a| 
+Kloninstanz
+ a| 
+Wählen Sie eine Kloninstanz aus, zu der Sie das Datenbank-Backup klonen möchten.
+
+Diese SQL-Instanz muss sich auf dem angegebenen Klon-Server befinden.
+
+
+
+ a| 
+Suffix klonen
+ a| 
+Geben Sie ein Suffix ein, das an den Namen der Klondatei angehängt wird, um zu identifizieren, dass die Datenbank ein Klon ist.
+
+Beispiel: _db1_Clone_. Wenn Sie an demselben Speicherort wie die Originaldatenbank klonen, müssen Sie ein Suffix bereitstellen, um die geklonte Datenbank von der ursprünglichen Datenbank zu unterscheiden. Andernfalls schlägt der Vorgang fehl.
+
+
+
+ a| 
+Automatisches Zuweisen von Mount-Punkten oder automatische Zuweisung von Volume-Mount-Punkten unter Pfad
+ a| 
+Legen Sie fest, ob unter einem Pfad automatisch ein Mount-Punkt oder ein Volume-Mount-Punkt zugewiesen werden soll.
+
+Automatisches Zuweisen von Volume-Mount-Punkt unter Pfad: Der Mount-Punkt unter einem Pfad ermöglicht es Ihnen, ein bestimmtes Verzeichnis bereitzustellen. Die Mount-Punkte werden innerhalb dieses Verzeichnisses erstellt. Bevor Sie diese Option auswählen, müssen Sie sicherstellen, dass das Verzeichnis leer ist. Wenn sich eine Datenbank im Verzeichnis befindet, befindet sich die Datenbank nach dem Mount-Vorgang in einem ungültigen Status.
+
+|===
+. Wählen Sie auf der Seite Protokolle eine der folgenden Optionen aus:
++
+|===
+| Für dieses Feld... | Tun Sie das... 
+
+
+ a| 
+Keine
+ a| 
+Wählen Sie diese Option, wenn Sie nur das vollständige Backup ohne Logs klonen möchten.
+
+
+
+ a| 
+Alle Log-Backups
+ a| 
+Wählen Sie diese Option, um alle verfügbaren Protokoll-Backups zu klonen, die nach der vollständigen Sicherung datiert sind.
+
+
+
+ a| 
+Durch Backups bis protokollieren
+ a| 
+Wählen Sie diese Option, um die Datenbank auf Basis der Backup-Protokolle zu klonen, die bis zum Backup-Protokoll mit dem ausgewählten Datum erstellt wurden.
+
+
+
+ a| 
+Nach einem bestimmten Datum bis
+ a| 
+Geben Sie Datum und Uhrzeit an, nach denen die Transaktionsprotokolle nicht auf die geklonte Datenbank angewendet werden.
+
+Dieser Point-in-Time-Klon stoppt den Klon der Transaktions-Log-Einträge, die nach dem angegebenen Datum und der angegebenen Zeit aufgezeichnet wurden.
+
+|===
+. Geben Sie auf der Seite Skript das Skript-Timeout, den Pfad und die Argumente für das Prescript oder das Postscript ein, das vor bzw. nach dem Klonvorgang ausgeführt werden soll.
++
+Beispielsweise können Sie ein Skript ausführen, um SNMP-Traps zu aktualisieren, Warnmeldungen zu automatisieren, Protokolle zu senden usw.
+
++
+
+NOTE: Der Pfad für Prescripts oder Postscripts darf keine Laufwerke oder Shares enthalten. Der Pfad sollte relativ zum SCRIPTS_PATH sein.
+
++
+Das Standard-Skript-Timeout beträgt 60 Sekunden.
+
+. Wählen Sie auf der Benachrichtigungsseite aus der Dropdown-Liste *E-Mail-Präferenz* die Szenarien aus, in denen Sie die E-Mails versenden möchten.
++
+Außerdem müssen Sie die E-Mail-Adressen für Absender und Empfänger sowie den Betreff der E-Mail angeben. Wenn Sie den Bericht über den ausgeführten Klonvorgang anhängen möchten, wählen Sie *Job-Bericht anhängen* aus.
+
++
+
+NOTE: Für eine E-Mail-Benachrichtigung müssen Sie die SMTP-Serverdetails entweder mit der GUI oder mit dem PowerShell-Befehlssatz Set-SmtpServer angegeben haben.
+
++
+Informationen zu EMS finden Sie unter https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_ems_data_collection.html["EMS-Datenerfassung managen"]
+
+. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
+. Überwachen Sie den Fortschritt des Vorgangs, indem Sie auf *Monitor* > *Jobs* klicken.
+
+
+*Nach Ihrer Beendigung*
+
+Nach dem Erstellen des Klons sollten Sie ihn nicht mehr umbenennen.
+
+*Weitere Informationen*
+
+link:reference_back_up_sql_server_database_or_instance_or_availability_group.html["Sichern Sie die SQL Server-Datenbank, -Instanz oder -Verfügbarkeitsgruppe"]
+
+link:task_clone_backups_using_powershell_cmdlets_for_sql.html["Klonen von Backups mit PowerShell Cmdlets"]
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Clone_operation_might_fail_or_take_longer_time_to_complete_with_default_TCP_TIMEOUT_value["Der Klonvorgang kann fehlschlagen oder längere Zeit zum Abschließen mit dem Standardwert für TCP_TIMEOUT benötigen"]
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/The_failover_cluster_instance_database_clone_fails["Der Datenbankklon für die Failover-Cluster-Instanz ist fehlgeschlagen"]

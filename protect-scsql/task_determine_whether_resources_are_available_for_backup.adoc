@@ -1,0 +1,84 @@
+---
+permalink: protect-scsql/task_determine_whether_resources_are_available_for_backup.html 
+sidebar: sidebar 
+keywords: credentials 
+summary: Ressourcen sind die Datenbanken, Applikationsinstanzen, Verfügbarkeitsgruppen und ähnliche Komponenten, die von den installierten Plug-ins gewartet werden. Sie können diese Ressourcen zu Ressourcengruppen hinzufügen, sodass Sie Datensicherungsjobs ausführen können. Zunächst müssen Sie jedoch ermitteln, welche Ressourcen Sie zur Verfügung haben. Das ermitteln der verfügbaren Ressourcen überprüft außerdem, ob die Plug-in-Installation erfolgreich abgeschlossen wurde. 
+---
+= Bestimmen Sie, ob Ressourcen für ein Backup verfügbar sind
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ressourcen sind die Datenbanken, Applikationsinstanzen, Verfügbarkeitsgruppen und ähnliche Komponenten, die von den installierten Plug-ins gewartet werden. Sie können diese Ressourcen zu Ressourcengruppen hinzufügen, sodass Sie Datensicherungsjobs ausführen können. Zunächst müssen Sie jedoch ermitteln, welche Ressourcen Sie zur Verfügung haben. Das ermitteln der verfügbaren Ressourcen überprüft außerdem, ob die Plug-in-Installation erfolgreich abgeschlossen wurde.
+
+*Was Sie brauchen*
+
+* Sie müssen bereits Aufgaben abgeschlossen haben, wie z. B. das Installieren von SnapCenter-Servern, das Hinzufügen von Hosts, das Erstellen von Speichersystemverbindungen und das Hinzufügen von Anmeldeinformationen.
+* Um die Microsoft SQL-Datenbanken zu ermitteln, sollte eine der folgenden Bedingungen erfüllt sein.
++
+** Der Benutzer, der zum Hinzufügen des Plug-in-Hosts zum SnapCenter Server verwendet wurde, sollte über die erforderlichen Berechtigungen (Sysadmin) auf dem Microsoft SQL Server verfügen.
+** Wenn die oben genannte Bedingung nicht erfüllt ist, sollten Sie im SnapCenter-Server den Benutzer konfigurieren, der über die erforderlichen Berechtigungen (sysadmin) auf dem Microsoft SQL-Server verfügt. Der Benutzer sollte auf der Ebene der Microsoft SQL Server-Instanz konfiguriert werden und der Benutzer kann ein SQL- oder Windows-Benutzer sein.
+
+
+* Um die Microsoft SQL-Datenbanken in einem Windows-Cluster zu ermitteln, müssen Sie den TCP/IP-Port (Failover Cluster Instance) für die Failover-Cluster-Instanz (FCI) freigeben.
+* Wenn Datenbanken auf VMware RDM-LUNs oder VMDKs vorhanden sind, müssen Sie das SnapCenter Plug-in für VMware vSphere implementieren und das Plug-in mit SnapCenter registrieren.
++
+Weitere Informationen finden Sie unter https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere.html["Implementieren Sie das SnapCenter Plug-in für VMware vSphere"^]
+
+* Wenn der Host mit gMSA hinzugefügt wird und der gMSA über Login- und System Admin-Berechtigungen verfügt, wird das gMSA verwendet, um eine Verbindung zur SQL-Instanz herzustellen.
+
+
+*Über diese Aufgabe*
+
+Datenbanken können nicht gesichert werden, wenn die Option *Gesamtstatus* auf der Seite Details auf nicht verfügbar für Backups eingestellt ist. Die Option *Gesamtstatus* ist für die Sicherung auf nicht verfügbar eingestellt, wenn eine der folgenden Optionen zutrifft:
+
+* Datenbanken sind nicht auf einer NetApp LUN.
+* Datenbanken befinden sich nicht im normalen Zustand.
++
+Datenbanken befinden sich nicht im normalen Zustand, wenn sie offline sind, sie wiederherstellen, ausstehende Wiederherstellung, Verdacht usw.
+
+* Datenbanken verfügen über unzureichende Berechtigungen.
++
+Wenn ein Benutzer beispielsweise nur Zugriff auf die Datenbank hat, können Dateien und Eigenschaften der Datenbank nicht identifiziert werden und können daher nicht gesichert werden.
+
+
+
+
+NOTE: SnapCenter kann nur die primäre Datenbank sichern, wenn Sie eine Verfügbarkeitsgruppe auf der SQL Server Standard Edition haben.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Wählen Sie auf der Seite Ressourcen in der Dropdown-Liste *Ansicht* * oder *Instanz* oder *Verfügbarkeitsgruppe* aus.
++
+Klicken Sie Auf image:../media/filter_icon.gif[""] Und wählen Sie den Hostnamen und die SQL Server-Instanz aus, um die Ressourcen zu filtern. Sie können dann auf klicken image:../media/filter_icon.gif[""] Um den Filterbereich zu schließen.
+
+. Klicken Sie Auf *Ressourcen Aktualisieren*.
++
+Die neu hinzugefügten, umbenannten oder gelöschten Ressourcen werden in den SnapCenter-Serverbestand aktualisiert.
+
++
+
+IMPORTANT: Sie müssen die Ressourcen aktualisieren, wenn die Datenbanken außerhalb von SnapCenter umbenannt werden.
+
++
+Die Ressourcen werden zusammen mit Informationen wie Ressourcentyp, Host- oder Cluster-Name, zugeordnete Ressourcengruppen, Backup-Typ, Richtlinien und Gesamtstatus angezeigt.
+
++
+** Wenn die Datenbank auf Storage anderer Anbieter liegt, `Not available for backup` Wird in der Spalte *Gesamtstatus* angezeigt.
++
+Sie können keine Datensicherungsvorgänge für eine Datenbank ausführen, die sich auf einem Storage-System anderer Anbieter befindet.
+
+** Wenn sich die Datenbank auf einem NetApp Storage befindet und nicht geschützt ist, `Not protected` Wird in der Spalte *Gesamtstatus* angezeigt.
+** Wenn sich die Datenbank auf einem NetApp Storage-System befindet und geschützt ist, wird auf der Benutzeroberfläche angezeigt `Backup not run` Meldung in der Spalte *Gesamtstatus*.
+** Wenn sich die Datenbank auf einem NetApp Storage-System befindet und geschützt ist, und wenn das Backup für die Datenbank ausgelöst wird, wird die Benutzeroberfläche angezeigt `Backup succeeded` Meldung in der Spalte *Gesamtstatus*.
+
+
+
+
+
+NOTE: Wenn Sie beim Einrichten der Anmeldeinformationen eine SQL-Authentifizierung aktiviert haben, wird die erkannte Instanz oder Datenbank mit einem roten Vorhängeschloss-Symbol angezeigt. Wenn das Vorhängeschloss-Symbol angezeigt wird, müssen Sie die Instanz oder die Datenbankanmeldeinformationen angeben, damit die Instanz oder Datenbank einer Ressourcengruppe erfolgreich hinzugefügt werden kann.
+
+Nachdem der SnapCenter-Administrator einem RBAC-Benutzer die Ressourcen zuweist, muss sich der RBAC-Benutzer anmelden und auf *Ressourcen aktualisieren* klicken, um die neuesten *Gesamtstatus* der Ressourcen anzuzeigen.

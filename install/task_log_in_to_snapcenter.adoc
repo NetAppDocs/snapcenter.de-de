@@ -1,0 +1,171 @@
+---
+permalink: install/task_log_in_to_snapcenter.html 
+sidebar: sidebar 
+keywords: log in, logging, SnapCenter UI, modify timeout, GUI session timeout, disbale SSL 3.0, SSL 3.0, security 
+summary: 'SnapCenter unterstützt die rollenbasierte Zugriffssteuerung (Role Based Access Control, RBAC). Der SnapCenter Administrator weist über die SnapCenter RBAC Rollen und Ressourcen entweder einem Benutzer in der Arbeitsgruppe oder im aktiven Verzeichnis oder Gruppen im aktiven Verzeichnis zu. Der RBAC-Benutzer kann sich nun mit den zugewiesenen Rollen bei SnapCenter anmelden.' 
+---
+= Melden Sie sich über die RBAC-Autorisierung bei SnapCenter an
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter unterstützt die rollenbasierte Zugriffssteuerung (Role Based Access Control, RBAC). Der SnapCenter Administrator weist über die SnapCenter RBAC Rollen und Ressourcen entweder einem Benutzer in der Arbeitsgruppe oder im aktiven Verzeichnis oder Gruppen im aktiven Verzeichnis zu. Der RBAC-Benutzer kann sich nun mit den zugewiesenen Rollen bei SnapCenter anmelden.
+
+*Was Sie brauchen*
+
+* Sie sollten den Windows Process Activation Service (WAR) in Windows Server Manager aktivieren.
+* Wenn Sie Internet Explorer als Browser verwenden möchten, um sich beim SnapCenter-Server anzumelden, sollten Sie sicherstellen, dass der geschützte Modus in Internet Explorer deaktiviert ist.
+
+
+*Über diese Aufgabe*
+
+Während der Installation erstellt der Installationsassistent für SnapCenter-Server eine Verknüpfung und legt sie auf dem Desktop und im Startmenü des Hosts ab, auf dem SnapCenter installiert ist. Außerdem zeigt der Installationsassistent am Ende der Installation die SnapCenter-URL basierend auf den Informationen an, die Sie während der Installation angegeben haben. Diese können Sie kopieren, wenn Sie sich von einem Remote-System aus anmelden möchten.
+
+
+IMPORTANT: Wenn in Ihrem Webbrowser mehrere Registerkarten geöffnet sind, meldet Sie sich beim Schließen der Registerkarte „SnapCenter-Browser“ nicht von SnapCenter ab. Um Ihre Verbindung mit SnapCenter zu beenden, müssen Sie sich von SnapCenter entweder durch Klicken auf den *Abmelden*-Button oder durch Schließen des gesamten Webbrowsers abmelden.
+
+|===
+
+
+| *Best Practice:* aus Sicherheitsgründen wird empfohlen, dass Sie Ihren Browser nicht aktivieren, um Ihr SnapCenter-Passwort zu speichern. 
+|===
+Die Standard-GUI-URL ist eine sichere Verbindung zum Standardport 8146 auf dem Server, auf dem der SnapCenter-Server installiert ist (_\https://server:8146_). Wenn Sie während der SnapCenter-Installation einen anderen Server-Port bereitgestellt haben, wird dieser Port verwendet.
+
+Für die Implementierung von Hochverfügbarkeit (High Availability, HA) müssen Sie über die virtuelle Cluster-IP _\https://Virtual_Cluster_IP_or_FQDN:8146_ auf SnapCenter zugreifen können. Wenn Sie die SnapCenter-Benutzeroberfläche nicht sehen, wenn Sie im Internet Explorer (IE) zu _\https://Virtual_Cluster_IP_or_FQDN:8146_ navigieren, müssen Sie die IP-Adresse des virtuellen Clusters oder den FQDN als vertrauenswürdige Site in IE auf jedem Plug-in-Host hinzufügen, oder Sie müssen die erweiterte Sicherheit des IE auf jedem Plug-in-Host deaktivieren. Weitere Informationen finden Sie unter https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_access_cluster_IP_address_from_outside_network["Der Zugriff auf die Cluster-IP-Adresse kann nicht vom externen Netzwerk aus erfolgen"^].
+
+Über die SnapCenter GUI hinaus können Sie mit PowerShell Cmdlets Skripte erstellen, um Konfigurations-, Backup- und Restore-Vorgänge durchzuführen. Einige Cmdlets haben sich möglicherweise bei jeder SnapCenter Version geändert. Der https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["SnapCenter Software Cmdlet Referenzhandbuch"^] Enthält die Details.
+
+
+NOTE: Wenn Sie sich zum ersten Mal bei SnapCenter anmelden, müssen Sie sich mit den Anmeldeinformationen anmelden, die Sie während des Installationsvorgangs angegeben haben.
+
+*Schritte*
+
+. Starten Sie SnapCenter über die Verknüpfung auf Ihrem lokalen Hostdesktop, über die am Ende der Installation angegebene URL oder über die vom SnapCenter-Administrator bereitgestellte URL.
+. Geben Sie die Anmeldedaten des Benutzers ein.
++
+|===
+| So geben Sie Folgendes an: | Verwenden Sie eines dieser Formate... 
+
+
+ a| 
+Domain-Administrator
+ a| 
+** NetBIOS\Benutzername
+** Benutzername@UPN-Suffix
++
+Beispiel: \username@netapp.com
+
+** Domain FQDN\Benutzername
+
+
+
+
+ a| 
+Lokaler Administrator
+ a| 
+Benutzername
+
+|===
+. Wenn Ihnen mehr als eine Rolle zugewiesen ist, wählen Sie im Feld Rolle die Rolle aus, die Sie für diese Anmeldesitzung verwenden möchten.
++
+Ihre aktuellen Benutzer und die zugehörige Rolle werden nach der Anmeldung oben rechts von SnapCenter angezeigt.
+
+
+
+*Ergebnisse*
+
+Die Seite Dashboard wird angezeigt.
+
+Wenn die Protokollierung fehlschlägt und der Fehler aufgetreten ist, dass die Site nicht erreicht werden kann, sollten Sie das SSL-Zertifikat SnapCenter zuordnen. https://kb.netapp.com/?title=Advice_and_Troubleshooting%2FData_Protection_and_Security%2FSnapCenter%2FSnapCenter_will_not_open_with_error_%2522This_site_can%2527t_be_reached%2522["Weitere Informationen ."^]
+
+*Nach Ihrer Beendigung*
+
+Nachdem Sie sich zum ersten Mal bei SnapCenter Server als RBAC-Benutzer angemeldet haben, aktualisieren Sie die Ressourcenliste.
+
+Wenn Sie nicht vertrauenswürdige Active Directory-Domänen haben, die von SnapCenter unterstützt werden sollen, müssen Sie diese Domänen bei SnapCenter registrieren, bevor Sie die Rollen für die Benutzer in nicht vertrauenswürdigen Domänen konfigurieren. link:../install/task_register_untrusted_active_directory_domains.html["Weitere Informationen ."^]
+
+
+
+== Melden Sie sich mit Multi-Faktor-Authentifizierung (MFA) bei SnapCenter an.
+
+SnapCenter Server unterstützt MFA für Domain-Konto, das Teil des Active Directory ist.
+
+*Was Sie brauchen*
+
+* Sie sollten MFA aktiviert haben.
++
+Informationen zum Aktivieren von MFA finden Sie unter link:../install/enable_multifactor_authentication.html["Multi-Faktor-Authentifizierung aktivieren"]
+
+
+
+*Über diese Aufgabe*
+
+* Nur FQDN wird unterstützt
+* Workgroup- und domänenübergreifende Benutzer können sich nicht mit MFA anmelden
+
+
+*Schritte*
+
+. Starten Sie SnapCenter über die Verknüpfung auf Ihrem lokalen Hostdesktop, über die am Ende der Installation angegebene URL oder über die vom SnapCenter-Administrator bereitgestellte URL.
+. Geben Sie auf der Anmeldeseite AD FS Benutzernamen und Kennwort ein.
++
+Wenn die Fehlermeldung „Benutzername“ oder „Kennwort ungültig“ auf der Seite „AD FS“ angezeigt wird, sollten Sie Folgendes überprüfen:
+
++
+** Gibt an, ob Benutzername oder Passwort gültig ist
++
+Das Benutzerkonto sollte im Active Directory (AD) vorhanden sein.
+
+** Ob Sie die maximal zulässigen Versuche überschritten haben, die in AD festgelegt wurden
+** Gibt an, ob AD und AD FS verfügbar ist und ausgeführt wird
+
+
+
+
+
+
+== Ändern Sie das Zeitlimit für die SnapCenter-StandardGUI-Sitzung
+
+Sie können den Zeitlimits für die SnapCenter-GUI-Sitzung ändern, damit sie kürzer als oder größer als der Standardzeitraum von 20 Minuten ist.
+
+Als Sicherheitsfunktion warnt Sie SnapCenter nach einer Standardlaufzeit von 15 Minuten Inaktivität, dass Sie in 5 Minuten von der GUI-Sitzung abgemeldet werden. Standardmäßig meldet SnapCenter Sie nach 20 Minuten Inaktivität von der GUI-Sitzung ab, und Sie müssen sich erneut anmelden.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Einstellungen* > *Globale Einstellungen*.
+. Klicken Sie auf der Seite Globale Einstellungen auf *Konfigurationseinstellungen*.
+. Geben Sie im Feld Session-Timeout die neue Sitzungszeitüberschreitung in Minuten ein und klicken Sie dann auf *Speichern*.
+
+
+
+
+== Sichern Sie den SnapCenter Webserver durch Deaktivieren von SSL 3.0
+
+Aus Sicherheitsgründen sollten Sie das SSL-3.0-Protokoll (Secure Socket Layer) in Microsoft IIS deaktivieren, wenn es auf Ihrem SnapCenter-Webserver aktiviert ist.
+
+Das SSL 3.0-Protokoll enthält Mängel, mit denen ein Angreifer Verbindungsfehler verursachen kann oder man-in-the-Middle-Angriffe ausführen und den Verschlüsselungsverkehr zwischen Ihrer Website und ihren Besuchern beobachten kann.
+
+*Schritte*
+
+. Um den Registrierungs-Editor auf dem SnapCenter-Webserver-Host zu starten, klicken Sie auf *Start* > *Ausführen* und geben dann regedit ein.
+. Navigieren Sie im Registrierungs-Editor zu HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\.
++
+** Falls der Server-Schlüssel bereits vorhanden ist:
++
+... Wählen Sie das aktivierte DWORD aus, und klicken Sie dann auf *Bearbeiten* > *Ändern*.
+... Ändern Sie den Wert auf 0, und klicken Sie dann auf *OK*.
+
+
+** Wenn der Server-Schlüssel nicht vorhanden ist:
++
+... Klicken Sie auf *Bearbeiten* > *Neu* > *Schlüssel* und benennen Sie den Schlüssel Server.
+... Wenn der neue Serverschlüssel ausgewählt ist, klicken Sie auf *Bearbeiten* > *Neu* > *DWORD*.
+... Benennen Sie die neue DWORD aktiviert, und geben Sie dann 0 als Wert ein.
+
+
+
+
+. Schließen Sie Den Registrierungs-Editor.
+

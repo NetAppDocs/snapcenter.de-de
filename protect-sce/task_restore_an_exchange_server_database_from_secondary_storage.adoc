@@ -1,0 +1,30 @@
+---
+permalink: protect-sce/task_restore_an_exchange_server_database_from_secondary_storage.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Sie können eine gesicherte Exchange Server Datenbank aus dem sekundären Storage (Spiegel oder Vault) wiederherstellen.' 
+---
+= Wiederherstellung einer Exchange Server-Datenbank aus dem sekundären Storage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine gesicherte Exchange Server Datenbank aus dem sekundären Storage (Spiegel oder Vault) wiederherstellen.
+
+Sie müssen die Snapshot Kopien vom primären Storage in einen sekundären Storage replizieren.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann *Microsoft Exchange Server Plug-in* aus der Liste aus.
+. Wählen Sie auf der Seite Ressourcen in der Dropdown-Liste *Ansicht* die Option *Datenbank* oder *Ressourcengruppe* aus.
+. Wählen Sie die Datenbank oder die Ressourcengruppe aus.
++
+Die Topologieseite für die Datenbank- oder Ressourcengruppe wird angezeigt.
+
+. Wählen Sie im Abschnitt Kopien verwalten aus dem sekundären Speichersystem (Spiegel oder Tresor) *Backups* aus.
+. Wählen Sie das Backup aus der Liste aus, und klicken Sie dann auf image:../media/restore_icon.gif["Symbol Wiederherstellen"].
+. Wählen Sie auf der Seite Standort das Zielvolume für die Wiederherstellung der ausgewählten Ressource aus.
+. Schließen Sie den Wiederherstellungs-Assistenten ab, überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
+

@@ -1,0 +1,39 @@
+---
+permalink: protect-scc/reference_storage_types_supported_by_snapcenter_custom_plug_in.html 
+sidebar: sidebar 
+keywords:  
+summary: SnapCenter unterstützt zahlreiche Storage-Typen sowohl auf physischen als auch auf Virtual Machines. Sie müssen die Unterstützung Ihres Speichertyps überprüfen, bevor Sie benutzerdefinierte SnapCenter-Plug-ins installieren. 
+---
+= Von benutzerdefinierten SnapCenter Plug-ins unterstützte Storage-Typen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter unterstützt zahlreiche Storage-Typen sowohl auf physischen als auch auf Virtual Machines. Sie müssen die Unterstützung Ihres Speichertyps überprüfen, bevor Sie benutzerdefinierte SnapCenter-Plug-ins installieren.
+
+|===
+| Maschine | Storage-Typ 
+
+
+ a| 
+Physische und virtuelle Server (VMDKs und RDM LUNs werden nicht unterstützt)
+ a| 
+FC-verbundene LUNs
+
+
+
+ a| 
+Physische und virtuelle Server (VMDKs und RDM LUNs werden nicht unterstützt)
+ a| 
+ISCSI-verbundene LUNs
+
+
+
+ a| 
+Physische und virtuelle Server (VMDKs und RDM LUNs werden nicht unterstützt)
+ a| 
+Volumes mit NFS-Anbindung
+
+|===

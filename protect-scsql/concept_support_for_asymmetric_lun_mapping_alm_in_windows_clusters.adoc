@@ -1,0 +1,30 @@
+---
+permalink: protect-scsql/concept_support_for_asymmetric_lun_mapping_alm_in_windows_clusters.html 
+sidebar: sidebar 
+keywords: ALM 
+summary: 'Das SnapCenter Plug-in für Microsoft SQL Server unterstützt Discovery in SQL Server 2012 und höher, Asymmetric LUN Mapping \(ALM\)-Konfigurationen für hohe Verfügbarkeit und Verfügbarkeitsgruppen für Disaster Recovery. Bei der Ermittlung von Ressourcen erkennt SnapCenter Datenbanken auf lokalen Hosts und Remote-Hosts in ALM-Konfigurationen.' 
+---
+= Unterstützung für asymmetrische LUN-Zuordnung in Windows Clustern
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das SnapCenter Plug-in für Microsoft SQL Server unterstützt die Erkennung in SQL Server 2012 und höher sowie ALM-Konfigurationen (Asymmetric LUN Mapping) für Hochverfügbarkeit und Verfügbarkeitsgruppen für Disaster Recovery. Bei der Ermittlung von Ressourcen erkennt SnapCenter Datenbanken auf lokalen Hosts und Remote-Hosts in ALM-Konfigurationen.
+
+Eine ALM-Konfiguration ist ein einzelnes Windows Server Failover Cluster, das einen oder mehrere Nodes in einem primären Datacenter und einen oder mehrere Nodes in einem Disaster Recovery Center enthält.
+
+Nachfolgend ein Beispiel für eine ALM-Konfiguration:
+
+* Zwei Failover-Cluster-Instanzen (FCI) in einem Datacenter mit mehreren Standorten
+* FCI für lokale Hochverfügbarkeit (HA) und Availability Group (AG) für Disaster Recovery mit Standalone-Instanz am Disaster-Recovery-Standort
+
+
+image::../media/asymmetric_lun_mapping_diagram.gif[Asymmetrisches lun-Mapping]
+
+Der Storage im primären Datacenter wird von den FCI-Nodes gemeinsam genutzt, die sich im primären Datacenter befinden. Der Storage im Disaster-Recovery-Datacenter wird von den FCI-Nodes geteilt, die sich im Disaster-Recovery-Datacenter befinden.
+
+Der Storage im primären Datacenter ist für die Nodes im Disaster Recovery-Datacenter nicht sichtbar und umgekehrt.
+
+ALM-Architektur kombiniert zwei von FCI verwendete Shared Storage-Lösungen mit einer nicht gemeinsam genutzten oder dedizierten Storage-Lösung, die von der SQL AG verwendet wird. Die AG Lösung verwendet identische Laufwerksbuchstaben für gemeinsam genutzte Festplattenressourcen über alle Datacenter hinweg. Diese Anordnung des Storage, bei der ein Cluster-Laufwerk von einem Teil der Nodes innerhalb eines WSFC gemeinsam genutzt wird, wird als ALM bezeichnet.

@@ -1,0 +1,107 @@
+---
+permalink: protect-scw/task_install_the_snapcenter_plug_in_for_windows_silently_from_the_command_line.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können das SnapCenter-Plug-in für Microsoft Windows lokal auf einem Windows-Host installieren, wenn Sie das Plug-in nicht Remote über die SnapCenter-Benutzeroberfläche installieren können. Sie können das SnapCenter-Plug-in für Microsoft Windows-Installationsprogramm unbeaufsichtigt, im Silent-Modus, über die Windows-Befehlszeile ausführen. 
+---
+= Installieren Sie das SnapCenter-Plug-in für Microsoft Windows im Hintergrund über die Befehlszeile
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können das SnapCenter-Plug-in für Microsoft Windows lokal auf einem Windows-Host installieren, wenn Sie das Plug-in nicht Remote über die SnapCenter-Benutzeroberfläche installieren können. Sie können das SnapCenter-Plug-in für Microsoft Windows-Installationsprogramm unbeaufsichtigt, im Silent-Modus, über die Windows-Befehlszeile ausführen.
+
+*Was Sie brauchen*
+
+* Sie müssen Microsoft .Net 4.7.2 oder höher installiert haben.
+* Sie müssen PowerShell 4.0 oder höher installiert haben.
+* Sie müssen die Windows-Nachrichtenwarteschlange aktiviert haben.
+* Sie müssen ein lokaler Administrator auf dem Host sein.
+
+
+*Schritte*
+
+. Laden Sie das SnapCenter-Plug-in für Microsoft Windows von Ihrem Installationsort herunter.
++
+Beispielsweise lautet der Standardinstallationspfad C:\ProgramData\NetApp\SnapCenter\Package Repository.
+
++
+Auf diesen Pfad kann von dem Host zugegriffen werden, auf dem der SnapCenter-Server installiert ist.
+
+. Kopieren Sie die Installationsdatei auf den Host, auf dem Sie das Plug-in installieren möchten.
+. Navigieren Sie in der Eingabeaufforderung zum Verzeichnis, in dem Sie die Installationsdatei heruntergeladen haben.
+. Geben Sie den folgenden Befehl ein und ersetzen Sie Variablen durch Ihre Daten:
++
+`"snapcenter_windows_host_plugin.exe"/silent / debuglog"" /log"" BI_SNAPCENTER_PORT= SUITE_INSTALLDIR="" BI_SERVICEACCOUNT= BI_SERVICEPWD= ISFeatureInstall=SCW`
+
++
+Beispiel:
+
++
+ `"C:\ProgramData\NetApp\SnapCenter\Package Repository \snapcenter_windows_host_plugin.exe"/silent /debuglog"C: \HPPW_SCW_Install.log" /log"C:\" BI_SNAPCENTER_PORT=8145 SUITE_INSTALLDIR="C: \Program Files\NetApp\SnapCenter" BI_SERVICEACCOUNT=domain\administrator BI_SERVICEPWD=password ISFeatureInstall=SCW`
++
+
+NOTE: Alle Parameter, die während der Installation von Plug-in für Windows übergeben wurden, sind Groß- und Kleinschreibung.
+
++
+Geben Sie die Werte für die folgenden Variablen ein:
+
++
+|===
+| Variabel | Wert 
+
+
+ a| 
+_/Debuglog“<Debug_Log_Path>_
+ a| 
+Geben Sie den Namen und den Speicherort der Protokolldatei für das Installationsprogramm der Suite an, wie im folgenden Beispiel: Setup.exe /debuglog"C:\PathToLog\setupexe.log".
+
+
+
+ a| 
+BI_SNAPCENTER_PORT
+ a| 
+Geben Sie den Port an, auf dem SnapCenter mit SMCore kommuniziert.
+
+
+
+ a| 
+SUITE_INSTALLDIR
+ a| 
+Geben Sie das Installationsverzeichnis für das Host-Plug-in-Paket an.
+
+
+
+ a| 
+BI_SERVICEACCOUNT
+ a| 
+Geben Sie das SnapCenter-Plug-in für das Web-Service-Konto von Microsoft Windows an.
+
+
+
+ a| 
+BI_SERVICEPWD
+ a| 
+Geben Sie das Passwort für das SnapCenter-Plug-in für das Microsoft Windows-Webservice-Konto an.
+
+
+
+ a| 
+ISFeatureInstall
+ a| 
+Geben Sie die Lösung an, die von SnapCenter auf dem Remote-Host implementiert werden soll.
+
+|===
++
+Der Parameter _debuglog_ enthält den Pfad der Protokolldatei für SnapCenter. Das Schreiben in diese Protokolldatei ist die bevorzugte Methode, um Informationen zur Fehlerbehebung zu erhalten, da die Datei die Ergebnisse von Prüfungen enthält, die die Installation für Plug-in-Voraussetzungen ausführt.
+
++
+Weitere Informationen zur Fehlerbehebung finden Sie bei Bedarf in der Protokolldatei für das Paket SnapCenter für Windows. Die Protokolldateien für das Paket werden (älteste zuerst) im Ordner _%Temp%_ aufgeführt, z. B. _C:\temp\_.
+
++
+
+NOTE: Die Installation des Plug-ins für Windows registriert das Plug-in auf dem Host und nicht auf dem SnapCenter-Server. Sie können das Plug-in auf dem SnapCenter Server registrieren, indem Sie den Host mithilfe der SnapCenter GUI oder PowerShell Cmdlet hinzufügen. Nach dem Hinzufügen des Hosts wird das Plug-in automatisch erkannt.
+
+

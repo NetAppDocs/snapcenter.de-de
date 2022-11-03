@@ -1,0 +1,18 @@
+---
+permalink: protect-scc/task_install_snapcenter_custom_plug_in.html 
+sidebar: sidebar 
+keywords: installing 
+summary: Sie sollten benutzerdefinierte SnapCenter-Plug-ins installieren und einrichten, wenn Sie benutzerdefinierte Plug-in-Ressourcen schützen möchten. 
+---
+= Installationsworkflow von benutzerdefinierten SnapCenter Plug-ins
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie sollten benutzerdefinierte SnapCenter-Plug-ins installieren und einrichten, wenn Sie benutzerdefinierte Plug-in-Ressourcen schützen möchten.
+
+image::../media/scc_install_configure_workflow.png[workflow für die scc-Installation konfigurieren]
+
+link:concept_develop_a_plug_in_for_your_application.html["Entwickeln Sie ein Plug-in für Ihre Applikation"]

@@ -1,0 +1,166 @@
+---
+permalink: protect-hana/task_back_up_sap_hana_databases.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: Wenn eine Ressource noch nicht zu einer Ressourcengruppe gehört, können Sie die Ressource auf der Seite Ressourcen sichern. 
+---
+= SAP HANA Datenbanken sichern
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn eine Ressource noch nicht zu einer Ressourcengruppe gehört, können Sie die Ressource auf der Seite Ressourcen sichern.
+
+*Was Sie brauchen*
+
+* Sie müssen eine Sicherungsrichtlinie erstellt haben.
+* Wenn Sie eine Ressource mit einer SnapMirror Beziehung mit einem sekundären Storage sichern möchten, sollte die dem Storage-Benutzer zugewiesene ONTAP-Rolle die Berechtigung „`snapmirror all`“ enthalten. Wenn Sie jedoch die Rolle „`vsadmin`“ verwenden, ist die Berechtigung „`snapmirror all`“ nicht erforderlich.
+* Stellen Sie beim Backup-Vorgang auf Basis von Snapshot Kopien sicher, dass alle Mandantendatenbanken gültig und aktiv sind.
+* Zur Erstellung von SAP HANA System-Replikations-Backups wird empfohlen, alle Ressourcen des SAP HANA-Systems zu einer Ressourcengruppe hinzuzufügen. So wird für ein nahtloses Backup im Takeover-Failback-Modus gesorgt.
++
+link:task_create_resource_groups_and_attach_policies.html["Erstellen von Ressourcengruppen und Anhängen von Richtlinien"].
+
++
+link:task_back_up_resource_groups_sap_hana.html["Sichern von Ressourcengruppen"]
+
+* Wenn Sie ein dateibasiertes Backup erstellen möchten, wenn eine oder mehrere Mandanten-Datenbanken nicht verfügbar sind, setzen Sie DEN PARAMETER ALLOW_FILE_BASED_BACKUP_IFINACTIVE_TENANTS_PRESENT in der HANA-Eigenschaftendatei mit AUF *JA* `Set-SmConfigSettings` Cmdlet:
++
+Die Informationen zu den Parametern, die mit dem Cmdlet verwendet werden können, und deren Beschreibungen können durch Ausführen von Get-Help _Command_Name_ abgerufen werden. Alternativ können Sie auch auf die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["SnapCenter Software Cmdlet Referenzhandbuch"]
+
+* Um Befehle vor und nach quiesce, Snapshot Kopie und unquiesce Vorgängen auszuführen, sollten Sie überprüfen, ob die Befehle in der Befehlsliste vorhanden sind, die auf dem Plug-in Host verfügbar ist, aus den folgenden Pfaden:
++
+Für Windows: _C:\Programmdateien\NetApp\SnapCenter\SnapCenter Plug-in Creator\etc\allowed_befiehlt_list.txt_
+
++
+Für Linux: _/var/opt/snapcenter/scc/allowed_befiehlt_list.txt_
+
+
+
+
+NOTE: Wenn die Befehle in der Befehlsliste nicht vorhanden sind, schlägt der Vorgang fehl.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Filtern Sie auf der Seite Ressourcen die Ressourcen aus der Dropdown-Liste *Ansicht* nach Ressourcentyp.
++
+Klicken Sie Auf *image:../media/filter_icon.gif[""]*, und wählen Sie dann den Host-Namen und den Ressourcentyp, um die Ressourcen zu filtern. Sie können dann auf klicken image:../media/filter_icon.gif[""] Um den Filterbereich zu schließen.
+
+. Klicken Sie auf die Ressource, die Sie sichern möchten.
+. Wählen Sie auf der Seite „Ressource“ *Benutzerdefiniertes Namensformat für Snapshot-Kopie verwenden* aus, und geben Sie dann ein benutzerdefiniertes Namensformat ein, das Sie für den Namen der Snapshot-Kopie verwenden möchten.
++
+Beispiel: _Custext_Policy_hostname_ oder _Resource_hostname_. Standardmäßig wird ein Zeitstempel an den Namen der Snapshot Kopie angehängt.
+
+. Gehen Sie auf der Seite Anwendungseinstellungen wie folgt vor:
++
+** Klicken Sie auf den Pfeil *Backups*, um zusätzliche Backup-Optionen festzulegen:
++
+Aktivieren Sie bei Bedarf das Backup der Konsistenzgruppe, und führen Sie die folgenden Aufgaben aus:
+
++
+|===
+| Für dieses Feld... | Tun Sie das... 
+
+
+ a| 
+Es dauert nicht lange, bis der „Consistency Group Snapshot“-Vorgang abgeschlossen ist
+ a| 
+Wählen Sie *dringendst*, oder *Medium*, oder *relaxed* aus, um die Wartezeit bis zum Abschluss der Snapshot-Kopie anzugeben. Dringend = 5 Sekunden, Mittel = 7 Sekunden und entspannt = 20 Sekunden.
+
+
+
+ a| 
+Deaktivieren Sie WAFL Sync
+ a| 
+Wählen Sie diese Option aus, um zu vermeiden, einen WAFL Konsistenzpunkt zu erzwingen.
+
+|===
+** Klicken Sie auf den Pfeil *Scripts*, um vor- und Post-Befehle für quiesce, Snapshot copy und unquiesce-Vorgänge auszuführen.
++
+Sie können auch vor dem Beenden des Sicherungsvorgangs Vorbefehle ausführen. Prescripts und Postscripts werden auf dem SnapCenter Server ausgeführt.
+
+** Klicken Sie auf den Pfeil **Custom Configurations**und geben Sie dann die für alle Jobs mit dieser Ressource erforderlichen benutzerdefinierten Wertpaare ein.
+** Klicken Sie auf den Pfeil *Snapshot-Kopie-Tool*, um das Tool zum Erstellen von Snapshot-Kopien auszuwählen:
++
+|===
+| Ihre Situation | Dann... 
+
+
+ a| 
+SnapCenter zum Erstellen einer Snapshot Kopie auf Storage-Ebene
+ a| 
+Wählen Sie *SnapCenter ohne Dateisystemkonsistenz* aus.
+
+
+
+ a| 
+SnapCenter verwendet das Plug-in für Windows, um das Filesystem in einen konsistenten Zustand zu versetzen und anschließend eine Snapshot Kopie zu erstellen
+ a| 
+Wählen Sie *SnapCenter mit Dateisystemkonsistenz* aus.
+
+
+
+ a| 
+Geben Sie den Befehl ein, um eine Snapshot Kopie zu erstellen
+ a| 
+Wählen Sie *other* aus, und geben Sie dann den Befehl ein, um eine Snapshot Kopie zu erstellen.
+
+|===
++
+image:../media/application_settings.gif[""]
+
+
+
+. Führen Sie auf der Seite Richtlinien die folgenden Schritte aus:
++
+.. Wählen Sie eine oder mehrere Richtlinien aus der Dropdown-Liste aus.
++
+
+NOTE: Sie können eine Richtlinie auch erstellen, indem Sie auf * klickenimage:../media/add_policy_from_resourcegroup.gif[""]*.
+
++
+Im Abschnitt „Zeitpläne für ausgewählte Richtlinien konfigurieren“ werden die ausgewählten Richtlinien aufgelistet.
+
+.. Klicken Sie Auf *image:../media/add_policy_from_resourcegroup.gif[""]* In der Spalte Zeitplan konfigurieren für die Richtlinie, für die Sie einen Zeitplan konfigurieren möchten.
+.. Konfigurieren Sie im Dialogfeld Add Schedules for Policy_Policy_Name_ den Zeitplan, und klicken Sie dann auf *OK*.
++
+_Policy_Name_ ist der Name der von Ihnen ausgewählten Richtlinie.
+
++
+Die konfigurierten Zeitpläne sind in der Spalte angewendete Zeitpläne aufgeführt.
+
+
+
+. Wählen Sie auf der Benachrichtigungsseite aus der Dropdown-Liste *E-Mail-Präferenz* die Szenarien aus, in denen Sie die E-Mails versenden möchten.
++
+Außerdem müssen Sie die E-Mail-Adressen für Absender und Empfänger sowie den Betreff der E-Mail angeben. SMTP muss auch unter *Einstellungen* > *Globale Einstellungen* konfiguriert werden.
+
+. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
++
+Die Seite „Ressourcen-Topologie“ wird angezeigt.
+
+. Klicken Sie auf *Jetzt sichern*.
+. Führen Sie auf der Seite Backup die folgenden Schritte aus:
++
+.. Wenn Sie mehrere Richtlinien auf die Ressource angewendet haben, wählen Sie aus der Dropdown-Liste *Richtlinie* die Richtlinie aus, die Sie für das Backup verwenden möchten.
++
+Wenn die für das On-Demand-Backup ausgewählte Richtlinie einem Backup-Zeitplan zugeordnet ist, werden die On-Demand-Backups auf Basis der für den Zeitplantyp festgelegten Aufbewahrungseinstellungen beibehalten.
+
+.. Klicken Sie Auf *Backup*.
+
+
+. Überwachen Sie den Fortschritt des Vorgangs, indem Sie auf *Monitor* > *Jobs* klicken.
++
+** In MetroCluster-Konfigurationen kann SnapCenter nach einem Failover möglicherweise keine Sicherungsbeziehung erkennen.
++
+Weitere Informationen finden Sie unter: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["SnapMirror oder SnapVault-Beziehung kann nach MetroCluster Failover nicht erkannt werden"^]
+
+** Wenn Sie Anwendungsdaten auf VMDKs sichern und die Java Heap-Größe für das SnapCenter-Plug-in für VMware vSphere nicht groß genug ist, kann die Sicherung fehlschlagen.
++
+Um die Java-Heap-Größe zu erhöhen, suchen Sie nach der Skriptdatei _/opt/netapp/init_scripts/scvservice_. In diesem Skript startet der Befehl _do_Start method_ den SnapCenter VMware Plug-in-Dienst. Aktualisieren Sie diesen Befehl auf Folgendes: _Java -jar -Xmx8192M -Xms4096M_
+
+
+
+

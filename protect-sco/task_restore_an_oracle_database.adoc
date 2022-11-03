@@ -1,0 +1,232 @@
+---
+permalink: protect-sco/task_restore_an_oracle_database.html 
+sidebar: sidebar 
+keywords: restore, recover, Oracle 
+summary: Bei einem Datenverlust können Sie mit SnapCenter Daten von einem oder mehreren Backups auf Ihrem aktiven Dateisystem wiederherstellen und dann die Datenbank wiederherstellen. 
+---
+= Stellen Sie Oracle Datenbanken wieder her
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bei einem Datenverlust können Sie mit SnapCenter Daten von einem oder mehreren Backups auf Ihrem aktiven Dateisystem wiederherstellen und dann die Datenbank wiederherstellen.
+
+*Über diese Aufgabe*
+
+Die Recovery wird anhand der Archivprotokolle durchgeführt, die am konfigurierten Speicherort für das Archivprotokoll verfügbar sind. Wenn die Datenbank im ARCHIVELOG-Modus ausgeführt wird, speichert die Oracle-Datenbank die gefüllten Gruppen von Redo-Log-Dateien an einem oder mehreren Offline-Zielen, die gemeinsam als archiviertes Redo-Protokoll bezeichnet werden. SnapCenter identifiziert und bindet die optimale Anzahl von Protokoll-Backups auf Basis der angegebenen SCN, des ausgewählten Datums und der ausgewählten Uhrzeit oder der Option „Protokolle“. Wenn die für die Recovery erforderlichen Archivprotokolle nicht am konfigurierten Speicherort verfügbar sind, sollten Sie die Snapshot Kopie mit den Protokollen mounten und den Pfad als externe Archivprotokolle angeben.
+
+Wenn Sie ASM-Datenbank von ASMLIB zu ASMFD migrieren, können die mit ASMLIB erstellten Backups nicht zur Wiederherstellung der Datenbank verwendet werden. Sie sollten Backups in der ASMFD-Konfiguration erstellen und diese Backups für die Wiederherstellung verwenden. Wenn die ASM-Datenbank von ASMFD zu ASMLIB migriert wird, sollten Sie zur Wiederherstellung auch Backups in der ASMLIB-Konfiguration erstellen.
+
+Wenn Sie eine Datenbank wiederherstellen, wird eine operative Sperrdatei (.SM_Lock_dbsid) auf dem Oracle-Datenbank-Host im Verzeichnis Dollar ORACLE_HOME/dbs erstellt, um zu vermeiden, dass mehrere Operationen auf der Datenbank ausgeführt werden. Nach dem Wiederherstellen der Datenbank wird die operative Sperrdatei automatisch entfernt.
+
+
+NOTE: Die Wiederherstellung der SPFILE- und Password-Datei wird nicht unterstützt.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Wählen Sie auf der Seite Ressourcen die Option *Datenbank* oder *Ressourcengruppe* aus der Liste *Ansicht* aus.
+. Wählen Sie die Datenbank entweder in der Datenbank-Detailansicht oder in der Ansicht Ressourcengruppen-Details aus.
++
+Die Seite der Datenbanktopologie wird angezeigt.
+
+. Wählen Sie in der Ansicht Kopien verwalten die Option *Backups* aus den primären oder sekundären (gespiegelten oder replizierten) Speichersystemen aus.
+. Wählen Sie das Backup aus der Tabelle aus, und klicken Sie dann auf *image:../media/restore_icon.gif["Symbol Wiederherstellen"]*.
+. Führen Sie auf der Seite „Wiederherstellungsumfang“ die folgenden Aufgaben durch:
++
+.. Wenn Sie in einer RAC-Umgebung (Real Application Clusters) eine Sicherung einer Datenbank ausgewählt haben, wählen Sie den RAC-Knoten aus.
+.. Wenn Sie eine gespiegelte oder Vault-Daten auswählen:
++
+*** Wenn keine Protokollsicherung bei Spiegel oder Tresor vorhanden ist, wird nichts ausgewählt und die Lokatoren leer sind.
+*** Wenn Protokollsicherungen in Mirror oder Vault vorhanden sind, wird die neueste Protokollsicherung ausgewählt und der entsprechende Locator angezeigt.
++
+
+NOTE: Wenn die ausgewählte Protokollsicherung sowohl im Spiegelungs- als auch im Tresorverzeichnis vorhanden ist, werden beide Lokatoren angezeigt.
+
+
+
+.. Führen Sie folgende Aktionen durch:
++
+|===
+| Sie möchten wiederherstellen... | Tun Sie das... 
+
+
+ a| 
+Alle Datendateien der Datenbank
+ a| 
+Wählen Sie *Alle Datendateien*.
+
+Nur die Datendateien der Datenbank werden wiederhergestellt. Die Kontrolldateien, Archivprotokolle oder Wiederherstellungsprotokolle werden nicht wiederhergestellt.
+
+
+
+ a| 
+Tablespaces
+ a| 
+Wählen Sie *Tablespaces*.
+
+Sie können die Tabellen angeben, die Sie wiederherstellen möchten.
+
+
+
+ a| 
+Kontrolldateien
+ a| 
+Wählen Sie *Kontrolldateien* aus.
+
+
+
+ a| 
+Wiederholen Sie die Protokolldateien
+ a| 
+Wählen Sie *Redo-Log-Dateien* aus.
+
+Diese Option ist nur für Data Guard Standby- oder Active Data Guard-Standby-Datenbanken verfügbar.
+
+
+NOTE: Redo-Log-Dateien werden nicht für Datenbanken gesichert, die nicht von Data Guard stammen. Für Datenbanken, die nicht von Data Guard stammen, wird die Recovery mit Archivprotokollen durchgeführt.
+
+
+
+ a| 
+Steckbare Datenbanken (PDBs)
+ a| 
+Wählen Sie *Pluggable Databases* aus, und geben Sie dann die PDBs an, die Sie wiederherstellen möchten.
+
+
+
+ a| 
+Steckbare Datenbank-Tabellen (PDB)
+ a| 
+Wählen Sie *Pluggable Database (PDB) Tablespaces* aus, und geben Sie dann die PDB und die Tablespaces dieser PDB an, die Sie wiederherstellen möchten.
+
+Diese Option ist nur verfügbar, wenn Sie eine PDB für die Wiederherstellung ausgewählt haben.
+
+|===
+.. Wählen Sie *Datenbankstatus ändern, falls erforderlich für Wiederherstellung und Wiederherstellung*, um den Status der Datenbank in den Zustand zu ändern, der für die Wiederherstellung und Wiederherstellung erforderlich ist.
++
+Die verschiedenen Status einer Datenbank von höher bis niedriger sind offen, montiert, gestartet und heruntergefahren. Sie müssen dieses Kontrollkästchen aktivieren, wenn sich die Datenbank in einem höheren Zustand befindet, der Status jedoch in einen niedrigeren Zustand geändert werden muss, um einen Wiederherstellungsvorgang durchzuführen. Wenn sich die Datenbank in einem niedrigeren Zustand befindet, aber der Status in einen höheren Zustand geändert werden muss, um den Wiederherstellungsvorgang auszuführen, wird der Datenbankstatus automatisch geändert, auch wenn Sie das Kontrollkästchen nicht aktivieren.
+
++
+Wenn sich eine Datenbank im Status „offen“ befindet und die Datenbank für die Wiederherstellung im Status „angehängt“ befinden muss, wird der Datenbankzustand nur geändert, wenn Sie dieses Kontrollkästchen aktivieren.
+
+.. Wählen Sie *erzwingen in place Restore* aus, wenn Sie in den Szenarien, in denen neue Datendateien nach dem Backup hinzugefügt werden, oder wenn LUNs zu einer LVM-Laufwerksgruppe hinzugefügt, gelöscht oder neu erstellt werden sollen, in-place-Wiederherstellung durchführen möchten.
+
+
+. Führen Sie auf der Seite „Recovery Scope“ die folgenden Aktionen durch:
++
+|===
+| Sie suchen... | Tun Sie das... 
+
+
+ a| 
+Möchten Sie die letzte Transaktion wiederherstellen
+ a| 
+Wählen Sie *Alle Protokolle*.
+
+
+
+ a| 
+Wiederherstellen einer bestimmten Systemänderungsnummer (SCN)
+ a| 
+Wählen Sie *bis SCN (Systemänderungsnummer)*.
+
+
+
+ a| 
+Möchten Sie Daten zu einer bestimmten Zeit wiederherstellen
+ a| 
+Wählen Sie *Datum und Uhrzeit*.
+
+Sie müssen Datum und Uhrzeit der Zeitzone des Datenbank-Hosts angeben.
+
+
+
+ a| 
+Möchten Sie nicht wiederherstellen
+ a| 
+Wählen Sie *Keine Wiederherstellung*.
+
+
+
+ a| 
+Soll beliebige externe Archiv-Log-Speicherorte angeben
+ a| 
+Wenn die Datenbank im ARCHIVELOG-Modus ausgeführt wird, identifiziert und montiert SnapCenter die optimale Anzahl von Protokoll-Backups basierend auf der angegebenen SCN, ausgewählten Datum und Uhrzeit oder allen Protokollen.
+
+Wenn Sie weiterhin den Speicherort der externen Archivprotokolldateien angeben möchten, wählen Sie *Externe Archivprotokolle angeben*.
+
+Wenn Archivprotokolle im Rahmen der Sicherung beschnitten werden und Sie die erforderlichen Archiv-Log-Backups manuell gemountet haben, müssen Sie den gemounteten Backup-Pfad als externen Archiv-Log-Speicherort für die Wiederherstellung angeben.
+
+
+NOTE: Sie sollten den Pfad und den Inhalt des Mount-Pfads überprüfen, bevor Sie ihn als externen Speicherort des Protokolls auflisten.
+
+** http://www.netapp.com/us/media/tr-4591.pdf["Technischer Bericht 4591 zu Datenbanksicherheit, Recovery, Replizierung und DR"^]
+** https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/ORA-00308%3A_cannot_open_archived_log_ORA_LOG_arch1_123_456789012.arc["Der Vorgang schlägt mit ORA-00308-Fehler fehl"^]
+
+
+|===
++
+Eine Wiederherstellung mit einer Recovery von sekundären Backups ist nicht möglich, wenn Archiv-Protokoll-Volumes nicht geschützt sind, aber Daten-Volumes gesichert sind. Sie können nur wiederherstellen, indem Sie *Keine Wiederherstellung*.
+
++
+Wenn Sie eine RAC-Datenbank wiederherstellen, bei der die Option Open Database ausgewählt ist, wird nur die RAC-Instanz, in der der Wiederherstellungsvorgang initiiert wurde, wieder in den Status Open zurückgebracht.
+
++
+
+NOTE: Die Recovery wird nicht für Data Guard Standby- und Active Data Guard-Standby-Datenbanken unterstützt.
+
+. Geben Sie auf der Seite PreOps den Pfad und die Argumente des Preskript ein, das Sie vor der Wiederherstellung ausführen möchten.
++
+Sie müssen die Voreinstellungen entweder im Pfad _/var/opt/snapcenter/spl/scripts_ oder in einem beliebigen Ordner in diesem Pfad speichern. Standardmäßig ist der Pfad _/var/opt/snapcenter/spl/scripts_ ausgefüllt. Wenn Sie Ordner in diesem Pfad erstellt haben, um die Skripte zu speichern, müssen Sie diese Ordner im Pfad angeben.
+
++
+Sie können auch den Wert für das Skript-Timeout angeben. Der Standardwert ist 60 Sekunden.
+
++
+Mit SnapCenter können Sie die vordefinierten Umgebungsvariablen verwenden, wenn Sie das Preskript und das Postscript ausführen. link:../protect-sco/predefined-environment-variables-prescript-postscript-restore.html["Weitere Informationen ."^]
+
+. Führen Sie auf der Seite PostOps die folgenden Schritte aus:
++
+.. Geben Sie den Pfad und die Argumente des Postscript ein, das Sie nach der Wiederherstellung ausführen möchten.
++
+Sie müssen die Postskripte entweder in _/var/opt/snapcenter/spl/scripts_ oder in einem beliebigen Ordner in diesem Pfad speichern. Standardmäßig ist der Pfad _/var/opt/snapcenter/spl/scripts_ ausgefüllt. Wenn Sie Ordner in diesem Pfad erstellt haben, um die Skripte zu speichern, müssen Sie diese Ordner im Pfad angeben.
+
++
+
+NOTE: Wenn der Wiederherstellungsvorgang fehlschlägt, werden Postscripts nicht ausgeführt und Bereinigungstätigkeiten werden direkt ausgelöst.
+
+.. Aktivieren Sie das Kontrollkästchen, wenn Sie die Datenbank nach der Wiederherstellung öffnen möchten.
++
+Nach dem Wiederherstellen einer Container-Datenbank (CDB) mit oder ohne Kontrolldateien oder nach dem Wiederherstellen nur CDB-Kontrolldateien, wenn Sie angeben, die Datenbank nach der Wiederherstellung zu öffnen, dann wird nur die CDB geöffnet und nicht die steckbaren Datenbanken (PDB) in dieser CDB.
+
++
+In einem RAC-Setup wird nach der Wiederherstellung nur die RAC-Instanz geöffnet, die für die Wiederherstellung verwendet wird.
+
++
+
+NOTE: Nach dem Wiederherstellen eines Benutzertablespaces mit Steuerdateien, eines Systemtablespaces mit oder ohne Steuerdateien oder einer PDB mit oder ohne Steuerdateien wird nur der Status der PDB, die mit dem Wiederherstellungsvorgang in Verbindung steht, in den ursprünglichen Zustand geändert. Der Zustand der anderen PDBs, die nicht für die Wiederherstellung verwendet wurden, wird nicht in den ursprünglichen Zustand geändert, weil der Zustand dieser PDBs nicht gespeichert wurden. Sie müssen manuell den Status der PDBs ändern, die nicht für die Wiederherstellung verwendet wurden.
+
+
+
+. Wählen Sie auf der Seite Benachrichtigung aus der Dropdown-Liste *E-Mail-Präferenz* die Szenarien aus, in denen Sie die E-Mail-Benachrichtigungen senden möchten.
++
+Außerdem müssen Sie die E-Mail-Adressen für Absender und Empfänger sowie den Betreff der E-Mail angeben. Wenn Sie den Bericht über den ausgeführten Wiederherstellungsvorgang anhängen möchten, müssen Sie *Job-Bericht anhängen* auswählen.
+
++
+
+NOTE: Für eine E-Mail-Benachrichtigung müssen Sie die SMTP-Serverdetails entweder mit der GUI oder mit dem PowerShell-Befehlssatz Set-SmtpServer angegeben haben.
+
+. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
+. Überwachen Sie den Fortschritt des Vorgangs, indem Sie auf *Monitor* > *Jobs* klicken.
+
+
+*Für weitere Informationen*
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Oracle_RAC_One_Node_database_is_skipped_for_performing_SnapCenter_operations["Oracle RAC One-Knoten-Datenbank wird zur Durchführung von SnapCenter-Operationen übersprungen"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Failed_to_restore_from_a_secondary_SnapMirror_or_SnapVault_location["Fehler beim Wiederherstellen von einem sekundären SnapMirror- oder SnapVault-Standort"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Failed_to_restore_when_a_backup_of_an_orphan_incarnation_is_selected["Wiederherstellung aus einem Backup einer verwaisten Inkarnation fehlgeschlagen"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/What_are_the_customizable_parameters_for_backup_restore_and_clone_operations_on_AIX_systems["Anpassbare Parameter für Backup-, Wiederherstellungs- und Klonvorgänge auf AIX-Systemen"^]
+

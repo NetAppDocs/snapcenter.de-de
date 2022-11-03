@@ -1,0 +1,35 @@
+---
+permalink: protect-hana/reference_types_of_restore_strategies_supported_for_manually_added_sap_hana_resources.html 
+sidebar: sidebar 
+keywords: SnapCenter 
+summary: Sie müssen eine Strategie definieren, bevor Sie die Restore-Vorgänge mit SnapCenter erfolgreich durchführen können. Es gibt zwei Arten von Wiederherstellungsstrategien für manuell hinzugefügte SAP HANA-Ressourcen. Manuell hinzugefügte SAP HANA-Ressourcen können nicht wiederhergestellt werden. 
+---
+= Arten von Wiederherstellungsstrategien werden für manuell hinzugefügte SAP HANA-Ressourcen unterstützt
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen eine Strategie definieren, bevor Sie die Restore-Vorgänge mit SnapCenter erfolgreich durchführen können. Es gibt zwei Arten von Wiederherstellungsstrategien für manuell hinzugefügte SAP HANA-Ressourcen. Manuell hinzugefügte SAP HANA-Ressourcen können nicht wiederhergestellt werden.
+
+
+NOTE: Manuell hinzugefügte SAP HANA-Ressourcen können nicht wiederhergestellt werden.
+
+
+
+== Komplette Ressourcenwiederherstellung
+
+* Stellt alle Volumes, qtrees und LUNs einer Ressource wieder her
+
+
+
+NOTE: Wenn die Ressource Volumes oder qtrees enthält, werden die Snapshot Kopien, die nach der zum Wiederherstellen ausgewählten Snapshot Kopie auf solchen Volumes oder qtrees erstellt wurden, gelöscht und können nicht wiederhergestellt werden. Wenn auch eine andere Ressource auf den gleichen Volumes oder qtrees gehostet wird, wird diese Ressource auch gelöscht.
+
+
+
+== Wiederherstellung auf Dateiebene
+
+* Wiederherstellung von Dateien aus Volumes, qtrees oder Verzeichnissen
+* Stellt nur die ausgewählten LUNs wieder her
+

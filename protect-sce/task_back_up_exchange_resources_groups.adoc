@@ -1,0 +1,50 @@
+---
+permalink: protect-sce/task_back_up_exchange_resources_groups.html 
+sidebar: sidebar 
+keywords: SnapCenter plug-in for Exchange Server 
+summary: Eine Ressourcengruppe ist eine Sammlung von Ressourcen auf einem Host oder Exchange DAG, und die Ressourcengruppe kann entweder eine vollständige DAG oder individuelle Datenbanken enthalten. Sie können die Ressourcengruppen auf der Seite Ressourcen sichern. 
+---
+= Sichern von Exchange-Ressourcengruppen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Eine Ressourcengruppe ist eine Sammlung von Ressourcen auf einem Host oder Exchange DAG, und die Ressourcengruppe kann entweder eine vollständige DAG oder individuelle Datenbanken enthalten. Sie können die Ressourcengruppen auf der Seite Ressourcen sichern.
+
+*Was Sie brauchen*
+
+* Sie müssen eine Ressourcengruppe mit einer angehängten Richtlinie erstellt haben.
+* Sie müssen das Aggregat, das vom Backup-Vorgang verwendet wird, der von der Datenbank verwendeten Storage Virtual Machine (SVM) zugewiesen haben.
+* Wenn Sie eine Ressource mit einer SnapMirror Beziehung mit einem sekundären Storage sichern möchten, sollte die dem Storage-Benutzer zugewiesene Rolle die Berechtigung „`snapmirror all`“ enthalten. Wenn Sie jedoch die Rolle „`vsadmin`“ verwenden, ist die Berechtigung „`snapmirror all`“ nicht erforderlich.
+* Wenn eine Ressourcengruppe mehrere Datenbanken von verschiedenen Hosts enthält, kann der Backup-Vorgang bei einigen Hosts aufgrund von Netzwerkproblemen zu spät beginnen. Sie sollten den Wert von konfigurieren `MaxRetryForUninitializedHosts` In `web.config` Durch Verwendung des `Set-SmConfigSettings` PowerShell Cmdlet:
+* Wenn Sie in einer Ressourcengruppe eine Datenbank- oder Database Availability Group mit aktiver/passiver Datenbankkopie auf einem NetApp Storage und nicht-NetApp Storage einschließen, und Sie haben *aktive Kopien sichern* oder *Sichern von Kopien auf Servern ausgewählt, die während der Erstellung von Sicherungsjobs ausgewählt werden sollen*-Option in der Richtlinie, Dann werden die Sicherungsjobs in den Warnstatus gehen.
++
+Das Backup führt erfolgreich eine aktive/passive Datenbankkopie auf NetApp Storage durch und ein Backup schlägt fehl bei der aktiv/passiven Datenbankkopie auf Storage anderer Anbieter.
+
+
+
+*Über diese Aufgabe*
+
+Auf der Seite „Ressourcen“ können Sie ein Backup einer Ressourcengruppe nach Bedarf erstellen. Wenn eine Ressourcengruppe über eine Richtlinie und einen konfigurierten Zeitplan verfügt, werden die Backups automatisch gemäß dem Zeitplan durchgeführt.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das *Microsoft Exchange Server Plug-in* aus der Liste aus.
+. Wählen Sie auf der Seite Ressourcen in der Liste *Ansicht* die Option *Ressourcengruppe* aus.
++
+Sie können die Ressourcengruppe entweder durch Eingabe des Ressourcengruppennamens in das Suchfeld oder durch Klicken auf * durchsuchenimage:../media/filter_icon.gif[""]* Und dann das Tag auswählen. Sie können dann auf * klickenimage:../media/filter_icon.gif[""]* Zum Schließen des Filterfensters.
+
+. Wählen Sie auf der Seite Ressourcengruppen die Ressourcengruppe aus, die Sie sichern möchten, und klicken Sie dann auf *Jetzt sichern*.
+. Führen Sie auf der Seite Backup die folgenden Schritte aus:
++
+.. Wenn Sie der Ressourcengruppe mehrere Richtlinien zugeordnet haben, wählen Sie aus der Dropdown-Liste *Richtlinie* die Richtlinie aus, die Sie zum Sichern verwenden möchten.
++
+Wenn die für das On-Demand-Backup ausgewählte Richtlinie einem Backup-Zeitplan zugeordnet ist, werden die On-Demand-Backups auf Basis der für den Zeitplantyp festgelegten Aufbewahrungseinstellungen beibehalten.
+
+.. Klicken Sie Auf *Backup*.
+
+
+. Überwachen Sie den Fortschritt des Backups, indem Sie im Aktivitätsbereich unten auf der Seite auf den Job doppelklicken, um die Seite „Jobdetails“ anzuzeigen.
+

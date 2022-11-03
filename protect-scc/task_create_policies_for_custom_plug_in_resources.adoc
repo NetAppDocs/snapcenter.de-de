@@ -1,0 +1,134 @@
+---
+permalink: protect-scc/task_create_policies_for_custom_plug_in_resources.html 
+sidebar: sidebar 
+keywords:  
+summary: Bevor Sie mit SnapCenter benutzerdefinierte Plug-in-spezifische Ressourcen sichern, müssen Sie eine Backup-Richtlinie für die Ressource oder Ressourcengruppe erstellen, die Sie sichern möchten. 
+---
+= Erstellen von Richtlinien für benutzerdefinierte Plug-in-Ressourcen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bevor Sie mit SnapCenter benutzerdefinierte Plug-in-spezifische Ressourcen sichern, müssen Sie eine Backup-Richtlinie für die Ressource oder Ressourcengruppe erstellen, die Sie sichern möchten.
+
+*Was Sie brauchen*
+
+* Sie sollten Ihre Backup-Strategie definiert haben.
++
+Weitere Informationen finden Sie in den Informationen zur Definition einer Datensicherungsstrategie für benutzerdefinierte Plug-ins.
+
+* Sie sollten sich auf die Datensicherung vorbereiten.
++
+Die Vorbereitung auf die Datensicherung umfasst Aufgaben wie das Installieren von SnapCenter, das Hinzufügen von Hosts, das Erstellen von Verbindungen zum Storage-System und das Hinzufügen von Ressourcen.
+
+* Die Storage Virtual Machines (SVMs) sollten Ihnen für Spiegelungs- oder Vault-Vorgänge zugewiesen werden.
++
+Der SnapCenter Administrator muss Ihnen die SVMs für die Quell- und Ziel-Volumes zuweisen, falls Sie Snapshot Kopien in eine Spiegelung oder einen Vault replizieren.
+
+* Sie sollten die Ressourcen, die Sie schützen möchten, manuell hinzugefügt haben.
+
+
+*Über diese Aufgabe*
+
+* Eine Backup-Richtlinie ist eine Reihe von Regeln, die das Managen, Planen und Aufbewahren von Backups regeln. Außerdem können Sie Replizierungs-, Skript- und Applikationseinstellungen festlegen.
+* Durch das Festlegen von Optionen in einer Richtlinie wird Zeit eingespart, wenn die Richtlinie für eine andere Ressourcengruppe wiederverwendet werden soll.
+
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Einstellungen*.
+. Klicken Sie auf der Seite Einstellungen auf *Richtlinien*.
+. Klicken Sie Auf *Neu*.
+. Geben Sie auf der Seite Name den Namen und die Beschreibung der Richtlinie ein.
+. Führen Sie auf der Seite Einstellungen die folgenden Schritte aus:
++
+** Geben Sie den Terminplantyp an, indem Sie *on Demand*, *hourly*, *Daily*, *Weekly* oder *Monthly* auswählen.
++
+
+NOTE: Sie können den Zeitplan (Startdatum, Enddatum und Häufigkeit) für den Backup-Vorgang beim Erstellen einer Ressourcengruppe angeben. So können Sie Ressourcengruppen erstellen, die dieselben Richtlinien- und Backup-Häufigkeit verwenden, aber Sie können jeder Richtlinie verschiedene Backup-Zeitpläne zuweisen.
+
++
+image::../media/backup_settings.gif[Backup-Einstellungen]
+
++
+
+NOTE: Wenn Sie für 2:00 Uhr geplant sind, wird der Zeitplan während der Sommerzeit (DST) nicht ausgelöst.
+
+** Geben Sie im Abschnitt Benutzerdefinierte Backup-Einstellungen alle spezifischen Backup-Einstellungen an, die an das Plug-in-in-Schlüsselwert-Format übergeben werden müssen. Sie können mehrere wichtige Werte angeben, die an das Plug-in übergeben werden.
+
+
+. Geben Sie auf der Seite Aufbewahrung die Aufbewahrungseinstellungen für den Sicherungstyp und den auf der Seite Sicherungstyp ausgewählten Terminplantyp an:
++
+|===
+| Ihr Ziel ist | Dann... 
+
+
+ a| 
+Aufbewahrung einer bestimmten Anzahl von Snapshot Kopien
+ a| 
+Wählen Sie *Gesamtanzahl der zu behenden Snapshot-Kopien* aus, und geben Sie dann die Anzahl der Snapshot-Kopien an, die beibehalten werden sollen.
+
+Wenn die Anzahl der Snapshot Kopien die angegebene Anzahl überschreitet, werden die Snapshot Kopien mit den ältesten Kopien gelöscht, die zuerst gelöscht wurden.
+
+
+NOTE: Sie müssen die Aufbewahrungsanzahl auf 2 oder höher einstellen, wenn Sie die SnapVault-Replikation aktivieren möchten. Wenn Sie die Aufbewahrungsanzahl auf 1 festlegen, kann der Aufbewahrungsvorgang möglicherweise fehlschlagen, da die erste Snapshot Kopie die Referenzkopie für die SnapVault-Beziehung ist, bis eine neuere Snapshot Kopie auf das Ziel repliziert wird.
+
+
+NOTE: Der maximale Aufbewahrungswert ist 1018 für Ressourcen auf ONTAP 9.4 oder höher und 254 für Ressourcen unter ONTAP 9.3 oder einer früheren Version. Backups schlagen fehl, wenn die Aufbewahrung auf einen Wert festgelegt ist, der höher ist, als die zugrunde liegende ONTAP Version unterstützt.
+
+
+
+ a| 
+Behalten Sie die Snapshot Kopien für eine bestimmte Anzahl von Tagen bei
+ a| 
+Wählen Sie *Snapshot Kopien behalten für* aus, und geben Sie dann die Anzahl der Tage an, für die Sie die Snapshot Kopien behalten möchten, bevor Sie sie löschen.
+
+|===
+. Geben Sie auf der Seite Replikation die Replikationseinstellungen an:
++
+|===
+| Für dieses Feld... | Tun Sie das... 
+
+
+ a| 
+*Aktualisieren Sie SnapMirror nach dem Erstellen einer lokalen Snapshot Kopie*
+ a| 
+Wählen Sie dieses Feld aus, um Spiegelkopien der Backup-Sätze auf einem anderen Volume zu erstellen (SnapMirror Replikation).
+
+Wenn die Sicherungsbeziehung in ONTAP vom Typ Mirror und Vault beträgt und wenn Sie nur diese Option auswählen, wird die auf dem primären Volume erstellte Snapshot Kopie nicht an das Ziel übertragen, sondern dort aufgeführt. Wenn diese Snapshot Kopie aus dem Ziel ausgewählt wird, einen Wiederherstellungsvorgang durchzuführen, wird die folgende Fehlermeldung angezeigt: Sekundärer Standort ist für das ausgewählte gewölbte/gespiegelte Backup nicht verfügbar.
+
+
+
+ a| 
+*Aktualisieren Sie SnapVault nach dem Erstellen einer lokalen Snapshot Kopie*
+ a| 
+Wählen Sie diese Option aus, um Disk-to-Disk-Backup-Replikation (SnapVault-Backups) durchzuführen.
+
+
+
+ a| 
+*Sekundäres Policy-Label*
+ a| 
+Wählen Sie eine Snapshot-Bezeichnung aus.
+
+Abhängig von dem ausgewählten Etikett der Snapshot Kopie wendet ONTAP die Aufbewahrungsrichtlinie für sekundäre Snapshot Kopien an, die mit dem Etikett übereinstimmt.
+
+
+NOTE: Wenn Sie *Update SnapMirror nach dem Erstellen einer lokalen Snapshot Kopie* ausgewählt haben, können Sie optional das Label für die sekundäre Richtlinie angeben. Wenn Sie jedoch *Update SnapVault nach dem Erstellen einer lokalen Snapshot Kopie* ausgewählt haben, sollten Sie das sekundäre Policy Label angeben.
+
+
+
+ a| 
+*Anzahl der Wiederholversuche*
+ a| 
+Geben Sie die maximale Anzahl von Replikationsversuchen ein, die zulässig sind, bevor der Vorgang beendet wird.
+
+|===
++
+
+NOTE: Sie sollten die SnapMirror Aufbewahrungsrichtlinie in ONTAP für den sekundären Storage konfigurieren, um zu vermeiden, dass die maximale Anzahl an Snapshot Kopien auf dem sekundären Storage erreicht wird.
+
+. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
+

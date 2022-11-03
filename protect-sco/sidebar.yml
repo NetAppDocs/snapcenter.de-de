@@ -1,0 +1,137 @@
+---
+section: protect-sco
+title: Schutz von Oracle Datenbanken
+entries:
+- title: Überblick über das SnapCenter Plug-in für Oracle Database
+  entries:
+  - title: Welche Möglichkeiten bietet das Plug-in für Oracle Database
+    url: "/protect-sco/concept_what_you_can_do_with_the_snapcenter_plug_in_for_oracle_database.html"
+  - title: Funktionen des Plug-in für Oracle
+    url: "/protect-sco/concept_snapcenter_plug_in_for_oracle_database_features.html"
+  - title: Von Plug-in für Oracle Database unterstützte Storage-Typen
+    url: "/protect-sco/reference_storage_types_supported_by_snapcenter_plug_in_for_oracle_database.html"
+  - title: Storage-Systeme für SnapMirror und SnapVault Replizierung für Plug-in für
+      Oracle vorbereiten
+    url: "/protect-sco/reference_prepare_storage_systems_for_snapmirror_and_snapvault_replication_for_plugin_for_oracle.html"
+  - title: Minimale ONTAP-Berechtigungen, die für das Plug-in für Oracle erforderlich
+      sind
+    url: "/protect-sco/reference_minimum_ontap_privileges_required_for_oracle_plug_in.html"
+- title: Installieren Sie das SnapCenter Plug-in für Oracle Database
+  entries:
+  - title: Installations-Workflow des SnapCenter Plug-ins für Oracle Database
+    url: "/protect-sco/install-snapcenter-plug-in-for-oracle-workflow.html"
+  - title: Voraussetzungen für das Hinzufügen von Hosts und die Installation von Plug-ins
+      Package für Linux oder AIX
+    url: "/protect-sco/reference_prerequisites_for_adding_hosts_and_installing_snapcenter_plug_ins_package_for_linux_or_aix.html"
+  - title: Fügen Sie Hosts hinzu und installieren Sie das Plug-ins Package für Linux
+      oder AIX
+    url: "/protect-sco/task_add_hosts_and_installing_the_snapcenter_plug_ins_package_for_linux_or_aix.html"
+  - title: Alternative Möglichkeiten, Plug-ins Package für Linux oder AIX zu installieren
+    url: "/protect-sco/alternate-ways-install-plug-in-linux-aix.html"
+  - title: Konfigurieren Sie den SnapCenter-Plug-in-Loader-Dienst
+    url: "/protect-sco/task_configure_snapcenter_plug_in_loader_service.html"
+  - title: Konfigurieren Sie das CA-Zertifikat mit dem SnapCenter Plug-in Loader Service
+      auf Linux Host
+    url: "/protect-sco/task_configure_CA_certificate_with_SPL_on_Linux_host.html"
+  - title: Aktivieren Sie CA-Zertifikate für Plug-ins
+    url: "/protect-sco/task_enable_ca_certificates_for_plug-ins.html"
+  - title: Import der Daten von SnapManager für Oracle und SnapManager für SAP zu
+      SnapCenter
+    url: "/protect-sco/concept_import_data_from_snapmanager_for_oracle_and_snapmanager_for_sap_to_snapcenter.html"
+- title: Installieren Sie das SnapCenter Plug-in für VMware vSphere
+  url: "/protect-sco/concept_install_snapcenter_plug_in_for_vmware_vsphere.html"
+- title: Bereiten Sie sich auf den Schutz von Oracle Datenbanken vor
+  url: "/protect-sco/concept_prepare_for_protecting_oracle_databases.html"
+- title: Backup von Oracle Datenbanken
+  entries:
+  - title: Backup-Workflow
+    url: "/protect-sco/backup-workflow.html"
+  - title: Backup-Strategie für Oracle Datenbanken definieren
+    url: "/protect-sco/task_define_a_backup_strategy_for_oracle_databases.html"
+  - title: Vordefinierte Umgebungsvariablen für Backup-spezifische Prescript und Postscript
+    url: "/protect-sco/predefined-environment-variables-prescript-postscript-backup.html"
+  - title: Ermitteln Sie, ob Oracle-Datenbanken für Backups verfügbar sind
+    url: "/protect-sco/task_determine_whether_oracle_databases_are_available_for_backup.html"
+  - title: Erstellung von Backup-Richtlinien für Oracle Datenbanken
+    url: "/protect-sco/task_create_backup_policies_for_oracle_database.html"
+  - title: Erstellen von Ressourcengruppen und Anhängen von Richtlinien für Oracle-Datenbanken
+    url: "/protect-sco/task_create_resource_groups_and_attaching_policies_for_oracle_databases.html"
+  - title: Anforderungen für das Backup einer Oracle-Datenbank
+    url: "/protect-sco/reference_requirements_for_backing_up_an_oracle_database.html"
+  - title: Oracle-Ressourcen sichern
+    url: "/protect-sco/task_back_up_oracle_resources.html"
+  - title: Sichern Sie Oracle Database Resource Groups
+    url: "/protect-sco/task_back_up_oracle_database_resource_groups.html"
+  - title: Sichern Sie Oracle Datenbanken mit UNIX Befehlen
+    url: "/protect-sco/task_back_up_oracle_databases_using_unix_commands.html"
+  - title: Überwachen Sie die Backup-Vorgänge für die Oracle Datenbank
+    url: "/protect-sco/task_monitor_oracle_database_backup_operations.html"
+  - title: Backup-Vorgänge von Oracle-Datenbanken abbrechen
+    url: "/protect-sco/task_cancel_the_snapcenter_plug_in_for_oracle_database_backup_operations.html"
+  - title: Sehen Sie sich Backups und Klone von Oracle Datenbanken auf der Seite Topologie
+      an
+    url: "/protect-sco/task_view_oracle_databse_backups_and_clones_in_the_topology_page.html"
+- title: Binden Sie Datenbank-Backups ein und heben Sie sie ab
+  url: "/protect-sco/task_mount_and_unmount_databases_backups.html"
+- title: Stellen Sie Oracle Datenbanken wieder her
+  entries:
+  - title: Wiederherstellung des Workflows
+    url: "/protect-sco/restore-workflow.html"
+  - title: Definition einer Restore- und Recovery-Strategie für Oracle Datenbanken
+    url: "/protect-sco/task_define_a_restore_and_recovery_strategy_for_oracle_databases.html"
+  - title: Vordefinierte Umgebungsvariablen zur Wiederherstellung spezifischer Vorschrift
+      und Postscript
+    url: "/protect-sco/predefined-environment-variables-prescript-postscript-restore.html"
+  - title: Anforderungen für die Wiederherstellung einer Oracle-Datenbank
+    url: "/protect-sco/reference_requirements_for_restoring_an_oracle_database.html"
+  - title: Stellen Sie Oracle Datenbanken wieder her
+    url: "/protect-sco/task_restore_an_oracle_database.html"
+  - title: Wiederherstellen von Tabellen mit Point-in-Time Recovery
+    url: "/protect-sco/task_restore_and_recovere_tablespaces_using_point_in_time_recovery.html"
+  - title: Wiederherstellen steckbarer Datenbanken über zeitpunktgenaues Recovery
+    url: "/protect-sco/task_restore_and_recover_pluggable_database_using_point_in_time_recovery.html"
+  - title: Stellen Sie Oracle Datenbanken mithilfe von UNIX-Befehlen wieder her
+    url: "/protect-sco/task_restore_and_recover_oracle_databases_using_unix_commands.html"
+  - title: Überwachen Sie die Restore-Vorgänge für Oracle Datenbanken
+    url: "/protect-sco/task_monitor_oracle_database_restore_operations.html"
+  - title: Wiederherstellungsvorgänge für Oracle-Datenbank abbrechen
+    url: "/protect-sco/task_cancel_oracle_database_restore_operations.html"
+- title: Oracle Datenbank klonen
+  entries:
+  - title: Klon-Workflow
+    url: "/protect-sco/clone-workflow.html"
+  - title: Klonstrategie für Oracle Datenbanken definieren
+    url: "/protect-sco/task_define_a_clone_strategy_for_oracle_databases.html"
+  - title: Vordefinierte Umgebungsvariablen für das Klonen spezifischer Prescript
+      und Postscript
+    url: "/protect-sco/predefined-environment-variables-prescript-postscript-clone.html"
+  - title: Anforderungen für das Klonen einer Oracle Datenbank
+    url: "/protect-sco/reference_requirements_for_cloning_an_oracle_database.html"
+  - title: Klonen einer Oracle Datenbank
+    url: "/protect-sco/task_clone_an_oracle_database_backup.html"
+  - title: Klonen einer sofort anschließbaren Datenbank
+    url: "/protect-sco/task_clone_a_pluggable_database.html"
+  - title: Backups der Oracle Datenbank mit UNIX Befehlen klonen
+    url: "/protect-sco/task_clone_oracle_database_backups_using_unix_commands.html"
+  - title: Oracle Database klonen
+    url: "/protect-sco/task_split_an_oracle_database_clone.html"
+  - title: Split-Klon einer steckbaren Datenbank
+    url: "/protect-sco/task_split_clone_of_a_pluggable_database.html"
+  - title: Überwachen Sie die Klonvorgänge von Oracle Datenbanken
+    url: "/protect-sco/task_monitor_oracle_database_clone_operations.html"
+  - title: Aktualisieren Sie einen Klon
+    url: "/protect-sco/task_refresh_a_clone.html"
+  - title: Löschen des Klons einer steckbaren Datenbank
+    url: "/protect-sco/task_delete_clone_of_a_pluggable_database.html"
+- title: Management von Applikations-Volumes
+  entries:
+  - title: Hinzufügen von Applikations-Volumes
+    url: "/protect-sco/add-application-volume.html"
+  - title: Backup-Anwendungsvolumes
+    entries:
+    - title: Backup des Anwendungsvolumes
+      url: "/protect-sco/backup-application-volume.html"
+    - title: Sichern Sie die Ressourcengruppe Anwendungsvolumes
+      url: "/protect-sco/backup-application-volume-resource-group.html"
+  - title: Backup von Klon-Applikations-Volumes
+    url: "/protect-sco/clone-application-volume.html"

@@ -1,0 +1,23 @@
+---
+permalink: protect-sce/reference_exchange_database_and_backup_verification.html 
+sidebar: sidebar 
+keywords:  
+summary: Das SnapCenter Plug-in für Microsoft Exchange Server bietet keine Backup-Überprüfung. Sie können jedoch das mit Exchange zur Verfügung gestellte Eseutil Tool verwenden, um Exchange-Datenbanken und Backups zu überprüfen. 
+---
+= Exchange Datenbank und Backup-Verifizierung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das SnapCenter Plug-in für Microsoft Exchange Server bietet keine Backup-Überprüfung. Sie können jedoch das mit Exchange zur Verfügung gestellte Eseutil Tool verwenden, um Exchange-Datenbanken und Backups zu überprüfen.
+
+Das Microsoft Exchange Eseutil Tool ist ein Befehlszeilen-Dienstprogramm, das in Ihrem Exchange Server enthalten ist. Das Dienstprogramm ermöglicht die Durchführung von Konsistenzprüfungen zur Überprüfung der Integrität von Exchange-Datenbanken und Backups.
+
+|===
+
+
+| *Best Practice:* Es ist nicht erforderlich, Konsistenzprüfungen auf Datenbanken durchzuführen, die Teil einer Database Availability Group (DAG) Konfiguration mit mindestens zwei Replikaten sind. 
+|===
+Weitere Informationen finden Sie unter https://docs.microsoft.com/en-us/exchange/exchange-server?view=exchserver-2019["Microsoft Exchange Server-Dokumentation"^].

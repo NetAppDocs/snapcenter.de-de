@@ -1,0 +1,78 @@
+---
+permalink: protect-sco/concept_snapcenter_plug_in_for_oracle_database_features.html 
+sidebar: sidebar 
+keywords: plug-in for Oracle features 
+summary: Das Plug-in für Oracle Database ist in die Oracle Datenbank auf dem Linux oder AIX Host und in NetApp Technologien auf dem Storage-System integriert. 
+---
+= Funktionen von Plug-in für Oracle Database
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Plug-in für Oracle Database ist in die Oracle Datenbank auf dem Linux oder AIX Host und in NetApp Technologien auf dem Storage-System integriert.
+
+* Einheitliche grafische Benutzeroberfläche
++
+Die SnapCenter-Schnittstelle bietet Standardisierung und Konsistenz über Plug-ins und Umgebungen hinweg. Die SnapCenter Schnittstelle ermöglicht konsistente Backup-, Restore-, Recovery- und Klonvorgänge über alle Plug-ins hinweg, zentralisierte Berichterstellung, Dashboard-Ansichten auf einen Blick, rollenbasierte Zugriffssteuerung (Role Based Access Control, RBAC) und das Monitoring von Aufgaben über alle Plug-ins hinweg.
+
+* Automatisierte, zentrale Administration
++
+Sie können Backup- und Klonvorgänge planen, richtlinienbasierte Backup-Aufbewahrung konfigurieren und Restore-Vorgänge durchführen. Zudem lässt sich die Umgebung proaktiv überwachen, indem SnapCenter für das Senden von E-Mail-Warnmeldungen konfiguriert wird.
+
+* Unterbrechungsfreie Technologie zur NetApp Snapshot Kopie
++
+SnapCenter nutzt die NetApp Snapshot-Kopiertechnologie mit dem Plug-in für Oracle Database und Plug-in für UNIX, um Datenbanken zu sichern. Snapshot Kopien belegen nur minimalen Speicherplatz.
+
+
+
+Das Plug-in für Oracle Database bietet darüber hinaus folgende Vorteile:
+
+* Unterstützung für Backup, Restore, Klonen, Mounten, Unmounten, Und Verifizierungs-Workflows
+* Automatische Erkennung von auf dem Host konfigurierten Oracle-Datenbanken
+* Unterstützung von Katalogisierung und Katalogisierung mit Oracle Recovery Manager (RMAN)
+* RBAC-unterstützte Sicherheit und zentralisierte Rollendelegation
++
+Sie können die Anmeldeinformationen auch so festlegen, dass die autorisierten SnapCenter-Benutzer über Berechtigungen auf Anwendungsebene verfügen.
+
+* Unterstützung von Archive Log Management (ALM) für Restore- und Klonvorgänge
+* Erstellung platzsparender und zeitpunktgenauer Kopien von Produktionsdatenbanken für Test- oder Datenextraktion mit der NetApp FlexClone Technologie
++
+Auf dem Storage-System, auf dem Sie den Klon erstellen möchten, ist eine FlexClone Lizenz erforderlich.
+
+* Die Unterstützung der Konsistenzgruppendaten (CG) von ONTAP im Rahmen der Erstellung von Backups in SAN- und ASM-Umgebungen
+* Unterbrechungsfreie und automatisierte Backup-Verifizierung
+* Fähigkeit, mehrere Backups gleichzeitig über mehrere Datenbank-Hosts auszuführen
++
+In einem einzigen Vorgang werden Snapshot Kopien konsolidiert, wenn Datenbanken in einem einzelnen Host dasselbe Volume gemeinsam nutzen.
+
+* Unterstützung physischer und virtualisierter Infrastrukturen
+* Unterstützung von NFS, iSCSI, Fibre Channel (FC), RDM, VMDK über NFS und VMFS sowie ASM over NFS, SAN, RDM und VMDK
+* Unterstützung für die Selective LUN Map (SLM)-Funktion von ONTAP
++
+Standardmäßig erkennt die SLM-Funktion regelmäßig die LUNs, die keine optimierten Pfade haben, und behebt sie. Sie können SLM konfigurieren, indem Sie die Parameter in der Datei scu.properties unter /var/opt/snapcenter/scu/etc. Ändern
+
++
+** Sie können dies deaktivieren, indem Sie den Wert FÜR DEN PARAMETER ENABLE_LUNPATH_MONITORING auf false setzen.
+** Sie können die Häufigkeit angeben, in der die LUN-Pfade automatisch korrigiert werden, indem Sie den Wert (in Stunden) dem Parameter „LUNPATH_MONITORING_INTERVAL“ zuweisen. Informationen zu SLM finden Sie im http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanag/home.html["ONTAP 9 – Systemadministrationshandbuch"^].
+
+
+* Unterstützung für Non-Volatile Memory Express (NVMe) unter Linux
++
+** NVMe util sollte auf dem Host installiert werden.
++
+Sie müssen NVMe util installieren, um auf einem alternativen Host zu klonen oder einzubinden.
+
+** Backup, Restore, Klonen, mounten, unmounten, Katalog-, Katalog- und Verifizierungsvorgänge werden auf der NVMe Hardware unterstützt, außer in virtualisierten Umgebungen wie VMDK und RDM.
++
+Die oben genannten Operationen werden auf Geräten ohne Partitionen oder mit einer einzigen Partition unterstützt.
+
+
+
+
+
+
+NOTE: Sie können Multipathing-Lösung für NVMe-Geräte konfigurieren, indem Sie die native Multipathing-Option im Kernel einstellen. Multipathing von Device Mapper (DM) wird nicht unterstützt.
+
++ Aktuelle Informationen zu unterstützten Versionen finden Sie im https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"^].

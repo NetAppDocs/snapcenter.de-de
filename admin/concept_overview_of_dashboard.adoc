@@ -1,0 +1,298 @@
+---
+permalink: admin/concept_overview_of_dashboard.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Über das Navigationsfenster von SnapCenter links erhalten Sie einen ersten Überblick über den Systemzustand. Dazu gehören die aktuelle Jobaktivität, Warnungen, Sicherungsübersicht, Storage-Effizienz und -Nutzung, der Status von SnapCenter Jobs \ (Backup, Klonen, Wiederherstellung\), der Konfigurationsstatus für Standalone- und Windows-Cluster-Hosts. Anzahl von Storage Virtual Machines \ (SVMs\), die von SnapCenter gemanagt werden, und Lizenzkapazität.' 
+---
+= Überblick über das Dashboard
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Navigationsbereich auf der linken Seite von SnapCenter erhalten Sie einen ersten Überblick über den Systemzustand Ihres Systems. Dazu gehören die letzten Jobaktivitäten, Warnmeldungen, Sicherungsübersicht, Storage-Effizienz und -Auslastung, der Status von SnapCenter Jobs (Backup, Klonen, Wiederherstellung), der Konfigurationsstatus für Standalone- und Windows-Cluster-Hosts. Anzahl von von SnapCenter gemanagten Storage Virtual Machines (SVMs) und Lizenzkapazität.
+
+Die in der Dashboard-Ansicht angezeigten Informationen hängen von der Rolle ab, die dem Benutzer zugewiesen ist, der aktuell bei SnapCenter angemeldet ist. Einige Inhalte werden möglicherweise nicht angezeigt, wenn der Benutzer nicht über die Berechtigung zum Anzeigen dieser Informationen verfügt.
+
+In vielen Fällen können Sie mehr Informationen über ein Display anzeigen, indem Sie den Mauszeiger auf *i* bewegen. In manchen Fällen sind die Informationen in den Dashboard-Anzeigen mit detaillierten Quellinformationen auf SnapCenter-GUI-Seiten wie Ressourcen, Überwachung und Berichte verknüpft.
+
+
+
+== Zuletzt Verwendete Job-Aktivitäten
+
+In der Kachel „Letzte Job-Aktivitäten“ werden die letzten Job-Aktivitäten von allen Backup-, Restore- und Clone-Jobs angezeigt, auf die Sie Zugriff haben. Jobs in dieser Anzeige haben einen der folgenden Status: Abgeschlossen, Warnung, Fehlgeschlagen, wird ausgeführt, Warteschlange, Und storniert.
+
+Wenn Sie über einen Job fahren, erhalten Sie weitere Informationen. Sie können zusätzliche Jobinformationen anzeigen, indem Sie auf eine bestimmte Jobnummer klicken, die Sie zur Seite Überwachung umleitet. Dort können Sie Job-Details oder Protokollinformationen abrufen und einen für diese Aufgabe spezifischen Bericht erstellen.
+
+Klicken Sie auf *Alle anzeigen*, um eine Historie aller SnapCenter-Jobs anzuzeigen.
+
+
+
+== Meldungen
+
+Im Feld „Meldungen“ werden die neuesten nicht behobenen kritischen Warnmeldungen und Warnmeldungen für die Hosts und den SnapCenter-Server angezeigt.
+
+Die Gesamtzahl der Warnmeldungen für kritische und Warnungskategorien wird oben auf dem Display angezeigt. Wenn Sie auf die Summen „kritisch“ oder „Warnung“ klicken, werden Sie zur Seite „Warnungen“ weitergeleitet, auf der der Seite „Meldungen“ der spezifische Filter angewendet wird.
+
+Wenn Sie auf eine bestimmte Warnmeldung klicken, werden Sie zur Seite „Meldungen“ weitergeleitet, die Ihnen Details zu dieser Warnmeldung enthält. Wenn Sie unten auf der Anzeige auf *Alle anzeigen* klicken, werden Sie zur Seite Warnungen weitergeleitet, um eine Liste aller Warnmeldungen anzuzeigen.
+
+
+
+== Aktuelle Zusammenfassung Des Schutzes
+
+Die Kachel Letzte Protection Summary gibt Ihnen den Schutzstatus für alle Einheiten an, auf die Sie Zugriff haben. Standardmäßig wird die Anzeige so eingestellt, dass der Status aller Plug-ins angezeigt wird. Statusinformationen werden für Ressourcen bestimmt, die im Primärspeicher als Snapshot-Kopien und auf sekundären Storage mithilfe von SnapMirror und SnapVault Technologien gesichert werden. Die Verfügbarkeit von Schutzstatusinformationen für den sekundären Speicher basiert auf dem ausgewählten Plug-in-Typ.
+
+
+NOTE: Wenn Sie eine Mirror-Vault-Schutzrichtlinie verwenden, werden die Zähler für die Sicherungszusammenfassung im SnapVault-Übersichtsdiagramm und nicht im SnapMirror Diagramm angezeigt.
+
+Der Schutzstatus für einzelne Plug-ins wird durch Auswahl eines Plug-ins im Dropdown-Menü angezeigt. Ein Donut-Diagramm zeigt den Prozentsatz der geschützten Ressourcen für das ausgewählte Plug-in an. Durch Klicken auf eine Donut-Schicht wird die Seite *Reports* > *Plug-in* umgeleitet, die einen detaillierten Bericht über alle primären und sekundären Speicheraktivitäten für das angegebene Plug-in liefert.
+
+
+IMPORTANT: Berichte über sekundären Storage gelten nur für SnapVault. SnapMirror Berichte werden nicht unterstützt.
+
+
+NOTE: SAP HANA bietet Sicherungsstatusinformationen für primären und sekundären Storage für Snapshot Kopien. Für dateibasierte Backups steht nur der Schutzstatus des primären Storage zur Verfügung.
+
+|===
+| Sicherungsstatus | Primärspeicher | Sekundär-Storage 
+
+
+ a| 
+Fehlgeschlagen
+ a| 
+Anzahl der Einheiten, die Teil einer Ressourcengruppe sind, in der die Ressourcengruppe ein Backup ausgeführt hat, das Backup jedoch fehlgeschlagen ist.
+ a| 
+Anzahl der Einheiten mit Backups, die nicht an ein sekundäres Ziel übertragen wurden.
+
+
+
+ a| 
+Erfolgreich
+ a| 
+Anzahl der Einheiten in einer Ressourcengruppe, in der die Ressourcengruppe erfolgreich gesichert wurde.
+ a| 
+Anzahl der Einheiten mit Backups, die erfolgreich an ein sekundäres Ziel übertragen wurden.
+
+
+
+ a| 
+Nicht konfiguriert
+ a| 
+Anzahl der Einheiten, die nicht zu einer Ressourcengruppe gehören und noch nicht gesichert wurden.
+ a| 
+Anzahl der Einheiten, die Teil einer oder mehrerer Ressourcengruppen sind, die nicht für Backups konfiguriert sind, die an ein sekundäres Ziel übertragen werden sollen.
+
+
+
+ a| 
+Nicht initiiert
+ a| 
+Anzahl der Einheiten, die Teil einer Ressourcengruppe sind, aber kein Backup ausgeführt wurde.
+ a| 
+Keine Angabe.
+
+|===
+
+NOTE: Wenn Sie zum Erstellen von Backups SnapCenter Server 4.2 und eine frühere Version des Plug-ins (früher als 4.2) verwenden, wird der SnapMirror Sicherungsstatus dieser Backups im Kachel *Neueste Schutzzusammenfassung* nicht angezeigt.
+
+
+
+== Jobs
+
+Die Kachel Jobs bietet Ihnen eine Zusammenfassung der Backup-, Wiederherstellungs- und Klonaufgaben, auf die Sie Zugriff haben. Sie können den Zeitrahmen für jeden Bericht über das Dropdown-Menü anpassen. Die Optionen für den Zeitrahmen werden in den letzten 24 Stunden, den letzten 7 Tagen und den letzten 30 Tagen festgelegt. Der Standardbericht zeigt die in den letzten 7 Tagen ausgeführten Datensicherungsaufträge an.
+
+Jobinformationen zum Sichern, Wiederherstellen und Klonen werden in Donut-Diagrammen angezeigt. Wenn Sie auf eine Donut-Schicht klicken, werden Sie zur Seite „Monitor“ umgeleitet, auf der die Jobfilter bereits für die Auswahl angewendet werden.
+
+|===
+| Aufgabenstatus | Beschreibung 
+
+
+ a| 
+Fehlgeschlagen
+ a| 
+Anzahl der fehlgeschlagenen Jobs.
+
+
+
+ a| 
+Warnung
+ a| 
+Anzahl der Jobs, bei denen ein Fehler aufgetreten ist.
+
+
+
+ a| 
+Erfolgreich
+ a| 
+Anzahl der erfolgreich abgeschlossenen Jobs.
+
+
+
+ a| 
+Wird Ausgeführt
+ a| 
+Anzahl der aktuell ausgeführten Jobs.
+
+|===
+
+
+== Storage
+
+Im Bereich Storage wird der primäre und sekundäre Storage, der von Sicherungsaufgaben über einen Zeitraum von 90 Tagen verbraucht wird, grafisch dargestellt und zeigt Verbrauchstrends berechnet. Die Speicherinformationen werden alle 24 Stunden um 12 Uhr aktualisiert
+
+Der Tagesverbrauch, der die Gesamtzahl der in SnapCenter verfügbaren Backups und die durch diese Backups belegte Größe umfasst, wird oben auf dem Display angezeigt. Einem Backup können mehrere Snapshot Kopien zugeordnet sein, und die Anzahl entspricht dem gleichen. Dies gilt sowohl für primäre als auch für sekundäre Snapshot Kopien. Sie haben z. B. 10 Backups erstellt, von denen 2 aufgrund der richtlinienbasierten Backup-Aufbewahrung gelöscht werden und 1 Backup von Ihnen explizit gelöscht wird. Somit wird eine Anzahl von 7 Backups zusammen mit der Größe angezeigt, die von diesen 7 Backups belegt wird.
+
+Der Storage-Einsparungsfaktor für primären Storage ist das Verhältnis der logischen Kapazität (Klon- und Snapshot-Einsparungen plus verbrauchter Storage) zur physischen Kapazität des primären Storage. Ein Balkendiagramm zeigt die Storage-Einsparungen.
+
+Das Liniendiagramm stellt den primären und sekundären Speicherverbrauch über einen laufenden Zeitraum von 90 Tagen täglich separat dar. Wenn Sie über die Diagramme fahren, erhalten Sie detaillierte tägliche Ergebnisse.
+
+
+NOTE: Wenn Sie zum Erstellen von Backups SnapCenter Server 4.2 und eine frühere Version des Plug-ins (früher als 4.2) verwenden, werden im Kachel *Storage* nicht die Anzahl der Backups, der von diesen Backups benötigte Storage, die Snapshot-Einsparungen, die Kloneinsparungen und die Snapshot-Größe angezeigt.
+
+
+
+== Konfiguration
+
+Die Konfigurationtile bietet konsolidierte Statusinformationen für alle aktiven eigenständigen und Windows Cluster Hosts, die SnapCenter verwaltet, und auf die Sie Zugriff haben. Dazu gehören auch die mit diesen Hosts verknüpften Plug-in-Statusinformationen.
+
+Wenn Sie auf die Zahl neben Hosts klicken, werden Sie auf der Seite Hosts zum Abschnitt Managed Hosts umgeleitet. Von dort erhalten Sie detaillierte Informationen zu einem ausgewählten Host.
+
+Zusätzlich zeigt dieses Display die Summe der eigenständigen ONTAP SVMs und Cluster ONTAP SVMs, die SnapCenter verwaltet und auf die Sie Zugriff haben. Wenn Sie auf die neben SVM angrenzende Zahl klicken, werden Sie zur Seite Storage-Systeme umgeleitet. Von dort erhalten Sie ausführliche Informationen zu einer ausgewählten SVM.
+
+Der Status der Host-Konfiguration wird als rot (kritisch), gelb (Warnung) und grün (aktiv) angezeigt. Zudem wird die Anzahl der Hosts im jeweiligen Status angegeben. Für jeden Status werden Statusmeldungen bereitgestellt.
+
+|===
+| Konfigurationsstatus | Beschreibung 
+
+
+ a| 
+Upgrade erforderlich
+ a| 
+Anzahl der Hosts, auf denen nicht unterstützte Plug-ins ausgeführt werden und ein Upgrade erforderlich ist Ein nicht unterstütztes Plug-in ist mit dieser SnapCenter-Version nicht kompatibel.
+
+
+
+ a| 
+Migration erforderlich
+ a| 
+Anzahl der Hosts, auf denen nicht unterstützte Plug-ins ausgeführt werden und Migration erforderlich ist Ein nicht unterstütztes Plug-in ist mit dieser SnapCenter-Version nicht kompatibel.
+
+
+
+ a| 
+Es sind keine Plug-ins installiert
+ a| 
+Anzahl der Hosts, die erfolgreich hinzugefügt, aber die Plug-ins müssen installiert werden, oder die Installation der Plug-ins ist fehlgeschlagen.
+
+
+
+ a| 
+Ausgesetzt
+ a| 
+Anzahl der Hosts, deren Zeitpläne ausgesetzt und gewartet werden.
+
+
+
+ a| 
+Angehalten
+ a| 
+Anzahl der Hosts, die in Betrieb sind, die Plug-in-Services jedoch nicht ausgeführt werden.
+
+
+
+ a| 
+Host ausgefallen
+ a| 
+Anzahl der Hosts, die ausgefallen sind oder nicht erreichbar sind.
+
+
+
+ a| 
+Upgrade verfügbar (optional)
+ a| 
+Anzahl der Hosts, auf denen eine neuere Version des Plug-in-Pakets zur Aktualisierung verfügbar ist.
+
+
+
+ a| 
+Migration verfügbar (optional)
+ a| 
+Anzahl der Hosts, auf denen eine neuere Version des Plug-ins für die Migration verfügbar ist
+
+
+
+ a| 
+Protokollverzeichnis konfigurieren
+ a| 
+Anzahl der Hosts, für die SCSQL das Protokollverzeichnis konfiguriert werden muss, um die Sicherung des Transaktionsprotokolls zu erstellen.
+
+
+
+ a| 
+Konfiguration von VMware Plug-ins
+ a| 
+Anzahl der Hosts, die das SnapCenter Plug-in für VMware vSphere hinzufügen müssen
+
+
+
+ a| 
+Unbekannt
+ a| 
+Anzahl der Hosts, die registriert wurden, aber die Installation noch nicht ausgelöst wurde.
+
+
+
+ a| 
+Wird Ausgeführt
+ a| 
+Anzahl der Hosts, die vorhanden sind und Plug-ins werden ausgeführt. Und bei SCSLL-Plug-ins werden Logverzeichnis und Hypervisor konfiguriert.
+
+
+
+ a| 
+Installieren\Deinstallieren von Plug-ins
+ a| 
+Anzahl der Hosts, auf denen Plug-in-Installation oder Deinstallation ausgeführt wird.
+
+|===
+
+
+== Lizenzierte Kapazität
+
+Die Kachel „lizenzierte Kapazität“ zeigt Informationen über die gesamte lizenzierte Kapazität, die genutzte Kapazität, Warnmeldungen zu Kapazitätsschwellenwerten und Benachrichtigungen zum Ablauf von Lizenzen für kapazitätsbasierte SnapCenter Lizenzen an.
+
+
+NOTE: Diese Anzeige wird nur angezeigt, wenn Sie kapazitätsbasierte SnapCenter-Lizenzen auf Cloud Volumes ONTAP- oder ONTAP Select-Plattformen verwenden. Bei FAS oder AFF Plattformen ist die SnapCenter Lizenz Controller-basiert und für unbegrenzte Kapazität lizenziert. Es ist keine Kapazitätslizenz erforderlich.
+
+|===
+| Lizenzstatus | Beschreibung 
+
+
+ a| 
+Wird verwendet
+ a| 
+Menge der derzeit genutzten Kapazität
+
+
+
+ a| 
+Benachrichtigen
+ a| 
+Kapazitätsschwellenwert, bei dem Benachrichtigungen im Dashboard angezeigt werden und bei Konfiguration beim Senden von E-Mail-Benachrichtigungen.
+
+
+
+ a| 
+Lizenziert
+ a| 
+Menge der lizenzierten Kapazität.
+
+
+
+ a| 
+Ein Ende
+ a| 
+Die Menge an Kapazität, die die lizenzierte Kapazität überschritten hat.
+
+|===

@@ -1,0 +1,138 @@
+---
+permalink: install/task_add_storage_systems.html 
+sidebar: sidebar 
+keywords: add, storage system, SVM 
+summary: Sie sollten das Storage-System einrichten, über das SnapCenter Zugriff auf ONTAP Storage erhält, um Datensicherungs- und Provisionierungsvorgänge durchzuführen. Sie können entweder eine eigenständige SVM oder ein Cluster aus mehreren SVMs hinzufügen. 
+---
+= Storage-Systeme hinzufügen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie sollten das Storage-System einrichten, mit dem SnapCenter Zugriff auf ONTAP Storage oder Amazon FSX für NetApp ONTAP erhalten, um Datensicherungs- und Bereitstellungsvorgänge durchzuführen.
+
+Sie können entweder eine eigenständige SVM oder ein Cluster aus mehreren SVMs hinzufügen. Wenn Sie Amazon FSX für NetApp ONTAP verwenden, können Sie entweder FSX Admin LIF aus mehreren SVMs mit fsxadmin-Konto hinzufügen oder FSX SVM in SnapCenter hinzufügen.
+
+*Was Sie brauchen*
+
+* Sie sollten die erforderlichen Berechtigungen in der Rolle „Infrastrukturadministrator“ besitzen, um Speicherverbindungen zu erstellen.
+* Sie sollten sicherstellen, dass die Plug-in-Installationen nicht ausgeführt werden.
++
+Die Host-Plug-in-Installationen dürfen beim Hinzufügen einer Speichersystemverbindung nicht ausgeführt werden, da der Host-Cache möglicherweise nicht aktualisiert wird und der Datenbank-Status in der SnapCenter GUI unter „`not available for Backup`“ oder „`not on NetApp Storage`“ angezeigt werden kann.
+
+* Speichersystemnamen sollten eindeutig sein.
++
+SnapCenter unterstützt nicht mehrere Storage-Systeme mit demselben Namen auf verschiedenen Clustern. Jedes von SnapCenter unterstützte Storage-System sollte über einen eindeutigen Namen und eine eindeutige LIF-IP-Adresse für Daten verfügen.
+
+
+
+*Über diese Aufgabe*
+
+* Wenn Sie Speichersysteme konfigurieren, können Sie auch die Funktionen für das Ereignismanagement (EMS) & AutoSupport aktivieren. Das AutoSupport Tool erfasst Daten zum Systemzustand des Systems und sendet die Daten automatisch an den technischen Support von NetApp. Damit können sie Fehler im System Ihres Systems beheben.
++
+Wenn Sie diese Funktionen aktivieren, sendet SnapCenter AutoSupport-Informationen an das Storage-System und EMS-Meldungen an das Syslog-System, wenn eine Ressource geschützt ist, eine Wiederherstellung oder ein Klonvorgang erfolgreich abgeschlossen wird oder ein Vorgang ausfällt.
+
+* Falls Sie Snapshot Kopien zu einem SnapMirror Ziel oder einem SnapVault Ziel replizieren möchten, müssen Sie Storage-Systemverbindungen für die Ziel-SVM oder das Ziel-Cluster sowie die Quell-SVM oder das Cluster einrichten.
+
+
+
+NOTE: Wenn Sie das Kennwort des Speichersystems ändern, können geplante Jobs, Backup-Vorgänge bei Bedarf und Wiederherstellungsvorgänge fehlschlagen. Nach dem Ändern des Kennworts des Speichersystems können Sie das Passwort aktualisieren, indem Sie auf der Registerkarte Speicher auf *Ändern* klicken.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Speichersysteme*.
+. Klicken Sie auf der Seite Speichersysteme auf *Neu*.
+. Geben Sie auf der Seite Add Storage System die folgenden Informationen ein:
++
+|===
+| Für dieses Feld... | Tun Sie das... 
+
+
+ a| 
+Storage-System
+ a| 
+Geben Sie den Namen des Storage-Systems oder die IP-Adresse ein.
+
+
+NOTE: Speichersystemnamen, die nicht den Domainnamen enthalten, müssen 15 oder weniger Zeichen haben, und die Namen müssen resolable sein. Um Verbindungen zu Speichersystemen mit Namen zu erstellen, die mehr als 15 Zeichen enthalten, können Sie das Cmdlet "Add-SmStorageConnectionPowerShell" verwenden.
+
+
+NOTE: Bei Storage-Systemen mit MetroCluster-Konfiguration (MCC) wird sowohl lokale als auch Peer-Cluster registrieren, um unterbrechungsfreien Betrieb zu gewährleisten.
+
+SnapCenter unterstützt nicht mehrere SVMs mit demselben Namen auf verschiedenen Clustern. Jede von SnapCenter unterstützte SVM muss über einen eindeutigen Namen verfügen.
+
+
+NOTE: Nachdem Sie die Storage-Verbindung zu SnapCenter hinzugefügt haben, sollten Sie die SVM oder den Cluster nicht mithilfe von ONTAP umbenennen.
+
+
+NOTE: Wenn eine SVM mit einem kurzen Namen oder einem FQDN hinzugefügt wird, muss sie sowohl aus dem SnapCenter als auch dem Plug-in-Host resolable sein.
+
+
+
+ a| 
+Benutzername/Passwort
+ a| 
+Geben Sie die Anmeldedaten des Speicherbenutzers ein, der über die erforderlichen Berechtigungen für den Zugriff auf das Speichersystem verfügt.
+
+
+
+ a| 
+Einstellungen für Ereignismanagement-System (EMS) und AutoSupport
+ a| 
+Wenn Sie EMS-Meldungen an das Syslog-Speichersystem senden möchten oder wenn Sie AutoSupport-Meldungen für den angewendeten Schutz, abgeschlossene Wiederherstellungsvorgänge oder fehlgeschlagene Vorgänge an das Speichersystem senden möchten, aktivieren Sie das entsprechende Kontrollkästchen.
+
+Wenn Sie das Kontrollkästchen *AutoSupport-Benachrichtigung für fehlgeschlagene Vorgänge an das Speichersystem senden* aktivieren, ist das Kontrollkästchen * SnapCenter-Ereignisse in syslog* aktiviert, da EMS-Nachrichten zur Aktivierung von AutoSupport-Benachrichtigungen erforderlich sind.
+
+|===
+. Klicken Sie auf *Mehr Optionen*, wenn Sie die Standardwerte ändern möchten, die Plattform, Protokoll, Port und Timeout zugewiesen sind.
++
+.. Wählen Sie unter Plattform eine der Optionen aus der Dropdown-Liste aus.
++
+Wenn die SVM das sekundäre Storage-System in einer Backup-Beziehung ist, aktivieren Sie das Kontrollkästchen *sekundär*. Wenn die Option *Sekundär* ausgewählt ist, führt SnapCenter keine Lizenzprüfung sofort durch.
+
+.. Wählen Sie im Protokoll das Protokoll aus, das während der SVM- oder Cluster-Einrichtung, normalerweise HTTPS, konfiguriert wurde.
+.. Geben Sie den Port ein, den das Speichersystem akzeptiert.
++
+Der Standardport 443 funktioniert in der Regel.
+
+.. Geben Sie die Zeit in Sekunden ein, die verstreichen soll, bevor die Kommunikationsversuche angehalten werden.
++
+Der Standardwert ist 60 Sekunden.
+
+.. Wenn die SVM über mehrere Managementschnittstellen verfügt, aktivieren Sie das Kontrollkästchen *bevorzugte IP* und geben Sie dann die bevorzugte IP-Adresse für SVM-Verbindungen ein.
+.. Klicken Sie Auf *Speichern*.
+
+
+. Klicken Sie Auf *Absenden*.
+
+
+*Ergebnisse*
+
+Führen Sie auf der Seite Storage Systems aus dem Dropdown-Menü *Typ* eine der folgenden Aktionen aus:
+
+* Wählen Sie *ONTAP SVMs* aus, wenn Sie alle hinzugefügten SVMs anzeigen möchten.
++
+Falls Sie FSX SVMs hinzugefügt haben, finden Sie hier die FSX SVMs.
+
+* Wählen Sie *ONTAP Cluster* aus, wenn Sie alle hinzugefügten Cluster anzeigen möchten.
++
+Wenn Sie FSX-Cluster mit fsxadmin hinzugefügt haben, werden die FSX-Cluster hier aufgelistet.
+
++
+Wenn Sie auf den Cluster-Namen klicken, werden im Abschnitt Storage Virtual Machines alle SVMs, die Teil des Clusters sind, angezeigt.
+
++
+Wenn dem ONTAP Cluster über die ONTAP-Benutzeroberfläche eine neue SVM hinzugefügt wird, klicken Sie auf *Neu entdecken*, um die neu hinzugefügte SVM anzuzeigen.
+
+
+
+*Nach Ihrer Beendigung*
+
+Ein Cluster-Administrator muss AutoSupport auf jedem Node des Storage-Systems aktivieren, um E-Mail-Benachrichtigungen von allen Storage-Systemen zu senden, auf die SnapCenter Zugriff hat, indem der folgende Befehl über die Befehlszeile des Storage-Systems ausgeführt wird:
+
+`autosupport trigger modify -node nodename -autosupport-message client.app.info enable -noteto enable`
+
+
+NOTE: Der SVM-Administrator hat keinen Zugriff auf AutoSupport.

@@ -1,0 +1,80 @@
+---
+permalink: install/reference_space_and_sizing_requirements.html 
+sidebar: sidebar 
+keywords: SnapCenter 
+summary: Vor der Installation des SnapCenter Servers sollten Sie mit den Platz- und Größenanforderungen vertraut sein. Sie sollten auch die verfügbaren System- und Sicherheitsupdates anwenden. 
+---
+= Platz- und Größenanforderungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vor der Installation des SnapCenter Servers sollten Sie mit den Platz- und Größenanforderungen vertraut sein. Sie sollten auch die verfügbaren System- und Sicherheitsupdates anwenden.
+
+|===
+| Element | Anforderungen 
+
+
+ a| 
+Betriebssysteme
+ a| 
+Microsoft Windows
+
+Es werden nur englische, deutsche, japanische und vereinfachte chinesische Versionen der Betriebssysteme unterstützt.
+
+Aktuelle Informationen zu unterstützten Versionen finden Sie unter https://imt.netapp.com/matrix/imt.jsp?components=105046;&solution=1257&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"^].
+
+
+
+ a| 
+Minimale CPU-Anzahl
+ a| 
+4 Kerne
+
+
+
+ a| 
+Mind. RAM
+ a| 
+8 GB
+
+
+NOTE: Der MySQL Server Pufferpool nutzt 20 Prozent des gesamten RAM.
+
+
+
+ a| 
+Minimaler Festplattenspeicher für die SnapCenter-Serversoftware und Protokolle
+ a| 
+4 GB
+
+
+NOTE: Wenn sich das SnapCenter-Repository auf demselben Laufwerk befindet, auf dem SnapCenter-Server installiert ist, wird empfohlen, 10 GB zu verwenden.
+
+
+
+ a| 
+Minimaler Festplattenspeicher für das SnapCenter-Repository
+ a| 
+6 GB
+
+
+NOTE: HINWEIS: Wenn der SnapCenter-Server auf demselben Laufwerk installiert ist, auf dem das SnapCenter-Repository installiert ist, wird empfohlen, 10 GB zu verwenden.
+
+
+
+ a| 
+Erforderliche Softwarepakete
+ a| 
+* Microsoft .NET Framework 4.7.2 oder höher
+* Windows Management Framework (WMF) 4.0 oder höher
+* PowerShell 4.0 oder höher
+
+
+Informationen zur Fehlerbehebung von .NET finden Sie unter: link:..https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_upgrade_or_install_fails_with_%22This_KB_is_not_related_to_the_OS%22["Das Upgrade oder die Installation von SnapCenter schlägt bei älteren Systemen, die keine Internetverbindung haben, fehl."]
+
+Aktuelle Informationen zu unterstützten Versionen finden Sie unter https://imt.netapp.com/matrix/imt.jsp?components=105046;&solution=1257&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"^].
+
+|===

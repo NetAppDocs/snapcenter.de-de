@@ -1,0 +1,44 @@
+---
+permalink: protect-sco/backup-application-volume-resource-group.html 
+sidebar: sidebar 
+keywords: application volume, resource group, back up, database 
+summary: Sie können ein Backup der Ressourcengruppe erstellen, die nur Applikations-Volumes oder eine Mischung aus Applikations-Volumes und Datenbank enthält. 
+---
+= Sichern Sie die Ressourcengruppe Anwendungsvolumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können ein Backup der Ressourcengruppe erstellen, die nur Applikations-Volumes oder eine Mischung aus Applikations-Volumes und Datenbank enthält. Für alle in der Ressourcengruppe definierten Ressourcen wird ein Sicherungsvorgang in der Ressourcengruppe durchgeführt.
+
+Wenn die Ressourcengruppe mehrere Anwendungs-Volumes hat, sollten alle Anwendungs-Volumes entweder über SnapMirror oder SnapVault-Replizierungsrichtlinie verfügen.
+
+*Über diese Aufgabe*
+
+Standardmäßig werden Backups von Konsistenzgruppen (CG) erstellt. Wenn Sie Volume-basierte Backups erstellen möchten, sollten Sie den Wert von *EnableOracleNdvVolumeBasedBackup* in der Datei _Web.config_ auf true setzen.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das Oracle Datenbank-Plug-in aus der Liste aus.
+. Wählen Sie auf der Seite Ressourcen in der Liste *Ansicht* die Option *Ressourcengruppe* aus.
++
+Sie können die Ressourcengruppe entweder durch Eingabe des Ressourcengruppennamens in das Suchfeld oder durch Klicken auf * durchsuchenimage:../media/filter_icon.gif[""]* Und dann das Tag auswählen. Sie können dann auf * klickenimage:../media/filter_icon.gif[""]* Zum Schließen des Filterfensters.
+
+. Wählen Sie auf der Seite Ressourcengruppen die Ressourcengruppe aus, die Sie sichern möchten, und klicken Sie dann auf *Jetzt sichern*.
+. Führen Sie auf der Seite Backup die folgenden Schritte aus:
++
+.. Wenn Sie der Ressourcengruppe mehrere Richtlinien zugeordnet haben, wählen Sie aus der Dropdown-Liste *Richtlinie* die Richtlinie aus, die Sie zum Sichern verwenden möchten.
++
+Wenn die für das On-Demand-Backup ausgewählte Richtlinie einem Backup-Zeitplan zugeordnet ist, werden die On-Demand-Backups auf Basis der für den Zeitplantyp festgelegten Aufbewahrungseinstellungen beibehalten.
+
+.. Klicken Sie Auf *Backup*.
+
+
+. Überwachen Sie den Fortschritt des Vorgangs, indem Sie auf *Monitor* > *Jobs* klicken.
++
+
+NOTE: Der Verifizierungsvorgang wird nur für die Datenbanken und nicht für die Applikations-Volumes durchgeführt.
+
+

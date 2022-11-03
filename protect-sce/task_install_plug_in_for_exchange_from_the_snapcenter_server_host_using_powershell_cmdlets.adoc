@@ -1,0 +1,39 @@
+---
+permalink: protect-sce/task_install_plug_in_for_exchange_from_the_snapcenter_server_host_using_powershell_cmdlets.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie sollten das Plug-in für Exchange über die SnapCenter-Benutzeroberfläche installieren. Wenn Sie die GUI nicht verwenden möchten, können Sie PowerShell Cmdlets auf dem SnapCenter Server Host oder auf einem Remote Host verwenden. 
+---
+= Installieren Sie das Plug-in für Exchange über den SnapCenter Server Host mithilfe von PowerShell Cmdlets
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie sollten das Plug-in für Exchange über die SnapCenter-Benutzeroberfläche installieren. Wenn Sie die GUI nicht verwenden möchten, können Sie PowerShell Cmdlets auf dem SnapCenter Server Host oder auf einem Remote Host verwenden.
+
+*Was Sie brauchen*
+
+* SnapCenter-Server muss installiert und konfiguriert worden sein.
+* Sie müssen ein lokaler Administrator auf dem Host oder ein Benutzer mit Administratorrechten sein.
+* Sie müssen ein Benutzer sein, der einer Rolle zugewiesen ist, die über die Berechtigungen Plug-in, Installation und Deinstallation verfügt, wie z. B. SnapCenter Admin
+* Vor der Installation des Plug-ins für Exchange müssen Sie die Installationsanforderungen und die Typen der unterstützten Konfigurationen geprüft haben.
+* Der Host, auf dem das Plug-in für Exchange installiert werden soll, muss ein Windows-Host sein.
+
+
+*Schritte*
+
+. Erstellen Sie auf dem SnapCenter-Server-Host eine Sitzung mit dem Cmdlet _Open-SmConnection_, und geben Sie dann Ihre Anmeldeinformationen ein.
+. Fügen Sie den Host hinzu, auf dem Sie das Plug-in für Exchange installieren möchten, mit dem Cmdlet _Add-SmHost_ mit den erforderlichen Parametern.
++
+Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ können Sie auch auf die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["SnapCenter Software Cmdlet Referenzhandbuch"^].
+
++
+Es kann sich dabei um einen Standalone-Host oder eine DAG handeln. Wenn Sie eine DAG angeben, ist der Parameter _-IsDAG_ erforderlich.
+
+. Installieren Sie das Plug-in für Exchange mit dem Cmdlet _Install-SmHostPackage_ mit den erforderlichen Parametern.
++
+Dieser Befehl installiert das Plug-in für Exchange auf dem angegebenen Host und registriert dann das Plug-in mit SnapCenter.
+
+

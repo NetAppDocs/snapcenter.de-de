@@ -1,0 +1,22 @@
+---
+permalink: protect-scw/reference_back_up_windows_file_systems.html 
+sidebar: sidebar 
+keywords:  
+summary: Wenn das SnapCenter-Plug-in für Microsoft Windows in Ihrer Umgebung installiert wird, können Sie mit SnapCenter Backups der Windows Filesysteme erstellen. Sie können ein einzelnes Dateisystem oder eine Ressourcengruppe sichern, die mehrere Dateisysteme enthält. Sie können Backups nach Bedarf oder gemäß einem definierten Schutzzeitplan erstellen. 
+---
+= Sichern Sie Windows File-Systeme
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn das SnapCenter-Plug-in für Microsoft Windows in Ihrer Umgebung installiert wird, können Sie mit SnapCenter Backups der Windows Filesysteme erstellen. Sie können ein einzelnes Dateisystem oder eine Ressourcengruppe sichern, die mehrere Dateisysteme enthält. Sie können Backups nach Bedarf oder gemäß einem definierten Schutzzeitplan erstellen.
+
+Sie können mehrere Backups so planen, dass sie gleichzeitig über mehrere Server ausgeführt werden. Backup- und Restore-Vorgänge können nicht gleichzeitig auf derselben Ressource durchgeführt werden.
+
+Der folgende Workflow zeigt die Reihenfolge, in der Sie die Backup-Vorgänge durchführen müssen:
+
+image::../media/sce_backup_workflow.gif[sce Backup-Workflow]
+
+Außerdem können Sie PowerShell Cmdlets manuell oder in Skripten verwenden, um Backup-, Wiederherstellungs- und Klonvorgänge durchzuführen. Die SnapCenter Cmdlet Hilfe oder das https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["SnapCenter Software Cmdlet Referenzhandbuch"^] Enthält detaillierte Informationen zu PowerShell Cmdlets.

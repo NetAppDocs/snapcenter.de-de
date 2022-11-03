@@ -1,0 +1,132 @@
+---
+permalink: protect-sce/task_define_a_backup_strategy_for_exchange_server_resources.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Wenn Sie eine Backup-Strategie definieren, bevor Sie Ihre Backup-Jobs erstellen, können Sie sicherstellen, dass Sie über die Backups verfügen, die Sie benötigen, um Ihre Datenbanken erfolgreich wiederherzustellen. Ihre Service Level Agreement (SLA), Recovery Time Objective (RTO) und Recovery Point Objective \ (RPO\) bestimmen Ihre Backup-Strategie weitestgehend.' 
+---
+= Backup-Strategie für Exchange Server-Ressourcen definieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie eine Backup-Strategie definieren, bevor Sie Ihre Backup-Jobs erstellen, können Sie sicherstellen, dass Sie über die Backups verfügen, die Sie benötigen, um Ihre Datenbanken erfolgreich wiederherzustellen. Ihre Backup-Strategie wird durch Ihre Service Level Agreement (SLA), Recovery Time Objective (RTO) und Recovery Point Objective (RPO) weitgehend bestimmt.
+
+Ein SLA definiert das erwartete Service-Level und löst zahlreiche Service-bezogene Probleme, einschließlich Verfügbarkeit und Performance des Service. Die RTO ist der Zeitpunkt, zu dem ein Geschäftsprozess nach einer Service-Unterbrechung wiederhergestellt werden muss. Ein RPO definiert die Strategie für das Alter der Dateien, die aus dem Backup-Storage wiederhergestellt werden müssen, damit die normalen Vorgänge nach einem Ausfall fortgesetzt werden können. SLA, RTO und RPO tragen zur Backup-Strategie bei.
+
+
+
+== Arten von Backups, die für Exchange-Datenbank unterstützt werden
+
+Für das Backup von Exchange Mailboxen mit SnapCenter müssen Sie den Ressourcentyp auswählen, beispielsweise Datenbanken und Datenbankverfügbarkeitsgruppen (Database Availability Groups, DAG). Mithilfe der Snapshot Kopiertechnologie lassen sich online schreibgeschützte Kopien der Volumes erstellen, auf denen sich die Ressourcen befinden.
+
+|===
+| Backup-Typ | Beschreibung 
+
+
+ a| 
+Vollständiges Backup und Backup für Protokolle
+ a| 
+Backups der Datenbanken und aller Transaktions-Logs, einschließlich der gekürzten Logs.
+
+Nach Abschluss eines vollständigen Backups schneidet der Exchange Server die Transaktions-Logs ab, die bereits in die Datenbank übernommen wurden.
+
+Normalerweise sollten Sie diese Option wählen. Wenn Ihre Backup-Zeit jedoch kurz ist, können Sie wählen, keine Transaktions-Log-Backup mit vollständiger Sicherung auszuführen.
+
+
+
+ a| 
+Vollständiges Backup
+ a| 
+Sicherung von Datenbanken und Transaktionsprotokollen.
+
+Die gekürzten Transaktionsprotokolle werden nicht gesichert.
+
+
+
+ a| 
+Backup-Protokollierung
+ a| 
+Sichert alle Transaktions-Logs.
+
+Die gekürzten Protokolle, die bereits in die Datenbank geschrieben sind, werden nicht gesichert. Wenn Sie regelmäßige Transaktions-Log-Backups zwischen vollständigen Datenbank-Backups planen, können Sie granulare Recovery-Punkte auswählen.
+
+|===
+
+
+== Backup-Pläne für Datenbank-Plug-ins
+
+Die Sicherungshäufigkeit (Planungstyp) wird in den Richtlinien angegeben. In der Konfiguration der Ressourcengruppe wird ein Backup-Zeitplan angegeben. Der wichtigste Faktor bei der Ermittlung der Backup-Häufigkeit oder des Zeitplans ist die Änderungsrate für die Ressource und die Bedeutung der Daten. Sie können eine stark genutzte Ressource unter Umständen jede Stunde sichern, während Sie selten genutzte Ressourcen einmal am Tag sichern können. Weitere Faktoren sind die Bedeutung der Ressource für Ihr Unternehmen, das Service Level Agreement (SLA) und das Recovery Point Objective (RPO).
+
+Ein SLA definiert das erwartete Service-Level und löst zahlreiche Service-bezogene Probleme, einschließlich Verfügbarkeit und Performance des Service. Ein RPO definiert die Strategie für das Alter der Dateien, die aus dem Backup-Storage wiederhergestellt werden müssen, damit die normalen Vorgänge nach einem Ausfall fortgesetzt werden können. SLA und RPO tragen zur Datensicherungsstrategie bei.
+
+Selbst bei einer stark ausgelasteten Ressource ist es nicht mehr als ein oder zwei Mal pro Tag erforderlich, ein komplettes Backup auszuführen. So könnten beispielsweise regelmäßige Transaktions-Log-Backups ausreichen, um sicherzustellen, dass Sie die Backups haben, die Sie benötigen. Je öfter Sie Ihre Datenbanken sichern, desto weniger Transaktions-Logs benötigt SnapCenter zum Zeitpunkt der Wiederherstellung, was zu schnelleren Restore-Vorgängen führen kann.
+
+Backup-Zeitpläne haben zwei Teile:
+
+* Sicherungshäufigkeit
++
+Die Backup-Häufigkeit (wie oft Backups durchgeführt werden sollen), die für einige Plug-ins als _Schedule Type_ bezeichnet wird, ist Teil einer Richtlinienkonfiguration. Sie können stündlich, täglich, wöchentlich oder monatlich als Sicherungshäufigkeit für die Richtlinie auswählen. Wenn Sie keine dieser Frequenzen auswählen, ist die erstellte Richtlinie eine reine On-Demand-Richtlinie. Sie können auf Richtlinien zugreifen, indem Sie auf *Einstellungen* > *Richtlinien* klicken.
+
+* Backup-Pläne
++
+Backup-Zeitpläne (genau, wann Backups durchgeführt werden sollen) sind Teil der Konfiguration einer Ressourcengruppe. Wenn Sie beispielsweise eine Ressourcengruppe haben, die eine Richtlinie für wöchentliche Backups konfiguriert hat, können Sie den Zeitplan so konfigurieren, dass er jeden Donnerstag um 10:00 Uhr gesichert wird. Sie können auf Ressourcengruppenpläne zugreifen, indem Sie auf *Ressourcen* > *Ressourcengruppen* klicken.
+
+
+
+
+
+== Anzahl der für Datenbanken erforderlichen Backup-Jobs
+
+Zu den Faktoren, die die Anzahl der erforderlichen Backup-Jobs bestimmen, zählen die Größe der Ressource, die Anzahl der verwendeten Volumes, die Änderungsrate der Ressource und Ihr Service Level Agreement (SLA).
+
+
+
+== Konventionen bei Backup-Namen
+
+Sie können entweder die standardmäßige Namenskonvention für Snapshot Kopien verwenden oder eine individuelle Namenskonvention verwenden. Die standardmäßige Backup-Namenskonvention fügt einen Zeitstempel zu den Namen von Snapshot Kopien hinzu, der Ihnen hilft, zu identifizieren, wann die Kopien erstellt wurden.
+
+Die Snapshot Kopie verwendet die folgende standardmäßige Namenskonvention:
+
+`resourcegroupname_hostname_timestamp`
+
+Sie sollten Ihre Backup-Ressourcengruppen logisch benennen, wie im folgenden Beispiel:
+
+[listing]
+----
+dts1_mach1x88_03-12-2015_23.17.26
+----
+In diesem Beispiel haben die Syntaxelemente folgende Bedeutungen:
+
+* _Dts1_ ist der Name der Ressourcengruppe.
+* _Mach1x88_ ist der Hostname.
+* _03-12-2015_23.17.26_ ist das Datum und der Zeitstempel.
+
+
+Alternativ können Sie das Namensformat für die Snapshot-Kopie angeben und Ressourcen oder Ressourcengruppen schützen, indem Sie *Verwenden Sie benutzerdefiniertes Namensformat für die Snapshot-Kopie* wählen. Beispiel: Custtext_resourcegruppe_Policy_hostname oder resourcegruppe_hostname. Standardmäßig wird dem Namen der Snapshot Kopie das Suffix mit dem Zeitstempel hinzugefügt.
+
+
+
+== Optionen zur Backup-Aufbewahrung
+
+Sie können entweder die Anzahl der Tage festlegen, für die Backup-Kopien aufbewahrt werden sollen, oder die Anzahl der Backup-Kopien angeben, die aufbewahrt werden sollen, bis zu einem ONTAP von maximal 255 Kopien. Beispielsweise muss Ihr Unternehmen unter Umständen Backup-Kopien von 10 Tagen oder 130 Backup-Kopien aufbewahren.
+
+Beim Erstellen einer Richtlinie können Sie die Aufbewahrungsoptionen für den Backup-Typ und den Zeitplantyp angeben.
+
+Wenn Sie die SnapMirror Replizierung einrichten, wird die Aufbewahrungsrichtlinie auf dem Ziel-Volume gespiegelt.
+
+SnapCenter löscht die zurückbehaltenen Backups mit Beschriftungen, die dem Zeitplantyp entsprechen. Wenn der Zeitplantyp für die Ressource oder Ressourcengruppe geändert wurde, verbleiben Backups mit dem alten Etikett des Zeitplantyps möglicherweise weiterhin im System.
+
+
+NOTE: Für die langfristige Aufbewahrung von Backup-Kopien sollten Sie SnapVault-Backup verwenden.
+
+
+
+== Wie lange dauert die Speicherung von Transaktions-Log-Backups auf dem Quell-Storage Volume für Exchange Server
+
+Das SnapCenter Plug-in für Microsoft Exchange Server benötigt Transaktions-Log-Backups, um minutengenaue Restore-Vorgänge durchzuführen, bei denen Ihre Datenbank zwischen zwei vollständigen Backups wiederhergestellt wird.
+
+Beispiel: Wenn das Plug-in für Exchange um 8:00 Uhr ein vollständiges Backup mit Transaktionsprotokoll erstellt hat Zusätzlich noch um 5:00 Uhr ein vollständiges und Plus an Transaktions-Log-Backup, kann die Datenbank jederzeit zwischen 8:00 Uhr wiederhergestellt werden Und um 5:00 Uhr Falls keine Transaktionsprotokolle verfügbar sind, kann das Plug-in für Exchange nur zeitpunktgenaue Restore-Vorgänge durchführen, die eine Datenbank so lange wiederherstellen, wie das Plug-in für Exchange ein komplettes Backup durchgeführt hat.
+
+In der Regel erfordern Sie minutengenaue Restore-Vorgänge nur für einen oder zwei Tage. SnapCenter speichert standardmäßig mindestens zwei Tage.

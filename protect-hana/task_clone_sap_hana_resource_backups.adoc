@@ -1,0 +1,32 @@
+---
+permalink: protect-hana/task_clone_sap_hana_resource_backups.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: Der Klon-Workflow umfasst die Durchführung des Klonvorgangs und die Überwachung des Vorgangs. 
+---
+= Klon-Workflow
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Klon-Workflow umfasst die Durchführung des Klonvorgangs und die Überwachung des Vorgangs.
+
+*Über diese Aufgabe*
+
+* Sie können auf dem SAP HANA-Quellserver klonen.
+* Sie können Ressourcen-Backups aus den folgenden Gründen klonen:
++
+** Zum Testen von Funktionen, die während der Applikationsentwicklungszyklen mit der aktuellen Ressourcenstruktur und dem aktuellen Inhalt implementiert werden müssen
+** Zur Datenextraktion und -Manipulation beim Befüllen von Data Warehouses
+** Zum Wiederherstellen von Daten, die versehentlich gelöscht oder geändert wurden
+
+
+
+
+Im folgenden Workflow wird die Sequenz angezeigt, in der Sie den Klonvorgang durchführen müssen:
+
+image::../media/sco_scc_wfs_clone_workflow.png[Klon-Workflow]
+
+Außerdem können Sie PowerShell Cmdlets manuell oder in Skripten verwenden, um Backup-, Wiederherstellungs- und Klonvorgänge durchzuführen. Die SnapCenter Cmdlet Hilfe und die Cmdlet Referenzinformationen enthalten detaillierte Informationen zu PowerShell Cmdlets.

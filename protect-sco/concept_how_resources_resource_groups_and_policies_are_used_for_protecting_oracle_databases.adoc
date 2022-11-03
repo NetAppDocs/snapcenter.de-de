@@ -1,0 +1,36 @@
+---
+permalink: protect-sco/concept_how_resources_resource_groups_and_policies_are_used_for_protecting_oracle_databases.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for Oracle Database 
+summary: Bevor Sie SnapCenter verwenden, ist es hilfreich, grundlegende Konzepte im Zusammenhang mit Backup-, Klon- und Restore-Vorgängen zu verstehen, die durchgeführt werden sollen. 
+---
+= Verwendung von Ressourcen, Ressourcengruppen und Richtlinien zum Schutz von Oracle Datenbanken
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bevor Sie SnapCenter verwenden, ist es hilfreich, grundlegende Konzepte im Zusammenhang mit Backup-, Klon- und Restore-Vorgängen zu verstehen, die durchgeführt werden sollen.
+
+* Ressourcen sind typischerweise Oracle-Datenbanken in SnapCenter.
+* Eine SnapCenterRessourcengruppe ist eine Ressourcensammlung auf einem Host oder Cluster.
++
+Wenn Sie einen Vorgang für eine Ressourcengruppe ausführen, führen Sie diesen Vorgang für die in der Ressourcengruppe definierten Ressourcen aus.
+
++
+Die Ressourcengruppen wurden früher als Datensätze bezeichnet.
+
+* Die Richtlinien legen die Backup-Häufigkeit, die Aufbewahrung von Kopien, die Replizierung, Skripte und andere Merkmale von Datensicherungsvorgängen fest.
++
+Wenn Sie eine Ressourcengruppe erstellen, wählen Sie eine oder mehrere Richtlinien für diese Gruppe aus. Sie können auch eine Richtlinie auswählen, wenn Sie ein Backup nach Bedarf für eine einzelne Ressource durchführen. Sie können auch geplante Backups für einzelne Ressourcen und Ressourcengruppen durchführen.
+
+
+
+Denken Sie an eine Ressourcengruppe, die definiert _was_ Sie schützen möchten und wann Sie sie in Bezug auf Tag und Zeit schützen möchten. Denken Sie an eine Politik, die definiert _wie_ Sie sie schützen möchten.
+
+Wenn Sie beispielsweise alle Datenbanken eines Hosts sichern, können Sie eine Ressourcengruppe erstellen, die alle Datenbanken des Hosts umfasst. Sie können dann zwei Richtlinien an die Ressourcengruppe anhängen: Eine Tagesrichtlinie und eine Stundenpolitik. Wenn Sie die Ressourcengruppe erstellen und die Richtlinien anhängen, können Sie die Ressourcengruppe so konfigurieren, dass sie täglich ein vollständiges Backup durchführt, und einen anderen Zeitplan, der stündlich Protokoll-Backups durchführt.
+
+Das folgende Bild veranschaulicht die Beziehung zwischen Ressourcen, Ressourcengruppen und Richtlinien für Datenbanken:
+
+image::../media/sco_resourcegroup_policy.gif[sco-Ressourcengruppenrichtlinie]

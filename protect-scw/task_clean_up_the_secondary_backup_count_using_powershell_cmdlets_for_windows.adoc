@@ -1,0 +1,39 @@
+---
+permalink: protect-scw/task_clean_up_the_secondary_backup_count_using_powershell_cmdlets_for_windows.html 
+sidebar: sidebar 
+keywords: backups 
+summary: 'Sie können das Cmdlet "Remove-SmBackup" verwenden, um die Anzahl der Backups für sekundäre Backups zu bereinigen, die keine Snapshot-Kopien haben. Sie möchten dieses Cmdlet nutzen, wenn die gesamten Snapshot Kopien, die in der Topologie zum Managen von Kopien angezeigt werden, nicht mit der Einstellung zum Speichern von sekundären Storage Snapshot Kopien übereinstimmen.' 
+---
+= Reinigen Sie die Anzahl der sekundären Backups mit PowerShell cmdlets
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+Sie können das Cmdlet "Remove-SmBackup" verwenden, um die Anzahl der Backups für sekundäre Backups zu bereinigen, die keine Snapshot-Kopien haben. Sie möchten dieses Cmdlet vielleicht verwenden, wenn die gesamten Snapshot Kopien, die in der Topologie zum Managen von Kopien angezeigt werden, nicht mit der Einstellung zum Speichern von sekundären Storage Snapshot Kopien übereinstimmen.
+
+Sie müssen die PowerShell Umgebung vorbereitet haben, um die PowerShell Cmdlets auszuführen.
+
+Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ können Sie auch auf die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["SnapCenter Software Cmdlet Referenzhandbuch"^].
+
+*Schritte*
+
+. Starten Sie eine Verbindungssitzung mit dem SnapCenter-Server für einen bestimmten Benutzer, indem Sie das Cmdlet "Open-SmConnection" verwenden.
++
+[listing]
+----
+Open-SmConnection  -SMSbaseurl  https:\\snapctr.demo.netapp.com:8146/
+----
+. Bereinigen Sie die Anzahl der sekundären Backups mit dem Parameter -CleanupSecondaryBackups.
++
+Dieses Beispiel bereinigt die Anzahl der Backups für sekundäre Backups ohne Snapshot-Kopien:
+
++
+[listing]
+----
+Remove-SmBackup -CleanupSecondaryBackups
+Remove-SmBackup
+Are you sure want to remove the backup(s).
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
+----
+

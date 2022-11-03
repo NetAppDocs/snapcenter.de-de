@@ -1,0 +1,68 @@
+---
+permalink: protect-sco/task_monitor_oracle_database_backup_operations.html 
+sidebar: sidebar 
+keywords: SnapCenter Server, monitor, backup, activity pane, data protection 
+summary: Sie können den Fortschritt der verschiedenen Backup-Vorgänge überwachen, indem Sie die Seite SnapCenter-Jobs verwenden. Sie können den Fortschritt überprüfen, um festzustellen, wann er abgeschlossen ist oder ob ein Problem vorliegt. 
+---
+= Überwachen Sie die Backup-Vorgänge für die Oracle Datenbank
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können den Fortschritt verschiedener Backup-Vorgänge über die Seite SnapCenterJobs überwachen. Sie können den Fortschritt überprüfen, um festzustellen, wann er abgeschlossen ist oder ob ein Problem vorliegt.
+
+*Über diese Aufgabe*
+
+Die folgenden Symbole werden auf der Seite Jobs angezeigt und zeigen den entsprechenden Status der Vorgänge an:
+
+* image:../media/progress_icon.gif["Symbol „in Bearbeitung“"] In Bearbeitung
+* image:../media/success_icon.gif["Symbol „Abgeschlossen“"] Erfolgreich abgeschlossen
+* image:../media/failed_icon.gif["Fehlersymbol"] Fehlgeschlagen
+* image:../media/warning_icon.gif["Abgeschlossen mit Warnsymbol"] Abgeschlossen mit Warnungen oder konnte aufgrund von Warnungen nicht gestartet werden
+* image:../media/verification_job_in_queue.gif["Überprüfungsjob wird in die Warteschlange gestellt"] Warteschlange
+* image:../media/cancel_icon.gif[""] Storniert
+
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Monitor*.
+. Klicken Sie auf der Seite Überwachen auf *Jobs*.
+. Führen Sie auf der Seite Jobs die folgenden Schritte aus:
++
+.. Klicken Sie Auf image:../media/filter_icon.gif[""] Filtern der Liste, sodass nur Backup-Vorgänge aufgeführt werden.
+.. Geben Sie das Start- und Enddatum an.
+.. Wählen Sie aus der Dropdown-Liste *Typ* die Option *Backup* aus.
+.. Wählen Sie im Dropdown-Menü *Status* den Sicherungsstatus aus.
+.. Klicken Sie auf *Anwenden*, um die abgeschlossenen Vorgänge anzuzeigen.
+
+
+. Wählen Sie einen Sicherungsauftrag aus, und klicken Sie dann auf *Details*, um die Jobdetails anzuzeigen.
++
+
+NOTE: Der Status des Backupjobs wird zwar angezeigtimage:../media/success_icon.gif["Symbol „Abgeschlossen“"]Wenn Sie auf die Jobdetails klicken, wird möglicherweise angezeigt, dass einige der untergeordneten Aufgaben des Backup-Vorgangs noch ausgeführt oder mit Warnzeichen markiert sind.
+
+. Klicken Sie auf der Seite Jobdetails auf *Protokolle anzeigen*.
++
+Die Schaltfläche *Protokolle anzeigen* zeigt die detaillierten Protokolle für den ausgewählten Vorgang an.
+
+
+
+
+
+== Überwachen Sie Datensicherungsvorgänge im Teilfenster „Vorgang“
+
+[role="lead"]
+Im Aktivitätsbereich werden die fünf zuletzt durchgeführten Operationen angezeigt. Der Bereich „Aktivität“ wird auch angezeigt, wenn der Vorgang initiiert wurde und der Status des Vorgangs.
+
+Im Fensterbereich Aktivität werden Informationen zu Backup-, Wiederherstellungs-, Klon- und geplanten Backup-Vorgängen angezeigt. Wenn Sie Plug-in für SQL Server oder Plug-in für Exchange Server verwenden, werden im Aktivitätsbereich auch Informationen über den erneuten Seeding angezeigt.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Klicken Sie Auf image:../media/activity_pane_icon.gif[""] Im Aktivitätsbereich werden die fünf letzten Vorgänge angezeigt.
++
+Wenn Sie auf einen der Vorgänge klicken, werden die Arbeitsdetails auf der Seite Jobdetails aufgeführt.
+
+

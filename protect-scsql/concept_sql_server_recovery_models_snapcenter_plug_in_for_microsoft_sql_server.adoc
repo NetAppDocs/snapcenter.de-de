@@ -1,0 +1,30 @@
+---
+permalink: protect-scsql/concept_sql_server_recovery_models_snapcenter_plug_in_for_microsoft_sql_server.html 
+sidebar: sidebar 
+keywords:  
+summary: Jedem Datenbanktyp werden standardmäßig spezifische Recovery-Modelle zugewiesen. Der SQL Server Datenbankadministrator kann jede Datenbank einem anderen Recovery-Modell zuweisen. 
+---
+= Von SnapCenter unterstützte SQL Server Recovery-Modelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Jedem Datenbanktyp werden standardmäßig spezifische Recovery-Modelle zugewiesen. Der SQL Server Datenbankadministrator kann jede Datenbank einem anderen Recovery-Modell zuweisen.
+
+SnapCenter unterstützt drei Arten von SQL Server Recovery-Modellen:
+
+* Einfaches Recovery-Modell
++
+Wenn Sie das einfache Wiederherstellungsmodell verwenden, können Sie keine Backups der Transaktions-Logs erstellen.
+
+* Vollständiges Recovery-Modell
++
+Wenn Sie das vollständige Recovery-Modell verwenden, können Sie eine Datenbank vom Zeitpunkt eines Ausfalls auf ihren vorherigen Zustand wiederherstellen.
+
+* Recovery-Modell mit Massenprotokollierter
++
+Wenn Sie das Recovery-Modell mit der Massenprotokollierfunktion verwenden, müssen Sie den protokollierten Massenvorgang manuell erneut ausführen. Sie müssen den protokollierten Massenvorgang durchführen, wenn das Transaktionsprotokoll, das den Verschiebdatensatz des Vorgangs enthält, vor der Wiederherstellung nicht gesichert wurde. Wenn der Bulk Logged-Vorgang 10 Millionen Zeilen in eine Datenbank einfügt und die Datenbank vor dem Backup des Transaktionsprotokolls ausfällt, enthält die wiederhergestellte Datenbank nicht die Zeilen, die von der protokollierten Massenoperation eingefügt wurden.
+
+

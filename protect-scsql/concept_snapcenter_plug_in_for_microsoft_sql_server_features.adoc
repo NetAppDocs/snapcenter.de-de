@@ -1,0 +1,53 @@
+---
+permalink: protect-scsql/concept_snapcenter_plug_in_for_microsoft_sql_server_features.html 
+sidebar: sidebar 
+keywords:  
+summary: Das Plug-in für SQL Server ist in Microsoft SQL Server auf dem Windows Host und in die NetApp Snapshot Kopiertechnologie auf dem Storage-System integriert. Um mit dem Plug-in für SQL Server zu arbeiten, verwenden Sie die Schnittstelle SnapCenter. 
+---
+= SnapCenter Plug-in für Microsoft SQL Server Funktionen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Plug-in für SQL Server ist in Microsoft SQL Server auf dem Windows Host und in die NetApp Snapshot Kopiertechnologie auf dem Storage-System integriert. Um mit dem Plug-in für SQL Server zu arbeiten, verwenden Sie die Schnittstelle SnapCenter.
+
+Das Plug-in für SQL Server umfasst folgende Hauptfunktionen:
+
+* *Einheitliche grafische Benutzeroberfläche powered by SnapCenter*
++
+Die SnapCenter-Schnittstelle bietet Standardisierung und Konsistenz über Plug-ins und Umgebungen hinweg. Die Schnittstelle von SnapCenter ermöglicht die vollständige konsistente Backup- und Restore-Prozesse über Plug-ins hinweg, die zentrale Berichterstellung, die auf einen Blick basierende Dashboard-Ansichten verwenden, die rollenbasierte Zugriffssteuerung (Role Based Access Control, RBAC) einrichten und Jobs in allen Plug-ins überwachen. SnapCenter bietet außerdem eine zentralisierte Planung und ein Richtlinienmanagement zur Unterstützung von Backup- und Klonvorgängen.
+
+* *Automatisierte zentrale Verwaltung*
++
+Sie können routinemäßige SQL Server Backups planen, eine richtlinienbasierte Backup-Aufbewahrung konfigurieren und zeitpunktgenaue und minutengenaue Restore-Vorgänge einrichten. Zudem lässt sich die SQL Server Umgebung proaktiv überwachen, indem SnapCenter zum Senden von E-Mail-Warnmeldungen konfiguriert wird.
+
+* *Unterbrechungsfreie NetApp Snapshot Kopie-Technologie*
++
+Das Plug-in für SQL Server verwendet NetApp Snapshot Kopiertechnologie mit dem NetApp SnapCenter Plug-in für Microsoft Windows. So können Sie Datenbanken in Sekundenschnelle sichern und schnell wiederherstellen, ohne SQL Server offline schalten zu müssen. Snapshot Kopien belegen nur minimalen Speicherplatz.
+
+
+
+Zusätzlich zu diesen wichtigen Funktionen bietet das Plug-in für SQL Server folgende Vorteile:
+
+* Unterstützung für Workflows für Backup, Wiederherstellung, Klonen und Verifizierung
+* RBAC-unterstützte Sicherheit und zentralisierte Rollendelegation
+* Erstellung platzsparender und zeitpunktgenauer Kopien von Produktionsdatenbanken für Test- oder Datenextraktion mit der NetApp FlexClone Technologie
++
+Es ist eine FlexClone Lizenz auf dem Storage-System erforderlich, auf dem der Klon gespeichert ist.
+
+* Unterbrechungsfreie und automatisierte Backup-Verifizierung
+* Die Möglichkeit, mehrere Backups gleichzeitig über mehrere Server hinweg auszuführen
+* PowerShell cmdlets zur Skripte von Backup-, Verifizierungs-, Wiederherstellungs- und Klonvorgängen
+* Unterstützung von AlwaysOn Availability Groups (AGs) in SQL Server, um die Einrichtung, Backups und Restores von AGs zu beschleunigen
+* In-Memory-Datenbank und Buffer Pool Extension (BPE) als Teil von SQL Server 2014
+* Unterstützung von Backups von LUNs und Virtual Machine Disks (VMDKs)
+* Unterstützung physischer und virtualisierter Infrastrukturen
+* Unterstützung für iSCSI, Fibre Channel, FCoE, Raw Device Mapping (RDM) und VMDK über NFS und VMFS
++
+
+NOTE: NAS Volumes sollten eine standardmäßige Exportrichtlinie in Storage Virtual Machine (SVM) verwenden.
+
+* Unterstützung von FileStream und Dateigruppen in Standalone-Datenbanken von SQL Server
+

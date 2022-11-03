@@ -1,0 +1,78 @@
+---
+permalink: concept/concept_types_of_role_based_access_control_in_snapcenter.html 
+sidebar: sidebar 
+keywords: RBAC, roles, permissions, application-level RBAC, ONTAP permissions 
+summary: 'Mit der rollenbasierten Zugriffssteuerung (RBAC) und den ONTAP Berechtigungen können SnapCenter Administratoren Rollen erstellen und Zugriffsberechtigungen festlegen. SnapCenter Dank dieses zentral gemanagten Zugriffs können Applikationsadministratoren innerhalb delegierter Umgebungen sicher arbeiten.' 
+---
+= RBAC-Typen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit der rollenbasierten Zugriffssteuerung (RBAC) und den ONTAP Berechtigungen von SnapCenter können SnapCenter Administratoren die Kontrolle über SnapCenter Ressourcen an verschiedene Benutzer oder Benutzergruppen delegieren. Dank dieses zentral gemanagten Zugriffs können Applikationsadministratoren innerhalb delegierter Umgebungen sicher arbeiten.
+
+Sie können Rollen erstellen und ändern und Benutzern jederzeit Ressourcenzugriff hinzufügen. Wenn Sie jedoch zum ersten Mal SnapCenter einrichten, sollten Sie mindestens Active Directory-Benutzer oder -Gruppen zu Rollen hinzufügen und diesen Benutzern oder Gruppen dann Ressourcenzugriff hinzufügen.
+
+
+NOTE: Sie können SnapCenter nicht zum Erstellen von Benutzer- oder Gruppenkonten verwenden. Sie sollten Benutzer- oder Gruppenkonten in Active Directory des Betriebssystems oder der Datenbank erstellen.
+
+SnapCenter verwendet folgende Arten der rollenbasierten Zugriffssteuerung:
+
+* SnapCenter RBAC
+* SnapCenter Plug-in RBAC (für einige Plug-ins)
+* RBAC auf Applikationsebene
+* ONTAP-Berechtigungen
+
+
+
+
+== SnapCenter RBAC
+
+
+
+=== Rollen und Berechtigungen
+
+SnapCenter wird mit vordefinierten Rollen ausgeliefert, deren Berechtigungen bereits zugewiesen sind. Sie können diesen Rollen Benutzer oder Benutzergruppen zuweisen. Sie können auch neue Rollen erstellen und Berechtigungen und Benutzer verwalten.
+
+*Zuweisen von Berechtigungen für Benutzer oder Gruppen*
+
+Sie können Benutzern oder Gruppen Berechtigungen zuweisen, um auf SnapCenter-Objekte wie Hosts, Speicherverbindungen und Ressourcengruppen zuzugreifen. Sie können die Berechtigungen der SnapCenterAdmin-Rolle nicht ändern.
+
+Sie können Benutzern und Gruppen innerhalb derselben Gesamtstruktur und Benutzern, die zu verschiedenen Wäldern gehören, RBAC-Berechtigungen zuweisen. Sie können Benutzern, die zu verschachtelten Gruppen gehören, keine RBAC-Berechtigungen zuweisen.
+
+
+NOTE: Wenn Sie eine benutzerdefinierte Rolle erstellen, muss sie alle Berechtigungen der SnapCenter-Administratorrolle enthalten. Wenn Sie nur einige der Berechtigungen kopieren, z. B. Host add oder Host remove, können Sie diese Vorgänge nicht ausführen.
+
+
+
+=== Authentifizierung
+
+Benutzer müssen bei der Anmeldung über die grafische Benutzeroberfläche (GUI) oder PowerShell Commandlets über die Authentifizierung sorgen. Wenn Benutzer Mitglieder mehrerer Rollen sind, werden sie nach der Eingabe von Anmeldedaten aufgefordert, die gewünschte Rolle anzugeben. Benutzer müssen außerdem eine Authentifizierung zur Ausführung der APIs bereitstellen.
+
+
+
+== RBAC auf Applikationsebene
+
+SnapCenter verwendet die Zugangsdaten, um sicherzustellen, dass autorisierte SnapCenter Benutzer auch über Berechtigungen auf Applikationsebene verfügen.
+
+Wenn Sie beispielsweise Snapshot Kopien und Datensicherungsvorgänge in einer SQL Server-Umgebung ausführen möchten, müssen Sie die Anmeldedaten mit den richtigen Windows- oder SQL-Anmeldedaten festlegen. Der SnapCenter-Server authentifiziert die Anmeldeinformationen, die auf beiden Methoden festgelegt sind. Wenn Sie Snapshot Kopien und Datensicherungsvorgänge in einer Windows File-System-Umgebung auf ONTAP Storage durchführen möchten, muss die SnapCenter Administratorrolle über Administratorrechte auf dem Windows Host verfügen.
+
+Wenn Sie Datensicherungsvorgänge in einer Oracle-Datenbank durchführen möchten und wenn die Betriebssystemauthentifizierung im Datenbank-Host deaktiviert ist, müssen Sie die Anmeldedaten mit der Oracle-Datenbank oder den Oracle-ASM-Anmeldeinformationen festlegen. Der SnapCenter-Server authentifiziert die Anmeldeinformationen, die mit einer dieser Methoden festgelegt wurden, je nach Operation.
+
+
+
+== SnapCenter Plug-in für VMware vSphere RBAC
+
+Wenn Sie das SnapCenter VMware Plug-in für die VM-konsistente Datensicherung nutzen, bietet der vCenter Server zusätzliche RBAC-Level. Das SnapCenter VMware Plug-in unterstützt sowohl vCenter Server RBAC als auch Data ONTAP RBAC.
+
+Weitere Informationen finden Sie unter https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_role_based_access_control.html["SnapCenter Plug-in für VMware vSphere RBAC"^]
+
+
+
+== ONTAP-Berechtigungen
+
+Sie sollten vsadmin-Konto mit den erforderlichen Berechtigungen für den Zugriff auf das Speichersystem erstellen.
+
+Informationen zum Erstellen des Kontos und Zuweisen von Berechtigungen finden Sie unter link:../install/task_create_an_ontap_cluster_role_with_minimum_privileges.html["Erstellen einer ONTAP-Cluster-Rolle mit minimalen Berechtigungen"^]

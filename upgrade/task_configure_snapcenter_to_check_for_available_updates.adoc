@@ -1,0 +1,30 @@
+---
+permalink: upgrade/task_configure_snapcenter_to_check_for_available_updates.html 
+sidebar: sidebar 
+keywords: configure, snapcenter server, updates, software updates 
+summary: SnapCenter kommuniziert regelmäßig mit der NetApp Support-Website, um Sie über verfügbare Software Updates zu informieren. Sie können auch einen Zeitplan erstellen, in dem das Intervall angegeben wird, in dem Informationen über verfügbare Updates empfangen werden sollen. 
+---
+= Konfigurieren Sie SnapCenter, um nach verfügbaren Updates zu suchen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter kommuniziert regelmäßig mit der NetApp Support-Website, um Sie über verfügbare Software Updates zu informieren. Sie können auch einen Zeitplan erstellen, in dem das Intervall angegeben wird, in dem Informationen über verfügbare Updates empfangen werden sollen.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Einstellungen*.
+. Klicken Sie auf der Seite Einstellungen auf *Software*.
++
+Auf der Seite Verfügbare Software werden die verfügbaren Plug-in-Pakete, verfügbaren Versionen und deren Installationsstatus angezeigt.
+
+. Klicken Sie auf *nach Updates suchen*, um zu sehen, ob neuere Versionen von Plug-in-Paketen zur Verfügung stehen.
+. Klicken Sie auf *Updates planen*, um einen Zeitplan zu erstellen, in dem das Intervall angegeben wird, in dem Sie Informationen über verfügbare Aktualisierungen erhalten möchten:
++
+.. Wählen Sie das Intervall in *nach Updates suchen* aus.
+.. Wählen Sie die Windows-Anmeldedaten für SnapCenter Server Admin aus, und klicken Sie auf *OK*.
+
+
+

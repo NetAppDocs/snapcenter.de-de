@@ -1,0 +1,86 @@
+---
+permalink: concept/reference_role_based_access_control_permissions_and_roles.html 
+sidebar: sidebar 
+keywords: RBAC, roles, permissions 
+summary: 'Mit der rollenbasierten Zugriffssteuerung (Role Based Access Control, RBAC) von SnapCenter können Sie Rollen erstellen und Berechtigungen hinzufügen und diesen Rollen anschließend Benutzer oder Gruppen von Benutzern zuweisen. So können SnapCenter Administratoren eine zentral verwaltete Umgebung erstellen, während Applikationsadministratoren die Datensicherung managen können. SnapCenter wird mit vordefinierten Rollen und Berechtigungen ausgeliefert.' 
+---
+= RBAC-Berechtigungen und -Rollen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit der rollenbasierten Zugriffssteuerung (Role Based Access Control, RBAC) von SnapCenter können Sie Rollen erstellen und diesen Rollen Berechtigungen zuweisen und dann den Rollen Benutzer oder Benutzergruppen zuweisen. So können SnapCenter Administratoren eine zentral verwaltete Umgebung erstellen, während Applikationsadministratoren die Datensicherung managen können. SnapCenter wird mit vordefinierten Rollen und Berechtigungen ausgeliefert.
+
+
+
+== SnapCenter Rollen
+
+SnapCenter wird mit den folgenden vordefinierten Rollen ausgeliefert. Sie können diesen Rollen Benutzer und Gruppen zuweisen oder neue Rollen erstellen.
+
+Wenn Sie einem Benutzer eine Rolle zuweisen, werden auf der Seite „Jobs“ nur Aufträge angezeigt, die für diesen Benutzer relevant sind, es sei denn, Sie haben die Rolle „SnapCenter-Admin“ zugewiesen.
+
+* Administrator für App Backup und Klonen
+* Backup und Clone Viewer
+* Infrastrukturadministrator
+* SnapCenterAdmin
+
+
+
+
+== SnapCenter Plug-in für VMware vSphere Rollen
+
+Für das Management der VM-konsistenten Datensicherung von VMs, VMDKs und Datastores werden in vCenter die folgenden Rollen vom SnapCenter Plug-in für VMware vSphere erstellt:
+
+* SCV-Administrator
+* SCV-Ansicht
+* SCV-Backup
+* SCV-Wiederherstellung
+* Wiederherstellung der SCV-Gastdatei
+
+
+Weitere Informationen finden Sie unter https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_types_of_rbac_for_snapcenter_users.html["RBAC-Typen für SnapCenter Plug-in für VMware vSphere Benutzer"^]
+
+|===
+
+
+| *Best Practice:* NetApp empfiehlt, eine ONTAP-Rolle für das SnapCenter Plug-in für VMware vSphere Operationen zu erstellen und diese alle erforderlichen Berechtigungen zuzuweisen. 
+|===
+
+
+== SnapCenter-Berechtigungen
+
+SnapCenter bietet folgende Berechtigungen:
+
+* Ressourcengruppe
+* Richtlinie
+* Backup
+* Host
+* Storage-Anbindung
+* Klon
+* Bereitstellung (nur für Microsoft SQL Datenbank)
+* Dashboard
+* Berichte An
+* Wiederherstellen
++
+** Vollständige Volume-Wiederherstellung (nur bei benutzerdefinierten Plug-ins)
+
+
+* Ressource
++
+Für nicht-Administratoren sind vom Administrator Plug-in-Berechtigungen erforderlich, um eine Ressourcenerkennung durchzuführen.
+
+* Plug-in Installieren oder Deinstallieren
++
+
+NOTE: Wenn Sie die Berechtigungen für die Plug-in-Installation aktivieren, müssen Sie auch die Host-Berechtigung ändern, um Lese- und Updates zu aktivieren.
+
+* Migration
+* Mount (nur für Oracle Database)
+* Unmount (nur für Oracle Database)
+* Job-Überwachung
++
+Mit der Berechtigung Job Monitor können Mitglieder verschiedener Rollen die Vorgänge für alle Objekte anzeigen, denen sie zugewiesen sind.
+
+

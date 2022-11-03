@@ -1,0 +1,195 @@
+---
+permalink: protect-scsql/task_restore_sql_server_database_backups.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können SnapCenter verwenden, um gesicherte SQL Server-Datenbanken wiederherzustellen. Die Wiederherstellung der Datenbank ist ein mehrphasiger Prozess, der alle Daten- und Protokollseiten von einem bestimmten SQL Server-Backup in eine angegebene Datenbank kopiert. 
+---
+= Stellen Sie Backups von SQL Server Datenbanken wieder her
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können SnapCenter verwenden, um gesicherte SQL Server-Datenbanken wiederherzustellen. Die Wiederherstellung der Datenbank ist ein mehrphasiger Prozess, der alle Daten- und Protokollseiten von einem bestimmten SQL Server-Backup in eine angegebene Datenbank kopiert.
+
+*Über diese Aufgabe*
+
+* Sie können die gesicherten SQL Server Datenbanken auf einer anderen SQL Server-Instanz auf demselben Host wiederherstellen, auf dem das Backup erstellt wurde.
++
+Sie können SnapCenter verwenden, um die gesicherten SQL Server Datenbanken auf einem anderen Pfad wiederherzustellen, sodass Sie keine Produktionsversion ersetzen.
+
+* SnapCenter kann Datenbanken in einem Windows Cluster wiederherstellen, ohne die SQL Server Cluster-Gruppe offline zu schalten.
+* Wenn ein Cluster ausfällt (ein Vorgang zum Verschieben der Cluster-Gruppe) während eines Wiederherstellungsvorgangs auftritt (z. B. wenn der Node, der die Ressourcen besitzt, ausfällt), müssen Sie die Verbindung zur SQL Server Instanz wiederherstellen und dann den Wiederherstellungsvorgang neu starten.
+* Sie können die Datenbank nicht wiederherstellen, wenn die Benutzer oder die SQL Server Agent-Jobs auf die Datenbank zugreifen.
+* Systemdatenbanken können nicht auf einem alternativen Pfad wiederhergestellt werden.
+* DER SCRIPTS_PATH wird mit dem PredefinedWindowsScriptDirectory-Schlüssel definiert, der sich in der SMCoreServiceHost.exe.Config-Datei des Plug-in-Hosts befindet.
++
+Bei Bedarf können Sie diesen Pfad ändern und den SMCore Service neu starten. Es wird empfohlen, den Standardpfad für die Sicherheit zu verwenden.
+
++
+Der Wert des Schlüssels kann von Swagger über die API angezeigt werden: API /4.7/configsettings
+
++
+Sie können die GET API verwenden, um den Wert der Taste anzuzeigen. SET-API wird nicht unterstützt.
+
+* Die meisten Felder auf den Seiten des Assistenten Wiederherstellen sind selbsterklärend. In den folgenden Informationen werden die Felder beschrieben, für die Sie möglicherweise eine Anleitung benötigen.
+
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Wählen Sie auf der Seite Ressourcen die Option *Datenbank* oder *Ressourcengruppe* aus der Liste *Ansicht* aus.
+. Wählen Sie die Datenbank oder die Ressourcengruppe aus der Liste aus.
++
+Die Topologieseite wird angezeigt.
+
+. Wählen Sie aus der Ansicht Kopien verwalten im Speichersystem *Backups* aus.
+. Wählen Sie das Backup aus der Tabelle aus, und klicken Sie dann auf das image:../media/restore_icon.gif["Symbol Wiederherstellen"] Symbol.
++
+image::../media/restoring_resource.gif[Wiederherstellen von Ressourcen]
+
+. Wählen Sie auf der Seite „Bereich wiederherstellen“ eine der folgenden Optionen aus:
++
+|===
+| Option | Beschreibung 
+
+
+ a| 
+Stellen Sie die Datenbank auf demselben Host wieder her, auf dem das Backup erstellt wurde
+ a| 
+Wählen Sie diese Option aus, wenn Sie die Datenbank auf demselben SQL-Server wiederherstellen möchten, auf dem die Backups erstellt werden.
+
+
+
+ a| 
+Wiederherstellung der Datenbank auf einem alternativen Host
+ a| 
+Wählen Sie diese Option aus, wenn die Datenbank auf einem anderen SQL-Server auf demselben oder einem anderen Host wiederhergestellt werden soll, auf dem Backups erstellt werden.
+
+Wählen Sie einen Hostnamen aus, geben Sie einen Datenbanknamen ein (optional), wählen Sie eine Instanz aus und geben Sie die Wiederherstellungspfade an.
+
+
+NOTE: Die im alternativen Pfad angegebene Dateierweiterung muss mit der Dateiendung der ursprünglichen Datenbankdatei identisch sein.
+
+Wenn die Option *Datenbank auf alternativen Host* wiederherstellen nicht auf der Seite „Bereich wiederherstellen“ angezeigt wird, löschen Sie den Browser-Cache.
+
+
+
+ a| 
+Stellen Sie die Datenbank mithilfe vorhandener Datenbankdateien wieder her
+ a| 
+Wählen Sie diese Option aus, wenn die Datenbank auf einem anderen SQL Server auf demselben oder einem anderen Host wiederhergestellt werden soll, auf dem Backups erstellt werden.
+
+Die Datenbankdateien sollten bereits auf den angegebenen Dateipfaden vorhanden sein. Wählen Sie einen Hostnamen aus, geben Sie einen Datenbanknamen ein (optional), wählen Sie eine Instanz aus und geben Sie die Wiederherstellungspfade an.
+
+|===
+. Wählen Sie auf der Seite „Recovery Scope“ eine der folgenden Optionen aus:
++
+|===
+| Option | Beschreibung 
+
+
+ a| 
+Keine
+ a| 
+Wählen Sie *Keine* aus, wenn Sie nur das vollständige Backup ohne Protokolle wiederherstellen müssen.
+
+
+
+ a| 
+Alle Log-Backups
+ a| 
+Wählen Sie *Alle Log-Backups* Backup-Restore-Vorgang up-to-the-minute, um alle verfügbaren Log-Backups nach der vollständigen Sicherung wiederherzustellen.
+
+
+
+ a| 
+Durch Backups bis protokollieren
+ a| 
+Wählen Sie *nach Log-Backups*, um einen Point-in-Time-Wiederherstellungsvorgang durchzuführen, der die Datenbank basierend auf Backup-Protokollen bis zum ausgewählten Datum wiederherstellt.
+
+
+
+ a| 
+Nach einem bestimmten Datum bis
+ a| 
+Wählen Sie *nach einem bestimmten Datum bis*, um Datum und Uhrzeit anzugeben, nach denen Transaktionsprotokolle nicht auf die wiederhergestellte Datenbank angewendet werden.
+
+Dieser Point-in-Time-Wiederherstellungsvorgang stoppt die Wiederherstellung von Transaktions-Log-Einträgen, die nach dem angegebenen Datum und der angegebenen Zeit aufgezeichnet wurden.
+
+
+
+ a| 
+Benutzerdefiniertes Protokollverzeichnis verwenden
+ a| 
+Wenn Sie *Alle Log-Backups*, *durch Log-Backups* oder *nach einem bestimmten Datum bis* ausgewählt haben und sich die Protokolle an einem benutzerdefinierten Speicherort befinden, wählen Sie *Benutzerdefiniertes Log-Verzeichnis verwenden* und geben Sie dann den Speicherort an.
+
+
+NOTE: Das benutzerdefinierte Protokollverzeichnis wird für die Verfügbarkeitsgruppendatenbank nicht unterstützt.
+
+|===
+. Führen Sie auf der Seite Pre Ops die folgenden Schritte aus:
++
+.. Wählen Sie auf der Seite Optionen vor der Wiederherstellung eine der folgenden Optionen aus:
++
+*** Wählen Sie *Überschreiben Sie die Datenbank mit demselben Namen während der Wiederherstellung* aus, um die Datenbank mit dem gleichen Namen wiederherzustellen.
+*** Wählen Sie *SQL-Datenbankreplikationseinstellungen beibehalten* aus, um die Datenbank wiederherzustellen und die vorhandenen Replikationseinstellungen beizubehalten.
+*** Wählen Sie *Sicherung des Transaktionsprotokolls vor der Wiederherstellung* aus, um ein Transaktionsprotokoll zu erstellen, bevor der Wiederherstellungsvorgang beginnt.
+*** Wählen Sie *Wiederherstellen, wenn die Sicherung des Transaktionsprotokolls vor der Wiederherstellung fehlschlägt* aus, um den Wiederherstellungsvorgang abzubrechen, wenn die Sicherung des Transaktionsprotokolls fehlschlägt.
+
+
+.. Geben Sie optionale Skripte an, die ausgeführt werden sollen, bevor Sie einen Wiederherstellungsauftrag ausführen.
++
+Beispielsweise können Sie ein Skript ausführen, um SNMP-Traps zu aktualisieren, Warnmeldungen zu automatisieren, Protokolle zu senden usw.
+
++
+
+NOTE: Der Pfad für Prescripts oder Postscripts darf keine Laufwerke oder Shares enthalten. Der Pfad sollte relativ zum SCRIPTS_PATH sein.
+
+
+
+. Führen Sie auf der Seite „Post Ops“ die folgenden Schritte aus:
++
+.. Wählen Sie im Abschnitt Datenbank nach Abschluss der Wiederherstellung auswählen eine der folgenden Optionen aus:
++
+*** Wählen Sie *Operational, aber nicht verfügbar für die Wiederherstellung weiterer Transaktionsprotokolle*, wenn Sie jetzt alle notwendigen Backups wiederherstellen.
++
+Dies ist das Standardverhalten, das die Datenbank durch ein Rollback der nicht gesicherten Transaktionen einsatzbereit macht. Sie können erst dann weitere Transaktionsprotokolle wiederherstellen, wenn Sie ein Backup erstellen.
+
+*** Wählen Sie *nicht betriebsbereit, aber verfügbar für die Wiederherstellung weiterer Transaktionsprotokolle*, um die Datenbank nicht betriebsbereit zu lassen, ohne die nicht gesicherten Transaktionen zurückzurollen.
++
+Zusätzliche Transaktions-Logs können wiederhergestellt werden. Sie können die Datenbank erst verwenden, wenn sie wiederhergestellt ist.
+
+*** Wählen Sie *schreibgeschützter Modus, der zur Wiederherstellung weiterer Transaktionsprotokolle* verfügbar ist, um die Datenbank im schreibgeschützten Modus zu belassen.
++
+Mit dieser Option werden nicht gesicherte Transaktionen rückgängig gemacht, die nicht rückgängig gemachte Aktionen werden jedoch in einer Standby-Datei gespeichert, sodass Recovery-Effekte rückgängig gemacht werden können.
+
++
+Wenn die Option „Verzeichnis aufheben“ aktiviert ist, werden mehr Transaktionsprotokolle wiederhergestellt. Wenn der Wiederherstellungsvorgang für das Transaktionsprotokoll nicht erfolgreich ist, können die Änderungen zurückgesetzt werden. Die SQL Server-Dokumentation enthält weitere Informationen.
+
+
+
+.. Geben Sie optionale Skripts an, die ausgeführt werden sollen, nachdem ein Wiederherstellungsauftrag ausgeführt wurde.
++
+Beispielsweise können Sie ein Skript ausführen, um SNMP-Traps zu aktualisieren, Warnmeldungen zu automatisieren, Protokolle zu senden usw.
+
++
+
+NOTE: Der Pfad für Prescripts oder Postscripts darf keine Laufwerke oder Shares enthalten. Der Pfad sollte relativ zum SCRIPTS_PATH sein.
+
+
+
+. Wählen Sie auf der Benachrichtigungsseite aus der Dropdown-Liste *E-Mail-Präferenz* die Szenarien aus, in denen Sie die E-Mails versenden möchten.
++
+Außerdem müssen Sie die E-Mail-Adressen für Absender und Empfänger sowie den Betreff der E-Mail angeben.
+
+. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
+. Überwachen Sie den Wiederherstellungsprozess mithilfe der Seite *Monitor* > *Jobs*.
+
+
+*Weitere Informationen*
+
+link:task_restore_and_recover_resources_using_powershell_cmdlets_for_sql.html["Stellen Sie Ressourcen mithilfe von PowerShell cmdlets wieder her"]
+
+link:task_restore_a_sql_server_database_from_secondary_storage.html["Wiederherstellung einer SQL Server-Datenbank aus dem sekundären Storage"]

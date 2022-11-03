@@ -1,0 +1,180 @@
+---
+permalink: protect-sco/task_configure_snapcenter_plug_in_loader_service.html 
+sidebar: sidebar 
+keywords: SPL, plug-in loader service 
+summary: Der SnapCenter-Plug-in-Loader-Dienst lädt das Plug-in-Paket für Linux oder AIX, um mit dem SnapCenter-Server zu interagieren. Der SnapCenter-Plug-in-Loader-Dienst wird installiert, wenn Sie das SnapCenter-Plug-ins-Paket für Linux oder SnapCenter Plug-ins-Paket für AIX installieren. 
+---
+= Konfigurieren Sie den SnapCenter-Plug-in-Loader-Dienst
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der SnapCenter-Plug-in-Loader-Dienst lädt das Plug-in-Paket für Linux oder AIX, um mit dem SnapCenter-Server zu interagieren. Der SnapCenter-Plug-in-Loader-Dienst wird installiert, wenn Sie das SnapCenter-Plug-ins-Paket für Linux oder SnapCenter Plug-ins-Paket für AIX installieren.
+
+*Über diese Aufgabe*
+
+Nach der Installation des SnapCenter Plug-ins Pakets für Linux oder SnapCenter Plug-ins Package für AIX wird der SnapCenter Plug-in Loader Service automatisch gestartet. Wenn der SnapCenter-Plug-in-Loader-Dienst nicht automatisch gestartet wird, sollten Sie Folgendes tun:
+
+* Stellen Sie sicher, dass das Verzeichnis, in dem das Plug-in ausgeführt wird, nicht gelöscht wird
+* Erhöhen Sie den Speicherplatz, der der Java Virtual Machine zugewiesen ist
+
+
+Die Datei spl.properties befindet sich unter _/Custom_Location/NetApp/snapcenter/spl/etc/_ und enthält die folgenden Parameter: Diesen Parametern werden Standardwerte zugewiesen.
+
+|===
+| Parametername | Beschreibung 
+
+
+ a| 
+PROTOKOLL_LEVEL
+ a| 
+Zeigt die unterstützten Protokollebenen an.
+
+Die möglichen Werte sind INFO, DEBUG, TRACE, ERROR, FATAL, Und WARNEN.
+
+
+
+ a| 
+SPL_PROTOKOLL
+ a| 
+Zeigt das von SnapCenter Plug-in Loader unterstützte Protokoll an.
+
+Nur das HTTPS-Protokoll wird unterstützt. Sie können den Wert hinzufügen, wenn der Standardwert fehlt.
+
+
+
+ a| 
+SNAPCENTER_SERVER_PROTOCOL
+ a| 
+Zeigt das von SnapCenter-Server unterstützte Protokoll an.
+
+Nur das HTTPS-Protokoll wird unterstützt. Sie können den Wert hinzufügen, wenn der Standardwert fehlt.
+
+
+
+ a| 
+SKIP_JAVAHOME_UPDATE
+ a| 
+Standardmäßig erkennt der SPL-Dienst den java-Pfad und aktualisiert DEN JAVA_HOME-Parameter.
+
+Daher ist der Standardwert AUF FALSE gesetzt. Sie können auf „TRUE“ setzen, wenn Sie das Standardverhalten deaktivieren und den java-Pfad manuell korrigieren möchten.
+
+
+
+ a| 
+SPL_KEYSTORE_PASS
+ a| 
+Zeigt das Kennwort der Schlüsselspeicherdatei an.
+
+Sie können diesen Wert nur ändern, wenn Sie das Passwort ändern oder eine neue Schlüsselspeicherdatei erstellen.
+
+
+
+ a| 
+SPL_PORT
+ a| 
+Zeigt die Portnummer an, auf der der SnapCenter-Plug-in-Loader ausgeführt wird.
+
+Sie können den Wert hinzufügen, wenn der Standardwert fehlt.
+
+
+NOTE: Nach der Installation der Plug-ins sollten Sie den Wert nicht ändern.
+
+
+
+ a| 
+SNAPCENTER_SERVER_HOST
+ a| 
+Zeigt die IP-Adresse oder den Hostnamen des SnapCenter-Servers an.
+
+
+
+ a| 
+SPL_KEYSTORE_PATH
+ a| 
+Zeigt den absoluten Pfad der Schlüsselspeicherdatei an.
+
+
+
+ a| 
+SNAPCENTER_SERVER_PORT
+ a| 
+Zeigt die Portnummer an, auf der der SnapCenter-Server ausgeführt wird.
+
+
+
+ a| 
+„LOGS_MAX_COUNT“
+ a| 
+Zeigt die Anzahl der SnapCenter-Plug-in-Loader-Protokolldateien an, die im Ordner _/Custom_location/snapcenter/spl/logs_ aufbewahrt werden.
+
+Der Standardwert ist 5000. Wenn der Zähler größer als der angegebene Wert ist, werden die letzten 5000 geänderten Dateien beibehalten. Die Prüfung auf die Anzahl der Dateien erfolgt automatisch alle 24 Stunden ab dem Start des SnapCenter Plug-in Loader-Dienstes.
+
+
+NOTE: Wenn Sie die Datei spl.properties manuell löschen, wird die Anzahl der zu behaltenden Dateien auf 9999 festgelegt.
+
+
+
+ a| 
+JAVA_HOME
+ a| 
+Zeigt den absoluten Verzeichnispfad des JAVA_HOME an, der zum Starten des SPL-Dienstes verwendet wird.
+
+Dieser Pfad wird während der Installation und im Rahmen des Startens von SPL festgelegt.
+
+
+
+ a| 
+LOG_MAX_SIZE
+ a| 
+Zeigt die maximale Größe der Job-Log-Datei an.
+
+Sobald die maximale Größe erreicht ist, wird die Protokolldatei gezippt und die Protokolle werden in die neue Datei dieses Jobs geschrieben.
+
+
+
+ a| 
+BEIBEHALTEN_LOGS_OF_LAST_DAYS
+ a| 
+Zeigt die Anzahl der Tage an, bis zu denen die Protokolle aufbewahrt werden.
+
+
+
+ a| 
+ENABLE_CERTIFICATE_VALIDATION
+ a| 
+Zeigt true an, wenn die Zertifikatvalidierung für den Host aktiviert ist.
+
+Sie können diesen Parameter entweder aktivieren oder deaktivieren, indem Sie den spl.properties bearbeiten oder den SnapCenter GUI oder Cmdlet verwenden.
+
+|===
+Wenn einer dieser Parameter dem Standardwert nicht zugewiesen ist oder Sie den Wert zuweisen oder ändern möchten, können Sie die Datei spl.properties ändern. Sie können auch die Datei spl.properties überprüfen und die Datei bearbeiten, um Probleme zu beheben, die mit den Werten, die den Parametern zugeordnet sind, zusammenhängen. Nachdem Sie die Datei spl.properties geändert haben, sollten Sie den SnapCenter-Plug-in-Loader-Dienst neu starten.
+
+*Schritte*
+
+. Führen Sie bei Bedarf eine der folgenden Aktionen aus:
++
+** Starten Sie den SnapCenter Plug-in Loader-Dienst als Root-Benutzer:
++
+ `/custom_location/NetApp/snapcenter/spl/bin/spl start`
+** Stoppen Sie den SnapCenter-Plug-in-Loader-Dienst:
++
+ `/custom_location/NetApp/snapcenter/spl/bin/spl stop`
++
+
+NOTE: Sie können die Option -Force mit dem Befehl STOP verwenden, um den SnapCenter Plug-in Loader Dienst nachdrücklich zu stoppen. Vor diesem Verfahren sollten Sie jedoch Vorsicht walten lassen, da auch die bestehenden Vorgänge beendet werden.
+
+** Starten Sie den SnapCenter-Plug-in-Loader-Dienst neu:
++
+ `/custom_location/NetApp/snapcenter/spl/bin/spl restart`
+** Suchen Sie den Status des SnapCenter-Plug-in-Loader-Dienstes:
++
+ `/custom_location/NetApp/snapcenter/spl/bin/spl status`
+** Finden Sie die Änderung im SnapCenter-Plug-in-Loader-Dienst:
++
+ `/custom_location/NetApp/snapcenter/spl/bin/spl change`
+
+
+

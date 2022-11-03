@@ -1,0 +1,38 @@
+---
+permalink: install/task_create_a_role.html 
+sidebar: sidebar 
+keywords: role, create, permission 
+summary: Zusätzlich zur Nutzung vorhandener SnapCenter-Rollen können Sie eigene Rollen erstellen und die Berechtigungen anpassen. 
+---
+= Erstellen Sie eine Rolle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Zusätzlich zur Nutzung vorhandener SnapCenter-Rollen können Sie eigene Rollen erstellen und die Berechtigungen anpassen.
+
+Sie sollten sich als „SnapCenterAdmin“-Rolle angemeldet haben.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Einstellungen*.
+. Klicken Sie auf der Seite Einstellungen auf *Rollen*.
+. Klicken Sie Auf image:../media/add_icon_configure_database.gif["Symbol hinzufügen im Bildschirm Datenbank konfigurieren"].
+. Geben Sie auf der Seite Rolle hinzufügen einen Namen und eine Beschreibung für die neue Rolle an.
++
+
+NOTE: Ab SnapCenter 4.5 können Sie nur die folgenden Sonderzeichen in Benutzernamen und Gruppennamen enthalten: Leerzeichen ( ), Bindestrich (-), Unterstrich (_) und Doppelpunkt (:). Wenn Sie eine Rolle verwenden möchten, die Sie in einer früheren Version von SnapCenter mit diesen Sonderzeichen erstellt haben, können Sie die Validierung des Rollennamens deaktivieren, indem Sie in der Datei Web.config, in der die SnapCenter WebApp installiert ist, den Wert des Parameters 'ableSQLInjectionValidation' auf true ändern. Nachdem Sie den Wert geändert haben, müssen Sie den Dienst nicht neu starten.
+
+. Wählen Sie *Alle Mitglieder dieser Rolle können Objekte anderer Mitglieder* sehen, damit andere Mitglieder der Rolle nach der Aktualisierung der Ressourcenliste Ressourcen wie Volumes und Hosts sehen können.
++
+Sie sollten diese Option deaktivieren, wenn Sie nicht möchten, dass Mitglieder dieser Rolle Objekte sehen, denen andere Mitglieder zugewiesen sind.
+
++
+
+NOTE: Wenn diese Option aktiviert ist, ist es nicht erforderlich, Benutzern Zugriff auf Objekte oder Ressourcen zuzuweisen, wenn Benutzer derselben Rolle angehören wie der Benutzer, der die Objekte oder Ressourcen erstellt hat.
+
+. Wählen Sie auf der Seite Berechtigungen die Berechtigungen aus, die Sie der Rolle zuweisen möchten, oder klicken Sie auf *Alle auswählen*, um der Rolle alle Berechtigungen zu gewähren.
+. Klicken Sie Auf *Absenden*.
+

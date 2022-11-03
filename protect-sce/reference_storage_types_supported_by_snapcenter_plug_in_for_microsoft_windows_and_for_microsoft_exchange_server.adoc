@@ -1,0 +1,92 @@
+---
+permalink: protect-sce/reference_storage_types_supported_by_snapcenter_plug_in_for_microsoft_windows_and_for_microsoft_exchange_server.html 
+sidebar: sidebar 
+keywords:  
+summary: SnapCenter unterstützt eine Vielzahl von Storage-Typen sowohl auf physischen Computern als auch auf Virtual Machines. Sie müssen überprüfen, ob Ihr Speichertyp unterstützt wird, bevor Sie das Paket für Ihren Host installieren. 
+---
+= Storage-Typen, die von SnapCenter Plug-in für Microsoft Windows und für Microsoft Exchange Server unterstützt werden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter unterstützt eine Vielzahl von Storage-Typen sowohl auf physischen Computern als auch auf Virtual Machines. Sie müssen überprüfen, ob Ihr Speichertyp unterstützt wird, bevor Sie das Paket für Ihren Host installieren.
+
+SnapCenter Provisioning und Datensicherung werden unter Windows Server unterstützt. Aktuelle Informationen zu unterstützten Versionen finden Sie im https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"^].
+
+|===
+| Maschine | Storage-Typ | Bereitstellung mit | Support-Hinweise 
+
+
+ a| 
+Physischer Server
+ a| 
+FC-verbundene LUNs
+ a| 
+Grafische SnapCenter Benutzeroberfläche (GUI) oder PowerShell Commandlets
+ a| 
+
+
+
+ a| 
+Physischer Server
+ a| 
+ISCSI-verbundene LUNs
+ a| 
+SnapCenter GUI oder PowerShell Commandlets
+ a| 
+
+
+
+ a| 
+VMware VM
+ a| 
+RDM-LUNs, die über einen FC- oder iSCSI-HBA verbunden sind
+ a| 
+PowerShell Commandlets
+ a| 
+Nur physische Kompatibilität
+
+
+NOTE: VMDKs werden nicht unterstützt.
+
+
+
+ a| 
+VMware VM
+ a| 
+ISCSI-LUNs, die direkt über den iSCSI-Initiator mit dem Gastsystem verbunden sind
+ a| 
+SnapCenter GUI oder PowerShell Commandlets
+ a| 
+
+NOTE: VMDKs werden nicht unterstützt.
+
+
+
+ a| 
+Hyper-V VM
+ a| 
+Virtuelle FC-LUNs (VFC), die über einen virtuellen Fibre Channel Switch verbunden sind
+ a| 
+SnapCenter GUI oder PowerShell Commandlets
+ a| 
+Sie müssen Hyper-V Manager verwenden, um virtuelle FC (VFC) LUNs bereitzustellen, die über einen virtuellen Fibre Channel Switch verbunden sind.
+
+
+NOTE: Hyper-V Pass-Through-Festplatten und Backup von Datenbanken auf VHD(x), die auf NetApp Storage bereitgestellt werden, werden nicht unterstützt.
+
+
+
+ a| 
+Hyper-V VM
+ a| 
+ISCSI-LUNs, die direkt über den iSCSI-Initiator mit dem Gastsystem verbunden sind
+ a| 
+SnapCenter GUI oder PowerShell Commandlets
+ a| 
+
+NOTE: Hyper-V Pass-Through-Festplatten und Backup von Datenbanken auf VHD(x), die auf NetApp Storage bereitgestellt werden, werden nicht unterstützt.
+
+|===

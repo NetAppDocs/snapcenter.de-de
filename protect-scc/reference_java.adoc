@@ -1,0 +1,469 @@
+---
+permalink: protect-scc/reference_java.html 
+sidebar: sidebar 
+keywords:  
+summary: Entwickeln Sie das Plug-in im Java-Stil. 
+---
+= Java-Stil
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ein benutzerdefiniertes Java Plug-in interagiert direkt mit einer Applikation wie Datenbank, Instanz usw.
+
+
+
+== Einschränkungen
+
+Es gibt bestimmte Einschränkungen, die Sie beim entwickeln eines Plug-ins mit Java-Programmiersprache beachten sollten.
+
+|===
+| Steckkennlinie | Java Plug-in 
+
+
+ a| 
+Komplexität
+ a| 
+Niedrig bis mittel
+
+
+
+ a| 
+Platzbedarf für Arbeitsspeicher
+ a| 
+Bis zu 10-20 MB
+
+
+
+ a| 
+Abhängigkeiten von anderen Bibliotheken
+ a| 
+Bibliotheken für die Anwendungskommunikation
+
+
+
+ a| 
+Anzahl der Threads
+ a| 
+1
+
+
+
+ a| 
+Thread-Laufzeit
+ a| 
+Weniger als eine Stunde
+
+|===
+
+
+=== Grund für Java-Einschränkungen
+
+Ziel des SnapCenter-Agenten ist es, eine kontinuierliche, sichere und robuste Anwendungsintegration zu gewährleisten. Durch die Unterstützung von Java-Plug-ins ist es möglich, dass Plug-ins Speicherlecks und andere unerwünschte Probleme einführen. Diese Probleme sind schwer zu bewältigen, vor allem, wenn das Ziel ist, die Dinge einfach zu bedienen. Wenn die Komplexität eines Plug-ins nicht zu komplex ist, ist es viel seltener wahrscheinlich, dass die Entwickler die Fehler verursacht hätten. Die Gefahr eines Java-Plug-ins besteht darin, dass sie in derselben JVM laufen wie der SnapCenter-Agent selbst. Wenn das Plug-in abstürzt oder Speicher leckt, kann es auch negative Auswirkungen auf den Agent haben.
+
+
+
+== Unterstützte Methoden
+
+|===
+| Methode | Erforderlich | Beschreibung | Wann und von wem gerufen? 
+
+
+ a| 
+Version
+ a| 
+Ja.
+ a| 
+Muss die Version des Plug-ins zurückgeben.
+ a| 
+Vom SnapCenter-Server oder -Agent, um die Version des Plug-ins anzufordern.
+
+
+
+ a| 
+Stilllegen
+ a| 
+Ja.
+ a| 
+Muss die Applikation stilllegen. In den meisten Fällen bedeutet dies, die Applikation in einen Zustand zu versetzen, in dem der SnapCenter Server ein Backup erstellen kann (z. B. eine Snapshot Kopie).
+ a| 
+Bevor der SnapCenter-Server eine Snapshot(s)-Kopie erstellt oder ein Backup im Allgemeinen durchführt.
+
+
+
+ a| 
+Nicht Stilllegen
+ a| 
+Ja.
+ a| 
+Muss die Applikation stilllegen. In den meisten Fällen bedeutet dies, dass die Applikation wieder in einen normalen Betriebszustand zurückversetzt wird.
+ a| 
+Nachdem der SnapCenter Server eine Snapshot Kopie erstellt hat oder ein Backup im Allgemeinen ausgeführt hat.
+
+
+
+ a| 
+Bereinigung
+ a| 
+Nein
+ a| 
+Verantwortlich für die Reinigung von allen, die das Plug-in braucht, um zu reinigen.
+ a| 
+Wenn ein Workflow auf dem SnapCenter-Server beendet ist (erfolgreich oder mit einem Fehler).
+
+
+
+ a| 
+KlonVorr
+ a| 
+Nein
+ a| 
+Sollte Aktionen durchführen, die vor der Durchführung eines Klonvorgangs ausgeführt werden müssen.
+ a| 
+Wenn ein Benutzer eine Aktion „KlonVol“ oder „cloneRun“ auslöst und den integrierten Klon-Assistenten (GUI/CLI) verwendet.
+
+
+
+ a| 
+KlonPost
+ a| 
+Nein
+ a| 
+Sollte Aktionen durchführen, die nach der Durchführung eines Klonvorgangs ausgeführt werden müssen.
+ a| 
+Wenn ein Benutzer eine Aktion „KlonVol“ oder „cloneRun“ auslöst und den integrierten Klon-Assistenten (GUI/CLI) verwendet.
+
+
+
+ a| 
+WiederherstellungPre
+ a| 
+Nein
+ a| 
+Sollte Aktionen durchführen, die vor dem Wiederherstellungsvorgang ausgeführt werden müssen.
+ a| 
+Wenn ein Benutzer einen Wiederherstellungsvorgang auslöst.
+
+
+
+ a| 
+Wiederherstellen
+ a| 
+Nein
+ a| 
+Verantwortlich für die Durchführung einer Wiederherstellung/Wiederherstellung der Anwendung.
+ a| 
+Wenn ein Benutzer einen Wiederherstellungsvorgang auslöst.
+
+
+
+ a| 
+AppVersion
+ a| 
+Nein
+ a| 
+Zum Abrufen der vom Plug-in verwalteten Anwendungsversion.
+ a| 
+Im Rahmen von ASUP Datenerfassung in jedem Workflow, wie beispielsweise Backup/Restore/Klonen,
+
+|===
+
+
+== Lernprogramm
+
+In diesem Abschnitt wird beschrieben, wie Sie ein benutzerdefiniertes Plug-in mithilfe der Java-Programmiersprache erstellen.
+
+
+
+=== Sonnenfinsternis einrichten
+
+. Erstellen Sie ein neues Java-Projekt "TutorialPlugin" in Eclipse
+. Klicken Sie Auf *Fertig Stellen*
+. Klicken Sie mit der rechten Maustaste auf das *neue Projekt* -> *Eigenschaften* -> *Java Build Path* -> *Bibliotheken* -> *Externe Jars hinzufügen*
+. Navigieren Sie zum Ordner ../lib/ des Host Agent, und wählen Sie Jars scAgent-5.0-core.jar und common-5.0.jar aus
+. Wählen Sie das Projekt aus und klicken Sie mit der rechten Maustaste auf den Ordner *src* -> *Neu* -> *Paket* und erstellen Sie ein neues Paket mit dem Namen com.netapp.snapcreator.agent.plugin.TutorialPlugin
+. Klicken Sie mit der rechten Maustaste auf das neue Paket, und wählen Sie Neu -> Java-Klasse.
++
+.. Geben Sie den Namen als TutorialPlugin ein.
+.. Klicken Sie auf die Schaltfläche zum Durchsuchen von Superclass und suchen Sie nach "*AbstractPlugin". Es sollte nur ein Ergebnis angezeigt werden:
++
+ "AbstractPlugin - com.netapp.snapcreator.agent.nextgen.plugin".
+.. Klicken Sie Auf *Fertig Stellen*.
+.. Java-Klasse:
++
+....
+package com.netapp.snapcreator.agent.plugin.TutorialPlugin;
+import
+com.netapp.snapcreator.agent.nextgen.common.result.Describe
+Result;
+import
+com.netapp.snapcreator.agent.nextgen.common.result.Result;
+import
+com.netapp.snapcreator.agent.nextgen.common.result.VersionR
+esult;
+import
+com.netapp.snapcreator.agent.nextgen.context.Context;
+import
+com.netapp.snapcreator.agent.nextgen.plugin.AbstractPlugin;
+public class TutorialPlugin extends AbstractPlugin {
+  @Override
+  public DescribeResult describe(Context context) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+  @Override
+  public Result quiesce(Context context) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+  @Override
+  public Result unquiesce(Context context) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+  @Override
+  public VersionResult version() {
+    // TODO Auto-generated method stub
+    return null;
+  }
+}
+....
+
+
+
+
+
+
+=== Umsetzung der erforderlichen Methoden
+
+Quiesce, unquiesce und Version sind obligatorische Methoden, die jedes benutzerdefinierte Java Plug-in implementieren muss.
+
+Die folgende Versionsmethode gibt die Version des Plug-ins zurück.
+
+....
+@Override
+public VersionResult version() {
+    VersionResult versionResult = VersionResult.builder()
+                                            .withMajor(1)
+                                            .withMinor(0)
+                                            .withPatch(0)
+                                            .withBuild(0)
+                                            .build();
+    return versionResult;
+}
+....
+....
+Below is the implementation of quiesce and unquiesce method. These will be interacting with   the application, which is being protected by SnapCenter Server. As this is just a tutorial, the
+application part is not explained, and the focus is more on the functionality that SnapCenter   Agent provides the following to the plug-in developers:
+....
+....
+@Override
+  public Result quiesce(Context context) {
+    final Logger logger = context.getLogger();
+    /*
+      * TODO: Add application interaction here
+    */
+....
+....
+logger.error("Something bad happened.");
+logger.info("Successfully handled application");
+....
+....
+    Result result = Result.builder()
+                    .withExitCode(0)
+                    .withMessages(logger.getMessages())
+                    .build();
+    return result;
+}
+....
+Die Methode wird in einem Kontextobjekt übergeben. Dazu gehören mehrere Helfer, zum Beispiel ein Logger und ein Context Store, sowie die Informationen über den aktuellen Vorgang (Workflow-ID, Job-ID). Wir können den Logger erhalten, indem wir den endgültigen Logger Logger = context.getLogger(); anrufen. Das Logger-Objekt bietet ähnliche Methoden, die von anderen Protokollierungs-Frameworks bekannt sind, z. B. Logback. Im Ergebnisobjekt können Sie auch den Exit-Code angeben. In diesem Beispiel wird Null zurückgegeben, da kein Problem aufgetreten ist. Andere Exit-Codes können verschiedenen Fehlerszenarien zugeordnet werden.
+
+
+
+=== Ergebnisobjekt wird verwendet
+
+Das Ergebnisobjekt enthält die folgenden Parameter:
+
+|===
+| Parameter | Standard | Beschreibung 
+
+
+ a| 
+Konfigurations
+ a| 
+Leere Konfiguration
+ a| 
+Mit diesem Parameter können Konfigurationsparameter zurück an den Server gesendet werden. Es kann Parameter sein, die das Plug-in aktualisieren möchte. Ob diese Änderung sich tatsächlich in der Konfiguration auf dem SnapCenter-Server wiederfindet, hängt vom PARAMETER APP_CONF_PERSISTENZ=Y oder N in der Konfiguration ab.
+
+
+
+ a| 
+Code-Code
+ a| 
+0
+ a| 
+Zeigt den Status des Vorgangs an. Ein „0“ bedeutet, dass der Vorgang erfolgreich ausgeführt wurde. Andere Werte weisen auf Fehler oder Warnungen hin.
+
+
+
+ a| 
+Stdout
+ a| 
+Leere Liste
+ a| 
+Damit können stdout-Nachrichten an den SnapCenter-Server zurückgesendet werden.
+
+
+
+ a| 
+Stderr
+ a| 
+Leere Liste
+ a| 
+Damit können stderr-Nachrichten an den SnapCenter-Server zurückgesendet werden.
+
+
+
+ a| 
+Nachrichten
+ a| 
+Leere Liste
+ a| 
+Diese Liste enthält alle Meldungen, die ein Plug-in zum Server zurückkehren möchte. Der SnapCenter-Server zeigt diese Meldungen in der CLI oder GUI an.
+
+|===
+Der SnapCenter Agent stellt Builders zur Verfügung (https://en.wikipedia.org/wiki/Builder_pattern["Baumuster"]) Für alle seine Ergebnistypen. Daher ist es sehr einfach, sie zu verwenden:
+
+....
+Result result = Result.builder()
+                    .withExitCode(0)
+                    .withStdout(stdout)
+                    .withStderr(stderr)
+                    .withConfig(config)
+                    .withMessages(logger.getMessages())
+                    .build()
+....
+Setzen Sie beispielsweise den Exit-Code auf 0, legen Sie Listen für stdout und stderr fest, legen Sie die Konfigurationsparameter fest und fügen Sie die Protokollmeldungen an, die an den Server zurückgesendet werden. Wenn Sie nicht alle Parameter benötigen, senden Sie nur die erforderlichen Parameter. Da jeder Parameter einen Standardwert hat, ist das Ergebnis unberührt, wenn Sie .withExitCode(0) aus dem unten stehenden Code entfernen:
+
+....
+Result result = Result.builder()
+                      .withExitCode(0)
+                      .withMessages(logger.getMessages())
+                      .build();
+....
+
+
+=== VersionResult
+
+Der VersionResult informiert den SnapCenter-Server über die Plug-in-Version. Da es auch vom Ergebnis erbt, enthält es die Parameter config, exitCode, stdout, stderr und Nachrichten.
+
+|===
+| Parameter | Standard | Beschreibung 
+
+
+ a| 
+Major
+ a| 
+0
+ a| 
+Hauptversionsfeld des Plug-ins.
+
+
+
+ a| 
+Gering
+ a| 
+0
+ a| 
+Kleines Versionsfeld des Plug-ins.
+
+
+
+ a| 
+Patch
+ a| 
+0
+ a| 
+Feld für die Patch-Version des Plug-ins.
+
+
+
+ a| 
+Entwickeln
+ a| 
+0
+ a| 
+Build-Versionsfeld des Plug-ins.
+
+|===
+Beispiel:
+
+....
+VersionResult result = VersionResult.builder()
+                                  .withMajor(1)
+                                  .withMinor(0)
+                                  .withPatch(0)
+                                  .withBuild(0)
+                                  .build();
+....
+
+
+=== Verwenden des Kontextobjekts
+
+Das Kontextobjekt bietet folgende Methoden:
+
+|===
+| Kontextsethode | Zweck 
+
+
+ a| 
+String getWorkflowId();
+ a| 
+Gibt die Workflow-id zurück, die vom SnapCenter-Server für den aktuellen Workflow verwendet wird.
+
+
+
+ a| 
+Config getconfig();
+ a| 
+Gibt die Konfiguration zurück, die vom SnapCenter-Server an den Agenten gesendet wird.
+
+|===
+
+
+=== Workflow-ID
+
+Die Workflow-ID ist die id, die der SnapCenter-Server verwendet, um auf einen bestimmten laufenden Workflow zu verweisen.
+
+
+
+=== Konfigurations
+
+Dieses Objekt enthält (die meisten) Parameter, die ein Benutzer in der Konfiguration auf dem SnapCenter-Server festlegen kann. Aus Sicherheitsgründen können jedoch einige dieser Parameter auf Server-Seite gefiltert werden. Nachfolgend ein Beispiel für den Zugriff auf die Konfiguration und den Abruf eines Parameters:
+
+....
+final Config config = context.getConfig();
+String myParameter =
+config.getParameter("PLUGIN_MANDATORY_PARAMETER");
+....
+""// myParameter" enthält jetzt den Parameter, der aus der Konfiguration auf dem SnapCenter-Server gelesen wird Wenn ein Parameterkschlüssel nicht vorhanden ist, wird ein leerer String (") zurückgegeben.
+
+
+
+=== Das Plug-in wird exportiert
+
+Sie müssen das Plug-in exportieren, um es auf dem SnapCenter-Host zu installieren.
+
+Führen Sie in Eclipse die folgenden Aufgaben aus:
+
+. Klicken Sie mit der rechten Maustaste auf das Basispaket des Plug-ins (in unserem Beispiel com.netapp.snapcreator.agent.plugin.TutorialPlugin).
+. Wählen Sie *Export* -> *Java* -> *Jar-Datei*
+. Klicken Sie Auf *Weiter*.
+. Geben Sie im folgenden Fenster den Ziel-JAR-Dateipfad an: tutorial_plugin.jar die Basisklasse des Plug-ins heißt TutorialPlugin.class, das Plug-in muss einem Ordner mit dem gleichen Namen hinzugefügt werden.
+
+
+Wenn Ihr Plug-in von zusätzlichen Bibliotheken abhängt, können Sie den folgenden Ordner erstellen: Lib/
+
+Sie können JAR-Dateien hinzufügen, von denen das Plug-in abhängig ist (z. B. ein Datenbanktreiber). Wenn SnapCenter das Plug-in lädt, ordnet es automatisch alle JAR-Dateien in diesem Ordner zu und fügt sie dem Klassenpfad hinzu.

@@ -1,0 +1,16 @@
+---
+permalink: protect-scw/concept_install_snapcenter_plug_in_for_microsoft_windows.html 
+sidebar: sidebar 
+keywords: installing 
+summary: Sie müssen SnapCenter-Plug-in für Microsoft Windows installieren und einrichten, wenn Sie Windows-Dateien, die keine Datenbankdateien sind, schützen möchten. 
+---
+= Installationsworkflow des SnapCenter Plug-ins für Microsoft Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen SnapCenter-Plug-in für Microsoft Windows installieren und einrichten, wenn Sie Windows-Dateien, die keine Datenbankdateien sind, schützen möchten.
+
+image::../media/scw_workflow_for_installing.gif[scw-Workflow für die Installation]

@@ -1,0 +1,33 @@
+---
+permalink: protect-scw/reference_sources_and_destinations_of_clones_for_windows_file_systems.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Sie können ein File-System-Backup vom primären oder sekundären Storage klonen. Sie können auch das Ziel wählen, das Ihre Anforderungen unterstützt: Entweder den ursprünglichen Backup-Standort oder ein anderes Ziel auf demselben Host oder auf einem anderen Host. Das Ziel muss sich auf demselben Volume befinden wie das Quellbackup des Klons.' 
+---
+= Quellen und Ziele von Klonen für Windows Filesysteme
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können ein File-System-Backup vom primären oder sekundären Storage klonen. Sie können auch das Ziel wählen, das Ihre Anforderungen unterstützt: Entweder den ursprünglichen Backup-Standort oder ein anderes Ziel auf demselben Host oder auf einem anderen Host. Das Ziel muss sich auf demselben Volume befinden wie das Quellbackup des Klons.
+
+|===
+| Klonziel | Beschreibung 
+
+
+ a| 
+Original, Quelle, Standort
+ a| 
+Standardmäßig speichert SnapCenter den Klon am selben Standort und auf demselben Host wie das zu klonendes Backup.
+
+
+
+ a| 
+Andere Position
+ a| 
+Sie können den Klon an einem anderen Ort auf demselben Host oder auf einem anderen Host speichern. Der Host muss über eine konfigurierte Verbindung zur Storage Virtual Machine (SVM) verfügen.
+
+|===
+Sie können den Klon nach Abschluss des Klonvorgangs umbenennen.

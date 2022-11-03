@@ -1,0 +1,211 @@
+---
+permalink: protect-sco/task_create_backup_policies_for_oracle_database.html 
+sidebar: sidebar 
+keywords: backup policies, policies 
+summary: Bevor Sie SnapCenter zum Backup von Oracle-Datenbankressourcen verwenden, müssen Sie eine Backup-Richtlinie für die Ressource oder die Ressourcengruppe erstellen, die Sie sichern möchten. Eine Backup-Richtlinie ist eine Reihe von Regeln, die das Managen, Planen und Aufbewahren von Backups regeln. Sie können auch die Einstellungen für Replikation, Skript und Backup-Typ festlegen. Das Erstellen einer Richtlinie spart Zeit, wenn Sie die Richtlinie für eine andere Ressource oder Ressourcengruppe wiederverwenden möchten. 
+---
+= Erstellung von Backup-Richtlinien für Oracle Datenbanken
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bevor Sie SnapCenter zum Backup von Oracle-Datenbankressourcen verwenden, müssen Sie eine Backup-Richtlinie für die Ressource oder die Ressourcengruppe erstellen, die Sie sichern möchten. Eine Backup-Richtlinie ist eine Reihe von Regeln, die das Managen, Planen und Aufbewahren von Backups regeln. Sie können auch die Einstellungen für Replikation, Skript und Backup-Typ festlegen. Das Erstellen einer Richtlinie spart Zeit, wenn Sie die Richtlinie für eine andere Ressource oder Ressourcengruppe wiederverwenden möchten.
+
+*Was Sie brauchen*
+
+* Sie müssen Ihre Backup-Strategie definiert haben.
+* Sie müssen auf die Datensicherung vorbereitet sein, indem Sie Aufgaben wie das Installieren von SnapCenter, das Hinzufügen von Hosts, das Erkennen von Datenbanken und das Erstellen von Speichersystemverbindungen ausführen.
+* Wenn Sie Snapshot Kopien in einen gespiegelten oder sekundären Vault-Storage replizieren, muss der SnapCenter Administrator Ihnen die SVMs sowohl für die Quell- als auch die Ziel-Volumes zugewiesen haben.
+
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Einstellungen*.
+. Klicken Sie auf der Seite Einstellungen auf *Richtlinien*.
+. Wählen Sie in der Dropdown-Liste * Oracle Database* aus.
+. Klicken Sie Auf *Neu*.
+. Geben Sie auf der Seite Name den Namen und die Beschreibung der Richtlinie ein.
+. Führen Sie auf der Seite Sicherungstyp die folgenden Schritte durch:
++
+** Wenn Sie *ein Online-Backup erstellen* möchten, wählen Sie *Online-Backup*.
++
+Sie müssen angeben, ob Sie alle Datendateien, Kontrolldateien und Archivprotokolldateien, nur Datendateien und Kontrolldateien oder nur Archivprotokolldateien sichern möchten.
+
+** Wenn Sie *ein Offline-Backup* erstellen möchten, wählen Sie *Offline-Backup* aus, und wählen Sie dann eine der folgenden Optionen aus:
++
+*** Wenn Sie eine Offline-Sicherung erstellen möchten, wenn sich die Datenbank im Bereitstellungszustand befindet, wählen Sie *Mount*.
+*** Wenn Sie eine Offline-Shutdown-Sicherung erstellen möchten, indem Sie die Datenbank in den Shutdown-Status ändern, wählen Sie *Shutdown* aus.
++
+Wenn Sie über steckbare Datenbanken (PDBs), und möchten den Zustand der PDBs vor der Erstellung des Backups speichern, müssen Sie *Save State of PDBs* wählen. Dies ermöglicht Ihnen, die PDBs in den ursprünglichen Zustand zu bringen, nachdem das Backup erstellt wurde.
+
+
+
+** Geben Sie die Zeitplanhäufigkeit an, indem Sie *on Demand*, *hourly*, *Daily*, *Weekly* oder *Monthly* auswählen.
++
+
+NOTE: Sie können den Zeitplan (Startdatum und Enddatum) für den Backup-Vorgang festlegen, während Sie eine Ressourcengruppe erstellen. So können Sie Ressourcengruppen erstellen, die dieselben Richtlinien- und Backup-Häufigkeit verwenden, aber Sie können jeder Richtlinie verschiedene Backup-Zeitpläne zuweisen.
+
++
+
+NOTE: Wenn Sie für 2:00 Uhr geplant sind, wird der Zeitplan während der Sommerzeit (DST) nicht ausgelöst.
+
+** Wenn Sie das Backup mit Oracle Recovery Manager (RMAN) katalogisieren möchten, wählen Sie *Katalog-Backup mit Oracle Recovery Manager (RMAN)* aus.
++
+Sie können die Katalogisierung für ein Backup auf einmal entweder über die Benutzeroberfläche oder über den SnapCenter-CLI-Befehl Catalog-SmBackupWithOracleRMAN aufgeschobenen.
+
++
+
+NOTE: Wenn Sie Backups einer RAC-Datenbank katalogisieren möchten, stellen Sie sicher, dass für diese Datenbank kein anderer Job ausgeführt wird. Wenn ein anderer Job ausgeführt wird, schlägt der Katalogisierung fehl, anstatt sich in die Warteschlange zu stellen.
+
+** Wenn Sie Archivprotokolle nach Backup beschneiden möchten, wählen Sie *Prune Archivprotokolle nach Backup* aus.
++
+
+NOTE: Das Beschneiden von Archivprotokollen aus dem Archiv-Protokollziel, das in der Datenbank nicht konfiguriert ist, wird übersprungen.
+
++
+
+IMPORTANT: Wenn Sie Oracle Standard Edition verwenden, können Sie WÄHREND der Sicherung des Archivprotokolls DIE Parameter LOG_ARCHIVE_DEST und LOG_ARCHIVE_DUPLEX_DEST verwenden.
+
+** Sie können Archivprotokolle nur löschen, wenn Sie die Archivprotokolldateien als Teil Ihrer Sicherung ausgewählt haben.
++
+
+NOTE: Sie müssen sicherstellen, dass alle Knoten in einer RAC-Umgebung auf alle Archivprotokolle zugreifen können, damit der Löschvorgang erfolgreich ist.
+
++
+|===
+| Ihr Ziel ist | Dann... 
+
+
+ a| 
+Löschen Sie alle Archivprotokolle
+ a| 
+Wählen Sie *Alle Archivprotokolle löschen*.
+
+
+
+ a| 
+Löschen alter Archivprotokolle
+ a| 
+Wählen Sie *Archivprotokolle löschen, die älter als* sind, und geben Sie dann das Alter der Archivprotokolle an, die in Tagen und Stunden gelöscht werden sollen.
+
+
+
+ a| 
+Löschen Sie Archivprotokolle von allen Zielen
+ a| 
+Wählen Sie *Archivprotokolle von allen Zielen löschen*.
+
+
+
+ a| 
+Löschen Sie die Archivprotokolle von den Protokollzielen, die Teil des Backups sind
+ a| 
+Wählen Sie *Archivprotokolle aus den Zielen löschen, die Teil der Datensicherung sind*.
+
+|===
++
+image:../media/sco_backuppolicy_prunning.gif[""]
+
+
+
+. Geben Sie auf der Seite Aufbewahrung die Aufbewahrungseinstellungen für den Sicherungstyp und den auf der Seite Sicherungstyp ausgewählten Terminplantyp an:
++
+|===
+
+
+| Ihr Ziel ist | Dann... 
+
+
+ a| 
+Aufbewahrung einer bestimmten Anzahl von Snapshot Kopien
+ a| 
+Wählen Sie *Gesamtanzahl der zu behenden Snapshot-Kopien* aus, und geben Sie dann die Anzahl der Snapshot-Kopien an, die beibehalten werden sollen.
+
+Wenn die Anzahl der Snapshot Kopien die angegebene Anzahl überschreitet, werden die Snapshot Kopien mit den ältesten Kopien gelöscht, die zuerst gelöscht wurden.
+
+
+NOTE: Der maximale Aufbewahrungswert ist 1018 für Ressourcen auf ONTAP 9.4 oder höher und 254 für Ressourcen unter ONTAP 9.3 oder einer früheren Version. Backups schlagen fehl, wenn die Aufbewahrung auf einen Wert festgelegt ist, der höher ist, als die zugrunde liegende ONTAP Version unterstützt.
+
+
+IMPORTANT: Sie müssen die Aufbewahrungsanzahl auf 2 oder höher einstellen, wenn Sie die SnapVault-Replikation aktivieren möchten. Wenn Sie die Aufbewahrungsanzahl auf 1 festlegen, kann der Aufbewahrungsvorgang möglicherweise fehlschlagen, da die erste Snapshot Kopie die Referenzkopie für die SnapVault-Beziehung ist, bis eine neuere Snapshot Kopie auf das Ziel repliziert wird.
+
+
+
+ a| 
+Behalten Sie die Snapshot Kopien für eine bestimmte Anzahl von Tagen bei
+ a| 
+Wählen Sie *Snapshot Kopien behalten für* aus, und geben Sie dann die Anzahl der Tage an, für die Sie die Snapshot Kopien behalten möchten, bevor Sie sie löschen.
+
+|===
++
+
+NOTE: Sie können Archiv-Protokoll-Backups nur dann aufbewahren, wenn Sie die Archiv-Log-Dateien als Teil Ihrer Sicherung ausgewählt haben.
+
+. Geben Sie auf der Seite Replikation die Replikationseinstellungen an:
++
+|===
+| Für dieses Feld... | Tun Sie das... 
+
+
+ a| 
+Aktualisieren Sie SnapMirror nach dem Erstellen einer lokalen Snapshot Kopie
+ a| 
+Wählen Sie dieses Feld aus, um Spiegelkopien der Backup-Sätze auf einem anderen Volume zu erstellen (SnapMirror Replikation).
+
+
+
+ a| 
+Aktualisieren Sie SnapVault nach dem Erstellen einer lokalen Snapshot Kopie
+ a| 
+Wählen Sie diese Option aus, um Disk-to-Disk-Backup-Replikation (SnapVault-Backups) durchzuführen.
+
+
+
+ a| 
+Sekundäres Policy-Label
+ a| 
+Wählen Sie eine Snapshot-Bezeichnung aus.
+
+Abhängig von dem ausgewählten Etikett der Snapshot Kopie wendet ONTAP die Aufbewahrungsrichtlinie für sekundäre Snapshot Kopien an, die mit dem Etikett übereinstimmt.
+
+
+NOTE: Wenn Sie *Update SnapMirror nach dem Erstellen einer lokalen Snapshot Kopie* ausgewählt haben, können Sie optional das Label für die sekundäre Richtlinie angeben. Wenn Sie jedoch *Update SnapVault nach dem Erstellen einer lokalen Snapshot Kopie* ausgewählt haben, sollten Sie das sekundäre Policy Label angeben.
+
+
+
+ a| 
+Fehler bei Wiederholungszählung
+ a| 
+Geben Sie die maximale Anzahl von Replikationsversuchen ein, die zulässig sind, bevor der Vorgang beendet wird.
+
+|===
++
+
+NOTE: Sie sollten die SnapMirror Aufbewahrungsrichtlinie in ONTAP für den sekundären Storage konfigurieren, um zu vermeiden, dass die maximale Anzahl an Snapshot Kopien auf dem sekundären Storage erreicht wird.
+
+. Geben Sie auf der Seite Skript den Pfad und die Argumente des Prescript oder Postscript ein, das Sie vor oder nach dem Backup ausführen möchten.
++
+Die Voreinstellungen und Postskripte müssen entweder in _/var/opt/snapcenter/spl/scripts_ oder in einem beliebigen Ordner in diesem Pfad gespeichert werden. Standardmäßig ist der Pfad _/var/opt/snapcenter/spl/scripts_ ausgefüllt. Wenn Sie Ordner in diesem Pfad erstellt haben, um die Skripte zu speichern, müssen Sie diese Ordner im Pfad angeben.
+
++
+Sie können auch den Wert für das Skript-Timeout angeben. Der Standardwert ist 60 Sekunden.
+
++
+Mit SnapCenter können Sie die vordefinierten Umgebungsvariablen verwenden, wenn Sie das Preskript und das Postscript ausführen. link:../protect-sco/predefined-environment-variables-prescript-postscript-backup.html["Weitere Informationen ."^]
+
+. Führen Sie auf der Seite Überprüfung die folgenden Schritte aus:
++
+.. Wählen Sie den Backup-Zeitplan aus, für den Sie den Verifizierungsvorgang durchführen möchten.
+.. Geben Sie im Abschnitt Skriptbefehle überprüfen den Pfad und die Argumente des Preskript oder Postscript ein, die vor bzw. nach der Verifikation ausgeführt werden sollen.
++
+Die Voreinstellungen und Postskripte müssen entweder in _/var/opt/snapcenter/spl/scripts_ oder in einem beliebigen Ordner in diesem Pfad gespeichert werden. Standardmäßig ist der Pfad _/var/opt/snapcenter/spl/scripts_ ausgefüllt. Wenn Sie Ordner in diesem Pfad erstellt haben, um die Skripte zu speichern, müssen Sie diese Ordner im Pfad angeben.
+
++
+Sie können auch den Wert für das Skript-Timeout angeben. Der Standardwert ist 60 Sekunden.
+
+
+
+. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
+

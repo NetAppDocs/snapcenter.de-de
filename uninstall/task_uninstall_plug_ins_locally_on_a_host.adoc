@@ -1,0 +1,35 @@
+---
+permalink: uninstall/task_uninstall_plug_ins_locally_on_a_host.html 
+sidebar: sidebar 
+keywords: uninstall, uninstall plug-in locally, uninstall plug-in from a host 
+summary: Sie können SnapCenter-Plug-ins lokal auf einem Host deinstallieren, wenn Sie den Host nicht vom SnapCenter-Server erreichen können. 
+---
+= Deinstallieren Sie Plug-ins lokal auf einem Host
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können SnapCenter-Plug-ins lokal auf einem Host deinstallieren, wenn Sie den Host nicht vom SnapCenter-Server erreichen können.
+
+*Über diese Aufgabe*
+
+Die Best Practice beim Deinstallieren einzelner Plug-ins oder Plug-in-Pakete ist entweder die SnapCenter-Benutzeroberfläche zu verwenden oder das Cmdlet "Uninstall-SmHostPackage" in der Befehlszeilenschnittstelle des SnapCenter-Servers zu verwenden. Diese Verfahren helfen dem SnapCenter-Server, sich mit Änderungen auf dem Laufenden zu halten.
+
+Möglicherweise müssen Sie jedoch Plug-ins nur selten lokal deinstallieren. Sie können beispielsweise einen Deinstallationsauftrag vom SnapCenter-Server ausführen, aber der Job ist fehlgeschlagen, oder Sie haben Ihren SnapCenter-Server deinstalliert und verwaiste Plug-ins bleiben auf einem Host.
+
+
+IMPORTANT: Durch die lokale Deinstallation eines Plug-in-Pakets auf einem Host werden die mit dem Host verknüpften Daten nicht gelöscht, z. B. geplante Jobs und Backup-Metadaten.
+
+
+IMPORTANT: Versuchen Sie nicht, das SnapCenter-Plug-ins-Paket für Windows lokal von der Systemsteuerung zu deinstallieren. Sie müssen die SnapCenter-Benutzeroberfläche verwenden, um sicherzustellen, dass das SnapCenter-Plug-in für Microsoft Windows ordnungsgemäß deinstalliert wird.
+
+*Schritte*
+
+. Navigieren Sie auf dem Hostsystem zur Systemsteuerung und klicken Sie auf *Programm deinstallieren*.
+. Wählen Sie in der Liste der Programme das SnapCenter Plug-in oder Plug-in Paket aus, das Sie deinstallieren möchten, und klicken Sie auf *Deinstallieren*.
++
+Windows deinstalliert alle Plug-ins im ausgewählten Paket.
+
+

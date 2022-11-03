@@ -1,0 +1,44 @@
+---
+permalink: protect-hana/task_enable_ca_certificates_for_plug-ins.html 
+sidebar: sidebar 
+keywords: SnapCenter 
+summary: Sie sollten die CA-Zertifikate konfigurieren und die CA-Zertifikate im SnapCenter-Server und den entsprechenden Plug-in-Hosts bereitstellen. 
+---
+= Aktivieren Sie CA-Zertifikate für Plug-ins
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+Sie sollten die CA-Zertifikate konfigurieren und die CA-Zertifikate im SnapCenter-Server und den entsprechenden Plug-in-Hosts bereitstellen. Sie sollten die CA-Zertifikatsvalidierung für die Plug-ins aktivieren.
+
+*Was Sie brauchen*
+
+* Sie können die CA-Zertifikate mit dem Cmdlet "Run_set-SmCertificateSettings_" aktivieren oder deaktivieren.
+* Sie können den Zertifikatsstatus für die Plug-ins mithilfe der _get-SmCertificateSettings_ anzeigen.
+
+
+Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ können Sie auch auf die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["SnapCenter Software Cmdlet Referenzhandbuch"^].
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Hosts*.
+. Klicken Sie auf der Host-Seite auf *verwaltete Hosts*.
+. Wählen Sie ein- oder mehrere Plug-in-Hosts aus.
+. Klicken Sie auf *Weitere Optionen*.
+. Wählen Sie *Zertifikatvalidierung Aktivieren*.
+
+
+*Nach Ihrer Beendigung*
+
+Auf dem Reiter Managed Hosts wird ein Schloss angezeigt, und die Farbe des Vorhängeschlosses zeigt den Status der Verbindung zwischen SnapCenter Server und dem Plug-in-Host an.
+
+* *image:../media/enable_ca_issues_icon.png[""]* Zeigt an, dass das CA-Zertifikat weder aktiviert noch dem Plug-in-Host zugewiesen ist.
+* *image:../media/enable_ca_good_icon.png[""]* Zeigt an, dass das CA-Zertifikat erfolgreich validiert wurde.
+* *image:../media/enable_ca_failed_icon.png[""]* Zeigt an, dass das CA-Zertifikat nicht validiert werden konnte.
+* *image:../media/enable_ca_undefined_icon.png[""]* Zeigt an, dass die Verbindungsinformationen nicht abgerufen werden konnten.
++
+
+NOTE: Wenn der Status gelb oder grün lautet, werden die Datensicherungsvorgänge erfolgreich abgeschlossen.
+
+

@@ -1,0 +1,168 @@
+---
+permalink: install/task_add_a_user_or_group_and_assign_role_and_assets.html 
+sidebar: sidebar 
+keywords: RBAC, add user, add group, assign role, assign assets 
+summary: Um die rollenbasierte Zugriffssteuerung für SnapCenter-Benutzer zu konfigurieren, können Sie Benutzer oder Gruppen hinzufügen und Rollen zuweisen. Die Rolle legt die Optionen fest, auf die SnapCenter-Benutzer zugreifen können. 
+---
+= Fügen Sie einen Benutzer oder eine Gruppe hinzu und weisen Sie Rollen und Assets zu
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um die rollenbasierte Zugriffssteuerung für SnapCenter-Benutzer zu konfigurieren, können Sie Benutzer oder Gruppen hinzufügen und Rollen zuweisen. Die Rolle legt die Optionen fest, auf die SnapCenter-Benutzer zugreifen können.
+
+*Was Sie brauchen*
+
+* Sie müssen sich als „SnapCenterAdmin“-Rolle angemeldet haben.
+* Sie müssen die Benutzer- oder Gruppenkonten in Active Directory im Betriebssystem oder in der Datenbank erstellt haben. Sie können SnapCenter nicht zum Erstellen dieser Konten verwenden.
++
+
+NOTE: Ab SnapCenter 4.5 können Sie nur die folgenden Sonderzeichen in Benutzernamen und Gruppennamen enthalten: Leerzeichen ( ), Bindestrich (-), Unterstrich (_) und Doppelpunkt (:). Wenn Sie eine Rolle verwenden möchten, die Sie in einer früheren Version von SnapCenter mit diesen Sonderzeichen erstellt haben, können Sie die Validierung des Rollennamens deaktivieren, indem Sie in der Datei Web.config, in der die SnapCenter WebApp installiert ist, den Wert des Parameters 'ableSQLInjectionValidation' auf true ändern. Nachdem Sie den Wert geändert haben, müssen Sie den Dienst nicht neu starten.
+
+* SnapCenter umfasst mehrere vordefinierte Rollen.
++
+Sie können diese Rollen entweder dem Benutzer zuweisen oder neue Rollen erstellen.
+
+* AD-Benutzer und AD-Gruppen, die SnapCenter RBAC hinzugefügt werden, müssen über DIE LESEBERECHTIGUNG auf dem Benutzer-Container und dem Computer-Container im Active Directory verfügen.
+* Nachdem Sie einem Benutzer oder einer Gruppe eine Rolle zugewiesen haben, die die entsprechenden Berechtigungen enthält, müssen Sie den Benutzerzugriff auf SnapCenter-Ressourcen wie Hosts und Speicherverbindungen zuweisen.
++
+Auf diese Weise können Benutzer die Aktionen ausführen, für die sie über Berechtigungen für die ihnen zugewiesenen Assets verfügen.
+
+* Sie sollten dem Benutzer oder der Gruppe irgendwann eine Rolle zuweisen, um die RBAC-Berechtigungen und Effizienzfunktionen zu nutzen.
+* Sie können Assets wie Host, Ressourcengruppen, Richtlinien, Storage-Verbindungen, Plug-in, Und Anmeldeinformationen für den Benutzer beim Erstellen des Benutzers oder der Gruppe.
+* Die Mindestwerte, die Sie einem Benutzer zur Durchführung bestimmter Vorgänge zuweisen sollten, sind:
++
+|===
+| Betrieb | Zuweisung von Assets 
+
+
+ a| 
+Ressourcen schützen
+ a| 
+Host, Richtlinie
+
+
+
+ a| 
+Backup
+ a| 
+Host, Ressourcengruppe und Richtlinie
+
+
+
+ a| 
+Wiederherstellen
+ a| 
+Host, Ressourcengruppe
+
+
+
+ a| 
+Klon
+ a| 
+Host, Ressourcengruppe und Richtlinie
+
+
+
+ a| 
+Lebenszyklus von Klonen
+ a| 
+Host
+
+
+
+ a| 
+Erstellen Sie eine Ressourcengruppe
+ a| 
+Host
+
+|===
+* Wenn ein neuer Knoten zu einem Windows Cluster oder einer DAG (Exchange Server Database Availability Group)-Ressource hinzugefügt wird und wenn dieser neue Knoten einem Benutzer zugewiesen ist, müssen Sie das Element dem Benutzer oder der Gruppe neu zuweisen, um den neuen Knoten dem Benutzer oder der Gruppe hinzuzufügen.
++
+Sie sollten den RBAC-Benutzer oder die Gruppe dem Cluster oder der DAG neu zuweisen, um den neuen Node auch dem RBAC-Benutzer oder der Gruppe einzuschließen. Sie verfügen beispielsweise über ein Cluster mit zwei Nodes und haben dem Cluster einen RBAC-Benutzer oder eine Gruppe zugewiesen. Wenn Sie dem Cluster einen weiteren Node hinzufügen, sollten Sie den RBAC-Benutzer oder die Gruppe dem Cluster neu zuweisen, um den neuen Node für den Benutzer oder die Gruppe der RBAC einzubeziehen.
+
+* Wenn Sie Snapshot Kopien replizieren möchten, müssen Sie dem Benutzer, der den Vorgang durchführt, die Storage-Verbindung für das Quell- und Ziel-Volume zuweisen.
++
+Sie sollten Assets hinzufügen, bevor Sie den Benutzern Zugriff zuweisen.
+
+
+
+
+IMPORTANT: Wenn Sie zum Schutz von VMs, VMDKs oder Datastores das SnapCenter Plug-in für VMware vSphere verwenden, sollten Sie ein vCenter Benutzer zu einem SnapCenter Plug-in für VMware vSphere hinzufügen. Weitere Informationen zu VMware vSphere-Rollen finden Sie unter https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_predefined_roles_packaged_with_snapcenter.html["Vordefinierte Rollen in Paketen mit SnapCenter Plug-in für VMware vSphere"^].
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Einstellungen*.
+. Klicken Sie auf der Seite Einstellungen auf *Benutzer und Zugriff* > *image:../media/add_icon_configure_database.gif["Symbol hinzufügen im Bildschirm Datenbank konfigurieren"]*.
+. Auf der Seite Benutzer/Gruppen aus Active Directory oder Workgroup hinzufügen:
++
+|===
+| Für dieses Feld... | Tun Sie das... 
+
+
+ a| 
+Zugriffstyp
+ a| 
+Wählen Sie entweder Domäne oder Arbeitsgruppe aus
+
+Für den Authentifizierungstyp Domäne müssen Sie den Domänennamen des Benutzers oder der Gruppe angeben, dem Sie den Benutzer zu einer Rolle hinzufügen möchten.
+
+Standardmäßig wird er mit dem angemeldeten Domänennamen ausgefüllt.
+
+
+NOTE: Sie müssen die nicht vertrauenswürdige Domäne auf der Seite *Einstellungen* > *Globale Einstellungen* > *Domain-Einstellungen* registrieren.
+
+
+
+ a| 
+Typ
+ a| 
+Wählen Sie entweder Benutzer oder Gruppe aus
+
+
+NOTE: SnapCenter unterstützt nur Sicherheitsgruppen, nicht die Vertriebsgruppe.
+
+
+
+ a| 
+Benutzername
+ a| 
+.. Geben Sie den teilweisen Benutzernamen ein, und klicken Sie dann auf *Hinzufügen*.
++
+
+NOTE: Bei Benutzername wird die Groß-/Kleinschreibung berücksichtigt.
+
+.. Wählen Sie den Benutzernamen aus der Suchliste aus.
+
+
+
+NOTE: Wenn Sie Benutzer aus einer anderen Domäne oder einer nicht vertrauenswürdigen Domäne hinzufügen, sollten Sie den Benutzernamen vollständig eingeben, da keine Suchliste für domänenübergreifende Benutzer vorhanden ist.
+
+Wiederholen Sie diesen Schritt, um der ausgewählten Rolle weitere Benutzer oder Gruppen hinzuzufügen.
+
+
+
+ a| 
+Rollen
+ a| 
+Wählen Sie die Rolle aus, der Sie den Benutzer hinzufügen möchten.
+
+|===
+. Klicken Sie auf *Zuweisen* und dann auf der Seite „Assets zuweisen“ auf:
++
+.. Wählen Sie den Typ des Assets aus der Dropdown-Liste *Asset* aus.
+.. Wählen Sie in der Asset-Tabelle das Asset aus.
++
+Die Assets werden nur aufgeführt, wenn der Benutzer die Assets zu SnapCenter hinzugefügt hat.
+
+.. Wiederholen Sie diesen Vorgang für alle erforderlichen Assets.
+.. Klicken Sie Auf *Speichern*.
+
+
+. Klicken Sie Auf *Absenden*.
++
+Nachdem Sie Benutzer oder Gruppen hinzugefügt und Rollen zugewiesen haben, aktualisieren Sie die Ressourcenliste.
+
+

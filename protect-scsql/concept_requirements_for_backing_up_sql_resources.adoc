@@ -1,0 +1,22 @@
+---
+permalink: protect-scsql/concept_requirements_for_backing_up_sql_resources.html 
+sidebar: sidebar 
+keywords:  
+summary: Bevor Sie eine SQL-Ressource sichern, müssen Sie sicherstellen, dass mehrere Anforderungen erfüllt sind. 
+---
+= Anforderungen für das Backup von SQL Ressourcen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bevor Sie eine SQL-Ressource sichern, müssen Sie sicherstellen, dass mehrere Anforderungen erfüllt sind.
+
+* Sie müssen eine Ressource von einem nicht-NetApp Storage-System in ein NetApp Storage-System migriert haben.
+* Sie müssen eine Sicherungsrichtlinie erstellt haben.
+* Wenn Sie eine Ressource mit einer SnapMirror Beziehung zu einem sekundären Storage sichern möchten, sollte die dem Storage-Benutzer zugewiesene ONTAP-Rolle die Berechtigung „`snapmirror all`“ enthalten. Wenn Sie jedoch die Rolle „`vsadmin`“ verwenden, ist die Berechtigung „`snapmirror all`“ nicht erforderlich.
+* Der von einem Active Directory (AD)-Benutzer initiierte Backup-Vorgang schlägt fehl, wenn die SQL-Instanz-Anmeldeinformationen nicht dem AD-Benutzer oder der AD-Gruppe zugewiesen sind. Sie müssen die SQL-Instanz-Anmeldeinformationen AD-Benutzer oder -Gruppe über die Seite *Einstellungen* > *Benutzerzugriff* zuweisen.
+* Sie müssen eine Ressourcengruppe mit einer angehängten Richtlinie erstellt haben.
+* Wenn eine Ressourcengruppe mehrere Datenbanken von verschiedenen Hosts enthält, kann der Backup-Vorgang auf einigen Hosts aufgrund von Netzwerkproblemen spät ausgelöst werden. Sie sollten den Wert von FMaxRetryForUninitializedHosts in Web.config mit dem Cmdlet Set-SmConfigSettings PS konfigurieren.
+

@@ -1,0 +1,373 @@
+---
+permalink: sc-automation/reference_supported_rest_apis.html 
+sidebar: sidebar 
+keywords: REST API categories 
+summary: Die über die SnapCenter REST API verfügbaren Ressourcen sind nach Kategorien sortiert, die auf der Dokumentationsseite der SnapCenter-API angezeigt werden. 
+---
+= REST-APIs werden für SnapCenter Server und Plug-ins unterstützt
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die über die SnapCenter REST API verfügbaren Ressourcen sind nach Kategorien sortiert, die auf der Dokumentationsseite der SnapCenter-API angezeigt werden. Nachfolgend finden Sie eine kurze Beschreibung der einzelnen Ressourcen mit den grundlegenden Ressourcenpfaden sowie weitere Nutzungsüberlegungen.
+
+
+
+== Auth
+
+Sie können diese API verwenden, um sich beim SnapCenter-Server anzumelden. Diese API gibt ein Benutzerautorisierungs-Token zurück, das zur Authentifizierung weiterer Anforderungen verwendet wird.
+
+
+
+== Domänen
+
+Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
+
+* Rufen Sie alle Domänen in SnapCenter ab
+* Abrufen von Details einer bestimmten Domäne
+* Registrieren oder Aufheben der Registrierung einer Domain
+* Ändern einer Domäne
+
+
+
+
+== Jobs
+
+Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
+
+* Rufen Sie alle Jobs in SnapCenter ab
+* Abrufen des Status eines Jobs
+* Einen Job abbrechen oder beenden
+
+
+
+
+== Einstellungen
+
+Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
+
+* Registrieren, Ändern oder Entfernen von Anmeldeinformationen
+* Zeigt die Anmeldeinformationen an, die auf dem SnapCenter-Server registriert sind
+* Benachrichtigungseinstellungen konfigurieren
+* Ruft Informationen über den SMTP-Server ab, der derzeit für das Senden von E-Mail-Benachrichtigungen konfiguriert ist, und zeigt den Namen des SMTP-Servers, den Namen der Empfänger und den Namen des Absenders an
+* Zeigt die Multi-Faktor-Authentifizierung (MFA)-Konfiguration der SnapCenter-Serveranmeldung an
+* Aktivieren oder Deaktivieren und Konfigurieren von MFA für die SnapCenter-Server-Anmeldung
+* Erstellen Sie die zum Einrichten von MFA erforderliche Konfigurationsdatei
+
+
+
+
+== Hosts
+
+Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
+
+* Abfrage aller SnapCenter-Hosts
+* Entfernen Sie einen oder mehrere Hosts aus SnapCenter
+* Rufen Sie einen Host nach Namen ab
+* Rufen Sie alle Ressourcen auf einem Host ab
+* Rufen Sie eine Ressource mithilfe der Ressourcen-ID ab
+* Rufen Sie die Plug-in-Konfigurationsdetails ab
+* Konfigurieren Sie den Plug-in-Host
+* Rufen Sie alle Ressourcen des Plug-ins für Microsoft SQL Server Host ab
+* Rufen Sie alle Ressourcen des Plug-ins für Oracle Datenbank-Host ab
+* Rufen Sie alle Ressourcen des Plug-ins für benutzerdefinierten Applikations-Host ab
+* Rufen Sie alle Ressourcen des Plug-ins für SAP HANA-Host ab
+* Abrufen der installierten Plug-ins
+* Installieren von Plug-ins auf einem vorhandenen Host
+* Hostpaket wird aktualisiert
+* Entfernen Sie Plug-ins von einem vorhandenen Host
+* Fügen Sie Plug-in auf einem Host hinzu
+* Fügen Sie einen Host hinzu oder ändern Sie diesen
+* Holen Sie sich die Signatur des Linux-Hosts
+* Registrieren Sie die Signatur des Linux-Hosts
+* Versetzen Sie den Host in den Wartungs- oder Produktionsmodus
+* Starten oder starten Sie die Plug-in-Dienste auf dem Host neu
+* Benennen Sie einen Host um
+
+
+
+
+== Ressourcen
+
+Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
+
+* Rufen Sie alle Ressourcen ab
+* Rufen Sie eine Ressource mithilfe der Ressourcen-ID ab
+* Rufen Sie alle Ressourcen des Plug-ins für Microsoft SQL Server Host ab
+* Rufen Sie alle Ressourcen des Plug-ins für Oracle Datenbank-Host ab
+* Rufen Sie alle Ressourcen des Plug-ins für benutzerdefinierten Applikations-Host ab
+* Rufen Sie alle Ressourcen des Plug-ins für SAP HANA-Host ab
+* Rufen Sie eine Microsoft SQL Server-Ressource mit einem Schlüssel ab
+* Abrufen einer benutzerdefinierten Ressource mit einem Schlüssel
+* Ändern Sie eine Ressource des Plug-ins für benutzerdefinierten Applikations-Host
+* Entfernen Sie mithilfe eines Schlüssels eine Ressource des Plug-ins für benutzerdefinierten Applikations-Host
+* Abrufen einer SAP HANA-Ressource mit einem Schlüssel
+* Änderung einer Ressource des Plug-ins für SAP HANA-Host
+* Entfernen Sie eine Ressource des Plug-ins für SAP HANA-Host mithilfe eines Schlüssels
+* Rufen Sie eine Oracle-Ressource mit einem Schlüssel ab
+* Erstellen einer Oracle Application Volume-Ressource
+* Bearbeiten einer Oracle Application Volume-Ressource
+* Entfernen Sie eine Oracle Application Volume-Ressource mit einem Schlüssel
+* Rufen Sie die sekundären Details der Oracle-Ressource ab
+* Sichern Sie die Microsoft SQL Server-Ressource mit einem Plug-in für Microsoft SQL Server
+* Sichern Sie die Oracle Ressource mit Plug-in für Oracle Database
+* Sichern Sie die benutzerdefinierte Ressource mit Plug-in für benutzerdefinierte Applikationen
+* SAP HANA-Datenbank konfigurieren
+* Konfigurieren Sie die Oracle Datenbank
+* Wiederherstellen eines Backups einer SQL-Datenbank
+* Wiederherstellen eines Backups einer Oracle Datenbank
+* Wiederherstellung eines Backups benutzerdefinierter Applikationen
+* Erstellen Sie eine benutzerdefinierte Plug-in-Ressource
+* SAP HANA-Ressource erstellen
+* Schützen Sie eine benutzerdefinierte Ressource mit Plug-in für benutzerdefinierte Applikationen
+* Schützen Sie eine Microsoft SQL Server-Ressource mit Plug-in für Microsoft SQL Server
+* Ändern einer geschützten Microsoft SQL Server-Ressource
+* Entfernen Sie den Schutz für Microsoft SQL Server-Ressourcen
+* Schutz einer Oracle-Ressource über Plug-in für Oracle Datenbank
+* Geschützte Oracle-Ressource ändern
+* Entfernen Sie Schutz aus Oracle-Ressource
+* Klonen Sie eine Ressource aus dem Backup mit Plug-in für benutzerdefinierte Applikationen
+* Klonen eines Oracle Applikations-Volumes aus dem Backup mit Plug-in für Oracle Database
+* Klonen einer Microsoft SQL Server-Ressource aus dem Backup mit dem Plug-in für Microsoft SQL Server
+* Erstellen Sie den Lebenszyklus eines Klons einer Microsoft SQL Server Ressource
+* Ändern Sie den Lebenszyklus des Klons einer Microsoft SQL Server-Ressource
+* Löschen Sie den Lebenszyklus des Klons einer Microsoft SQL Server-Ressource
+* Verschieben Sie eine vorhandene Microsoft SQL Server Datenbank von einer lokalen Festplatte auf eine NetApp LUN
+* Erstellen Sie eine Clone Specification File für eine Oracle Database
+* Initiieren eines On-Demand-Klonaktualisierungsauftrags für eine Oracle Ressource
+* Erstellen Sie eine Oracle-Ressource aus dem Backup mit der Clone Specification File
+* Stellt die Datenbank auf dem sekundären Replikat wieder her und schließt die Datenbank wieder der Verfügbarkeitsgruppe an
+* Erstellen einer Oracle Application Volume-Ressource
+
+
+
+
+== Backups
+
+Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
+
+* Abrufen von Backup-Details nach Backup-Name, Typ, Plug-in, Ressource oder Datum
+* Rufen Sie alle Backups ab
+* Rufen Sie Backup-Details ab
+* Backups umbenennen oder löschen
+* Mounten Sie ein Oracle Backup
+* Heben Sie die Bereitstellung eines Oracle Backups auf
+* Katalogisieren eines Oracle Backups
+* Entkatalogisieren eines Oracle Backups
+* Abrufen aller erforderlichen Backups zum Ausführen eines Point-in-Time Recovery
+
+
+
+
+== Klone
+
+Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
+
+* Erstellen, Anzeigen, Ändern und Löschen der Spezifikationsdatei für Oracle-Datenbankklone
+* Anzeigen der Oracle-Datenbankklonhierarchie
+* Abrufen von Klondetails
+* Rufen Sie alle Klone ab
+* Klone löschen
+* Rufen Sie Klondetails nach ID ab
+* Initiieren eines On-Demand-Klonaktualisierungsauftrags für eine Oracle Ressource
+* Klonen einer Oracle-Ressource aus dem Backup mit der Clone Specification File
+
+
+
+
+== Aufteilung klonen
+
+Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
+
+* Schätzen Sie den Abteilungvorgang für den Klon der geklonten Ressource
+* Abrufen des Status eines geteilten Klonvorgangs
+* Starten oder stoppen Sie einen Klon-Split-Vorgang
+
+
+
+
+== Ressourcengruppen
+
+Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
+
+* Abrufen von Details aller Ressourcengruppen
+* Rufen Sie die Ressourcengruppe nach Namen ab
+* Erstellen Sie eine Ressourcengruppe für das Plug-in für benutzerdefinierte Anwendungen
+* Erstellen Sie eine Ressourcengruppen für das Plug-in für Microsoft SQL Server
+* Erstellen Sie eine Ressourcengruppe für das Plug-in für Oracle-Datenbank
+* Ändern Sie eine Ressourcengruppe für das Plug-in für benutzerdefinierte Anwendungen
+* Ändern Sie eine Ressourcengruppe für das Plug-in für Microsoft SQL Server
+* Ändern Sie eine Ressourcengruppe für das Plug-in für Oracle-Datenbank
+* Erstellen, Ändern oder Löschen des Klonlebenszyklus einer Ressourcengruppe für das Plug-in für Microsoft SQL Server
+* Sichern einer Ressourcengruppe
+* Setzen Sie die Ressourcengruppe in den Wartungs- oder Produktionsmodus
+* Entfernen Sie eine Ressourcengruppe
+
+
+
+
+== Richtlinien
+
+Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
+
+* Abrufen von Richtliniendetails
+* Richtliniendetails nach Namen abrufen
+* Löschen einer Richtlinie
+* Erstellen einer Kopie einer vorhandenen Richtlinie
+* Erstellen oder Ändern Sie eine Richtlinie für das Plug-in für benutzerdefinierte Applikationen
+* Erstellen oder Ändern Sie die Richtlinie für das Plug-in für Microsoft SQL Server
+* Erstellen oder Ändern Sie eine Richtlinie für das Plug-in für Oracle Database
+* Erstellen oder Ändern Sie eine Richtlinie für das Plug-in für die SAP HANA Datenbank
+
+
+
+
+== Storage
+
+Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
+
+* Rufen Sie alle Freigaben ab
+* Freigabe nach Namen abrufen
+* Erstellen oder Löschen einer Freigabe
+* Abrufen von Storage-Details
+* Speicherdetails nach Namen abrufen
+* Erstellen, Ändern oder Löschen von Speicher
+* Erkennung von Ressourcen auf einem Storage-Cluster
+* Abrufen von Ressourcen auf einem Storage-Cluster
+
+
+
+
+== Share
+
+Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
+
+* Rufen Sie die Details einer Freigabe ab
+* Rufen Sie die Details aller Freigaben ab
+* Erstellen oder löschen Sie eine Freigabe auf dem Speicher
+* Freigabe nach Namen abrufen
+
+
+
+
+== Plug-Ins
+
+Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
+
+* Listen Sie alle Plug-ins für einen Host auf
+* Rufen Sie eine Microsoft SQL Server-Ressource mit einem Schlüssel ab
+* Ändern Sie eine benutzerdefinierte Ressource mit einem Schlüssel
+* Entfernen Sie eine benutzerdefinierte Ressource mit einem Schlüssel
+* Abrufen einer SAP HANA-Ressource mit einem Schlüssel
+* Ändern einer SAP HANA-Ressource mit einem Schlüssel
+* Entfernen einer SAP HANA-Ressource mithilfe eines Schlüssels
+* Rufen Sie eine Oracle-Ressource mit einem Schlüssel ab
+* Ändern Sie eine Oracle Application Volume-Ressource mit einem Schlüssel
+* Entfernen Sie eine Oracle Application Volume-Ressource mit einem Schlüssel
+* Sichern Sie die Microsoft SQL Server-Ressource mit Plug-in für Microsoft SQL Server und einem Schlüssel
+* Sichern Sie die Oracle-Ressource mit Plug-in für Oracle Database und einem Schlüssel
+* Sichern Sie die benutzerdefinierte Applikationsressource mithilfe eines Plug-ins für benutzerdefinierte Applikationen und einen Schlüssel
+* SAP HANA-Datenbank mit einem Schlüssel konfigurieren
+* Konfigurieren Sie die Oracle-Datenbank mit einem Schlüssel
+* Wiederherstellung eines Backups benutzerdefinierter Applikationen mit einem Schlüssel
+* Erstellen Sie eine benutzerdefinierte Plug-in-Ressource
+* SAP HANA-Ressource erstellen
+* Erstellen einer Oracle Application Volume-Ressource
+* Schützen Sie eine benutzerdefinierte Ressource mit Plug-in für benutzerdefinierte Applikationen
+* Schützen Sie eine Microsoft SQL Server-Ressource mit Plug-in für Microsoft SQL Server
+* Ändern einer geschützten Microsoft SQL Server-Ressource
+* Entfernen Sie den Schutz für Microsoft SQL Server-Ressourcen
+* Schutz einer Oracle-Ressource über Plug-in für Oracle Datenbank
+* Geschützte Oracle-Ressource ändern
+* Entfernen Sie Schutz aus Oracle-Ressource
+* Klonen Sie eine Ressource aus dem Backup mit Plug-in für benutzerdefinierte Applikationen
+* Klonen eines Oracle Applikations-Volumes aus dem Backup mit Plug-in für Oracle Database
+* Klonen einer Microsoft SQL Server-Ressource aus dem Backup mit dem Plug-in für Microsoft SQL Server
+* Erstellen Sie den Lebenszyklus eines Klons einer Microsoft SQL Server Ressource
+* Ändern Sie den Lebenszyklus des Klons einer Microsoft SQL Server-Ressource
+* Löschen Sie den Lebenszyklus des Klons einer Microsoft SQL Server-Ressource
+* Erstellen Sie eine Clone Specification File für eine Oracle Database
+* Initiieren eines On-Demand-Klonzyklus einer Oracle Ressource
+* Klonen einer Oracle-Ressource aus dem Backup mit der Clone Specification File
+
+
+
+
+== Berichte An
+
+Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
+
+* Abrufen von Berichten über Backup, Wiederherstellung und Klonvorgänge für die jeweiligen Plug-ins
+* Hinzufügen, Ausführen, Löschen oder Ändern von Zeitplänen
+* Abrufen von Daten für die geplanten Berichte
+
+
+
+
+== Meldungen
+
+Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
+
+* Rufen Sie alle Meldungen ab
+* Abrufen von Warnmeldungen nach IDs
+* Löschen Sie mehrere Warnmeldungen oder löschen Sie eine Meldung nach ID
+
+
+
+
+== Rbac
+
+Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
+
+* Abrufen von Details zu Benutzern, Gruppen und Rollen
+* Benutzer hinzufügen oder löschen
+* Benutzer der Rolle zuweisen
+* Heben Sie die Zuweisung von Benutzer aus Rolle auf
+* Erstellen, Ändern oder Löschen von Rollen
+* Gruppe einer Rolle zuweisen
+* Heben Sie die Zuordnung einer Gruppe zu einer Rolle auf
+* Gruppen hinzufügen oder löschen
+* Erstellen Sie eine Kopie einer vorhandenen Rolle
+* Weisen Sie dem Benutzer oder der Gruppe Ressourcen zu oder heben Sie die Zuweisung zurück
+
+
+
+
+== Konfiguration
+
+Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
+
+* Zeigen Sie die Konfigurationseinstellungen an
+* Ändern Sie die Konfigurationseinstellungen
+
+
+
+
+== Zertifikateinstellungen
+
+Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
+
+* Zeigen Sie den Zertifikatsstatus für den SnapCenter-Server oder den Plug-in-Host an
+* Ändern Sie die Zertifikatseinstellungen für den SnapCenter-Server oder den Plug-in-Host
+
+
+
+
+== Repository
+
+Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
+
+* Rufen Sie die Repository-Backups ab
+* Zeigen Sie die Konfigurationsinformationen zum Repository an
+* Sichern und Wiederherstellen des SnapCenter Repositorys
+* Heben Sie den Schutz des SnapCenter Repositorys auf
+* Wiederherstellung und Failover des Repositorys
+
+
+
+
+== Version
+
+Sie können diese API zum Anzeigen der SnapCenter-Version verwenden.

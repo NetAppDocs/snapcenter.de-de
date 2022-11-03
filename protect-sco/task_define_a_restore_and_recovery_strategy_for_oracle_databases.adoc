@@ -1,0 +1,230 @@
+---
+permalink: protect-sco/task_define_a_restore_and_recovery_strategy_for_oracle_databases.html 
+sidebar: sidebar 
+keywords: backup types, restore methods, connect-and-copy restore, full restore, partial restore, in-place restore, recovery type, limitations 
+summary: Sie müssen eine Strategie definieren, bevor Sie Ihre Datenbank wiederherstellen und wiederherstellen, damit Restore- und Recovery-Vorgänge erfolgreich durchgeführt werden können. 
+---
+= Definition einer Restore- und Recovery-Strategie für Oracle Datenbanken
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen eine Strategie definieren, bevor Sie Ihre Datenbank wiederherstellen und wiederherstellen, damit Restore- und Recovery-Vorgänge erfolgreich durchgeführt werden können.
+
+
+
+== Arten von Backups, die für Wiederherstellungs- und Recovery-Vorgänge unterstützt werden
+
+SnapCenter unterstützt die Wiederherstellung und Wiederherstellung unterschiedlicher Arten von Oracle Datenbank-Backups.
+
+* Online Daten-Backup
+* Offline Herunterfahren Datensicherung
+* Datensicherung für Offline-Mounten
++
+
+NOTE: Wenn Sie eine Offline-Abschaltung oder Offline-Bereitstellung von Daten-Backups durchführen, lässt SnapCenter die Datenbank in den Offline-Zustand. Sie sollten die Datenbank manuell wiederherstellen und die Protokolle zurücksetzen.
+
+* Vollständiges Backup
+* Offline-Mount-Backups von Data Guard Standby-Datenbanken
+* Reine Online-Backups von Active Data Guard Standby-Datenbanken
++
+
+NOTE: Sie können keine Wiederherstellung von Active Data Guard Standby-Datenbanken durchführen.
+
+* Online-Daten-Backups, vollständige Online-Backups, Offline-Mount-Backups und Offline-Shutdown-Backups in einer RAC-Konfiguration (Real Application Clusters)
+* Online-Daten-Backups, vollständige Online-Backups, Offline-Mount-Backups und Offline-Shutdown-Backups in einer ASM-Konfiguration (Automatic Storage Management)
+
+
+
+
+== Arten von Wiederherstellungsmethoden, die für Oracle-Datenbanken unterstützt werden
+
+SnapCenter unterstützt Connect-and-Copy oder in-Place-Restore für Oracle Datenbanken. Während eines Wiederherstellungsvorgangs bestimmt SnapCenter die Wiederherstellungsmethode, die für die Wiederherstellung des Dateisystems ohne Datenverlust geeignet ist.
+
+
+NOTE: SnapCenter bietet keine Unterstützung für Volume-basierte SnapRestore.
+
+
+
+=== Wiederherstellung von Verbindungen und Kopien
+
+Unterscheidet sich das Datenbanklayout von dem Backup, oder gibt es nach dem Backup neue Dateien, so wird die Wiederherstellung der Connect-and-Copy durchgeführt. In der Methode zum Wiederherstellen von Connect-and-Copy werden die folgenden Aufgaben ausgeführt:
+
+*Schritte*
+
+. Das Volume ist aus der Snapshot Kopie geklont und der Filesystem-Stack basiert auf dem Host, der die geklonten LUNs oder Volumes verwendet.
+. Die Dateien werden von den geklonten Dateisystemen in die ursprünglichen Dateisysteme kopiert.
+. Die geklonten Filesysteme werden dann vom Host abgehängt und die geklonten Volumes werden aus den ONTAP gelöscht.
+
+
+
+NOTE: Bei einem Flex ASM-Setup (bei dem die Kardinalität kleiner ist als die Anzahl Nodes im RAC-Cluster) oder ASM RAC-Datenbanken auf VMDK oder RDM wird nur die Connect-and-Copy-Wiederherstellungsmethode unterstützt.
+
+Auch wenn Sie die Wiederherstellung vor Ort mit Nachdruck aktiviert haben, führt SnapCenter die Wiederherstellung von Connect und Copy in den folgenden Szenarien durch:
+
+* Wiederherstellung aus einem sekundären Storage-System und bei Data ONTAP vor 8.3
+* Wiederherstellen von ASM-Laufwerksgruppen auf Knoten eines Oracle RAC-Setups, auf denen die Datenbankinstanz nicht konfiguriert ist
+* Wenn in Oracle RAC-Setup auf einem der Peer-Nodes nicht die ASM-Instanz oder die Cluster-Instanz ausgeführt wird oder wenn der Peer-Node nicht verfügbar ist
+* Restore von Kontrolldateien
+* Stellen Sie einen Teil der Tabellen aus, die sich in einer ASM-Festplattengruppe befinden, wieder her
+* Die Laufwerksgruppe wird zwischen Datendateien, sp-Datei und Kennwortdatei freigegeben
+* Der SnapCenter-Plug-in-Loader-Service (SPL) ist nicht auf dem Remote-Knoten in einer RAC-Umgebung installiert oder wird nicht ausgeführt
+* Dem Oracle RAC werden neue Knoten hinzugefügt, und der SnapCenter-Server kennt die neu hinzugefügten Knoten nicht
+
+
+
+
+=== In-Place-Wiederherstellung
+
+Wenn das Datenbank-Layout dem Backup ähnelt und keine Konfigurationsänderungen am Storage- und Datenbank-Stack durchgeführt wurden, erfolgt die Wiederherstellung direkt, wobei die Wiederherstellung von Datei oder LUN auf ONTAP durchgeführt wird. SnapCenter unterstützt als Teil der in-Place-Wiederherstellungsmethode nur Single File SnapRestore (SFSR).
+
+
+NOTE: Data ONTAP 8.3 oder höher unterstützt in-Place-Restores vom sekundären Standort.
+
+Wenn Sie die Datenbank wiederherstellen möchten, stellen Sie sicher, dass nur Datendateien auf der ASM-Festplattengruppe vorhanden sind. Sie müssen ein Backup erstellen, nachdem Änderungen an der ASM-Laufwerksgruppe oder in der physischen Struktur der Datenbank vorgenommen wurden. Nach der Durchführung der in-Place-Wiederherstellung enthält die Festplattengruppe die gleiche Anzahl von Datendateien wie zum Zeitpunkt des Backups.
+
+Die in-Place-Wiederherstellung wird automatisch angewendet, wenn die Laufwerksgruppe oder der Mount-Punkt den folgenden Kriterien entspricht:
+
+* Nach dem Backup werden keine neuen Datendateien hinzugefügt (Prüfung für fremde Dateien)
+* Kein Zusatz, Löschen oder Freizeit von ASM-Festplatte oder LUN nach Backup (ASM-Festplattengruppenstrukturüberprüfung)
+* Keine Ergänzung, Löschung oder Wiederherstellung von LUNs zu LVM Disk Group (LVM Disk Group Strukturänderprüfung)
+
+
+
+NOTE: Sie können auch die Wiederherstellung an Ort und Stelle mit GUI, SnapCenter CLI oder PowerShell Cmdlet aktivieren, um die Prüfung der ausländischen Datei und die Strukturänderprüfung der LVM-Laufwerksgruppe zu überschreiben.
+
+
+
+==== Durchführung einer in-Place-Wiederherstellung auf ASM RAC
+
+In SnapCenter wird der Knoten, auf dem Sie wiederherstellen, als primärer Knoten und alle anderen Knoten des RAC bezeichnet, auf dem sich die ASM-Festplattengruppe befindet, als Peer-Nodes. SnapCenter ändert den Status der ASM-Laufwerksgruppe auf alle Nodes, in denen sich die ASM-Laufwerksgruppe im Mount-Zustand befindet, bevor sie die Speicherwiederherstellung durchführt. Nachdem die Speicherwiederherstellung abgeschlossen ist, ändert SnapCenter den Status der ASM-Laufwerksgruppe wie vor der Wiederherstellung.
+
+In SAN-Umgebungen entfernt SnapCenter Geräte aus allen Peer-Nodes und führt LUN-Aufheben der Zuordnung durch, bevor der Storage wiederhergestellt wird. Nach der Storage-Wiederherstellung führt die SnapCenter die LUN-Zuordnung durch und stellt Geräte auf allen Peer-Knoten wieder her. Wenn sich das Oracle RAC ASM-Layout in einer SAN-Umgebung auf LUNs befindet, führt die Wiederherstellung von SnapCenter LUN-Aufheben, LUN-Wiederherstellung und LUN-Map-Operationen auf allen Nodes des RAC-Clusters, in dem sich die ASM-Festplattengruppe befindet. Vor der Wiederherstellung auch dann, wenn alle Initiatoren der RAC-Nodes nicht für die LUNs verwendet wurden, erstellt nach dem Wiederherstellen von SnapCenter eine neue iGroup mit allen Initiatoren aller RAC-Nodes.
+
+* Falls während der Vorratsspeicher-Aktivität auf Peer-Nodes ein Fehler auftritt, gibt SnapCenter den Status der ASM-Laufwerksgruppe automatisch wieder, so wie es zuvor war, bevor die Wiederherstellung auf Peer-Nodes durchgeführt wurde, auf denen der Vorspeichervorgang erfolgreich war. Rollback wird für den primären und den Peer-Knoten, auf dem der Vorgang fehlgeschlagen ist, nicht unterstützt. Bevor Sie eine andere Wiederherstellung versuchen, müssen Sie das Problem auf dem Peer-Node manuell beheben und die ASM-Laufwerksgruppe auf dem primären Node wieder in den Mount-Status versetzen.
+* Falls während der Wiederherstellungsaktivität ein Fehler auftritt, schlägt der Wiederherstellungsvorgang fehl und es wird kein Rollback durchgeführt. Bevor Sie eine weitere Wiederherstellung versuchen, müssen Sie das Problem mit der Speicherwiederherstellung manuell beheben und die ASM-Laufwerksgruppe auf dem primären Knoten wieder in den Bereitstellungsstatus versetzen.
+* Falls während der Speicherung auf einem der Peer-Nodes ein Fehler auftritt, wird SnapCenter mit dem Wiederherstellungsvorgang auf den anderen Peer-Nodes fortgesetzt. Sie müssen das Problem nach der Wiederherstellung manuell auf dem Peer-Node beheben.
+
+
+
+
+== Arten von Wiederherstellungsvorgängen, die für Oracle-Datenbanken unterstützt werden
+
+SnapCenter ermöglicht Ihnen die Durchführung verschiedener Arten von Restore-Vorgängen für Oracle Datenbanken.
+
+Vor dem Wiederherstellen der Datenbank werden Backups validiert, um festzustellen, ob Dateien im Vergleich zu den tatsächlichen Datenbankdateien fehlen.
+
+
+
+=== Vollständige Wiederherstellung
+
+* Stellt nur die Datendateien wieder her
+* Stellt nur die Kontrolldateien wieder her
+* Stellt die Datendateien und Kontrolldateien wieder her
+* Stellt Datendateien, Kontrolldateien und Wiederherstellungsprotokolle in Data Guard Standby und Active Data Guard Standby-Datenbanken wieder her
+
+
+
+
+=== Teilwiederherstellung
+
+* Stellt nur die ausgewählten Tabellen wieder her
+* Stellt nur die ausgewählten pluggable Datenbanken (PDBs) wieder her
+* Stellt nur die ausgewählten Tabellen einer PDB wieder her
+
+
+
+
+== Arten von für Oracle-Datenbanken unterstützten Recovery-Vorgängen
+
+SnapCenter ermöglicht Ihnen die Durchführung verschiedener Arten von Recovery-Vorgängen für Oracle Datenbanken.
+
+* Die Datenbank bis zur letzten Transaktion (alle Logs)
+* Die Datenbank bis zu einer bestimmten Systemänderungsnummer (SCN)
+* Die Datenbank auf einem bestimmten Datum und einer bestimmten Uhrzeit aktualisiert
++
+Sie müssen Datum und Uhrzeit für die Recovery auf der Grundlage der Zeitzone des Datenbankhosts angeben.
+
++
+SnapCenter bietet auch die Option „kein Recovery“ für Oracle Datenbanken.
+
+
+
+
+NOTE: Das Plug-in für Oracle-Datenbank unterstützt kein Recovery, wenn Sie mithilfe eines Backups wiederhergestellt haben, das mit der Datenbankrolle als Standby erstellt wurde. Sie müssen für physische Standby-Datenbanken immer ein manuelles Recovery durchführen.
+
+
+
+== Einschränkungen im Zusammenhang mit dem Restore und Recovery von Oracle Datenbanken
+
+Bevor Sie Restore- und Recovery-Vorgänge durchführen, müssen Sie die Einschränkungen beachten.
+
+Wenn Sie eine beliebige Oracle-Version von 11.2.0.4 bis 12.1 verwenden, 0.1 befindet sich der Wiederherstellungsvorgang im Status „Hung“, wenn Sie den Befehl „_renamedg_“ ausführen. Sie können den Oracle Patch 19544733 anwenden, um dieses Problem zu beheben.
+
+Die folgenden Wiederherstellungs- und Recovery-Vorgänge werden nicht unterstützt:
+
+* Restore und Recovery von Tabellen der Root-Container-Datenbank (CDB)
+* Wiederherstellung temporärer Tabellen und temporärer Tablespaces im Zusammenhang mit PDBs
+* Wiederherstellung und Wiederherstellung von Tabellen aus mehreren PDBs gleichzeitig
+* Wiederherstellung von Log-Backups
+* Wiederherstellung von Backups an einem anderen Speicherort
+* Wiederherstellung von Wiederherstellungsprotokolldateien in einer anderen Konfiguration als Data Guard Standby oder Active Data Guard Standby-Datenbanken
+* SPFILE und Password wiederherstellen
+* Wenn Sie einen Wiederherstellungsvorgang für eine Datenbank durchführen, die mit dem bestehenden Datenbanknamen auf demselben Host neu erstellt wurde, von SnapCenter verwaltet wurde und über gültige Backups verfügte, überschreibt der Wiederherstellungsvorgang die neu erstellten Datenbankdateien, obwohl die DBIDs unterschiedlich sind.
++
+Dies kann durch die Durchführung einer der folgenden Maßnahmen vermieden werden:
+
++
+** Ermitteln Sie die SnapCenter Ressourcen, nachdem die Datenbank neu erstellt wurde
+** Erstellen Sie ein Backup der neu erstellten Datenbank
+
+
+
+
+
+
+== Einschränkungen im Zusammenhang mit der zeitpunktgenauen Recovery von Tablespaces
+
+* Point-in-Time Recovery (PITR) von SYSTEM, SYSAUX und UNDO Tablespaces wird nicht unterstützt
+* PITR der Tabellen können nicht zusammen mit anderen Arten von Restores ausgeführt werden
+* Wenn ein Tablespace umbenannt wird und Sie ihn bis zu einem Punkt wiederherstellen möchten, bevor er umbenannt wurde, müssen Sie den früheren Namen des Tablespaces angeben
+* Wenn die Tabellenbedingungen in einem Tablespace in einem anderen Tablespace enthalten sind, sollten Sie beide Tabellen wiederherstellen
+* Wenn eine Tabelle und ihre Indizes in verschiedenen Tabellen gespeichert werden, sollten die Indizes vor der Durchführung von PITR gelöscht werden
+* PITR kann nicht verwendet werden, um den aktuellen Standardtablespaces wiederherzustellen
+* PITR kann nicht verwendet werden, um Tabellen mit einem der folgenden Objekte wiederherzustellen:
++
+** Objekte mit zugrunde liegenden Objekten (z. B. materialisierte Ansichten) oder enthaltenen Objekten (z. B. partitionierte Tabellen), sofern sich nicht alle zugrunde liegenden oder enthaltenen Objekte im Wiederherstellungssatz befinden
++
+Wenn außerdem die Partitionen einer partitionierten Tabelle in verschiedenen Tabellen gespeichert werden, sollten Sie die Tabelle entweder vor der Durchführung von PITR ablegen oder alle Partitionen in denselben Tablespace verschieben, bevor Sie PITR ausführen.
+
+** Segmente rückgängig machen oder zurücksetzen
+** Oracle 8 kompatible erweiterte Warteschlangen mit mehreren Empfängern
+** Objekte, die dem SYS-Benutzer gehören
++
+Beispiele für diese Objekttypen sind PL/SQL, Java-Klassen, Ausrufprogramme, Ansichten, Synonyme, Benutzer, Berechtigungen, Abmessungen, Verzeichnisse und Sequenzen.
+
+
+
+
+
+
+
+== Quellen und Ziele für die Wiederherstellung von Oracle-Datenbanken
+
+Sie können eine Oracle Datenbank aus einer Backup-Kopie auf dem Primär- oder Sekundärspeicher wiederherstellen. Sie können Datenbanken nur an demselben Speicherort auf derselben Datenbankinstanz wiederherstellen. Im Real Application Cluster (RAC) Setup können Sie jedoch Datenbanken auf anderen Knoten wiederherstellen.
+
+
+
+=== Quellen für Wiederherstellungsvorgänge
+
+Sie können Datenbanken aus einem Backup auf dem primären oder sekundären Storage wiederherstellen. Wenn Sie in einer Konfiguration mit mehreren Spiegelungen ein Backup auf dem sekundären Storage wiederherstellen möchten, können Sie die sekundäre Storage-Spiegelung als Quelle auswählen.
+
+
+
+=== Ziele für Wiederherstellungen
+
+Sie können Datenbanken nur an demselben Speicherort auf derselben Datenbankinstanz wiederherstellen.
+
+In einem RAC Setup können Sie RAC-Datenbanken von jedem Knoten im Cluster wiederherstellen.

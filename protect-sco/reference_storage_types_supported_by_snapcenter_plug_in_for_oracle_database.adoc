@@ -1,0 +1,79 @@
+---
+permalink: protect-sco/reference_storage_types_supported_by_snapcenter_plug_in_for_oracle_database.html 
+sidebar: sidebar 
+keywords: storage types, iSCSI, NFS, RDM, VMDK, NFS, LVM, ASM, SAN filesystem 
+summary: SnapCenter unterstützt zahlreiche Storage-Typen sowohl auf physischen als auch auf Virtual Machines. Sie müssen die Unterstützung Ihres Speichertyps überprüfen, bevor Sie das SnapCenter Plug-ins Paket für Linux oder SnapCenter Plug-ins Package für AIX installieren. 
+---
+= Von Plug-in für Oracle Database unterstützte Storage-Typen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter unterstützt zahlreiche Storage-Typen sowohl auf physischen als auch auf Virtual Machines. Sie müssen die Unterstützung Ihres Speichertyps überprüfen, bevor Sie das SnapCenter Plug-ins Paket für Linux oder SnapCenter Plug-ins Package für AIX installieren.
+
+SnapCenter unterstützt Storage-Bereitstellung für Linux und AIX nicht.
+
+
+
+== Storage-Typen unterstützt auf Linux
+
+In der folgenden Tabelle sind die unter Linux unterstützten Speichertypen aufgeführt.
+
+|===
+| Maschine | Storage-Typ 
+
+
+ a| 
+Physischer Server
+ a| 
+* FC-verbundene LUNs
+* ISCSI-verbundene LUNs
+* Volumes mit NFS-Anbindung
+
+
+
+
+ a| 
+VMware ESXi
+ a| 
+* RDM-LUNs, die über ein FC- oder iSCSI-ESXi HBASCAning der Host Bus Adapter (HBAs) verbunden sind, können viel Zeit in Anspruch nehmen, da SnapCenter alle im Host vorhandenen Host-Bus-Adapter scannt.
++
+Sie können die Datei *LinuxConfig.pm* unter _/opt/NetApp/snapcenter/spl/Plugins/scu/scucore/modules/SCU/Config_ bearbeiten, um den Wert des *SCSI_HOSTS_OPTIMIZED_RECAN* Parameters auf 1 zu setzen, um nur die in HBA_DRIVER_NAMES aufgeführten HBAs erneut zu scannen.
+
+* ISCSI-LUNs, die direkt über den iSCSI-Initiator mit dem Gastsystem verbunden sind
+* VMDKs auf VMFS oder NFS-Datastores
+* NFS-Volumes sind direkt mit dem Gastbetriebssystem verbunden
+
+
+|===
+
+
+== Storage Types supported auf AIX
+
+In der folgenden Tabelle sind die auf AIX unterstützten Storage-Typen aufgeführt.
+
+|===
+| Maschine | Storage-Typ 
+
+
+ a| 
+Physischer Server
+ a| 
+* FC-connected und iSCSI-Connected LUNs.
++
+In einer SAN-Umgebung werden ASM, LVM und SAN-Dateisysteme unterstützt.
+
++
+
+NOTE: NFS auf AIX und Dateisystem wird nicht unterstützt.
+
+* Erweitertes Journaled File System (JFS2)
++
+Unterstützt die Inline-Protokollierung auf SAN-Dateisystemen und LVM-Layout.
+
+
+
+|===
+Der https://imt.netapp.com/matrix/imt.jsp?components=105283;&solution=1259&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"] Enthält die neuesten Informationen zu den gewünschten Versionen.

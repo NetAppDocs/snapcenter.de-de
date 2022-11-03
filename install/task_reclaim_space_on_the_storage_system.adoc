@@ -1,0 +1,44 @@
+---
+permalink: install/task_reclaim_space_on_the_storage_system.html 
+sidebar: sidebar 
+keywords: space 
+summary: Obwohl NTFS den verfügbaren Speicherplatz auf einer LUN verfolgt, wenn Dateien gelöscht oder geändert werden, werden die neuen Informationen nicht dem Storage-System gemeldet. Sie können das PowerShell Cmdlet zur Speicherplatzrückgewinnung auf dem Plug-in für Windows Host ausführen, um sicherzustellen, dass neu freigegebene Blöcke im Storage als verfügbar markiert werden. 
+---
+= Rückgewinnung von Speicherplatz im Storage-System
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Obwohl NTFS den verfügbaren Speicherplatz auf einer LUN verfolgt, wenn Dateien gelöscht oder geändert werden, werden die neuen Informationen nicht dem Storage-System gemeldet. Sie können das PowerShell Cmdlet zur Speicherplatzrückgewinnung auf dem Plug-in für Windows Host ausführen, um sicherzustellen, dass neu freigegebene Blöcke im Storage als verfügbar markiert werden.
+
+Wenn Sie das Cmdlet auf einem Remote Plug-in-Host ausführen, müssen Sie das Cmdlet "SnapCenterOpen-SMConnection" ausführen, um eine Verbindung zum SnapCenter Server zu öffnen.
+
+*Was Sie brauchen*
+
+* Sie müssen sicherstellen, dass der Prozess zur Rückgewinnung von Speicherplatz abgeschlossen wurde, bevor Sie eine Wiederherstellung durchführen.
+* Wenn die LUN von Hosts in einem Windows-Server-Failover-Cluster gemeinsam genutzt wird, müssen Sie Speicherplatz auf dem Host, der die Cluster-Gruppe besitzt, freigeben.
+* Um eine optimale Storage-Performance zu erzielen, sollten Sie so oft wie möglich eine Platzreklamation durchführen.
++
+Stellen Sie sicher, dass das gesamte NTFS-Dateisystem gescannt wurde.
+
+
+
+*Über diese Aufgabe*
+
+* Die Rückgewinnung von Speicherplatz ist zeitaufwändig und CPU-intensiv. Daher ist es normalerweise am besten, wenn die Auslastung des Storage-Systems und des Windows-Hosts niedrig ist.
+* Die Speicherplatzrückgewinnung beansprucht fast allen verfügbaren Speicherplatz, nicht aber 100 Prozent.
+* Sie sollten die Festplattendefragmentierung nicht gleichzeitig ausführen, da Sie Speicherplatz einsparen.
++
+Dadurch kann der Rückgewinnungsprozess verlangsamt werden.
+
+
+
+*Schritt*
+
+Geben Sie an der PowerShell-Eingabeaufforderung des Anwendungsservers den folgenden Befehl ein:
+
+`Invoke-SdHostVolumeSpaceReclaim -Path drive_path`
+
+Drive_Path ist der der der LUN zugeordnete Laufwerkpfad.

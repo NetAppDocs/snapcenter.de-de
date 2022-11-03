@@ -1,0 +1,120 @@
+---
+permalink: install/concept_create_and_manage_igroups.html 
+sidebar: sidebar 
+keywords: igroup 
+summary: Sie erstellen Initiatorgruppen, um anzugeben, welche Hosts auf eine bestimmte LUN im Storage-System zugreifen können. Sie können SnapCenter eine Initiatorgruppe auf einem Windows Host erstellen, umbenennen, ändern oder löschen. 
+---
+= Erstellen und Verwalten von Initiatorgruppen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie erstellen Initiatorgruppen, um anzugeben, welche Hosts auf eine bestimmte LUN im Storage-System zugreifen können. Sie können SnapCenter eine Initiatorgruppe auf einem Windows Host erstellen, umbenennen, ändern oder löschen.
+
+
+
+== Erstellen einer Initiatorgruppe
+
+Sie können SnapCenter zum Erstellen einer Initiatorgruppe auf einem Windows Host verwenden. Die Initiatorgruppe ist im Assistenten „Festplatte erstellen“ oder „Festplatte verbinden“ verfügbar, wenn Sie eine LUN zuordnen.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Hosts*.
+. Klicken Sie auf der Host-Seite auf *iGroup*.
+. Klicken Sie auf der Seite Initiatorgruppen auf *Neu*.
+. Definieren Sie im Dialogfeld Initiatorgruppe erstellen die Initiatorgruppe:
++
+|===
+| In diesem Feld... | Tun Sie das... 
+
+
+ a| 
+Storage-System
+ a| 
+Wählen Sie die SVM für die LUN aus, die Sie der Initiatorgruppe zuordnen möchten.
+
+
+
+ a| 
+Host
+ a| 
+Wählen Sie den Host aus, auf dem Sie die Initiatorgruppe erstellen möchten.
+
+
+
+ a| 
+Initiatorgruppe
+ a| 
+Geben Sie den Namen der Initiatorgruppe ein.
+
+
+
+ a| 
+Initiatoren
+ a| 
+Wählen Sie den Initiator aus.
+
+
+
+ a| 
+Typ
+ a| 
+Wählen Sie den Initiatortyp, die iSCSI, FCP oder die Kombination aus (FCP und iSCSI) aus.
+
+|===
+. Wenn Sie mit Ihren Einträgen zufrieden sind, klicken Sie auf *OK*.
++
+SnapCenter erstellt die Initiatorgruppe auf dem Storage-System.
+
+
+
+
+
+== Benennen Sie eine Initiatorgruppe um
+
+Sie können eine vorhandene Initiatorgruppe mit SnapCenter umbenennen.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Hosts*.
+. Klicken Sie auf der Host-Seite auf *iGroup*.
+. Klicken Sie auf der Seite Initiatorgruppen im Feld *Storage Virtual Machine* auf, um eine Liste der verfügbaren SVMs anzuzeigen, und wählen Sie dann die SVM für die Initiatorgruppe aus, die Sie umbenennen möchten.
+. Wählen Sie in der Liste der Initiatorgruppen für die SVM die Initiatorgruppe aus, die Sie umbenennen möchten, und klicken Sie auf *Umbenennen*.
+. Geben Sie im Dialogfeld Initiatorgruppe umbenennen den neuen Namen für die Initiatorgruppe ein und klicken Sie auf *Umbenennen*.
+
+
+
+
+== Ändern einer Initiatorgruppe
+
+Sie können mit SnapCenter Initiatoren zu einer vorhandenen Initiatorgruppe hinzufügen. Beim Erstellen einer Initiatorgruppe können Sie nur einen Host hinzufügen. Wenn Sie eine Initiatorgruppe für ein Cluster erstellen möchten, können Sie die Initiatorgruppe ändern, um dieser Initiatorgruppe weitere Nodes hinzuzufügen.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Hosts*.
+. Klicken Sie auf der Host-Seite auf *iGroup*.
+. Klicken Sie auf der Seite Initiatorgruppen im Feld *Storage Virtual Machine* auf, um eine Dropdown-Liste der verfügbaren SVMs anzuzeigen. Wählen Sie dann die SVM für die Initiatorgruppe aus, die Sie ändern möchten.
+. Wählen Sie in der Liste der Initiatorgruppen eine Initiatorgruppe aus und klicken Sie auf *Initiator zur Initiatorgruppe hinzufügen*.
+. Wählen Sie einen Host aus.
+. Wählen Sie die Initiatoren aus und klicken Sie auf *OK*.
+
+
+
+
+== Löschen einer Initiatorgruppe
+
+Sie können eine Initiatorgruppe mit SnapCenter löschen, wenn Sie sie nicht mehr benötigen.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Hosts*.
+. Klicken Sie auf der Host-Seite auf *iGroup*.
+. Klicken Sie auf der Seite Initiatorgruppen im Feld *Storage Virtual Machine* auf, um eine Dropdown-Liste der verfügbaren SVMs anzuzeigen. Wählen Sie dann die SVM für die Initiatorgruppe aus, die Sie löschen möchten.
+. Wählen Sie in der Liste der Initiatorgruppen für die SVM die Initiatorgruppe aus, die Sie löschen möchten, und klicken Sie auf *Löschen*.
+. Klicken Sie im Dialogfeld Initiatorgruppe löschen auf *OK*.
++
+SnapCenter löscht die Initiatorgruppe.
+
+

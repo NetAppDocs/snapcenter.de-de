@@ -1,0 +1,133 @@
+---
+permalink: install/reference_features_enabled_on_your_windows_host_during_installation.html 
+sidebar: sidebar 
+keywords:  
+summary: Das SnapCenter-Serverinstallationsprogramm aktiviert die Windows-Funktionen und -Rollen auf Ihrem Windows-Host während der Installation. Diese sind möglicherweise für die Fehlerbehebung und die Wartung des Host-Systems interessant. 
+---
+= Während der Installation auf Ihrem Windows-Host aktivierte Funktionen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das SnapCenter-Serverinstallationsprogramm aktiviert die Windows-Funktionen und -Rollen auf Ihrem Windows-Host während der Installation. Diese sind möglicherweise für die Fehlerbehebung und die Wartung des Host-Systems interessant.
+
+|===
+| Kategorie | Merkmal 
+
+
+ a| 
+Web-Server
+ a| 
+* Internet Information Services
+* World Wide Web Services
+* Allgemeine HTTP-Funktionen
++
+** Standarddokument
+** Verzeichnisbrowsing
+** HTTP-Fehler
+** HTTP-Umleitung
+** Statischer Inhalt
+** WebDAV-Publishing
+
+
+* Systemzustand und Diagnose
++
+** Benutzerdefinierte Protokollierung
+** HTTP-Protokollierung
+** Protokollierungs-Tools
+** Monitor Anfordern
+** Nachzeichnen
+
+
+* Performance-Funktionen
++
+** Statische Inhaltskomprimierung
+
+
+* Sicherheit
++
+** IP-Sicherheit
+** Grundlegende Authentifizierung
+** Zentralisierte Unterstützung von SSL-Zertifikaten
+** Authentifizierung Für Die Clientzertifikatzuordnung
+** Authentifizierung für die IIS-Clientzertifikatzuordnung
+** IP- und Domänenbeschränkungen
+** Anforderungsfilterung
+** URL-Autorisierung
+** Windows Authentifizierung
+
+
+* Funktionen Zur Applikationsentwicklung
++
+** .NET Extensibility 4.5
+** Initialisierung Der Applikation
+** ASP.NET 4.7.2
+** Server-Seitige Umfasst
+** WebSocket-Protokoll
+
+
+* Management Tools
++
+** IIS-Verwaltungskonsole
+
+
+
+
+
+
+ a| 
+IIS-Verwaltungsskripte und -Tools
+ a| 
+* IIS-Verwaltungsdienst
+* Web-Management-Tools
+
+
+
+
+ a| 
++.NET Framework 4.7.2 – Funktionen+
+ a| 
+* .NET Framework 4.7.2
+* ASP.NET 4.7.2
+* Windows Communication Foundation (WCF) HTTP Activation45
++
+** TCP-Aktivierung
+** HTTP-Aktivierung
+** Aktivierung von Message Queuing (MSMQ)
+
+
+
+
+Informationen zur Fehlerbehebung von .NET finden Sie unter: link:..https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_upgrade_or_install_fails_with_%22This_KB_is_not_related_to_the_OS%22["Das Upgrade oder die Installation von SnapCenter schlägt bei älteren Systemen, die keine Internetverbindung haben, fehl."]
+
+
+
+ a| 
+Message Queuing
+ a| 
+* Message Queuing Services
++
+
+NOTE: Stellen Sie sicher, dass keine anderen Anwendungen den MSMQ-Dienst verwenden, den SnapCenter erstellt und verwaltet.
+
+* MSMQ-Server
+
+
+
+
+ a| 
+Windows-Prozess-Aktivierungsdienst
+ a| 
+* Prozessmodell
+
+
+
+
+ a| 
+Konfigurations-APIs
+ a| 
+Alle
+
+|===

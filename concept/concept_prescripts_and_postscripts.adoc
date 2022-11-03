@@ -1,0 +1,81 @@
+---
+permalink: concept/concept_prescripts_and_postscripts.html 
+sidebar: sidebar 
+keywords: prescript, postscript, script path, script timeout, script types supported 
+summary: Im Rahmen Ihrer Datensicherungsabläufe können Sie benutzerdefinierte Prescripts und Postskripte verwenden. Diese Skripte ermöglichen die Automatisierung entweder vor oder nach Ihrem Datensicherungsauftrag. Sie können z. B. ein Skript einschließen, das Sie automatisch über Fehler oder Warnungen bei Datenschutzaufstellungsfehlern benachrichtigt. Bevor Sie Ihre Prescripts und Postscripts einrichten, sollten Sie einige der Anforderungen zur Erstellung dieser Skripte kennen. 
+---
+= Vorschriften und Postskripte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Rahmen Ihrer Datensicherungsabläufe können Sie benutzerdefinierte Prescripts und Postskripte verwenden. Diese Skripte ermöglichen die Automatisierung entweder vor oder nach Ihrem Datensicherungsauftrag. Sie können z. B. ein Skript einschließen, das Sie automatisch über Fehler oder Warnungen bei Datenschutzaufstellungsfehlern benachrichtigt. Bevor Sie Ihre Prescripts und Postscripts einrichten, sollten Sie einige der Anforderungen zur Erstellung dieser Skripte kennen.
+
+
+
+== Unterstützte Skripttypen
+
+Die folgenden Skripttypen werden für Windows unterstützt:
+
+* Batch-Dateien
+* PowerShell Skripte
+* Perl-Skripte
+
+
+Für UNIX werden die folgenden Skripttypen unterstützt:
+
+* Perl-Skripte
+* Python-Skripte
+* Shell-Skripte
++
+
+NOTE: Zusammen mit Standard-Bash-Shell werden auch andere Shells wie sh-Shell, k-shell und c-shell unterstützt.
+
+
+
+
+
+== Skriptpfad
+
+Alle im Rahmen des SnapCenter Betriebs ausgeführten Prescripts und Postskripte auf nicht virtualisierten und virtualisierten Storage-Systemen werden auf dem Plug-in Host ausgeführt.
+
+* Die Windows-Skripte sollten sich auf dem Plug-in-Host befinden.
+
+
+
+NOTE: Der Pfad für Prescripts oder Postscripts darf keine Laufwerke oder Shares enthalten. Der Pfad sollte relativ zum SCRIPTS_PATH sein.
+
+* Die UNIX-Skripte sollten sich auf dem Plug-in-Host befinden.
+
+
+
+NOTE: Der Skriptpfad wird zum Zeitpunkt der Ausführung validiert.
+
+
+
+== Angeben von Skripten
+
+Skripte werden in den Backup-Richtlinien angegeben. Wenn ein Sicherungsauftrag gestartet wird, ordnet die Richtlinie das Skript automatisch den gesicherten Ressourcen zu. Wenn Sie eine Sicherungsrichtlinie erstellen, können Sie die Vorschrift- und die Postscript-Argumente angeben.
+
+Nur unter Windows können Sie mehrere Skripte angeben. Sie sollten nach jedem Skriptpfad *Enter* drücken, um jedes Skript in einer eigenen Zeile aufzulisten. Semikolons (;) sind nicht zulässig. Sie können mehrere Vorschriften und mehrere Postskripte angeben. Ein einziges Skript kann sowohl als Vorskript als auch als Postscript codiert werden und kann andere Skripte aufrufen.
+
+
+NOTE: Für UNIX können Sie nicht mehrere Skripte angeben.
+
+
+
+== Skript-Timeouts
+
+Für Windows ist die Zeitüberschreitung auf 15 Minuten eingestellt und kann nicht geändert werden.
+
+Für UNIX ist die Zeitüberschreitung standardmäßig auf 60 Sekunden festgelegt. Sie können den Zeitüberschreitungswert ändern.
+
+
+
+== Skriptausgabe
+
+Das Standardverzeichnis für die Windows-Druckschriften und Postscripts-Ausgabedateien ist Windows\System32.
+
+Es gibt keinen Standardspeicherort für UNIX Prescripts und Postscripts. Sie können die Ausgabedatei an einen beliebigen bevorzugten Speicherort weiterleiten.

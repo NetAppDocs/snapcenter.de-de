@@ -1,0 +1,192 @@
+= 
+:allow-uri-read: 
+
+
+Die erforderlichen Mindestberechtigungen für ONTAP variieren je nach SnapCenter Plug-ins, die Sie zur Datensicherung verwenden.
+
+|===
+| Befehle für All-Access: Mindestberechtigungen erforderlich für ONTAP 8.3.0 und höher 
+
+
+ a| 
+Event Generate-AutoSupport-log
+
+
+
+ a| 
+Job-Verlauf wird angezeigt
+
+Job beenden
+
+
+
+ a| 
+lun
+
+lun erstellen
+
+lun löschen
+
+lun Initiatorgruppe hinzufügen
+
+lun-Initiatorgruppe wird erstellt
+
+lun-Initiatorgruppe löschen
+
+lun igroup umbenennen
+
+lun-Initiatorgruppe wird angezeigt
+
+lun Mapping Add-Reporting-Nodes
+
+lun-Zuordnung erstellen
+
+lun-Zuordnung löschen
+
+lun Mapping remove-Reporting-Nodes
+
+lun-Zuordnung wird angezeigt
+
+lun ändern
+
+lun-Verschiebung in Volume
+
+lun ist offline
+
+lun ist online
+
+lun Persistent-Reservierung löschen
+
+die lun-Größe wird geändert
+
+lun seriell
+
+lun anzeigen
+
+
+
+ a| 
+SnapMirror Richtlinie Add-Rule
+
+änderungsregel für snapmirror
+
+Remove-Rule für snapmirror-Richtlinie
+
+snapmirror-Richtlinie anzeigen
+
+snapmirror Wiederherstellung
+
+snapmirror zeigen
+
+snapmirror Vorgeschichte
+
+snapmirror Update
+
+snapmirror Update-ls-Set
+
+snapmirror Listenziele
+
+
+
+ a| 
+Version
+
+
+
+ a| 
+Erstellung von Volume-Klonen
+
+Klon von Volume anzeigen
+
+Split-Start des Volume-Klons
+
+Split-Stopp für Volume-Klon
+
+Volume erstellen
+
+Volume destroy
+
+Erstellen eines Volume-Dateiklonen
+
+Show-Disk-Nutzung für Volume-Dateien
+
+Volume ist offline
+
+Das Volume ist online
+
+Volume-Änderung
+
+Erstellen von Volume-qtree
+
+Volume qtree löschen
+
+Änderung des Volume-qtree
+
+Volume-qtree anzeigen
+
+Volume-Einschränkung
+
+Volumen anzeigen
+
+Erstellen von Volume-Snapshots
+
+Volume Snapshot löschen
+
+Ändern des Volume-Snapshots
+
+Umbenennung von Volume-Snapshots
+
+Wiederherstellung von Volume Snapshots
+
+Restore-Datei für Volume Snapshots
+
+Volume-Snapshot werden angezeigt
+
+Volume-Aufhängung nicht verfügbar
+
+
+
+ a| 
+cifs von vserver
+
+erstellung von cifs-Freigaben von vserver
+
+cifs-Freigabe von vserver: Löschen
+
+vserver cifs shadowcopy anzeigen
+
+cifs-Freigabe von vserver wird angezeigt
+
+vserver cifs zeigen
+
+vserver Exportrichtlinie
+
+Erstellung von vserver Exportrichtlinien
+
+vserver: Löschen der Exportrichtlinie
+
+Erstellung von vserver Export-Policy-Regel
+
+vserver: Export-Policy-Regel anzeigen
+
+vserver Export-Policy wird angezeigt
+
+vserver iscsi
+
+vserver iscsi-Verbindung wird angezeigt
+
+vserver zeigen
+
+|===
+|===
+| Schreibgeschützter Befehl: Mindestberechtigungen für ONTAP 8.3.0 und höher erforderlich 
+
+
+ a| 
+Netzwerkschnittstelle
+
+Netzwerkschnittstelle wird angezeigt
+
+vserver
+
+|===

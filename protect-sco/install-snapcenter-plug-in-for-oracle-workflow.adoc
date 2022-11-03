@@ -1,0 +1,16 @@
+---
+permalink: protect-sco/install-snapcenter-plug-in-for-oracle-workflow.html 
+sidebar: sidebar 
+keywords: installing 
+summary: Sie sollten das SnapCenter Plug-in für Oracle Database installieren und einrichten, wenn Sie Oracle Datenbanken schützen möchten. 
+---
+= Installations-Workflow des SnapCenter Plug-ins für Oracle Database
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie sollten das SnapCenter Plug-in für Oracle Database installieren und einrichten, wenn Sie Oracle Datenbanken schützen möchten.
+
+image::../media/sco_install_configure_workflow.png[sco-Installation Workflow konfigurieren]

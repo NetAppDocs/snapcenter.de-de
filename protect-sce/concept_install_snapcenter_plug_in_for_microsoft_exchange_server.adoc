@@ -1,0 +1,16 @@
+---
+permalink: protect-sce/concept_install_snapcenter_plug_in_for_microsoft_exchange_server.html 
+sidebar: sidebar 
+keywords: installing 
+summary: Sie sollten das SnapCenter Plug-in für Microsoft Exchange Server installieren und einrichten, wenn Sie Exchange-Datenbanken schützen möchten. 
+---
+= Installations-Workflow des SnapCenter Plug-ins für Microsoft Exchange Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie sollten das SnapCenter Plug-in für Microsoft Exchange Server installieren und einrichten, wenn Sie Exchange-Datenbanken schützen möchten.
+
+image::../media/sce_install_configure_workflow.gif[sce-Installation: Konfigurieren Sie den Workflow]

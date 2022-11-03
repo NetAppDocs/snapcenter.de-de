@@ -1,0 +1,66 @@
+= 
+:allow-uri-read: 
+
+
+Mit Windows Server 2012 oder höher können Sie ein Group Managed Service Account (gMSA) erstellen, das über ein verwaltetes Domain-Konto eine automatisierte Verwaltung von Service-Konten ermöglicht.
+
+*Was Sie brauchen*
+
+* Sie sollten einen Windows Server 2012 oder höher Domänencontroller haben.
+* Sie sollten einen Windows Server 2012 oder höher-Host haben, der Mitglied der Domain ist.
+
+
+*Schritte*
+
+. Erstellen Sie einen KDS-Stammschlüssel, um eindeutige Passwörter für jedes Objekt in Ihrem gMSA zu generieren.
+. Führen Sie für jede Domäne den folgenden Befehl vom Windows Domain Controller aus: Add-KDSRootKey -EffectiveImmediately
+. Erstellen und Konfigurieren des gMSA:
++
+.. Erstellen Sie ein Benutzerkonto in folgendem Format:
++
+ domainName\accountName$
+.. Fügen Sie der Gruppe Computerobjekte hinzu.
+.. Verwenden Sie die gerade erstellte Benutzergruppe, um das gMSA zu erstellen.
++
+Beispiel:
+
++
+ New-ADServiceAccount -name <ServiceAccountName> -DNSHostName <fqdn> -PrincipalsAllowedToRetrieveManagedPassword <group> -ServicePrincipalNames <SPN1,SPN2,…>
+.. Laufen `Get-ADServiceAccount` Befehl zum Überprüfen des Dienstkontos.
+
+
+. Konfigurieren Sie das gMSA auf Ihren Hosts:
++
+.. Aktivieren Sie das Active Directory-Modul für Windows PowerShell auf dem Host, auf dem Sie das gMSA-Konto verwenden möchten.
++
+Um dies zu tun, führen Sie den folgenden Befehl aus PowerShell:
+
++
+[listing]
+----
+PS C:\> Get-WindowsFeature AD-Domain-Services
+
+Display Name                           Name                Install State
+------------                           ----                -------------
+[ ] Active Directory Domain Services   AD-Domain-Services  Available
+
+
+PS C:\> Install-WindowsFeature AD-DOMAIN-SERVICES
+
+Success Restart Needed Exit Code      Feature Result
+------- -------------- ---------      --------------
+True    No             Success        {Active Directory Domain Services, Active ...
+WARNING: Windows automatic updating is not enabled. To ensure that your newly-installed role or feature is
+automatically updated, turn on Windows Update.
+----
+.. Starten Sie den Host neu.
+.. Installieren Sie das gMSA auf Ihrem Host, indem Sie den folgenden Befehl über die PowerShell-Eingabeaufforderung ausführen: `Install-AdServiceAccount <gMSA>`
+.. Überprüfen Sie Ihr gMSA-Konto, indem Sie folgenden Befehl ausführen: `Test-AdServiceAccount <gMSA>`
+
+
+. Weisen Sie dem konfigurierten gMSA auf dem Host die Administratorrechte zu.
+. Fügen Sie den Windows-Host hinzu, indem Sie das konfigurierte gMSA-Konto im SnapCenter-Server angeben.
++
+SnapCenter-Server installiert die ausgewählten Plug-ins auf dem Host, und das angegebene gMSA wird während der Plug-in-Installation als Service-Login-Konto verwendet.
+
+

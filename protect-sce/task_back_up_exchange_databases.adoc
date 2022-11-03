@@ -1,0 +1,119 @@
+---
+permalink: protect-sce/task_back_up_exchange_databases.html 
+sidebar: sidebar 
+keywords: SnapCenter plug-in for Exchange Server 
+summary: Wenn eine Datenbank nicht Teil einer Ressourcengruppe ist, können Sie die Datenbank oder die Datenbankverfügbarkeitsgruppe auf der Seite Ressourcen sichern. 
+---
+= Backup von Exchange Datenbanken
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn eine Datenbank nicht Teil einer Ressourcengruppe ist, können Sie die Datenbank oder die Datenbankverfügbarkeitsgruppe auf der Seite Ressourcen sichern.
+
+*Was Sie brauchen*
+
+* Sie müssen eine Sicherungsrichtlinie erstellt haben.
+* Sie müssen das Aggregat, das vom Backup-Vorgang verwendet wird, der SVM zugewiesen haben, die von der Datenbank verwendet wird.
+* Wenn Sie eine Ressource mit einer SnapMirror Beziehung mit einem sekundären Storage sichern möchten, sollte die dem Storage-Benutzer zugewiesene Rolle die Berechtigung „`snapmirror all`“ enthalten. Wenn Sie jedoch die Rolle „`vsadmin`“ verwenden, ist die Berechtigung „`snapmirror all`“ nicht erforderlich.
+* Wenn Sie ein Backup einer Datenbank oder einer Database Availability Group durchführen möchten, die über eine aktiv/Passiv-Datenbankkopie auf NetApp Storage und Storage anderer Anbieter verfügt, Und Sie haben *aktive Kopien sichern* oder *Sicherungskopien auf Servern ausgewählt, die während der Erstellung von Sicherungsaufträgen ausgewählt werden sollen* Option in der Richtlinie wird der Sicherungsauftrag in den Warnstatus versetzt. Das Backup führt erfolgreich eine aktive/passive Datenbankkopie auf NetApp Storage durch und ein Backup schlägt fehl bei der aktiv/passiven Datenbankkopie auf Storage anderer Anbieter.
++
+|===
+
+
+| *Best Practice:* führen Sie keine Backups aktiver und passiver Datenbanken gleichzeitig aus. Es kann zu einem Wettlauf kommen, und eine der Sicherungen schlägt möglicherweise fehl. 
+|===
+
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das *Microsoft Exchange Server Plug-in* aus der Liste aus.
+. Wählen Sie auf der Seite Ressourcen entweder *Datenbank* oder *Datenbank-Verfügbarkeitsgruppe* aus der Liste *Ansicht* aus.
++
+Auf der Seite „Ressourcen“ werden die angezeigt image:../media/not_supported_icon.png[""] Das Symbol gibt an, dass sich die Datenbank auf Storage anderer Anbieter befindet.
+
++
+
+NOTE: Wenn sich in einer DAG eine aktive Datenbankkopie auf einem Storage anderer Anbieter befindet und mindestens eine passive Datenbankkopie auf einem NetApp Storage gespeichert ist, können Sie die Datenbank schützen.
+
++
+Klicken Sie Auf *image:../media/filter_icon.gif[""]*, und wählen Sie dann den Host-Namen und den Datenbanktyp, um die Ressourcen zu filtern. Sie können dann auf * klickenimage:../media/filter_icon.gif[""]* Zum Schließen des Filterfensters.
+
++
+** Wenn Sie eine Datenbank sichern möchten, klicken Sie auf den Datenbanknamen.
++
+... Wenn die Topologieansicht angezeigt wird, klicken Sie auf *schützen*.
+... Wenn der Assistent „Datenbank – Ressourcen schützen“ angezeigt wird, fahren Sie mit Schritt 3 fort.
+
+
+** Wenn Sie eine Datenbankverfügbarkeitsgruppe sichern möchten, klicken Sie auf den Namen der Datenbankverfügbarkeitsgruppe.
+
+
+. Wenn Sie einen Namen für eine benutzerdefinierte Snapshot Kopie angeben möchten, aktivieren Sie auf der Seite Ressourcen das Kontrollkästchen *Custom Name Format for Snapshot copy* verwenden und geben Sie dann ein benutzerdefiniertes Namensformat ein, das Sie für den Namen der Snapshot Kopie verwenden möchten.
++
+Beispiel: _Custext_Policy_hostname_ oder _Resource_hostname_. Standardmäßig wird ein Zeitstempel an den Namen der Snapshot Kopie angehängt.
+
+. Führen Sie auf der Seite Richtlinien die folgenden Schritte aus:
++
+.. Wählen Sie eine oder mehrere Richtlinien aus der Dropdown-Liste aus.
++
+
+NOTE: Sie können eine Richtlinie auch erstellen, indem Sie auf * klickenimage:../media/add_policy_from_resourcegroup.gif[""]*.
+
++
+
+NOTE: Wenn eine Richtlinie die Option *Sicherungskopien auf Servern enthält, die bei der Erstellung von Sicherungsjobs* ausgewählt werden sollen, wird eine Serverauswahloption angezeigt, die einen oder mehrere Server auswählt. Die Serverauswahl-Option listet nur den Server auf, auf dem sich die ausgewählte Datenbank auf einem NetApp Storage befindet.
+
+
+
++
+Im Abschnitt „Zeitpläne für ausgewählte Richtlinien konfigurieren“ werden die ausgewählten Richtlinien aufgelistet.
+
++
+.. Klicken Sie Auf *image:../media/add_policy_from_resourcegroup.gif[""]* In der Spalte Zeitplan konfigurieren für die Richtlinie, für die Sie einen Zeitplan konfigurieren möchten.
+.. Konfigurieren Sie im Fenster Add Schedules for Policy_Name_ den Zeitplan, und klicken Sie dann auf *OK*.
++
+Dabei ist _Policy_Name_ der Name der von Ihnen ausgewählten Richtlinie.
+
++
+Die konfigurierten Zeitpläne sind in der Spalte angewendete Zeitpläne aufgeführt.
+
+
+
+. Wählen Sie auf der Benachrichtigungsseite aus der Dropdown-Liste *E-Mail-Präferenz* die Szenarien aus, in denen Sie die E-Mails versenden möchten.
++
+Außerdem müssen Sie die E-Mail-Adressen für Absender und Empfänger sowie den Betreff der E-Mail angeben. Wenn Sie den Bericht des auf der Ressource durchgeführten Sicherungsvorgangs anhängen möchten, wählen Sie *Job-Bericht anhängen*.
+
++
+
+NOTE: Für eine E-Mail-Benachrichtigung müssen Sie die SMTP-Serverdetails entweder mit der GUI oder mit dem PowerShell-Befehlssatz Set-SmtpServer angegeben haben.
+
+. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
++
+Die Seite der Datenbanktopologie wird angezeigt.
+
+. Klicken Sie auf *Jetzt sichern*.
+. Führen Sie auf der Seite Backup die folgenden Schritte aus:
++
+.. Wenn Sie mehrere Richtlinien auf die Ressource angewendet haben, wählen Sie aus der Dropdown-Liste *Richtlinie* die Richtlinie aus, die Sie für das Backup verwenden möchten.
++
+Wenn die für das On-Demand-Backup ausgewählte Richtlinie einem Backup-Zeitplan zugeordnet ist, werden die On-Demand-Backups auf Basis der für den Zeitplantyp festgelegten Aufbewahrungseinstellungen beibehalten.
+
+.. Klicken Sie Auf *Backup*.
+
+
+. Überwachen Sie den Fortschritt des Backups, indem Sie im Aktivitätsbereich unten auf der Seite auf den Job doppelklicken, um die Seite „Jobdetails“ anzuzeigen.
++
+** In MetroCluster-Konfigurationen kann SnapCenter nach einem Failover möglicherweise keine Sicherungsbeziehung erkennen.
++
+Weitere Informationen finden Sie unter: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["SnapMirror oder SnapVault-Beziehung kann nach MetroCluster Failover nicht erkannt werden"^]
+
+** Wenn Sie Anwendungsdaten auf VMDKs sichern und die Java Heap-Größe für das SnapCenter-Plug-in für VMware vSphere nicht groß genug ist, kann die Sicherung fehlschlagen.
++
+Um die Java-Heap-Größe zu erhöhen, suchen Sie nach der Skriptdatei _/opt/netapp/init_scripts/scvservice_. In diesem Skript startet der Befehl _do_Start method_ den SnapCenter VMware Plug-in-Dienst. Aktualisieren Sie diesen Befehl auf Folgendes: _Java -jar -Xmx8192M -Xms4096M_
+
+
+
+

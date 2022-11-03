@@ -1,0 +1,82 @@
+---
+permalink: protect-scw/task_define_a_backup_strategy_for_windows_file_systems.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Wenn Sie eine Backup-Strategie definieren, bevor Sie Ihre Backups erstellen, erhalten Sie die Backups, die Sie benötigen, um Ihre File-Systeme erfolgreich wiederherzustellen oder zu klonen. Ihr Service Level Agreement (SLA), Recovery Time Objective (RTO) und Recovery Point Objective (RPO) bestimmen Ihre Backup-Strategie weitestgehend.' 
+---
+= Definieren einer Backup-Strategie für Windows File-Systeme
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie eine Backup-Strategie definieren, bevor Sie Ihre Backups erstellen, erhalten Sie die Backups, die Sie benötigen, um Ihre File-Systeme erfolgreich wiederherzustellen oder zu klonen. Ihr Service Level Agreement (SLA), Recovery Time Objective (RTO) und Recovery Point Objective (RPO) bestimmen Ihre Backup-Strategie weitestgehend.
+
+Ein SLA definiert das erwartete Service-Level und behandelt viele Service-bezogene Probleme, einschließlich Verfügbarkeit und Performance des Service. Bei der RTO handelt es sich um die Zeit, die ein Geschäftsprozess nach einer Serviceunterbrechung wiederhergestellt werden muss. Der Recovery-Zeitpunkt definiert die Strategie für das Alter der Dateien, die aus dem Backup-Storage wiederhergestellt werden müssen, damit regelmäßige Betriebsabläufe nach einem Ausfall fortgesetzt werden können. SLA, RTO und RPO tragen zur Datensicherungsstrategie bei.
+
+
+
+== Backup-Pläne für Windows File-Systeme
+
+Die Sicherungshäufigkeit wird in den Richtlinien angegeben. Ein Backup-Zeitplan wird in der Konfiguration der Ressourcengruppe angegeben. Der wichtigste Faktor bei der Ermittlung der Backup-Häufigkeit oder des Zeitplans ist die Änderungsrate für die Ressource und die Bedeutung der Daten. Sie können eine stark genutzte Ressource unter Umständen jede Stunde sichern, während Sie selten genutzte Ressourcen einmal am Tag sichern können. Weitere Faktoren sind die Bedeutung der Ressource für Ihr Unternehmen, das Service Level Agreement (SLA) und das Recovery Point Objective (RPO).
+
+Ein SLA definiert das erwartete Service-Level und löst zahlreiche Service-bezogene Probleme, einschließlich Verfügbarkeit und Performance des Service. Ein RPO definiert die Strategie für das Alter der Dateien, die aus dem Backup-Storage wiederhergestellt werden müssen, damit die normalen Vorgänge nach einem Ausfall fortgesetzt werden können. SLA und RPO tragen zur Datensicherungsstrategie bei.
+
+Selbst bei einer stark ausgelasteten Ressource ist es nicht mehr als ein oder zwei Mal pro Tag erforderlich, ein komplettes Backup auszuführen.
+
+Backup-Zeitpläne haben zwei Teile:
+
+* Sicherungshäufigkeit
++
+Die Backup-Häufigkeit (wie oft Backups durchgeführt werden sollen), die für einige Plug-ins als _Schedule Type_ bezeichnet wird, ist Teil einer Richtlinienkonfiguration. Sie können beispielsweise die Sicherungshäufigkeit als stündlich, täglich, wöchentlich oder monatlich konfigurieren oder Sie können *Keine* angeben, wodurch die Richtlinie eine reine On-Demand-Richtlinie darstellt. Sie können auf Richtlinien zugreifen, indem Sie auf *Einstellungen* > *Richtlinien* klicken.
+
+* Backup-Pläne
++
+Backup-Zeitpläne (genau, wann Backups durchgeführt werden sollen) sind Teil der Konfiguration einer Ressourcengruppe. Wenn Sie beispielsweise eine Ressourcengruppe haben, die eine Richtlinie für wöchentliche Backups konfiguriert hat, können Sie den Zeitplan so konfigurieren, dass er jeden Donnerstag um 10:00 Uhr gesichert wird. Sie können auf Ressourcengruppenpläne zugreifen, indem Sie auf *Ressourcen* > *Ressourcengruppen* klicken.
+
+
+
+
+
+== Anzahl der für Windows File-Systeme benötigten Backups
+
+Faktoren, die die Anzahl der erforderlichen Backups bestimmen, umfassen die Größe des Windows-Dateisystems, die Anzahl der verwendeten Volumes, die Änderungsrate des Dateisystems und die Service Level Agreement (SLA).
+
+
+
+== Backup Namenskonvention für Windows File-Systeme
+
+Backups von Windows Dateisystemen verwenden die standardmäßige Namenskonvention für Snapshot Kopien. Die standardmäßige Backup-Namenskonvention fügt einen Zeitstempel zu den Namen von Snapshot Kopien hinzu, der Ihnen hilft, zu identifizieren, wann die Kopien erstellt wurden.
+
+Die Snapshot Kopie verwendet die folgende standardmäßige Namenskonvention: Resourcegrovname_hostname_timestamp
+
+Sie sollten Ihre Backup-Ressourcengruppen logisch benennen, wie im folgenden Beispiel:
+
+[listing]
+----
+dts1_mach1x88_03-12-2015_23.17.26
+----
+In diesem Beispiel haben die Syntaxelemente folgende Bedeutungen:
+
+* `dts1` Ist der Name der Ressourcengruppe.
+* `mach1x88` Ist der Host-Name.
+* `03-12-2016_23.17.26` Sind das Datum und der Zeitstempel.
+
+
+Beim Erstellen eines Backups können Sie auch ein beschreibende Tag hinzufügen, um das Backup zu identifizieren. Wenn Sie hingegen eine angepasste Backup-Namenskonvention verwenden möchten, müssen Sie das Backup umbenennen, nachdem der Backup-Vorgang abgeschlossen ist.
+
+
+
+== Optionen zur Backup-Aufbewahrung
+
+Sie können entweder die Anzahl der Tage festlegen, für die Backup-Kopien aufbewahrt werden sollen, oder die Anzahl der Backup-Kopien angeben, die aufbewahrt werden sollen, bis zu einem ONTAP von maximal 255 Kopien. Beispielsweise muss Ihr Unternehmen unter Umständen Backup-Kopien von 10 Tagen oder 130 Backup-Kopien aufbewahren.
+
+Beim Erstellen einer Richtlinie können Sie die Aufbewahrungsoptionen für den Backup-Typ und den Zeitplantyp angeben.
+
+Wenn Sie die SnapMirror Replizierung einrichten, wird die Aufbewahrungsrichtlinie auf dem Ziel-Volume gespiegelt.
+
+SnapCenter löscht die zurückbehaltenen Backups mit Beschriftungen, die dem Zeitplantyp entsprechen. Wenn der Zeitplantyp für die Ressource oder Ressourcengruppe geändert wurde, verbleiben Backups mit dem alten Etikett des Zeitplantyps möglicherweise weiterhin im System.
+
+
+NOTE: Für die langfristige Aufbewahrung von Backup-Kopien sollten Sie SnapVault-Backup verwenden.

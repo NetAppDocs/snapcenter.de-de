@@ -1,0 +1,131 @@
+---
+permalink: protect-scw/task_create_resource_groups_for_windows_file_systems.html 
+sidebar: sidebar 
+keywords: resource groups 
+summary: Eine Ressourcengruppe ist der Container, zu dem Sie mehrere Dateisysteme hinzufügen können, die Sie schützen möchten. Sie müssen auch eine oder mehrere Richtlinien an die Ressourcengruppe anhängen, um den Typ des Datensicherungsauftrags zu definieren, den Sie ausführen möchten, und dann den Backup-Zeitplan festlegen. 
+---
+= Erstellen von Ressourcengruppen für Windows-Dateisysteme
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Eine Ressourcengruppe ist der Container, zu dem Sie mehrere Dateisysteme hinzufügen können, die Sie schützen möchten. Sie müssen auch eine oder mehrere Richtlinien an die Ressourcengruppe anhängen, um den Typ des Datensicherungsauftrags zu definieren, den Sie ausführen möchten, und dann den Backup-Zeitplan festlegen.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Wählen Sie auf der Seite Ressourcen die Option *Dateisysteme* aus der Liste aus.
++
+
+NOTE: Wenn Sie vor Kurzem ein Dateisystem zu SnapCenter hinzugefügt haben, klicken Sie auf *Ressourcen aktualisieren*, um die neu hinzugefügte Ressource anzuzeigen.
+
+. Klicken Sie Auf *Neue Ressourcengruppe*.
+. Gehen Sie auf der Seite Name im Assistenten wie folgt vor:
++
+|===
+| Für dieses Feld... | Tun Sie das... 
+
+
+ a| 
+Name
+ a| 
+Geben Sie den Namen der Ressourcengruppe ein.
+
+
+NOTE: Der Name der Ressourcengruppe darf 250 Zeichen nicht überschreiten.
+
+
+
+ a| 
+Verwenden Sie für Snapshot-Kopie das benutzerdefinierte Namensformat
+ a| 
+Optional: Geben Sie einen Namen und ein Format für die benutzerdefinierte Snapshot Kopie ein.
+
+Beispiel: Custtext_resourcegruppe_Policy_hostname oder resourcegruppe_hostname. Standardmäßig wird ein Zeitstempel an den Namen der Snapshot Kopie angehängt.
+
+
+
+ a| 
+Tag
+ a| 
+Geben Sie ein beschreibende Tag ein, um beim Suchen einer Ressourcengruppe zu helfen.
+
+|===
+. Führen Sie auf der Seite Ressourcen die folgenden Aufgaben aus:
++
+.. Wählen Sie den Host aus, um die Liste der Ressourcen zu filtern.
++
+Wenn Sie vor Kurzem Ressourcen hinzugefügt haben, werden diese erst nach einer Aktualisierung der Ressourcenliste in der Liste der verfügbaren Ressourcen angezeigt.
+
+.. Klicken Sie im Abschnitt Verfügbare Ressourcen auf die Dateisysteme, die Sie sichern möchten, und klicken Sie dann auf den rechten Pfeil, um sie in den Abschnitt Hinzufügen zu verschieben.
++
+Wenn Sie die Option *Autoselect alle Ressourcen auf demselben Speichervolumen* auswählen, werden alle Ressourcen auf demselben Volume ausgewählt. Wenn Sie sie in den Abschnitt „Hinzugefügt“ verschieben, werden alle Ressourcen auf diesem Volume zusammen verschoben.
+
++
+Um ein einzelnes Dateisystem hinzuzufügen, deaktivieren Sie die Option *Autoselect alle Ressourcen auf demselben Speichervolumen*, und wählen Sie dann die Dateisysteme aus, die Sie in den Abschnitt Hinzufügen verschieben möchten.
+
+
+
+. Führen Sie auf der Seite Richtlinien die folgenden Aufgaben aus:
++
+.. Wählen Sie eine oder mehrere Richtlinien aus der Dropdown-Liste aus.
++
+Sie können eine beliebige vorhandene Richtlinie auswählen und auf *Details* klicken, um zu bestimmen, ob Sie diese Richtlinie verwenden können.
+
++
+Wenn keine vorhandene Richtlinie Ihren Anforderungen entspricht, können Sie eine neue Richtlinie erstellen, indem Sie auf * klickenimage:../media/add_policy_from_resourcegroup.gif[""]* Um den Policy Wizard zu starten.
+
++
+Die ausgewählten Richtlinien werden in der Spalte Richtlinie im Abschnitt „Zeitpläne für ausgewählte Richtlinien konfigurieren“ aufgeführt.
+
+.. Klicken Sie im Abschnitt Zeitpläne für ausgewählte Richtlinien konfigurieren auf *image:../media/add_policy_from_resourcegroup.gif[""]* In der Spalte Zeitplan konfigurieren für die Richtlinie, für die Sie den Zeitplan konfigurieren möchten.
+.. Wenn die Richtlinie mit mehreren Terminplantypen (Frequenzen) verknüpft ist, wählen Sie die Frequenz aus, die Sie konfigurieren möchten.
+.. Konfigurieren Sie den Zeitplan im Dialogfeld Add Schedules for Policy_Name_, indem Sie das Startdatum, das Ablaufdatum und die Häufigkeit angeben und dann auf *Finish* klicken.
++
+Die konfigurierten Zeitpläne werden in der Spalte „angewendete Zeitpläne“ im Abschnitt „Zeitpläne für ausgewählte Richtlinien konfigurieren“ aufgeführt.
+
+
+
++
+Backup-Zeitpläne von Drittanbietern werden nicht unterstützt, wenn sie sich mit SnapCenter Backup-Zeitplänen überschneiden. Sie sollten die Zeitpläne aus dem Windows Task Scheduler und dem SQL Server Agent nicht ändern.
+
+. Geben Sie auf der Seite Benachrichtigung wie folgt Informationen an:
++
+|===
+| Für dieses Feld... | Tun Sie das... 
+
+
+ a| 
+E-Mail-Präferenz
+ a| 
+Wählen Sie *immer*, *bei Ausfall* oder *bei Fehlschlag oder Warnung*, um E-Mails an Empfänger zu senden, nachdem Sie Backup-Ressourcengruppen erstellt, Richtlinien angehängt und Zeitpläne konfiguriert haben. Geben Sie den SMTP-Server, die Standard-E-Mail-Betreffzeile und die E-Mail-Adressen an und von ein.
+
+
+
+ a| 
+Von
+ a| 
+E-Mail-Adresse
+
+
+
+ a| 
+Bis
+ a| 
+E-Mail-Adresse
+
+
+
+ a| 
+Betreff
+ a| 
+Standard-E-Mail-Betreffzeile
+
+|===
+. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
++
+Sie können ein Backup nach Bedarf durchführen oder warten, bis das geplante Backup durchgeführt wird.
+
+

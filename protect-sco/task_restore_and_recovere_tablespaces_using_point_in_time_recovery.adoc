@@ -1,0 +1,87 @@
+---
+permalink: protect-sco/task_restore_and_recovere_tablespaces_using_point_in_time_recovery.html 
+sidebar: sidebar 
+keywords: restore, PITR, point-in-time recovery, RMAN, tablespaces 
+summary: 'Sie können einen bestimmten Satz von Tablespaces wiederherstellen, die beschädigt oder verworfen wurden, ohne dass die anderen Tabellen der Datenbank beeinträchtigt werden. SnapCenter verwendet RMAN zur Durchführung einer Point-in-Time-Recovery \(PITR\) der Tabellen.' 
+---
+= Wiederherstellen von Tabellen mit Point-in-Time Recovery
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen bestimmten Satz von Tablespaces wiederherstellen, die beschädigt oder verworfen wurden, ohne dass die anderen Tabellen der Datenbank beeinträchtigt werden. SnapCenter verwendet RMAN für die Durchführung des Point-in-Time Recovery (PITR) der Tabellen.
+
+*Was Sie brauchen*
+
+Die Backups, die zur Durchführung von PITR von Tabellen erforderlich sind, sollten katalogisiert und gemountet werden.
+
+*Über diese Aufgabe*
+
+Während des PITR-Betriebs erstellt RMAN eine Zusatzinstanz am angegebenen Hilfsziel. Das Hilfeziel kann ein Bereitstellungspunkt oder eine ASM-Laufwerksgruppe sein. Wenn genügend Speicherplatz am Einbauort vorhanden ist, können Sie eine der montierten Positionen anstelle eines dedizierten Mount-Punkts wiederverwenden.
+
+Geben Sie Datum und Uhrzeit oder SCN an, und der Tablespace wird in der Quelldatenbank wiederhergestellt.
+
+Sie können mehrere Tabellen mit ASM, NFS und SAN-Umgebungen auswählen und wiederherstellen. Wenn sich beispielsweise Tablespaces TS2 und TS3 auf NFS und TS4 im SAN befinden, können Sie alle Tabellen wiederherstellen.
+
+
+NOTE: In einem RAC-Setup können Sie PITR von Tablespaces von jedem Knoten des RAC ausführen.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Wählen Sie auf der Seite Ressourcen die Option *Datenbank* oder *Ressourcengruppe* aus der Liste *Ansicht* aus.
+. Wählen Sie die Datenbank des Typs Single Instance (mandantenfähig) aus der Detailansicht der Datenbank oder in der Detailansicht der Ressourcengruppen aus.
++
+Die Seite der Datenbanktopologie wird angezeigt.
+
+. Wählen Sie in der Ansicht Kopien verwalten die Option *Backups* aus den primären oder sekundären (gespiegelten oder replizierten) Speichersystemen aus.
++
+Wenn die Sicherung nicht katalogisiert ist, sollten Sie die Sicherung auswählen und auf *Katalog* klicken.
+
+. Wählen Sie die katalogisierte Sicherung aus, und klicken Sie dann auf *image:../media/restore_icon.gif["Symbol Wiederherstellen"]*.
+. Führen Sie auf der Seite „Wiederherstellungsumfang“ die folgenden Aufgaben durch:
++
+.. Wenn Sie in einer RAC-Umgebung (Real Application Clusters) eine Sicherung einer Datenbank ausgewählt haben, wählen Sie den RAC-Knoten aus.
+.. Wählen Sie *Tablespaces* aus, und legen Sie dann die Tablespaces fest, die Sie wiederherstellen möchten.
++
+
+NOTE: PITR kann auf SYSAUX, SYSTEM und TABLESPACES nicht ausgeführt werden.
+
+.. Wählen Sie *Datenbankstatus ändern, falls erforderlich für Wiederherstellung und Wiederherstellung*, um den Status der Datenbank in den Zustand zu ändern, der für die Wiederherstellung und Wiederherstellung erforderlich ist.
+
+
+. Führen Sie auf der Seite „Wiederherstellungsumfang“ eine der folgenden Aktionen durch:
++
+** Wenn Sie eine bestimmte Systemänderungsnummer (SCN) wiederherstellen möchten, wählen Sie *bis SCN* und geben Sie das SCN und das Hilfeziel an.
+** Wenn Sie ein bestimmtes Datum und eine bestimmte Uhrzeit wiederherstellen möchten, wählen Sie *Datum und Uhrzeit* und geben Sie Datum und Uhrzeit sowie das Hilfsziel an.
++
+SnapCenter identifiziert und katalogisiert die optimale Anzahl von Daten- und Protokollierungs-Backups, die für die Durchführung von PITR auf der Grundlage des angegebenen SCN oder des ausgewählten Datums und der ausgewählten Zeit erforderlich sind.
+
+
+
+. Geben Sie auf der Seite PreOps den Pfad und die Argumente des Preskript ein, das Sie vor der Wiederherstellung ausführen möchten.
++
+Sie sollten die Voreinstellungen entweder im Pfad /var/opt/snapcenter/spl/scripts oder in einem beliebigen Ordner in diesem Pfad speichern. Standardmäßig wird der Pfad /var/opt/snapcenter/spl/scripts ausgefüllt. Wenn Sie Ordner in diesem Pfad erstellt haben, um die Skripte zu speichern, müssen Sie diese Ordner im Pfad angeben.
+
++
+Sie können auch den Wert für das Skript-Timeout angeben. Der Standardwert ist 60 Sekunden.
+
++
+Mit SnapCenter können Sie die vordefinierten Umgebungsvariablen verwenden, wenn Sie das Preskript und das Postscript ausführen. link:../protect-sco/predefined-environment-variables-prescript-postscript-restore.html["Weitere Informationen ."^]
+
+. Führen Sie auf der Seite PostOps die folgenden Schritte aus:
++
+.. Geben Sie den Pfad und die Argumente des Postscript ein, das Sie nach der Wiederherstellung ausführen möchten.
++
+
+NOTE: Wenn der Wiederherstellungsvorgang fehlschlägt, werden Postscripts nicht ausgeführt und Bereinigungstätigkeiten werden direkt ausgelöst.
+
+.. Aktivieren Sie das Kontrollkästchen, wenn Sie die Datenbank nach der Wiederherstellung öffnen möchten.
+
+
+. Wählen Sie auf der Seite Benachrichtigung aus der Dropdown-Liste *E-Mail-Präferenz* die Szenarien aus, in denen Sie die E-Mail-Benachrichtigungen senden möchten.
+. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
+. Überwachen Sie den Fortschritt des Vorgangs, indem Sie auf *Monitor* > *Jobs* klicken.
+

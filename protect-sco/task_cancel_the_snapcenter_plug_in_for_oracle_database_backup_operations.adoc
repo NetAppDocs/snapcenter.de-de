@@ -1,0 +1,64 @@
+---
+permalink: protect-sco/task_cancel_the_snapcenter_plug_in_for_oracle_database_backup_operations.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können Backup-Vorgänge, die ausgeführt werden, in die Warteschlange gestellt oder nicht ansprechbar sind, abbrechen. 
+---
+= Backup-Vorgänge von Oracle-Datenbanken abbrechen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Backup-Vorgänge, die ausgeführt werden, in die Warteschlange gestellt oder nicht ansprechbar sind, abbrechen.
+
+Sie müssen als SnapCenter-Administrator oder -Auftragseigentümer angemeldet sein, um Backup-Vorgänge abzubrechen.
+
+*Über diese Aufgabe*
+
+Wenn Sie einen Backup-Vorgang abbrechen, stoppt der SnapCenter-Server den Vorgang und entfernt alle Snapshot-Kopien aus dem Storage, falls das erstellte Backup nicht beim SnapCenter Server registriert ist. Wenn das Backup bereits beim SnapCenter Server registriert ist, wird die bereits erstellte Snapshot-Kopie nicht wieder zurückgeführt, auch wenn der Vorgang ausgelöst wird.
+
+* Sie können nur den Protokoll- oder Vollbackup-Vorgang abbrechen, der in die Warteschlange oder in Betrieb ist.
+* Sie können den Vorgang nicht abbrechen, nachdem die Überprüfung gestartet wurde.
++
+Wenn Sie den Vorgang vor der Überprüfung abbrechen, wird der Vorgang abgebrochen und der Verifizierungsvorgang wird nicht durchgeführt.
+
+* Sie können den Sicherungsvorgang nicht abbrechen, nachdem der Katalogvorgang gestartet wurde.
+* Sie können einen Sicherungsvorgang entweder über die Seite Überwachen oder über den Aktivitätsbereich abbrechen.
+* Zusätzlich zur Verwendung der SnapCenter GUI können Sie CLI-Befehle verwenden, um Vorgänge abzubrechen.
+* Die Schaltfläche *Job abbrechen* ist für Vorgänge deaktiviert, die nicht abgebrochen werden können.
+* Wenn Sie *Alle Mitglieder dieser Rolle sehen und auf anderen Mitgliedsobjekten* auf der Seite Benutzer\Gruppen arbeiten können, während Sie eine Rolle erstellen, können Sie die in der Warteschlange befindlichen Backup-Vorgänge anderer Mitglieder abbrechen, während Sie diese Rolle verwenden.
+
+
+*Schritt*
+
+Führen Sie eine der folgenden Aktionen aus:
+
+|===
+| Von der... | Aktion 
+
+
+ a| 
+Monitor-Seite
+ a| 
+. Klicken Sie im linken Navigationsbereich auf *Monitor* > *Jobs*.
+. Wählen Sie den Vorgang aus und klicken Sie auf *Auftrag abbrechen*.
+
+
+
+
+ a| 
+Aktivitätsbereich
+ a| 
+. Klicken Sie nach dem Starten des Backup-Jobs auf image:../media/activity_pane_icon.gif[""] Im Aktivitätsbereich werden die fünf letzten Vorgänge angezeigt.
+. Wählen Sie den Vorgang aus.
+. Klicken Sie auf der Seite Jobdetails auf *Job abbrechen*.
+
+
+|===
+*Ergebnisse*
+
+Der Vorgang wird abgebrochen und die Ressource wird in den ursprünglichen Zustand zurückgesetzt.
+
+Wenn der Vorgang, den Sie abgebrochen haben, im Status Abbrechen oder Ausführen nicht reagiert, sollten Sie Cancel-SmJob -JobID <int> -Force ausführen, um den Backup-Vorgang eindringlich zu beenden.

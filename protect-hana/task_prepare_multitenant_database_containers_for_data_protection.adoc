@@ -1,0 +1,50 @@
+---
+permalink: protect-hana/task_prepare_multitenant_database_containers_for_data_protection.html 
+sidebar: sidebar 
+keywords: multitenant database containers 
+summary: 'Bei direkt in SnapCenter registrierten SAP HANA Hosts wird das Installieren oder Upgrade des SnapCenter Plug-ins für SAP HANA Database eine automatische Ermittlung der Ressourcen auf dem Host auslösen. Nach der Installation oder Aktualisierung des Plug-ins werden für jeden mandantenfähigen Datenbank-Container \(MDC\)-Ressource, die sich auf dem Plug-in-Host befand, automatisch eine andere MDC-Ressource mit einem anderen GUID-Format ermittelt und in SnapCenter registriert. Die neue Ressource befindet sich im Status „gesperrt“.' 
+---
+= Mandantenfähige Datenbank-Container werden für die Datensicherung vorbereitet
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bei direkt in SnapCenter registrierten SAP HANA Hosts wird das Installieren oder Upgrade des SnapCenter Plug-ins für SAP HANA Database eine automatische Ermittlung der Ressourcen auf dem Host auslösen. Nach der Installation oder dem Upgrade des Plug-ins werden für alle MDC-Ressourcen (Multi-Tenant-Datenbank-Container), die sich auf dem Plug-in-Host befand, automatisch eine andere MDC-Ressource mit einem anderen GUID-Format erkannt und in SnapCenter registriert. Die neue Ressource befindet sich im Status „`gesperrt`“.
+
+*Über diese Aufgabe*
+
+Wenn sich beispielsweise in SnapCenter 4.2 die E90-MDC-Ressource auf dem Plug-in-Host befand und manuell registriert wurde, wird nach dem Upgrade auf SnapCenter 4.3 eine weitere E90-MDC-Ressource mit einer anderen GUID erkannt und in SnapCenter registriert.
+
+
+NOTE: Die Backups, die mit der Ressource von SnapCenter 4.2 und älteren Versionen verbunden sind, müssen bis zum Ablauf der Aufbewahrungsfrist aufbewahrt werden. Nach Ablauf des Aufbewahrungszeitraums können Sie die alte MDC-Ressource löschen und die neue automatisch erkannte MDC-Ressource weiterhin verwalten.
+
+`Old MDC resource` Ist die MDC-Ressource für einen Plug-in-Host, der manuell in SnapCenter 4.2 oder früheren Versionen hinzugefügt wurde.
+
+Führen Sie die folgenden Schritte durch, um die in SnapCenter 4.3 entdeckte neue Ressource für Datensicherungsvorgänge zu verwenden:
+
+*Schritte*
+
+. Wählen Sie auf der Seite „Ressourcen“ die alte MDC-Ressource mit Backups aus, die der früheren SnapCenter-Version hinzugefügt wurden, und legen Sie sie auf der Topologieseite in den „`maintBuße-Modus`“.
++
+Wenn die Ressource Teil einer Ressourcengruppe ist, legen Sie die Ressourcengruppe in den „`mBetriebszustand`“.
+
+. Konfigurieren Sie die neue MDC-Ressource, die nach dem Upgrade auf SnapCenter 4.3 erkannt wurde, indem Sie die neue Ressource auf der Seite Ressourcen auswählen.
++
+„`Neue MDC-Ressource`“ ist die neu entdeckte MDC-Ressource, die erkannt wurde, nachdem der SnapCenter-Server und der Plug-in-Host auf 4.3 aktualisiert wurden. Die neue MDC-Ressource kann als Ressource mit demselben SID wie die alte MDC-Ressource, für einen bestimmten Host und mit einem roten Vorhängeschloss-Symbol daneben auf der Seite Ressourcen identifiziert werden.
+
+. Schützen Sie die neue MDC-Ressource, die nach dem Upgrade auf SnapCenter 4.3 erkannt wurde, indem Sie Schutzrichtlinien, Zeitpläne und Benachrichtigungseinstellungen auswählen.
+. Löschen Sie die Backups, die in SnapCenter 4.2 oder früheren Versionen basierend auf den Aufbewahrungseinstellungen erstellt wurden.
+. Löschen Sie die Ressourcengruppe auf der Seite Topologie.
+. Löschen Sie die alte MDC-Ressource von der Seite Ressourcen.
++
+Beispiel: Wenn die Aufbewahrungsdauer der primären Snapshot Kopien 7 Tage beträgt und die Aufbewahrung von sekundären Snapshot Kopien 45 Tage beträgt, nach 45 Tagen abgeschlossen sind und nachdem alle Backups gelöscht wurden, müssen Sie die Ressourcengruppe und die alte MDC-Ressource löschen.
+
+
+
+*Weitere Informationen*
+
+link:task_configure_hdb_user_store_key_and_hdbsql_os_user_for_the_sap_hana_database.html["Konfiguration des HDB-Benutzerspeicherschlüssels und des HDBSQL OS-Benutzers für die SAP HANA-Datenbank"]
+
+link:task_view_sap_hana_database_backups_and_clones_in_the_topology_page_sap_hana.html["Sehen Sie sich SAP HANA Datenbank-Backups und -Klone auf der Seite Topologie an"]

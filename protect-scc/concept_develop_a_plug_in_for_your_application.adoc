@@ -1,0 +1,197 @@
+---
+permalink: protect-scc/concept_develop_a_plug_in_for_your_application.html 
+sidebar: sidebar 
+keywords:  
+summary: Der SnapCenter Server ermöglicht die Implementierung und das Management von Applikationen als Plug-ins für SnapCenter. 
+---
+= Überblick
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der SnapCenter Server ermöglicht die Implementierung und das Management von Applikationen als Plug-ins für SnapCenter. Die Applikationen Ihrer Wahl können zur Datensicherung und zu Managementfunktionen in den SnapCenter Server integriert werden.
+
+Mit SnapCenter können Sie benutzerdefinierte Plug-ins mit unterschiedlichen Programmiersprachen entwickeln. Sie können ein benutzerdefiniertes Plug-in über Perl, Java, BATCH oder andere Skriptsprachen entwickeln.
+
+Um benutzerdefinierte Plug-ins in SnapCenter zu verwenden, müssen Sie die folgenden Aufgaben ausführen:
+
+* Erstellen Sie ein Plug-in für Ihre Anwendung mithilfe der Anweisungen in diesem Handbuch
+* Erstellen Sie eine Beschreibungsdatei
+* Exportieren Sie das benutzerdefinierte Plug-in, um es auf dem SnapCenter-Host zu installieren
+* Laden Sie die Plug-in-ZIP-Datei auf den SnapCenter-Server hoch
+
+
+
+
+== Allgemeine Plug-in-Bearbeitung bei allen API-Aufrufen
+
+[role="lead"]
+Verwenden Sie für jeden API-Aufruf die folgenden Informationen:
+
+* Plug-in-Parameter
+* Exit-Codes
+* Fehlermeldungen protokollieren
+* Datenkonsistenz
+
+
+
+
+=== Verwenden Sie Plug-in-Parameter
+
+Bei jedem API-Aufruf wird eine Reihe von Parametern an das Plug-in übergeben. In der folgenden Tabelle sind die spezifischen Informationen für die Parameter aufgeführt.
+
+|===
+| Parameter | Zweck 
+
+
+ a| 
+AKTION
+ a| 
+Legt den Workflow-Namen fest. Entdecken Sie zum Beispiel, sichern, fileOrVolRestore oder cloneVolAndRun
+
+
+
+ a| 
+RESSOURCEN
+ a| 
+Listet Ressourcen auf, die geschützt werden sollen. Eine Ressource wird durch UID und Typ identifiziert. Die Liste wird dem Plug-in im folgenden Format angezeigt:
+
+„<UID>,<TYPE>;<UID>,<TYPE>“. Beispiel: „Instance1,instance;Instance2\\DB1,Database“
+
+
+
+ a| 
+APP_NAME
+ a| 
+Bestimmt, welches Plug-in verwendet wird. Zum Beispiel DB2, MYSQL. SnapCenter Server bietet integrierte Unterstützung für die aufgeführten Applikationen. Bei diesem Parameter wird die Groß-/Kleinschreibung beachtet.
+
+
+
+ a| 
+APP_IGNORE_ERROR
+ a| 
+(J oder N) Dies führt dazu, dass SnapCenter beendet wird oder nicht beendet wird, wenn ein Anwendungsfehler auftritt. Dies ist nützlich, wenn Sie Backups mehrerer Datenbanken durchführen und nicht möchten, dass der Backup-Vorgang durch einen einzelnen Fehler unterbrochen wird.
+
+
+
+ a| 
+<RESOURCE_NAME>__APP_INSTANCE_USERNAME
+ a| 
+SnapCenter-Anmeldeinformationen für die Ressource festgelegt.
+
+
+
+ a| 
+<RESOURCE_NAME>_APP_INSTANCE_PASSWORD
+ a| 
+SnapCenter-Anmeldeinformationen für die Ressource festgelegt.
+
+
+
+ a| 
+<RESOURCE_NAME>_<CUSTOM_PARAM>
+ a| 
+Jeder benutzerdefinierte Schlüsselwert auf Ressourcenebene steht für Plug-ins zur Verfügung, die mit „<RESOURCE_NAME>_“ vordefiniert sind. Wenn ein benutzerdefinierter Schlüssel beispielsweise „MASTER_SLAVE“ für eine Ressource namens „MySQLDB“ ist, wird er als MySQLDB_MASTER_SLAVE verfügbar sein
+
+|===
+
+
+=== Exit-Codes verwenden
+
+Das Plug-in gibt den Status des Vorgangs über Exit-Codes zurück an den Host. Jeder Code hat eine bestimmte Bedeutung, und das Plug-in verwendet den richtigen Exit-Code, um die gleiche anzuzeigen.
+
+Die folgende Tabelle zeigt Fehlercodes und deren Bedeutung.
+
+|===
+| Beenden Sie den Code | Zweck 
+
+
+ a| 
+0
+ a| 
+Erfolgreicher Betrieb.
+
+
+
+ a| 
+99
+ a| 
+Der angeforderte Vorgang wird nicht unterstützt oder implementiert.
+
+
+
+ a| 
+100
+ a| 
+Fehlgeschlagener Vorgang, unquiesce überspringen und beenden. Deaktivieren ist standardmäßig.
+
+
+
+ a| 
+101
+ a| 
+Fehlgeschlagener Vorgang; fahren Sie mit dem Backup-Vorgang fort.
+
+
+
+ a| 
+Andere
+ a| 
+Vorgang fehlgeschlagen, Ausführung unquiesce und Beenden.
+
+|===
+
+
+=== Fehlermeldungen protokollieren
+
+Die Fehlermeldungen werden vom Plug-in an den SnapCenter-Server übergeben. Die Meldung enthält die Meldung, die Protokollebene und den Zeitstempel.
+
+In der folgenden Tabelle sind die Ebenen und ihre Zwecke aufgeführt.
+
+|===
+| Parameter | Zweck 
+
+
+ a| 
+INFO
+ a| 
+Informationsmeldung
+
+
+
+ a| 
+WARNEN
+ a| 
+Warnmeldung
+
+
+
+ a| 
+FEHLER
+ a| 
+Fehlermeldung
+
+
+
+ a| 
+DEBUGGEN
+ a| 
+Debug-Nachricht
+
+
+
+ a| 
+VERFOLGEN
+ a| 
+Trace-Nachricht
+
+|===
+
+
+=== Wahrung der Datenkonsistenz
+
+Benutzerdefinierte Plug-ins bewahren Daten zwischen Operationen derselben Workflow-Ausführung auf. Ein Plug-in kann zum Beispiel Daten am Ende der Stilllegung speichern, die auch während des Betriebs ausgeführt werden können.
+
+Die zu haltenden Daten werden als Teil des Ergebnisobjekts durch Plug-in festgelegt. Es folgt einem bestimmten Format und wird im Detail unter jedem Stil der Plug-in-Entwicklung beschrieben.

@@ -1,0 +1,76 @@
+---
+permalink: protect-sce/task_restore_exchange_resources_using_powershell_cmdlets.html 
+sidebar: sidebar 
+keywords: restore 
+summary: Beim Wiederherstellen einer Exchange-Datenbank wird eine Verbindungssitzung mit dem SnapCenter-Server initiiert, die Backups aufgeführt, Backup-Informationen abgerufen und ein Backup wiederhergestellt. 
+---
+= Stellen Sie Exchange Ressourcen mithilfe von PowerShell cmdlets wieder her
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Beim Wiederherstellen einer Exchange-Datenbank wird eine Verbindungssitzung mit dem SnapCenter-Server initiiert, die Backups aufgeführt, Backup-Informationen abgerufen und ein Backup wiederhergestellt.
+
+Sie müssen die PowerShell Umgebung vorbereitet haben, um die PowerShell Cmdlets auszuführen.
+
+*Schritte*
+
+. Starten Sie eine Verbindungssitzung mit dem SnapCenter-Server für einen bestimmten Benutzer, indem Sie den verwenden `Open-SmConnection` Cmdlet:
++
+[listing]
+----
+Open-smconnection  -SMSbaseurl  https://snapctr.demo.netapp.com:8146/
+----
+. Rufen Sie die Informationen zu einem oder mehreren Backups ab, die Sie mit dem wiederherstellen möchten `Get-SmBackup` Cmdlet:
++
+In diesem Beispiel werden Informationen zu allen verfügbaren Backups angezeigt:
+
++
+[listing]
+----
+PS C:\> Get-SmBackup
+
+BackupId                      BackupName                    BackupTime                    BackupType
+--------                      ----------                    ----------                    ----------
+341                           ResourceGroup_36304978_UTM... 12/8/2017 4:13:24 PM          Full Backup
+342                           ResourceGroup_36304978_UTM... 12/8/2017 4:16:23 PM          Full Backup
+355                           ResourceGroup_06140588_UTM... 12/8/2017 6:32:36 PM          Log Backup
+356                           ResourceGroup_06140588_UTM... 12/8/2017 6:36:20 PM          Full Backup
+----
+. Stellen Sie mit dem Daten aus dem Backup wieder her `Restore-SmBackup` Cmdlet:
++
+In diesem Beispiel wird ein minutengenaue Backup wiederhergestellt:
+
++
+[listing]
+----
+C:\PS> Restore-SmBackup -PluginCode SCE -AppObjectId 'sce-w2k12-exch.sceqa.com\sce-w2k12-exch_DB_2' -BackupId 341 -IsRecoverMount:$true
+----
++
+In diesem Beispiel wird ein zeitpunktgenaues Backup wiederhergestellt:
+
++
+[listing]
+----
+C:\ PS> Restore-SmBackup -PluginCode SCE -AppObjectId 'sce-w2k12-exch.sceqa.com\sce-w2k12-exch_DB_2' -BackupId 341 -IsRecoverMount:$true -LogRestoreType ByTransactionLogs -LogCount 2
+----
++
+In diesem Beispiel wird ein Backup auf sekundärem Storage auf einen primären Erfahrungsbericht wiederhergestellt:
+
++
+[listing]
+----
+C:\ PS> Restore-SmBackup -PluginCode 'SCE' -AppObjectId 'DB2' -BackupId 81 -IsRecoverMount:$true -Confirm:$false
+-archive @{Primary="paw_vs:vol1";Secondary="paw_vs:vol1_mirror"} -logrestoretype All
+----
++
+Der `-archive` Mit dem Parameter können Sie die primären und sekundären Volumes angeben, die Sie für die Wiederherstellung verwenden möchten.
+
++
+Der `-IsRecoverMount:$true` Mit Parameter können Sie die Datenbank nach der Wiederherstellung mounten.
+
+
+
+Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ können Sie auch auf die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["SnapCenter Software Cmdlet Referenzhandbuch"^].

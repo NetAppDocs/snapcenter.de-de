@@ -1,0 +1,43 @@
+---
+permalink: protect-sco/task_clone_oracle_database_backups_using_unix_commands.html 
+sidebar: sidebar 
+keywords: clone, CLI, commands 
+summary: Der Klon-Workflow umfasst die Planung, die Durchführung des Klonvorgangs und die Überwachung des Vorgangs. 
+---
+= Backups der Oracle Datenbank mit UNIX Befehlen klonen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Klon-Workflow umfasst die Planung, die Durchführung des Klonvorgangs und die Überwachung des Vorgangs.
+
+*Über diese Aufgabe*
+
+Sie sollten die folgenden Befehle ausführen, um die Oracle Database Clone Specification File zu erstellen und den Klonvorgang zu starten.
+
+Die Informationen zu den Parametern, die mit dem Befehl und deren Beschreibungen verwendet werden können, können durch Ausführen von get-Help _Command_Name_ abgerufen werden. Alternativ können Sie auch auf die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2883301["SnapCenter Software Command Reference Guide"^].
+
+*Schritte*
+
+. Erstellen Sie eine Oracle-Datenbankklonspezifikation aus einem angegebenen Backup: _New-SmOracleCloneSpecification_
++
+
+NOTE: Wenn die sekundäre Datenschutzrichtlinie ein einheitliches Mirror-Vault ist, geben Sie nur -IncludeSecond Details an. Sie müssen nicht -SecondaryStorageType angeben.
+
++
+Mit diesem Befehl wird automatisch eine Oracle-Datenbankklonspezifikationsdatei für die angegebene Quelldatenbank und ihr Backup erstellt. Außerdem müssen Sie eine Klon-Datenbank-SID angeben, damit die erstellte Spezifikationsdatei die automatisch generierten Werte für die von Ihnen erstellte Klondatenbank enthält.
+
++
+
+NOTE: Die Klon-Spezifikations-Datei wird unter _/var/opt/snapcenter/sco/Clone_specs_ erstellt.
+
+. Initiieren einer Klonoperation aus einer Clone Resource Group oder einem vorhandenen Backup: _New-SmClone_
++
+Dieser Befehl initiiert einen Klonvorgang. Für den Klonvorgang müssen Sie außerdem einen Pfad für die Oracle-Klonspezifikation angeben. Zudem können Sie die Recovery-Optionen festlegen, auf denen der Klonvorgang ausgeführt werden soll, sowie Vorskripte, Postskripte und andere Details.
+
++
+Standardmäßig wird die Zieldatei des Archivprotokolls für die Klondatenbank automatisch mit einer Zieldatei von _ € ORACLE_HOME/CLONE_SIDs_ gefüllt.
+
+

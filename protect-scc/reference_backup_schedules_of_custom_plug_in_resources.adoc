@@ -1,0 +1,30 @@
+---
+permalink: protect-scc/reference_backup_schedules_of_custom_plug_in_resources.html 
+sidebar: sidebar 
+keywords:  
+summary: Der wichtigste Faktor beim Bestimmen eines Backup-Zeitplans ist die Änderungsrate für die Ressource. Je öfter Sie Ihre Ressourcen sichern, desto weniger Archivprotokolle, die SnapCenter für die Wiederherstellung verwenden muss, was zu schnelleren Restore-Vorgängen führen kann. 
+---
+= Backup-Pläne für benutzerdefinierte Plug-in-Ressourcen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der wichtigste Faktor beim Bestimmen eines Backup-Zeitplans ist die Änderungsrate für die Ressource. Je öfter Sie Ihre Ressourcen sichern, desto weniger Archivprotokolle, die SnapCenter für die Wiederherstellung verwenden muss, was zu schnelleren Restore-Vorgängen führen kann.
+
+Sie können eine stark genutzte Ressource unter Umständen jede Stunde sichern, während Sie selten genutzte Ressourcen einmal am Tag sichern können. Weitere Faktoren sind die Bedeutung der Ressource für Ihr Unternehmen, die Service Level Agreement (SLA) und den Recovery Point Objective (RPO).
+
+Im Rahmen des SLA wird das erwartete Service-Level definiert und es werden zahlreiche Service-bezogene Probleme behandelt, darunter Verfügbarkeit und Performance des Service. Der Recovery-Zeitpunkt definiert die Strategie für das Alter der Dateien, die aus dem Backup-Storage wiederhergestellt werden müssen, damit regelmäßige Betriebsabläufe nach einem Ausfall fortgesetzt werden können. SLA und RPO tragen zur Datensicherungsstrategie bei.
+
+Backup-Zeitpläne haben zwei Teile:
+
+* Sicherungshäufigkeit
++
+Die Backup-Frequenz (wie oft Backups durchgeführt werden sollen), auch als Zeitplantyp für einige Plug-ins bezeichnet, ist Teil einer Richtlinienkonfiguration. Sie können z. B. die Backup-Häufigkeit als stündlich, täglich, wöchentlich oder monatlich konfigurieren. Über die SnapCenter-Benutzeroberfläche können Sie auf Richtlinien zugreifen, indem Sie auf *Einstellungen* > *Richtlinien* klicken.
+
+* Backup-Pläne
++
+Backup-Zeitpläne (genau, wann Backups durchgeführt werden sollen) sind Teil der Konfiguration einer Ressource oder Ressourcengruppe. Wenn Sie beispielsweise eine Ressourcengruppe haben, die eine Richtlinie für wöchentliche Backups konfiguriert hat, können Sie den Zeitplan so konfigurieren, dass er jeden Donnerstag um 10:00 Uhr gesichert wird Sie können in der SnapCenter-Benutzeroberfläche auf Ressourcengruppenpläne zugreifen, indem Sie auf *Ressourcen* klicken, das entsprechende Plug-in auswählen und auf *Ansicht* > *Ressourcengruppe* klicken.
+
+

@@ -1,0 +1,11 @@
+= 
+:allow-uri-read: 
+
+
+Bevor Sie Datensicherungsvorgänge wie Backup-, Klon- oder Restore-Vorgänge durchführen, müssen Sie Ihre Strategie definieren und die Umgebung festlegen. Sie können den SnapCenter Server auch zur Verwendung von SnapMirror und SnapVault Technologie einrichten.
+
+Um von der SnapVault und SnapMirror Technologie zu profitieren, müssen Sie eine Datensicherungsbeziehung zwischen den Quell- und Ziel-Volumes auf dem Storage-Gerät konfigurieren und initialisieren. Sie können entweder NetApp System Manager verwenden oder die Storage-Konsole verwenden, um diese Aufgaben auszuführen.
+
+*Weitere Informationen*
+
+link:https://docs.netapp.com/us-en/ontap-automation/getting_started_with_the_rest_api.html["Erste Schritte mit DER REST API"]

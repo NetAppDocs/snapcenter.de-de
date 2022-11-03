@@ -1,0 +1,140 @@
+---
+permalink: admin/concept_monitor_jobs_schedules_events_and_logs.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können den Fortschritt Ihrer Jobs überwachen, Informationen zu geplanten Jobs abrufen und Ereignisse und Protokolle auf der Seite Überwachen überprüfen. 
+---
+= Überwachen von Jobs, Zeitplänen, Ereignissen und Protokollen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können den Fortschritt Ihrer Jobs überwachen, Informationen zu geplanten Jobs abrufen und Ereignisse und Protokolle auf der Seite Überwachen überprüfen.
+
+
+
+== Überwachen von Jobs
+
+Sie können Informationen zu Backup-, Klon-, Wiederherstellungs- und Verifizierungsaufgaben von SnapCenter anzeigen. Sie können diese Ansicht nach Start- und Enddatum, Jobtyp, Ressourcengruppe, Richtlinie oder SnapCenter-Plug-in filtern. Sie können auch zusätzliche Details und Protokolldateien für bestimmte Jobs erhalten.
+
+Sie können auch Jobs bezüglich SnapMirror und SnapVault Vorgängen überwachen.
+
+
+NOTE: Sie können nur die Jobs überwachen, die Sie erstellt haben und die für Sie relevant sind, es sei denn, Sie sind SnapCenter-Administrator oder eine andere Superuser-Rolle zugewiesen.
+
+Sie können die folgenden Aufgaben im Zusammenhang mit Überwachungsaufgaben ausführen:
+
+* Überwachen Sie Backup-, Klon-, Wiederherstellungs- und Überprüfungsvorgänge.
+* Job-Details und -Berichte anzeigen
+* Einen geplanten Job stoppen.
+
+
+
+
+== Überwachung von Zeitplänen
+
+Sie möchten möglicherweise aktuelle Zeitpläne anzeigen, um zu bestimmen, wann der Vorgang gestartet wird, wann er zuletzt ausgeführt wurde und wann er als Nächstes ausgeführt wird. Sie können auch den Host bestimmen, auf dem der Vorgang ausgeführt wird, sowie die Ressourcengruppe und die Richtlinieninformationen des Vorgangs.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Monitor*.
+. Klicken Sie auf der Seite Monitor auf *Zeitpläne*.
+. Wählen Sie die Ressourcengruppe und den Terminplantyp aus.
+. Zeigen Sie die Liste der geplanten Vorgänge an.
+
+
+
+
+== Monitoring von Ereignissen
+
+Sie können eine Liste der SnapCenter-Ereignisse im System anzeigen, z. B. wenn ein Benutzer eine Ressourcengruppe erstellt oder wenn das System Aktivitäten initiiert, z. B. die Erstellung eines geplanten Backups. Möglicherweise möchten Sie Ereignisse anzeigen, um zu bestimmen, ob ein Vorgang, z. B. ein Backup- oder Wiederherstellungsvorgang, derzeit ausgeführt wird.
+
+*Über diese Aufgabe*
+
+Alle Jobinformationen werden auf der Seite Ereignisse angezeigt. Wenn beispielsweise ein Sicherungsauftrag gestartet wird, wird ein Ereignis „`Sicherungsstart`“ angezeigt. Wenn das Backup abgeschlossen ist, wird ein Ereignis „`Backup Complete`“ angezeigt.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Monitor*.
+. Klicken Sie auf der Seite Monitor auf *Events*.
+. (Optional) Geben Sie im Feld Filter das Start- oder Enddatum, die Ereigniskategorie (z. B. Backup, Ressourcengruppe oder Richtlinie) und den Schweregrad ein, und klicken Sie auf *Anwenden*. Alternativ können Sie auch Zeichen in das Suchfeld eingeben.
+. Zeigen Sie die Liste der Ereignisse an.
+
+
+
+
+== Monitoring von Protokollen
+
+Sie können SnapCenter-Serverprotokolle, SnapCenter-Host-Agent-Protokolle und Plug-in-Protokolle anzeigen und herunterladen. Sie sollten die Protokolle anzeigen, die Ihnen bei der Fehlerbehebung helfen.
+
+*Über diese Aufgabe*
+
+Sie können die Protokolle filtern, um nur einen bestimmten Schweregrad für das Protokoll anzuzeigen:
+
+* Debuggen
+* Info
+* Warnen
+* Fehler
+* Tödlich
+
+
+Sie können auch Protokolle auf Jobebene abrufen, z. B. Protokolle, die Ihnen dabei helfen, den Grund für einen fehlgeschlagbaren Backup-Job zu beheben. Verwenden Sie für Protokolle auf Jobebene die Option *Monitor* > *Jobs*.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Monitor*.
+. Wählen Sie auf der Seite Jobs einen Job aus und klicken Sie auf Protokolle herunterladen.
++
+Der heruntergeladene Ordner mit gezippten Daten enthält die Jobprotokolle und die allgemeinen Protokolle. Der Name des gezippten Ordners enthält die Job-id und den ausgewählten Jobtyp.
+
+. Klicken Sie auf der Seite Monitor auf *Protokolle*.
+. Wählen Sie Protokolltyp, Host und Instanz aus.
++
+Wenn Sie Logtyp als *Plugin* auswählen, können Sie einen Host oder ein SnapCenter Plug-in auswählen. Dies ist nicht möglich, wenn der Protokolltyp *Server* lautet.
+
+. Um die Protokolle nach einer bestimmten Quell-, Nachrichten- oder Protokollebene zu filtern, klicken Sie oben in der Spaltenüberschrift auf das Filtersymbol.
++
+Um alle Protokolle anzuzeigen, wählen Sie *größer oder gleich* als die `Debug` Ebene.
+
+. Klicken Sie Auf *Aktualisieren*.
+. Zeigen Sie die Liste der Protokolle an.
+. Klicken Sie auf *Download*, um die Protokolle herunterzuladen.
++
+Der heruntergeladene Ordner mit gezippten Daten enthält die Jobprotokolle und die allgemeinen Protokolle. Der Name des gezippten Ordners enthält die Job-id und den ausgewählten Jobtyp.
+
+
+
+In großen Konfigurationen für eine optimale Performance sollten Sie die Protokolleinstellungen für SnapCenter mit dem PowerShell Cmdlet auf ein minimales Level setzen.
+
+`Set-SmLogSettings -LogLevel All -MaxFileSize 10MB -MaxSizeRollBackups 10 -JobLogsMaxFileSize 10MB -Server`
+
+
+NOTE: Führen Sie das Cmdlet aus, um auf Daten zum Systemzustand oder zur Konfiguration zuzugreifen, die nach Abschluss eines Failover-Jobs abgeschlossen sind `Get-SmRepositoryConfig`.
+
+
+
+== Entfernen Sie Jobs und Protokolle aus SnapCenter
+
+Sie können Backup-, Restore-, Klon- und Verifizierungsaufgaben und Protokolle aus SnapCenter entfernen. SnapCenter speichert erfolgreiche und fehlgeschlagene Job-Protokolle unbeschränkt, es sei denn, Sie entfernen sie. Möglicherweise möchten Sie sie entfernen, um den Storage aufzufüllen.
+
+*Über diese Aufgabe*
+
+Derzeit dürfen keine Jobs in Betrieb sein. Sie können einen bestimmten Job entfernen, indem Sie eine Job-ID angeben oder Jobs innerhalb eines bestimmten Zeitraums entfernen.
+
+Sie müssen den Host nicht in den Wartungsmodus versetzen, um Jobs zu entfernen.
+
+*Schritte*
+
+. Starten Sie PowerShell.
+. Geben Sie an der Eingabeaufforderung Folgendes ein: `Open-SMConnection`
+. Geben Sie an der Eingabeaufforderung Folgendes ein: `Remove-SmJobs`
+. Klicken Sie im linken Navigationsbereich auf *Monitor*.
+. Klicken Sie auf der Seite Überwachen auf *Jobs*.
+. Überprüfen Sie auf der Seite Jobs den Status des Jobs.
+
+
+*Weitere Informationen*
+
+Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ können Sie auch auf die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["SnapCenter Software Cmdlet Referenzhandbuch"^].

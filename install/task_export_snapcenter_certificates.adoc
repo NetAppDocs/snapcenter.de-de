@@ -1,0 +1,65 @@
+---
+permalink: install/task_export_snapcenter_certificates.html 
+sidebar: sidebar 
+keywords: exporting certificates 
+summary: Exportieren von SnapCenter-Zertifikaten 
+---
+= Exportieren von SnapCenter-Zertifikaten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+*Schritte*
+
+. Gehen Sie zur Microsoft Management Console (MMC) und klicken Sie dann auf *Datei* > *Snap-in hinzufügen/entfernen*.
+. Wählen Sie im Fenster Snap-ins hinzufügen oder entfernen die Option *Zertifikate* und klicken Sie dann auf *Hinzufügen*.
+. Wählen Sie im Snap-in-Fenster Zertifikate die Option *Mein Benutzerkonto* aus und klicken Sie dann auf *Fertig stellen*.
+. Klicken Sie Auf *Konsolenwurzel* > *Zertifikate - Aktueller Benutzer* > *Vertrauenswürdige Stammzertifizierungsbehörden* > *Zertifikate*.
+. Klicken Sie mit der rechten Maustaste auf das Zertifikat mit dem SnapCenter Friendly Name, und wählen Sie dann *Alle Aufgaben* > *Exportieren* aus, um den Exportassistenten zu starten.
+. Füllen Sie den Assistenten wie folgt aus:
++
+|===
+| In diesem Fenster des Assistenten... | Gehen Sie wie folgt vor... 
+
+
+ a| 
+Privaten Schlüssel Exportieren
+ a| 
+Wählen Sie die Option *Ja, exportieren Sie den privaten Schlüssel* und klicken Sie dann auf *Weiter*.
+
+
+
+ a| 
+Dateiformat Exportieren
+ a| 
+Keine Änderungen vornehmen; klicken Sie auf *Weiter*.
+
+
+
+ a| 
+Sicherheit
+ a| 
+Geben Sie das neue Passwort an, das für das exportierte Zertifikat verwendet werden soll, und klicken Sie dann auf *Weiter*.
+
+
+
+ a| 
+Zu exportierende Datei
+ a| 
+Geben Sie einen Dateinamen für das exportierte Zertifikat an (Sie müssen .pfx verwenden), und klicken Sie dann auf *Weiter*.
+
+
+
+ a| 
+Assistent zum Exportieren von Zertifikaten abschließen
+ a| 
+Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*, um den Export zu starten.
+
+|===
+
+
+*Ergebnisse*
+
+Zertifikate werden im .pfx-Format exportiert.

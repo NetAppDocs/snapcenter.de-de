@@ -1,0 +1,56 @@
+---
+permalink: protect-sco/task_back_up_oracle_database_resource_groups.html 
+sidebar: sidebar 
+keywords: backup, resource group 
+summary: Eine Ressourcengruppe ist eine Sammlung von Ressourcen auf einem Host oder Cluster. Für alle in der Ressourcengruppe definierten Ressourcen wird ein Sicherungsvorgang in der Ressourcengruppe durchgeführt. 
+---
+= Sichern Sie Oracle Database Resource Groups
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Eine Ressourcengruppe ist eine Sammlung von Ressourcen auf einem Host oder Cluster. Für alle in der Ressourcengruppe definierten Ressourcen wird ein Sicherungsvorgang in der Ressourcengruppe durchgeführt.
+
+Auf der Seite „Ressourcen“ können Sie ein Backup einer Ressourcengruppe nach Bedarf erstellen. Wenn eine Ressourcengruppe über eine Richtlinie und einen konfigurierten Zeitplan verfügt, werden die Backups automatisch gemäß dem Zeitplan durchgeführt.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Wählen Sie auf der Seite Ressourcen in der Liste *Ansicht* die Option *Ressourcengruppe* aus.
++
+Sie können die Ressourcengruppe entweder durch Eingabe des Ressourcengruppennamens in das Suchfeld oder durch Klicken auf * durchsuchenimage:../media/filter_icon.gif[""]* Und dann das Tag auswählen. Sie können dann auf * klickenimage:../media/filter_icon.gif[""]* Zum Schließen des Filterfensters.
+
+. Wählen Sie auf der Seite Ressourcengruppen die Ressourcengruppe aus, die Sie sichern möchten, und klicken Sie dann auf *Jetzt sichern*.
++
+
+NOTE: Wenn Sie eine föderierte Ressourcengruppe mit zwei Datenbanken haben und eine der Datenbanken Datendatei auf nicht-NetApp-Storage hat, wird der Backup-Vorgang abgebrochen, obwohl sich die andere Datenbank auf NetApp Storage befindet.
+
+. Führen Sie auf der Seite Backup die folgenden Schritte aus:
++
+.. Wenn Sie der Ressourcengruppe mehrere Richtlinien zugeordnet haben, wählen Sie aus der Dropdown-Liste *Richtlinie* die Richtlinie aus, die Sie zum Sichern verwenden möchten.
++
+Wenn die für das On-Demand-Backup ausgewählte Richtlinie einem Backup-Zeitplan zugeordnet ist, werden die On-Demand-Backups auf Basis der für den Zeitplantyp festgelegten Aufbewahrungseinstellungen beibehalten.
+
+.. Klicken Sie Auf *Backup*.
+
+
+. Überwachen Sie den Fortschritt des Vorgangs, indem Sie auf *Monitor* > *Jobs* klicken.
+
+
+*Nach Ihrer Beendigung*
+
+* In AIX Setup können Sie den Befehl lkdev zum Sperren und den Befehl rendev verwenden, um die Festplatten umzubenennen, auf denen sich die gesicherte Datenbank befand.
++
+Das Sperren oder Umbenennen von Geräten hat keine Auswirkungen auf den Wiederherstellungsvorgang, wenn Sie die Wiederherstellung mit diesem Backup durchführen.
+
+* Wenn der Backup-Vorgang fehlschlägt, weil die Ausführungszeit der Datenbankabfrage den Timeout-Wert überschritten hat, sollten Sie den Wert der PARAMETER ORACLE_SQL_QUERY_TIMEOUT und ORACLE_PLUGIN_SQL_QUERY_TIMEOUT ändern, indem Sie das Cmdlet Set-SmConfigSettings ausführen:
++
+Nachdem Sie den Wert der Parameter geändert haben, starten Sie den SnapCenter-Plug-in-Loader-Dienst (SPL) neu, indem Sie den folgenden Befehl ausführen `/opt/NetApp/snapcenter/spl/bin/spl restart`
+
+* Wenn die Datei nicht zugänglich ist und der Mount-Punkt während des Verifizierungsvorgangs nicht verfügbar ist, kann der Vorgang mit dem Fehlercode DBV-00100 der angegebenen Datei fehlschlagen. Sie sollten die Werte der Parameter VERIFICATION_DELAY und VERIFICATION_RETRY_COUNT in sco.properties ändern.
++
+Nachdem Sie den Wert der Parameter geändert haben, starten Sie den SnapCenter-Plug-in-Loader-Dienst (SPL) neu, indem Sie den folgenden Befehl ausführen `/opt/NetApp/snapcenter/spl/bin/spl restart`
+
+

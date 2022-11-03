@@ -1,0 +1,87 @@
+---
+permalink: protect-scsql/reference_types_of_restore_operations.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SQL Server 
+summary: Sie können SnapCenter verwenden, um verschiedene Arten von Wiederherstellungsvorgängen auf SQL Server-Ressourcen durchzuführen. 
+---
+= Arten von Wiederherstellungsvorgängen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können SnapCenter verwenden, um verschiedene Arten von Wiederherstellungsvorgängen auf SQL Server-Ressourcen durchzuführen.
+
+* Wiederherstellung im Minutenschnoch
+* Wiederherstellung auf einen früheren Zeitpunkt
+
+
+In den folgenden Situationen lassen sich Wiederherstellungen bis zur Minute durchführen oder ein Recovery auf einen früheren Zeitpunkt durchführen:
+
+* Wiederherstellung aus sekundärem SnapMirror oder SnapVault Storage
+* Wiederherstellung auf alternativem Pfad (Speicherort)
+
+
+
+NOTE: SnapCenter bietet keine Unterstützung für Volume-basierte SnapRestore.
+
+
+
+== Führen Sie Wiederherstellungen minutengenau durch
+
+In einem up-to-the-minute-Wiederherstellungsvorgang (standardmäßig ausgewählt) werden Datenbanken bis zum Fehlerpunkt wiederhergestellt. SnapCenter erreicht dies durch folgende Sequenz:
+
+. Sichert das letzte aktive Transaktionsprotokoll vor dem Wiederherstellen der Datenbank.
+. Stellt die Datenbanken aus dem vollständigen Datenbank-Backup wieder her, das Sie auswählen.
+. Wendet alle Transaktionsprotokolle an, die nicht den Datenbanken zugeschrieben wurden (einschließlich Transaktions-Logs aus den Backups vom Zeitpunkt der Erstellung des Backups bis zum aktuellsten Zeitpunkt).
++
+Transaktionsprotokolle werden nach vorne verschoben und auf alle ausgewählten Datenbanken angewendet.
+
+
+
+Für eine minutengenaue Wiederherstellung ist ein zusammenhängender Satz von Transaktionsprotokollen erforderlich.
+
+Da der SnapCenter die Transaktionsprotokolle der SQL Server-Datenbank nicht aus den Log-shipping Backup-Dateien wiederherstellen kann (durch die Protokollversand können Sie Transaktions-Log-Backups automatisch von einer primären Datenbank auf einer primären Serverinstanz an eine oder mehrere sekundäre Datenbanken auf separaten sekundären Serverinstanzen senden), Sie können keine up-to-the-minute-Wiederherstellung aus den Transaktions-Log-Backups durchführen. Aus diesem Grund sollten Sie den SnapCenter verwenden, um Ihre Transaktions-Log-Dateien für die SQL Server-Datenbank zu sichern.
+
+Wenn Sie keine up-to-the-minute-Wiederherstellung für alle Backups benötigen, können Sie die Transaktions-Log-Backup-Aufbewahrung Ihres Systems mithilfe der Backup-Richtlinien konfigurieren.
+
+
+
+== Beispiel für einen minutengenauen Restore-Vorgang
+
+Angenommen, Sie führen das SQL Server-Backup täglich mittags und mittwochs um 4:00 Uhr aus Sie müssen eine Wiederherstellung aus einem Backup durchführen. Aus irgendeinem Grund, die Sicherung von Mittwoch Mittag nicht überprüft, so entscheiden Sie sich für die Wiederherstellung von Dienstag Mittag Backup. Wenn das Backup wiederhergestellt wird, werden alle Transaktionsprotokolle nach vorn verschoben und auf die wiederhergestellten Datenbanken angewendet, beginnend mit denen, die nicht begangen wurden, als Sie am Dienstag das Backup erstellt haben und das letzte Transaktions-Log, das am Mittwoch um 4:00 Uhr geschrieben wurde, durchgehen (Wenn die Transaktions-Logs gesichert wurden).
+
+
+
+== Wiederherstellung auf einen früheren Zeitpunkt
+
+In einer zeitpunktgenauen Restore-Operation werden Datenbanken nur auf eine bestimmte Zeit aus der Vergangenheit wiederhergestellt. Ein Point-in-Time-Wiederherstellungsvorgang findet in den folgenden Situationen statt:
+
+* Die Datenbank wird zu einem bestimmten Zeitpunkt in einem gesicherten Transaktions-Log wiederhergestellt.
+* Die Datenbank ist wiederhergestellt, und nur ein Teil der gesicherten Transaktions-Logs wird angewendet.
+
+
+
+NOTE: Durch das Wiederherstellen einer Datenbank zu einem bestimmten Zeitpunkt wird ein neuer Recovery-Pfad benötigt.
+
+Die folgende Abbildung zeigt die Probleme bei der Durchführung eines Point-in-Time-Restore-Vorgangs:
+
+image::../media/point_in_time_recovery_path.gif[Wiederherstellung auf einen früheren Zeitpunkt]
+
+Im Image besteht der Recovery-Pfad 1 aus einem kompletten Backup gefolgt von mehreren Transaktions-Log-Backups. Sie stellen die Datenbank zu einem bestimmten Zeitpunkt wieder her. Nach dem zeitpunktgenauen Restore werden neue Transaktions-Log-Backups erstellt, was Recovery-Pfad 2 zur Folge hat. Die neuen Transaktions-Log-Backups werden ohne neue vollständige Sicherung erstellt. Aufgrund von Datenbeschädigungen oder anderen Problemen können Sie die aktuelle Datenbank nicht wiederherstellen, bis ein neues vollständiges Backup erstellt wird. Darüber hinaus ist es nicht möglich, die in Recovery-Pfad 2 erstellten Transaktionsprotokolle auf das vollständige Backup des Recovery-Pfads 1 anzuwenden.
+
+Wenn Sie Backups des Transaktionsprotokolls anwenden, können Sie auch ein bestimmtes Datum und eine bestimmte Uhrzeit angeben, zu der Sie die Anwendung der gesicherten Transaktionen beenden möchten. Dazu geben Sie ein Datum und eine Uhrzeit innerhalb des verfügbaren Bereichs an, und der SnapCenter entfernt alle Transaktionen, die vor diesem Zeitpunkt nicht durchgeführt wurden. Mit dieser Methode können Sie Datenbanken bis zu einem Zeitpunkt vor einer Beschädigung wiederherstellen oder nach einer versehentlichen Datenbank- oder Tabellenlöschung wiederherstellen.
+
+
+
+== Beispiel für einen Point-in-Time Restore-Vorgang
+
+Angenommen, Sie erstellen um Mitternacht volle Datenbank-Backups und ein Transaktions-Log-Backup jede Stunde. Die Datenbank stürzt um 9:45 Uhr ab, aber Sie sichern immer noch die Transaktionsprotokolle der fehlgeschlagenen Datenbank. Es stehen folgende Point-in-Time-Wiederherstellungsszenarien zur Auswahl:
+
+* Stellen Sie das vollständige Datenbank-Backup um Mitternacht wieder her und akzeptieren Sie den Verlust der danach vorgenommenen Datenbankänderungen. (Option: Keine)
+* Stellen Sie das vollständige Datenbank-Backup wieder her, und wenden Sie alle Transaktions-Log-Backups bis 9:45 Uhr an (Option: Bis protokollieren)
+* Stellen Sie die vollständige Datenbank-Sicherung wieder her und wenden Sie Transaktions-Log-Backups an. Geben Sie dabei die Zeit an, die die Transaktionen von den letzten Transaktions-Log-Backups wiederherstellen sollen. (Option: Nach bestimmter Zeit)
+
+
+In diesem Fall würden Sie das Datum und die Uhrzeit berechnen, zu der ein bestimmter Fehler gemeldet wurde. Alle Transaktionen, die vor dem angegebenen Datum und der angegebenen Uhrzeit nicht begangen wurden, werden entfernt.

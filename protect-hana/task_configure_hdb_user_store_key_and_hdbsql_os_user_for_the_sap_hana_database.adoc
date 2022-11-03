@@ -1,0 +1,40 @@
+---
+permalink: protect-hana/task_configure_hdb_user_store_key_and_hdbsql_os_user_for_the_sap_hana_database.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie müssen den HDB-Benutzerspeicherschlüssel und den HDBSQL OS-Benutzer konfigurieren, um Datenschutzvorgänge in SAP HANA-Datenbanken durchzuführen. 
+---
+= Konfiguration des HDB-Benutzerspeicherschlüssels und des HDBSQL OS-Benutzers für die SAP HANA-Datenbank
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen den HDB-Benutzerspeicherschlüssel und den HDBSQL OS-Benutzer konfigurieren, um Datenschutzvorgänge in SAP HANA-Datenbanken durchzuführen.
+
+*Was Sie brauchen*
+
+* Wenn in der SAP HANA-Datenbank nicht der HDB Secure User Store Key und der HDB SQL OS User konfiguriert sind, wird nur für die automatisch erkannten Ressourcen ein rotes Vorhängeschloss-Symbol angezeigt. Wenn sich während einer anschließenden Ermittlung der konfigurierte HDB Secure User Store Key als falsch herausstellte oder keinen Zugriff auf die Datenbank selbst bot, wird das rote Vorhängeschloss-Symbol erneut angezeigt.
+* Sie müssen den HDB Secure User Store Key und den HDB SQL OS Benutzer so konfigurieren, dass sie die Datenbank schützen oder einer Ressourcengruppe hinzufügen können, um Datenschutzvorgänge durchzuführen.
+* Sie müssen HDB SQL OS User konfigurieren, um auf die Systemdatenbank zugreifen zu können. Wenn HDB SQL OS User für den Zugriff auf nur die Mandantendatenbank konfiguriert ist, schlägt der Erkennungsvorgang fehl.
+
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann SnapCenter-Plug-in für SAP HANA-Datenbank aus der Liste aus.
+. Wählen Sie auf der Seite Ressourcen den Ressourcentyp aus der Liste *Ansicht* aus.
+. (Optional) Klicken Sie Auf image:../media/filter_icon.gif[""] Und wählen Sie den Hostnamen aus.
++
+Sie können dann auf klicken image:../media/filter_icon.gif[""] Um den Filterbereich zu schließen.
+
+. Wählen Sie die Datenbank aus, und klicken Sie dann auf *Datenbank konfigurieren*.
+. Geben Sie im Abschnitt Datenbankeinstellungen konfigurieren den HDB-Schlüssel für sicheren Benutzerspeicher ein.
++
+
+NOTE: Der Plug-in-Hostname wird angezeigt und HDB SQL OS User wird automatisch in <sid>ADM eingetragen.
+
+. Klicken Sie auf *OK*.
+
+
+Sie können die Datenbankkonfiguration auf der Seite Topology ändern.

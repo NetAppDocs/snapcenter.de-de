@@ -1,0 +1,97 @@
+---
+permalink: protect-hana/task_restore_and_recover_a_manually_added_resource_backup.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: Mit SnapCenter können Daten von einem oder mehreren Backups wiederhergestellt werden. 
+---
+= Wiederherstellen eines manuell hinzugefügten Ressourcen-Backups
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit SnapCenter können Daten von einem oder mehreren Backups wiederhergestellt werden.
+
+*Was Sie brauchen*
+
+* Sie müssen die Ressource oder Ressourcengruppen gesichert haben.
+* Sie müssen einen Backup-Vorgang abgebrochen haben, der derzeit für die Ressource oder Ressourcengruppe ausgeführt wird, die Sie wiederherstellen möchten.
+* Für Befehle vor der Wiederherstellung, nach der Wiederherstellung, nach dem Einhängen und vor dem unmounten sollten Sie überprüfen, ob die Befehle in der Befehlsliste auf dem Plug-in-Host aus den folgenden Pfaden vorhanden sind:
++
+Für Windows: _C:\Programmdateien\NetApp\SnapCenter\SnapCenter Plug-in Creator\etc\allowed_befiehlt_list.txt_
+
++
+Für Linux: _/var/opt/snapcenter/scc/allowed_befiehlt_list.txt_
+
++
+
+NOTE: Wenn die Befehle in der Befehlsliste nicht vorhanden sind, schlägt der Vorgang fehl.
+
+
+
+*Über diese Aufgabe*
+
+* Dateibasierte Backup-Kopien können nicht aus SnapCenter wiederhergestellt werden.
+* Nach einem Upgrade auf SnapCenter 4.3 können die in SnapCenter 4.2 erstellten Backups wiederhergestellt werden, können aber nicht wiederhergestellt werden. Zur Wiederherstellung der in SnapCenter 4.2 erstellten Backups muss HANA Studio oder HANA-Recovery-Skripte außerhalb von SnapCenter verwendet werden.
+
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Filtern Sie auf der Seite Ressourcen die Ressourcen aus der Dropdown-Liste *Ansicht* nach Ressourcentyp.
++
+Die Ressourcen werden zusammen mit Typ, Host, zugehörigen Ressourcengruppen und -Richtlinien sowie dem Status angezeigt.
+
++
+
+NOTE: Obwohl sich ein Backup möglicherweise für eine Ressourcengruppe befindet, müssen Sie bei der Wiederherstellung die einzelnen Ressourcen auswählen, die wiederhergestellt werden sollen.
+
++
+Wenn die Ressource nicht geschützt ist, wird „`not protected`“ in der Spalte Gesamtstatus angezeigt. Dies kann entweder bedeuten, dass die Ressource nicht geschützt ist oder dass die Ressource durch einen anderen Benutzer gesichert wurde.
+
+. Wählen Sie die Ressource aus, oder wählen Sie eine Ressourcengruppe aus, und wählen Sie dann eine Ressource in dieser Gruppe aus.
++
+Die Seite „Ressourcentopologie“ wird angezeigt.
+
+. Wählen Sie in der Ansicht „Kopien verwalten“ die Option *Backups* aus den primären oder sekundären (gespiegelten oder ausgelagerten) Speichersystemen aus.
+. Wählen Sie in der Tabelle primäre(n) Backups das Backup aus, von dem Sie wiederherstellen möchten, und klicken Sie dann auf *image:../media/restore_icon.gif["Symbol Wiederherstellen"]*.
++
+image::../media/restoring_resource.gif[Wiederherstellen von Ressourcen]
+
+. Wählen Sie auf der Seite „Bereich wiederherstellen“ die Option *vollständige Ressource* oder *Dateiebene* aus.
++
+.. Wenn Sie *Complete Resource* auswählen, werden alle konfigurierten Datenvolumen der SAP HANA Datenbank wiederhergestellt.
++
+Wenn die Ressource Volumes oder qtrees enthält, werden die Snapshot Kopien, die nach der zum Wiederherstellen ausgewählten Snapshot Kopie auf solchen Volumes oder qtrees erstellt wurden, gelöscht und können nicht wiederhergestellt werden. Wenn auch eine andere Ressource auf denselben Volumes oder qtrees gehostet wird, wird diese Ressource ebenfalls gelöscht.
+
+.. Wenn Sie *File Level* auswählen, können Sie entweder *Alle* auswählen oder die spezifischen Volumes oder qtrees auswählen und dann den Pfad eingeben, der mit diesen Volumes oder qtrees verbunden ist, getrennt durch Kommas
++
+*** Sie können mehrere Volumes und qtrees auswählen.
+*** Wenn der Ressourcentyp LUN ist, wird die gesamte LUN wiederhergestellt.
++
+Sie können mehrere LUNs auswählen.
+
+
+
+
+
++
+
+NOTE: Wenn Sie *Alle* auswählen, werden alle Dateien auf den Volumes, qtrees oder LUNs wiederhergestellt.
+
+. Geben Sie auf der Seite Pre OPS die Befehle vor dem Wiederherstellen ein und heben Sie sie ab, bevor Sie einen Wiederherstellungsauftrag ausführen.
++
+Unmount-Befehle sind für automatisch erkannte Ressourcen nicht verfügbar.
+
+. Geben Sie auf der Seite Post OPS Mount- und Post-Restore-Befehle ein, die ausgeführt werden sollen, nachdem eine Wiederherstellung durchgeführt wurde.
++
+Mount-Befehle sind für automatisch erkannte Ressourcen nicht verfügbar.
+
+. Wählen Sie auf der Benachrichtigungsseite aus der Dropdown-Liste *E-Mail-Präferenz* die Szenarien aus, in denen Sie die E-Mails versenden möchten.
++
+Außerdem müssen Sie die E-Mail-Adressen für Absender und Empfänger sowie den Betreff der E-Mail angeben. SMTP muss auch auf der Seite *Einstellungen* > *Globale Einstellungen* konfiguriert werden.
+
+. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
+. Überwachen Sie den Fortschritt des Vorgangs, indem Sie auf *Monitor* > *Jobs* klicken.
+

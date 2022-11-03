@@ -1,0 +1,16 @@
+---
+permalink: protect-scsql/concept_multiple_databases_on_the_same_volume.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Sie können alle Datenbanken auf demselben Volume platzieren, da die Backup-Richtlinie über die Option verfügt, die maximale Datenbank pro Backup \ festzulegen (der Standardwert ist 100\).' 
+---
+= Mehrere Datenbanken auf demselben Volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können alle Datenbanken auf demselben Volume ablegen, da die Backup-Richtlinie die Möglichkeit hat, die maximale Datenbank pro Backup festzulegen (Standardwert ist 100).
+
+Wenn Sie beispielsweise 200 Datenbanken auf demselben Volume haben, werden zwei Snapshot Kopien mit je 100 Datenbanken in beiden Snapshot Kopien erstellt.

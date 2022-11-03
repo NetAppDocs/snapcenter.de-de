@@ -1,0 +1,83 @@
+---
+permalink: admin/concept_manage_resources_of_untrusted_domains.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Zusätzlich zum Managen von Hosts in vertrauenswürdigen Active Directory \(AD\) Domänen managt SnapCenter auch Hosts in mehreren AD nicht vertrauenswürdigen Domänen. Die nicht vertrauenswürdigen AD-Domänen müssen beim SnapCenter-Server registriert werden. SnapCenter unterstützt Benutzer und Gruppen aus mehreren nicht vertrauenswürdigen AD-Domänen.' 
+---
+= Management von Ressourcen von nicht vertrauenswürdigen Domänen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Neben dem Management von Hosts in vertrauenswürdigen Active Directory (AD) Domänen managt SnapCenter auch Hosts in mehreren AD-Domänen, die nicht vertrauenswürdig sind. Die nicht vertrauenswürdigen AD-Domänen müssen beim SnapCenter-Server registriert werden. SnapCenter unterstützt Benutzer und Gruppen aus mehreren nicht vertrauenswürdigen AD-Domänen.
+
+Sie können den SnapCenter-Server auf einem Computer installieren, der sich entweder in einer Domäne oder einer Arbeitsgruppe befindet. Um den SnapCenter-Server zu installieren, müssen Sie die Domänenanmeldeinformationen angeben, wenn sich der Computer in einer Domäne befindet oder sich die lokalen Administratoranmeldeinformationen befinden, wenn sich der Computer in einer Arbeitsgruppe befindet.
+
+Active Directory-Gruppen (AD), die zu Domänen gehören, die nicht mit dem SnapCenter-Server registriert sind, werden nicht unterstützt. Obwohl Sie SnapCenter-Rollen mit diesen AD-Gruppen erstellen können, schlägt die Anmeldung beim SnapCenter-Server mit der folgenden Fehlermeldung fehl: Der Benutzer, den Sie sich anmelden möchten, gehört nicht zu Rollen. Bitte wenden Sie sich an den Administrator.
+
+
+
+== Ändern Sie nicht vertrauenswürdige Domains
+
+Sie können eine nicht vertrauenswürdige Domäne ändern, wenn Sie die IP-Adressen des Domänencontrollers oder den vollständig qualifizierten Domänennamen (FQDN) aktualisieren möchten.
+
+*Über diese Aufgabe*
+
+Nachdem Sie den FQDN geändert haben, funktionieren die zugeordneten Assets (Hosts, Benutzer und Gruppen) möglicherweise nicht wie erwartet.
+
+Zum Ändern einer nicht vertrauenswürdigen Domäne können Sie entweder die SnapCenter Benutzeroberfläche oder PowerShell Commandlets verwenden.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Einstellungen*.
+. Klicken Sie auf der Seite Einstellungen auf *Globale Einstellungen*.
+. Klicken Sie auf der Seite Globale Einstellungen auf *Domäneneinstellungen*.
+. Klicken Sie Auf image:../media/edit_icon.gif["Symbol bearbeiten"], Und geben Sie dann die folgenden Details:
++
+|===
+| Für dieses Feld... | Tun Sie das... 
+
+
+ a| 
+Domain-FQDN
+ a| 
+Geben Sie den FQDN an, und klicken Sie auf *Auflösen*.
+
+
+
+ a| 
+IP-Adressen des Domänencontrollers
+ a| 
+Wenn der Domain-FQDN nicht lösbar ist, geben Sie eine oder mehrere IP-Adressen des Domänencontrollers an.
+
+|===
+. Klicken Sie auf *OK*.
+
+
+
+
+== Nicht vertrauenswürdige Active Directory-Domänen werden nicht registriert
+
+Sie können die Registrierung einer nicht vertrauenswürdigen Active Directory-Domäne aufheben, wenn Sie die Assets, die dieser Domäne zugeordnet sind, nicht verwenden möchten.
+
+*Was Sie brauchen*
+
+Sie sollten die Hosts, Benutzer, Gruppen und Anmeldeinformationen entfernt haben, die der nicht vertrauenswürdigen Domäne zugeordnet sind.
+
+*Über diese Aufgabe*
+
+* Nachdem die Domäne vom SnapCenter-Server nicht registriert wurde, können Benutzer dieser Domäne nicht auf den SnapCenter-Server zugreifen.
+* Wenn es zugeordnete Assets (Hosts, Benutzer und Gruppen) gibt, sind die Assets nach der Registrierung der Domäne nicht mehr betriebsbereit.
+* Um die Registrierung einer nicht vertrauenswürdigen Domäne zu aufheben, können Sie entweder die SnapCenter Benutzeroberfläche oder PowerShell Commandlets verwenden.
+
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Einstellungen*.
+. Klicken Sie auf der Seite Einstellungen auf *Globale Einstellungen*.
+. Klicken Sie auf der Seite Globale Einstellungen auf *Domäneneinstellungen*.
+. Wählen Sie aus der Liste der Domänen die Domain aus, die Sie aufheben möchten.
+. Klicken Sie Auf image:../media/delete_icon.gif[""], Und klicken Sie dann auf *OK*.
+

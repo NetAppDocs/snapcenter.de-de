@@ -1,0 +1,24 @@
+---
+permalink: sc-automation/overview_rest_apis.html 
+sidebar: sidebar 
+keywords: REST APIs, swagger 
+summary: Beschreibt die Verwendung VON REST-APIs zur Durchführung mehrerer SnapCenter-Managementvorgänge. REST-APIs sind über die Swagger Webseite zugänglich. 
+---
+= Übersicht ÜBER REST-APIs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+REST-APIs können zur Durchführung mehrerer SnapCenter-Managementvorgänge verwendet werden. REST-APIs sind über die Swagger Webseite zugänglich.
+
+Sie können auf die Swagger-Webseite unter _\https://<SnapCenter_IP_address_or_name>:<SnapCenter_port>/swagger/_ zugreifen, um die REST-API-Dokumentation anzuzeigen, sowie einen API-Aufruf manuell ausstellen.
+
+Folgende Plug-ins unterstützen REST-APIs:
+
+* Plug-in für Microsoft SQL Server
+* Plug-in für SAP HANA Database
+* Benutzerdefinierte Plug-ins
+* Plug-in für Oracle Database
+

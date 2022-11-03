@@ -1,0 +1,91 @@
+---
+permalink: admin/concept_manage_policies.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können Richtlinien von einer Ressource oder Ressourcengruppe trennen, ändern, löschen, anzeigen und kopieren. 
+---
+= Management von Richtlinien
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Richtlinien von einer Ressource oder Ressourcengruppe trennen, ändern, löschen, anzeigen und kopieren.
+
+
+
+== Richtlinien ändern
+
+Sie können die Replizierungsoptionen, die Aufbewahrungseinstellungen für Snapshot Kopien, die Anzahl der Wiederholversuche oder die Informationen über Skripte ändern, während eine Richtlinie an eine Ressource oder Ressourcengruppe angehängt ist. Sie können den Terminplantyp (Häufigkeit) nur ändern, wenn Sie eine Richtlinie trennen.
+
+*Über diese Aufgabe*
+
+Das Ändern des Zeitplantyps in einer Richtlinie erfordert zusätzliche Schritte, da der SnapCenter-Server den Zeitplantyp nur dann registriert, wenn die Richtlinie an eine Ressource oder Ressourcengruppe angeschlossen ist.
+
+|===
+| Ihr Ziel ist | Dann... 
+
+
+ a| 
+Fügen Sie einen zusätzlichen Terminplantyp hinzu
+ a| 
+Erstellen Sie eine neue Richtlinie, und fügen Sie sie an die erforderlichen Ressourcen oder Ressourcengruppen an.
+
+Wenn z. B. eine Ressourcengruppenrichtlinie nur stündliche Backups angibt und Sie auch tägliche Backups hinzufügen möchten, können Sie eine Richtlinie mit einem täglichen Zeitplantyp erstellen und sie der Ressourcengruppe hinzufügen. Die Ressourcengruppe hätte dann zwei Richtlinien: Stündlich und täglich.
+
+
+
+ a| 
+Entfernen oder ändern Sie einen Planungstyp
+ a| 
+Führen Sie Folgendes aus:
+
+. Trennen Sie die Richtlinie von allen Ressourcen- und Ressourcengruppen, die diese Richtlinie verwenden.
+. Ändern Sie den Terminplantyp.
+. Hängen Sie die Richtlinie erneut an alle Ressourcen und Ressourcengruppen an.
+
+
+Wenn z. B. eine Richtlinie stündliche Backups angibt und Sie diese in tägliche Backups ändern möchten, müssen Sie zuerst die Richtlinie trennen.
+
+|===
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Einstellungen*.
+. Klicken Sie auf der Seite Einstellungen auf *Richtlinien*.
+. Wählen Sie die Richtlinie aus, und klicken Sie dann auf *Ändern*.
+. Ändern Sie die Informationen, und klicken Sie dann auf *Fertig stellen*.
+
+
+
+
+== Richtlinien trennen
+
+Sie können Richtlinien jederzeit von einer Ressource oder Ressourcengruppe trennen, wenn diese Richtlinien nicht mehr den Datenschutz für die Ressourcen regeln sollen. Sie müssen eine Richtlinie trennen, bevor Sie sie löschen können oder bevor Sie den Terminplantyp ändern.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Wählen Sie auf der Seite Ressourcen in der Liste *Ansicht* die Option *Ressourcengruppe* aus.
+. Wählen Sie die Ressourcengruppe aus und klicken Sie dann auf *Ressourcengruppe ändern*.
+. Deaktivieren Sie auf der Seite Richtlinien des Assistenten Ressourcengruppe ändern aus der Dropdown-Liste das Häkchen neben den Richtlinien, die Sie entfernen möchten.
+. Nehmen Sie zusätzliche Änderungen an der Ressourcengruppe im Rest des Assistenten vor, und klicken Sie dann auf *Fertig stellen*.
+
+
+
+
+== Richtlinien löschen
+
+Wenn Sie keine Richtlinien mehr benötigen, können Sie sie löschen.
+
+*Was Sie brauchen*
+
+Sie sollten die Richtlinie von Ressourcen- oder Ressourcengruppen trennen, wenn die Richtlinie mit einer Ressource oder Ressourcengruppe verknüpft ist.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Einstellungen*.
+. Klicken Sie auf der Seite Einstellungen auf *Richtlinien*.
+. Wählen Sie die Richtlinie aus, und klicken Sie dann auf *Löschen*.
+. Klicken Sie Auf *Ja*.
+

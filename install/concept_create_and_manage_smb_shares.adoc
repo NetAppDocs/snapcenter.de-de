@@ -1,0 +1,101 @@
+---
+permalink: install/concept_create_and_manage_smb_shares.html 
+sidebar: sidebar 
+keywords: SMB shares 
+summary: 'Um eine SMB3-Freigabe auf einer Storage Virtual Machine (SVM) zu konfigurieren, können Sie entweder die SnapCenter Benutzeroberfläche oder PowerShell Commandlets verwenden.' 
+---
+= SMB-Freigaben erstellen und managen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um eine SMB3-Freigabe auf einer Storage Virtual Machine (SVM) zu konfigurieren, können Sie entweder die SnapCenter Benutzeroberfläche oder PowerShell Commandlets verwenden.
+
+|===
+
+
+| *Best Practice:* die Verwendung der Cmdlets wird empfohlen, da es Ihnen ermöglicht, die Vorteile von Vorlagen mit SnapCenter zur Automatisierung der Share-Konfiguration zu nutzen. 
+|===
+Die Vorlagen kapseln die Best Practices für die Volume- und Share-Konfiguration. Die Vorlagen finden Sie im Ordner Vorlagen im Installationsordner für das SnapCenter-Plug-ins-Paket für Windows.
+
+
+TIP: Wenn Sie sich damit wohlfühlen, können Sie Ihre eigenen Vorlagen nach den bereitgestellten Modellen erstellen. Sie sollten die Parameter in der Cmdlet-Dokumentation überprüfen, bevor Sie eine benutzerdefinierte Vorlage erstellen.
+
+
+
+== Erstellen Sie eine SMB-Freigabe
+
+Auf der Seite „SnapCenter Shares“ können Sie eine SMB3-Freigabe auf einer Storage Virtual Machine (SVM) erstellen.
+
+Datenbanken auf SMB-Freigaben können nicht mit SnapCenter gesichert werden. SMB-Support ist auf die reine Provisionierung beschränkt.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Hosts*.
+. Klicken Sie auf der Host-Seite auf *Shares*.
+. Wählen Sie die SVM aus der Dropdown-Liste *Storage Virtual Machine* aus.
+. Klicken Sie Auf *Neu*.
++
+Das Dialogfeld Neue Freigabe wird geöffnet.
+
+. Definieren Sie im Dialogfeld Neue Freigabe die Freigabe:
++
+|===
+| In diesem Feld... | Tun Sie das... 
+
+
+ a| 
+Beschreibung
+ a| 
+Geben Sie einen beschreibenden Text für die Freigabe ein.
+
+
+
+ a| 
+Freigabename
+ a| 
+Geben Sie den Freigabenamen ein, z. B. „Test_share“.
+
+Der Name, den Sie für die Freigabe eingeben, wird auch als Volume-Name verwendet.
+
+Der Share-Name:
+
+** Muss eine UTF-8-Zeichenfolge sein.
+** Darf folgende Zeichen nicht enthalten: Steuerzeichen von 0x00 bis 0x1F (beide inklusiv), 0x22 (doppelte Anführungszeichen) und die Sonderzeichen `\ / [ ] : (vertical bar) < > + = ; , ?`
+
+
+
+
+ a| 
+Freigabepfad
+ a| 
+** Klicken Sie in das Feld, um einen neuen Dateisystempfad einzugeben, z. B. /.
+** Doppelklicken Sie in das Feld, um eine Liste der vorhandenen Dateisystempfade auszuwählen.
+
+
+|===
+. Wenn Sie mit Ihren Einträgen zufrieden sind, klicken Sie auf *OK*.
++
+SnapCenter erstellt die SMB-Freigabe auf der SVM.
+
+
+
+
+
+== Löschen einer SMB-Freigabe
+
+Sie können eine SMB-Freigabe löschen, wenn Sie sie nicht mehr benötigen.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Hosts*.
+. Klicken Sie auf der Host-Seite auf *Shares*.
+. Klicken Sie auf der Seite Freigaben im Feld *Storage Virtual Machine* auf, um ein Dropdown-Menü mit einer Liste der verfügbaren Storage Virtual Machines (SVMs) anzuzeigen. Wählen Sie dann die SVM für die Freigabe aus, die Sie löschen möchten.
+. Wählen Sie aus der Liste der Freigaben auf der SVM die Freigabe aus, die Sie löschen möchten, und klicken Sie auf *Löschen*.
+. Klicken Sie im Dialogfeld Freigabe löschen auf *OK*.
++
+SnapCenter löscht die SMB-Freigabe von der SVM.
+
+

@@ -1,0 +1,27 @@
+---
+permalink: install/task_configure_iis_application_pools_to_enable_active_directory_read_permissions.html 
+sidebar: sidebar 
+keywords: IIS application pool, active directory, enable 
+summary: 'Sie können Internet Information Services \(IIS\) auf Ihrem Windows-Server so konfigurieren, dass ein benutzerdefiniertes Application Pool-Konto erstellt wird, wenn Sie die Active Directory-Leseberechtigungen für SnapCenter aktivieren müssen.' 
+---
+= Konfigurieren Sie IIS-Anwendungspools, um die Leseberechtigungen von Active Directory zu aktivieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können IIS (Internet Information Services) auf Ihrem Windows-Server so konfigurieren, dass ein benutzerdefiniertes Application Pool-Konto erstellt wird, wenn Sie Active Directory-Leseberechtigungen für SnapCenter aktivieren müssen.
+
+*Schritte*
+
+. Öffnen Sie den IIS-Manager auf dem Windows-Server, auf dem SnapCenter installiert ist.
+. Klicken Sie im linken Navigationsbereich auf *Anwendungspools*.
+. Wählen Sie in der Liste Anwendungspools SnapCenter aus, und klicken Sie dann im Bereich Aktionen auf *Erweiterte Einstellungen*.
+. Wählen Sie Identität aus, und klicken Sie dann auf *...*, um die Identität des SnapCenter-Anwendungspools zu bearbeiten.
+. Geben Sie im Feld Benutzerdefiniertes Konto einen Domänenbenutzer oder Domänenadministratornamen mit der Berechtigung Active Directory Lesen ein.
+. Klicken Sie auf OK.
++
+Das benutzerdefinierte Konto ersetzt das integrierte ApplicationPoolIdentity-Konto für den SnapCenter-Anwendungspool.
+
+

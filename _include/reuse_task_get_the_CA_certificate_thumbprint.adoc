@@ -1,0 +1,30 @@
+= 
+:allow-uri-read: 
+
+
+Ein ZertifikatDaumendruck ist eine hexadezimale Zeichenfolge, die ein Zertifikat identifiziert. Ein Daumendruck wird aus dem Inhalt des Zertifikats mithilfe eines Daumendruckalgorithmus berechnet.
+
+*Schritte*
+
+. Führen Sie auf der GUI folgende Schritte durch:
++
+.. Doppelklicken Sie auf das Zertifikat.
+.. Klicken Sie im Dialogfeld Zertifikat auf die Registerkarte *Details*.
+.. Blättern Sie durch die Liste der Felder und klicken Sie auf *Miniaturdruck*.
+.. Kopieren Sie die hexadezimalen Zeichen aus dem Feld.
+.. Entfernen Sie die Leerzeichen zwischen den hexadezimalen Zahlen.
++
+Wenn der Daumendruck beispielsweise lautet: „a9 09 50 2d d8 2a e4 14 33 e6 f8 38 86 b0 0d 42 77 a3 2a 7b“, wird nach dem Entfernen der Leerzeichen der Text „a909502dd82ae41433e6f83886b00d4277a32a7b“ lauten.
+
+
+
+. Führen Sie Folgendes aus PowerShell aus:
++
+.. Führen Sie den folgenden Befehl aus, um den Daumendruck des installierten Zertifikats aufzulisten und das kürzlich installierte Zertifikat anhand des Betreff-Namens zu identifizieren.
++
+_Get-ChildItem -Path Cert:\LocalMachine\My_
+
+.. Kopieren Sie den Daumendruck.
+
+
+

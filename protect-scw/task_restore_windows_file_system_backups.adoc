@@ -1,0 +1,88 @@
+---
+permalink: protect-scw/task_restore_windows_file_system_backups.html 
+sidebar: sidebar 
+keywords: restore 
+summary: Sie können SnapCenter verwenden, um Backups von Dateisystemen wiederherzustellen. Die Wiederherstellung des Dateisystems ist ein mehrphasiger Prozess, bei dem alle Daten von einem angegebenen Backup an den ursprünglichen Speicherort des Filesystems kopiert werden. 
+---
+= Windows Dateisystemsicherungen wiederherstellen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können SnapCenter verwenden, um Backups von Dateisystemen wiederherzustellen. Die Wiederherstellung des Dateisystems ist ein mehrphasiger Prozess, bei dem alle Daten von einem angegebenen Backup an den ursprünglichen Speicherort des Filesystems kopiert werden.
+
+*Was Sie brauchen*
+
+* Sie müssen das Dateisystem gesichert haben.
+* Wenn ein geplanter Vorgang, z. B. ein Backup-Vorgang, derzeit für ein Dateisystem ausgeführt wird, muss dieser Vorgang abgebrochen werden, bevor Sie einen Wiederherstellungsvorgang starten können.
+* Sie können ein Dateisystem-Backup nur am ursprünglichen Speicherort, nicht in einem alternativen Pfad wiederherstellen.
++
+Sie können keine einzelne Datei aus einem Backup wiederherstellen, da das wiederhergestellte Dateisystem alle Daten überschreibt, die sich am ursprünglichen Speicherort des Dateisystems befinden. Zum Wiederherstellen einer einzelnen Datei aus einem Dateisystem-Backup müssen Sie das Backup klonen und auf die Datei im Klon zugreifen.
+
+* Sie können ein System oder ein Startvolume nicht wiederherstellen.
+* SnapCenter kann Filesysteme in einem Windows Cluster wiederherstellen, ohne die Cluster-Gruppe offline zu schalten.
+
+
+*Über diese Aufgabe*
+
+* DER SCRIPTS_PATH wird mit dem PredefinedWindowsScriptDirectory-Schlüssel definiert, der sich in der SMCoreServiceHost.exe.Config-Datei des Plug-in-Hosts befindet.
++
+Bei Bedarf können Sie diesen Pfad ändern und den SMCore Service neu starten. Es wird empfohlen, den Standardpfad für die Sicherheit zu verwenden.
+
++
+Der Wert des Schlüssels kann von Swagger über die API angezeigt werden: API /4.7/configsettings
+
++
+Sie können die GET API verwenden, um den Wert der Taste anzuzeigen. SET-API wird nicht unterstützt.
+
+
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Um die Liste der Ressourcen zu filtern, wählen Sie die Optionen Dateisystem und Ressourcengruppen aus.
+. Wählen Sie eine Ressourcengruppe aus der Liste aus, und klicken Sie dann auf *Wiederherstellen*.
+. Wählen Sie auf der Seite Backups aus, ob Sie Daten aus primären oder sekundären Speichersystemen wiederherstellen möchten, und wählen Sie dann ein Backup aus, das wiederhergestellt werden soll.
+. Wählen Sie im Assistenten Wiederherstellen Ihre Optionen aus.
+. Sie können den Pfad und die Argumente des Prescript oder Postscript eingeben, die SnapCenter vor bzw. nach der Wiederherstellung ausführen soll.
++
+Beispielsweise können Sie ein Skript ausführen, um SNMP-Traps zu aktualisieren, Warnmeldungen zu automatisieren, Protokolle zu senden usw.
+
++
+
+NOTE: Der Pfad für Prescripts oder Postscripts darf keine Laufwerke oder Shares enthalten. Der Pfad sollte relativ zum SCRIPTS_PATH sein.
+
+. Wählen Sie auf der Seite Benachrichtigung eine der folgenden Optionen aus:
++
+|===
+| Für dieses Feld... | Tun Sie das... 
+
+
+ a| 
+Protokollieren der Ereignisse des SnapCenter-Servers im Syslog-Storage-System
+ a| 
+Wählen Sie diese Option aus, um SnapCenter Serverereignisse im Syslog des Speichersystems zu protokollieren.
+
+
+
+ a| 
+Senden der AutoSupport-Benachrichtigung für fehlgeschlagene Vorgänge an das Storage-System
+ a| 
+Wählen Sie diese Option aus, um Informationen zu fehlgeschlagenen Vorgängen mithilfe von AutoSupport an NetApp zu senden.
+
+
+
+ a| 
+E-Mail-Präferenz
+ a| 
+Wählen Sie *immer*, *bei Ausfall* oder *bei Fehlschlag oder Warnung* aus, um nach der Wiederherstellung von Backups E-Mail-Nachrichten an Empfänger zu senden. Geben Sie den SMTP-Server, die Standard-E-Mail-Betreffzeile und die E-Mail-Adressen an und von ein.
+
+|===
+. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
+. Überwachen Sie den Fortschritt des Vorgangs, indem Sie auf *Monitor* > *Jobs* klicken.
+
+
+
+IMPORTANT: Wenn das wiederhergestellte Dateisystem eine Datenbank enthält, müssen Sie auch die Datenbank wiederherstellen. Wenn Sie die Datenbank nicht wiederherstellen, ist Ihre Datenbank möglicherweise ungültig. Informationen zum Wiederherstellen von Datenbanken finden Sie im Data Protection Guide für diese Datenbank.

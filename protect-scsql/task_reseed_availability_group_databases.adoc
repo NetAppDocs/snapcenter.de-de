@@ -1,0 +1,36 @@
+---
+permalink: protect-scsql/task_reseed_availability_group_databases.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Erneutes Seeding ist eine Option zur Wiederherstellung von Datenbanken der Verfügbarkeitsgruppe \(AG\). Sollte die Synchronisierung einer sekundären Datenbank mit der primären Datenbank in einer AG nicht mehr synchronisiert werden, können Sie die sekundäre Datenbank erneut speichern.' 
+---
+= Datenbanken der Verfügbarkeitsgruppe erneut erstellen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Erneutes Seeding ist eine Option zur Wiederherstellung von Datenbanken der Availability Group (AG). Sollte die Synchronisierung einer sekundären Datenbank mit der primären Datenbank in einer AG nicht mehr synchronisiert werden, können Sie die sekundäre Datenbank erneut speichern.
+
+*Was Sie brauchen*
+
+* Sie müssen ein Backup der sekundären AG-Datenbank erstellt haben, die Sie wiederherstellen möchten.
+* Der SnapCenter-Server und der Plug-in-Host müssen dieselbe SnapCenter-Version installiert haben.
+
+
+*Über diese Aufgabe*
+
+* Ein erneutes Seeding von primären Datenbanken kann nicht durchgeführt werden.
+* Ein erneutes Seeding kann nicht ausgeführt werden, wenn die Datenbank des Replikats aus der Verfügbarkeitsgruppe entfernt wird. Wenn das Replikat entfernt wird, schlägt der erneute Seeding fehl.
+* Während Sie den Vorgang für erneutes Seeding in der Datenbank der SQL Availability Group ausführen, sollten Sie keine Protokoll-Backups auf den Replikatdatenbanken dieser Availability Group-Datenbank auslösen. Wenn Sie während des erneuten Seeding-Vorgangs Protokollsicherungen auslösen, schlägt der Vorgang des erneuten Seeding mit der Spiegeldatenbank fehl. „Database_Name“ verfügt über unzureichende Transaktions-Log-Daten, um die Backup-Kette der Hauptdatenbank-Fehlermeldung zu erhalten.
+
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann *SnapCenter-Plug-in für SQL Server* aus der Liste aus.
+. Wählen Sie auf der Seite Ressourcen in der Liste *Ansicht* die Option *Datenbank* aus.
+. Wählen Sie die sekundäre AG-Datenbank aus der Liste aus.
+. Klicken Sie Auf *Erneut*.
+. Überwachen Sie den Fortschritt des Vorgangs, indem Sie auf *Monitor* > *Jobs* klicken.
+

@@ -1,0 +1,106 @@
+---
+permalink: protect-sco/task_determine_whether_oracle_databases_are_available_for_backup.html 
+sidebar: sidebar 
+keywords: credentials,SnapCenter Plug-in for Oracle Databases, non-database entries, oratab 
+summary: Ressourcen sind Oracle Datenbanken auf dem Host, die von SnapCenter gemanagt werden. Diese Datenbanken können Ressourcengruppen hinzugefügt werden, um Datensicherungsvorgänge auszuführen, nachdem Sie die verfügbaren Datenbanken ermittelt haben. 
+---
+= Ermitteln Sie, ob Oracle-Datenbanken für Backups verfügbar sind
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ressourcen sind Oracle Datenbanken auf dem Host, die von SnapCenter gemanagt werden. Diese Datenbanken können Ressourcengruppen hinzugefügt werden, um Datensicherungsvorgänge auszuführen, nachdem Sie die verfügbaren Datenbanken ermittelt haben.
+
+*Was Sie brauchen*
+
+* Sie müssen Aufgaben wie das Installieren des SnapCenter-Servers, das Hinzufügen von Hosts, das Erstellen von Speichersystemverbindungen und das Hinzufügen von Anmeldeinformationen abgeschlossen haben.
+* Wenn die Datenbanken auf einer Virtual Machine Disk (VMDK) oder RDM (Raw Device Mapping) befinden, müssen Sie das SnapCenter Plug-in für VMware vSphere implementieren und das Plug-in mit SnapCenter registrieren.
++
+Weitere Informationen finden Sie unter https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere.html["Implementieren Sie das SnapCenter Plug-in für VMware vSphere"^].
+
+* Wenn sich Datenbanken auf einem VMDK-Dateisystem befinden, müssen Sie sich bei vCenter angemeldet und in *VM-Optionen* > *Erweitert* > *Konfiguration bearbeiten* navigiert haben, um den Wert von _Disk.enableUUID_ auf true für die VM festzulegen.
+* Sie müssen den Prozess überprüft haben, den SnapCenter befolgt, um verschiedene Typen und Versionen von Oracle Datenbanken zu ermitteln.
+
+
+*Über diese Aufgabe*
+
+Nach der Installation des Plug-ins werden alle Datenbanken auf diesem Host automatisch erkannt und auf der Seite Ressourcen angezeigt.
+
+Die Datenbanken sollten sich mindestens im angehängten Zustand oder oben befinden, damit die Datenbanken erfolgreich erkannt werden können. In einer Oracle Real Application Clusters (RAC)-Umgebung sollte sich die RAC-Datenbankinstanz auf dem Host, auf dem die Ermittlung ausgeführt wird, mindestens im gemounteten Zustand oder oben befinden, damit die Datenbankinstanz erfolgreich ermittelt werden kann. Nur die erfolgreich erkannten Datenbanken können den Ressourcengruppen hinzugefügt werden.
+
+Wenn Sie eine Oracle-Datenbank auf dem Host gelöscht haben, ist SnapCenter-Server nicht bekannt und führt die gelöschte Datenbank auf. Sie sollten die Ressourcen manuell aktualisieren, um die Liste der SnapCenter-Ressourcen zu aktualisieren.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Wählen Sie auf der Seite Ressourcen in der Liste *Ansicht* die Option *Datenbank* aus.
++
+Klicken Sie Auf image:../media/filter_icon.gif[""]Und wählen Sie dann den Hostnamen und den Datenbanktyp aus, um die Ressourcen zu filtern. Anschließend können Sie auf die klicken image:../media/filter_icon.gif[""] Symbol zum Schließen des Filterfensters.
+
+. Klicken Sie Auf *Ressourcen Aktualisieren*.
++
+In einem RAC-Szenario mit einem Knoten wird die Datenbank als RAC-Datenbank auf dem Knoten erkannt, auf dem sie derzeit gehostet wird.
+
+
+
+*Ergebnisse*
+
+Die Datenbanken werden zusammen mit Informationen wie Datenbanktyp, Host- oder Cluster-Name, zugeordnete Ressourcengruppen und -Richtlinien sowie Status angezeigt.
+
+
+IMPORTANT: Sie müssen die Ressourcen aktualisieren, wenn die Datenbanken außerhalb von SnapCenter umbenannt werden.
+
+* Wenn sich die Datenbank auf einem Storage-System außerhalb von NetApp befindet, zeigt die Benutzeroberfläche in der Spalte „Gesamtstatus“ einen für die Backup-Meldung nicht verfügbaren Status an.
++
+Sie können keine Datensicherungsvorgänge für die Datenbank ausführen, die sich auf einem Storage-System anderer Anbieter befindet.
+
+* Wenn sich die Datenbank auf einem NetApp Storage-System befindet und nicht geschützt ist, wird auf der Benutzeroberfläche in der Spalte Gesamtstatus eine nicht geschützte Meldung angezeigt.
+* Wenn sich die Datenbank auf einem NetApp Storage-System befindet und geschützt ist, zeigt die Benutzeroberfläche in der Spalte „Gesamtstatus“ eine für die Datensicherung verfügbare Meldung an.
+
+
+
+NOTE: Wenn Sie eine Oracle-Datenbankauthentifizierung aktiviert haben, wird in der Ansicht Ressourcen ein rotes Vorhängeschloss-Symbol angezeigt. Sie müssen Datenbankanmeldeinformationen konfigurieren, um die Datenbank schützen oder zur Ressourcengruppe hinzufügen zu können, um Datensicherungsvorgänge durchzuführen.
+
+
+
+== So verhindern Sie, dass SnapCenter nicht aus Datenbanken stammende Einträge ermittelt
+
+Sie können verhindern, dass SnapCenter nicht-Datenbank-Einträge entdeckt, die in der oratab-Datei hinzugefügt wurden.
+
+*Schritte*
+
+. Nach der Installation des Plug-ins für Oracle sollte der Root-Benutzer die Datei *sc_oratab.config* unter dem Verzeichnis _/var/opt/snapcenter/sco/etc/_ erstellen.
++
+Gewähren Sie dem Oracle Binäreigentümer und der Gruppe die Schreibberechtigung, damit die Datei zukünftig beibehalten werden kann.
+
+. Der Datenbankadministrator sollte die nicht-Datenbankeinträge in die Datei *sc_oratab.config* hinzufügen.
++
+Es wird empfohlen, dasselbe Format beizubehalten, das für die nicht aus Datenbanken stammenden Einträge in der _/etc/oratab_-Datei definiert ist, oder der Benutzer kann einfach die Entity-Zeichenfolge hinzufügen, die nicht aus der Datenbank stammt.
+
++
+
+NOTE: Die Groß-/Kleinschreibung des Strings wird beachtet. Jeder Text mit # am Anfang wird als Kommentar behandelt. Der Kommentar kann nach dem nicht-Datenbanknamen angehängt werden.
+
++
+....
+For example:
+--------------------------------------------
+# Sample entries
+# Each line can have only one non-database name
+# These are non-database name
+oratar  # Added by the admin group -1
+#Added by the script team
+NEWSPT
+DBAGNT:/ora01/app/oracle/product/agent:N
+-----------------------------------------------
+....
+. Entdecken Sie die Ressourcen.
++
+Die Einträge, die nicht aus Datenbanken in der Seite *sc_oratab.config* hinzugefügt wurden, werden auf der Seite Ressourcen nicht aufgeführt.
+
+
+
+
+IMPORTANT: Es wird immer empfohlen, vor dem Upgrade des SnapCenter-Plug-ins eine Sicherung der sc_oratab.config-Datei zu erstellen.

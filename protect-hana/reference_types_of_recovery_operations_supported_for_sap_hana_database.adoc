@@ -1,0 +1,24 @@
+---
+permalink: protect-hana/reference_types_of_recovery_operations_supported_for_sap_hana_database.html 
+sidebar: sidebar 
+keywords:  
+summary: SnapCenter ermöglicht Ihnen die Durchführung verschiedener Recovery-Vorgänge für SAP HANA Datenbanken. 
+---
+= Arten von Recovery-Vorgängen unterstützt für SAP HANA-Datenbanken
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter ermöglicht Ihnen die Durchführung verschiedener Recovery-Vorgänge für SAP HANA Datenbanken.
+
+* Wiederherstellung der Datenbank im aktuellsten Zustand
+* Wiederherstellung der Datenbank zu einem bestimmten Zeitpunkt
++
+Sie müssen Datum und Uhrzeit für die Wiederherstellung angeben.
+
+* Wiederherstellung der Datenbank in einem bestimmten Daten-Backup
+
+
+SnapCenter bietet auch die Option „kein Recovery“ für SAP HANA Datenbanken.

@@ -1,0 +1,31 @@
+---
+permalink: protect-sco/task_split_clone_of_a_pluggable_database.html 
+sidebar: sidebar 
+keywords: split, PDB, cloned PDB 
+summary: 'Sie können SnapCenter verwenden, um eine geklonte steckbare Datenbank \(PDB\) aufzuteilen.' 
+---
+= Split-Klon einer steckbaren Datenbank
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine geklonte Plug-in-Datenbank (PDB) mit SnapCenter teilen.
+
+*Über diese Aufgabe*
+
+Wenn Sie eine Sicherung der Ziel-CDB erstellt haben, in der die PDB geklont wird, wird die geklonte PDB bei der Aufteilung des PDB-Klons auch aus allen Backups der Ziel-CDB entfernt, die die geklonte PDB enthalten.
+
+
+NOTE: Die PDB-Klone werden in der Ansicht „Inventar“ oder „Ressourcen“ nicht angezeigt.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Wählen Sie die Quellcontainer-Datenbank (CDB) aus der Ressourcen- oder Ressourcengruppenansicht aus.
+. Wählen Sie in der Ansicht Kopien managen die Option *Klone* aus den primären oder sekundären (gespiegelten oder replizierten) Storage-Systemen aus.
+. Wählen Sie den PDB-Klon (targetCDB:PDBClone) aus, und klicken Sie dann auf image:../media/split_cone.gif[""].
+. Überprüfen Sie die geschätzte Größe des zu teilenden Klons und den benötigten Speicherplatz auf dem Aggregat, und klicken Sie dann auf *Start*.
+. Überwachen Sie den Fortschritt des Vorgangs, indem Sie auf *Monitor* > *Jobs* klicken.
+

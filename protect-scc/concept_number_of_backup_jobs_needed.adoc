@@ -1,0 +1,16 @@
+---
+permalink: protect-scc/concept_number_of_backup_jobs_needed.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Zu den Faktoren, die die Anzahl der erforderlichen Backup-Jobs bestimmen, zählen die Größe der Ressource, die Anzahl der verwendeten Volumes, die Änderungsrate der Ressource und Ihr Service Level Agreement \ (SLA\).' 
+---
+= Anzahl der erforderlichen Backup-Jobs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Zu den Faktoren, die die Anzahl der erforderlichen Backup-Jobs bestimmen, zählen die Größe der Ressource, die Anzahl der verwendeten Volumes, die Änderungsrate der Ressource und Ihr Service Level Agreement (SLA).
+
+Die Anzahl der ausgewählten Backup-Jobs hängt in der Regel von der Anzahl der Volumes ab, von denen Sie Ihre Ressourcen platziert haben. Wenn Sie beispielsweise eine Gruppe kleiner Ressourcen auf einem Volume und einer großen Ressource auf einem anderen Volume platziert haben, können Sie für die kleinen Ressourcen einen Backup-Job und für die große Ressource einen Backup-Job erstellen.

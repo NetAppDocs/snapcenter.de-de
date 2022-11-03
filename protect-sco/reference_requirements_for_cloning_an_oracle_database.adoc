@@ -1,0 +1,89 @@
+---
+permalink: protect-sco/reference_requirements_for_cloning_an_oracle_database.html 
+sidebar: sidebar 
+keywords:  
+summary: Bevor Sie eine Oracle-Datenbank klonen, sollten Sie sicherstellen, dass die Voraussetzungen erfüllt sind. 
+---
+= Anforderungen für das Klonen einer Oracle Datenbank
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bevor Sie eine Oracle-Datenbank klonen, sollten Sie sicherstellen, dass die Voraussetzungen erfüllt sind.
+
+* Sie sollten eine Sicherung der Datenbank mit SnapCenter erstellt haben.
++
+Sie sollten erfolgreich Online-Daten erstellen und Backups oder Offline-Backups (Mounten oder Herunterfahren) protokollieren, damit der Klonvorgang erfolgreich abgeschlossen wurde.
+
+* Wenn Sie die Steuerdatei oder die Pfade für die Wiederherstellungsprotokolle anpassen möchten, sollten Sie die erforderliche Dateisystemgruppe oder die automatische Speicherverwaltung (ASM) vorbereitgestellt haben.
++
+Standardmäßig werden Wiederherstellungsprotokolle und Kontrolldateien der geklonten Datenbank auf der ASM-Festplattengruppe oder auf dem von SnapCenter bereitgestellten Dateisystem für die Datendateien der Klondatenbank erstellt.
+
+* Wenn Sie ASM über NFS verwenden, sollten Sie _/var/opt/snapcenter/scu/Clones/*/*_ zum vorhandenen Pfad hinzufügen, der im Parameter asm_diskstring definiert ist.
+* Im parameter asm_diskstring sollten Sie _AFD:*_ konfigurieren, wenn Sie ASMFD verwenden oder _ORCL:*_ konfigurieren, wenn Sie ASMLIB verwenden.
++
+Informationen zum Bearbeiten des Parameters asm_diskstring finden Sie unter https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Disk_paths_are_not_added_to_the_asm_diskstring_database_parameter["So fügen Sie Datenträgerpfade zu asm_diskstring hinzu"^].
+
+* Wenn Sie den Klon auf einem alternativen Host erstellen, sollte der alternative Host folgende Anforderungen erfüllen:
++
+** Das SnapCenter Plug-in für Oracle Database sollte auf dem alternativen Host installiert sein.
+** Der Klon-Host sollte LUNs vom primären oder sekundären Storage erkennen können.
++
+*** Wenn Sie vom primären Storage oder sekundären Storage (Vault oder Mirror) in einem alternativen Host klonen, stellen Sie sicher, dass eine iSCSI-Sitzung zwischen dem sekundären Storage und dem alternativen Host aufgebaut ist oder richtig für FC abgegrenzt wird.
++
+**** https://library.netapp.com/ecm/ecm_download_file/ECMLP2547936["Linux Host Utilities Installation and Setup Guide"^]
+**** https://library.netapp.com/ecm/ecm_download_file/ECMP1119223["AIX Host Utilities Installation and Setup Guide"^]
+
+
+*** Wenn Sie von Vault oder Mirror Storage auf demselben Host klonen, stellen Sie sicher, dass eine iSCSI-Sitzung zwischen dem Vault- oder Mirror-Storage und dem Host eingerichtet oder richtig für FC abgegrenzt wird.
+*** Wenn Sie in einer virtualisierten Umgebung klonen, stellen Sie sicher, dass entweder eine iSCSI-Sitzung zwischen dem primären oder sekundären Storage und dem ESX-Server, der den alternativen Host hostet, eingerichtet oder ordnungsgemäß für FC.
+
+
+** Wenn die Quelldatenbank eine ASM-Datenbank ist:
++
+*** Die ASM-Instanz sollte auf dem Host ausgeführt werden, auf dem der Klon ausgeführt wird.
+*** Die ASM-Laufwerksgruppe sollte vor dem Klonvorgang bereitgestellt werden, wenn Sie Archivprotokolldateien der geklonten Datenbank in eine dedizierte ASM-Laufwerksgruppe platzieren möchten.
+*** Der Name der Datendisk-Gruppe kann konfiguriert werden, aber stellen Sie sicher, dass der Name nicht von einer anderen ASM-Laufwerksgruppe auf dem Host verwendet wird, auf dem der Klon ausgeführt wird.
++
+Datendateien auf der ASM-Festplattengruppe werden als Teil des SnapCenter-Klon-Workflows bereitgestellt.
+
+
+
+** Für NVMe sollte NVMe util installiert werden
+
+
+* Der Schutztyp für die Daten-LUN und die Protokoll-LUN, wie Spiegel, Vault oder Mirror-Vault, sollte der gleiche sein, um beim Klonen zu einem alternativen Host mithilfe von Protokoll-Backups sekundäre Lokatoren zu erkennen.
+* Sie sollten den Wert exclude_Seed_cdb_view in der Parameterdatei der Quelldatenbank auf FALSE setzen, um Informationen zum Klonen einer Sicherung von 12_c_-Datenbank abzurufen.
++
+Die SEED-PDB ist eine vom System bereitgestellte Vorlage, mit der die CDB PDBs erstellen kann. Die Samen-PDB wird PDB als Samen bezeichnet. Informationen zu PDB-Dollar finden Sie im Oracle Doc ID 1940806.1.
+
++
+
+NOTE: Sie sollten den Wert festlegen, bevor Sie die 12_c_-Datenbank sichern.
+
+* SnapCenter unterstützt die Sicherung von Dateisystemen, die vom Autofs-Subsystem verwaltet werden. Wenn Sie die Datenbank klonen, stellen Sie sicher, dass die Mount-Punkte der Daten nicht unter der Wurzel des Mount-Punkts von Autofs liegen, da der Root-Benutzer des Plug-in-Hosts keine Berechtigung hat, Verzeichnisse unter dem Stammverzeichnis des Autofs Mount-Punkts zu erstellen.
++
+Wenn sich Kontroll- und Wiederherstellungsprotokolle unter dem Dateneinhängungspunkt befinden, sollten Sie den Pfad der Kontrolldatei ändern und anschließend den Dateipfad wiederholen.
+
++
+
+NOTE: Sie können die neuen geklonten Mount-Punkte manuell mit dem Autofs-Subsystem registrieren. Die neuen geklonten Mount-Punkte werden nicht automatisch registriert.
+
+* Wenn Sie ein TDE (Auto Login) haben und die Datenbank auf demselben oder einem anderen Host klonen möchten, sollten Sie Wallet (Schlüsseldateien) unter _/etc/ORACLE/WALLET/ €ORACLE_SID_ von der Quelldatenbank in die geklonte Datenbank kopieren.
+* Sie sollten den Wert von use_lvmetad = 0 in _/etc/lvm/lvm.conf setzen und den lvm2-lvmetad-Service beenden, um erfolgreich ein Klonen in SAN-Umgebungen (Storage Area Network) unter Oracle Linux 7 oder höher oder Red hat Enterprise Linux (RHEL) 7 oder höher durchzuführen.
+* Sie sollten den Oracle-Patch 13366202 installieren, wenn Sie die Oracle-Datenbank 11.2.0.3 oder höher verwenden und die Datenbank-ID für die Hilfsinstanz mit einem NID-Skript geändert wird.
+* Sie sollten sicherstellen, dass die Aggregate, die die Volumes hosten, sich in der Liste der zugewiesenen Aggregate der Storage Virtual Machine (SVM) befinden.
+* Wenn bei NVMe ein Zielport von der Verbindung ausgeschlossen werden muss, sollten Sie den Zielknotennamen und den Portnamen in der Datei /var/opt/snapcenter/scu/etc/nvme.conf hinzufügen.
++
+Wenn die Datei nicht vorhanden ist, sollten Sie die Datei wie im folgenden Beispiel gezeigt erstellen:
+
++
+....
+blacklist {
+nn-0x<target_node_name_1>:pn-0x<target_port_name_1>
+nn-0x<target_node_name_2>:pn-0x<target_port_name_2>
+}
+....
+

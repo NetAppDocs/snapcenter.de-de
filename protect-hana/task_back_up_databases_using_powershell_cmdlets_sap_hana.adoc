@@ -1,0 +1,166 @@
+---
+permalink: protect-hana/task_back_up_databases_using_powershell_cmdlets_sap_hana.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: Das Sichern einer Datenbank umfasst die Einrichtung einer Verbindung mit dem SnapCenter-Server, das Hinzufügen von Ressourcen, das Hinzufügen einer Richtlinie, das Erstellen einer Backup-Ressourcengruppen und das Sichern von Ressourcen. 
+---
+= Sichern Sie Datenbanken mit PowerShell Cmdlets
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Sichern einer Datenbank umfasst die Einrichtung einer Verbindung mit dem SnapCenter-Server, das Hinzufügen von Ressourcen, das Hinzufügen einer Richtlinie, das Erstellen einer Backup-Ressourcengruppen und das Sichern von Ressourcen.
+
+*Was Sie brauchen*
+
+* Sie müssen die PowerShell Umgebung vorbereitet haben, um die PowerShell Cmdlets auszuführen.
+* Sie müssen die Speichersystemverbindung hinzugefügt und Anmeldedaten erstellt haben.
+
+
+*Schritte*
+
+. Starten Sie eine Verbindungssitzung mit dem SnapCenter-Server für einen bestimmten Benutzer, indem Sie das Cmdlet "Open-SmConnection" verwenden.
++
+[listing]
+----
+Open-smconnection  -SMSbaseurl  https:\\snapctr.demo.netapp.com:8146\
+----
++
+Die Eingabeaufforderung für Benutzername und Passwort wird angezeigt.
+
+. Mit dem Cmdlet "Add-SmResources" können Sie Ressourcen hinzufügen.
++
+Dieses Beispiel zeigt, wie eine SAP HANA-Datenbank des SingleContainer-Typs hinzugefügt wird:
+
++
+[listing]
+----
+C:\PS> Add-SmResource -HostName '10.232.204.42' -PluginCode 'HANA' -DatabaseName H10 -ResourceType SingleContainer -StorageFootPrint (@{"VolumeName"="HanaData10";"StorageSystem"="vserver_scauto_primary"}) -SID 'H10' -filebackuppath '/tmp/HanaFileLog' -userstorekeys 'HS10' -osdbuser 'h10adm' -filebackupprefix 'H10_'
+----
++
+In diesem Beispiel wird das Hinzufügen einer SAP HANA-Datenbank mit MultipleContainers-Typ beschrieben:
+
++
+[listing]
+----
+C:\PS> Add-SmResource -HostName 'vp-hana2.gdl.englab.netapp.com' -PluginCode 'HANA' -DatabaseName MDC_MT -ResourceType MultipleContainers -StorageFootPrint (@{"VolumeName"="VP_HANA2_data";"StorageSystem"="buck.gdl.englab.netapp.com"}) -sid 'A12' -userstorekeys 'A12KEY' -TenantType 'MultiTenant'
+----
++
+Dieses Beispiel zeigt, wie Sie eine Ressource erstellen, die nicht auf dem Datenvolumen ist:
+
++
+[listing]
+----
+C:\PS> Add-SmResource -HostName 'SNAPCENTERN42.sccore.test.com' -PluginCode 'hana' -ResourceName NonDataVolume -ResourceType NonDataVolume -StorageFootPrint (@{"VolumeName"="ng_pvol";"StorageSystem"="vserver_scauto_primary"}) -sid 'S10'
+----
+. Erstellen Sie mithilfe des Cmdlet "Add-SmPolicy" eine Backup-Richtlinie.
++
+In diesem Beispiel wird eine Backup-Richtlinie für ein auf Snapshot Kopien basierendes Backup erstellt:
+
++
+[listing]
+----
+C:\PS> Add-SmPolicy -PolicyName hana_snapshotbased -PolicyType Backup -PluginPolicyType hana -BackupType SnapShotBasedBackup
+----
++
+In diesem Beispiel wird eine Backup-Richtlinie für ein dateibasiertes Backup erstellt:
+
++
+[listing]
+----
+C:\PS> Add-SmPolicy -PolicyName hana_Filebased -PolicyType Backup -PluginPolicyType hana -BackupType FileBasedBackup
+----
+. Schützen Sie die Ressource oder fügen Sie eine neue Ressourcengruppe zu SnapCenter mit dem Cmdlet "Add-SmResourceGroup" hinzu.
++
+Dieses Beispiel schützt eine einzelne Container-Ressource:
+
++
+[listing]
+----
+C:\PS> Add-SmProtectResource -PluginCode HANA  -Policies hana_snapshotbased,hana_Filebased
+ -Resources @{"Host"="host.example.com";"UID"="SID"} -Description test -usesnapcenterwithoutfilesystemconsistency
+----
++
+Dieses Beispiel schützt eine Ressource mit mehreren Containern:
+
++
+[listing]
+----
+C:\PS> Add-SmProtectResource -PluginCode HANA  -Policies hana_snapshotbased,hana_Filebased
+ -Resources @{"Host"="host.example.com";"UID"="MDC\SID"} -Description test -usesnapcenterwithoutfilesystemconsistency
+----
++
+In diesem Beispiel wird eine neue Ressourcengruppe mit der angegebenen Richtlinie und den angegebenen Ressourcen erstellt:
+
++
+[listing]
+----
+C:\PS> Add-SmResourceGroup -ResourceGroupName 'ResourceGroup_with_SingleContainer_MultipleContainers_Resources' -Resources @(@{"Host"="sccorelinux61.sccore.test.com";"Uid"="SID"},@{"Host"="sccorelinux62.sccore.test.com";"Uid"="MDC\SID"})
+  -Policies hana_snapshotbased,hana_Filebased  -usesnapcenterwithoutfilesystemconsistency  -plugincode 'HANA'
+----
++
+Dieses Beispiel erstellt eine Ressourcengruppe ohne Daten-Volume:
+
++
+[listing]
+----
+C:\PS> Add-SmResourceGroup -ResourceGroupName 'Mixed_RG_backup_when_Remove_Backup_throguh_BackupName_windows' -Resources @(@{"Host"="SNAPCENTERN42.sccore.test.com";"Uid"="H11";"PluginName"="hana"},@{"Host"="SNAPCENTERN42.sccore.test.com";"Uid"="MDC\H31";"PluginName"="hana"},@{"Host"="SNAPCENTERN42.sccore.test.com";"Uid"="NonDataVolume\S10\NonDataVolume";"PluginName"="hana"}) -Policies hanaprimary
+----
+. Initiieren Sie einen neuen Sicherungsauftrag mit dem Cmdlet "New-SmBackup".
++
+Dieses Beispiel zeigt, wie eine Ressourcengruppe gesichert werden kann:
+
++
+[listing]
+----
+C:\PS> New-SMBackup -ResourceGroupName 'ResourceGroup_with_SingleContainer_MultipleContainers_Resources'  -Policy hana_snapshotbased
+----
++
+Dieses Beispiel sichert eine geschützte Ressource:
+
++
+[listing]
+----
+C:\PS> New-SMBackup -Resources @{"Host"="10.232.204.42";"Uid"="MDC\SID";"PluginName"="hana"} -Policy hana_Filebased
+----
+. Überwachen Sie den Job-Status (ausgeführt, abgeschlossen oder fehlgeschlagen) mit dem Cmdlet "Get-smJobSummaryReport".
++
+[listing]
+----
+PS C:\> Get-smJobSummaryReport -JobID 123
+----
+. Überwachen Sie die Details zu Backup-Jobs wie Backup-ID, Backup-Name zum Wiederherstellen oder Klonen mit dem Cmdlet "Get-SmBackupReport".
++
+[listing]
+----
+PS C:\> Get-SmBackupReport -JobId 351
+Output:
+BackedUpObjects           : {DB1}
+FailedObjects             : {}
+IsScheduled               : False
+HasMetadata               : False
+SmBackupId                : 269
+SmJobId                   : 2361
+StartDateTime             : 10/4/2016 11:20:45 PM
+EndDateTime               : 10/4/2016 11:21:32 PM
+Duration                  : 00:00:46.2536470
+CreatedDateTime           : 10/4/2016 11:21:09 PM
+Status                    : Completed
+ProtectionGroupName       : Verify_ASUP_Message_windows
+SmProtectionGroupId       : 211
+PolicyName                : test2
+SmPolicyId                : 20
+BackupName                : Verify_ASUP_Message_windows_scc54_10-04-2016_23.20.46.2758
+VerificationStatus        : NotVerified
+VerificationStatuses      :
+SmJobError                :
+BackupType                : SCC_BACKUP
+CatalogingStatus          : NotApplicable
+CatalogingStatuses        :
+ReportDataCreatedDateTime :
+----
+
+
+Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ können Sie auch auf die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["SnapCenter Software Cmdlet Referenzhandbuch"^].

@@ -1,0 +1,42 @@
+= 
+:allow-uri-read: 
+
+
+Sie können Klonvorgänge in die Warteschlange abbrechen.
+
+Sie sollten als SnapCenter-Administrator oder -Auftragseigentümer angemeldet sein, um Klonvorgänge abzubrechen.
+
+*Über diese Aufgabe*
+
+* Sie können einen Klonvorgang in der Warteschlange entweder über die Seite *Monitor* oder über den Bereich *Aktivität* abbrechen.
+* Sie können einen ausgeführten Klonvorgang nicht abbrechen.
+* Sie können die SnapCenter GUI, PowerShell Commandlets oder CLI-Befehle verwenden, um die in der Warteschlange befindlichen Klonvorgänge abzubrechen.
+* Wenn Sie *Alle Mitglieder dieser Rolle sehen und auf anderen Mitgliedsobjekten* auf der Seite Benutzer\Gruppen arbeiten können, während Sie eine Rolle erstellen, können Sie die in der Warteschlange befindlichen Klonvorgänge anderer Mitglieder abbrechen, während Sie diese Rolle verwenden.
+
+
+*Schritt*
+
+Führen Sie eine der folgenden Aktionen aus:
+
+|===
+| Von der... | Aktion 
+
+
+ a| 
+Monitor-Seite
+ a| 
+. Klicken Sie im linken Navigationsbereich auf *Monitor* > *Jobs*.
+. Wählen Sie den Vorgang aus, und klicken Sie auf *Auftrag abbrechen*.
+
+
+
+
+ a| 
+Aktivitätsbereich
+ a| 
+. Klicken Sie nach dem Initiieren des Klonvorgangs auf image:../media/activity_pane_icon.gif[""] Im Aktivitätsbereich werden die fünf letzten Vorgänge angezeigt.
+. Wählen Sie den Vorgang aus.
+. Klicken Sie auf der Seite Jobdetails auf *Job abbrechen*.
+
+
+|===

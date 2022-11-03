@@ -1,0 +1,177 @@
+---
+permalink: protect-sce/reference_prerequisites_to_add_hosts_and_install_snapcenter_plug_in_for_microsoft_exchange_server.html 
+sidebar: sidebar 
+keywords:  
+summary: Bevor Sie einen Host hinzufügen und die Plug-in-Pakete installieren, müssen Sie alle Anforderungen erfüllen. 
+---
+= Voraussetzungen für das Hinzufügen von Hosts und die Installation des SnapCenter Plug-ins für Microsoft Exchange Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bevor Sie einen Host hinzufügen und die Plug-in-Pakete installieren, müssen Sie alle Anforderungen erfüllen.
+
+* Wenn Sie iSCSI verwenden, muss der iSCSI-Dienst ausgeführt werden.
+* Sie müssen über einen Domänenbenutzer mit lokalen Administratorrechten mit lokalen Anmeldeberechtigungen auf dem Remote-Host verfügen.
+* Sie müssen Microsoft Exchange Server 2013, 2016 oder 2019 für Standalone- und Database Availability Group-Konfigurationen verwenden.
+* Wenn Sie ein Plug-in auf einem Windows-Host installieren, müssen Sie UAC auf dem Host deaktivieren, wenn Sie keine Anmeldedaten angeben, die nicht integriert sind, oder wenn der Benutzer zu einem lokalen Workgroup-Benutzer gehört.
+* Wenn Sie Cluster-Nodes in SnapCenter verwalten, müssen Sie einen Benutzer mit Administratorrechten für alle Nodes im Cluster besitzen.
+* Sie müssen über einen Benutzer mit Administratorrechten auf dem Exchange Server verfügen.
+* Wenn SnapManager für Microsoft Exchange Server und SnapDrive für Windows bereits installiert sind, müssen Sie den von SnapDrive für Windows verwendeten VSS Hardware Provider deinstallieren, bevor Sie Plug-in für Exchange auf demselben Exchange-Server installieren, um den erfolgreichen Datenschutz mit SnapCenter zu gewährleisten.
+* Wenn SnapManager für Microsoft Exchange Server und das Plug-in für Exchange auf demselben Server installiert sind, müssen Sie alle vom SnapManager für Microsoft Exchange Server erstellten Zeitpläne aussetzen oder löschen.
+* Der Host muss auf den vollständig qualifizierten Domänennamen (FQDN) vom Server resolable sein. Wenn die Hosts-Datei geändert wird, damit sie resolable ist und wenn sowohl der Kurzname als auch der FQDN in der Datei Hosts angegeben sind, erstellen Sie einen Eintrag in der Datei SnapCenter Hosts im folgenden Format: _<ip_Address> <Host_fqdn> <Host_Name>_.
+* Stellen Sie sicher, dass die folgenden Ports in der Firewall nicht blockiert sind, da sonst der Vorgang zum Hinzufügen eines Hosts fehlschlägt. Um dieses Problem zu lösen, müssen Sie den dynamischen Portbereich konfigurieren. Weitere Informationen finden Sie unter https://docs.microsoft.com/en-us/troubleshoot/windows-server/networking/configure-rpc-dynamic-port-allocation-with-firewalls["Microsoft-Dokumentation"^].
++
+** Port-Bereich 50000 - 51000 für Windows 2016 und Exchange 2016
+** Port-Bereich 6000 - 6500 für Windows 2012 R2 und Exchange 2013
+** Portbereich 49152 - 65536 für Windows 2019
+
+
+
+
+[NOTE]
+====
+Führen Sie die folgenden Befehle aus, um den Port-Bereich zu identifizieren:
+
+* Netsh int ipv4 zeigen Dynamit tcp
+* Netsh int ipv4 zeigen Dynamit udp
+* Netsh int ipv6 zeigen Dynamit tcp
+* Netsh int ipv6 zeigen Dynamit udp
+
+
+====
+
+
+== Hostanforderungen für die Installation des SnapCenter Plug-ins Pakets für Windows
+
+Bevor Sie das SnapCenter Plug-ins-Paket für Windows installieren, sollten Sie mit einigen grundlegenden Speicherplatzanforderungen und Größenanforderungen für das Host-System vertraut sein.
+
+|===
+| Element | Anforderungen 
+
+
+ a| 
+Betriebssysteme
+ a| 
+Microsoft Windows
+
+Aktuelle Informationen zu unterstützten Versionen finden Sie im https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"^].
+
+
+
+ a| 
+MindestRAM für das SnapCenter Plug-in auf dem Host
+ a| 
+1 GB
+
+
+
+ a| 
+Minimale Installation und Protokollierung von Speicherplatz für das SnapCenter Plug-in auf dem Host
+ a| 
+5 GB
+
+
+NOTE: Sie sollten genügend Festplattenspeicher zuweisen und den Speicherverbrauch durch den Protokollordner überwachen. Der erforderliche Protokollspeicherplatz ist abhängig von der Anzahl der zu sichernden Einheiten und der Häufigkeit von Datensicherungsvorgängen. Wenn kein ausreichender Festplattenspeicher vorhanden ist, werden die Protokolle für die kürzlich ausgeführten Vorgänge nicht erstellt.
+
+
+
+ a| 
+Erforderliche Softwarepakete
+ a| 
+* Microsoft .NET Framework 4.7.2 oder höher
+* Windows Management Framework (WMF) 4.0 oder höher
+* PowerShell 4.0 oder höher
+
+
+Aktuelle Informationen zu unterstützten Versionen finden Sie im https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"^].
+
+Informationen zur Fehlerbehebung von .NET finden Sie unter: link:..https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_upgrade_or_install_fails_with_%22This_KB_is_not_related_to_the_OS%22["Das Upgrade oder die Installation von SnapCenter schlägt bei älteren Systemen, die keine Internetverbindung haben, fehl."]
+
+|===
+
+
+== Berechtigungen für Exchange Server erforderlich
+
+Damit SnapCenter das Hinzufügen von Exchange Server oder DAG sowie die Installation des SnapCenter Plug-ins für Microsoft Exchange Server auf einem Host oder einer DAG aktivieren kann, müssen Sie SnapCenter mit Anmeldedaten für einen Benutzer mit einem Minimum an Berechtigungen und Berechtigungen konfigurieren.
+
+Sie müssen über einen Domänenbenutzer mit lokalen Administratorrechten verfügen, und über lokale Anmeldeberechtigungen auf dem entfernten Exchange-Host sowie über Administratorberechtigungen auf allen Knoten in der DAG. Der Domänenbenutzer benötigt die folgenden Mindestberechtigungen:
+
+* Add-MailboxDatabaseCopy
+* Datenbank Entmounten
+* Get-AdServerSettings
+* Get-DatabaseVerfügbarkeitGroup
+* Get-ExchangeServer
+* Get-Mailboxdatenbank
+* Get-MailboxDatabaseCopyStatus
+* Get-MailboxServer
+* Get-MailboxStatistik
+* Get-PublicFolderDatabase
+* Move-ActiveMailboxDatenbank
+* Move-DatabasePath - KonfigurationNur: €true
+* Mount-Datenbank
+* Neue Postboxdatenbank
+* New-PublicFolderDatabase
+* Mailboxdatenbank entfernen
+* Entfernen Sie-MailboxDatabaseCopy
+* Entfernen Sie die-PublicFolderDatabase
+* Resume-MailboxDatabaseCopy
+* Set-AdServerSettings
+* Set-mailboxdatenbank -allowfilerestore: €true
+* Set-MailboxDatabaseCopy
+* Set-PublicFolderDatabase
+* Suspend-MailboxDatabaseCopy
+* Update-MailboxDatabaseCopy
+
+
+
+
+== Konfigurieren Sie gMSA unter Windows Server 2012 oder höher
+
+Bevor Sie das SnapCenter Plug-ins-Paket für Windows installieren, sollten Sie mit einigen grundlegenden Speicherplatzanforderungen und Größenanforderungen für das Host-System vertraut sein.
+
+|===
+| Element | Anforderungen 
+
+
+ a| 
+Betriebssysteme
+ a| 
+Microsoft Windows
+
+Aktuelle Informationen zu unterstützten Versionen finden Sie im https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"^].
+
+
+
+ a| 
+MindestRAM für das SnapCenter Plug-in auf dem Host
+ a| 
+1 GB
+
+
+
+ a| 
+Minimale Installation und Protokollierung von Speicherplatz für das SnapCenter Plug-in auf dem Host
+ a| 
+5 GB
+
+
+NOTE: Sie sollten genügend Festplattenspeicher zuweisen und den Speicherverbrauch durch den Protokollordner überwachen. Der erforderliche Protokollspeicherplatz ist abhängig von der Anzahl der zu sichernden Einheiten und der Häufigkeit von Datensicherungsvorgängen. Wenn kein ausreichender Festplattenspeicher vorhanden ist, werden die Protokolle für die kürzlich ausgeführten Vorgänge nicht erstellt.
+
+
+
+ a| 
+Erforderliche Softwarepakete
+ a| 
+* Microsoft .NET Framework 4.7.2 oder höher
+* Windows Management Framework (WMF) 4.0 oder höher
+* PowerShell 4.0 oder höher
+
+
+Aktuelle Informationen zu unterstützten Versionen finden Sie im https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"^].
+
+Informationen zur Fehlerbehebung von .NET finden Sie unter: link:..https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_upgrade_or_install_fails_with_%22This_KB_is_not_related_to_the_OS%22["Das Upgrade oder die Installation von SnapCenter schlägt bei älteren Systemen, die keine Internetverbindung haben, fehl."]
+
+|===

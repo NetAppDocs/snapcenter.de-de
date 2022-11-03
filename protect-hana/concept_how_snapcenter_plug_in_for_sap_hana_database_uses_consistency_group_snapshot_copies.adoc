@@ -1,0 +1,16 @@
+---
+permalink: protect-hana/concept_how_snapcenter_plug_in_for_sap_hana_database_uses_consistency_group_snapshot_copies.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: Sie können das Plug-in verwenden, um Snapshot Kopien von Konsistenzgruppen für Ressourcengruppen zu erstellen. Eine Konsistenzgruppe ist ein Container, der mehrere Volumes beherbergen kann, sodass Sie sie als eine Einheit verwalten können. Eine Konsistenzgruppe sind gleichzeitige Snapshot Kopien mehrerer Volumes und liefert konsistente Kopien einer Volume-Gruppe. 
+---
+= Das SnapCenter Plug-in für SAP HANA Database verwendet Snapshot Kopien von Konsistenzgruppen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können das Plug-in verwenden, um Snapshot Kopien von Konsistenzgruppen für Ressourcengruppen zu erstellen. Eine Konsistenzgruppe ist ein Container, der mehrere Volumes beherbergen kann, sodass Sie sie als eine Einheit verwalten können. Eine Konsistenzgruppe sind gleichzeitige Snapshot Kopien mehrerer Volumes und liefert konsistente Kopien einer Volume-Gruppe.
+
+Sie können auch die Wartezeit für den Storage Controller angeben, um Snapshot Kopien konsistent zu gruppieren. Die verfügbaren Optionen für Wartezeiten sind *dringend*, *Medium* und *entspannt*. Sie können die Synchronisierung des Write Anywhere File Layout (WAFL) auch während eines konsistenten Snapshot Kopiervorgangs aktivieren oder deaktivieren. WAFL Sync verbessert die Performance von Snapshot Kopien von Konsistenzgruppen.

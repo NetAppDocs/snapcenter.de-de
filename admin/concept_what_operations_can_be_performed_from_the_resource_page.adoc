@@ -1,0 +1,207 @@
+---
+permalink: admin/concept_what_operations_can_be_performed_from_the_resource_page.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können auf der Seite Ressourcen Ressourcen Ressourcen Ressourcen Ressourcen erkennen und Datensicherungsvorgänge durchführen. Die Operationen, die Sie durchführen können, unterscheiden sich je nach dem Plug-in, das Sie für das Management Ihrer Ressourcen verwenden. 
+---
+= Von der Seite Ressourcen unterstützte Vorgänge
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können auf der Seite Ressourcen Ressourcen Ressourcen Ressourcen Ressourcen erkennen und Datensicherungsvorgänge durchführen. Die Operationen, die Sie durchführen können, unterscheiden sich je nach dem Plug-in, das Sie für das Management Ihrer Ressourcen verwenden.
+
+Auf der Seite „Ressourcen“ können Sie die folgenden Aufgaben ausführen:
+
+|===
+| Sie können diese Aufgaben ausführen... | Für Microsoft Exchange Server | Für Microsoft SQL Server | Für Microsoft Windows | Für Oracle Database | Für SAP HANA Database | Für benutzerdefinierte Plug-ins 
+
+
+ a| 
+Bestimmen Sie, ob Ressourcen für ein Backup verfügbar sind
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+
+
+
+ a| 
+On-Demand Backup einer Ressource durchführen
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+
+
+
+ a| 
+Restore aus Backups
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+
+
+
+ a| 
+Backups klonen
+ a| 
+Nein
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+
+
+
+ a| 
+Backup-Management
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+
+
+
+ a| 
+Management von Klonen
+ a| 
+Nein
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+
+
+
+ a| 
+Management von Richtlinien
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+
+
+
+ a| 
+Storage-Verbindungen managen
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+
+
+
+ a| 
+Mount-Backups
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Ja.
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+ a| 
+Deaktivieren Sie das Mounten von Backups
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Ja.
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+ a| 
+Details anzeigen
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+
+|===

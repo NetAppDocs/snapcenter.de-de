@@ -1,0 +1,110 @@
+---
+permalink: protect-scw/task_back_up_a_single_resource_on_demand_for_windows_file_systems.html 
+sidebar: sidebar 
+keywords: backing up 
+summary: Wenn sich eine Ressource nicht in einer Ressourcengruppe befindet, können Sie die Ressource On Demand auf der Seite Ressourcen sichern. 
+---
+= Bedarfsgerechtes Backup für eine einzelne Ressource für Windows File-Systeme
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn sich eine Ressource nicht in einer Ressourcengruppe befindet, können Sie die Ressource On Demand auf der Seite Ressourcen sichern.
+
+*Über diese Aufgabe*
+
+Wenn Sie eine Ressource mit einer SnapMirror Beziehung zum sekundären Storage sichern möchten, sollte die dem Storage-Benutzer zugewiesene Rolle die Berechtigung „`snapmirror all`“ enthalten. Wenn Sie jedoch die Rolle „`vsadmin`“ verwenden, ist die Berechtigung „`snapmirror all`“ nicht erforderlich.
+
+
+NOTE: Beim Backup eines Dateisystems sichert SnapCenter keine LUNs, die auf einem Volume Mount-Punkt (VMP) in dem gesicherten Dateisystem gemountet sind.
+
+
+IMPORTANT: Wenn Sie in einem Windows-Dateisystemkontext arbeiten, sichern Sie keine Datenbankdateien. Dadurch entsteht ein inkonsistentes Backup und ein möglicher Datenverlust beim Restore. Zum Schutz von Datenbankdateien müssen Sie das entsprechende SnapCenter Plug-in für die Datenbank verwenden (z. B. SnapCenter Plug-in für Microsoft SQL Server, SnapCenter Plug-in für Microsoft Exchange Server oder ein benutzerdefiniertes Plug-in für Datenbankdateien).
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Wählen Sie auf der Seite Ressourcen den Ressourcentyp Dateisystem aus, und wählen Sie dann die Ressource aus, die Sie sichern möchten.
+. Wenn der Assistent „Dateisystem – Schutz“ nicht automatisch startet, klicken Sie auf *Schützen*, um den Assistenten zu starten.
++
+Legen Sie die Schutzeinstellungen fest, wie in den Aufgaben zum Erstellen von Ressourcengruppen beschrieben.
+
+. Optional: Geben Sie auf der Seite „Ressource“ des Assistenten ein benutzerdefiniertes Namensformat für die Snapshot Kopie ein.
++
+Beispiel: Custtext_resourcegruppe_Policy_hostname oder resourcegruppe_hostname. Standardmäßig wird ein Zeitstempel an den Namen der Snapshot Kopie angehängt.
+
+. Führen Sie auf der Seite Richtlinien die folgenden Aufgaben aus:
++
+.. Wählen Sie eine oder mehrere Richtlinien aus der Dropdown-Liste aus.
++
+Sie können eine beliebige vorhandene Richtlinie auswählen und dann auf *Details* klicken, um zu bestimmen, ob Sie diese Richtlinie verwenden können.
+
++
+Wenn keine vorhandene Richtlinie Ihren Anforderungen entspricht, können Sie eine vorhandene Richtlinie kopieren und ändern oder Sie können eine neue Richtlinie erstellen, indem Sie auf klicken image:../media/add_policy_from_resourcegroup.gif[""] So starten Sie den Richtlinienassistenten.
+
++
+Die ausgewählten Richtlinien werden in der Spalte Richtlinie im Abschnitt „Zeitpläne für ausgewählte Richtlinien konfigurieren“ aufgeführt.
+
+.. Klicken Sie im Abschnitt Zeitpläne für ausgewählte Richtlinien konfigurieren auf image:../media/add_policy_from_resourcegroup.gif[""] In der Spalte Zeitplan konfigurieren für die Richtlinie konfigurieren, für die Sie den Zeitplan konfigurieren möchten.
+.. Konfigurieren Sie den Zeitplan im Dialogfeld Add Schedules for Policy_Name_, indem Sie das Startdatum, das Ablaufdatum und die Häufigkeit angeben und dann auf *Finish* klicken.
++
+Die konfigurierten Zeitpläne werden in der Spalte „angewendete Zeitpläne“ im Abschnitt „Zeitpläne für ausgewählte Richtlinien konfigurieren“ aufgeführt.
+
++
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Scheduled_data_protection_operations_fail_if_the_number_of_operations_running_reaches_maximum_limit["Geplante Vorgänge können fehlschlagen"]
+
+
+
+. Führen Sie auf der Seite Benachrichtigung die folgenden Aufgaben aus:
++
+|===
+| Für dieses Feld... | Tun Sie das... 
+
+
+ a| 
+E-Mail-Präferenz
+ a| 
+Wählen Sie * immer* oder *bei Ausfall* oder *bei Fehlschlag oder Warnung* aus, um E-Mails an Empfänger zu senden, nachdem Sie Backup-Ressourcengruppen erstellt, Richtlinien angehängt und Zeitpläne konfiguriert haben.
+
+Geben Sie die SMTP-Serverinformationen, die Standard-E-Mail-Betreffzeile und die E-Mail-Adressen „`bis`“ und „`von`“ ein.
+
+
+
+ a| 
+Von
+ a| 
+E-Mail-Adresse
+
+
+
+ a| 
+Bis
+ a| 
+E-Mail-Adresse
+
+
+
+ a| 
+Betreff
+ a| 
+Standard-E-Mail-Betreffzeile
+
+|===
+. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
++
+Die Seite der Datenbanktopologie wird angezeigt.
+
+. Klicken Sie auf *Jetzt sichern*.
+. Führen Sie auf der Seite Backup die folgenden Schritte aus:
++
+.. Wenn Sie mehrere Richtlinien auf die Ressource angewendet haben, wählen Sie aus der Dropdown-Liste Richtlinie die Richtlinie aus, die Sie für das Backup verwenden möchten.
++
+Wenn die für das On-Demand-Backup ausgewählte Richtlinie einem Backup-Zeitplan zugeordnet ist, werden die On-Demand-Backups auf Basis der für den Zeitplantyp festgelegten Aufbewahrungseinstellungen beibehalten.
+
+.. Klicken Sie Auf *Backup*.
+
+
+. Überwachen Sie den Fortschritt des Vorgangs, indem Sie auf *Monitor* > *Jobs* klicken.
+

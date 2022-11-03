@@ -1,0 +1,160 @@
+---
+permalink: protect-scsql/task_add_hosts_and_install_snapcenter_plug_ins_package_for_windows.html 
+sidebar: sidebar 
+keywords: credentials 
+summary: Sie müssen die SnapCenterAdd Host-Seite verwenden, um Hosts hinzuzufügen und die Plug-ins-Pakete zu installieren. Die Plug-ins werden automatisch auf den Remote-Hosts installiert. 
+---
+= Fügen Sie Hosts hinzu, und installieren Sie das SnapCenter-Plug-ins-Paket für Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen die Seite SnapCenter *Add Host* verwenden, um Hosts hinzuzufügen und das Plug-ins-Paket zu installieren. Die Plug-ins werden automatisch auf den Remote-Hosts installiert.
+
+*Was Sie brauchen*
+
+* Sie müssen ein Benutzer sein, der einer Rolle zugewiesen ist, die über die Berechtigungen für die Plug-in-Installation und -Deinstallation verfügt, wie z. B. die Rolle „SnapCenter-Administrator“.
+* Wenn Sie ein Plug-in auf einem Windows-Host installieren, sollten Sie UAC auf dem Host deaktivieren, wenn Sie keine integrierten Anmeldeinformationen angeben.
+* Stellen Sie sicher, dass der Nachrichtenwarteschlange in Betrieb ist.
+* Wenn Sie Group Managed Service Account (gMSA) verwenden, sollten Sie gMSA mit Administratorrechten konfigurieren.
++
+link:task_configure_gMSA_on_windows_server_2012_or_later.html["Konfigurieren Sie das Gruppenkonto für Managed Services unter Windows Server 2012 oder höher für SQL"^]
+
+
+
+*Über diese Aufgabe*
+
+Sie können einen SnapCenter-Server nicht als Plug-in-Host zu einem anderen SnapCenter-Server hinzufügen.
+
+Sie können einen Host hinzufügen und die Plug-in-Pakete entweder für einen einzelnen Host oder für einen Cluster installieren. Wenn Sie die Plug-ins auf einem Cluster oder Windows Server Failover Clustering (WSFC) installieren, werden die Plug-ins auf allen Knoten des Clusters installiert.
+
+Informationen zum Verwalten von Hosts finden Sie unter link:../admin/concept_manage_hosts.html["Management von Hosts"^].
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Hosts*.
+. Überprüfen Sie, ob die Registerkarte *verwaltete Hosts* oben ausgewählt ist.
+. Klicken Sie Auf *Hinzufügen*.
+. Gehen Sie auf der Seite Hosts wie folgt vor:
++
+|===
+| Für dieses Feld... | Tun Sie das... 
+
+
+ a| 
+Host-Typ
+ a| 
+Wählen Sie Windows als Hosttyp aus. Der SnapCenter-Server fügt den Host hinzu und installiert dann das Plug-in für Windows, wenn das Plug-in nicht bereits auf dem Host installiert ist.
+
+Wenn Sie auf der Seite Plug-ins die Option Microsoft SQL Server auswählen, installiert der SnapCenter-Server das Plug-in für SQL Server.
+
+
+
+ a| 
+Host-Name
+ a| 
+Geben Sie den vollständig qualifizierten Domänennamen (FQDN) oder die IP-Adresse des Hosts ein. Die IP-Adresse wird nur für nicht vertrauenswürdige Domänenhosts unterstützt, wenn sie auf den FQDN auflöst.
+
+SnapCenter hängt von der richtigen Konfiguration des DNS ab. Daher empfiehlt es sich, den FQDN einzugeben.
+
+Sie können die IP-Adressen oder FQDN einer der folgenden Adressen eingeben:
+
+** Eigenständiger Host
+** WSFC Wenn Sie einen Host mithilfe von SnapCenter hinzufügen und der Host Teil einer Subdomain ist, müssen Sie den FQDN angeben.
+
+
+
+
+ a| 
+Anmeldedaten
+ a| 
+Wählen Sie den Anmeldeinformationsnamen aus, den Sie erstellt haben oder neue Anmeldeinformationen erstellen. Die Anmeldeinformationen müssen über Administratorrechte auf dem Remote-Host verfügen. Weitere Informationen finden Sie unter Informationen zum Erstellen von Anmeldeinformationen.
+
+Sie können Details zu den Anmeldeinformationen anzeigen, indem Sie den Cursor über den von Ihnen angegebenen Anmeldeinformationsnamen positionieren.
+
+
+NOTE: Der Authentifizierungsmodus für die Anmeldeinformationen wird durch den Hosttyp bestimmt, den Sie im Assistenten zum Hinzufügen von Hosts angeben.
+
+|===
+. Wählen Sie im Abschnitt *Plug-ins zur Installation auswählen* die zu installierenden Plug-ins aus.
+. Klicken Sie Auf *Weitere Optionen*.
++
+|===
+| Für dieses Feld... | Tun Sie das... 
+
+
+ a| 
+Port
+ a| 
+Behalten Sie die Standard-Port-Nummer bei oder geben Sie die Port-Nummer an. Die Standardanschlussnummer ist 8145. Wenn der SnapCenter-Server auf einem benutzerdefinierten Port installiert wurde, wird diese Portnummer als Standardport angezeigt.
+
+
+NOTE: Wenn Sie die Plug-ins manuell installiert und einen benutzerdefinierten Port angegeben haben, müssen Sie denselben Port angeben. Andernfalls schlägt der Vorgang fehl.
+
+
+
+ a| 
+Installationspfad
+ a| 
+Der Standardpfad ist C:\Programmdateien\NetApp\SnapCenter. Optional können Sie den Pfad anpassen.
+
+
+
+ a| 
+Fügen Sie alle Hosts im Cluster hinzu
+ a| 
+Aktivieren Sie dieses Kontrollkästchen, um alle Clusterknoten in einer WSFC- oder SQL-Verfügbarkeitsgruppe hinzuzufügen. Sie sollten alle Cluster-Knoten hinzufügen, indem Sie das entsprechende Kontrollkästchen Cluster in der GUI aktivieren, wenn Sie mehrere verfügbare SQL-Verfügbarkeitsgruppen in einem Cluster verwalten und identifizieren möchten.
+
+
+
+ a| 
+Überspringen Sie die Prüfungen vor der Installation
+ a| 
+Aktivieren Sie dieses Kontrollkästchen, wenn Sie die Plug-ins bereits manuell installiert haben und nicht überprüfen möchten, ob der Host die Anforderungen für die Installation des Plug-ins erfüllt.
+
+
+
+ a| 
+Verwenden Sie Group Managed Service Account (gMSA), um die Plug-in-Dienste auszuführen
+ a| 
+Aktivieren Sie dieses Kontrollkästchen, wenn Sie die Plug-in-Dienste über das Group Managed Service Account (gMSA) ausführen möchten.
+
+Geben Sie den gMSA-Namen in folgendem Format an: Domainname\AccountName€.
+
+
+NOTE: Wenn der Host mit gMSA hinzugefügt wird und der gMSA über Login- und sys Admin-Berechtigungen verfügt, wird das gMSA verwendet, um eine Verbindung zur SQL-Instanz herzustellen.
+
+|===
+. Klicken Sie Auf *Absenden*.
+. Wählen Sie für das SQL-Plug-in den Host aus, um das Protokollverzeichnis zu konfigurieren.
++
+.. Klicken Sie auf *Logverzeichnis konfigurieren* und klicken Sie auf der Seite Hostprotokollverzeichnis konfigurieren auf *Durchsuchen* und führen Sie die folgenden Schritte aus:
++
+Nur NetApp LUNs (Laufwerke) werden zur Auswahl aufgeführt. SnapCenter sichert und repliziert im Rahmen des Backup-Vorgangs das Host-Protokollverzeichnis.
+
++
+image::../media/host_managed_hosts_configureplugin.gif[Plug-in-Seite konfigurieren]
+
++
+... Wählen Sie den Laufwerksbuchstaben oder den Bereitstellungspunkt auf dem Host aus, auf dem das Hostprotokoll gespeichert werden soll.
+... Wählen Sie ggf. ein Unterverzeichnis aus.
+... Klicken Sie Auf *Speichern*.
+
+
+
+
+. Klicken Sie Auf *Absenden*.
++
+Wenn Sie das Kontrollkästchen *Vorabprüfungen* nicht aktiviert haben, wird der Host validiert, um zu überprüfen, ob er die Anforderungen für die Installation des Plug-ins erfüllt. Der Festplattenspeicher, der RAM, die PowerShell-Version, die .NET-Version, der Speicherort (für Windows-Plug-ins) und die Java-Version (für Linux-Plug-ins) werden anhand der Mindestanforderungen validiert. Wenn die Mindestanforderungen nicht erfüllt werden, werden entsprechende Fehler- oder Warnmeldungen angezeigt.
+
++
+Wenn der Fehler mit dem Festplattenspeicher oder RAM zusammenhängt, können Sie die Datei Web.config unter C:\Programme\NetApp\SnapCenter WebApp aktualisieren, um die Standardwerte zu ändern. Wenn der Fehler mit anderen Parametern zusammenhängt, müssen Sie das Problem beheben.
+
++
+
+NOTE: Wenn Sie in einem HA-Setup die Datei „Web.config“ aktualisieren, müssen Sie die Datei auf beiden Knoten aktualisieren.
+
+. Überwachen Sie den Installationsfortschritt.
+

@@ -1,0 +1,135 @@
+---
+permalink: protect-sce/task_restore_exchange_databases.html 
+sidebar: sidebar 
+keywords:  
+summary: Mit SnapCenter können Sie gesicherte Exchange Datenbanken wiederherstellen. 
+---
+= Exchange Datenbanken wiederherstellen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit SnapCenter können Sie gesicherte Exchange Datenbanken wiederherstellen.
+
+*Was Sie brauchen*
+
+* Sie müssen die Ressourcengruppen, die Datenbank oder die Datenbankverfügbarkeitsgruppen (Database Availability Groups, DAGs) gesichert haben.
+* Wenn die Exchange-Datenbank zu einem anderen Speicherort migriert wird, funktioniert der Wiederherstellungsvorgang nicht für alte Backups.
+* Wenn Sie Snapshot Kopien in eine Spiegelung oder einen Vault replizieren, muss der SnapCenter Administrator Ihnen die SVMs sowohl für die Quell-Volumes als auch die Ziel-Volumes zugewiesen haben.
+* Wenn sich in einer DAG eine aktive Datenbankkopie auf einem Storage anderer Anbieter befindet und Sie die passive Datenbankkopie eines Backups in einem NetApp Storage wiederherstellen möchten, erstellen Sie in einer DAG die passive Kopie (NetApp Storage) als aktive Kopie, aktualisieren Sie die Ressourcen und führen Sie den Wiederherstellungsvorgang aus.
++
+Führen Sie die aus `Move-ActiveMailboxDatabase` Befehl, um die passive Datenbankkopie als aktive Datenbankkopie zu erstellen.
+
++
+Der https://docs.microsoft.com/en-us/powershell/module/exchange/move-activemailboxdatabase?view=exchange-ps["Microsoft-Dokumentation"^] Enthält Informationen zu diesem Befehl.
+
+
+
+*Über diese Aufgabe*
+
+* Wenn ein Restore-Vorgang für eine Datenbank durchgeführt wird, wird die Datenbank wieder auf demselben Host gemountet und es wird kein neues Volume erstellt.
+* DAG-Backups müssen aus einzelnen Datenbanken wiederhergestellt werden.
+* Die vollständige Wiederherstellung der Festplatte wird nicht unterstützt, wenn andere Dateien als die Exchange-Datenbank (.edb)-Datei vorhanden sind.
++
+Plug-in für Exchange führt keine vollständige Wiederherstellung auf einer Festplatte durch, wenn das Laufwerk Exchange-Dateien wie die zur Replizierung verwendeten enthält. Wenn eine vollständige Wiederherstellung möglicherweise die Exchange-Funktionalität beeinträchtigt, führt das Plug-in für Exchange einen Wiederherstellungsvorgang für eine einzelne Datei durch.
+
+* Das Plug-in für Exchange kann BitLocker-verschlüsselte Laufwerke nicht wiederherstellen.
+* DER SCRIPTS_PATH wird mit dem PredefinedWindowsScriptDirectory-Schlüssel definiert, der sich in der SMCoreServiceHost.exe.Config-Datei des Plug-in-Hosts befindet.
++
+Bei Bedarf können Sie diesen Pfad ändern und den SMCore Service neu starten. Es wird empfohlen, den Standardpfad für die Sicherheit zu verwenden.
+
++
+Der Wert des Schlüssels kann von Swagger über die API angezeigt werden: API /4.7/configsettings
+
++
+Sie können die GET API verwenden, um den Wert der Taste anzuzeigen. SET-API wird nicht unterstützt.
+
+
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich oben links auf der Seite Ressource auf *Ressourcen*.
+. Wählen Sie das Exchange Server-Plug-in aus der Dropdown-Liste aus.
+. Wählen Sie auf der Seite Ressourcen in der Liste Ansicht die Option *Datenbank* aus.
+. Wählen Sie die Datenbank aus der Liste aus.
+. Wählen Sie in der Ansicht Kopien verwalten die Option *Backups* aus der Tabelle primäre Backups aus, und klicken Sie dann auf *image:../media/restore_icon.gif["Symbol Wiederherstellen"]*.
+. Wählen Sie auf der Seite Optionen eine der folgenden Backup-Optionen für Protokolle aus:
++
+|===
+| Option | Beschreibung 
+
+
+ a| 
+Alle Log-Backups
+ a| 
+Wählen Sie * Alle Log-Backups*, um eine Backup-Wiederherstellung durchzuführen, um alle verfügbaren Log-Backups nach der vollständigen Sicherung wiederherzustellen.
+
+
+
+ a| 
+Durch Backups bis protokollieren
+ a| 
+Wählen Sie *by log Backups bis*, um einen Point-in-Time-Wiederherstellungsvorgang durchzuführen, der die Datenbank basierend auf Protokollsicherungen bis zum ausgewählten Protokoll wiederherstellt.
+
+
+NOTE: Die Anzahl der in der Dropdown-Liste angezeigten Protokolle basiert auf UTM. Wenn beispielsweise die vollständige Backup-Aufbewahrung 5 ist und die UTM-Aufbewahrung 3 ist, sind die Anzahl der verfügbaren Log-Backups 5, aber im Drop-down-Menü werden nur 3 Protokolle aufgeführt, um den Wiederherstellungsvorgang durchzuführen.
+
+
+
+ a| 
+Nach einem bestimmten Datum bis
+ a| 
+Wählen Sie *nach einem bestimmten Datum bis*, um das Datum und die Uhrzeit anzugeben, auf die Transaktionsprotokolle auf die wiederhergestellte Datenbank angewendet werden. Mit diesem Point-in-Time-Wiederherstellungsvorgang werden die Transaktions-Log-Einträge wiederhergestellt, die bis zum letzten Backup am angegebenen Datum und Uhrzeit aufgezeichnet wurden.
+
+
+
+ a| 
+Keine
+ a| 
+Wählen Sie *Keine*, wenn Sie nur die vollständige Sicherung ohne Log-Backups wiederherstellen müssen.
+
+|===
++
+Sie können eine der folgenden Aktionen durchführen:
+
++
+** *Datenbank wiederherstellen und mounten nach der Wiederherstellung* - Diese Option ist standardmäßig ausgewählt.
+** *Die Integrität der Transaktionsprotokolle im Backup vor der Wiederherstellung nicht überprüfen* - standardmäßig überprüft SnapCenter die Integrität der Transaktionsprotokolle in einem Backup, bevor ein Restore durchgeführt wird.
++
+|===
+
+
+| *Best Practice:* Du solltest diese Option nicht wählen. 
+|===
+
+
+. Geben Sie auf der Seite Skript den Pfad und die Argumente des Vorskripts bzw. des Postskripts ein, die vor bzw. nach dem Wiederherstellungsvorgang ausgeführt werden sollen.
++
+Prescript-Argumente für die Wiederherstellung umfassen Datenbanken in US-Dollar und ServerInstance in US-Dollar.
+
++
+Zu den Argumenten für die Wiederherstellung nach dem Skript gehören Datenbanken in US-Dollar, ServerInstance, Backup-Name in US-Dollar, LogDirectory und TargetServerInstance in US-Dollar.
+
++
+Sie können ein Skript ausführen, um SNMP-Traps zu aktualisieren, Warnmeldungen zu automatisieren, Protokolle zu senden usw.
+
++
+
+NOTE: Der Pfad für Prescripts oder Postscripts darf keine Laufwerke oder Shares enthalten. Der Pfad sollte relativ zum SCRIPTS_PATH sein.
+
+. Wählen Sie auf der Benachrichtigungsseite aus der Dropdown-Liste *E-Mail-Präferenz* die Szenarien aus, in denen Sie die E-Mails versenden möchten.
++
+Außerdem müssen Sie die E-Mail-Adressen für Absender und Empfänger sowie den Betreff der E-Mail angeben.
+
+. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
+. Sie können den Status des Wiederherstellungsjobs anzeigen, indem Sie unten auf der Seite das Feld „Aktivität“ erweitern.
++
+Sie sollten den Wiederherstellungsprozess mithilfe der Seite *Monitor* > *Jobs* überwachen.
+
+
+
+Wenn Sie eine aktive Datenbank aus einem Backup wiederherstellen, weist die passive Datenbank möglicherweise einen Status „ausgesetzt“ oder „ausgefallen“ auf, wenn eine Verzögerung zwischen dem Replikat und der aktiven Datenbank vorhanden ist.
+
+Die Statusänderung kann auftreten, wenn die Protokollkette der aktiven Datenbank sich gabelt und einen neuen Zweig startet, der die Replikation unterbrochen. Exchange Server versucht, das Replikat zu reparieren. Wenn es jedoch nicht möglich ist, sollten Sie nach der Wiederherstellung ein neues Backup erstellen und dann das Replikat erneut übertragen.

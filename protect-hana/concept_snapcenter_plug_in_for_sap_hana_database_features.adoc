@@ -1,0 +1,49 @@
+---
+permalink: protect-hana/concept_snapcenter_plug_in_for_sap_hana_database_features.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: SnapCenter lässt sich in die Plug-in-Applikation und mit NetApp Technologien auf dem Storage-System integrieren. Zur Nutzung mit dem Plug-in für SAP HANA-Datenbank verwenden Sie die grafische Benutzeroberfläche von SnapCenter. 
+---
+= SnapCenter Plug-in für SAP HANA Database Funktionen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter lässt sich in die Plug-in-Applikation und mit NetApp Technologien auf dem Storage-System integrieren. Zur Nutzung mit dem Plug-in für SAP HANA-Datenbank verwenden Sie die grafische Benutzeroberfläche von SnapCenter.
+
+* *Einheitliche grafische Benutzeroberfläche*
++
+Die SnapCenter-Schnittstelle bietet Standardisierung und Konsistenz über Plug-ins und Umgebungen hinweg. Die SnapCenter Schnittstelle ermöglicht konsistente Backup-, Restore- und Klonvorgänge über alle Plug-ins hinweg, die zentralisierte Berichterstellung, die Schnellübersicht über Dashboard-Ansichten, die Einrichtung rollenbasierter Zugriffssteuerung (Role Based Access Control, RBAC) und das Monitoring von Jobs in allen Plug-ins.
+
+* *Automatisierte zentrale Verwaltung*
++
+Sie können Backup-Vorgänge planen, richtlinienbasierte Backup-Aufbewahrung konfigurieren und Restore-Vorgänge durchführen. Zudem lässt sich die Umgebung proaktiv überwachen, indem SnapCenter für das Senden von E-Mail-Warnmeldungen konfiguriert wird.
+
+* *Unterbrechungsfreie NetApp Snapshot Kopie-Technologie*
++
+SnapCenter nutzt die NetApp Snapshot-Kopiertechnologie mit dem Plug-in für SAP HANA Datenbanken, um Ressourcen zu sichern.
+
+
+
+Die Nutzung des Plug-ins für SAP HANA Database bietet darüber hinaus folgende Vorteile:
+
+* Unterstützung für Backup-, Restore- und Klon-Workflows
+* RBAC-unterstützte Sicherheit und zentralisierte Rollendelegation
++
+Sie können die Anmeldeinformationen auch so festlegen, dass die autorisierten SnapCenter-Benutzer über Berechtigungen auf Anwendungsebene verfügen.
+
+* Erstellung platzsparender und zeitpunktgenauer Kopien von Ressourcen für Tests oder Datenextraktion mit der NetApp FlexClone Technologie
++
+Auf dem Storage-System, auf dem Sie den Klon erstellen möchten, ist eine FlexClone Lizenz erforderlich.
+
+* Unterstützung der Snapshot-Kopie der Konsistenzgruppe (CG) von ONTAP im Rahmen der Erstellung von Backups
+* Fähigkeit, mehrere Backups gleichzeitig über mehrere Ressourcen-Hosts auszuführen
++
+In einem einzigen Vorgang werden Snapshot Kopien konsolidiert, wenn Ressourcen eines einzelnen Hosts dasselbe Volume gemeinsam nutzen.
+
+* Funktion zum Erstellen von Snapshot Kopien mithilfe externer Befehle.
+* Unterstützung für dateibasierte Backups.
+* Unterstützung für Linux LVM auf XFS-Dateisystem.
+

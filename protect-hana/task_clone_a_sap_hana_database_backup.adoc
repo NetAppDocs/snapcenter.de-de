@@ -1,0 +1,130 @@
+---
+permalink: protect-hana/task_clone_a_sap_hana_database_backup.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database,run as 
+summary: Sie können SnapCenter zum Klonen einer Backup verwenden. Sie können von primärem oder sekundärem Backup klonen. 
+---
+= Klonen eines Backups einer SAP HANA Datenbank
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können SnapCenter zum Klonen einer Backup verwenden. Sie können von primärem oder sekundärem Backup klonen.
+
+*Was Sie brauchen*
+
+* Sie sollten die Ressourcen oder Ressourcengruppe gesichert haben.
+* Sie sollten sicherstellen, dass die Aggregate, die die Volumes hosten, sich in der Liste der zugewiesenen Aggregate der Storage Virtual Machine (SVM) befinden.
+* Sie können keine dateibasierten Backups klonen.
+* Der Ziel-Klon-Server sollte dieselbe SAP HANA-Instanz-SID haben, die im Feld Ziel-Klon-SID bereitgestellt wird.
+* Wenn Sie Befehle vor dem Klonen oder nach dem Klonen ausführen, sollten Sie überprüfen, ob die Befehle in der Befehlsliste auf dem Plug-in-Host über folgende Pfade vorhanden sind:
++
+Für Windows: _C:\Programmdateien\NetApp\SnapCenter\SnapCenter Plug-in Creator\etc\allowed_befiehlt_list.txt_
+
++
+Für Linux: _/var/opt/snapcenter/scc/allowed_befiehlt_list.txt_
+
+
+
+
+NOTE: Wenn die Befehle in der Befehlsliste nicht vorhanden sind, schlägt der Vorgang fehl.
+
+*Über diese Aufgabe*
+
+Informationen zu Einschränkungen für den Klon-Split-Vorgang finden Sie unter http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["ONTAP 9 Leitfaden für das Management von logischem Storage"^].
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Filtern Sie auf der Seite Ressourcen die Ressourcen aus der Dropdown-Liste *Ansicht* nach Ressourcentyp.
++
+Die Ressourcen werden zusammen mit Informationen wie Typ, Host, zugeordnete Ressourcengruppen und -Richtlinien sowie Status angezeigt.
+
+. Wählen Sie die Ressource oder Ressourcengruppe aus.
++
+Sie müssen eine Ressource auswählen, wenn Sie eine Ressourcengruppe auswählen.
+
++
+Die Seite „Topologie der Ressourcen- oder Ressourcengruppe“ wird angezeigt.
+
+. Wählen Sie in der Ansicht „Kopien verwalten“ die Option *Backups* aus den primären oder sekundären (gespiegelten oder ausgelagerten) Speichersystemen aus.
+. Wählen Sie die Datensicherung aus der Tabelle aus, und klicken Sie dann auf image:../media/clone_icon.gif["Klon-Symbol"].
+. Führen Sie auf der Seite Standort die folgenden Aktionen durch:
++
+|===
+| Für dieses Feld... | Tun Sie das... 
+
+
+ a| 
+Plug-in-Host
+ a| 
+Wählen Sie den Host aus, auf dem der Klon gemountet werden soll, und das Plug-in ist installiert.
+
+
+
+ a| 
+Ziel Klon-SID
+ a| 
+Geben Sie die SAP HANA Instanz-ID ein, die aus den vorhandenen Backups geklont werden soll.
+
+
+
+ a| 
+NFS-Export-IP-Adresse
+ a| 
+Geben Sie IP-Adressen oder Hostnamen ein, auf denen die geklonten Volumes exportiert werden.
+
+
+
+ a| 
+ISCSI-Initiator
+ a| 
+Geben Sie den iSCSI-Initiatornamen des Hosts ein, an den die LUNs exportiert werden. Diese Option ist nur verfügbar, wenn Sie den Ressourcentyp LUN ausgewählt haben.
+
+
+
+ a| 
+Protokoll
+ a| 
+Geben Sie das LUN-Protokoll ein. Diese Option ist nur verfügbar, wenn Sie den Ressourcentyp LUN ausgewählt haben.
+
+|===
++
+Wenn die ausgewählte Ressource eine LUN ist und Sie aus einem sekundären Backup klonen, werden die Ziel-Volumes aufgelistet. Es können mehrere Ziel-Volumes an einer einzigen Quelle vorhanden sein.
+
++
+
+NOTE: Vor dem Klonen müssen Sie sicherstellen, dass der iSCSI-Initiator oder das FCP vorhanden ist und bei alternativen Hosts konfiguriert und angemeldet sind.
+
+. Führen Sie auf der Seite Skripts die folgenden Schritte aus:
++
+
+NOTE: Die Skripte werden auf dem Plug-in-Host ausgeführt.
+
++
+.. Geben Sie die Befehle für den vor- oder Nachklon ein, die vor oder nach dem Klonvorgang ausgeführt werden sollen.
++
+*** Befehl Pre Clone: Löschen Sie vorhandene Datenbanken mit demselben Namen
+*** Befehl nach Clone: Überprüfen Sie eine Datenbank oder starten Sie eine Datenbank.
+
+
+.. Geben Sie den Mount-Befehl ein, um ein Dateisystem auf einen Host zu mounten.
++
+Mount-Befehl für ein Volume oder qtree auf einem Linux-Rechner:
+
++
+Beispiel für NFS:
+
++
+ mount VSERVER_DATA_IP:%VOLUME_NAME_Clone /mnt
+
+
+. Wählen Sie auf der Benachrichtigungsseite aus der Dropdown-Liste *E-Mail-Präferenz* die Szenarien aus, in denen Sie die E-Mails versenden möchten.
++
+Außerdem müssen Sie die E-Mail-Adressen für Absender und Empfänger sowie den Betreff der E-Mail angeben.
+
+. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
+. Überwachen Sie den Fortschritt des Vorgangs, indem Sie auf *Monitor* > *Jobs* klicken.
+

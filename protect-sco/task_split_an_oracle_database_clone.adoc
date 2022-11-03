@@ -1,0 +1,54 @@
+---
+permalink: protect-sco/task_split_an_oracle_database_clone.html 
+sidebar: sidebar 
+keywords: split a clone, split 
+summary: Sie können SnapCenter verwenden, um eine geklonte Ressource von der übergeordneten Ressource zu trennen. Der geteilte Klon ist unabhängig von der übergeordneten Ressource. 
+---
+= Oracle Database klonen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können SnapCenter verwenden, um eine geklonte Ressource von der übergeordneten Ressource zu trennen. Der geteilte Klon ist unabhängig von der übergeordneten Ressource.
+
+*Über diese Aufgabe*
+
+* Sie können den Clone-Split-Vorgang nicht für einen Zwischenkon ausführen.
++
+Wenn Sie beispielsweise Klon1 aus einem Datenbank-Backup erstellen, können Sie eine Sicherung von Klon1 erstellen und dann dieses Backup klonen (Klon2). Nach dem Erstellen von Klon2 ist Klon1 ein Zwischenkon, und Sie können den Klonteilvorgang auf Klon1 nicht ausführen. Sie können jedoch den Vorgang zum Aufteilen von Klonen auf Klon2 durchführen.
+
++
+Nach dem Aufteilen von Klon2 können Sie den Clone Split-Vorgang auf Klon1 durchführen, da Klon1 nicht mehr der Zwischenklon ist.
+
+* Wenn Sie einen Klon aufteilen, werden die Backup-Kopien des Klons gelöscht.
+* Informationen zu den Einschränkungen für den Klon-Split-Vorgang finden Sie im http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["ONTAP 9 Leitfaden für das Management von logischem Storage"^].
+* Stellen Sie sicher, dass das Volume oder Aggregat auf dem Storage-System online ist.
+
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Wählen Sie auf der Seite Ressourcen in der Liste *Ansicht* die Option *Datenbank* aus.
+. Wählen Sie die geklonte Ressource aus (z. B. die Datenbank oder die LUN), und klicken Sie dann auf image:../media/split_cone.gif[""].
+. Überprüfen Sie die geschätzte Größe des zu teilenden Klons und den benötigten Speicherplatz auf dem Aggregat, und klicken Sie dann auf *Start*.
+. Überwachen Sie den Fortschritt des Vorgangs, indem Sie auf *Monitor* > *Jobs* klicken.
++
+Der Klonabteilvorgang reagiert nicht mehr, wenn der SMCore-Service neu gestartet wird und die Datenbanken, auf denen der Klonabteilvorgang ausgeführt wurde, als Klone auf der Seite Ressourcen aufgeführt werden. Sie sollten das Cmdlet _Stop-SmJob_ ausführen, um den Clone-Split-Vorgang zu beenden, und dann den Clone-Split-Vorgang wiederholen.
+
++
+Wenn Sie eine längere Abfragzeit oder kürzere Abfragezeit benötigen, um zu prüfen, ob der Klon aufgeteilt ist oder nicht, können Sie den Wert von CloneSplitStatusCheckPollTime in der Datei SMCoreServiceHost.exe.config ändern, um das Zeitintervall für SMCore so einzustellen, dass der Status des Klonabteilvorgangs abgefragt wird. Der Wert liegt in Millisekunden, und der Standardwert ist 5 Minuten.
+
++
+Beispiel:
+
++
+[listing]
+----
+<add key="CloneSplitStatusCheckPollTime" value="300000" />
+----
+
+
+
+IMPORTANT: Der Startvorgang für die Klontrennung schlägt fehl, wenn derzeit eine Sicherung, Wiederherstellung oder eine andere Klonverteilung durchgeführt wird. Sie sollten den Clone Split-Vorgang erst nach Abschluss der laufenden Vorgänge neu starten.

@@ -1,0 +1,43 @@
+---
+permalink: install/task_configure_CA_client_certificate_for_LDAPS.html 
+sidebar: sidebar 
+keywords: CA client certificate, LDAPS 
+summary: Sie sollten das CA-Clientzertifikat für LDAPS auf dem SnapCenter-Server konfigurieren, wenn die Windows Active Directory-LDAPS mit den CA-Zertifikaten konfiguriert ist. 
+---
+= Konfigurieren Sie das CA-Client-Zertifikat für LDAPS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie sollten das CA-Clientzertifikat für LDAPS auf dem SnapCenter-Server konfigurieren, wenn die Windows Active Directory-LDAPS mit den CA-Zertifikaten konfiguriert ist.
+
+*Schritte*
+
+. Gehen Sie zur Microsoft Management Console (MMC) und klicken Sie dann auf *Datei* > *Snapin hinzufügen/entfernen*.
+. Wählen Sie im Fenster Snap-ins hinzufügen oder entfernen die Option *Zertifikate* und klicken Sie dann auf *Hinzufügen*.
+. Wählen Sie im Snap-in-Fenster Zertifikate die Option *Computerkonto* aus und klicken Sie dann auf *Fertig stellen*.
+. Klicken Sie Auf *Konsolenwurzel* > *Zertifikate – Lokaler Computer* > *Vertrauenswürdige Stammzertifizierungsbehörden* > *Zertifikate*.
+. Klicken Sie mit der rechten Maustaste auf den Ordner „Vertrauenswürdige Stammzertifizierungsstellen“ und wählen Sie dann *Alle Aufgaben* > *Import*, um den Importassistenten zu starten.
+. Füllen Sie den Assistenten wie folgt aus:
++
+|===
+| In diesem Fenster des Assistenten... | Gehen Sie wie folgt vor... 
+
+
+ a| 
+Auf der zweiten Seite des Assistenten
+ a| 
+Klicken Sie auf *Durchsuchen*, wählen Sie das _Root-Zertifikat_ und klicken Sie auf *Weiter*.
+
+
+
+ a| 
+Abschließen des Assistenten zum Importieren von Zertifikaten
+ a| 
+Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*, um den Import zu starten.
+
+|===
+. Wiederholen Sie die Schritte 5 und 6 für die Zwischenzertifikate.
+

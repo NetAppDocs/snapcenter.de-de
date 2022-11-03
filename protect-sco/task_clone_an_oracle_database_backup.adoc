@@ -1,0 +1,347 @@
+---
+permalink: protect-sco/task_clone_an_oracle_database_backup.html 
+sidebar: sidebar 
+keywords: Credentials, alternate host, clone, FRA, OMF 
+summary: Sie können SnapCenter verwenden, um eine Oracle Datenbank mithilfe des Backups der Datenbank zu klonen. 
+---
+= Klonen eines Backups einer Oracle Datenbank
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können SnapCenter verwenden, um eine Oracle Datenbank mithilfe des Backups der Datenbank zu klonen.
+
+*Über diese Aufgabe*
+
+Der Klonvorgang erstellt eine Kopie der Datenbankdatendateien und erstellt neue Online-Protokolldateien für die Wiederherstellung sowie Kontrolldateien. Die Datenbank kann auf Basis der angegebenen Wiederherstellungsoptionen optional bis zu einem bestimmten Zeitpunkt wiederhergestellt werden.
+
+
+NOTE: Das Klonen schlägt fehl, wenn Sie versuchen, ein Backup zu klonen, das auf einem Linux Host auf einem AIX Host erstellt wurde, oder umgekehrt.
+
+SnapCenter erstellt eine Standalone-Datenbank, wenn sie aus einem Backup einer Oracle RAC Datenbank geklont wird. SnapCenter unterstützt die Erstellung von Klonen aus der Backup von Data Guard Standby und Active Data Guard Standby Datenbanken.
+
+Während des Klonens montierte SnapCenter die optimale Anzahl von Protokoll-Backups auf Basis von SCN oder dat und die Zeit für Recovery-Vorgänge. Nach der Wiederherstellung wird die Protokollsicherung abgehängt. Alle diese Klone sind unter _/var/opt/snapcenter/scu/Clones/_ eingebunden. Wenn Sie ASM über NFS verwenden, sollten Sie _/var/opt/snapcenter/scu/Clones/*/*_ zum vorhandenen Pfad hinzufügen, der im Parameter asm_diskstring definiert ist.
+
+Beim Klonen eines Backups einer ASM-Datenbank in einer SAN-Umgebung werden udev-Regeln für die geklonten Host-Geräte unter _/etc/udev/rules.d/999-scu-netapp.rules_ erstellt. Diese udev-Regeln, die den geklonten Host-Geräten zugeordnet sind, werden beim Löschen des Klons gelöscht.
+
+
+NOTE: In einem Flex ASM-Setup können Sie keinen Klonvorgang auf Leaf-Knoten ausführen, wenn die Kardinalität kleiner als die Anzahl der Knoten im RAC-Cluster ist.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Wählen Sie auf der Seite Ressourcen die Option *Datenbank* oder *Ressourcengruppe* aus der Liste *Ansicht* aus.
+. Wählen Sie die Datenbank entweder in der Datenbank-Detailansicht oder in der Ansicht Ressourcengruppen-Details aus.
++
+Die Seite der Datenbanktopologie wird angezeigt.
+
+. Wählen Sie in der Ansicht Kopien managen die Backups entweder aus lokalen Kopien (primär), Spiegelkopien (sekundär) oder Vault Kopien (sekundär) aus.
+. Wählen Sie die Datensicherung aus der Tabelle aus, und klicken Sie dann auf *image:../media/clone_icon.gif["Klon-Symbol"]*.
+. Führen Sie auf der Seite Name eine der folgenden Aktionen durch:
++
+|===
+| Ihr Ziel ist | Schritte... 
+
+
+ a| 
+Klonen einer Datenbank (CDB oder nicht-CDB)
+ a| 
+.. Geben Sie die SID des Klons an.
++
+Der Clone SID ist standardmäßig nicht verfügbar, und die maximale Länge der SID beträgt 8 Zeichen.
+
++
+
+NOTE: Sie sollten sicherstellen, dass auf dem Host, auf dem der Klon erstellt wird, keine Datenbank mit derselben SID vorhanden ist.
+
+
+
+
+
+ a| 
+Klonen einer Plug-in-Datenbank (PDB)
+ a| 
+.. Wählen Sie *PDB Clone*.
+.. Geben Sie die PDB an, die Sie klonen möchten.
+.. Geben Sie den Namen der geklonten PDB an. Detaillierte Schritte zum Klonen einer PDB finden Sie unter link:../protect-sco/task_clone_a_pluggable_database.html["Klonen einer sofort anschließbaren Datenbank"^].
+
+
+|===
++
+Wenn Sie eine gespiegelte oder Vault-Daten auswählen:
+
++
+** Wenn keine Protokollsicherung bei Spiegel oder Tresor vorhanden ist, wird nichts ausgewählt und die Lokatoren leer sind.
+** Wenn Protokollsicherungen in Mirror oder Vault vorhanden sind, wird die neueste Protokollsicherung ausgewählt und der entsprechende Locator angezeigt.
++
+
+NOTE: Wenn die ausgewählte Protokollsicherung sowohl im Spiegelungs- als auch im Tresorverzeichnis vorhanden ist, werden beide Lokatoren angezeigt.
+
+
+
+. Führen Sie auf der Seite Speicherorte die folgenden Aktionen durch:
++
+|===
+| Für dieses Feld... | Tun Sie das... 
+
+
+ a| 
+Klonhost
+ a| 
+Standardmäßig wird der Quell-Datenbank-Host befüllt.
+
+Wenn Sie den Klon auf einem anderen Host erstellen möchten, wählen Sie den Host aus, der dieselbe Version von Oracle und dasselbe Betriebssystem wie der des Quelldatenbankhosts hat.
+
+
+
+ a| 
+Datendateiorte
+ a| 
+Standardmäßig wird der Speicherort der Datendatei gefüllt.
+
+Die standardmäßige Namenskonvention von SnapCenter für SAN- oder NFS-File-Systeme ist FileSystemNamesourceDatabase_CLONESID.
+
+Die standardmäßige SnapCenter-Namenskonvention für ASM-Festplattengruppen ist SC_HASHCODEofDISKGROUP_CLONESID. Die HASHCODEofDISKGROUP ist eine automatisch generierte Nummer (2 bis 10 Ziffern), die für jede ASM-Laufwerksgruppe eindeutig ist.
+
+
+NOTE: Wenn Sie den Namen der ASM-Laufwerksgruppe anpassen, stellen Sie sicher, dass die Namenslänge die von Oracle unterstützte maximale Länge erfüllt.
+
+Wenn Sie einen anderen Pfad angeben möchten, müssen Sie die Mount-Punkte für Datendatei oder die Namen der ASM-Festplattengruppen für die Klondatenbank eingeben. Wenn Sie den Datenpfad anpassen, müssen Sie auch die Steuerdatei und die Redo-Log-Datei ASM-Festplattengruppennamen oder Dateisystem entweder auf den gleichen Namen für Datendateien oder auf ein vorhandenes ASM-Laufwerksgruppen oder Dateisystem ändern.
+
+
+
+ a| 
+Kontrolldateien
+ a| 
+Standardmäßig wird der Pfad der Kontrolldatei ausgefüllt.
+
+Die Steuerdateien werden in derselben ASM-Laufwerksgruppe oder in demselben Dateisystem wie die der Datendateien abgelegt. Wenn Sie den Pfad der Steuerdatei überschreiben möchten, können Sie einen anderen Pfad für die Steuerdatei angeben.
+
+
+NOTE: Das Dateisystem oder die ASM-Laufwerksgruppe sollte auf dem Host vorhanden sein.
+
+Standardmäßig ist die Anzahl der Kontrolldateien mit der der Quelldatenbank identisch. Sie können die Anzahl der Kontrolldateien ändern, aber zum Klonen der Datenbank ist mindestens eine Kontrolldatei erforderlich.
+
+Sie können den Pfad der Steuerdatei an ein anderes Dateisystem (vorhanden) anpassen als den der Quelldatenbank.
+
+
+
+ a| 
+Wiederherstellungsprotokolle
+ a| 
+Standardmäßig werden die Gruppe, der Pfad und ihre Größe der Wiederherstellungsprotokolle ausgefüllt.
+
+Die Wiederherstellungsprotokolle werden in derselben ASM-Festplattengruppe oder demselben Filesystem wie die Datendateien der geklonten Datenbank platziert. Wenn Sie den Pfad für die Wiederherstellungsprotokoll-Datei überschreiben möchten, können Sie den Pfad für die Wiederherstellungsprotokolle auf ein anderes Dateisystem als den der Quelldatenbank anpassen.
+
+
+NOTE: Auf dem Host sollte das neue Dateisystem oder die ASM-Laufwerksgruppe vorhanden sein.
+
+Standardmäßig ist die Anzahl der Wiederherstellungsprotokolle, der Wiederherstellungsprotokolle und ihrer Größe mit der Quelldatenbank identisch. Sie können die folgenden Parameter ändern:
+
+** Anzahl der Wiederherstellungsprotokolle
+
+
+
+NOTE: Zum Klonen der Datenbank sind mindestens zwei Wiederherstellungsprotokolle erforderlich.
+
+** Wiederholen Sie die Protokolldateien in jeder Gruppe und ihrem Pfad
++
+Sie können den Pfad der Redo-Log-Datei an ein anderes (vorhandenes) Dateisystem anpassen als den der Quelldatenbank.
+
+
+
+
+NOTE: In der Gruppe für Wiederherstellungsprotokolle ist mindestens eine Wiederherstellungsprotokoll-Datei erforderlich, um die Datenbank zu klonen.
+
+** Größe der Wiederherstellungsprotokolldatei
+
+
+|===
+. Führen Sie auf der Seite Anmeldeinformationen die folgenden Aktionen durch:
++
+|===
+| Für dieses Feld... | Tun Sie das... 
+
+
+ a| 
+Anmeldeinformationsname für sys-Benutzer
+ a| 
+Wählen Sie das Credential aus, das zum Definieren des sys-Benutzerpassworts der Clone-Datenbank verwendet werden soll.
+
+Wenn SQLNET.AUTHENTICATION_SERVICES in sqlnet.ora-Datei auf dem Ziel-Host auf KEINE gesetzt ist, sollten Sie in der SnapCenter-GUI nicht *kein* als Credential auswählen.
+
+
+
+ a| 
+Benutzername für die ASM-Instanz
+ a| 
+Wählen Sie *Keine* aus, wenn die OS-Authentifizierung für die Verbindung zur ASM-Instanz auf dem Clone-Host aktiviert ist.
+
+Wählen Sie andernfalls die Oracle ASM-Berechtigung aus, die entweder mit „`sys`“-Benutzer oder mit einem Benutzer mit der Berechtigung `sysasm`“ für den Klon-Host konfiguriert ist.
+
+|===
++
+Die Oracle-Startseite, der Benutzername und die Gruppendetails werden automatisch aus der Quelldatenbank ausgefüllt. Sie können die Werte basierend auf der Oracle-Umgebung des Hosts ändern, auf dem der Klon erstellt wird.
+
+. Führen Sie auf der Seite PreOps die folgenden Schritte aus:
++
+.. Geben Sie den Pfad und die Argumente für das Prescript ein, das Sie vor dem Klonvorgang ausführen möchten.
++
+Sie müssen das Prescript entweder in _/var/opt/snapcenter/spl/scripts_ oder in einem Ordner in diesem Pfad speichern. Standardmäßig ist der Pfad _/var/opt/snapcenter/spl/scripts_ ausgefüllt. Wenn Sie das Skript in einem beliebigen Ordner innerhalb dieses Pfads platziert haben, müssen Sie den vollständigen Pfad zum Ordner angeben, in dem das Skript abgelegt wird.
+
++
+Mit SnapCenter können Sie die vordefinierten Umgebungsvariablen verwenden, wenn Sie das Preskript und das Postscript ausführen. link:../protect-sco/predefined-environment-variables-prescript-postscript-clone.html["Weitere Informationen ."^]
+
+.. Ändern Sie im Abschnitt Datenbankparameter-Einstellungen die Werte vorausgefüllter Datenbankparameter, die zum Initialisieren der Datenbank verwendet werden.
++
+Sie können weitere Parameter hinzufügen, indem Sie auf * klickenimage:../media/add_policy_from_resourcegroup.gif[""]*.
+
++
+Wenn Sie Oracle Standard Edition verwenden und die Datenbank im Archiv-Log-Modus ausgeführt wird oder Sie eine Datenbank aus dem Wiederherstellungsprotokoll wiederherstellen möchten, fügen Sie die Parameter hinzu und geben den Pfad an.
+
++
+*** LOG_ARCHIVE_DEST
+*** LOG_ARCHIVE_DUPLEX_DEST
++
+
+NOTE: Der fast Recovery Area (FRA) ist in den vorausgefüllten Datenbankparametern nicht definiert. Sie können FRA konfigurieren, indem Sie die zugehörigen Parameter hinzufügen.
+
++
+
+NOTE: Der Standardwert von log_Archive_dest_1 liegt bei „€ORACLE_HOME/Clone_sid“ und an diesem Ort werden die Archivprotokolle der geklonten Datenbank erstellt. Wenn Sie den Parameter log_Archive_dest_1 gelöscht haben, wird der Speicherort des Archivprotokolls von Oracle bestimmt. Sie können einen neuen Speicherort für das Archivprotokoll definieren, indem Sie log_Archive_dest_1 bearbeiten. Stellen Sie jedoch sicher, dass das Dateisystem oder die Laufwerksgruppe vorhanden sein und auf dem Host verfügbar gemacht werden soll.
+
+
+
+.. Klicken Sie auf *Zurücksetzen*, um die Standardeinstellungen für die Datenbankparameter anzuzeigen.
+
+
+. Auf der PostOps Seite werden *Recover Database* und *Until Cancel* standardmäßig ausgewählt, um die Wiederherstellung der geklonten Datenbank durchzuführen.
++
+SnapCenter führt eine Recovery durch, indem das letzte Protokoll-Backup montiert wird, bei dem die nicht unterbrochene Sequenz von Archivprotokollen nach dem Daten-Backup zum Klonen ausgewählt wurde. Das Protokoll und das Daten-Backup sollten sich auf dem Primärspeicher befinden, um den Klon im Primärspeicher durchzuführen und Protokoll- und Daten-Backups auf dem Sekundärspeicher zu erstellen, um den Klon im Sekundärspeicher durchzuführen.
+
++
+Die Optionen *Recover Database* und *bis Abbrechen* sind nicht ausgewählt, wenn SnapCenter die entsprechenden Log-Backups nicht findet. Sie können den externen Archiv-Log-Speicherort angeben, wenn die Protokollsicherung in *externen Archiv-Log-Speicherorten angeben* nicht verfügbar ist. Sie können mehrere Protokollpositionen angeben.
+
++
+
+NOTE: Wenn Sie eine Quelldatenbank klonen möchten, die für die Unterstützung von Flash Recovery Area (FRA) und Oracle Managed Files (OMF) konfiguriert ist, muss das Protokollziel für die Wiederherstellung auch der OMF-Verzeichnisstruktur entsprechen.
+
++
+Die Seite PostOps wird nicht angezeigt, wenn die Quelldatenbank Data Guard Standby oder eine Active Data Guard Standby-Datenbank ist. Für Data Guard Standby oder eine Active Data Guard Standby-Datenbank bietet SnapCenter keine Option, um den Typ der Wiederherstellung in der SnapCenter GUI auszuwählen, aber die Datenbank wird mit bis Abbrechen Recovery-Typ wiederhergestellt, ohne Protokolle anzuwenden.
+
++
+|===
+| Feldname | Beschreibung 
+
+
+ a| 
+Bis Abbrechen
+ a| 
+SnapCenter führt eine Recovery durch, indem das neueste Protokoll-Backup mit der nicht unterbrochenen Sequenz von Archivprotokollen nach dem Daten-Backup, das zum Klonen ausgewählt wurde, mounten. Die geklonte Datenbank wird wiederhergestellt, bis die fehlende oder beschädigte Protokolldatei vorliegt.
+
+
+
+ a| 
+Datum und Uhrzeit
+ a| 
+SnapCenter stellt die Datenbank bis zu einem festgelegten Datum und einer bestimmten Uhrzeit wieder her. Das akzeptierte Format lautet mm/TT/JJJJ hh:mm:ss
+
+
+NOTE: Die Zeit kann im 24-Stunden-Format angegeben werden.
+
+
+
+ a| 
+Bis SCN (Systemänderungsnummer)
+ a| 
+SnapCenter stellt die Datenbank bis zu einer angegebenen Systemänderungsnummer (SCN) wieder her.
+
+
+
+ a| 
+Geben Sie externe Archivprotokolle an
+ a| 
+Wenn die Datenbank im ARCHIVELOG-Modus ausgeführt wird, identifiziert und montiert SnapCenter die optimale Anzahl von Protokoll-Backups basierend auf dem angegebenen SCN oder dem ausgewählten Datum und der ausgewählten Zeit.
+
+Sie können auch den externen Speicherort für das Archivprotokoll angeben.
+
+
+NOTE: SnapCenter identifiziert und Mounten die Backup-Protokolle nicht automatisch, wenn Sie bis zum Abbrechen ausgewählt haben.
+
+
+
+ a| 
+Neue DBID erstellen
+ a| 
+Standardmäßig ist das Kontrollkästchen Neue DBID* erstellen aktiviert, um eine eindeutige Nummer (DBID) für die geklonte Datenbank zu generieren, die sie von der Quelldatenbank unterscheidet.
+
+Deaktivieren Sie das Kontrollkästchen, wenn Sie der geklonten Datenbank die DBID der Quelldatenbank zuweisen möchten. Wenn Sie in diesem Szenario die geklonte Datenbank im externen RMAN-Katalog registrieren möchten, in dem die Quelldatenbank bereits registriert ist, schlägt der Vorgang fehl.
+
+
+
+ a| 
+Erstellen Sie eine tempfile für temporäre Tablespaces
+ a| 
+Aktivieren Sie das Kontrollkästchen, wenn Sie eine tempfile für den standardmäßigen temporären Tablespace der geklonten Datenbank erstellen möchten.
+
+Wenn das Kontrollkästchen nicht aktiviert ist, wird der Datenbankklon ohne die tempfile erstellt.
+
+
+
+ a| 
+Geben Sie beim Erstellen eines Klons sql-Einträge ein, die angewendet werden sollen
+ a| 
+Fügen Sie die sql-Einträge hinzu, die Sie beim Erstellen des Klons anwenden möchten.
+
+
+
+ a| 
+Geben Sie Skripte ein, die nach dem Klonvorgang ausgeführt werden sollen
+ a| 
+Geben Sie den Pfad und die Argumente des Postskripts an, die Sie nach dem Klonvorgang ausführen möchten.
+
+Das Postscript sollte entweder in _/var/opt/snapcenter/spl/scripts_ oder in einem Ordner in diesem Pfad gespeichert werden. Standardmäßig ist der Pfad _/var/opt/snapcenter/spl/scripts_ ausgefüllt.
+
+Wenn Sie das Skript in einem beliebigen Ordner innerhalb dieses Pfads platziert haben, müssen Sie den vollständigen Pfad zum Ordner angeben, in dem das Skript abgelegt wird.
+
+
+NOTE: Falls der Klonvorgang fehlschlägt, werden Postskripte nicht ausgeführt und Bereinigungstätigkeiten werden direkt ausgelöst.
+
+|===
+. Wählen Sie auf der Benachrichtigungsseite aus der Dropdown-Liste *E-Mail-Präferenz* die Szenarien aus, in denen Sie die E-Mails versenden möchten.
++
+Außerdem müssen Sie die E-Mail-Adressen für Absender und Empfänger sowie den Betreff der E-Mail angeben. Wenn Sie den Bericht über den ausgeführten Klonvorgang anhängen möchten, wählen Sie *Job-Bericht anhängen* aus.
+
++
+
+NOTE: Für eine E-Mail-Benachrichtigung müssen Sie die SMTP-Serverdetails entweder mit der GUI oder mit dem PowerShell-Befehlssatz Set-SmtpServer angegeben haben.
+
+. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
++
+
+NOTE: Während des Recovery im Rahmen des Klonens wird der Klon mit einer Warnung erstellt, auch wenn das Recovery fehlschlägt. Sie können für diesen Klon ein manuelles Recovery durchführen, um die Klondatenbank konsistent zu machen.
+
+. Überwachen Sie den Fortschritt des Vorgangs, indem Sie auf *Monitor* > *Jobs* klicken.
+
+
+*Ergebnis*
+
+Nach dem Klonen der Datenbank können Sie die Seite „Ressourcen“ aktualisieren, um die geklonte Datenbank als eine der für Backups verfügbaren Ressourcen aufzulisten. Die geklonte Datenbank kann mithilfe des Standard-Backup-Workflows wie jede andere Datenbank gesichert oder in eine Ressourcengruppe (entweder neu erstellt oder bereits vorhanden) aufgenommen werden. Die geklonte Datenbank kann weiter geklont werden (Klon von Klonen).
+
+Nach dem Klonen sollten Sie die geklonte Datenbank niemals umbenennen.
+
+
+NOTE: Falls Sie das Recovery während des Klonens nicht durchgeführt haben, kann das Backup der geklonten Datenbank fehlschlagen, da ein unsachgemäßes Recovery erforderlich ist und Sie möglicherweise manuelles Recovery durchführen müssen. Das Protokoll-Backup kann auch fehlschlagen, wenn der Standardspeicherort, der für Archivprotokolle erfasst wurde, auf einem Storage anderer Anbieter liegt oder wenn das Storage-System nicht mit SnapCenter konfiguriert ist.
+
+In AIX Setup können Sie den Befehl lkdev zum Sperren und den Befehl rendev verwenden, um die Festplatten umzubenennen, auf denen sich die geklonte Datenbank residierte.
+
+Das Sperren oder Umbenennen von Geräten hat keine Auswirkungen auf den Löschvorgang. Bei AIX LVM-Layouts, die auf SAN-Geräten aufgebaut sind, werden die Umbenennung von Geräten für die geklonten SAN-Geräte nicht unterstützt.
+
+*Weitere Informationen*
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/ORA-00308%3A_cannot_open_archived_log_ORA_LOG_arch1_123_456789012.arc["Die Wiederherstellung oder das Klonen schlägt mit der ORA-00308-Fehlermeldung fehl"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Failed_to_recover_a_cloned_database["Fehler beim Wiederherstellen einer geklonten Datenbank"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/What_are_the_customizable_parameters_for_backup_restore_and_clone_operations_on_AIX_systems["Anpassbare Parameter für Backup-, Wiederherstellungs- und Klonvorgänge auf AIX-Systemen"^]
+

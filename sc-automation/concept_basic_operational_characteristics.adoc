@@ -1,0 +1,93 @@
+---
+sidebar: sidebar 
+permalink: sc-automation/concept_basic_operational_characterstics.html 
+keywords: request and response, object identifiers, synchronous, asynchronous 
+summary: IM RUHEZUSTAND werden einheitliche Technologien und Best Practices erstellt, jedoch können die Details jeder API je nach dem verfügbaren Design variieren. 
+---
+= Grundlegende betriebliche Eigenschaften
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+IM RUHEZUSTAND werden einheitliche Technologien und Best Practices erstellt, jedoch können die Details jeder API je nach dem verfügbaren Design variieren.
+
+
+
+== API-Transaktion bei Anfrage und Reaktion
+
+Jeder REST-API-Aufruf wird als HTTP-Anfrage an das SnapCenter-Serversystem durchgeführt, das eine entsprechende Antwort auf den Client generiert. Dieses Anforderungs- und Antwortpaar wird als API-Transaktion betrachtet.
+
+Bevor Sie die API verwenden, sollten Sie mit den verfügbaren Eingabevariablen zur Steuerung einer Anfrage und dem Inhalt der Antwortausgabe vertraut sein.
+
+
+
+== Unterstützung von CRUD-Vorgängen
+
+Auf alle über das SnapCenter REST API verfügbaren Ressourcen kann basierend auf dem CRUD-Modell zugegriffen werden:
+
+* Erstellen
+* Lesen
+* Aktualisierung
+* Löschen
+
+
+Für einige der Ressourcen wird nur ein Teil der Vorgänge unterstützt.
+
+
+
+== Objektkennungen
+
+Jeder Ressourceninstanz oder jedem Objekt wird eine eindeutige Kennung zugewiesen, wenn sie erstellt wird. In den meisten Fällen ist die Kennung eine 128-Bit-UUID. Diese Kennungen sind global eindeutig in einem bestimmten SnapCenter-Server.
+
+Nachdem ein API-Aufruf ausgegeben wurde, der eine neue Objektinstanz erstellt, wird eine URL mit der zugehörigen ID an den Anrufer in der Kopfzeile der HTTP-Antwort zurückgegeben. Sie können die Kennung extrahieren und bei nachfolgenden Anrufen verwenden, wenn Sie sich auf die Ressourceninstanz beziehen.
+
+
+IMPORTANT: Der Inhalt und die interne Struktur der Objektkennungen können jederzeit geändert werden. Wenn Sie auf die zugeordneten Objekte verweisen, sollten Sie die Kennungen für die entsprechenden API-Aufrufe nur nach Bedarf verwenden.
+
+
+
+== Objektinstanzen und -Sammlungen
+
+Je nach Ressourcenpfad und HTTP-Methode kann ein API-Aufruf auf eine bestimmte Objektinstanz oder eine Sammlung von Objekten angewendet werden.
+
+
+
+== Synchroner und asynchroner Betrieb
+
+SnapCenter führt eine HTTP-Anforderung durch, die von einem Client entweder synchron oder asynchron empfangen wird.
+
+
+
+=== Synchrone Verarbeitung
+
+SnapCenter führt die Anfrage sofort aus und antwortet mit einem HTTP-Statuscode von 200 oder 201, wenn er erfolgreich ist.
+
+Jede Anfrage, die die Methode GET verwendet, wird immer synchron ausgeführt. Zusätzlich sind Anfragen, die POST verwenden, so ausgelegt, dass sie synchron ausgeführt werden können, wenn sie in weniger als zwei Sekunden abgeschlossen sein sollen.
+
+
+
+=== Asynchrone Verarbeitung
+
+Wenn eine asynchrone Anforderung gültig ist, erstellt SnapCenter eine Hintergrundaufgabe zur Verarbeitung der Anforderung und ein Jobobjekt zum Anker der Aufgabe. Der HTTP-Statuscode 202 wird zusammen mit dem Jobobjekt an den Anrufer zurückgegeben. Sie sollten den Status des Jobs abrufen, um den Erfolg oder den Fehler zu ermitteln.
+
+Anfragen, die DIE POST- und LÖSCHMETHODEN verwenden, werden asynchron ausgeführt, wenn dies voraussichtlich mehr als zwei Sekunden dauert.
+
+
+
+== Sicherheit
+
+Die Sicherheit der REST-API basiert in erster Linie auf den vorhandenen Sicherheitsfunktionen von SnapCenter. Die folgende Sicherheit wird von der API verwendet:
+
+
+
+=== Sicherheit In Transportschicht
+
+Der gesamte über das Netzwerk zwischen dem SnapCenter-Server und dem Client gesendete Datenverkehr wird basierend auf den SnapCenter-Konfigurationseinstellungen in der Regel mit TLS verschlüsselt.
+
+
+
+=== HTTP-Authentifizierung
+
+Auf HTTP-Ebene wird die grundlegende Authentifizierung für die API-Transaktionen verwendet. Jeder Anforderung wird ein HTTP-Header mit dem Benutzernamen und Passwort in einem Base64-String hinzugefügt.

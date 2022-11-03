@@ -1,0 +1,46 @@
+---
+permalink: protect-scsql/task_define_a_clone_strategy_for_sql_server.html 
+sidebar: sidebar 
+keywords:  
+summary: Wenn Sie eine Klonstrategie definieren, können Sie Ihre Datenbank erfolgreich klonen. 
+---
+= Definieren Sie eine Klonstrategie für SQL Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie eine Klonstrategie definieren, können Sie Ihre Datenbank erfolgreich klonen.
+
+. Prüfen Sie die Einschränkungen hinsichtlich von Klonvorgängen.
+. Legen Sie den für Sie erforderlichen Klontyp fest.
+
+
+
+
+== Einschränkungen von Klonvorgängen
+
+Die Einschränkungen von Klonvorgängen sollten Sie beachten, bevor Sie die Datenbanken klonen.
+
+* Wenn Sie eine Oracle-Version von 11.2.0.4 bis 12.1.0.1 verwenden, befindet sich der Klonvorgang im Status „Hung“, wenn Sie den Befehl „_renamedg_“ ausführen. Sie können den Oracle Patch 19544733 anwenden, um dieses Problem zu beheben.
+* Das Klonen von Datenbanken aus einem LUN, die direkt an einen Host angebunden ist (z. B. durch die Verwendung von Microsoft iSCSI Initiator auf einem Windows Host), wird auf demselben Windows Host oder einem anderen Windows Host oder umgekehrt nicht unterstützt.
+* Das Stammverzeichnis des Volume-Bereitstellungspunkts kann kein freigegebenes Verzeichnis sein.
+* Wenn Sie eine LUN verschieben, die einen Klon in ein neues Volume enthält, kann der Klon nicht gelöscht werden.
+
+
+
+
+== Typen von Klonvorgängen
+
+Sie können SnapCenter verwenden, um ein Backup einer SQL Server Datenbank oder eine Produktionsdatenbank zu klonen.
+
+* Klonen aus einem Datenbank-Backup
++
+Die geklonte Datenbank kann als Basis für die Entwicklung neuer Applikationen dienen und Applikationsfehler isolieren, die in der Produktionsumgebung auftreten. Die geklonte Datenbank kann auch für das Recovery nach Fehlern bei Datenbanken verwendet werden.
+
+* Lebenszyklus von Klonen
++
+Sie können SnapCenter verwenden, um wiederkehrende Klonjobs zu planen, die auftreten, wenn die Produktionsdatenbank nicht beschäftigt ist.
+
+

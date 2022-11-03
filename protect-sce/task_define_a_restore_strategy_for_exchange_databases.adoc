@@ -1,0 +1,73 @@
+---
+permalink: protect-sce/task_define_a_restore_strategy_for_exchange_databases.html 
+sidebar: sidebar 
+keywords:  
+summary: Durch die Definition einer Wiederherstellungsstrategie für Exchange Server können Sie Ihre Datenbank erfolgreich wiederherstellen. 
+---
+= Festlegen einer Restore-Strategie für Exchange-Datenbanken
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Durch die Definition einer Wiederherstellungsstrategie für Exchange Server können Sie Ihre Datenbank erfolgreich wiederherstellen.
+
+
+
+== Quellen für eine Wiederherstellung in Exchange Server
+
+Sie können eine Exchange Server Datenbank aus einer Backup-Kopie im Primärspeicher wiederherstellen.
+
+Sie können Datenbanken nur aus dem Primärspeicher wiederherstellen.
+
+
+
+== Arten von Wiederherstellungsvorgängen, die für Exchange Server unterstützt werden
+
+Mit SnapCenter können Sie verschiedene Arten von Restore-Vorgängen für Exchange Ressourcen ausführen.
+
+* Wiederherstellung im Minutenschnoch
+* Wiederherstellung auf einen früheren Zeitpunkt
+
+
+
+
+=== Führen Sie Wiederherstellungen minutengenau durch
+
+In einem up-to-the-minute-Wiederherstellungsvorgang werden Datenbanken bis zu dem Punkt des Ausfalls wiederhergestellt. SnapCenter erreicht dies durch folgende Sequenz:
+
+. Stellt die Datenbanken aus dem vollständigen Datenbank-Backup wieder her, das Sie auswählen.
+. Wendet alle gesicherten Transaktionsprotokolle sowie alle neuen Protokolle an, die seit dem letzten Backup erstellt wurden.
++
+Transaktionsprotokolle werden nach vorne verschoben und auf alle ausgewählten Datenbanken angewendet.
+
++
+Exchange erstellt nach Abschluss einer Wiederherstellung eine neue Protokollkette.
+
++
+|===
+
+
+| *Best Practice:* Es wird empfohlen, nach Abschluss einer Wiederherstellung ein neues vollständiges Backup durchzuführen und zu protokollieren. 
+|===
++
+Für eine minutengenaue Wiederherstellung ist ein zusammenhängender Satz von Transaktionsprotokollen erforderlich.
+
++
+Nach der Durchführung eines up-to-the-minute-Restores ist das Backup, das Sie für die Wiederherstellung verwendet haben, nur für zeitpunktgenaue Restore-Vorgänge verfügbar.
+
++
+Wenn Sie keine up-to-the-minute-Wiederherstellung für alle Backups benötigen, können Sie die Transaktions-Log-Backup-Aufbewahrung Ihres Systems mithilfe der Backup-Richtlinien konfigurieren.
+
+
+
+
+
+=== Wiederherstellung auf einen früheren Zeitpunkt
+
+In einer zeitpunktgenauen Restore-Operation werden Datenbanken nur auf eine bestimmte Zeit aus der Vergangenheit wiederhergestellt. Ein Point-in-Time-Wiederherstellungsvorgang findet in den folgenden Situationen statt:
+
+* Die Datenbank wird zu einem bestimmten Zeitpunkt in einem gesicherten Transaktions-Log wiederhergestellt.
+* Die Datenbank ist wiederhergestellt, und nur ein Teil der gesicherten Transaktions-Logs wird angewendet.
+

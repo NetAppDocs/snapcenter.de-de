@@ -1,0 +1,156 @@
+---
+sidebar: sidebar 
+permalink: sc-automation/concept_interpreting_an_api_response.html 
+keywords: http status code, error code 
+summary: Jede API-Anfrage generiert eine Antwort an den Client. Sie sollten die Antwort überprüfen, um festzustellen, ob sie erfolgreich war, und weitere Daten nach Bedarf abrufen. 
+---
+= Interpretation einer API-Antwort
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Jede API-Anfrage generiert eine Antwort an den Client. Sie sollten die Antwort überprüfen, um festzustellen, ob sie erfolgreich war, und weitere Daten nach Bedarf abrufen.
+
+
+
+== HTTP-Statuscode
+
+Im Folgenden werden die von der SnapCenter REST API verwendeten HTTP-Statuscodes beschrieben.
+
+|===
+| Codieren | Beschreibung 
+
+
+| 200 | OK zeigt Erfolg für Anrufe an, die kein neues Objekt erstellen. 
+
+
+| 201 | Ein Objekt wurde erfolgreich erstellt. Der Positionskopf in der Antwort enthält die eindeutige Kennung für das Objekt. 
+
+
+| 202 | Angenommen Ein Hintergrundjob wurde gestartet, um die Anfrage auszuführen, wurde aber noch nicht abgeschlossen. 
+
+
+| 400 | Ungültige Anfrage die Eingabe der Anforderung wurde nicht erkannt oder ist nicht angemessen. 
+
+
+| 401 | Nicht autorisierte Benutzerauthentifizierung fehlgeschlagen. 
+
+
+| 403 | Aufgrund eines Autorisierungsfehlers (RBAC) wird der Zugriff verweigert. 
+
+
+| 404 | Die Ressource, auf die in der Anfrage verwiesen wird, wurde nicht gefunden. 
+
+
+| 405 | Methode nicht zulässig die HTTP-Methode in der Anfrage wird für die Ressource nicht unterstützt. 
+
+
+| 409 | Konflikt ein Versuch, ein Objekt zu erstellen, ist fehlgeschlagen, weil zuerst ein anderes Objekt erstellt werden muss oder das angeforderte Objekt bereits vorhanden ist. 
+
+
+| 500 | Interner Fehler Beim Server ist ein allgemeiner interner Fehler aufgetreten. 
+|===
+
+
+== Antwortkopfzeilen
+
+In der vom SnapCenter erzeugten HTTP-Antwort sind mehrere Header enthalten.
+
+
+
+=== Standort
+
+Wenn ein Objekt erstellt wird, enthält die Standortkopfzeile die komplette URL zum neuen Objekt einschließlich der eindeutigen Kennung, die dem Objekt zugewiesen ist.
+
+
+
+=== Inhaltstyp
+
+Dies ist normalerweise der Fall `application/json`.
+
+
+
+== Antwortkörper
+
+Der Inhalt des Antwortkörpers, der sich aus einer API-Anfrage ergibt, unterscheidet sich je nach Objekt, Verarbeitungstyp und Erfolg oder Misserfolg der Anforderung. Die Antwort wird immer in JSON gerendert.
+
+
+
+=== Einzelnes Objekt
+
+Je nach Anforderung kann ein einzelnes Objekt mit einer Reihe von Feldern zurückgegeben werden. Beispielsweise können Sie GET verwenden, um ausgewählte Eigenschaften eines Clusters mit der eindeutigen Kennung abzurufen.
+
+
+
+=== Mehrere Objekte
+
+Es können mehrere Objekte aus einer Ressourcensammlung zurückgegeben werden. In allen Fällen wird ein konsistentes Format verwendet, mit `num_records` Angabe der Anzahl der Datensätze und Datensätze, die ein Array der Objektinstanzen enthalten. Beispielsweise können Sie die in einem bestimmten Cluster definierten Nodes abrufen.
+
+
+
+=== Jobobjekt
+
+Wenn ein API-Aufruf asynchron verarbeitet wird, wird ein Job-Objekt zurückgegeben, das den Hintergrund-Task ankers. Beispielsweise wird die PATCH-Anfrage, die zum Aktualisieren der Cluster-Konfiguration verwendet wird, asynchron verarbeitet und ein Job-Objekt zurückgegeben.
+
+
+
+=== Fehlerobjekt
+
+Wenn ein Fehler auftritt, wird immer ein Fehlerobjekt zurückgegeben. Beispielsweise erhalten Sie einen Fehler beim Versuch, ein Feld zu ändern, das nicht für ein Cluster definiert ist.
+
+
+
+=== Leer
+
+In bestimmten Fällen werden keine Daten zurückgegeben und der Antwortkörper enthält ein leeres JSON-Objekt.
+
+
+
+== Fehler
+
+Wenn ein Fehler auftritt, wird ein Fehlerobjekt im Antwortkörper zurückgegeben.
+
+
+
+=== Formatieren
+
+Ein Fehlerobjekt hat das folgende Format:
+
+....
+"error": {
+"message": "<string>",
+"code": <integer>[,
+"target": "<string>"]
+}
+....
+Sie können den Codewert verwenden, um den allgemeinen Fehlertyp oder die allgemeine Fehlerkategorie zu bestimmen, und die Meldung, um den spezifischen Fehler zu ermitteln. Wenn verfügbar, enthält das Zielfeld die spezifische Benutzereingabe, die mit dem Fehler verknüpft ist.
+
+
+
+=== Allgemeine Fehlercodes
+
+Die gängigen Fehlercodes werden in der folgenden Tabelle beschrieben. Spezifische API-Aufrufe können zusätzliche Fehlercodes enthalten.
+
+|===
+| Codieren | Beschreibung 
+
+
+| 409 | Ein Objekt mit derselben Kennung ist bereits vorhanden. 
+
+
+| 400 | Der Wert für ein Feld hat einen ungültigen Wert oder fehlt oder es wurde ein zusätzliches Feld angegeben. 
+
+
+| 400 | Der Vorgang wird nicht unterstützt. 
+
+
+| 405 | Ein Objekt mit der angegebenen Kennung wurde nicht gefunden. 
+
+
+| 403 | Die Berechtigung zur Durchführung der Anforderung wird verweigert. 
+
+
+| 409 | Die Ressource wird verwendet. 
+|===

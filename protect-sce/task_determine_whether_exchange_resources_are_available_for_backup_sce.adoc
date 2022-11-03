@@ -1,0 +1,71 @@
+---
+permalink: protect-sce/task_determine_whether_exchange_resources_are_available_for_backup_sce.html 
+sidebar: sidebar 
+keywords: credentials 
+summary: Ressourcen sind die Datenbanken, Exchange Database Availability Groups, die von den von Ihnen installierten Plug-ins verwaltet werden. Sie können diese Ressourcen zu Ressourcengruppen hinzufügen, sodass Sie Datensicherungsjobs ausführen können. Zunächst müssen Sie jedoch ermitteln, welche Ressourcen Sie zur Verfügung haben. Das ermitteln der verfügbaren Ressourcen überprüft außerdem, ob die Plug-in-Installation erfolgreich abgeschlossen wurde. 
+---
+= Bestimmen Sie, ob Exchange Ressourcen für Backups verfügbar sind
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ressourcen sind die Datenbanken, Exchange Database Availability Groups, die von den von Ihnen installierten Plug-ins verwaltet werden. Sie können diese Ressourcen zu Ressourcengruppen hinzufügen, sodass Sie Datensicherungsjobs ausführen können. Zunächst müssen Sie jedoch ermitteln, welche Ressourcen Sie zur Verfügung haben. Das ermitteln der verfügbaren Ressourcen überprüft außerdem, ob die Plug-in-Installation erfolgreich abgeschlossen wurde.
+
+*Was Sie brauchen*
+
+* Sie müssen bereits Aufgaben abgeschlossen haben, wie z. B. das Installieren von SnapCenter-Servern, das Hinzufügen von Hosts, das Erstellen von Speichersystemverbindungen, das Hinzufügen von Anmeldeinformationen und das Installieren des Plug-ins für Exchange.
+* Um die Funktionen der Single Mailbox Recovery Software nutzen zu können, müssen Sie Ihre aktive Datenbank auf dem Exchange Server befinden, wo die Single Mailbox Recovery Software installiert ist.
+* Wenn Datenbanken auf VMware RDM LUNs vorhanden sind, müssen Sie das SnapCenter Plug-in für VMware vSphere implementieren und das Plug-in bei SnapCenter registrieren. Der https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_get_started_overview.html["Dokumentation zum SnapCenter Plug-in für VMware vSphere"] Bietet weitere Informationen.
+
+
+*Über diese Aufgabe*
+
+* Datenbanken können nicht gesichert werden, wenn die Option *Gesamtstatus* auf der Seite Details auf nicht verfügbar für Backups eingestellt ist. Die Option *Gesamtstatus* ist für die Sicherung auf nicht verfügbar eingestellt, wenn eine der folgenden Optionen zutrifft:
++
+** Datenbanken sind nicht auf einer NetApp LUN.
+** Datenbanken befinden sich nicht im normalen Zustand.
++
+Datenbanken befinden sich nicht im normalen Zustand, wenn sie sich im Mount-, Unmount-, erneutes Seeding oder Recovery-Wartezustand befinden.
+
+
+
+* Wenn Sie über eine Datenbankverfügbarkeitsgruppe (DAG) verfügen, können Sie alle Datenbanken in der Gruppe sichern, indem Sie den Sicherungsauftrag von der DAG ausführen.
+
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann in der Dropdown-Liste Plug-ins in der oberen linken Ecke der Seite Ressourcen * Microsoft Exchange Server* aus.
+. Wählen Sie auf der Seite Ressourcen in der Dropdown-Liste *Ansicht* die Option *Datenbank*, oder *Database Availability Group* oder *Ressourcengruppe* aus.
++
+Alle Datenbanken und DAGs werden mit ihren DAG- oder Hostnamen im FQDN-Format angezeigt, sodass Sie zwischen mehreren Datenbanken unterscheiden können.
+
++
+Klicken Sie Auf image:../media/filter_icon.gif[""] Und wählen Sie den Hostnamen und den Exchange Server aus, um die Ressourcen zu filtern. Sie können dann auf klicken image:../media/filter_icon.gif[""] Um den Filterbereich zu schließen.
+
+. Klicken Sie Auf *Ressourcen Aktualisieren*.
++
+Die neu hinzugefügten, umbenannten oder gelöschten Ressourcen werden in den SnapCenter-Serverbestand aktualisiert.
+
++
+
+IMPORTANT: Sie müssen die Ressourcen aktualisieren, wenn die Datenbanken außerhalb von SnapCenter umbenannt werden.
+
++
+Die Ressourcen werden zusammen mit Informationen wie Ressourcenname, Name der Datenbankverfügbarkeitsgruppe, Server, auf dem sich die Datenbank zurzeit befindet, Server mit Kopien, Zeitpunkt des letzten Backups und Gesamtstatus angezeigt.
+
++
+** Wenn sich die Datenbank auf einem Speicher außerhalb von NetApp befindet, wird in der Spalte Status insgesamt kein Backup verfügbar angezeigt.
++
+Wenn sich in einer DAG die aktive Datenbankkopie auf einem Storage anderer Anbieter befindet und mindestens eine passive Datenbankkopie auf NetApp Storage ist, wird in der Spalte *Gesamtstatus* nicht geschützt angezeigt.
+
++
+Sie können keine Datensicherungsvorgänge für eine Datenbank ausführen, die sich auf einem Storage-Typ außerhalb von NetApp befindet.
+
+** Wenn sich die Datenbank auf NetApp Storage befindet und nicht geschützt ist, wird sie in der Spalte *Gesamtstatus* nicht geschützt angezeigt.
+** Wenn sich die Datenbank auf einem NetApp Storage System befindet und geschützt ist, zeigt die Benutzeroberfläche die Meldung Backup not run in der Spalte *Gesamtstatus* an.
+** Wenn sich die Datenbank auf einem NetApp Speichersystem befindet und geschützt ist und das Backup für die Datenbank ausgelöst wird, zeigt die Benutzeroberfläche die Meldung Sicherung erfolgreich in der Spalte *Gesamtstatus* an.
+
+
+

@@ -1,0 +1,89 @@
+---
+permalink: protect-scw/task_clone_from_a_windows_file_system_backup.html 
+sidebar: sidebar 
+keywords: clone 
+summary: Sie können SnapCenter zum Klonen eines Windows Filesystem-Backups verwenden. Wenn Sie eine Kopie einer einzelnen Datei wünschen, die versehentlich gelöscht oder geändert wurde, können Sie ein Backup klonen und auf diese Datei im Klon zugreifen. 
+---
+= Klonen aus einem Windows File-System-Backup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können SnapCenter zum Klonen eines Windows Filesystem-Backups verwenden. Wenn Sie eine Kopie einer einzelnen Datei wünschen, die versehentlich gelöscht oder geändert wurde, können Sie ein Backup klonen und auf diese Datei im Klon zugreifen.
+
+*Was Sie brauchen*
+
+* Sie sollten auf die Datensicherung vorbereitet sein, indem Sie Aufgaben wie das Hinzufügen von Hosts, die Identifizierung von Ressourcen und das Erstellen von SVM-Verbindungen (Storage Virtual Machine) abschließen.
+* Sie sollten eine Sicherung des Dateisystems haben.
+* Sie sollten sicherstellen, dass die Aggregate, die die Volumes hosten, sich in der Liste der zugewiesenen Aggregate der Storage Virtual Machine (SVM) befinden.
+* Sie können keine Ressourcengruppe klonen. Sie können nur individuelle File-System-Backups klonen.
+* Wenn sich ein Backup auf einer virtuellen Maschine mit VMDK-Laufwerk befindet, kann SnapCenter das Backup nicht auf einem physischen Server klonen.
+* Wenn Sie ein Windows Cluster klonen (z. B. eine gemeinsame LUN oder ein gemeinsam genutztes Cluster-Volume (CSV)-LUN), wird der Klon als dedizierte LUN auf dem von Ihnen angegebenen Host gespeichert.
+* Für einen Klonvorgang kann das Stammverzeichnis des Volume-Bereitstellungspunkts kein freigegebenes Verzeichnis sein.
+* Auf einem Node, der nicht der Home-Node für das Aggregat ist, können Sie keinen Klon erstellen.
+* Sie können keine wiederkehrenden Vorgänge des Klons (Lebenszyklus von Klonen) für Windows Filesysteme planen, sondern nur Backups nach Bedarf klonen.
+* Wenn Sie eine LUN verschieben, die einen Klon enthält, auf ein neues Volume, kann SnapCenter den Klon nicht mehr unterstützen. Beispielsweise können Sie diesen Klon nicht mit SnapCenter löschen.
+* Sie können nicht über mehrere Umgebungen hinweg klonen. Zum Beispiel Klonen von einer physischen Festplatte auf eine virtuelle Festplatte oder umgekehrt.
+
+
+*Über diese Aufgabe*
+
+* DER SCRIPTS_PATH wird mit dem PredefinedWindowsScriptDirectory-Schlüssel definiert, der sich in der SMCoreServiceHost.exe.Config-Datei des Plug-in-Hosts befindet.
++
+Bei Bedarf können Sie diesen Pfad ändern und den SMCore Service neu starten. Es wird empfohlen, den Standardpfad für die Sicherheit zu verwenden.
+
++
+Der Wert des Schlüssels kann von Swagger über die API angezeigt werden: API /4.7/configsettings
+
++
+Sie können die GET API verwenden, um den Wert der Taste anzuzeigen. SET-API wird nicht unterstützt.
+
+
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Wählen Sie auf der Seite Ressourcen die Option *Dateisysteme* aus der Liste aus.
+. Wählen Sie den Host aus.
++
+Die Topologieansicht wird automatisch angezeigt, wenn die Ressource geschützt ist.
+
+. Wählen Sie in der Liste Ressourcen das zu klonenden Backup aus, und klicken Sie dann auf das Klon-Symbol.
+. Gehen Sie auf der Seite Optionen wie folgt vor:
++
+|===
+| Für dieses Feld... | Tun Sie das... 
+
+
+ a| 
+Klonserver
+ a| 
+Wählen Sie den Host aus, auf dem der Klon erstellt werden soll.
+
+
+
+ a| 
+„`Automatische Zuweisung von Bereitstellungspunkt`“ oder „`Automatische Zuweisung von Volume-Bereitstellungspunkt unter Pfad`“
+ a| 
+Legen Sie fest, ob unter einem Pfad automatisch ein Mount-Punkt oder ein Volume-Mount-Punkt zugewiesen werden soll.
+
+Automatisches Zuweisen von Volume-Mount-Punkt unter Pfad: Der Mount-Punkt unter einem Pfad ermöglicht es Ihnen, ein bestimmtes Verzeichnis bereitzustellen, in dem die Mount-Punkte erstellt werden. Bevor Sie diese Option auswählen, müssen Sie überprüfen, ob das Verzeichnis leer ist. Wenn ein Backup im Verzeichnis vorhanden ist, befindet sich das Backup nach dem Mount-Vorgang in einem ungültigen Status.
+
+
+
+ a| 
+Speicherort der Archivierung
+ a| 
+Wählen Sie einen Archivort aus, wenn Sie ein sekundäres Backup klonen.
+
+|===
+. Geben Sie auf der Seite Skript alle Druckschriften oder Postskripte an, die Sie ausführen möchten.
++
+
+NOTE: Der Pfad für Prescripts oder Postscripts darf keine Laufwerke oder Shares enthalten. Der Pfad sollte relativ zum SCRIPTS_PATH sein.
+
+. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
+. Überwachen Sie den Fortschritt des Vorgangs, indem Sie auf *Monitor* > *Jobs* klicken.
+

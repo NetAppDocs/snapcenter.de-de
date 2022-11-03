@@ -1,0 +1,143 @@
+---
+section: protect-scc
+title: Schützen Sie benutzerdefinierte Anwendungen
+entries:
+- title: Benutzerdefinierte SnapCenter Plug-ins
+  entries:
+  - title: Überblick über benutzerdefinierte SnapCenter Plug-ins
+    url: "/protect-scc/concept_snapcenter_custom_plug_ins_overview.html"
+  - title: Was Sie mit den benutzerdefinierten SnapCenter-Plug-ins tun können
+    url: "/protect-scc/concept_what_you_can_do_with_the_snapcenter_custom_plug_ins.html"
+  - title: Benutzerdefinierte SnapCenter Plug-ins-Funktionen
+    url: "/protect-scc/concept_snapcenter_custom_plug_ins_features.html"
+  - title: Von benutzerdefinierten SnapCenter Plug-ins unterstützte Storage-Typen
+    url: "/protect-scc/reference_storage_types_supported_by_snapcenter_custom_plug_in.html"
+  - title: Minimale ONTAP-Berechtigungen, die für benutzerdefiniertes Plug-in erforderlich
+      sind
+    url: "/protect-scc/reference_minimum_ontap_privileges_required_for_custom_plug_in.html"
+  - title: Storage-Systeme für SnapMirror und SnapVault Replizierung vorbereiten
+    url: "/protect-scc/reference_prepare_storage_systems_for_snapmirror_and_snapvault_replication_for_plugin_for_scc.html"
+  - title: Backup-Strategie definieren
+    url: "/protect-scc/task_define_a_backup_strategy.html"
+  - title: Backup-Strategie für benutzerdefinierte Plug-ins
+    entries:
+    - title: Backup-Pläne für benutzerdefinierte Plug-in-Ressourcen
+      url: "/protect-scc/reference_backup_schedules_of_custom_plug_in_resources.html"
+    - title: Anzahl der erforderlichen Backup-Jobs
+      url: "/protect-scc/concept_number_of_backup_jobs_needed.html"
+  - title: Arten von Wiederherstellungsstrategien werden für manuell hinzugefügte
+      benutzerdefinierte Plug-in-Ressourcen unterstützt
+    url: "/protect-scc/reference_types_of_restore_strategies_supported_for_manually_added_custom_plugin_resources.html"
+- title: Entwickeln Sie ein Plug-in für Ihre Applikation
+  entries:
+  - title: Überblick
+    url: "/protect-scc/concept_develop_a_plug_in_for_your_application.html"
+  - title: PERL-basierte Entwicklung
+    url: "/protect-scc/reference_perl.html"
+  - title: Nativer Stil
+    url: "/protect-scc/reference_native.html"
+  - title: Java-Stil
+    url: "/protect-scc/reference_java.html"
+  - title: Benutzerdefiniertes Plug-in in SnapCenter
+    url: "/protect-scc/reference_custom_plugin_in_snapcenter.html"
+- title: Bereiten Sie die Installation von benutzerdefinierten SnapCenter-Plug-ins
+    vor
+  entries:
+  - title: Installationsworkflow von benutzerdefinierten SnapCenter Plug-ins
+    url: "/protect-scc/task_install_snapcenter_custom_plug_in.html"
+  - title: Voraussetzungen für das Hinzufügen von Hosts und die Installation benutzerdefinierter
+      SnapCenter Plug-ins
+    url: "/protect-scc/reference_prerequisites_to_adding_hosts_and_installing_snapcenter_custom_plug_ins.html"
+  - title: Hostanforderungen für die Installation des SnapCenter Plug-ins Pakets für
+      Windows
+    url: "/protect-scc/reference_host_requirements_to_install_snapcenter_plug_in_package_for_windows_scc.html"
+  - title: Host-Anforderungen für die Installation des SnapCenter Plug-ins Pakets
+      für Linux
+    url: "/protect-scc/reference_host_requirements_for_installing_the_snapcenter_plug_in_package_for_linux_scc.html"
+  - title: Richten Sie Anmeldedaten für benutzerdefinierte SnapCenter-Plug-ins ein
+    url: "/protect-scc/task_set_up_credentials_for_snapcenter_custom_plug_in.html"
+  - title: Konfigurieren Sie gMSA unter Windows Server 2012 oder höher
+    url: "/protect-scc/task_configure_gMSA_on_windows_server_2012_or_later.html"
+  - title: Installieren Sie die benutzerdefinierten SnapCenter-Plug-ins
+    entries:
+    - title: Fügen Sie Hosts hinzu und installieren Sie Plug-in-Pakete auf Remote-Hosts
+      url: "/protect-scc/task_add_hosts_and_install_plug_in_packages_on_remote_hosts_scc.html"
+    - title: Installieren Sie SnapCenter Plug-in-Pakete für Linux oder Windows auf
+        mehreren Remote Hosts mithilfe von Cmdlets
+      url: "/protect-scc/task_install_snapcenter_plug_in_packages_for_linux_or_windows_on_multiple_remote_hosts_using_cmdlets_scc.html"
+    - title: Installieren Sie die benutzerdefinierten SnapCenter-Plug-ins auf Linux-Hosts
+        über die Befehlszeilenschnittstelle
+      url: "/protect-scc/task_install_the_snapcenter_custom_plug_ins_on_linux_hosts_using_the_command_line_interface.html"
+    - title: Überwachen Sie den Installationsstatus des SnapCenter Plug-in-Pakets
+      url: "/protect-scc/task_monitor_the_status_of_installing_plugin_for_scc.html"
+  - title: Konfigurieren Sie das CA-Zertifikat
+    entries:
+    - title: ZertifikatCSR-Datei erstellen
+      url: "/protect-scc/reference_generate_CA_certificate_CSR_file.html"
+    - title: Importieren von CA-Zertifikaten
+      url: "/protect-scc/task_import_CA_certificates.html"
+    - title: Abrufen des Daumenabdrucks für das CA-Zertifikat
+      url: "/protect-scc/task_get_the_CA_certificate_thumbprint.html"
+    - title: Konfigurieren Sie das CA-Zertifikat mit den Windows-Host-Plug-in-Diensten
+      url: "/protect-scc/task_configure_CA_certificate_with_Windows_host_plug-in_services.html"
+    - title: Konfigurieren Sie das CA-Zertifikat für den benutzerdefinierten SnapCenter-Plug-ins-Dienst
+        auf dem Linux-Host
+      url: "/protect-scc/task_configure_CA_certificate_for_SCC_on_Linux_host.html"
+    - title: Konfigurieren Sie das CA-Zertifikat für den benutzerdefinierten SnapCenter-Plug-ins-Dienst
+        auf Windows-Host
+      url: "/protect-scc/task_configure_CA_certificate_for_SCC_on_windows_host.html"
+    - title: Aktivieren Sie CA-Zertifikate für Plug-ins
+      url: "/protect-scc/task_enable_ca_certificates_for_plug-ins.html"
+- title: Bereiten Sie sich auf die Datensicherung vor
+  entries:
+  - title: Voraussetzungen für die Verwendung der benutzerdefinierten SnapCenter-Plug-ins
+    url: "/protect-scc/reference_prerequisites_for_using_snapcenter_custom_plug_ins.html"
+  - title: Wie Ressourcen, Ressourcengruppen und Richtlinien zum Schutz benutzerdefinierter
+      Plug-in-Ressourcen verwendet werden
+    url: "/protect-scc/concept_how_resources_resource_groups_and_policies_are_used_for_protecting_custom_plug_in_resources.html"
+- title: Sichern Sie benutzerdefinierte Plug-in-Ressourcen
+  entries:
+  - title: Workflow sichern
+    url: "/protect-scc/task_back_up_custom_plug_in_resources.html"
+  - title: Benutzerdefinierte SnapCenter Plug-ins mit Ressourcen ergänzen
+    url: "/protect-scc/task_add_resources_to_snapcenter_custom_plug_ins.html"
+  - title: Erstellen von Richtlinien für benutzerdefinierte Plug-in-Ressourcen
+    url: "/protect-scc/task_create_policies_for_custom_plug_in_resources.html"
+  - title: Erstellen von Ressourcengruppen und Anhängen von Richtlinien
+    url: "/protect-scc/task_create_resource_groups_and_attach_policies.html"
+  - title: Sicherung individueller Plug-in-Ressourcen
+    url: "/protect-scc/task_back_up_individual_custom_plug_in_resources.html"
+  - title: Sichern Sie Ressourcengruppen benutzerdefinierter Plug-in-Ressourcen
+    url: "/protect-scc/task_back_up_resource_groups_of_custom_plug_in_resources.html"
+  - title: Erstellen Sie eine Storage-Systemverbindung und eine Zugangsdaten mit PowerShell
+      Cmdlets
+    url: "/protect-scc/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_scc.html"
+  - title: Sichern Sie Ressourcen mit PowerShell cmdlets
+    url: "/protect-scc/task_back_up_resources_using_powershell_cmdlets.html"
+  - title: Monitoring von Backup-Vorgängen
+    url: "/protect-scc/task_monitor_scc_resources_backup_operations.html"
+  - title: Abbrechen der Backup-Vorgänge
+    url: "/protect-scc/task_cancel_backup_operations_for_scc.html"
+  - title: Sehen Sie sich auf der Seite Topologie benutzerdefinierte Backups und Klone
+      zu den Plug-in-Ressourcen an
+    url: "/protect-scc/task_view_custom_plug_in_resource_backups_and_clones_in_the_topology_page.html"
+- title: Stellen Sie benutzerdefinierte Plug-in-Ressourcen wieder her
+  entries:
+  - title: Wiederherstellung des Workflows
+    url: "/protect-scc/task_restore_custom_plug_in_resources.html"
+  - title: Wiederherstellen eines Ressourcenbackups
+    url: "/protect-scc/task_restore_a_resource_backup.html"
+  - title: Stellen Sie Ressourcen mithilfe von PowerShell Cmdlets wieder her
+    url: "/protect-scc/task_restore_and_recover_resources_using_powershell_cmdlets_scc.html"
+  - title: Überwachen von Restore-Vorgängen
+    url: "/protect-scc/task_monitor_scc_resources_restore_operations.html"
+- title: Klonen benutzerdefinierter Plug-in-Ressourcen-Backups
+  entries:
+  - title: Klon-Workflow
+    url: "/protect-scc/task_clone_custom_plug_in_resource_backups.html"
+  - title: Klonen aus einem Backup
+    url: "/protect-scc/task_clone_from_a_backup.html"
+  - title: Klonen von Backups mit PowerShell Cmdlets
+    url: "/protect-scc/task_clone_backups_using_powershell_cmdlets.html"
+  - title: Überwachen Sie Klonvorgänge in SnapCenter
+    url: "/protect-scc/task_monitor_scc_resource_clone_operations.html"

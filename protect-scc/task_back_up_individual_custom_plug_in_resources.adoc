@@ -1,0 +1,135 @@
+---
+permalink: protect-scc/task_back_up_individual_custom_plug_in_resources.html 
+sidebar: sidebar 
+keywords:  
+summary: Wenn eine einzelne benutzerdefinierte Plug-in-Ressource nicht zu einer Ressourcengruppe gehört, können Sie die Ressource über die Seite Ressourcen sichern. Sie können die Ressource nach Bedarf sichern, oder wenn die Ressource über eine Richtlinie und einen konfigurierten Zeitplan verfügt, werden die Backups automatisch gemäß dem Zeitplan durchgeführt. 
+---
+= Sicherung individueller Plug-in-Ressourcen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn eine einzelne benutzerdefinierte Plug-in-Ressource nicht zu einer Ressourcengruppe gehört, können Sie die Ressource über die Seite Ressourcen sichern. Sie können die Ressource nach Bedarf sichern, oder wenn die Ressource über eine Richtlinie und einen konfigurierten Zeitplan verfügt, werden die Backups automatisch gemäß dem Zeitplan durchgeführt.
+
+*Was Sie brauchen*
+
+* Sie müssen eine Sicherungsrichtlinie erstellt haben.
+* Wenn Sie eine Ressource mit einer SnapMirror Beziehung mit einem sekundären Storage sichern möchten, sollte die dem Storage-Benutzer zugewiesene ONTAP-Rolle die Berechtigung „`snapmirror all`“ enthalten. Wenn Sie jedoch die Rolle „`vsadmin`“ verwenden, ist die Berechtigung „`snapmirror all`“ nicht erforderlich.
+
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Filtern Sie auf der Seite Ressourcen die Ressourcen aus der Dropdown-Liste *Ansicht* nach Ressourcentyp.
++
+Klicken Sie Auf image:../media/filter_icon.gif[""]Und wählen Sie dann den Hostnamen und den Ressourcentyp aus, um die Ressourcen zu filtern. Sie können dann auf klicken image:../media/filter_icon.gif[""] Um den Filterbereich zu schließen.
+
+. Klicken Sie auf die Ressource, die Sie sichern möchten.
+. Wenn Sie auf der Seite „Ressource“ einen benutzerdefinierten Namen verwenden möchten, aktivieren Sie das Kontrollkästchen *benutzerdefiniertes Namensformat für Snapshot-Kopie verwenden* und geben dann ein benutzerdefiniertes Namensformat für den Namen der Snapshot-Kopie ein.
++
+Beispiel: _Custext_Policy_hostname_ oder _Resource_hostname_. Standardmäßig wird ein Zeitstempel an den Namen der Snapshot Kopie angehängt.
+
+. Gehen Sie auf der Seite Anwendungseinstellungen wie folgt vor:
++
+.. Klicken Sie auf den Pfeil *Backups*, um zusätzliche Backup-Optionen festzulegen:
++
+Aktivieren Sie bei Bedarf das Backup der Konsistenzgruppe, und führen Sie die folgenden Aufgaben aus:
+
++
+|===
+| Für dieses Feld... | Tun Sie das... 
+
+
+ a| 
+Es dauert nicht lange, bis der Snapshot-Vorgang der Konsistenzgruppe abgeschlossen ist
+ a| 
+Wählen Sie „dringend“, „Mittel“ oder „entspannt“, um die Wartezeit zum Abschluss des Snapshot-Kopiervorgangs anzugeben.
+
+Dringend = 5 Sekunden, Mittel = 7 Sekunden und entspannt = 20 Sekunden.
+
+
+
+ a| 
+Deaktivieren Sie WAFL Sync
+ a| 
+Wählen Sie diese Option aus, um zu vermeiden, einen WAFL Konsistenzpunkt zu erzwingen.
+
+|===
++
+image:../media/application_settings.gif[""]
+
+.. Klicken Sie auf den Pfeil *Scripts*, um vor- und Post-Befehle für quiesce, Snapshot copy und unquiesce-Vorgänge auszuführen. Sie können auch vor dem Beenden des Sicherungsvorgangs Vorbefehle ausführen.
++
+Prescripts und Postscripts werden auf dem SnapCenter Server ausgeführt.
+
+.. Klicken Sie auf den Pfeil *Benutzerdefinierte Konfigurationen*, und geben Sie dann die für alle Aufträge, die diese Ressource verwenden, erforderlichen benutzerdefinierten Wertpaare ein.
+.. Klicken Sie auf den Pfeil *Snapshot-Kopie-Tool*, um das Tool zum Erstellen von Snapshot-Kopien auszuwählen:
++
+|===
+| Ihre Situation | Dann... 
+
+
+ a| 
+SnapCenter zum Erstellen einer Snapshot Kopie auf Storage-Ebene
+ a| 
+Wählen Sie *SnapCenter ohne Dateisystemkonsistenz* aus.
+
+
+
+ a| 
+SnapCenter, um das Filesystem mithilfe des Windows Plug-ins in einen konsistenten Zustand zu versetzen und dann eine Snapshot Kopie zu erstellen
+ a| 
+Wählen Sie *SnapCenter mit Dateisystemkonsistenz* aus.
+
+
+
+ a| 
+Geben Sie den Befehl ein, um eine Snapshot Kopie zu erstellen
+ a| 
+Wählen Sie *other* aus, und geben Sie dann den Befehl ein, um eine Snapshot Kopie zu erstellen.
+
+|===
+
+
+. Führen Sie auf der Seite Richtlinien die folgenden Schritte aus:
++
+.. Wählen Sie eine oder mehrere Richtlinien aus der Dropdown-Liste aus.
++
+
+NOTE: Sie können eine Richtlinie auch erstellen, indem Sie auf klicken image:../media/add_policy_from_resourcegroup.gif[""].
+
++
+Im Abschnitt „Zeitpläne für ausgewählte Richtlinien konfigurieren“ werden die ausgewählten Richtlinien aufgelistet.
+
+.. Klicken Sie Auf image:../media/add_policy_from_resourcegroup.gif[""] In der Spalte Zeitplan konfigurieren für die Richtlinie konfigurieren, für die Sie einen Zeitplan konfigurieren möchten.
+.. Konfigurieren Sie im Dialogfeld Add Schedules for Policy_Policy_Name_ den Zeitplan, und klicken Sie dann auf *OK*.
++
+Dabei ist _Policy_Name_ der Name der von Ihnen ausgewählten Richtlinie.
+
++
+Die konfigurierten Zeitpläne sind in der Spalte angewendete Zeitpläne aufgeführt.
+
+
+
+. Wählen Sie auf der Benachrichtigungsseite aus der Dropdown-Liste *E-Mail-Präferenz* die Szenarien aus, in denen Sie die E-Mails versenden möchten.
++
+Außerdem müssen Sie die E-Mail-Adressen für Absender und Empfänger sowie den Betreff der E-Mail angeben. SMTP muss auch unter *Einstellungen* > *Globale Einstellungen* konfiguriert werden.
+
+. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
++
+Die Seite „Ressourcen-Topologie“ wird angezeigt.
+
+. Klicken Sie auf *Jetzt sichern*.
+. Führen Sie auf der Seite Backup die folgenden Schritte aus:
++
+.. Wenn Sie mehrere Richtlinien auf die Ressource angewendet haben, wählen Sie aus der Dropdown-Liste *Richtlinie* die Richtlinie aus, die Sie für das Backup verwenden möchten.
++
+Wenn die für das On-Demand-Backup ausgewählte Richtlinie einem Backup-Zeitplan zugeordnet ist, werden die On-Demand-Backups auf Basis der für den Zeitplantyp festgelegten Aufbewahrungseinstellungen beibehalten.
+
+.. Klicken Sie Auf *Backup*.
+
+
+. Überwachen Sie den Fortschritt des Vorgangs, indem Sie auf *Monitor* > *Jobs* klicken.
+

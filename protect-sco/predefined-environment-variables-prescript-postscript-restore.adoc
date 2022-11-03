@@ -1,0 +1,82 @@
+---
+permalink: protect-sco/predefined-environment-variables-prescript-postscript-restore.html 
+sidebar: sidebar 
+keywords: environment variable, predefined, prescript, postscript, restore 
+summary: Mit SnapCenter können Sie die vordefinierten Umgebungsvariablen verwenden, wenn Sie das Prescript und das Postscript beim Wiederherstellen einer Datenbank ausführen. 
+---
+= Vordefinierte Umgebungsvariablen zur Wiederherstellung spezifischer Vorschrift und Postscript
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit SnapCenter können Sie die vordefinierten Umgebungsvariablen verwenden, wenn Sie das Prescript und das Postscript beim Wiederherstellen einer Datenbank ausführen.
+
+*Unterstützte vordefinierte Umgebungsvariablen für die Wiederherstellung einer Datenbank*
+
+* *SC_JOB_ID* gibt die Job-ID des Vorgangs an.
++
+Beispiel: 257
+
+* *SC_ORACLE_SID* gibt die Systemkennung der Datenbank an.
++
+Wenn der Vorgang mehrere Datenbanken umfasst, enthält dies Datenbanknamen, die durch Pipe getrennt sind.
+
++
+Beispiel: NFSB31
+
+* *SC_HOST* gibt den Hostnamen der Datenbank an.
++
+Dieser Parameter wird für Anwendungs-Volumes ausgefüllt.
+
++
+Beispiel: scsmohost2.gdl.englabe.netapp.com
+
+* *SC_OS_USER* gibt den Betriebssystembesitzer der Datenbank an.
++
+Beispiel: oracle
+
+* *SC_OS_GROUP* gibt die Betriebssystemgruppe der Datenbank an.
++
+Beispiel: Oinstall
+
+* *SC_BACKUP_NAME* gibt den Namen des Backups an.
++
+Dieser Parameter wird für Anwendungs-Volumes ausgefüllt.
+
++
+Beispiele:
+
++
+** Wenn die Datenbank nicht im ARCHIVELOG-Modus ausgeführt wird: DATA@RG2_scspr2417819002_07-20-2021_12.16.48.9267_0 natürlich LOG@RG2_scspr2417819002_07-20-2021_12.16.48.9267_1
+** Wenn die Datenbank im ARCHIVELOG-Modus ausgeführt wird: DATA@RG2_scspr2417819002_07-20-2021_12.16.48.9267_0 LOG@RG2_scspr2417819002_07-20-2021_12.16.48.9267_1,RG2_scspr2417819002_07-21-2021_12.16.48.9267_1,RG2_scspr2417819002_07-22-2021_12.16.48.9267_1
+
+
+* *SC_BACKUP_ID* gibt die ID des Backups an.
++
+Dieser Parameter wird für Anwendungs-Volumes ausgefüllt.
+
++
+Beispiele:
+
++
+** Wenn die Datenbank nicht im ARCHIVELOG-Modus ausgeführt wird: DATEN@203 Paillette LOG@205
+** Wenn die Datenbank im ARCHIVELOG-Modus ausgeführt wird: DATEN@203. PROTOKOLL@205,206,207
+
+
+* *SC_RESOURCE_GROUP_NAME* gibt den Namen der Ressourcengruppe an.
++
+Beispiel: RG1
+
+* *SC_ORACLE_HOME* gibt den Pfad des Oracle Home-Verzeichnisses an.
++
+Beispiel: /Ora01/App/oracle/Product/18.1.0/db_1
+
+* *SC_RECOVERY_TYPE* gibt die wiederhergestellten Dateien und auch den Wiederherstellungsumfang an.
++
+Beispiel: RESTORESCOPE:usingBackupControlfile=false natürlich ECOVERYSCOPE:allLogs=true,noLogs=false,untiltime=false,untilscn=false.
+
+
+
+Informationen zu Trennzeichen finden Sie unter link:../protect-sco/predefined-environment-variables-prescript-postscript-backup.html#supported-delimiters["Unterstützte Trennzeichen"^].

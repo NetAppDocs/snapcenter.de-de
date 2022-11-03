@@ -1,0 +1,34 @@
+---
+permalink: admin/task_request_status_reports_of_the_jobs_from_the_dashboard.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können Berichte über Backup-, Wiederherstellungs- und Klonaufträge über die Dashboard-Seite anfordern. Dies ist nützlich, wenn Sie die Gesamtzahl der erfolgreichen oder fehlgeschlagenen Jobs in Ihrer SnapCenter-Umgebung ermitteln möchten. 
+---
+= Statusberichte der Jobs über das Dashboard anfordern
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Berichte über Backup-, Wiederherstellungs- und Klonaufträge über die Dashboard-Seite anfordern. Dies ist nützlich, wenn Sie die Gesamtzahl der erfolgreichen oder fehlgeschlagenen Jobs in Ihrer SnapCenter-Umgebung ermitteln möchten.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Dashboard*
+. Suchen Sie im Dashboard die Kachel Jobs und wählen Sie dann *Backup*, *Restore* oder *Clone* aus.
+. Wählen Sie im Pulldown-Menü den Zeitrahmen aus, für den Sie Jobinformationen wünschen: 24 Stunden, 7 Tage oder 30 Tage.
++
+Die Systeme zeigen ein Donut-Diagramm, das die Daten abdeckt.
+
+. Klicken Sie auf die Donut-Schicht, die die Jobinformationen enthält, für die Sie einen Bericht erstellen möchten.
++
+Wenn Sie auf das Donut-Diagramm klicken, werden Sie von der Dashboard-Seite zur Monitor-Seite umgeleitet. Auf der Seite „Überwachen“ werden die Jobs angezeigt, die den Status aufweisen, den Sie im Donut-Diagramm ausgewählt haben.
+
+. Klicken Sie in der Liste Monitor auf einen bestimmten Job, um ihn auszuwählen.
+. Klicken Sie oben auf der Monitor-Seite auf *Berichte*.
+
+
+*Ergebnisse*
+
+Der Bericht zeigt nur Informationen für den ausgewählten Job an. Sie können den Bericht prüfen oder auf Ihr lokales System herunterladen.

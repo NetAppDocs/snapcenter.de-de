@@ -1,0 +1,120 @@
+---
+permalink: protect-scsql/task_perform_clone_lifecycle_management.html 
+sidebar: sidebar 
+keywords:  
+summary: Mit SnapCenter können Sie Klone aus einer Ressourcengruppe oder Datenbank erstellen. Sie können entweder On-Demand-Klon oder Sie können wiederkehrende Klonvorgänge einer Ressourcengruppe oder Datenbank planen . Wenn Sie ein Backup regelmäßig klonen, können Sie mit dem Klon Applikationen entwickeln, Daten ausfüllen oder Daten wiederherstellen. 
+---
+= Führen Sie Den Klon-Lebenszyklus Durch
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit SnapCenter können Sie Klone aus einer Ressourcengruppe oder Datenbank erstellen. Sie können entweder einen On-Demand-Klon durchführen oder wiederkehrende Klonvorgänge einer Ressourcengruppe oder Datenbank planen. Wenn Sie ein Backup regelmäßig klonen, können Sie mit dem Klon Applikationen entwickeln, Daten ausfüllen oder Daten wiederherstellen.
+
+SnapCenter ermöglicht die Planung mehrerer Klonvorgänge zur gleichzeitigen Ausführung über mehrere Server hinweg.
+
+*Was Sie brauchen*
+
+* Stellen Sie beim Klonen auf eine eigenständige Datenbankinstanz sicher, dass der Mount-Point-Pfad vorhanden ist und dass es sich um eine dedizierte Festplatte handelt.
+* Beim Klonen in eine Failover Cluster-Instanz (FCI) stellen Sie sicher, dass die Mount-Punkte vorhanden sind, dass es sich um eine freigegebene Festplatte handelt, und der Pfad und die FCI sollten zur gleichen SQL-Ressourcengruppe gehören.
+* Wenn sich die Quelldatenbank oder die Zielinstanz auf einem gemeinsam genutzten Cluster-Volume (csv) befindet, befindet sich die geklonte Datenbank auf dem csv.
+
+
+
+NOTE: Stellen Sie für virtuelle Umgebungen (VMDK/RDM) sicher, dass der Bereitstellungspunkt eine dedizierte Festplatte ist.
+
+*Über diese Aufgabe*
+
+* DER SCRIPTS_PATH wird mit dem PredefinedWindowsScriptDirectory-Schlüssel definiert, der sich in der SMCoreServiceHost.exe.Config-Datei des Plug-in-Hosts befindet.
++
+Bei Bedarf können Sie diesen Pfad ändern und den SMCore Service neu starten. Es wird empfohlen, den Standardpfad für die Sicherheit zu verwenden.
+
++
+Der Wert des Schlüssels kann von Swagger über die API angezeigt werden: API /4.7/configsettings
+
++
+Sie können die GET API verwenden, um den Wert der Taste anzuzeigen. SET-API wird nicht unterstützt.
+
+* Die meisten Felder auf den Seiten des Clone Lifecycle Wizard sind selbsterklärend. In den folgenden Informationen werden die Felder beschrieben, für die Sie möglicherweise eine Anleitung benötigen.
+
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Wählen Sie auf der Seite Ressourcen die Option *Datenbank* oder *Ressourcengruppe* aus der Liste *Ansicht* aus.
+. Wählen Sie die Ressourcengruppe oder -Datenbank aus, und klicken Sie dann auf *Lebenszyklus klonen*.
+. Führen Sie auf der Seite Optionen die folgenden Aktionen durch:
++
+|===
+| Für dieses Feld... | Tun Sie das... 
+
+
+ a| 
+Auftragsname klonen
+ a| 
+Geben Sie den Namen des Jobs für den Lebenszyklus des Klons an, der die Überwachung und Änderung des Lebenszyklusjobs unterstützt.
+
+
+
+ a| 
+Klonserver
+ a| 
+Wählen Sie den Host aus, auf dem der Klon platziert werden soll.
+
+
+
+ a| 
+Kloninstanz
+ a| 
+Wählen Sie die Kloninstanz aus, zu der Sie die Datenbank klonen möchten. Diese SQL-Instanz muss sich auf dem angegebenen Klon-Server befinden.
+
+
+
+ a| 
+Suffix klonen
+ a| 
+Geben Sie ein Suffix ein, das an die Klondatenbank angehängt wird, um das es sich um einen Klon handelt. Jede SQL-Instanz, die zum Erstellen einer Clone-Ressourcengruppe verwendet wird, muss über einen eindeutigen Datenbanknamen verfügen. Wenn die Clone Resource Group beispielsweise eine Quelldatenbank „`db1`“ aus einer SQL-Instanz „`inst1`“ enthält und „`db1`“ in „`inst1`“ geklont wurde, sollte der Name der Klondatenbank „`db1__Clone`“ lauten. „`__Clone`“ ist ein vom Benutzer definiertes Suffix, da die Datenbank in derselben Instanz geklont wird. Wenn "`db1`" zur SQL-Instanz „`inst2`“ geklont wird, kann der Name der Klondatenbank „`db1`“ bleiben (das Suffix ist optional), da die Datenbank auf eine andere Instanz geklont wird.
+
+
+
+ a| 
+Automatisches Zuweisen von Mount-Punkten oder automatische Zuweisung von Volume-Mount-Punkten unter Pfad
+ a| 
+Legen Sie fest, ob unter einem Pfad automatisch ein Mount-Punkt oder ein Volume-Mount-Punkt zugewiesen werden soll. Wenn Sie die Option auswählen, einen Volume-Bereitstellungspunkt unter einem Pfad automatisch zuzuweisen, können Sie ein bestimmtes Verzeichnis angeben. Die Mount-Punkte werden innerhalb dieses Verzeichnisses erstellt. Bevor Sie diese Option auswählen, müssen Sie sicherstellen, dass das Verzeichnis leer ist. Wenn sich eine Datenbank im Verzeichnis befindet, befindet sich die Datenbank nach dem Mount-Vorgang in einem ungültigen Status.
+
+|===
+. Wählen Sie auf der Seite Speicherort einen Speicherort aus, um einen Klon zu erstellen.
+. Geben Sie auf der Seite Skript den Pfad und die Argumente des Vorskripts bzw. des Postskripts ein, die vor bzw. nach dem Klonvorgang ausgeführt werden sollen.
++
+Beispielsweise können Sie ein Skript ausführen, um SNMP-Traps zu aktualisieren, Warnmeldungen zu automatisieren, Protokolle zu senden usw.
+
++
+
+NOTE: Der Pfad für Prescripts oder Postscripts darf keine Laufwerke oder Shares enthalten. Der Pfad sollte relativ zum SCRIPTS_PATH sein.
+
++
+Das Standard-Skript-Timeout beträgt 60 Sekunden.
+
+. Führen Sie auf der Seite Zeitplan eine der folgenden Aktionen durch:
++
+** Wählen Sie *Jetzt ausführen* aus, wenn Sie den Klon-Job sofort ausführen möchten.
+** Wählen Sie *Configure Schedule* aus, wenn Sie bestimmen möchten, wie häufig der Klonvorgang stattfinden soll, wann der Klonzeitplan beginnen soll, an welchem Tag der Klonvorgang stattfinden soll, wann der Zeitplan abläuft und ob die Klone nach Ablauf des Zeitplans gelöscht werden müssen.
+
+
+. Wählen Sie auf der Benachrichtigungsseite aus der Dropdown-Liste *E-Mail-Präferenz* die Szenarien aus, in denen Sie die E-Mails versenden möchten.
++
+Außerdem müssen Sie die E-Mail-Adressen für Absender und Empfänger sowie den Betreff der E-Mail angeben. Wenn Sie den Bericht über den ausgeführten Klonvorgang anhängen möchten, wählen Sie *Job-Bericht anhängen* aus.
+
++
+
+NOTE: Für eine E-Mail-Benachrichtigung müssen Sie die SMTP-Serverdetails entweder mit der GUI oder mit dem PowerShell-Befehlssatz Set-SmtpServer angegeben haben.
+
++
+Informationen zu EMS finden Sie unter https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_ems_data_collection.html["EMS-Datenerfassung managen"]
+
+. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
+
+
+Sie sollten den Klonprozess über die Seite *Monitor* > *Jobs* überwachen.

@@ -1,0 +1,42 @@
+---
+permalink: protect-scsql/concept_what_you_can_do_with_the_snapcenter_plug_in_for_microsoft_sql_server.html 
+sidebar: sidebar 
+keywords:  
+summary: Wenn das SnapCenter Plug-in für Microsoft SQL Server in Ihrer Umgebung installiert ist, können Sie mit SnapCenter die SQL Server Datenbanken sichern, wiederherstellen und klonen. 
+---
+= Welche Möglichkeiten bietet das SnapCenter Plug-in für Microsoft SQL Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn das SnapCenter Plug-in für Microsoft SQL Server in Ihrer Umgebung installiert ist, können Sie mit SnapCenter die SQL Server Datenbanken sichern, wiederherstellen und klonen.
+
+Sie können die folgenden Aufgaben durchführen, die Backup-Vorgänge, Restore-Vorgänge und Klonvorgänge von SQL Server-Datenbanken und Datenbankressourcen unterstützen:
+
+* Sichern Sie SQL Server Datenbanken und zugehörige Transaktionsprotokolle
++
+Sie können keine Protokollsicherung für Master- und msdb-Systemdatenbanken erstellen. Sie können jedoch Protokoll-Backups für Modell-System-Datenbank erstellen.
+
+* Stellen Sie Datenbankressourcen wieder her
++
+** Sie können Stammsystemdatenbanken, msdb-Systemdatenbanken wiederherstellen und Systemdatenbanken modellieren.
+** Sie können nicht mehrere Datenbanken, Instanzen und Verfügbarkeitsgruppen wiederherstellen.
+** Sie können die Systemdatenbank nicht in einem anderen Pfad wiederherstellen.
+
+
+* Erstellung zeitpunktgenauer Klone von Produktionsdatenbanken
++
+Sie können keine Backup-, Wiederherstellungs-, Klon- und Klonvorgänge auf tempdb-Systemdatenbanken durchführen.
+
+* Umgehende Überprüfung der Backup-Vorgänge oder Vermeidung von Verifizierungen bis zu einem späteren Zeitpunkt
++
+Die Überprüfung der SQL Server Systemdatenbank wird nicht unterstützt. SnapCenter klont die Datenbanken, um einen Verifizierungsvorgang durchzuführen. SnapCenter kann SQL Server Systemdatenbanken nicht klonen. Daher wird die Überprüfung dieser Datenbanken nicht unterstützt.
+
+* Planen von Backup-Vorgängen und Klonvorgängen
+* Überwachung von Backup-Vorgängen, Restore-Vorgängen und Klonvorgängen
+
+
+
+NOTE: Das Plug-in für SQL Server unterstützt kein Backup und Recovery von SQL Server Datenbanken auf SMB-Freigaben.

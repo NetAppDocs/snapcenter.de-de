@@ -1,0 +1,101 @@
+---
+permalink: protect-scc/task_restore_a_resource_backup.html 
+sidebar: sidebar 
+keywords:  
+summary: Mit SnapCenter können Sie Ressourcen wiederherstellen. Die Funktionen der Restore-Vorgänge hängen vom verwendeten Plug-in ab. 
+---
+= Wiederherstellen eines Ressourcenbackups
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit SnapCenter können Sie Ressourcen wiederherstellen. Die Funktionen der Restore-Vorgänge hängen vom verwendeten Plug-in ab.
+
+*Was Sie brauchen*
+
+* Sie müssen die Ressource oder Ressourcengruppen gesichert haben.
+* Der SnapCenter Administrator muss Ihnen die Storage Virtual Machines (SVMs) sowohl für die Quell-Volumes als auch Ziel-Volumes zugewiesen haben, wenn Sie Snapshot Kopien in einer Spiegelung oder einem Vault replizieren.
+* Sie müssen einen Backup-Vorgang abgebrochen haben, der derzeit für die Ressource oder Ressourcengruppe ausgeführt wird, die wiederhergestellt werden soll.
+
+
+*Über diese Aufgabe*
+
+Der Standardwiederherstellungsvorgang stellt nur Storage-Objekte wieder her. Restore-Vorgänge auf Applikationsebene können nur durchgeführt werden, wenn das benutzerdefinierte Plug-in diese Funktion bietet.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Filtern Sie auf der Seite Ressourcen die Ressourcen aus der Dropdown-Liste *Ansicht* nach Ressourcentyp.
++
+Die Ressourcen werden zusammen mit Informationen wie Typ, Host- oder Cluster-Name, zugeordnete Ressourcengruppen und -Richtlinien sowie der Status angezeigt.
+
++
+
+NOTE: Obwohl sich ein Backup möglicherweise für eine Ressourcengruppe befindet, müssen Sie bei der Wiederherstellung die einzelnen Ressourcen auswählen, die wiederhergestellt werden sollen.
+
++
+Wenn die Ressource nicht geschützt ist, wird _Not Protected_ in der Spalte *Gesamtstatus* angezeigt.
+
++
+Der Status _not protected_ in der Spalte *Gesamtstatus* kann entweder bedeuten, dass die Ressource nicht geschützt ist oder dass die Ressource von einem anderen Benutzer gesichert wurde.
+
+. Wählen Sie die Ressource aus, oder wählen Sie eine Ressourcengruppe aus, und wählen Sie dann eine Ressource in dieser Gruppe aus.
++
+Die Seite „Ressourcentopologie“ wird angezeigt.
+
+. Wählen Sie in der Ansicht *Kopien verwalten* die Option *Backups* aus den primären oder sekundären (gespiegelten oder gewölbten) Speichersystemen aus.
+. Wählen Sie in der Tabelle primäre(n) Backups das Backup aus, von dem Sie wiederherstellen möchten, und klicken Sie dann auf image:../media/restore_icon.gif["Symbol Wiederherstellen"].
++
+image::../media/restoring_resource.gif[Wiederherstellen von Ressourcen]
+
+. Wählen Sie auf der Seite „Bereich wiederherstellen“ die Option *vollständige Ressource* oder *Dateiebene* aus.
++
+.. Wenn Sie *Complete Resource* ausgewählt haben, wird die Ressourcen-Sicherung wiederhergestellt.
++
+Wenn die Ressource Volumes oder qtrees als Storage-Platzbedarf enthält, werden neuere Snapshot Kopien auf solchen Volumes oder qtrees gelöscht und können nicht wiederhergestellt werden. Wenn auch eine andere Ressource auf denselben Volumes oder qtrees gehostet wird, wird diese Ressource ebenfalls gelöscht.
+
+.. Wenn Sie *File Level* ausgewählt haben, können Sie entweder *Alle* auswählen oder Volumes oder qtrees auswählen und dann den Pfad eingeben, der mit den Volumes oder qtrees verbunden ist, die durch Kommas getrennt ausgewählt werden.
++
+*** Sie können mehrere Volumes und qtrees auswählen.
+*** Wenn der Ressourcentyp LUN ist, wird die gesamte LUN wiederhergestellt. Sie können mehrere LUNs auswählen. + HINWEIS: Wenn Sie *Alle* auswählen, werden alle Dateien auf den Volumes, qtrees oder LUNs wiederhergestellt.
+
+
+
+
+. Führen Sie auf der Seite Wiederherstellungstyp die folgenden Schritte aus: Wählen Sie Option, um Protokolle anzuwenden. Vergewissern Sie sich, dass Ihr Plugin alle Protokolle und Protokolle unterstützt, bis Sie den Typ wiederherstellen, bevor Sie ihn auswählen.
++
+|===
+| Ihr Ziel ist | Tun Sie das... 
+
+
+ a| 
+Wiederherstellung aller Protokolle
+ a| 
+Wählen Sie *Alle Protokolle*. Stellen Sie sicher, dass das Plug-in *Alle Protokolle* unterstützt.
+
+
+
+ a| 
+Stellen Sie alle Protokolle bis zur angegebenen Zeit wieder her
+ a| 
+Wählen Sie *Protokolle bis*. Stellen Sie sicher, dass das Plug-in *Logs bis* unterstützt.
+
+
+
+ a| 
+Stellen Sie das Ressourcen-Backup wieder her
+ a| 
+Wählen Sie *Keine*.
+
+|===
+. Geben Sie auf der Seite Pre OPS die Befehle vor dem Wiederherstellen ein und heben Sie sie ab, bevor Sie einen Wiederherstellungsauftrag ausführen.
+. Geben Sie auf der Seite Post OPS Mount- und Post-Restore-Befehle ein, die ausgeführt werden sollen, nachdem eine Wiederherstellung durchgeführt wurde.
+. Wählen Sie auf der Benachrichtigungsseite aus der Dropdown-Liste *E-Mail-Präferenz* die Szenarien aus, in denen Sie die E-Mails versenden möchten.
++
+Außerdem müssen Sie die E-Mail-Adressen für Absender und Empfänger sowie den Betreff der E-Mail angeben. SMTP muss auch auf der Seite *Einstellungen* > *Globale Einstellungen* konfiguriert werden.
+
+. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
+. Überwachen Sie den Fortschritt des Vorgangs, indem Sie auf *Monitor* > *Jobs* klicken.
+

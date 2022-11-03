@@ -1,0 +1,16 @@
+---
+permalink: protect-scsql/concept_number_of_backup_jobs_needed_for_databases.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Zu den Faktoren, die die Anzahl der erforderlichen Backup-Jobs bestimmen, gehören die Größe der Datenbank, die Anzahl der verwendeten Volumes, die Änderungsrate der Datenbank und Ihr Service Level Agreement \ (SLA\).' 
+---
+= Anzahl der für Datenbanken erforderlichen Backup-Jobs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Zu den Faktoren, die die Anzahl der erforderlichen Backup-Jobs bestimmen, zählen die Größe der Datenbank, die Anzahl der verwendeten Volumes, die Änderungsrate der Datenbank und Ihr Service Level Agreement (SLA).
+
+Die Anzahl der von Ihnen gewählten Backup-Aufgaben hängt bei Datenbank-Backups in der Regel von der Anzahl der Volumes ab, auf denen Sie Ihre Datenbanken platziert haben. Wenn Sie beispielsweise eine Gruppe kleiner Datenbanken auf einem Volume und einer großen Datenbank auf einem anderen Volume platziert haben, können Sie einen Backup-Job für die kleinen Datenbanken und einen Backup-Job für die große Datenbank erstellen.

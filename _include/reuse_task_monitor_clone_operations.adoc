@@ -1,0 +1,34 @@
+= 
+:allow-uri-read: 
+
+
+Sie können den Status von SnapCenter-Klonvorgängen mithilfe der Seite Jobs überwachen. Sie können den Fortschritt eines Vorgangs überprüfen, um zu bestimmen, wann dieser abgeschlossen ist oder ob ein Problem vorliegt.
+
+*Über diese Aufgabe*
+
+Die folgenden Symbole werden auf der Seite Aufträge angezeigt und geben den Status der Operation an:
+
+* image:../media/progress_icon.gif["Symbol „in Bearbeitung“"] In Bearbeitung
+* image:../media/success_icon.gif["Symbol „Abgeschlossen“"] Erfolgreich abgeschlossen
+* image:../media/failed_icon.gif["Fehlersymbol"] Fehlgeschlagen
+* image:../media/warning_icon.gif["Abgeschlossen mit Warnsymbol"] Abgeschlossen mit Warnungen oder konnte aufgrund von Warnungen nicht gestartet werden
+* image:../media/verification_job_in_queue.gif["Überprüfungsjob wird in die Warteschlange gestellt"] Warteschlange
+* image:../media/cancel_icon.gif[""] Storniert
+
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Monitor*.
+. Klicken Sie auf der Seite Überwachen auf *Jobs*.
+. Führen Sie auf der Seite Jobs die folgenden Schritte aus:
++
+.. Klicken Sie Auf image:../media/filter_icon.gif[""] Filtern der Liste, sodass nur Klonvorgänge aufgeführt werden.
+.. Geben Sie das Start- und Enddatum an.
+.. Wählen Sie aus der Dropdown-Liste *Typ* die Option *Clone* aus.
+.. Wählen Sie aus der Dropdown-Liste *Status* den Klonstatus aus.
+.. Klicken Sie auf *Anwenden*, um die Vorgänge anzuzeigen, die erfolgreich abgeschlossen wurden.
+
+
+. Wählen Sie den Klon-Job aus, und klicken Sie dann auf *Details*, um die Job-Details anzuzeigen.
+. Klicken Sie auf der Seite Jobdetails auf *Protokolle anzeigen*.
+

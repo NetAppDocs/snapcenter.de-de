@@ -1,0 +1,179 @@
+---
+permalink: install/enable_multifactor_authentication.html 
+sidebar: sidebar 
+keywords: mfa, authentication, multifactor authentication 
+summary: SnapCenter setzt strenge Sicherheits- und Authentifizierungsfunktionen ein, damit Ihre Daten sicher bleiben. 
+---
+= Multi-Faktor-Authentifizierung (MFA) aktivieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um MFA-Funktionen zu aktivieren, sollten Sie einige Schritte im Active Directory Federation Service (AD FS)-Server und im SnapCenter-Server durchführen.
+
+*Was Sie brauchen*
+
+* Der Windows Active Directory Federation Service (AD FS) sollte in der jeweiligen Domäne ausgeführt werden.
+* Sie sollten über beliebige von AD FS unterstützte Multi-Faktor-Authentifizierungsdienste wie Azure MFA, Cisco Duo usw. verfügen.
+* Der SnapCenter- und AD-FS-Server-Zeitstempel sollte unabhängig von der Zeitzone gleich sein.
+* Beschaffung und Konfiguration des autorisierten CA-Zertifikats für den SnapCenter-Server.
++
+CA-Zertifikat ist aus folgenden Gründen obligatorisch:
+
++
+** Stellt sicher, dass die ADFS-F5-Kommunikation nicht unterbrochen wird, da die selbst signierten Zertifikate auf Knotenebene eindeutig sind.
+** Stellt sicher, dass bei Upgrade, Reparatur oder Disaster Recovery (DR) in einer Standalone- oder Hochverfügbarkeitskonfiguration das selbstsignierte Zertifikat nicht wiederhergestellt wird, wodurch MFA neu konfiguriert werden kann.
+** Stellt IP-FQDN-Auflösungen sicher.
++
+Informationen zum CA-Zertifikat finden Sie unter link:../install/reference_generate_CA_certificate_CSR_file.html["ZertifikatCSR-Datei erstellen"^].
+
+
+
+
+
+*Über diese Aufgabe*
+
+* SnapCenter unterstützt SSO-basierte Anmeldungen, wenn andere Applikationen mit demselben AD FS konfiguriert werden. In bestimmten AD FS-Konfigurationen erfordert SnapCenter möglicherweise aus Sicherheitsgründen die Benutzerauthentifizierung in Abhängigkeit von der Persistenz der AD FS-Session.
+* Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von Get-Help Command_Name abgerufen werden. Alternativ können Sie auch auf die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["SnapCenter Software Cmdlet Referenzhandbuch"^].
+
+
+*Schritte*
+
+. Stellen Sie eine Verbindung zum Active Directory Federation Services (AD FS)-Host her.
+. Laden Sie die AD FS Federation-Metadatendatei von herunter "https://<host[] FQDN>/FederationMetadaten/2007-06/FederationMetadata.XML“
+. Kopieren Sie die heruntergeladene Datei auf SnapCenter-Server, um die MFA-Funktion zu aktivieren.
+. Melden Sie sich bei SnapCenter Server als SnapCenter-Administrator-Benutzer über PowerShell an.
+. Generieren Sie mithilfe der PowerShell-Sitzung die SnapCenter MFA-Metadatendatei mit dem Cmdlet _New-SmMultifactorAuthenticationMetadata -Path_.
++
+Der Parameter Path gibt den Pfad an, in dem die MFA-Metadatendatei im SnapCenter-Server-Host gespeichert werden soll.
+
+. Kopieren Sie die generierte Datei auf den AD FS-Host, um SnapCenter als Client-Einheit zu konfigurieren.
+. Aktivieren Sie MFA für SnapCenter-Server mit dem Cmdlet _set-SmMultiFactorAuthentication -enable -Path_.
++
+Der Parameter PATH gibt den Speicherort der XML-Metadatendatei AD FS MFA an, die in Schritt 3 auf den SnapCenter-Server kopiert wurde.
+
+. (Optional) Überprüfen Sie den MFA-Konfigurationsstatus und die Einstellungen mit dem Cmdlet _get-SmMultiFactorAuthentication_.
+. Gehen Sie zur Microsoft Management Console (MMC), und führen Sie die folgenden Schritte aus:
++
+.. Klicken Sie Auf *Datei* > *Snapin Hinzufügen/Entfernen*.
+.. Wählen Sie im Fenster Snap-ins hinzufügen oder entfernen die Option *Zertifikate* und klicken Sie dann auf *Hinzufügen*.
+.. Wählen Sie im Snap-in-Fenster Zertifikate die Option *Computerkonto* aus und klicken Sie dann auf *Fertig stellen*.
+.. Klicken Sie Auf *Konsolenwurzel* > *Zertifikate – Lokaler Computer* > *Persönlich* > *Zertifikate*.
+.. Klicken Sie mit der rechten Maustaste auf das CA-Zertifikat, das an SnapCenter gebunden ist, und wählen Sie dann *Alle Aufgaben* > *Privater Schlüssel verwalten* aus.
+.. Führen Sie auf dem Berechtigungsassistenten die folgenden Schritte aus:
++
+... Klicken Sie Auf *Hinzufügen*
+... Klicken Sie auf *Locations* und wählen Sie den entsprechenden Host aus (Hierarchieoberst).
+... Klicken Sie im Popup-Fenster *Locations* auf *OK*.
+... Geben Sie im Feld Objektname ‘IIS_IUSRS’ ein, und klicken Sie auf *Namen überprüfen* und klicken Sie auf *OK*.
++
+Wenn die Prüfung erfolgreich war, klicken Sie auf *OK*.
+
+
+
+
+
+. Öffnen Sie im AD FS-Host den AD FS-Managementassistenten, und führen Sie die folgenden Schritte aus:
++
+.. Klicken Sie mit der rechten Maustaste auf *vertraut auf Partei* > *Vertrauensbeschuss hinzufügen* > *Start*.
+.. Wählen Sie die zweite Option aus, und durchsuchen Sie die SnapCenter MFA-Metadatendatei und klicken Sie auf *Weiter*.
+.. Geben Sie einen Anzeigenamen an und klicken Sie auf *Weiter*.
+.. Wählen Sie die Richtlinien zur Zugriffskontrolle nach Bedarf und klicken Sie auf *Weiter*.
+.. Legen Sie die Einstellungen auf der nächsten Registerkarte auf Standard fest.
+.. Klicken Sie Auf *Fertig Stellen*.
++
+SnapCenter wird jetzt als vertrauensanzeige-Partei mit dem angegebenen Anzeigenamen dargestellt.
+
+
+
+. Wählen Sie den Namen aus, und führen Sie die folgenden Schritte aus:
++
+.. Klicken Sie Auf *Richtlinie Zur Bearbeitung Von Forderungen*.
+.. Klicken Sie auf *Regel hinzufügen* und klicken Sie auf *Weiter*.
+.. Geben Sie einen Namen für die Forderungsregel an
+.. Wählen Sie *Active Directory* als Attributspeicher aus.
+.. Wählen Sie das Attribut als *Benutzer-Principal-Name* und den ausgehenden Antragsart als *Name-ID* aus.
+.. Klicken Sie Auf *Fertig Stellen*.
+
+
+. Führen Sie die folgenden PowerShell-Befehle auf dem ADFS-Server aus.
++
+_Set-AdfsRelyingPartyTrust -TargetName ‘<Anzeigename der Treueparty >’ -SigningCertificateRevisionCheck None_
+
++
+_Set-AdfsRelyingPartyTrust -TargetName ‘<Anzeigename der Treueparty >’ -VerschlüsselungZertifikateRevisionCheck Keine_
+
+. Führen Sie die folgenden Schritte durch, um zu bestätigen, dass die Metadaten erfolgreich importiert wurden.
++
+.. Klicken Sie mit der rechten Maustaste auf das Vertrauen der Vertrauensbesteller und wählen Sie *Eigenschaften*.
+.. Stellen Sie sicher, dass die Felder Endpoints, Identifikatoren und Signatur ausgefüllt sind.
+
+
+
+
+Die SnapCenter MFA-Funktion kann auch über REST-APIs aktiviert werden.
+
+*Nach Ihrer Beendigung*
+
+Schließen Sie nach dem Aktivieren, Aktualisieren oder Deaktivieren der MFA-Einstellungen in SnapCenter alle Browser-Registerkarten und öffnen Sie einen Browser erneut, um sich erneut anzumelden. Dadurch werden die vorhandenen oder aktiven Session-Cookies gelöscht.
+
+Informationen zur Fehlerbehebung finden Sie unter link:..https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_login_in_multiple_tabs_shows_MFA_error%3A_The_SAML_message_response_(1)_doesn%E2%80%99t_match_the_expected_response_(2)["Bei der SnapCenter-Anmeldung in mehreren Registerkarten ist ein MFA-Fehler aufgetreten"]
+
+
+
+== AD FS MFA-Metadaten aktualisieren
+
+Sie sollten die AD FS MFA-Metadaten in SnapCenter aktualisieren, sobald es Änderungen im AD FS-Server gibt, wie z. B. Upgrade, CA-Zertifikatverlängerung, DR usw.
+
+*Schritte*
+
+. Laden Sie die AD FS Federation-Metadatendatei von herunter "https://<host[] FQDN>/FederationMetadaten/2007-06/FederationMetadata.XML“
+. Kopieren Sie die heruntergeladene Datei auf SnapCenter-Server, um die MFA-Konfiguration zu aktualisieren.
+. Aktualisieren Sie die AD FS Metadaten in SnapCenter, indem Sie das folgende Cmdlet ausführen:
++
+_Set-SmMultiFactorAuthentication -Path <Speicherort der ADFS MFA-Metadatendatei>_
+
+
+
+*Nach Ihrer Beendigung*
+
+Schließen Sie nach dem Aktivieren, Aktualisieren oder Deaktivieren der MFA-Einstellungen in SnapCenter alle Browser-Registerkarten und öffnen Sie einen Browser erneut, um sich erneut anzumelden. Dadurch werden die vorhandenen oder aktiven Session-Cookies gelöscht.
+
+
+
+== SnapCenter MFA-Metadaten aktualisieren
+
+Sie sollten die SnapCenter MFA-Metadaten in AD FS immer dann aktualisieren, wenn es Änderungen am ADFS-Server gibt, wie Reparatur, CA-Zertifikatverlängerung, DR usw.
+
+*Schritte*
+
+. Öffnen Sie im AD FS-Host den AD FS-Managementassistenten, und führen Sie die folgenden Schritte aus:
++
+.. Klicken Sie Auf *Treuhand-Party-Trusts*.
+.. Klicken Sie mit der rechten Maustaste auf das Vertrauen der Vertrauensgesellschaft, das für SnapCenter erstellt wurde, und klicken Sie auf *Löschen*.
++
+Der benutzerdefinierte Name des Vertrauensverhältnisses wird angezeigt.
+
+.. Multi-Faktor-Authentifizierung (MFA) aktivieren.
++
+Siehe link:../install/enable_multifactor_authentication.html["Multi-Faktor-Authentifizierung aktivieren"]
+
+
+
+
+
+*Nach Ihrer Beendigung*
+
+Schließen Sie nach dem Aktivieren, Aktualisieren oder Deaktivieren der MFA-Einstellungen in SnapCenter alle Browser-Registerkarten und öffnen Sie einen Browser erneut, um sich erneut anzumelden. Dadurch werden die vorhandenen oder aktiven Session-Cookies gelöscht.
+
+
+
+== Multi-Faktor-Authentifizierung (MFA) deaktivieren
+
+Deaktivieren Sie MFA, und bereinigen Sie die Konfigurationsdateien, die beim Aktivieren von MFA erstellt wurden, indem Sie _Set-SmMultiFactorAuthentication -Disable_ Cmdlet verwenden.
+
+*Nach Ihrer Beendigung*
+
+Schließen Sie nach dem Aktivieren, Aktualisieren oder Deaktivieren der MFA-Einstellungen in SnapCenter alle Browser-Registerkarten und öffnen Sie einen Browser erneut, um sich erneut anzumelden. Dadurch werden die vorhandenen oder aktiven Session-Cookies gelöscht.

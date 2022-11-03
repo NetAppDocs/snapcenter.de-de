@@ -1,0 +1,43 @@
+= 
+:allow-uri-read: 
+
+
+Sie können Wiederherstellungsaufträge abbrechen, die in die Warteschlange gestellt werden.
+
+Sie sollten als SnapCenter-Administrator oder -Auftragseigentümer angemeldet sein, um Wiederherstellungsvorgänge abzubrechen.
+
+*Über diese Aufgabe*
+
+* Sie können einen Wiederherstellungsvorgang in der Warteschlange entweder über die Seite *Monitor* oder über den Bereich *Aktivität* abbrechen.
+* Sie können einen laufenden Wiederherstellungsvorgang nicht abbrechen.
+* Sie können die SnapCenter GUI, PowerShell Commandlets oder CLI-Befehle verwenden, um die in der Warteschlange befindlichen Wiederherstellungsvorgänge abzubrechen.
+* Die Schaltfläche *Job abbrechen* ist für Wiederherstellungsvorgänge deaktiviert, die nicht abgebrochen werden können.
+* Wenn Sie *Alle Mitglieder dieser Rolle sehen und auf anderen Mitgliedsobjekten* auf der Seite Benutzer\Gruppen arbeiten können, während Sie eine Rolle erstellen, können Sie die in der Warteschlange befindlichen Wiederherstellungsvorgänge anderer Mitglieder abbrechen, während Sie diese Rolle verwenden.
+
+
+*Schritt*
+
+Führen Sie eine der folgenden Aktionen aus:
+
+|===
+| Von der... | Aktion 
+
+
+ a| 
+Monitor-Seite
+ a| 
+. Klicken Sie im linken Navigationsbereich auf *Monitor* > *Jobs*.
+. Wählen Sie den Job aus und klicken Sie auf *Job abbrechen*.
+
+
+
+
+ a| 
+Aktivitätsbereich
+ a| 
+. Klicken Sie nach dem Starten des Wiederherstellungsvorgangs auf image:../media/activity_pane_icon.gif[""] Im Aktivitätsbereich werden die fünf letzten Vorgänge angezeigt.
+. Wählen Sie den Vorgang aus.
+. Klicken Sie auf der Seite Jobdetails auf *Job abbrechen*.
+
+
+|===

@@ -1,0 +1,105 @@
+---
+permalink: sc-automation/rest_api_workflows_disaster_recovery_of_snapcenter_server.html 
+sidebar: sidebar 
+keywords:  
+summary: Die Disaster Recovery-Funktion von SnapCenter verwendet FÜR das Backup des SnapCenter Servers REST-APIs. 
+---
+= REST API wird für Disaster Recovery von SnapCenter Server unterstützt
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die SnapCenter Disaster Recovery-Funktion (DR) verwendet REST-APIs für das Backup des SnapCenter Servers. Mithilfe VON REST-APIs können Sie die folgenden Operationen auf der SEITE REST APIs Swagger ausführen. Informationen zum Zugriff auf die Seite Swagger finden Sie unter link:https://docs.netapp.com/us-en/snapcenter/sc-automation/task_how%20to_access_rest_apis_using_the_swagger_api_web_page.html["Zugriff auf REST-APIs über die Swagger-API-Webseite"].
+
+*Was Sie brauchen*
+
+* Sie sollten sich als SnapCenter Admin-Benutzer einloggen.
+* Der SnapCenter-Server sollte betriebsbereit sein, um die DR-Wiederherstellungs-API auszuführen.
+
+
+*Über diese Aufgabe*
+
+SnapCenter Server DR unterstützt alle Plug-ins.
+
+[cols="10,40,50,10"]
+|===
+| Schritt | Beschreibung | REST API | HTTP-Methode 
+
+
+ a| 
+1
+ a| 
+Holen Sie vorhandene DR-Backups des SnapCenter Servers
+
+
+NOTE: Sie sollten den Zielpfad angeben, in dem die DR-Backups gespeichert werden.
+ a| 
+`/4.5/disasterrecovery/server/backup?targetpath={path}`
+ a| 
+GET
+
+
+
+ a| 
+2
+ a| 
+Erstellen Sie ein neues Server-DR-Backup.
+ a| 
+`/4.5/disasterrecovery/server/backup`
+ a| 
+POST
+
+
+
+ a| 
+3
+ a| 
+Stellt einen SnapCenter-Server aus einem festgelegten Server-DR-Backup wieder her.
+
+*Voraussetzungen*
+
+* Der Name des alternativen Serverhosts sollte mit dem primären Server identisch sein, die IP-Adresse kann jedoch unterschiedlich sein.
+* Die Serverversion sollte die gleiche sein wie der primäre Server.
+* Stellen Sie sicher, dass die DR-Backup-Dateien mit dem folgenden Befehl auf den neuen SnapCenter-Server kopiert werden:
++
+`xcopy <Ssource_Path> \\<Destination_Server_IP>\<Folder_Path> /O /X /E /H /K  {ex : xcopy C:\DRBackup \\10.225.81.114\c$\DRBackup /O /X /E /H /K}`
+
+
+
+Wenn das Plug-in den Hostnamen des Servers nicht lösen kann, melden Sie sich bei jedem Plug-in-Host an und fügen Sie den etc/Host-Eintrag für die neue IP im Format hinzu:
+`<New IP>	SC_Server_Name`
+
+Beispiel: 10.225.81.35 SCServer1
+
+Die Server- etc/Host-Datei wird nicht wiederhergestellt. Sie können sie manuell aus dem DR-Backup-Ordner wiederherstellen.
+ a| 
+`/4.5/disasterrecovery/server/restore`
+ a| 
+POST
+
+
+
+ a| 
+4
+ a| 
+Löschen Sie das Server-DR-Backup auf Basis des Backup-Namens.
+ a| 
+``/4.5/disasterrecovery/server/backup``
+ a| 
+Löschen
+
+
+
+ a| 
+5
+ a| 
+Aktiviert oder deaktiviert die Speicher-DR
+ a| 
+`/4.5/disasterrecovery/storage`
+ a| 
+POST
+
+|===
+Weitere Informationen finden Sie im https://www.youtube.com/watch?v=Nbr_wm9Cnd4&list=PLdXI3bZJEw7nofM6lN44eOe4aOSoryckg["Disaster Recovery-APIs"^] Video:

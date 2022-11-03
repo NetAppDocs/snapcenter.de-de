@@ -1,0 +1,57 @@
+---
+permalink: protect-scc/reference_host_requirements_to_install_snapcenter_plug_in_package_for_windows_scc.html 
+sidebar: sidebar 
+keywords: SAP HANA,Custom plug-ins 
+summary: Bevor Sie das SnapCenter Plug-ins-Paket für Windows installieren, sollten Sie mit einigen grundlegenden Speicherplatzanforderungen und Größenanforderungen für das Host-System vertraut sein. 
+---
+= Hostanforderungen für die Installation des SnapCenter Plug-ins Pakets für Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+Bevor Sie das SnapCenter Plug-ins-Paket für Windows installieren, sollten Sie mit einigen grundlegenden Speicherplatzanforderungen und Größenanforderungen für das Host-System vertraut sein.
+
+|===
+| Element | Anforderungen 
+
+
+ a| 
+Betriebssysteme
+ a| 
+Microsoft Windows
+
+Aktuelle Informationen zu unterstützten Versionen finden Sie im https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"^].
+
+
+
+ a| 
+MindestRAM für das SnapCenter Plug-in auf dem Host
+ a| 
+1 GB
+
+
+
+ a| 
+Minimale Installation und Protokollierung von Speicherplatz für das SnapCenter Plug-in auf dem Host
+ a| 
+5 GB
+
+
+NOTE: Sie sollten genügend Festplattenspeicher zuweisen und den Speicherverbrauch durch den Protokollordner überwachen. Der erforderliche Protokollspeicherplatz ist abhängig von der Anzahl der zu sichernden Einheiten und der Häufigkeit von Datensicherungsvorgängen. Wenn kein ausreichender Festplattenspeicher vorhanden ist, werden die Protokolle für die kürzlich ausgeführten Vorgänge nicht erstellt.
+
+
+
+ a| 
+Erforderliche Softwarepakete
+ a| 
+* Microsoft .NET Framework 4.7.2 oder höher
+* Windows Management Framework (WMF) 4.0 oder höher
+* PowerShell 4.0 oder höher
+
+
+Aktuelle Informationen zu unterstützten Versionen finden Sie im https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"^].
+
+Informationen zur Fehlerbehebung von .NET finden Sie unter: link:..https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_upgrade_or_install_fails_with_%22This_KB_is_not_related_to_the_OS%22["Das Upgrade oder die Installation von SnapCenter schlägt bei älteren Systemen, die keine Internetverbindung haben, fehl."]
+
+|===

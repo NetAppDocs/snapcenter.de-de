@@ -1,0 +1,31 @@
+---
+permalink: protect-sco/task_restore_and_recover_oracle_databases_using_unix_commands.html 
+sidebar: sidebar 
+keywords: restore, recover, CLI 
+summary: Der Restore- und Recovery-Workflow umfasst Planung, Durchführung von Restore- und Recovery-Vorgängen und Monitoring der betrieblichen Vorgänge. 
+---
+= Stellen Sie Oracle Datenbanken mithilfe von UNIX-Befehlen wieder her
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Restore- und Recovery-Workflow umfasst Planung, Durchführung von Restore- und Recovery-Vorgängen und Monitoring der betrieblichen Vorgänge.
+
+*Über diese Aufgabe*
+
+Sie sollten die folgenden Befehle ausführen, um die Verbindung zum SnapCenter-Server herzustellen, die Backups aufzulisten, seine Informationen abzurufen und die Sicherung wiederherzustellen.
+
+Die Informationen zu den Parametern, die mit dem Befehl und deren Beschreibungen verwendet werden können, können durch Ausführen von get-Help _Command_Name_ abgerufen werden. Alternativ können Sie auch auf die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2883301["SnapCenter Software Command Reference Guide"^].
+
+*Schritte*
+
+. Initiieren Sie eine Verbindungssitzung mit dem SnapCenter-Server für einen bestimmten Benutzer: _Open-SmConnection_
+. Rufen Sie die Informationen über die Backups ab, die Sie wiederherstellen möchten: _Get-SmBackup_
+. Rufen Sie die detaillierten Informationen zum angegebenen Backup ab: _Get-SmBackupDetails_
++
+Dieser Befehl ruft die detaillierten Informationen zum Backup einer bestimmten Ressource mit einer bestimmten Backup-ID ab. Die Informationen umfassen Datenbanknamen, Version, Home, SCN starten und beenden, Tabellen, steckbare Datenbanken und deren Tabellen.
+
+. Stellen Sie Daten aus dem Backup wieder her: _Restore-SmBackup_
+

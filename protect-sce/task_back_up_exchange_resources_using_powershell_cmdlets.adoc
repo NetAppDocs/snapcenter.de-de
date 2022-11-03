@@ -1,0 +1,121 @@
+---
+permalink: protect-sce/task_back_up_exchange_resources_using_powershell_cmdlets.html 
+sidebar: sidebar 
+keywords: backup 
+summary: Das Sichern einer Exchange Server-Datenbank umfasst die Einrichtung einer Verbindung mit dem SnapCenter-Server, die Ermittlung der Exchange Server-Datenbank, das Hinzufügen einer Richtlinie, das Erstellen einer Backup-Ressourcengruppe, das Sichern und das Anzeigen des Backup-Status. 
+---
+= Sichern Sie Exchange Ressourcen mit PowerShell Cmdlets
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Sichern einer Exchange Server-Datenbank umfasst die Einrichtung einer Verbindung mit dem SnapCenter-Server, die Ermittlung der Exchange Server-Datenbank, das Hinzufügen einer Richtlinie, das Erstellen einer Backup-Ressourcengruppe, das Sichern und das Anzeigen des Backup-Status.
+
+*Was Sie brauchen*
+
+* Sie müssen die PowerShell Umgebung vorbereitet haben, um die PowerShell Cmdlets auszuführen.
+* Sie müssen die Speichersystemverbindung hinzugefügt und Anmeldedaten erstellt haben.
+* Sie müssen Hosts hinzugefügt und Ressourcen erkannt haben.
+
+
+
+NOTE: Das Plug-in für Exchange unterstützt keine Klonvorgänge. Daher wird der CloneType-Parameter für das Cmdlet "Add-SmPolicy" für Plug-in für Exchange nicht unterstützt
+
+*Schritte*
+
+. Starten Sie eine Verbindungssitzung mit dem SnapCenter-Server für einen bestimmten Benutzer, indem Sie das Cmdlet "Open-SmConnection" verwenden.
++
+[listing]
+----
+Open-smconnection  -SMSbaseurl  https://snapctr.demo.netapp.com:8146/
+----
++
+Die Eingabeaufforderung für Benutzername und Passwort wird angezeigt.
+
+. Erstellen Sie mithilfe des Cmdlet "Add-SmPolicy" eine Backup-Richtlinie.
++
+In diesem Beispiel wird eine neue Backup-Richtlinie mit einem vollständigen Exchange Backup-Typ für Backups und Protokollierung erstellt:
+
++
+[listing]
+----
+C:\PS> Add-SmPolicy -PolicyName SCE_w2k12_Full_Log_bkp_Policy -PolicyType Backup -PluginPolicytype SCE -SceBackupType FullBackupAndLogBackup -BackupActiveCopies
+----
++
+Dieses Beispiel erstellt eine neue Backup-Richtlinie mit einem stündlichen vollständigen Backup und Log Backup-Typ für Exchange Backup:
+
++
+[listing]
+----
+C:\PS> Add-SmPolicy -PolicyName SCE_w2k12_Hourly_Full_Log_bkp_Policy -PolicyType Backup -PluginPolicytype SCE -SceBackupType FullBackupAndLogBackup -BackupActiveCopies -ScheduleType Hourly -RetentionSettings @{'BackupType'='DATA';'ScheduleType'='Hourly';'RetentionCount'='10'}
+----
++
+In diesem Beispiel wird eine neue Backup-Richtlinie erstellt, in der nur Exchange-Protokolle gesichert werden:
+
++
+[listing]
+----
+Add-SmPolicy -PolicyName SCE_w2k12_Log_bkp_Policy -PolicyType Backup -PluginPolicytype SCE -SceBackupType LogBackup -BackupActiveCopies
+----
+. Ermitteln Sie Host-Ressourcen mit dem Cmdlet "Get-SmResources".
++
+Dieses Beispiel ermittelt die Ressourcen für das Microsoft Exchange Server Plug-in auf dem angegebenen Host:
+
++
+[listing]
+----
+C:\PS> Get-SmResources -HostName vise-f6.sddev.mycompany.com -PluginCode SCE
+----
+. Fügen Sie mit dem Cmdlet "Add-SmResourceGroup" eine neue Ressourcengruppe zu SnapCenter hinzu.
++
+In diesem Beispiel wird eine neue Backup-Ressourcengruppe für die Exchange Server-Datenbank mit der angegebenen Richtlinie und den angegebenen Ressourcen erstellt:
+
++
+[listing]
+----
+C:\PS> Add-SmResourceGroup -ResourceGroupName SCE_w2k12_bkp_RG -Description 'Backup ResourceGroup with Full and Log backup policy' -PluginCode SCE -Policies SCE_w2k12_Full_bkp_Policy,SCE_w2k12_Full_Log_bkp_Policy,SCE_w2k12_Log_bkp_Policy -Resources @{'Host'='sce-w2k12-exch';'Type'='Exchange Database';'Names'='sce-w2k12-exch.sceqa.com\sce-w2k12-exch_DB_1,sce-w2k12-exch.sceqa.com\sce-w2k12-exch_DB_2'}
+----
++
+Dieses Beispiel erstellt eine neue Exchange Database Availability Group (DAG) Backup-Ressourcengruppe mit der angegebenen Richtlinie und Ressourcen:
+
++
+[listing]
+----
+Add-SmResourceGroup -ResourceGroupName SCE_w2k12_bkp_RG -Description 'Backup ResourceGroup with Full and Log backup policy' -PluginCode SCE -Policies SCE_w2k12_Full_bkp_Policy,SCE_w2k12_Full_Log_bkp_Policy,SCE_w2k12_Log_bkp_Policy -Resources @{"Host"="DAGSCE0102";"Type"="Database Availability Group";"Names"="DAGSCE0102"}
+----
+. Initiieren Sie einen neuen Sicherungsauftrag mit dem Cmdlet "New-SmBackup".
++
+[listing]
+----
+C:\PS> New-SmBackup -ResourceGroupName SCE_w2k12_bkp_RG -Policy SCE_w2k12_Full_Log_bkp_Policy
+----
++
+Dieses Beispiel erstellt ein neues Backup im Sekundärspeicher:
+
++
+[listing]
+----
+New-SMBackup -DatasetName ResourceGroup1 -Policy Secondary_Backup_Policy4
+----
+. Zeigen Sie den Status des Backup-Jobs mit dem Cmdlet "Get-SmBackupReport" an.
++
+In diesem Beispiel wird ein Job-Summary-Bericht aller Jobs angezeigt, die am angegebenen Datum ausgeführt wurden:
+
++
+[listing]
+----
+C:\PS> Get-SmJobSummaryReport -Date ?1/27/2018?
+----
++
+Dieses Beispiel zeigt einen Job-Übersichtsbericht für eine bestimmte Job-ID an:
+
++
+[listing]
+----
+C:\PS> Get-SmJobSummaryReport -JobId 168
+----
+
+
+Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ siehe https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["SnapCenter Software Cmdlet Referenzhandbuch"^].

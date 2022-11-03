@@ -1,0 +1,64 @@
+---
+permalink: protect-sco/task_refresh_a_clone.html 
+sidebar: sidebar 
+keywords: refresh clone, clone 
+summary: Sie können den Klon aktualisieren, indem Sie den Befehl „Refresh-SmClone“ ausführen. Mit diesem Befehl wird ein Backup der Datenbank erstellt, der vorhandene Klon gelöscht und ein Klon mit demselben Namen erstellt. 
+---
+= Aktualisieren Sie einen Klon
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können den Klon aktualisieren, indem Sie den Befehl _Refresh-SmClone_ ausführen. Mit diesem Befehl wird ein Backup der Datenbank erstellt, der vorhandene Klon gelöscht und ein Klon mit demselben Namen erstellt.
+
+
+NOTE: Ein PDB-Klon kann nicht aktualisiert werden.
+
+*Was Sie brauchen*
+
+* Erstellen Sie ein komplettes Online-Backup oder eine Offline Daten-Backup-Richtlinie, ohne dass geplante Backups aktiviert sind.
+* Konfigurieren Sie die E-Mail-Benachrichtigung in der Richtlinie nur für Backup-Fehler.
+* Definieren Sie die Aufbewahrungszahl für die On-Demand-Backups entsprechend, um sicherzustellen, dass keine unerwünschten Backups vorhanden sind.
+* Stellen Sie sicher, dass nur ein vollständiges Online-Backup oder eine Richtlinie für Offline-Daten-Backups der Ressourcengruppe zugeordnet ist, die für den Klon-Aktualisierungsvorgang ermittelt wird.
+* Erstellen Sie eine Ressourcengruppe mit nur einer Datenbank.
+* Wenn ein Cron-Job für den Befehl „Clone Refresh“ erstellt wird, stellen Sie sicher, dass sich die SnapCenter-Zeitpläne und cron-Zeitpläne nicht mit der Datenbankressourcengruppe überschneiden.
++
+Stellen Sie für einen Cron-Job, der für den Befehl „Clone refresh“ erstellt wurde, sicher, dass Sie Open-SmConnection nach allen 24 Stunden ausführen.
+
+* Stellen Sie sicher, dass die Klon-SID für einen Host eindeutig ist.
++
+Wenn mehrere Aktualisierungsklonvorgänge dieselbe Klon-Spezifikationsdatei verwenden oder die Klon-Spezifikationsdatei mit derselben Clone-SID verwenden, wird der vorhandene Klon mit der SID auf dem Host gelöscht und dann der Klon erstellt.
+
+* Stellen Sie sicher, dass die Backup-Richtlinie mit sekundärem Schutz aktiviert ist und dass die Klon-Spezifikations-Datei mit „`-IncludeSecondaryDetails`“ erstellt wird, um die Klone mit sekundären Backups zu erstellen.
++
+** Wenn die Spezifikationsdatei für den primären Klon angegeben ist, die Richtlinie jedoch die Option für das sekundäre Update ausgewählt hat, wird das Backup erstellt und das Update wird auf den sekundären Server übertragen. Der Klon wird jedoch aus dem primären Backup erstellt.
+** Wenn die Spezifikations-Datei für den primären Klon angegeben ist und für die Richtlinie keine Option für das sekundäre Update ausgewählt ist, wird das Backup auf dem primären erstellt und der Klon aus dem primären erstellt.
+
+
+
+
+*Schritte*
+
+. Initiieren Sie eine Verbindungssitzung mit dem SnapCenter-Server für einen bestimmten Benutzer: _Open-SmConnection_
+. Erstellen Sie eine Oracle-Datenbankklonspezifikation aus einem angegebenen Backup: _New-SmOracleCloneSpecification_
++
+
+NOTE: Wenn die sekundäre Datenschutzrichtlinie ein einheitliches Mirror-Vault ist, geben Sie nur -IncludeSecond Details an. Sie müssen nicht -SecondaryStorageType angeben.
+
++
+Mit diesem Befehl wird automatisch eine Oracle-Datenbankklonspezifikationsdatei für die angegebene Quelldatenbank und ihr Backup erstellt. Außerdem müssen Sie eine Klon-Datenbank-SID angeben, damit die erstellte Spezifikationsdatei die automatisch generierten Werte für die von Ihnen erstellte Klondatenbank enthält.
+
++
+
+NOTE: Die Klon-Spezifikations-Datei wird unter _/var/opt/snapcenter/sco/Clone_specs_ erstellt.
+
+. Führen Sie _Refresh-SmClone_ aus.
++
+Falls der Vorgang mit der Fehlermeldung „PL-SCO-20032: CanExecute fehlgeschlagen mit Fehler: PL-SCO-30031: Redo Log file +SC_2959770772_clmdb/clmdb/redolog/redo01_01.log exists“, geben Sie einen höheren Wert für die Fehlermeldungen _-WaitToTriggerClone_ an.
+
++
+Ausführliche Informationen zu UNIX-Befehlen finden Sie im https://library.netapp.com/ecm/ecm_download_file/ECMLP2883301["SnapCenter Software Command Reference Guide"^].
+
+

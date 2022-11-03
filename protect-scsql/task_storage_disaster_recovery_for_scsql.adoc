@@ -1,0 +1,54 @@
+---
+permalink: protect-scsql/task_storage_disaster_recovery_for_scsql.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können das SnapCenter Plug-in für SQL Server Storage wiederherstellen, indem Sie den DR-Modus für Storage auf der Seite Globale Einstellungen aktivieren. 
+---
+= Storage Disaster Recovery (DR) für SnapCenter Plug-in für SQL Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können das SnapCenter Plug-in für SQL Server Storage wiederherstellen, indem Sie den DR-Modus für Storage auf der Seite Globale Einstellungen aktivieren.
+
+*Was Sie brauchen*
+
+* Stellen Sie sicher, dass sich die Plug-ins im Wartungsmodus befinden.
+* SnapMirror/SnapVault Beziehung aufhebenlink:https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-950/GUID-8A3F828F-CD3D-48E8-A171-393581FEB2ED.html["SnapMirror Beziehungen unterbrechen"]
+* Verbinden Sie die LUN aus dem sekundären Server mit dem gleichen Laufwerksbuchstaben.
+* Stellen Sie sicher, dass alle Laufwerke mit denselben Laufwerksbuchstaben verbunden sind, die vor der DR verwendet wurden.
+* MSSQL-Serverdienst neu starten.
+* Stellen Sie sicher, dass die SQL-Ressourcen wieder online sind.
+
+
+*Über diese Aufgabe*
+
+Disaster Recovery (DR) wird auf VMDK- und RDM-Konfigurationen nicht unterstützt.
+
+*Schritte*
+
+. Navigieren Sie auf der Seite Einstellungen zu *Einstellungen* > *Globale Einstellungen* > *Disaster Recovery*.
+. Wählen Sie *Disaster Recovery Aktivieren*.
+. Klicken Sie Auf *Anwenden*.
+. Überprüfen Sie, ob der DR-Job aktiviert ist oder nicht, indem Sie auf *Monitor* > *Jobs* klicken.
+
+
+*Nach Ihrer Beendigung*
+
+* Falls neue Datenbanken nach dem Failover erstellt werden, befinden sich die Datenbanken außerhalb des DR-Modus.
++
+Die neuen Datenbanken laufen weiterhin so wie vor dem Failover.
+
+* Die neuen Backups, die im DR-Modus erstellt wurden, werden auf der Topologieseite unter SnapMirror oder SnapVault (sekundär) aufgeführt.
++
+Neben den neuen Backups wird ein „i“-Symbol angezeigt, das angibt, dass diese Backups während des DR-Modus erstellt wurden.
+
+* Sie können das SnapCenter-Plug-in für SQL Server Backups löschen, die während des Failovers erstellt wurden, entweder mit der UI oder mit dem folgenden Cmdlet: `Remove-SmBackup`
+* Wenn sich nach dem Failover einige der Ressourcen nicht im DR-Modus befinden sollen, verwenden Sie das folgende Cmdlet: `Remove-SmResourceDRMode`
++
+Weitere Informationen finden Sie im https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["SnapCenter Software Cmdlet Referenzhandbuch"^].
+
+* SnapCenter Server verwaltet die einzelnen Storage-Ressourcen (SQL-Datenbanken) im DR- oder nicht-DR-Modus, jedoch nicht die Ressourcengruppe mit Storage-Ressourcen, die sich im DR-Modus oder nicht im DR-Modus befinden.
+

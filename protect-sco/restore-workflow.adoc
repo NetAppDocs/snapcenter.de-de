@@ -1,0 +1,18 @@
+---
+permalink: protect-sco/restore-workflow.html 
+sidebar: sidebar 
+keywords: restore, workflow 
+summary: Der Restore-Workflow umfasst Planung, Durchführung von Restore-Vorgängen und Monitoring der Betriebsprozesse. 
+---
+= Wiederherstellung des Workflows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Restore-Workflow umfasst Planung, Durchführung von Restore-Vorgängen und Monitoring der Betriebsprozesse.
+
+Der folgende Workflow zeigt die Reihenfolge, in der Sie den Wiederherstellungsvorgang durchführen müssen:
+
+image::../media/all_plug_ins_restore_workflow.png[All_Plug-ins_Restore_Workflow]

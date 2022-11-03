@@ -1,0 +1,143 @@
+---
+permalink: admin/concept_overview_of_snapcenter_reports.html 
+sidebar: sidebar 
+keywords:  
+summary: SnapCenter bietet eine Vielzahl von Berichtsoptionen, mit denen Sie den Systemzustand und den Betrieb überwachen und managen können. 
+---
+= Überblick über die Berichterstellungsfunktionen von SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter bietet eine Vielzahl von Berichtsoptionen, mit denen Sie den Systemzustand und den Betrieb überwachen und managen können.
+
+|===
+| Berichtstyp | Beschreibung 
+
+
+ a| 
+Backup-Bericht
+ a| 
+Der Backup-Bericht enthält allgemeine Daten zu Backup-Trends für Ihre SnapCenter-Umgebung, die Erfolgsrate des Backups und einige Informationen zu jedem während der festgelegten Zeit durchgeführten Backup. Wenn ein Backup gelöscht wird, zeigt der Bericht keine Statusinformationen für das gelöschte Backup an. Der Bericht Backup Detail enthält detaillierte Informationen zu einem bestimmten Backup-Job und listet die erfolgreich gesicherten Ressourcen und die fehlgeschlagenen Ressourcen auf.
+
+
+
+ a| 
+Bericht Klonen
+ a| 
+Der Klonbericht enthält allgemeine Daten zu Klon-Trends für Ihre SnapCenter Umgebung, die Erfolgsrate von Klonen und einige Informationen zu jedem Klonjob, der während des festgelegten Zeits ausgeführt wurde. Wenn ein Klon gelöscht wird, zeigt der Bericht keine Statusinformationen für den gelöschten Klon an. Der Detailbericht zum Klonen enthält Details zum angegebenen Klon-, Klon-Host- und Klon-Auftragsstatus. Wenn eine Aufgabe fehlschlägt, zeigt der Detailbericht zum Klonen Informationen über den Fehler an.
+
+
+
+ a| 
+Bericht Wiederherstellen
+ a| 
+Der Wiederherstellungsbericht enthält allgemeine Informationen zu Wiederherstellungsjobs. Der Detailbericht zur Wiederherstellung enthält Details zu einem festgelegten Wiederherstellungsauftrag, einschließlich Host-Name, Backup-Name, Jobstart und -Dauer sowie Status einzelner Job-Aufgaben. Wenn eine Aufgabe fehlschlägt, zeigt der Detailbericht zur Wiederherstellung Informationen zum Fehler an.
+
+
+
+ a| 
+Sicherungsbericht
+ a| 
+Diese Berichte enthalten Einzelheiten zu Sicherungsmaßnahmen für Ressourcen, die von allen SnapCenter Plug-in-Instanzen gemanagt werden. Dieser Bericht enthält Sicherungsdetails für Ressourcen, die von allen Plug-in-Instanzen gemanagt werden. Sie sehen eine Übersicht, Details zu ungeschützten Ressourcen, Ressourcen, die zum Zeitpunkt der Berichterstellung nicht gesichert wurden, Ressourcen einer Ressourcengruppe, für die Backup-Vorgänge ausgefallen sind, und den SnapVault-Status.
+
+
+
+ a| 
+Planter Bericht
+ a| 
+Diese Berichte werden regelmäßig wie täglich, wöchentlich oder monatlich erstellt. Die Berichte werden automatisch zu dem angegebenen Datum und Uhrzeit erstellt und der Bericht wird per E-Mail an die jeweiligen Personen gesendet Sie können die Zeitpläne aktivieren, deaktivieren, ändern oder löschen. Der aktivierte Zeitplan kann auf Anforderung ausgeführt werden, indem Sie auf die Schaltfläche *Jetzt ausführen* klicken. Der Administrator kann einen beliebigen Zeitplan ausführen, der erstellte Bericht enthält jedoch Daten, die auf der Berechtigung des Benutzers basieren, der den Zeitplan erstellt hat.
+
+Andere Benutzer als Administrator können den Zeitplan anhand ihrer Berechtigung anzeigen oder ändern. Wenn alle Mitglieder dieser Rolle die Option Objekte anderer Mitglieder auf der Seite Rolle hinzufügen ausgewählt haben, können andere Mitglieder der Rolle sehen und ändern.
+
+|===
+
+
+== Aufrufen von Berichten
+
+Mit dem SnapCenter-Dashboard erhalten Sie einen schnellen Überblick über den Zustand Ihres Systems. Über das Dashboard können Sie weitere Details abrufen. Alternativ können Sie direkt auf detaillierte Berichte zugreifen.
+
+Sie können auf Berichte über eine der folgenden Methoden zugreifen:
+
+* Klicken Sie im linken Navigationsbereich auf *Dashboard* und dann auf *Letzte Schutzübersicht* Kreisdiagramm, um weitere Details auf der Seite Berichte anzuzeigen.
+* Klicken Sie im linken Navigationsbereich auf *Berichte*.
+
+
+
+
+== Filtern Sie Ihren Bericht
+
+Sie können Ihre Berichtsdaten nach verschiedenen Parametern filtern, je nachdem, wie viel Details und Zeit Sie benötigen.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Berichte*.
+. Wenn die Parameteransicht nicht angezeigt wird, klicken Sie in der Berichtssymbolleiste auf das Symbol *Parameterbereich umschalten*.
+. Geben Sie den Zeitbereich an, für den der Bericht ausgeführt werden soll. + Wenn Sie das Enddatum nicht angeben, werden alle verfügbaren Informationen abgerufen.
+. Filtern Sie Ihre Berichtsinformationen nach den folgenden Kriterien:
++
+** Ressourcengruppe
+** Host
+** Richtlinie
+** Ressource
+** Status
+** Plug-in-Name
+
+
+. Klicken Sie Auf *Anwenden*.
+
+
+
+
+== Berichte exportieren oder drucken
+
+Durch das Exportieren von SnapCenter-Berichten können Sie den Bericht in verschiedenen anderen Formaten anzeigen. Sie können auch Berichte drucken.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Berichte*.
+. Führen Sie in der Symbolleiste Berichte einen der folgenden Schritte aus:
++
+** Klicken Sie auf das Symbol *Druckvorschau umschalten*, um eine Vorschau eines druckbaren Berichts anzuzeigen.
+** Wählen Sie ein Format aus der Dropdown-Liste *Exportieren*-Symbol aus, um einen Bericht in ein anderes Format zu exportieren.
+
+
+. Um einen Bericht zu drucken, klicken Sie auf das Symbol *Drucken*.
+. Um eine bestimmte Berichtsübersicht anzuzeigen, blättern Sie zum entsprechenden Abschnitt des Berichts.
+
+
+
+
+== Stellen Sie den SMTP-Server für E-Mail-Benachrichtigungen ein
+
+Sie können den SMTP-Server angeben, der zum Senden von Datenschutzjobberichten an sich selbst oder andere verwendet werden soll. Sie können auch eine Test-E-Mail senden, um die Konfiguration zu überprüfen. Die Einstellungen werden global für jeden SnapCenter-Job angewendet, für den Sie die E-Mail-Benachrichtigung konfigurieren.
+
+Mit dieser Option wird der SMTP-Server zum Senden aller Datensicherheitsjobberichte konfiguriert. Wenn Sie jedoch regelmäßige Aktualisierungen für den SnapCenter-Datenschutz für eine bestimmte Ressource an sich selbst oder andere gesendet haben möchten, damit Sie den Status dieser Updates überwachen können, können Sie die Option konfigurieren, die SnapCenter-Berichte per E-Mail zu versenden, wenn Sie eine Ressourcengruppe erstellen.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Einstellungen*.
+. Klicken Sie auf der Seite Einstellungen auf *Globale Einstellungen*.
+. Geben Sie den SMTP-Server ein und klicken Sie auf *Speichern*.
+. Um eine Test-E-Mail zu senden, geben Sie die E-Mail-Adresse ein, von der aus Sie die E-Mail senden, geben Sie den Betreff ein und klicken Sie auf *Senden*.
+
+
+
+
+== Konfigurieren Sie die Option zum E-Mail-Versenden von Berichten
+
+Wenn Sie regelmäßige Aktualisierungen für den SnapCenter-Datenschutz an sich selbst oder andere Benutzer senden möchten, damit Sie den Status dieser Updates überwachen können, können Sie die Option konfigurieren, die SnapCenter-Berichte per E-Mail zu senden, wenn Sie eine Ressourcengruppe erstellen.
+
+*Was Sie brauchen*
+
+Sie müssen Ihren SMTP-Server auf der Seite Globale Einstellungen unter Einstellungen konfiguriert haben.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Wählen Sie den Ressourcentyp aus, den Sie anzeigen möchten, und klicken Sie auf *Neue Ressourcengruppe*, oder wählen Sie eine vorhandene Ressourcengruppe aus und klicken Sie auf *Ändern*, um E-Mail-Berichte für eine vorhandene Ressourcengruppe zu konfigurieren.
+. Wählen Sie im Bereich Benachrichtigung des Assistenten für neue Ressourcengruppe aus dem Pulldown-Menü aus, ob Sie Berichte immer, bei Ausfall, bei Ausfall oder bei Fehler oder Warnung empfangen möchten.
+. Geben Sie die Adresse ein, von der die E-Mail gesendet wird, die Adresse, an die die E-Mail gesendet wird, und den Betreff der E-Mail.
+

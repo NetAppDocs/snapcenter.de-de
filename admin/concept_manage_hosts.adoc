@@ -1,0 +1,298 @@
+---
+permalink: admin/concept_manage_hosts.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können Hosts hinzufügen und SnapCenter-Plug-in-Pakete installieren, einen Verifizierungsserver hinzufügen, Hosts entfernen, Backup-Jobs migrieren und den Host aktualisieren, um Plug-in-Pakete zu aktualisieren oder neue Plug-in-Pakete hinzuzufügen. Abhängig vom verwendeten Plug-in können Sie auch Festplatten bereitstellen, SMB-Freigaben managen, Initiatorgruppen \\ managen, iSCSI-Sessions managen und Daten migrieren. 
+---
+= Management von Hosts
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Hosts hinzufügen und SnapCenter-Plug-in-Pakete installieren, einen Verifizierungsserver hinzufügen, Hosts entfernen, Backup-Jobs migrieren und den Host aktualisieren, um Plug-in-Pakete zu aktualisieren oder neue Plug-in-Pakete hinzuzufügen. Abhängig vom verwendeten Plug-in können Sie auch Festplatten bereitstellen, SMB-Freigaben managen, Initiatorgruppen managen, iSCSI-Sessions managen und Daten migrieren.
+
+|===
+| Sie können diese Aufgaben ausführen... | Für Microsoft Exchange Server | Für Microsoft SQL Server | Für Microsoft Windows | Für Oracle Database | Für SAP HANA Database | Für benutzerdefinierte Plug-ins 
+
+
+ a| 
+Fügen Sie Hosts hinzu und installieren Sie das Plug-in-Paket
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+
+
+
+ a| 
+Aktualisieren Sie ESXi-Informationen für einen Host
+ a| 
+Nein
+ a| 
+Ja.
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+ a| 
+Unterbrechen Sie die Zeitpläne und versetzen Sie Hosts in den Wartungsmodus
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+
+
+
+ a| 
+Ändern Sie Hosts durch Hinzufügen, Aktualisieren oder Entfernen von Plug-ins
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+
+
+
+ a| 
+Entfernen Sie Hosts aus SnapCenter
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+
+
+
+ a| 
+Starten Sie Plug-in-Services
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+
+
+
+ a| 
+Bereitstellung von Festplatten
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Ja.
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+ a| 
+SMB-Freigaben managen
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Ja.
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+ a| 
+IGroups managen
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Ja.
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+ a| 
+Verwalten von iSCSI-Sitzungen
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Ja.
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+
+|===
+
+
+== Informationen zu Virtual Machines aktualisieren
+
+Sie sollten Ihre Virtual Machine-Informationen aktualisieren, wenn sich die VMware vCenter-Anmeldedaten ändern oder der Datenbank- oder Dateisystem-Host neu startet. Durch die Aktualisierung der Informationen Ihrer Virtual Machine in SnapCenter wird die Kommunikation mit dem VMware vSphere vCenter initiiert und die Anmeldedaten für vCenter abgerufen.
+
+
+NOTE: RDM-basierte Festplatten werden vom SnapCenter-Plug-in für Microsoft Windows verwaltet, das auf dem Datenbank-Host installiert ist. Um RDMs zu managen, kommuniziert das SnapCenter Plug-in für Microsoft Windows mit dem vCenter Server, der den Datenbank-Host managt.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich des SnapCenter auf *Hosts*.
+. Klicken Sie auf der Host-Seite auf *verwaltete Hosts*.
+. Wählen Sie auf der Seite verwaltete Hosts den Host aus, den Sie aktualisieren möchten.
+. Klicken Sie auf *VM aktualisieren*.
+
+
+
+
+== Ändern Sie die Plug-in-Hosts
+
+Nach der Installation eines Plug-ins können Sie ggf. die Details der Plug-in Hosts ändern. Sie können Anmeldeinformationen, Installationspfad, Plug-ins, Logverzeichnis-Details für das SnapCenter-Plug-in für Microsoft SQL Server, das Group Managed Service Account (gMSA) und den Plug-in-Port ändern.
+
+
+NOTE: Stellen Sie sicher, dass die Plug-in-Version mit der Version des SnapCenter-Servers identisch ist.
+
+*Über diese Aufgabe*
+
+* Sie können einen Plug-in-Port erst ändern, nachdem das Plug-in installiert wurde.
++
+Sie können den Plug-in-Port nicht ändern, während Upgrade-Vorgänge ausgeführt werden.
+
+* Beim Ändern eines Plug-in-Ports sollten Sie die folgenden Port-Rollback-Szenarien beachten:
++
+** Wenn SnapCenter in einem eigenständigen Setup den Port einer der Komponenten nicht ändert, schlägt der Vorgang fehl und der alte Port wird für alle Komponenten beibehalten.
++
+Wenn der Port für alle Komponenten geändert wurde, aber eine der Komponenten nicht mit dem neuen Port startet, wird der alte Port für alle Komponenten beibehalten. Wenn Sie beispielsweise den Port für zwei Plug-ins auf dem Standalone-Host ändern möchten und SnapCenter den neuen Port nicht auf eines der Plug-ins anwenden kann, schlägt der Vorgang fehl (mit entsprechender Fehlermeldung) und der alte Port wird für beide Plug-ins beibehalten.
+
+** Wenn SnapCenter in einer geclusterten Einrichtung den Port des auf einem Node installierten Plug-ins nicht ändert, schlägt der Vorgang fehl und der alte Port wird für alle Nodes beibehalten.
++
+Wenn beispielsweise das Plug-in auf vier Nodes in einem Cluster-Setup installiert ist und wenn der Port nicht für einen der Nodes geändert wird, wird der alte Port für alle Nodes beibehalten.
+
+
+
+
+
+Wenn Plug-ins mit gMSA installiert sind, können Sie im Fenster *More Options* ändern. Wenn Plug-ins ohne gMSA installiert sind, können Sie das gMSA-Konto angeben, um es als Plug-in-Dienstkonto zu verwenden.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Hosts*.
+. Vergewissern Sie sich, dass *verwaltete Hosts* oben ausgewählt ist.
+. Wählen Sie den Host aus, für den Sie ein Feld ändern und ändern möchten.
++
+Es kann jeweils nur ein Feld geändert werden.
+
+. Klicken Sie Auf *Absenden*.
+
+
+*Ergebnisse*
+
+Der Host wurde validiert und zum SnapCenter-Server hinzugefügt.
+
+
+
+== Plug-in-Dienste starten oder neu starten
+
+Wenn Sie die SnapCenter Plug-in-Dienste starten, können Sie Dienste starten, wenn sie nicht ausgeführt werden, oder wenn sie ausgeführt werden. Sie möchten die Dienste möglicherweise neu starten, nachdem die Wartung durchgeführt wurde.
+
+Sie sollten sicherstellen, dass beim Neustart der Dienste keine Jobs ausgeführt werden.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Hosts*.
+. Klicken Sie auf der Host-Seite auf *verwaltete Hosts*.
+. Wählen Sie auf der Seite verwaltete Hosts den Host aus, den Sie starten möchten.
+. Klicken Sie Auf image:../media/more_icon.gif[""] Klicken Sie auf *Start Service* oder *Neustart Service*.
++
+Sie können den Service mehrerer Hosts gleichzeitig starten oder neu starten.
+
+
+
+
+
+== Unterbrechen Sie die Zeitpläne für die Hostwartung
+
+Wenn Sie verhindern möchten, dass der Host geplante SnapCenter-Jobs ausführt, können Sie Ihren Host in den Wartungsmodus versetzen. Führen Sie dies vor dem Upgrade der Plug-ins durch oder führen Sie Wartungsaufgaben auf Hosts durch.
+
+
+NOTE: Sie können die Zeitpläne auf einem Host nicht unterbrechen, der ausgefallen ist, da SnapCenter nicht mit diesem Host kommunizieren kann.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Hosts*.
+. Klicken Sie auf der Host-Seite auf *verwaltete Hosts*.
+. Wählen Sie auf der Seite verwaltete Hosts den Host aus, den Sie aussetzen möchten.
+. Klicken Sie auf das image:../media/more_icon.gif[""] Und klicken Sie dann auf *Zeitplan anhalten*, um den Host für dieses Plug-in in in den Wartungsmodus zu versetzen.
++
+Sie können den Zeitplan mehrerer Hosts gleichzeitig unterbrechen.
+
++
+
+NOTE: Sie müssen den Plug-in-Dienst nicht zuerst beenden. Der Plug-in-Dienst kann sich im Status „ausgeführt“ oder „angehalten“ befinden.
+
+
+
+*Ergebnisse*
+
+Nachdem Sie die Zeitpläne auf dem Host unterbrochen haben, wird auf der Seite Managed Hosts *suspended* im Feld Gesamtstatus des Hosts angezeigt.
+
+Nachdem Sie die Host-Wartung abgeschlossen haben, können Sie den Host aus dem Wartungsmodus bringen, indem Sie auf *Zeitplan aktivieren* klicken. Sie können den Zeitplan mehrerer Hosts gleichzeitig aktivieren.

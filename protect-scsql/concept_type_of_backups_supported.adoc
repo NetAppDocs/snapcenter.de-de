@@ -1,0 +1,61 @@
+---
+permalink: protect-scsql/concept_type_of_backups_supported.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Für das Sichern von SQL Server-System und Benutzerdatenbanken mit SnapCenter müssen Sie den Ressourcentyp auswählen, z. B. Datenbanken, SQL Server-Instanzen und Verfügbarkeitsgruppen \(AG\). Mithilfe der Snapshot Kopiertechnologie lassen sich online schreibgeschützte Kopien der Volumes erstellen, auf denen sich die Ressourcen befinden.' 
+---
+= Art der unterstützten Backups
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Für das Sichern des SQL Server-Systems und der Benutzerdatenbanken mit SnapCenter müssen Sie den Ressourcentyp auswählen, z. B. Datenbanken, SQL Server-Instanzen und Verfügbarkeitsgruppen (AG). Mithilfe der Snapshot Kopiertechnologie lassen sich online schreibgeschützte Kopien der Volumes erstellen, auf denen sich die Ressourcen befinden.
+
+Sie können die Option nur kopieren auswählen, um anzugeben, dass der SQL-Server die Transaktionsprotokolle nicht schneidet. Sie sollten diese Option verwenden, wenn Sie auch SQL Server mit anderen Backup-Anwendungen verwalten. Wenn die Transaktionsprotokolle intakt bleiben, kann jede Backup-Anwendung die Systemdatenbanken wiederherstellen. Backups, bei denen nur Kopien erstellt werden, sind unabhängig von der Sequenz geplanter Backups und haben keine Auswirkungen auf die Backup- und Restore-Vorgänge der Datenbank.
+
+|===
+| Backup-Typ | Beschreibung | Copy-Only-Option mit Backup-Typ 
+
+
+ a| 
+Vollständiges Backup und Backup von Protokollen
+ a| 
+Sichert die Systemdatenbank und schneidet die Transaktionsprotokolle ab.
+
+Der SQL Server schneidet die Transaktionsprotokolle ab, indem die Einträge entfernt werden, die bereits in der Datenbank gespeichert sind.
+
+Nach Abschluss der vollständigen Sicherung erstellt diese Option ein Transaktionsprotokoll, das die Transaktionsinformationen erfasst. Normalerweise sollten Sie diese Option wählen. Wenn Ihre Backup-Zeit jedoch kurz ist, können Sie wählen, keine Transaktions-Log-Backup mit vollständiger Sicherung auszuführen.
+
+Sie können keine Protokollsicherung für Master- und msdb-Systemdatenbanken erstellen. Sie können jedoch Protokoll-Backups für Modell-System-Datenbank erstellen.
+ a| 
+Sichert die Systemdatenbankdateien und die Transaktions-Logs, ohne die Protokolle zu beeinträchtigen.
+
+Ein Backup nur für Kopien kann nicht als differenzielles Basis- oder differenzielles Backup dienen und hat keine Auswirkungen auf die Differentialbasis. Die Wiederherstellung eines nur-Kopie-Vollbackups ist mit der Wiederherstellung eines anderen vollständigen Backups identisch.
+
+
+
+ a| 
+Vollständiges Datenbank-Backup
+ a| 
+Sichert die Systemdatenbankdateien.
+
+Sie können vollständige Datenbank-Backup für Master-, Modell- und msdb-Systemdatenbanken erstellen.
+ a| 
+Sichert die Systemdatenbankdateien.
+
+
+
+ a| 
+Transaktions-Log-Backup
+ a| 
+Sichert die gekürzten Transaktionsprotokolle, kopiert nur die Transaktionen, die seit dem letzten Transaktions-Log gesichert wurden.
+
+Wenn Sie häufige Transaktions-Log-Backups neben vollständigen Datenbank-Backups planen, können Sie granulare Recovery-Punkte auswählen.
+ a| 
+Sicherung der Transaktions-Logs, ohne sie zu beeinträchtigen
+
+Diese Sicherungsart hat keine Auswirkung auf die Sequenzierung von regelmäßigen Protokollsicherungen. Backups nur-Kopien-Protokolle sind für die Durchführung von Online-Wiederherstellungen nützlich.
+
+|===

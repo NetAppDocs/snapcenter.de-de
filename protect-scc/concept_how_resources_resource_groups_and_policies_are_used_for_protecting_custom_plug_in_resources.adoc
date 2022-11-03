@@ -1,0 +1,30 @@
+---
+permalink: protect-scc/concept_how_resources_resource_groups_and_policies_are_used_for_protecting_custom_plug_in_resources.html 
+sidebar: sidebar 
+keywords:  
+summary: Bevor Sie SnapCenter verwenden, ist es hilfreich, grundlegende Konzepte im Zusammenhang mit Backup-, Klon- und Restore-Vorgängen zu verstehen, die durchgeführt werden sollen. Sie interagieren mit Ressourcen, Ressourcengruppen und Richtlinien für verschiedene Vorgänge. 
+---
+= Wie Ressourcen, Ressourcengruppen und Richtlinien zum Schutz benutzerdefinierter Plug-in-Ressourcen verwendet werden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bevor Sie SnapCenter verwenden, ist es hilfreich, grundlegende Konzepte im Zusammenhang mit Backup-, Klon- und Restore-Vorgängen zu verstehen, die durchgeführt werden sollen. Sie interagieren mit Ressourcen, Ressourcengruppen und Richtlinien für verschiedene Vorgänge.
+
+* Ressourcen sind normalerweise Datenbanken, Windows File-Systeme oder VMs, die Sie mit SnapCenter sichern oder klonen.
+* Eine SnapCenter Ressourcengruppe ist eine Sammlung von Ressourcen auf einem Host oder Cluster.
++
+Wenn Sie einen Vorgang für eine Ressourcengruppe ausführen, führen Sie diesen Vorgang für die in der Ressourcengruppe definierten Ressourcen gemäß dem von Ihnen für die Ressourcengruppe festgelegten Zeitplan aus.
+
++
+Sie können nach Bedarf eine einzelne Ressource oder eine Ressourcengruppe sichern. Sie können auch geplante Backups für einzelne Ressourcen und Ressourcengruppen durchführen.
+
+* Die Richtlinien legen die Backup-Häufigkeit, die Aufbewahrung von Kopien, die Replizierung, Skripte und andere Merkmale von Datensicherungsvorgängen fest.
++
+Wenn Sie eine Ressourcengruppe erstellen, wählen Sie eine oder mehrere Richtlinien für diese Gruppe aus. Sie können auch eine Richtlinie auswählen, wenn Sie ein Backup nach Bedarf für eine einzelne Ressource durchführen.
+
+
+
+Denken Sie an eine Ressourcengruppe, die definiert _was_ Sie schützen möchten und wann Sie sie in Bezug auf Tag und Zeit schützen möchten. Denken Sie an eine Politik, die definiert _wie_ Sie sie schützen möchten. Wenn Sie beispielsweise alle Datenbanken sichern oder alle Dateisysteme eines Hosts sichern, können Sie eine Ressourcengruppe erstellen, die alle Datenbanken oder alle Dateisysteme des Hosts enthält. Sie können dann zwei Richtlinien an die Ressourcengruppe anhängen: Eine Tagesrichtlinie und eine Stundenpolitik. Wenn Sie die Ressourcengruppe erstellen und die Richtlinien anhängen, können Sie die Ressourcengruppen so konfigurieren, dass sie täglich ein dateibasiertes Backup durchführen, und einen anderen Zeitplan, der stündliche Snapshot-basierte Backups durchführt.

@@ -1,0 +1,21 @@
+---
+permalink: protect-hana/task_define_a_restore_and_recovery_strategy_for_sap_hana_resources.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie müssen eine Strategie definieren, bevor Sie Ihre Datenbank wiederherstellen und wiederherstellen, damit Restore- und Recovery-Vorgänge erfolgreich durchgeführt werden können. 
+---
+= Restore- und Recovery-Strategie für SAP HANA-Ressourcen definieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen eine Strategie definieren, bevor Sie Ihre Datenbank wiederherstellen und wiederherstellen, damit Restore- und Recovery-Vorgänge erfolgreich durchgeführt werden können.
+
+*Schritte*
+
+. Legen Sie die Wiederherstellungsstrategien fest, die für manuell hinzugefügte SAP HANA-Ressourcen unterstützt werden
+. Legen Sie die Wiederherstellungsstrategien fest, die für automatisch erkannte SAP HANA-Datenbanken unterstützt werden
+. Geben Sie die Art der Recovery-Vorgänge an, die Sie ausführen möchten.
+

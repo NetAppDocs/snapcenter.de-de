@@ -1,0 +1,16 @@
+---
+permalink: protect-scsql/concept_when_to_schedule_verification_jobs.html 
+sidebar: sidebar 
+keywords:  
+summary: 'SnapCenter kann Backups zwar sofort nach der Erstellung überprüfen, kann aber die zum Abschließen des Backup-Jobs erforderliche Zeit erheblich verlängern und ist ressourcenintensiv. Daher ist es fast immer am besten, die Verifizierung in einem separaten Job für ein späteres Mal zu planen. Wenn Sie beispielsweise eine Datenbank um 5:00 Uhr sichern Sie können jeden Tag eine Verifizierung planen, und zwar eine Stunde später um 6:00 Uhr' 
+---
+= Wann werden Überprüfungsaufträge geplant
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter kann Backups zwar sofort nach der Erstellung überprüfen, kann aber die zum Abschließen des Backup-Jobs erforderliche Zeit erheblich verlängern und ist ressourcenintensiv. Daher ist es fast immer am besten, die Verifizierung in einem separaten Job für ein späteres Mal zu planen. Wenn Sie beispielsweise eine Datenbank um 5:00 Uhr sichern Sie können jeden Tag eine Verifizierung planen, und zwar eine Stunde später um 6:00 Uhr
+
+Aus dem gleichen Grund ist es in der Regel nicht erforderlich, die Backup-Verifizierung jedes Mal, wenn Sie ein Backup ausführen. Eine Überprüfung in regelmäßigen, aber weniger häufigen Abständen durchzuführen, reicht normalerweise aus, um die Integrität des Backups zu gewährleisten. Ein einziger Verifizierungsauftrag kann mehrere Backups gleichzeitig überprüfen.

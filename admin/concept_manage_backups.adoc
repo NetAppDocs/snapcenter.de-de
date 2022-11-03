@@ -1,0 +1,79 @@
+---
+permalink: admin/concept_manage_backups.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können Backups umbenennen und löschen. Sie können auch mehrere Backups gleichzeitig löschen. 
+---
+= Backup-Management
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Backups umbenennen und löschen. Sie können auch mehrere Backups gleichzeitig löschen.
+
+
+
+== Backups umbenennen
+
+Sie können Backups umbenennen, wenn Sie einen besseren Namen angeben möchten, um die Suchfähigkeit zu verbessern.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Wählen Sie auf der Seite Ressourcen entweder die Ressource oder Ressourcengruppe aus der Dropdown-Liste *Ansicht* aus.
+. Wählen Sie die Ressource oder Ressourcengruppe aus der Liste aus.
++
+Die Seite „Topologie der Ressourcen- oder Ressourcengruppe“ wird angezeigt. Wenn die Ressourcen- oder Ressourcengruppe nicht für den Datenschutz konfiguriert ist, wird anstelle der Topologieseite der Schutzassistent angezeigt.
+
+. Wählen Sie aus der Ansicht Kopien verwalten aus den primären Speichersystemen *Backups* aus.
++
+Sie können die Backups, die sich auf dem sekundären Speichersystem befinden, nicht umbenennen.
+
++
+Wenn Sie die Backups von Oracle-Datenbanken mithilfe von Oracle Recovery Manager (RMAN) katalogisiert haben, können Sie diese katalogisierten Backups nicht umbenennen.
+
+. Wählen Sie das Backup aus, und klicken Sie dann auf image:../media/rename_icon.gif["Symbol umbenennen"].
+. Geben Sie im Feld *Backup unter* umbenennen einen neuen Namen ein und klicken Sie auf *OK*.
+
+
+
+
+== Backups löschen
+
+Backups können gelöscht werden, wenn das Backup für andere Datensicherungsvorgänge nicht mehr benötigt wird.
+
+*Was Sie brauchen*
+
+Sie müssen die zugehörigen Klone gelöscht haben, bevor Sie ein Backup löschen.
+
+
+NOTE: Wenn ein Backup einer geklonten Ressource zugeordnet ist, können Sie das Backup nicht löschen.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Wählen Sie auf der Seite Ressourcen entweder die Ressource oder Ressourcengruppe aus der Dropdown-Liste *Ansicht* aus.
+. Wählen Sie die Ressource oder Ressourcengruppe aus der Liste aus.
++
+Die Seite „Topologie der Ressourcen- oder Ressourcengruppe“ wird angezeigt.
+
+. Wählen Sie aus der Ansicht Kopien verwalten aus den primären Speichersystemen *Backups* aus.
++
+Sie können die Backups, die sich auf dem sekundären Speichersystem befinden, nicht löschen.
+
+. Wählen Sie das Backup aus, und klicken Sie dann auf image:../media/delete_icon.gif[""].
++
+Wenn Sie ein SAP HANA-Datenbankbackup löschen, werden auch die zugehörigen SAP HANA-Kataloge des Backups gelöscht.
+
++
+
+NOTE: Wenn das letzte verbleibende Backup gelöscht wird, können die zugehörigen HANA-Katalogeinträge nicht gelöscht werden.
+
+. Klicken Sie auf *OK*.
++
+
+NOTE: Wenn Sie einige veraltete Datenbank-Backups in SnapCenter haben, die keine entsprechenden Backups auf dem Speichersystem haben, müssen Sie den Befehl remove-smbackup verwenden, um diese veralteten Backup-Einträge zu bereinigen. Wenn die veralteten Backups katalogisiert wurden, werden sie von der Datenbank des Recovery-Katalogs entkatalogisiert.
+
+

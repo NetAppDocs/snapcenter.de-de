@@ -1,0 +1,45 @@
+= 
+:allow-uri-read: 
+
+
+Sie können Backup-Vorgänge in der Warteschlange abbrechen.
+
+*Was Sie brauchen*
+
+* Sie müssen als SnapCenter-Administrator oder -Auftragseigentümer angemeldet sein, um Vorgänge abzubrechen.
+* Sie können einen Sicherungsvorgang entweder über die Seite *Monitor* oder über den Bereich *Aktivität* abbrechen.
+* Sie können einen laufenden Sicherungsvorgang nicht abbrechen.
+* Sie können die SnapCenter GUI, PowerShell Commandlets oder CLI-Befehle verwenden, um die Backup-Vorgänge abzubrechen.
+* Die Schaltfläche *Job abbrechen* ist für Vorgänge deaktiviert, die nicht abgebrochen werden können.
+* Wenn Sie *Alle Mitglieder dieser Rolle sehen und auf anderen Mitgliedsobjekten* auf der Seite Benutzer\Gruppen arbeiten können, während Sie eine Rolle erstellen, können Sie die in der Warteschlange befindlichen Backup-Vorgänge anderer Mitglieder abbrechen, während Sie diese Rolle verwenden.
+
+
+*Schritte*
+
+. Führen Sie eine der folgenden Aktionen aus:
++
+|===
+| Von der... | Aktion 
+
+
+ a| 
+Monitor-Seite
+ a| 
+.. Klicken Sie im linken Navigationsbereich auf *Monitor* > *Jobs*.
+.. Wählen Sie den Vorgang aus, und klicken Sie dann auf *Job abbrechen*.
+
+
+
+
+ a| 
+Aktivitätsbereich
+ a| 
+.. Klicken Sie nach dem Starten des Backup-Vorgangs auf *image:../media/activity_pane_icon.gif[""]* Im Aktivitätsbereich werden die fünf letzten Vorgänge angezeigt.
+.. Wählen Sie den Vorgang aus.
+.. Klicken Sie auf der Seite Jobdetails auf *Job abbrechen*.
+
+
+|===
+
+
+Der Vorgang wird abgebrochen und die Ressource wird in den vorherigen Status zurückgesetzt.

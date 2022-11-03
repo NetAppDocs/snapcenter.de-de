@@ -1,0 +1,32 @@
+---
+permalink: protect-hana/task_delete_or_split_sap_hana_database_clones_after_upgrading_snapcenter.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: Nach einem Upgrade auf SnapCenter 4.3 werden die Klone nicht mehr angezeigt. Sie können den Klon löschen oder die Klone auf der Topologieseite der Ressource, aus der die Klone erstellt wurden, aufteilen. 
+---
+= Löschen oder teilen Sie SAP HANA Datenbankklone nach dem Upgrade der SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nach einem Upgrade auf SnapCenter 4.3 werden die Klone nicht mehr angezeigt. Sie können den Klon löschen oder die Klone auf der Topologieseite der Ressource, aus der die Klone erstellt wurden, aufteilen.
+
+*Über diese Aufgabe*
+
+Um den Platzbedarf für die versteckten Klone zu ermitteln, führen Sie den folgenden Befehl aus: `Get-SmClone -ListStorageFootprint`
+
+*Schritte*
+
+. Löschen Sie die Backups der geklonten Ressourcen mit dem Cmdlet "remove-smbackup".
+. Löschen Sie die Ressourcengruppe der geklonten Ressourcen mit dem Cmdlet "remove-sresourcgruppe".
+. Entfernen Sie den Schutz der geklonten Ressource mit dem Cmdlet "remove-smprotectResource".
+. Wählen Sie auf der Seite Ressourcen die übergeordnete Ressource aus.
++
+Die Seite „Ressourcentopologie“ wird angezeigt.
+
+. Wählen Sie in der Ansicht Kopien managen die Klone entweder auf den primären oder sekundären (gespiegelten oder replizierten) Storage-Systemen aus.
+. Wählen Sie die Klone aus, und klicken Sie dann auf image:../media/delete_icon.gif[""] Zum Löschen von Klonen oder Klicken auf image:../media/split_cone.gif[""] Um die Klone aufzuteilen.
+. Klicken Sie auf *OK*.
+

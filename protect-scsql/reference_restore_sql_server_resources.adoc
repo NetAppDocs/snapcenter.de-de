@@ -1,0 +1,28 @@
+---
+permalink: protect-scsql/reference_restore_sql_server_resources.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können SnapCenter verwenden, um SQL Server Datenbanken wiederherzustellen, indem Sie die Daten von einem oder mehreren Backups auf Ihr aktives File-System wiederherstellen und dann die Datenbank wiederherstellen. Sie können auch Datenbanken wiederherstellen, die sich in Verfügbarkeitsgruppen befinden, und dann die wiederhergestellten Datenbanken der Verfügbarkeitsgruppe hinzufügen. Vor dem Wiederherstellen einer SQL Server-Datenbank müssen Sie mehrere vorbereitende Aufgaben ausführen. 
+---
+= Wiederherstellung des Workflows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können SnapCenter verwenden, um SQL Server Datenbanken wiederherzustellen, indem Sie die Daten von einem oder mehreren Backups auf Ihr aktives File-System wiederherstellen und dann die Datenbank wiederherstellen. Sie können auch Datenbanken wiederherstellen, die sich in Verfügbarkeitsgruppen befinden, und dann die wiederhergestellten Datenbanken der Verfügbarkeitsgruppe hinzufügen. Vor dem Wiederherstellen einer SQL Server-Datenbank müssen Sie mehrere vorbereitende Aufgaben ausführen.
+
+Im folgenden Workflow wird die Reihenfolge angezeigt, in der Sie die Datenbankwiederherstellungen durchführen müssen:
+
+image::../media/all_plug_ins_restore_workflow.png[All_Plug-ins_Restore_Workflow]
+
+Außerdem können Sie PowerShell Cmdlets manuell oder in Skripten verwenden, um Backup, Wiederherstellung, Wiederherstellung, Verifizierung und Klonvorgänge durchzuführen. Ausführliche Informationen zu PowerShell Cmdlets finden Sie in der Hilfe zu SnapCenter Cmdlet oder in der https://library.netapp.com/ecm/ecm_download_file/ECMLP2874310["SnapCenter Software 4.4 Cmdlet Referenzhandbuch"]
+
+*Weitere Informationen*
+
+link:task_restore_a_sql_server_database_from_secondary_storage.html["Wiederherstellung einer SQL Server-Datenbank aus dem sekundären Storage"]
+
+link:task_restore_and_recover_resources_using_powershell_cmdlets_for_sql.html["Stellen Sie Ressourcen mithilfe von PowerShell cmdlets wieder her"]
+
+link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Restore_operation_might_fail_on_Windows_2008_R2["Der Wiederherstellungsvorgang kann unter Windows 2008 R2 fehlschlagen"]

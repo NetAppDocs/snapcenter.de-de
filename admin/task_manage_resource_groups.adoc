@@ -1,0 +1,73 @@
+---
+permalink: admin/task_manage_resource_groups.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können verschiedene Vorgänge an Ressourcengruppen ausführen. 
+---
+= Verwalten von Ressourcengruppen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können verschiedene Vorgänge an Ressourcengruppen ausführen.
+
+Sie können die folgenden Aufgaben bezüglich Ressourcengruppen ausführen:
+
+* Ändern Sie eine Ressourcengruppe, indem Sie die Ressourcengruppe auswählen und auf *Ressourcengruppe ändern* klicken, um die Informationen zu bearbeiten, die Sie beim Erstellen der Ressourcengruppe angegeben haben.
++
+
+NOTE: Sie können den Zeitplan während der Änderung der Ressourcengruppe ändern. Wenn Sie jedoch den Terminplantyp ändern möchten, müssen Sie die Richtlinie ändern.
+
++
+
+NOTE: Wenn Sie Ressourcen aus einer Ressourcengruppe entfernen, werden die in den Richtlinien, die derzeit der Ressourcengruppe zugeordnet sind, definierten Backup-Aufbewahrungseinstellungen weiterhin auf die entfernten Ressourcen angewendet.
+
+* Erstellen Sie ein Backup einer Ressourcengruppe.
+* Erstellen Sie einen Klon eines Backups.
++
+Sie können die Backups von SQL, Oracle, Windows Filesystemen, benutzerdefinierten Applikationen und SAP HANA Datenbankressourcen oder Ressourcengruppen klonen.
+
+* Erstellen Sie einen Klon einer Ressourcengruppe.
++
+Dieser Vorgang wird nur für SQL-Ressourcengruppen (die nur Datenbanken enthalten) unterstützt. Sie können einen Zeitplan für das Klonen einer Ressourcengruppe konfigurieren (Klon-Lebenszyklus).
+
+* Verhindern Sie, dass geplante Vorgänge in Ressourcengruppen gestartet werden.
+* Löschen einer Ressourcengruppe.
+
+
+
+
+== Stoppen und fortsetzen Sie den Betrieb in Ressourcengruppen
+
+Sie können geplante Vorgänge vorübergehend vom Starten einer Ressourcengruppe deaktivieren. Später können Sie diese Vorgänge aktivieren.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Wählen Sie auf der Seite Ressourcen in der Liste *Ansicht* die Option *Ressourcengruppe* aus.
+. Wählen Sie die Ressourcengruppe aus und klicken Sie auf *Wartung*.
+. Klicken Sie auf *OK*.
+
+
+Wenn Sie die Vorgänge der Ressourcengruppe, die Sie im Wartungsmodus ausgeführt haben, wieder aufnehmen möchten, wählen Sie die Ressourcengruppe aus und klicken Sie auf *Produktion*.
+
+
+
+== Löschen von Ressourcengruppen
+
+Sie können eine Ressourcengruppe löschen, wenn Sie die Ressourcen in der Ressourcengruppe nicht mehr schützen müssen. Sie müssen sicherstellen, dass Ressourcengruppen gelöscht werden, bevor Sie Plug-ins aus SnapCenter entfernen.
+
+*Über diese Aufgabe*
+
+Sie sollten manuell alle Klone löschen, die für eine der Ressourcen der Ressourcengruppe erstellt wurden. Optional können Sie das Löschen aller Backups, Metadaten, Richtlinien und Snapshot Kopien, die der Ressourcengruppe zugeordnet sind, erzwingen.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Wählen Sie auf der Seite Ressourcen in der Liste *Ansicht* die Option *Ressourcengruppe* aus.
+. Wählen Sie die Ressourcengruppe aus, und klicken Sie dann auf *Löschen*.
+. Optional: Aktivieren Sie das Kontrollkästchen *Backups löschen und Richtlinien trennen, die mit dieser Ressourcengruppe* verknüpft sind, um alle Backups, Metadaten, Richtlinien und Snapshot-Kopien zu entfernen, die der Ressourcengruppe zugeordnet sind.
+. Klicken Sie auf *OK*.
+

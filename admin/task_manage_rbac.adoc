@@ -1,0 +1,63 @@
+---
+permalink: admin/task_manage_rbac.html 
+sidebar: sidebar 
+keywords: modify RBAC, role, users, groups 
+summary: SnapCenter ermöglicht Ihnen, Rollen, Benutzer und Gruppen zu ändern. 
+---
+= RBAC managen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter ermöglicht Ihnen, Rollen, Benutzer und Gruppen zu ändern.
+
+
+
+== Ändern Sie eine Rolle
+
+Sie können eine SnapCenter-Rolle ändern, um Benutzer oder Gruppen zu entfernen und die mit der Rolle verknüpften Berechtigungen zu ändern. Es ist besonders nützlich, Rollen zu ändern, wenn Sie die Berechtigungen einer ganzen Rolle ändern oder löschen möchten.
+
+*Was Sie brauchen*
+
+Sie müssen sich als „SnapCenterAdmin“-Rolle angemeldet haben.
+
+
+NOTE: Sie können die Berechtigungen für die SnapCenterAdmin-Rolle nicht ändern oder entfernen.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Einstellungen*.
+. Klicken Sie auf der Seite Einstellungen auf *Rollen*.
+. Klicken Sie im Feld Rollenname auf die Rolle, die Sie ändern möchten.
+. Ändern Sie auf der Seite Rollendetails die Berechtigungen, oder heben Sie die Zuweisung der Mitglieder nach Bedarf ab.
+. Wählen Sie *Alle Mitglieder dieser Rolle können Objekte anderer Mitglieder* sehen, damit andere Mitglieder der Rolle nach der Aktualisierung der Ressourcenliste Ressourcen wie Volumes und Hosts sehen können.
++
+Deaktivieren Sie diese Option, wenn Mitglieder dieser Rolle keine Objekte anzeigen möchten, denen andere Mitglieder zugewiesen sind.
+
++
+
+NOTE: Wenn diese Option aktiviert ist, ist es nicht erforderlich, Benutzern Zugriff auf Objekte oder Ressourcen zuzuweisen, wenn Benutzer derselben Rolle angehören wie der Benutzer, der die Objekte oder Ressourcen erstellt hat.
+
+. Klicken Sie Auf *Absenden*.
+
+
+
+
+== Benutzer und Gruppen ändern
+
+Sie können SnapCenter-Benutzer oder -Gruppen ändern, um ihre Rollen und Assets zu ändern.
+
+*Was Sie brauchen*
+
+Sie müssen als SnapCenter-Administrator angemeldet sein.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Einstellungen*.
+. Klicken Sie auf der Seite Einstellungen auf *Benutzer und Zugriff*.
+. Klicken Sie in der Liste Benutzer- oder Gruppenname auf den Benutzer oder die Gruppe, den Sie ändern möchten.
+. Ändern Sie auf der Seite Benutzer- oder Gruppendetails die Rollen und Assets.
+. Klicken Sie Auf *Absenden*.
+

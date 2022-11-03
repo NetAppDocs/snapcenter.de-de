@@ -1,0 +1,50 @@
+---
+permalink: protect-hana/reference_types_of_restore_performed_for_auto_discovered_sap_hana_databases.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Databases 
+summary: 'SnapCenter unterstützt Volume-basierte SnapRestore \(VBSR\), Single File SnapRestore und Connect-and-Copy-Restore-Typen für automatisch erkannte SAP HANA Datenbanken.' 
+---
+= Arten von Wiederherstellungsvorgängen für automatisch erkannte SAP HANA-Datenbanken
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter unterstützt Volume-basierte SnapRestore (VBSR), Single File SnapRestore und Connect-and-Copy Restore-Typen für automatisch erkannte SAP HANA Datenbanken.
+
+
+
+== Volume-basiertes SnapRestore (VBSR) wird in NFS-Umgebungen für die folgenden Szenarien ausgeführt:
+
+* Wenn das für die Wiederherstellung ausgewählte Backup auf Versionen vor SnapCenter 4.3 durchgeführt wird, und nur, wenn die Option **Complete Resource**ausgewählt ist
+* Wenn die für die Wiederherstellung ausgewählte Sicherung in SnapCenter 4.3 erstellt wird und wenn die Option *Volume revert* ausgewählt ist
+
+
+
+
+== Single File SnapRestore wird in NFS-Umgebungen für die folgenden Szenarien durchgeführt:
+
+* Wenn die für die Wiederherstellung ausgewählte Sicherung in SnapCenter 4.3 erstellt wird und nur die Option *vollständige Ressource* ausgewählt ist
+* Für mandantenfähige Datenbank-Container (MDC), wenn das für die Wiederherstellung ausgewählte Backup auf SnapCenter 4.3 übernommen wird, und die Option *Tenant Database* ausgewählt ist
+* Wenn der ausgewählte Backup von einem sekundären Standort SnapMirror oder SnapVault stammt und die Option *Complete Resource* ausgewählt ist
+
+
+
+
+== Single File SnapRestore wird in SAN-Umgebungen für die folgenden Szenarien durchgeführt:
+
+* Wenn Backups auf Versionen vor SnapCenter 4.3 erstellt werden und nur dann, wenn die Option *Complete Resource* ausgewählt ist
+* Wenn Backups in SnapCenter 4.3 erstellt werden und nur dann, wenn die Option *Complete Resource* ausgewählt ist
+* Wenn das Backup von einem sekundären Standort SnapMirror oder SnapVault ausgewählt wird und die Option *Complete Resource* ausgewählt ist
+
+
+
+
+== Connect-and-Copy-Based Restore wird in SAN-Umgebungen für das folgende Szenario durchgeführt:
+
+* Für MDC, wenn die für die Wiederherstellung ausgewählte Sicherung in SnapCenter 4.3 erstellt wird, und die Option *Tenant Database* ausgewählt ist
+
+
+
+NOTE: *Complete Resource*, *Volume Revert* und *Tenant Database* Optionen sind auf der Seite „Bereich wiederherstellen“ verfügbar.

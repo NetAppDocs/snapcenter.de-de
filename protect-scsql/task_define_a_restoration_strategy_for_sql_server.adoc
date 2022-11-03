@@ -1,0 +1,14 @@
+---
+permalink: protect-scsql/task_define_a_restoration_strategy_for_sql_server.html 
+sidebar: sidebar 
+keywords:  
+summary: Durch die Definition einer Wiederherstellungsstrategie für SQL Server können Sie Ihre Datenbank erfolgreich wiederherstellen. 
+---
+= Definieren einer Wiederherstellungsstrategie für SQL Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Durch die Definition einer Wiederherstellungsstrategie für SQL Server können Sie Ihre Datenbank erfolgreich wiederherstellen.

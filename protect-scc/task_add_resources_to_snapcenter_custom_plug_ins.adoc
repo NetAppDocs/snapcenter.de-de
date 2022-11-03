@@ -1,0 +1,112 @@
+---
+permalink: protect-scc/task_add_resources_to_snapcenter_custom_plug_ins.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie müssen die Ressourcen hinzufügen, die Sie sichern oder klonen möchten. Je nach Umgebung können sich die Ressourcen entweder um Datenbankinstanzen oder Sammlungen handeln, die Sie sichern oder klonen möchten. 
+---
+= Benutzerdefinierte SnapCenter Plug-ins mit Ressourcen ergänzen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen die Ressourcen hinzufügen, die Sie sichern oder klonen möchten. Je nach Umgebung können sich die Ressourcen entweder um Datenbankinstanzen oder Sammlungen handeln, die Sie sichern oder klonen möchten.
+
+*Was Sie brauchen*
+
+* Sie müssen Aufgaben wie das Installieren des SnapCenter-Servers, das Hinzufügen von Hosts, das Erstellen von Speichersystemverbindungen und das Hinzufügen von Anmeldeinformationen abgeschlossen haben.
+* Sie müssen ein benutzerdefiniertes Plug-in erstellt haben.
++
+link:concept_develop_a_plug_in_for_your_application.html["Entwickeln Sie ein Plug-in für Ihre Applikation"]
+
+* Sie müssen die Plug-ins auf SnapCenter Server hochgeladen haben.
+
+
+*Über diese Aufgabe*
+
+Sie können auch Ressourcen für MySQL- und DB2-Anwendungen hinzufügen. Diese Plug-ins können von heruntergeladen werden https://automationstore.netapp.com/home.shtml["NetApp Storage Automation Store"].
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Klicken Sie auf der Seite Ressourcen auf *Ressource hinzufügen*.
+. Führen Sie auf der Seite „Ressourcendetails bereitstellen“ die folgenden Aktionen durch:
++
+|===
+| Für dieses Feld... | Tun Sie das... 
+
+
+ a| 
+Name
+ a| 
+Geben Sie den Namen der Ressource ein.
+
+
+
+ a| 
+Host-Name
+ a| 
+Wählen Sie den Host aus.
+
+
+
+ a| 
+Typ
+ a| 
+Wählen Sie den Typ aus. Der Typ ist gemäß der Plug-in-Beschreibungsdatei Benutzerdefiniert. Beispiel: Datenbank und Instanz.
+
+Wenn der ausgewählte Typ ein übergeordnetes Element hat, geben Sie die Details des übergeordneten Typs ein. Wenn der Typ beispielsweise „Datenbank“ und „übergeordnetes Objekt“ ist, geben Sie die Details der Instanz ein.
+
+
+
+ a| 
+Name der Anmeldeinformationen
+ a| 
+Wählen Sie Anmeldedaten aus oder erstellen Sie eine neue Berechtigung.
+
+
+
+ a| 
+Mount-Pfade
+ a| 
+Geben Sie die Mount-Pfade ein, auf denen die Ressource angehängt ist. Dies gilt nur für einen Windows-Host.
+
+|===
+. Wählen Sie auf der Seite Speicher-Footprint angeben ein Speichersystem aus und wählen Sie ein oder mehrere Volumes, LUNs und qtrees aus, und klicken Sie dann auf *Speichern*.
++
+Optional: Klicken Sie auf das image:../media/add_policy_from_resourcegroup.gif[""] Symbol, um weitere Volumes, LUNs und qtrees von anderen Speichersystemen hinzuzufügen.
+
++
+
+NOTE: Die benutzerdefinierten Plug-ins von SnapCenter unterstützen nicht die automatische Erkennung von Ressourcen und Storage-Details für physische und virtuelle Umgebungen. Sie müssen Storage-Informationen für physische und virtuelle Umgebungen bereitstellen und gleichzeitig Ressourcen erstellen.
+
++
+image::../media/storage_footprint.gif[Storage-Platzbedarf]
+
+. Stellen Sie auf der Seite „Ressourceneinstellungen“ benutzerdefinierte Key-Value-Paare für die Ressource bereit.
++
+Verwenden Sie die benutzerdefinierten Schlüssel-Wert-Paare, wenn Sie ressourcenspezifische Informationen übergeben möchten. Wenn Sie beispielsweise das MySQL-Plug-in verwenden, müssen Sie einen HOST als HOST=hostname, PORT =Port-no angeben, der für MySQL und Master-Slave-Konfiguration als MASTER_SLAVE = „`YES`“ oder „`NO`“ verwendet wird (Name ist MASTER_SLAVE und Wert ist „`JA`“ oder „`NO`“).
+
++
+
+NOTE: Stellen Sie sicher, dass DIE Wörter HOST und PORT in Großbuchstaben stehen.
+
++
+image::../media/resource_settings.gif[Ressourceneinstellungen]
+
+. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
+
+
+*Ergebnis*
+
+Die Ressourcen werden zusammen mit Informationen wie Typ, Host- oder Cluster-Name, zugeordnete Ressourcengruppen und Richtlinien sowie dem Gesamtstatus angezeigt.
+
+
+IMPORTANT: Sie müssen die Ressourcen aktualisieren, wenn die Datenbanken außerhalb von SnapCenter umbenannt werden.
+
+*Nach Ihrer Beendigung*
+
+Wenn Sie anderen Benutzern Zugriff auf die Assets gewähren möchten, muss der SnapCenter-Administrator diesen Benutzern Assets zuweisen. Auf diese Weise können Benutzer die Aktionen ausführen, für die sie über Berechtigungen für die ihnen zugewiesenen Assets verfügen.
+
+Nachdem Sie die Ressourcen hinzugefügt haben, können Sie die Ressourcendetails ändern. Wenn einer benutzerdefinierten Plug-in-Ressource Backups zugeordnet sind, können die folgenden Felder nicht geändert werden: Ressourcenname, Ressourcentyp und Hostname.

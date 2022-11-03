@@ -1,0 +1,181 @@
+---
+permalink: protect-scc/task_add_hosts_and_install_plug_in_packages_on_remote_hosts_scc.html 
+sidebar: sidebar 
+keywords: credentials 
+summary: Sie müssen Hosts über die Seite SnapCenterAdd Host hinzufügen und dann die Plug-in-Pakete installieren. Die Plug-ins werden automatisch auf den Remote-Hosts installiert. Sie können einen Host hinzufügen und die Plug-in-Pakete entweder für einen einzelnen Host oder für einen Cluster installieren. 
+---
+= Fügen Sie Hosts hinzu und installieren Sie Plug-in-Pakete auf Remote-Hosts
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen Hosts über die Seite SnapCenterAdd Host hinzufügen und dann die Plug-in-Pakete installieren. Die Plug-ins werden automatisch auf den Remote-Hosts installiert. Sie können einen Host hinzufügen und die Plug-in-Pakete entweder für einen einzelnen Host oder für einen Cluster installieren.
+
+*Was Sie brauchen*
+
+* Sie sollten ein Benutzer sein, der einer Rolle zugewiesen wird, die über die Berechtigungen für die Plug-in-Installation und -Deinstallation verfügt, wie z. B. die Rolle „SnapCenter Admin“.
+* Stellen Sie sicher, dass der Nachrichtenwarteschlange ausgeführt wird.
+* Wenn Sie Group Managed Service Account (gMSA) verwenden, sollten Sie gMSA mit Administratorrechten konfigurieren.
++
+link:task_configure_gMSA_on_windows_server_2012_or_later.html["Konfigurieren Sie das Gruppenkonto für Managed Services unter Windows Server 2012 oder höher für benutzerdefinierte Anwendungen"]
+
+
+
+*Über diese Aufgabe*
+
+Sie können einen SnapCenter-Server nicht als Plug-in-Host zu einem anderen SnapCenter-Server hinzufügen.
+
+Wenn Sie Plug-ins auf einem Cluster (WSFC) installieren, werden die Plug-ins auf allen Nodes des Clusters installiert.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Hosts*.
+. Überprüfen Sie, ob die Registerkarte *verwaltete Hosts* oben ausgewählt ist.
+. Klicken Sie Auf *Hinzufügen*.
+. Führen Sie auf der Seite Hosts die folgenden Aktionen durch:
++
+|===
+| Für dieses Feld... | Tun Sie das... 
+
+
+ a| 
+Host-Typ
+ a| 
+Wählen Sie den Host-Typ aus:
+
+** Windows
+** Linux
+
+
+
+NOTE: Die benutzerdefinierten Plug-ins können sowohl in Windows als auch in Linux Umgebungen verwendet werden.
+
+
+
+ a| 
+Host-Name
+ a| 
+Geben Sie den vollständig qualifizierten Domänennamen (FQDN) oder die IP-Adresse des Hosts ein.
+
+SnapCenter hängt von der richtigen Konfiguration des DNS ab. Daher empfiehlt es sich, den FQDN einzugeben.
+
+In Windows-Umgebungen wird die IP-Adresse nur für nicht vertrauenswürdige Domänen-Hosts unterstützt, wenn sie in den FQDN auflöst.
+
+Sie können die IP-Adressen oder FQDN eines eigenständigen Hosts eingeben.
+
+Wenn Sie einen Host mithilfe von SnapCenter hinzufügen und der Host Teil einer Unterdomäne ist, müssen Sie den FQDN angeben.
+
+
+
+ a| 
+Anmeldedaten
+ a| 
+Wählen Sie entweder den von Ihnen erstellten Anmeldeinformationsnamen aus, oder erstellen Sie neue Anmeldedaten.
+
+Die Anmeldeinformationen müssen über Administratorrechte auf dem Remote-Host verfügen. Weitere Informationen finden Sie unter Informationen zum Erstellen von Anmeldeinformationen.
+
+Sie können Details zu den Anmeldeinformationen anzeigen, indem Sie den Cursor über den von Ihnen angegebenen Anmeldeinformationsnamen positionieren.
+
+
+NOTE: Der Authentifizierungsmodus für die Anmeldeinformationen wird durch den Hosttyp bestimmt, den Sie im Assistenten zum Hinzufügen von Hosts angeben.
+
+|===
+. Wählen Sie im Abschnitt *Plug-ins zur Installation auswählen* die zu installierenden Plug-ins aus.
+. (Optional) Klicken Sie Auf *Weitere Optionen*.
++
+|===
+| Für dieses Feld... | Tun Sie das... 
+
+
+ a| 
+Port
+ a| 
+Behalten Sie die Standard-Port-Nummer oder geben Sie die Port-Nummer an.
+
+Die Standardanschlussnummer ist 8145. Wenn der SnapCenter-Server auf einem benutzerdefinierten Port installiert wurde, wird diese Portnummer als Standardport angezeigt.
+
+
+NOTE: Wenn Sie die Plug-ins manuell installiert und einen benutzerdefinierten Port angegeben haben, müssen Sie denselben Port angeben. Andernfalls schlägt der Vorgang fehl.
+
+
+
+ a| 
+Installationspfad
+ a| 
+Die benutzerdefinierten Plug-ins können entweder auf einem Windows-System oder auf einem Linux-System installiert werden.
+
+** Der Standardpfad für das SnapCenter Plug-ins-Paket für Windows ist C:\Programme\NetApp\SnapCenter.
++
+Optional können Sie den Pfad anpassen.
+
+** Für das SnapCenter Plug-ins-Paket für Linux lautet der Standardpfad: /Opt/NetApp/snapcenter.
++
+Optional können Sie den Pfad anpassen.
+
+** Für die benutzerdefinierten SnapCenter Plug-ins:
++
+... Klicken Sie im Abschnitt Benutzerdefinierte Plug-ins auf *Durchsuchen* und wählen Sie den Ordner mit dem gezippten benutzerdefinierten Plug-in aus.
++
+Der Ordner mit gezippten Daten enthält den benutzerdefinierten Plug-in-Code und die XML-Datei Deskriptor.
+
++
+Navigieren Sie zum Storage Plug-in zu _C:\ProgramData\NetApp\SnapCenter\Package Repository_, und wählen Sie aus `Storage.zip` Ordner.
+
+... Klicken Sie Auf *Upload*.
++
+Die XML-Datei Deskriptor im Ordner gezipptes benutzerdefiniertes Plug-in wird vor dem Hochladen des Pakets validiert.
+
++
+Die benutzerdefinierten Plug-ins, die auf den SnapCenter-Server hochgeladen werden, werden aufgelistet.
+
++
+Wenn Sie MySQL oder DB2 Applikationen managen möchten, können Sie die benutzerdefinierten MySQL und DB2 Plug-ins verwenden, die von NetApp zur Verfügung gestellt werden. Die benutzerdefinierten MySQL und DB2 Plug-ins sind im verfügbar https://automationstore.netapp.com/home.shtml["NetApp Automation Store"]
+
+
+
+
+
+
+
+ a| 
+Überspringen Sie die Prüfungen vor der Installation
+ a| 
+Aktivieren Sie dieses Kontrollkästchen, wenn Sie die Plug-ins bereits manuell installiert haben und nicht überprüfen möchten, ob der Host die Anforderungen für die Installation des Plug-ins erfüllt.
+
+
+
+ a| 
+Verwenden Sie Group Managed Service Account (gMSA), um die Plug-in-Dienste auszuführen
+ a| 
+Aktivieren Sie für Windows-Host dieses Kontrollkästchen, wenn Sie die Plug-in-Dienste über das Group Managed Service Account (gMSA) ausführen möchten.
+
+
+IMPORTANT: Geben Sie den gMSA-Namen in folgendem Format an: Domainname\AccountName€.
+
+
+NOTE: GSSA wird nur für den SnapCenter-Plug-in für Windows-Dienst als Anmelde-Dienstkonto verwendet.
+
+|===
+. Klicken Sie Auf *Absenden*.
++
+Wenn Sie das Kontrollkästchen *Vorabprüfungen* nicht aktiviert haben, wird der Host validiert, um zu überprüfen, ob der Host die Anforderungen für die Installation des Plug-ins erfüllt. Der Festplattenspeicher, der RAM, die PowerShell-Version, die .NET-Version, der Speicherort (für Windows-Plug-ins) und die Java-Version (für Linux-Plug-ins) werden anhand der Mindestanforderungen validiert. Wenn die Mindestanforderungen nicht erfüllt werden, werden entsprechende Fehler- oder Warnmeldungen angezeigt.
+
++
+Wenn der Fehler mit dem Festplattenspeicher oder RAM zusammenhängt, können Sie die Datei Web.config unter C:\Programme\NetApp\SnapCenter WebApp aktualisieren, um die Standardwerte zu ändern. Wenn der Fehler mit anderen Parametern zusammenhängt, müssen Sie das Problem beheben.
+
++
+
+NOTE: Wenn Sie in einem HA-Setup die Datei „Web.config“ aktualisieren, müssen Sie die Datei auf beiden Knoten aktualisieren.
+
+. Wenn der Hosttyp Linux ist, überprüfen Sie den Fingerabdruck und klicken Sie dann auf *Bestätigen und Senden*.
++
+
+NOTE: Eine Fingerabdruck-Verifizierung ist erforderlich, auch wenn zuvor derselbe Host zu SnapCenter hinzugefügt wurde und der Fingerabdruck bestätigt wurde.
+
+. Überwachen Sie den Installationsfortschritt.
++
+Die installationsspezifischen Log-Dateien befinden sich unter /Custom_Location/snapcenter/logs.
+
+

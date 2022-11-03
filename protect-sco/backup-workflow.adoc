@@ -1,0 +1,26 @@
+---
+permalink: protect-sco/backup-workflow.html 
+sidebar: sidebar 
+keywords: backup, workflow 
+summary: 'Sie können entweder ein Backup einer Ressource (Datenbank) oder einer Ressourcengruppe erstellen.' 
+---
+= Backup-Workflow
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können entweder ein Backup einer Ressource (Datenbank) oder einer Ressourcengruppe erstellen. Der Backup-Workflow umfasst die Planung, die Ermittlung der Backup-Ressourcen, die Erstellung von Backup-Richtlinien, das Erstellen von Ressourcengruppen und das Anhängen von Richtlinien, das Erstellen von Backups und das Monitoring der Betriebsprozesse.
+
+Der folgende Workflow zeigt die Reihenfolge, in der Sie den Sicherungsvorgang durchführen müssen:
+
+image::../media/sco_backup_workflow.png[Backup-Workflow für Oracle]
+
+Während der Erstellung eines Backups für Oracle-Datenbanken wird auf dem Oracle-Datenbank-Host im Verzeichnis _ € ORACLE_HOME/dbs_ eine operative Sperrdatei (_.sm_Lock_dbsid_) erstellt, um zu vermeiden, dass mehrere Operationen auf der Datenbank ausgeführt werden. Nach dem Sichern der Datenbank wird die operative Sperrdatei automatisch entfernt.
+
+Wenn jedoch das vorherige Backup mit einer Warnung abgeschlossen wurde, wird die betriebliche Sperrdatei möglicherweise nicht gelöscht und der nächste Backup-Vorgang in die Warteschleife gelangt. Es kann schließlich abgebrochen werden, wenn die *.SM_Lock_dbsid*-Datei nicht gelöscht wird. In diesem Szenario müssen Sie die operative Sperrdatei manuell löschen, indem Sie die folgenden Schritte durchführen:
+
+. Navigieren Sie in der Eingabeaufforderung zu €Oracle_HOME/dbs.
+. Löschen Sie die Betriebssperre:``rm -rf .sm_lock_dbsid.``
+

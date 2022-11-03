@@ -1,0 +1,35 @@
+---
+permalink: install/reference_supported_browsers.html 
+sidebar: sidebar 
+keywords: SnapCenter, browsers, chrome, IE, Edge 
+summary: SnapCenter-Software kann auf mehreren Browsern verwendet werden. 
+---
+= Unterstützte Browser
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter-Software kann auf mehreren Browsern verwendet werden.
+
+* Chrom
++
+Wenn sie v66 verwenden, kann das SnapCenter GUI möglicherweise nicht gestartet werden.
+
+* Internet Explorer
++
+Die SnapCenter UI wird nicht richtig geladen, wenn Sie IE 10 oder frühere Versionen verwenden. Sie sollten ein Upgrade auf IE 11 durchführen.
+
++
+** Es wird nur die Standardsicherheit unterstützt.
++
+Wenn Sie Änderungen an den Sicherheitseinstellungen von Internet Explorer vornehmen, treten erhebliche Probleme bei der Anzeige des Browsers auf.
+
+** Die Kompatibilitätsansicht für Internet Explorer muss deaktiviert sein.
+
+
+* Microsoft Edge
+
+
+Aktuelle Informationen zu unterstützten Versionen finden Sie unter https://imt.netapp.com/matrix/imt.jsp?components=105046;&solution=1257&isHWU#welcome["NetApp Interoperabilitäts-Matrix-Tool"^].

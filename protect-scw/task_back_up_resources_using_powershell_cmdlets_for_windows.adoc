@@ -1,0 +1,113 @@
+---
+permalink: protect-scw/task_back_up_resources_using_powershell_cmdlets_for_windows.html 
+sidebar: sidebar 
+keywords: backup 
+summary: Sie können die PowerShell Commandlets zum Sichern von SQL Server-Datenbanken oder Windows-Dateisystemen verwenden. Dazu gehört die Sicherung einer SQL Server-Datenbank oder eines Windows-Dateisystems, einschließlich der Herstellung einer Verbindung mit dem SnapCenter-Server, der Ermittlung der SQL Server-Datenbankinstanzen oder Windows-Dateisysteme, das Hinzufügen einer Richtlinie, das Erstellen einer Backup-Ressourcengruppe, das Sichern und das Überprüfen des Backups. 
+---
+= Sichern Sie Ressourcen mit PowerShell cmdlets
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+Sie können die PowerShell Commandlets zum Sichern von SQL Server-Datenbanken oder Windows-Dateisystemen verwenden. Dazu gehört die Sicherung einer SQL Server-Datenbank oder eines Windows-Dateisystems, einschließlich der Herstellung einer Verbindung mit dem SnapCenter-Server, der Ermittlung der SQL Server-Datenbankinstanzen oder Windows-Dateisysteme, das Hinzufügen einer Richtlinie, das Erstellen einer Backup-Ressourcengruppe, das Sichern und das Überprüfen des Backups.
+
+*Was Sie brauchen*
+
+* Sie müssen die PowerShell Umgebung vorbereitet haben, um die PowerShell Cmdlets auszuführen.
+* Sie müssen die Speichersystemverbindung hinzugefügt und Anmeldedaten erstellt haben.
+* Sie müssen Hosts hinzugefügt und Ressourcen erkannt haben.
+
+
+*Schritte*
+
+. Starten Sie eine Verbindungssitzung mit dem SnapCenter-Server für einen bestimmten Benutzer, indem Sie das Cmdlet "Open-SmConnection" verwenden.
++
+[listing]
+----
+Open-smconnection  -SMSbaseurl  https://snapctr.demo.netapp.com:8146
+----
++
+Die Eingabeaufforderung für Benutzername und Passwort wird angezeigt.
+
+. Erstellen Sie mithilfe des Cmdlet "Add-SmPolicy" eine Backup-Richtlinie.
++
+Dieses Beispiel erstellt eine neue Backup-Richtlinie mit einem SQL Backup-Typ von FullBackup:
+
++
+[listing]
+----
+PS C:\> Add-SmPolicy -PolicyName TESTPolicy
+-PluginPolicyType SCSQL -PolicyType Backup
+-SqlBackupType FullBackup -Verbose
+----
++
+In diesem Beispiel wird eine neue Backup-Richtlinie mit einem Backup-Typ von CrashConsistent für Windows File-Systeme erstellt:
+
++
+[listing]
+----
+PS C:\> Add-SmPolicy -PolicyName FileSystemBackupPolicy
+-PluginPolicyType SCW -PolicyType Backup
+-ScwBackupType CrashConsistent -Verbose
+----
+. Ermitteln Sie Host-Ressourcen mit dem Cmdlet "Get-SmResources".
++
+Dieses Beispiel ermittelt die Ressourcen für das Microsoft SQL Plug-in auf dem angegebenen Host:
+
++
+[listing]
+----
+C:\PS>PS C:\> Get-SmResources -HostName vise-f6.sddev.mycompany.com
+-PluginCode SCSQL
+----
++
+In diesem Beispiel werden Ressourcen für Windows File-Systeme auf dem angegebenen Host ermittelt:
+
++
+[listing]
+----
+C:\PS>PS C:\> Get-SmResources -HostName vise2-f6.sddev.mycompany.com
+-PluginCode SCW
+----
+. Fügen Sie mit dem Cmdlet "Add-SmResourceGroup" eine neue Ressourcengruppe zu SnapCenter hinzu.
++
+In diesem Beispiel wird eine neue Ressourcengruppe für die Sicherung von SQL-Datenbanken mit der angegebenen Richtlinie und den angegebenen Ressourcen erstellt:
+
++
+[listing]
+----
+PS C:\> Add-SmResourceGroup -ResourceGroupName AccountingResource
+-Resources @{"Host"="visef6.org.com";
+"Type"="SQL Database";"Names"="vise-f6\PayrollDatabase"}
+-Policies "BackupPolicy"
+----
++
+Dieses Beispiel erstellt eine neue Windows Dateisystem-Backup-Ressourcengruppe mit der angegebenen Richtlinie und Ressourcen:
+
++
+[listing]
+----
+PS C:\> Add-SmResourceGroup -ResourceGroupName EngineeringResource
+-PluginCode SCW -Resources @{"Host"="WIN-VOK20IKID5I";
+"Type"="Windows Filesystem";"Names"="E:\"}
+-Policies "EngineeringBackupPolicy"
+----
+. Initiieren Sie einen neuen Sicherungsauftrag mit dem Cmdlet "New-SmBackup".
++
+[listing]
+----
+PS C:> New-SmBackup -ResourceGroupName PayrollDataset -Policy FinancePolicy
+----
+. Zeigen Sie den Status des Backup-Jobs mit dem Cmdlet "Get-SmBackupReport" an.
++
+In diesem Beispiel wird ein Job-Summary-Bericht aller Jobs angezeigt, die am angegebenen Datum ausgeführt wurden:
+
++
+[listing]
+----
+PS C:\> Get-SmJobSummaryReport -Date '1/27/2016'
+----
+
+
+Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ können Sie auch auf die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["SnapCenter Software Cmdlet Referenzhandbuch"^].

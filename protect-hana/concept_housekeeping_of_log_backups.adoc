@@ -1,0 +1,16 @@
+---
+permalink: protect-hana/concept_housekeeping_of_log_backups.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: SnapCenter managt die allgemeine Ordnung und Sauberkeit der Protokoll- und Daten-Backups auf den Ebenen des Storage-Systems und des Filesystems und innerhalb des SAP HANA Backup-Katalogs. 
+---
+= SnapCenter managt die allgemeine Ordnung und Sauberkeit von Protokoll- und Daten-Backups
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter managt die allgemeine Ordnung und Sauberkeit der Protokoll- und Daten-Backups auf den Ebenen des Storage-Systems und des Filesystems und innerhalb des SAP HANA Backup-Katalogs.
+
+Die Snapshot-Kopien auf dem primären oder sekundären Storage und ihre entsprechenden Einträge im SAP HANA Katalog werden auf Grundlage der Aufbewahrungseinstellungen gelöscht. Die SAP HANA-Katalogeinträge werden auch beim Backup und beim Löschen von Ressourcengruppen gelöscht.

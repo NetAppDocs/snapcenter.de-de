@@ -1,0 +1,108 @@
+---
+permalink: protect-scc/task_clone_from_a_backup.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können SnapCenter zum Klonen einer Backup verwenden. Sie können von primärem oder sekundärem Backup klonen. Die Funktionen der Klonvorgänge hängen vom verwendeten Plug-in ab. 
+---
+= Klonen aus einem Backup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können SnapCenter zum Klonen einer Backup verwenden. Sie können von primärem oder sekundärem Backup klonen. Die Funktionen der Klonvorgänge hängen vom verwendeten Plug-in ab.
+
+*Was Sie brauchen*
+
+* Sie müssen die Ressourcen oder Ressourcengruppe gesichert haben.
+* Bei dem Standardklonvorgang werden nur Storage-Objekte geklont. Klonvorgänge auf Applikationsebene können nur durchgeführt werden, wenn das benutzerdefinierte Plug-in diese Funktion bietet.
+* Sie sollten sicherstellen, dass die Aggregate, die die Volumes hosten, sich in der Liste der zugewiesenen Aggregate der Storage Virtual Machine (SVM) befinden.
+
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Filtern Sie auf der Seite Ressourcen die Ressourcen aus der Dropdown-Liste *Ansicht* nach Ressourcentyp.
++
+Die Ressourcen werden zusammen mit Informationen wie Typ, Host- oder Cluster-Name, zugeordnete Ressourcengruppen und -Richtlinien sowie der Status angezeigt.
+
+. Wählen Sie die Ressource oder Ressourcengruppe aus.
++
+Sie müssen eine Ressource auswählen, wenn Sie eine Ressourcengruppe auswählen.
+
++
+Die Seite „Topologie der Ressourcen- oder Ressourcengruppe“ wird angezeigt.
+
+. Wählen Sie in der Ansicht „Kopien verwalten“ die Option *Backups* aus den primären oder sekundären (gespiegelten oder ausgelagerten) Speichersystemen aus.
+. Wählen Sie die Datensicherung aus der Tabelle aus, und klicken Sie dann auf image:../media/clone_icon.gif["Klon-Symbol"].
+. Führen Sie auf der Seite Standorte die folgenden Schritte aus:
++
+|===
+| Für dieses Feld... | Tun Sie das... 
+
+
+ a| 
+Klonserver
+ a| 
+Standardmäßig wird der Quell-Host befüllt.
+
+Wenn Sie einen anderen Host angeben möchten, wählen Sie den Host aus, auf dem der Klon gemountet werden soll, und das Plug-in ist installiert.
+
+
+
+ a| 
+Suffix klonen
+ a| 
+Dies ist obligatorisch, wenn das Klonziel mit der Quelle identisch ist.
+
+Geben Sie ein Suffix ein, das an den neu geklonten Ressourcennamen angehängt wird. Das Suffix stellt sicher, dass die geklonte Ressource auf dem Host eindeutig ist.
+
+Beispiel: rs1_Clone. Wenn Sie auf demselben Host wie die Originalressource klonen, müssen Sie ein Suffix bereitstellen, um die geklonte Ressource von der ursprünglichen Ressource zu differenzieren. Andernfalls schlägt der Vorgang fehl.
+
+|===
++
+Wenn die ausgewählte Ressource eine LUN ist und wenn Sie über ein sekundäres Backup klonen, werden die Ziel-Volumes aufgelistet. Es kann mehrere Ziel-Volumes vorhanden sein.
+
+. Führen Sie auf der Seite Einstellungen folgende Schritte aus:
++
+|===
+| Für dieses Feld... | Tun Sie das... 
+
+
+ a| 
+Name des Initiators
+ a| 
+Geben Sie den Host-Initiatornamen ein. Dieser ist entweder ein IQDN oder ein WWPN.
+
+
+
+ a| 
+IGroup-Protokoll
+ a| 
+Wählen Sie das iGroup-Protokoll aus.
+
+|===
++
+
+NOTE: Einstellungsseite wird nur angezeigt, wenn der Speichertyp LUN ist.
+
+. Geben Sie auf der Seite „Skripts“ die Befehle für den vor- bzw. Nachklon ein, die vor bzw. nach dem Klonvorgang ausgeführt werden sollen. Geben Sie den Mount-Befehl ein, um ein Dateisystem auf einen Host zu mounten.
++
+Beispiel:
+
++
+** Befehl Pre Clone: Löschen Sie vorhandene Datenbanken mit demselben Namen
+** Befehl nach Clone: Überprüfen Sie eine Datenbank oder starten Sie eine Datenbank.
++
+Mount-Befehl für ein Volume oder qtree auf einem Linux-Rechner: Mount<VSERVER_NAME>:%<VOLUME_NAME_Clone /mnt>
+
+
+
+. Wählen Sie auf der Benachrichtigungsseite aus der Dropdown-Liste *E-Mail-Präferenz* die Szenarien aus, in denen Sie die E-Mails versenden möchten.
++
+Außerdem müssen Sie die E-Mail-Adressen für Absender und Empfänger sowie den Betreff der E-Mail angeben.
+
+. Überprüfen Sie die Zusammenfassung und klicken Sie auf *Fertig stellen*.
+. Überwachen Sie den Fortschritt des Vorgangs, indem Sie auf *Monitor* > *Jobs* klicken.
+

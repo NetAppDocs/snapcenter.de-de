@@ -1,0 +1,142 @@
+---
+permalink: protect-sco/task_create_resource_groups_and_attaching_policies_for_oracle_databases.html 
+sidebar: sidebar 
+keywords: run as 
+summary: Eine Ressourcengruppe ist der Container, dem Sie Ressourcen hinzufügen müssen, die Sie sichern und schützen möchten. Mit einer Ressourcengruppen können Sie alle Daten sichern, die einer bestimmten Anwendung zugeordnet sind. 
+---
+= Erstellen von Ressourcengruppen und Anhängen von Richtlinien für Oracle-Datenbanken
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Eine Ressourcengruppe ist der Container, dem Sie Ressourcen hinzufügen müssen, die Sie sichern und schützen möchten. Mit einer Ressourcengruppen können Sie alle Daten sichern, die einer bestimmten Anwendung zugeordnet sind.
+
+*Über diese Aufgabe*
+
+Sie sollten sicherstellen, dass die Datenbank mit Dateien auf den ASM-Laufwerksgruppen entweder im „MOUNT“- oder „OPEN“-Zustand sein sollte, um die Backups mit dem Oracle DBVERIFY-Dienstprogramm zu überprüfen.
+
+Sie sollten eine oder mehrere Richtlinien an die Ressourcengruppe anhängen, um den Typ des Datensicherungsauftrags zu definieren, den Sie ausführen möchten.
+
+Das folgende Bild veranschaulicht die Beziehung zwischen Ressourcen, Ressourcengruppen und Richtlinien für Datenbanken:
+
+image::../media/sco_resourcegroup_policy.gif[sco-Ressourcengruppenrichtlinie]
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Klicken Sie auf der Seite Ressourcen auf *Neue Ressourcengruppe*.
+. Führen Sie auf der Seite Name die folgenden Aktionen durch:
++
+|===
+| Für dieses Feld... | Tun Sie das... 
+
+
+ a| 
+Name
+ a| 
+Geben Sie einen Namen für die Ressourcengruppe ein.
+
+
+NOTE: Der Name der Ressourcengruppe darf 250 Zeichen nicht überschreiten.
+
+
+
+ a| 
+Tags
+ a| 
+Geben Sie eine oder mehrere Bezeichnungen ein, die Ihnen bei der späteren Suche nach der Ressourcengruppe helfen.
+
+Wenn Sie beispielsweise HR als Tag zu mehreren Ressourcengruppen hinzufügen, können Sie später alle Ressourcengruppen finden, die mit dem HR-Tag verknüpft sind.
+
+
+
+ a| 
+Verwenden Sie für Snapshot-Kopie das benutzerdefinierte Namensformat
+ a| 
+Aktivieren Sie dieses Kontrollkästchen, und geben Sie ein benutzerdefiniertes Namensformat ein, das Sie für den Namen der Snapshot Kopie verwenden möchten.
+
+Beispiel: Custtext_Resource Group_Policy_hostname oder Resource Group_hostname. Standardmäßig wird ein Zeitstempel an den Namen der Snapshot Kopie angehängt.
+
+
+
+ a| 
+Ausschließen von Zielen für Archivprotokolle von der Sicherung
+ a| 
+Geben Sie die Ziele der Archivprotokolldateien an, die Sie nicht sichern möchten.
+
+|===
+. Wählen Sie auf der Seite Ressourcen einen Oracle-Datenbank-Hostnamen aus der Dropdown-Liste *Host* aus.
++
+
+NOTE: Die Ressourcen werden im Abschnitt Verfügbare Ressourcen nur dann aufgelistet, wenn die Ressource erfolgreich ermittelt wurde. Wenn Sie vor Kurzem Ressourcen hinzugefügt haben, werden diese erst nach einer Aktualisierung der Ressourcenliste in der Liste der verfügbaren Ressourcen angezeigt.
+
+. Wählen Sie im Abschnitt Verfügbare Ressourcen die Ressourcen aus, und verschieben Sie sie in den Abschnitt Ausgewählte Ressourcen.
++
+
+NOTE: Sie können Datenbanken von Linux- und AIX-Hosts in einer einzigen Ressourcengruppe hinzufügen.
+
+. Führen Sie auf der Seite Richtlinien die folgenden Schritte aus:
++
+.. Wählen Sie eine oder mehrere Richtlinien aus der Dropdown-Liste aus.
++
+
+NOTE: Sie können eine Richtlinie auch erstellen, indem Sie auf klicken image:../media/add_policy_from_resourcegroup.gif[""].
+
++
+Im Abschnitt „Zeitpläne für ausgewählte Richtlinien konfigurieren“ werden die ausgewählten Richtlinien aufgelistet.
+
+.. Klicken Sie Auf *image:../media/add_policy_from_resourcegroup.gif[""]* In der Spalte Zeitplan konfigurieren für die Richtlinie, für die Sie einen Zeitplan konfigurieren möchten.
+.. Konfigurieren Sie im Fenster Add Schedules for Policy_Name_ den Zeitplan, und klicken Sie dann auf *OK*.
++
+Dabei ist _Policy_Name_ der Name der von Ihnen ausgewählten Richtlinie.
+
++
+Die konfigurierten Zeitpläne sind in der Spalte angewendete Zeitpläne aufgeführt.
+
+
+
++
+Backup-Zeitpläne von Drittanbietern werden nicht unterstützt, wenn sie sich mit SnapCenter Backup-Zeitplänen überschneiden.
+
+. Führen Sie auf der Seite Überprüfung die folgenden Schritte aus:
++
+.. Klicken Sie auf *Lokatoren laden*, um die SnapMirror oder SnapVault Volumes zu laden, um eine Überprüfung auf dem sekundären Speicher durchzuführen.
+.. Klicken Sie Auf *image:../media/add_policy_from_resourcegroup.gif[""]* In der Spalte Zeitplan konfigurieren, um den Überprüfungsplan für alle Zeitplantypen der Richtlinie zu konfigurieren.
+.. Führen Sie im Dialogfeld Add Verification Schedules Policy_Name die folgenden Aktionen durch:
++
+|===
+| Ihr Ziel ist | Tun Sie das... 
+
+
+ a| 
+Führen Sie die Verifizierung nach dem Backup durch
+ a| 
+Wählen Sie *Überprüfung nach Sicherung ausführen*.
+
+
+
+ a| 
+Planung einer Verifizierung
+ a| 
+Wählen Sie *geplante Überprüfung ausführen* und wählen Sie dann den Terminplantyp aus der Dropdown-Liste aus.
+
+|===
+.. Wählen Sie *am sekundären Standort überprüfen*, um Ihre Backups auf dem sekundären Speichersystem zu überprüfen.
+.. Klicken Sie auf *OK*.
++
+Die konfigurierten Überprüfungszeitpläne sind in der Spalte „angewendete Zeitpläne“ aufgeführt.
+
+
+
+. Wählen Sie auf der Benachrichtigungsseite aus der Dropdown-Liste *E-Mail-Präferenz* die Szenarien aus, in denen Sie die E-Mails versenden möchten.
++
+Außerdem müssen Sie die E-Mail-Adressen für Absender und Empfänger sowie den Betreff der E-Mail angeben. Wenn Sie den Bericht des Vorgangs anhängen möchten, der in der Ressourcengruppe ausgeführt wird, wählen Sie *Job-Bericht anhängen*.
+
++
+
+NOTE: Für eine E-Mail-Benachrichtigung müssen Sie die SMTP-Serverdetails entweder mit der GUI oder mit dem PowerShell-Befehlssatz Set-SmtpServer angegeben haben.
+
+. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
+

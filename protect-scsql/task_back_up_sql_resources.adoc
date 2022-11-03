@@ -1,0 +1,158 @@
+---
+permalink: protect-scsql/task_back_up_sql_resources.html 
+sidebar: sidebar 
+keywords:  
+summary: Wenn eine Ressource noch nicht zu einer Ressourcengruppe gehört, können Sie die Ressource auf der Seite Ressourcen sichern. 
+---
+= Backup von SQL-Ressourcen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn eine Ressource noch nicht zu einer Ressourcengruppe gehört, können Sie die Ressource auf der Seite Ressourcen sichern.
+
+*Über diese Aufgabe*
+
+* Für die Authentifizierung von Windows-Anmeldeinformationen müssen Sie die Anmeldeinformationen einrichten, bevor Sie die Plug-ins installieren.
+* Für die Authentifizierung der SQL Server-Instanz müssen Sie die Anmeldeinformationen nach der Installation der Plug-ins hinzufügen.
+* Für die gMSA-Authentifizierung müssen Sie gMSA beim Registrieren des Hosts mit SnapCenter auf der Seite *Add Host* oder *Modify Host* einrichten, um den gMSA zu aktivieren und zu verwenden.
+* Wenn der Host mit gMSA hinzugefügt wird und der gMSA über Login- und System Admin-Berechtigungen verfügt, wird das gMSA verwendet, um eine Verbindung zur SQL-Instanz herzustellen.
+
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Wählen Sie auf der Seite Ressourcen * Datenbank* oder *Instanz* oder *Verfügbarkeitsgruppe* aus der Dropdown-Liste *Ansicht* aus.
++
+.. Wählen Sie die Datenbank, die Instanz oder die Verfügbarkeitsgruppe aus, die Sie sichern möchten.
++
+Wenn Sie eine Sicherungskopie einer Instanz erstellen, sind die Informationen zum letzten Sicherungsstatus oder zum Zeitstempel dieser Instanz auf der Seite Ressourcen nicht verfügbar.
+
++
+In der Topologieansicht lässt sich nicht unterscheiden, ob der Backup-Status, der Zeitstempel oder das Backup für eine Instanz oder eine Datenbank gilt.
+
+
+
+. Aktivieren Sie auf der Seite Ressourcen das Kontrollkästchen *Custom Name Format for Snapshot copy* und geben Sie dann ein benutzerdefiniertes Namensformat ein, das Sie für den Namen der Snapshot Kopie verwenden möchten.
++
+Beispiel: Custtext_Policy_hostname oder Resource_hostname. Standardmäßig wird ein Zeitstempel an den Namen der Snapshot Kopie angehängt.
+
+. Führen Sie auf der Seite Richtlinien die folgenden Aufgaben aus:
++
+.. Wählen Sie im Abschnitt Richtlinien eine oder mehrere Richtlinien aus der Dropdown-Liste aus.
++
+Sie können eine Richtlinie erstellen, indem Sie auf * klickenimage:../media/add_policy_from_resourcegroup.gif[""]* Um den Policy Wizard zu starten.
+
++
+Im Abschnitt * Zeitpläne für ausgewählte Richtlinien konfigurieren* werden die ausgewählten Richtlinien aufgelistet.
+
+.. Klicken Sie Auf *image:../media/add_policy_from_resourcegroup.gif[""]* In der Spalte Zeitplan konfigurieren für die Richtlinie, für die Sie einen Zeitplan konfigurieren möchten.
+.. In der Option * Pläne für Police hinzufügen* `policy_name` Konfigurieren Sie den Zeitplan, und klicken Sie dann auf *OK*.
++
+Hier `policy_name` Ist der Name der Richtlinie, die Sie ausgewählt haben.
+
++
+Die konfigurierten Zeitpläne sind in der Spalte *angewendete Zeitpläne* aufgeführt.
+
+.. Wählen Sie den Microsoft SQL Server Scheduler verwenden* aus, und wählen Sie dann die Planerinstanz aus der Dropdown-Liste *Scheduler Instance* aus, die mit der Planungsrichtlinie verknüpft ist.
+
+
+. Führen Sie auf der Seite Überprüfung die folgenden Schritte aus:
++
+.. Wählen Sie den Verifikationsserver aus der Dropdown-Liste *Überprüfungsserver* aus.
++
+Sie können mehrere Verifizierungsserver auswählen (lokaler Host oder Remote-Host).
+
++
+
+NOTE: Die Version des Verifizierungsservers sollte gleich oder höher sein als die Version der Edition des SQL-Servers, der die primäre Datenbank hostet.
+
+.. Wählen Sie *sekundäre Lokatoren laden, um Backups auf dem sekundären Speichersystem zu überprüfen*, um Ihre Backups auf dem sekundären Speichersystem zu überprüfen.
+.. Wählen Sie die Richtlinie aus, für die Sie Ihren Verifizierungszeitplan konfigurieren möchten, und klicken Sie dann auf *image:../media/add_policy_from_resourcegroup.gif[""]*.
+.. Führen Sie im Dialogfeld Add Verification Schedules_Policy_Name_ die folgenden Aktionen durch:
++
+|===
+| Ihr Ziel ist | Tun Sie das... 
+
+
+ a| 
+Führen Sie die Verifizierung nach dem Backup durch
+ a| 
+Wählen Sie *Überprüfung nach Sicherung ausführen*.
+
+
+
+ a| 
+Planung einer Verifizierung
+ a| 
+Wählen Sie *geplante Überprüfung ausführen*.
+
+|===
++
+
+NOTE: Wenn der Verifikationsserver keine Speicherverbindung hat, schlägt der Verifizierungsvorgang mit Fehler fehl: Datenträger konnte nicht bereitgestellt werden.
+
+.. Klicken Sie auf *OK*.
++
+Die konfigurierten Zeitpläne sind in der Spalte angewendete Zeitpläne aufgeführt.
+
+
+
+. Wählen Sie auf der Benachrichtigungsseite aus der Dropdown-Liste *E-Mail-Präferenz* die Szenarien aus, in denen Sie die E-Mails versenden möchten.
++
+Außerdem müssen Sie die E-Mail-Adressen für Absender und Empfänger sowie den Betreff der E-Mail angeben. Wenn Sie den Bericht des Vorgangs anhängen möchten, der in der Ressourcengruppe ausgeführt wird, wählen Sie *Job-Bericht anhängen*.
+
++
+
+NOTE: Für eine E-Mail-Benachrichtigung müssen Sie die SMTP-Serverdetails entweder mit der GUI oder mit dem PowerShell-Befehlssatz Set-SmtpServer angegeben haben.
+
+. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
++
+Die Seite der Datenbanktopologie wird angezeigt.
+
+. Klicken Sie auf *Jetzt sichern*.
+. Führen Sie auf der Seite Backup die folgenden Schritte aus:
++
+.. Wenn Sie mehrere Richtlinien auf die Ressource angewendet haben, wählen Sie aus der Dropdown-Liste *Richtlinie* die Richtlinie aus, die Sie für das Backup verwenden möchten.
++
+Wenn die für das On-Demand-Backup ausgewählte Richtlinie einem Backup-Zeitplan zugeordnet ist, werden die On-Demand-Backups auf Basis der für den Zeitplantyp festgelegten Aufbewahrungseinstellungen beibehalten.
+
+.. Wählen Sie zur Überprüfung Ihres Backups *nach dem Backup*.
+.. Klicken Sie Auf *Backup*.
++
+
+NOTE: Sie sollten den im Windows Scheduler oder SQL Server Agent erstellten Sicherungsauftrag nicht umbenennen.
+
++
+Wenn die für das On-Demand-Backup ausgewählte Richtlinie einem Backup-Zeitplan zugeordnet ist, werden die On-Demand-Backups auf Basis der für den Zeitplantyp festgelegten Aufbewahrungseinstellungen beibehalten.
+
++
+Es wird eine implizite Ressourcengruppe erstellt. Sie können dies anzeigen, indem Sie auf der Seite „Benutzerzugriff“ den jeweiligen Benutzer oder die jeweilige Gruppe auswählen. Der implizite Gruppentyp lautet „`Ressource`“.
+
+
+
+. Überwachen Sie den Fortschritt des Vorgangs, indem Sie auf *Monitor* > *Jobs* klicken.
+
+
+*Nach Ihrer Beendigung*
+
+* In MetroCluster-Konfigurationen kann SnapCenter nach einem Failover möglicherweise keine Sicherungsbeziehung erkennen.
++
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["SnapMirror oder SnapVault-Beziehung kann nach MetroCluster Failover nicht erkannt werden"]
+
+* Wenn Sie Anwendungsdaten auf VMDKs sichern und die Java Heap-Größe für das SnapCenter-Plug-in für VMware vSphere nicht groß genug ist, kann die Sicherung fehlschlagen. Um die Java-Heap-Größe zu erhöhen, suchen Sie nach der Skriptdatei /opt/netapp/init_scvservice. In diesem Skript, das `do_start method` Befehl startet den SnapCenter-VMware-Plug-in-Service. Aktualisieren Sie diesen Befehl auf Folgendes: `Java -jar -Xmx8192M -Xms4096M`.
+
+
+*Weitere Informationen*
+
+link:task_create_backup_policies_for_sql_server_databases.html["Erstellen von Backup-Richtlinien für SQL Server-Datenbanken"]
+
+link:task_back_up_resources_using_powershell_cmdlets_for_sql.html["Sichern Sie Ressourcen mit PowerShell cmdlets"]
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Clone_operation_might_fail_or_take_longer_time_to_complete_with_default_TCP_TIMEOUT_value["Backup-Vorgänge schlagen wegen der Verzögerung im TCP_TIMEOUT bei MySQL-Verbindungsfehler fehl"]
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Backup_fails_with_Windows_scheduler_error["Das Backup schlägt mit dem Windows Scheduler-Fehler fehl"]
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Quiesce_or_grouping_resources_operations_fail["Fehler beim Quiesce oder Gruppieren von Ressourcen"]

@@ -1,0 +1,43 @@
+---
+permalink: uninstall/task_uninstalling_the_snapcenter_server.html 
+sidebar: sidebar 
+keywords: uninstall, snapcenter server 
+summary: Wenn Sie den SnapCenter-Server nicht mehr für die Verwaltung von Datensicherungsaufgaben verwenden möchten, können Sie SnapCenter Server mit der Systemsteuerung Programme und Funktionen des SnapCenter-Servers deinstallieren. Durch die Deinstallation des SnapCenter Servers werden alle Komponenten entfernt. 
+---
+= Deinstallieren Sie den SnapCenter-Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie den SnapCenter-Server nicht mehr für die Verwaltung von Datensicherungsaufgaben verwenden möchten, können Sie SnapCenter Server mit der Systemsteuerung Programme und Funktionen des SnapCenter-Servers deinstallieren. Durch die Deinstallation des SnapCenter Servers werden alle Komponenten entfernt.
+
+*Was Sie brauchen*
+
+* Stellen Sie sicher, dass mindestens 2 GB freier Speicherplatz auf dem Laufwerk vorhanden ist, auf dem der SnapCenter-Server installiert ist.
+* Stellen Sie sicher, dass die Domäne, in der der SnapCenter-Server installiert ist, nicht entfernt wird.
++
+Wenn Sie die Domäne entfernen, in der der SnapCenter-Server installiert wurde, und versuchen Sie dann, die Deinstallation durchzuführen, schlägt der Vorgang fehl.
+
+* Sie sollten die Repository-Datenbank gesichert haben, da die Repository-Datenbank bereinigt und deinstalliert wird.
+
+
+*Schritte*
+
+. Wechseln Sie auf dem SnapCenter-Server-Host zur Systemsteuerung.
+. Stellen Sie sicher, dass Sie sich in der Ansicht *Kategorie* befinden.
+. Klicken Sie unter Programme auf *Programm deinstallieren*.
++
+Das Fenster Programme und Funktionen wird geöffnet.
+
+. Wählen Sie NetApp SnapCenter Server und klicken Sie dann auf *Deinstallieren*.
++
+Wenn Sie in SnapCenter 4.2 den SnapCenter Server deinstallieren, werden alle Komponenten einschließlich der MySQL Server Repository-Datenbank deinstalliert.
+
++
+** Zum Entfernen des NLB-Knotens aus einem NLB-Cluster muss der SnapCenter-Server-Host neu gestartet werden. Wenn Sie den Host nicht neu starten, tritt möglicherweise ein Fehler auf, wenn Sie versuchen, den SnapCenter-Server neu zu installieren.
+** Sie sollten .NET Framework manuell deinstallieren, das während der Deinstallation nicht entfernt wird.
+
+
+

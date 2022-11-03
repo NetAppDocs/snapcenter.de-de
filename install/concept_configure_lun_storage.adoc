@@ -1,0 +1,109 @@
+---
+permalink: install/concept_configure_lun_storage.html 
+sidebar: sidebar 
+keywords: LUN storage, iSCSI, 
+summary: Mit SnapCenter können Sie eine FC-verbundene oder iSCSI-verbundene LUN konfigurieren. Sie können auch SnapCenter verwenden, um eine vorhandene LUN mit einem Windows-Host zu verbinden. 
+---
+= Konfigurieren des LUN-Speichers
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit SnapCenter können Sie eine FC-verbundene oder iSCSI-verbundene LUN konfigurieren. Sie können auch SnapCenter verwenden, um eine vorhandene LUN mit einem Windows-Host zu verbinden.
+
+LUNs sind die grundlegende Storage-Einheit in einer SAN-Konfiguration. Der Windows-Host sieht LUNs auf Ihrem System als virtuelle Festplatten. Weitere Informationen finden Sie unter http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanconf/home.html["ONTAP 9 SAN Configuration Guide"^].
+
+
+
+== Richten Sie eine iSCSI-Sitzung ein
+
+Wenn Sie iSCSI zum Herstellen einer Verbindung zu einer LUN verwenden, müssen Sie eine iSCSI-Sitzung starten, bevor Sie die LUN erstellen, um die Kommunikation zu ermöglichen.
+
+*Bevor Sie beginnen*
+
+* Sie müssen den Knoten des Speichersystems als iSCSI-Ziel definiert haben.
+* Sie müssen den iSCSI-Service auf dem Speichersystem gestartet haben. http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanag/home.html["Weitere Informationen ."^]
+
+
+*Über diese Aufgabe*
+
+Sie können eine iSCSI-Sitzung nur zwischen denselben IP-Versionen einrichten, entweder von IPv6 zu IPv6 oder von IPv4 zu IPv4.
+
+Sie können eine Link-lokale IPv6-Adresse für das iSCSI-Sitzungsmanagement und für die Kommunikation zwischen einem Host und einem Ziel nur verwenden, wenn beide sich im selben Subnetz befinden.
+
+Wenn Sie den Namen eines iSCSI-Initiators ändern, ist der Zugriff auf iSCSI-Ziele beeinträchtigt. Nach Ändern des Namens müssen Sie eventuell die Ziele, auf die der Initiator Zugriff hat, neu konfigurieren, damit sie den neuen Namen erkennen können. Sie müssen sicherstellen, dass der Host nach Ändern des Namens eines iSCSI-Initiators neu gestartet wird.
+
+Wenn Ihr Host über mehrere iSCSI-Schnittstellen verfügt, können Sie eine iSCSI-Sitzung mit einer IP-Adresse in der ersten Schnittstelle nicht von einer anderen Schnittstelle mit einer anderen IP-Adresse aus starten, wenn Sie eine iSCSI-Sitzung für SnapCenter eingerichtet haben.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Hosts*.
+. Klicken Sie auf der Host-Seite auf *iSCSI-Sitzung*.
+. Wählen Sie aus der Dropdown-Liste *Storage Virtual Machine* die Storage Virtual Machine (SVM) für das iSCSI-Ziel aus.
+. Wählen Sie aus der Dropdown-Liste *Host* den Host für die Sitzung aus.
+. Klicken Sie Auf *Sitzung Erstellen*.
++
+Der Assistent „Sitzung einrichten“ wird angezeigt.
+
+. Geben Sie im Assistenten zum Erstellen von Sitzungen das Ziel an:
++
+|===
+| In diesem Feld... | Eingeben... 
+
+
+ a| 
+Name des Ziel-Nodes
+ a| 
+Der Knotenname des iSCSI-Ziels
+
+Wenn ein vorhandener Zielknotenname vorhanden ist, wird der Name im schreibgeschützten Format angezeigt.
+
+
+
+ a| 
+Zielportaladresse
+ a| 
+Die IP-Adresse des Zielnetzwerkportals
+
+
+
+ a| 
+Zielportalport
+ a| 
+Der TCP-Port des Zielnetzwerkportals
+
+
+
+ a| 
+Adresse des Initiator-Portals
+ a| 
+Die IP-Adresse des Initiator-Netzwerkportals
+
+|===
+. Wenn Sie mit Ihren Einträgen zufrieden sind, klicken Sie auf *Verbinden*.
++
+SnapCenter richtet die iSCSI-Sitzung ein.
+
+. Wiederholen Sie diesen Vorgang, um für jedes Ziel eine Sitzung einzurichten.
+
+
+
+
+== Trennen Sie eine iSCSI-Sitzung
+
+Gelegentlich müssen Sie eine iSCSI-Sitzung von einem Ziel trennen, mit dem Sie mehrere Sitzungen haben.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Hosts*.
+. Klicken Sie auf der Host-Seite auf *iSCSI-Sitzung*.
+. Wählen Sie aus der Dropdown-Liste *Storage Virtual Machine* die Storage Virtual Machine (SVM) für das iSCSI-Ziel aus.
+. Wählen Sie aus der Dropdown-Liste *Host* den Host für die Sitzung aus.
+. Wählen Sie aus der Liste der iSCSI-Sitzungen die Sitzung aus, die Sie trennen möchten, und klicken Sie auf *Sitzung trennen*.
+. Klicken Sie im Dialogfeld Sitzung trennen auf *OK*.
++
+SnapCenter trennt die iSCSI-Sitzung.
+
+

@@ -1,0 +1,37 @@
+---
+permalink: protect-sco/concept_what_you_can_do_with_the_snapcenter_plug_in_for_oracle_database.html 
+sidebar: sidebar 
+keywords: backup, restore, clone, oracle database 
+summary: 'Mit dem Plug-in für Oracle Database können Sie Backups, Verifizierungen, Restores, Recoverys, Mount Heben Sie die Bereitstellung und den Klon von Oracle-Datenbanken und ihren Ressourcen ab. Mit dem Oracle Recovery Manager (RMAN) können Sie außerdem Datenbank-Backups katalogisieren oder entkatalogisieren.' 
+---
+= Welche Möglichkeiten bietet das Plug-in für Oracle Database
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das SnapCenter Plug-in für Oracle Database ist eine Host-seitige Komponente der NetApp SnapCenter Software, die das applikationsspezifische Datensicherungsmanagement von Oracle Datenbanken ermöglicht.
+
+Das Plug-in für Oracle Database automatisiert das Backup, die Katalogisierung und die Katalogisierung mit Oracle Recovery Manager (RMAN), Überprüfung, Mounten, Unmounten, Restore, Recovery und Klonen von Oracle Datenbanken in Ihrer SnapCenter Umgebung. Das Plug-in für Oracle Database installiert das SnapCenter Plug-in für UNIX, um alle Datensicherungsvorgänge auszuführen.
+
+Sie können mit dem Plug-in für Oracle Database Backups von Oracle Datenbanken, auf denen SAP Applikationen ausgeführt werden, verwalten. Die Integration von SAP BR*Tools wird jedoch nicht unterstützt.
+
+* Sichern Sie Datendateien, Kontrolldateien und Archivprotokolldateien.
++
+Backup wird nur auf CDB-Ebene (Container-Datenbank) unterstützt.
+
+* Wiederherstellung und Recovery von Datenbanken, Datenbanken und Plug-in-Datenbanken (PDBs).
++
+Unvollständige Wiederherstellung von PDBs wird nicht unterstützt.
+
+* Erstellung von Klonen von Produktionsdatenbanken bis zu einem bestimmten Zeitpunkt
++
+Das Klonen wird nur auf CDB-Ebene unterstützt.
+
+* Sofortige Überprüfung der Backups.
+* Mounten und Aufheben von Daten und Protokollierung von Backups für den Wiederherstellungsvorgang.
+* Planung von Backup- und Verifizierungsvorgängen
+* Monitoring aller Vorgänge
+* Berichte für Backup-, Wiederherstellungs- und Klonvorgänge anzeigen
+

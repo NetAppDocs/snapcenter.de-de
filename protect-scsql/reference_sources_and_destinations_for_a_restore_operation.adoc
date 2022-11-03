@@ -1,0 +1,53 @@
+---
+permalink: protect-scsql/reference_sources_and_destinations_for_a_restore_operation.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können eine SQL Server Datenbank aus einer Backup-Kopie auf einem primären oder sekundären Storage wiederherstellen. Sie können die Datenbank zusätzlich zum ursprünglichen Speicherort auch an verschiedenen Zielen wiederherstellen, sodass Sie das Ziel auswählen können, das Ihre Anforderungen unterstützt. 
+---
+= Quellen und Ziele für einen Wiederherstellungsvorgang
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine SQL Server Datenbank aus einer Backup-Kopie auf einem primären oder sekundären Storage wiederherstellen. Sie können die Datenbank zusätzlich zum ursprünglichen Speicherort auch an verschiedenen Zielen wiederherstellen, sodass Sie das Ziel auswählen können, das Ihre Anforderungen unterstützt.
+
+
+
+== Quellen für einen Wiederherstellungsvorgang
+
+Sie können Datenbanken aus primärem oder sekundärem Storage wiederherstellen.
+
+
+
+== Ziele für einen Wiederherstellungsvorgang
+
+Sie können Datenbanken an verschiedenen Zielen wiederherstellen:
+
+|===
+| Ziel | Beschreibung 
+
+
+ a| 
+Der ursprüngliche Standort
+ a| 
+Standardmäßig stellt SnapCenter die Datenbank an demselben Speicherort auf derselben SQL Serverinstanz wieder her.
+
+
+
+ a| 
+Ein anderer Ort
+ a| 
+Sie können die Datenbank an einem anderen Ort auf einer beliebigen SQL Server-Instanz innerhalb desselben Hosts wiederherstellen.
+
+
+
+ a| 
+Ursprünglicher oder anderer Speicherort unter Verwendung unterschiedlicher Datenbanknamen
+ a| 
+Sie können die Datenbank mit einem anderen Namen als jede SQL Server-Instanz auf demselben Host wiederherstellen, auf dem das Backup erstellt wurde.
+
+|===
+
+NOTE: Wiederherstellung eines alternativen Hosts über ESX Server für SQL-Datenbanken auf VMDKs (NFS- und VMFS-Datastores) wird nicht unterstützt.

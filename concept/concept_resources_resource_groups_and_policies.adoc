@@ -1,0 +1,50 @@
+---
+permalink: concept/concept_resources_resource_groups_and_policies.html 
+sidebar: sidebar 
+keywords: reource, resource group, policy 
+summary: Bevor Sie SnapCenter verwenden, ist es hilfreich, grundlegende Konzepte im Zusammenhang mit Backup-, Klon- und Restore-Vorgängen zu verstehen, die durchgeführt werden sollen. Sie interagieren mit Ressourcen, Ressourcengruppen und Richtlinien für verschiedene Vorgänge. 
+---
+= Ressourcen, Ressourcengruppen und Richtlinien
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bevor Sie SnapCenter verwenden, ist es hilfreich, grundlegende Konzepte im Zusammenhang mit Backup-, Klon- und Restore-Vorgängen zu verstehen, die durchgeführt werden sollen. Sie interagieren mit Ressourcen, Ressourcengruppen und Richtlinien für verschiedene Vorgänge.
+
+* *Ressourcen* sind normalerweise Datenbanken, Windows-Dateisysteme oder File Shares, die Sie mit SnapCenter sichern oder klonen.
++
+Je nach Umgebung können es sich jedoch um Ressourcen wie Datenbankinstanzen, Microsoft SQL Server Availability Groups, Oracle Datenbanken, Oracle RAC Datenbanken, Windows File-Systeme oder eine Gruppe benutzerdefinierter Applikationen handeln.
+
+* Eine *Ressourcengruppe* ist eine Sammlung von Ressourcen auf einem Host oder Cluster. Die Ressourcengruppe kann auch Ressourcen von mehreren Hosts und mehreren Clustern enthalten.
++
+Wenn Sie einen Vorgang für eine Ressourcengruppe ausführen, führen Sie diesen Vorgang für alle Ressourcen aus, die in der Ressourcengruppe gemäß dem von Ihnen für die Ressourcengruppe festgelegten Zeitplan definiert sind.
+
++
+Sie können nach Bedarf eine einzelne Ressource oder eine Ressourcengruppe sichern. Sie können auch geplante Backups für einzelne Ressourcen und Ressourcengruppen konfigurieren.
+
++
+
+NOTE: Wenn Sie einen Host einer Gruppe gemeinsam genutzter Ressourcen in den Wartungsmodus versetzen und Pläne mit derselben gemeinsam genutzten Ressourcengruppe verknüpft sind, werden alle geplanten Vorgänge für alle anderen Hosts der gemeinsam genutzten Ressourcengruppe ausgesetzt.
+
++
+Sie sollten ein Datenbank-Plug-in zum Sichern von Datenbanken, ein Filesystem-Plug-in zum Backup von Filesystemen und das SnapCenter Plug-in für VMware vSphere zum Sichern von VMs und Datastores verwenden.
+
+* *Richtlinien* Geben Sie die Backup-Häufigkeit, die Aufbewahrung von Kopien, die Replikation, Skripte und andere Merkmale von Datenschutzvorgängen an.
++
+Wenn Sie eine Ressourcengruppe erstellen, wählen Sie eine oder mehrere Richtlinien für diese Gruppe aus. Sie können auch eine Richtlinie auswählen, wenn Sie ein Backup nach Bedarf ausführen.
+
+
+
+Denken Sie an eine Ressourcengruppe, die definiert _was_ Sie schützen möchten und wann Sie sie in Bezug auf Tag und Zeit schützen möchten. Denken Sie an eine Politik, die definiert _wie_ Sie sie schützen möchten. Wenn Sie beispielsweise alle Datenbanken sichern oder alle Dateisysteme eines Hosts sichern, können Sie eine Ressourcengruppe erstellen, die alle Datenbanken oder alle Dateisysteme des Hosts enthält. Sie können dann zwei Richtlinien an die Ressourcengruppe anhängen: Eine Tagesrichtlinie und eine Stundenpolitik.
+
+Wenn Sie die Ressourcengruppe erstellen und die Richtlinien anhängen, können Sie die Ressourcengruppe so konfigurieren, dass sie täglich ein vollständiges Backup durchführt, und einen anderen Zeitplan, der stündlich Protokoll-Backups durchführt.
+
+Das folgende Bild veranschaulicht die Beziehung zwischen Ressourcen, Ressourcengruppen und Richtlinien für Datenbanken:
+
+image::../media/datasets_and_policies.gif[Datensatz und Richtliniendiagramm]
+
+Die folgende Abbildung veranschaulicht die Beziehung zwischen Ressourcen, Ressourcengruppen und Richtlinien für Windows File-Systeme:
+
+image::../media/resources_and_policies_for_wfs.gif[Ressourcen und Richtlinien für wfs]

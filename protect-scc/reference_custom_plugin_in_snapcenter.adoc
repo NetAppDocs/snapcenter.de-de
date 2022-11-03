@@ -1,0 +1,199 @@
+---
+permalink: protect-scc/reference_custom_plugin_in_snapcenter.html 
+sidebar: sidebar 
+keywords:  
+summary: Das erstellte benutzerdefinierte Plug-in kann auf dem Host mithilfe von SnapCenter Server installiert werden, um den Datenschutz Ihrer Anwendung zu ermöglichen. 
+---
+= Benutzerdefiniertes Plug-in in SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+
+
+== Benutzerdefiniertes Plug-in in SnapCenter
+
+Das benutzerdefinierte Plug-in, das mit Java, PERL oder NATIVEM Stil erstellt wurde, kann über SnapCenter Server auf dem Host installiert werden, um die Datensicherung Ihrer Anwendung zu ermöglichen. Sie müssen das Plug-in exportiert haben, um es auf dem SnapCenter-Host zu installieren. Verwenden Sie dazu das in diesem Tutorial beschriebene Verfahren.
+
+
+
+=== Erstellen einer Plug-in-Beschreibungsdatei
+
+Für jedes erstellte Plug-in müssen Sie eine Beschreibungsdatei haben. Die Beschreibungsdatei beschreibt die Details des Plug-ins. Der Name der Datei muss Plugin_descriptor.XML sein.
+
+
+
+==== Verwenden der Attribute der Plug-in-Deskriptordatei und ihrer Bedeutung
+
+|===
+| Attribut | Beschreibung 
+
+
+ a| 
+Name
+ a| 
+Name des Plug-ins. Alphanumerische Zeichen sind zulässig. Zum Beispiel DB2, MYSQL, MongoDB
+
+Stellen Sie bei Plug-ins, die im NATIVEN Stil erstellt wurden, sicher, dass Sie nicht die Erweiterung der Datei bereitstellen. Wenn der Plug-in-Name beispielsweise MongoDB.sh lautet, geben Sie den Namen als MongoDB an.
+
+
+
+ a| 
+Version
+ a| 
+Plug-in-Version: Kann sowohl die Haupt- als auch die Nebenversion enthalten. Beispiel: 1.0, 1.1, 2.0, 2.1
+
+
+
+ a| 
+DisplayName
+ a| 
+Der Plug-in-Name, der im SnapCenter-Server angezeigt werden soll. Wenn mehrere Versionen desselben Plug-ins geschrieben werden, stellen Sie sicher, dass der Anzeigename bei allen Versionen gleich ist.
+
+
+
+ a| 
+PluginType
+ a| 
+Sprache zum Erstellen des Plug-ins. Unterstützte Werte sind Perl, Java und Native. Nativer Plug-in-Typ umfasst Unix/Linux Shell-Skripte, Windows-Skripte, Python oder andere Skriptsprache.
+
+
+
+ a| 
+OSName
+ a| 
+Der Host-OS-Name, auf dem das Plug-in installiert ist. Gültige Werte sind Windows und Linux. Es ist möglich, dass ein einzelnes Plug-in für die Implementierung auf mehreren Betriebssystemtypen, wie BEISPIELSWEISE PERL-Plug-in, zur Verfügung steht.
+
+
+
+ a| 
+OSVersion
+ a| 
+Die Host-Betriebssystemversion, bei der das Plug-in installiert ist.
+
+
+
+ a| 
+Einfindungsname
+ a| 
+Name des Ressourcentyps, den das Plug-in unterstützen kann. Zum Beispiel Datenbank, Instanz, Sammlungen.
+
+
+
+ a| 
+Übergeordnet
+ a| 
+Wenn der ResourceName hierarchisch von einem anderen Ressourcentyp abhängig ist, bestimmt Parent den übergeordneten ResourceType.
+
+Zum Beispiel, DB2-Plug-in, die ResourceName „Datenbank“ hat eine übergeordnete „Instanz“.
+
+
+
+ a| 
+RequireFileSystemPlugin
+ a| 
+Ja oder Nein Legt fest, ob die Registerkarte Wiederherstellung im Wiederherstellungsassistenten angezeigt wird.
+
+
+
+ a| 
+ResourceRequiesAuthentifizierung
+ a| 
+Ja oder Nein Legt fest, ob die Ressourcen, die automatisch erkannt werden oder nicht automatisch erkannt wurden, Anmeldeinformationen benötigen, um die Datensicherungsvorgänge nach der Ermittlung des Storage auszuführen.
+
+
+
+ a| 
+RequireFileSystemClone
+ a| 
+Ja oder Nein Stellt fest, ob das Plug-in eine Filesystem-Plug-in-Integration für Klon-Workflow erforderlich ist.
+
+|===
+Ein Beispiel für die Datei Plugin_descriptor.xml für benutzerdefinierte Plug-in DB2 ist wie folgt:
+
+....
+<Plugin>
+<SMSServer></SMSServer>
+<Name>DB2</Name>
+<Version>1.0</Version>
+<PluginType>Perl</PluginType>
+<DisplayName>Custom DB2 Plugin</DisplayName>
+<SupportedOS>
+<OS>
+<OSName>windows</OSName>
+<OSVersion>2012</OSVersion>
+</OS>
+<OS>
+<OSName>Linux</OSName>
+<OSVersion>7</OSVersion>
+</OS>
+</SupportedOS>
+<ResourceTypes>
+<ResourceType>
+<ResourceName>Database</ResourceName>
+<Parent>Instance</Parent>
+</ResourceType>
+<ResourceType>
+<ResourceName>Instance</ResourceName>
+</ResourceType>
+</ResourceTypes>
+<RequireFileSystemPlugin>no</RequireFileSystemPlugin>
+<ResourceRequiresAuthentication>yes</ResourceRequiresAuthentication>
+<SupportsApplicationRecovery>yes</SupportsApplicationRecovery>
+</Plugin>
+....
+
+
+=== ZIP-Datei wird erstellt
+
+Nachdem ein Plug-in entwickelt wurde und eine Deskriptordatei erstellt wurde, müssen Sie die Plug-in-Dateien und die Datei Plugin_descriptor.xml in einen Ordner einfügen und entpacken.
+
+Vor dem Erstellen einer ZIP-Datei müssen Sie Folgendes berücksichtigen:
+
+* Der Skriptname muss mit dem Plug-in-Namen übereinstimmen.
+* Für PERL-Plug-in muss der ZIP-Ordner einen Ordner mit der Skriptdatei enthalten und die Deskriptordatei außerhalb dieses Ordners liegen. Der Ordnername muss mit dem Plug-in-Namen identisch sein.
+* Bei anderen Plug-ins als DEM PERL Plug-in muss der ZIP-Ordner den Deskriptor und die Skriptdateien enthalten.
+* Die Betriebssystemversion muss eine Zahl sein.
+
+
+Beispiele:
+
+* DB2-Plugin: Fügen Sie DB2.pm und Plugin_descriptor.xml Datei zu "DB2.zip".
+* Plug-in entwickelt mit Java: Fügen Sie JAR-Dateien, abhängige JAR-Dateien und Plugin_descriptor.xml-Datei in einen Ordner und ZIP es.
+
+
+
+
+=== Hochladen der ZIP-Datei für das Plug-in
+
+Sie müssen die Plug-in-ZIP-Datei auf den SnapCenter-Server hochladen, damit das Plug-in für die Bereitstellung auf dem gewünschten Host zur Verfügung steht.
+
+Sie können das Plug-in über die UI oder Cmdlets hochladen.
+
+*UI:*
+
+* Laden Sie die Plug-in-ZIP-Datei als Teil des *Add*- oder *Modify Host*-Workflow-Assistenten hoch
+* Klicken Sie auf * „Wählen Sie, um benutzerdefinierte Plug-in hochzuladen“*
+
+
+*PowerShell:*
+
+* Cmdlet "Upload-SmPluginPackage"
++
+Beispiel: PS> Upload-SmPluginPackage -AbsolutePath c:\DB2_1.zip
+
++
+Ausführliche Informationen zu PowerShell Cmdlets finden Sie in der Hilfe zu SnapCenter Cmdlet oder in den Cmdlet Referenzinformationen.
+
+
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["SnapCenter Software Cmdlet Referenzhandbuch"^].
+
+
+
+=== Bereitstellen benutzerdefinierter Plug-ins
+
+Das hochgeladene benutzerdefinierte Plug-in steht nun als Teil des Workflows *Add* und *Modify Host* für die Bereitstellung auf dem gewünschten Host zur Verfügung. Sie können mehrere Plug-ins-Versionen auf den SnapCenter-Server hochladen lassen, und Sie können die gewünschte Version für die Bereitstellung auf einem bestimmten Host auswählen.
+
+Weitere Informationen zum Hochladen des Plug-ins finden Sie unter: link:task_add_hosts_and_install_plug_in_packages_on_remote_hosts_scc.html["Fügen Sie Hosts hinzu und installieren Sie Plug-in-Pakete auf Remote-Hosts"]

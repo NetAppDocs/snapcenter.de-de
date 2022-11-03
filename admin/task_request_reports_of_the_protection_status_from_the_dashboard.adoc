@@ -1,0 +1,35 @@
+---
+permalink: admin/task_request_reports_of_the_protection_status_from_the_dashboard.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können Sicherungsdetails für Ressourcen anfordern, die von bestimmten Plug-ins gemanagt werden, über das Dashboard. 
+---
+= Berichte zum Sicherungsstatus können über das Dashboard angefordert werden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Sicherungsdetails für Ressourcen anfordern, die von bestimmten Plug-ins gemanagt werden, über das Dashboard. Nur Daten-Backups werden als Zusammenfassung zu Datensicherung in Betracht gezogen.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Dashboard*.
+. Suchen Sie im Dashboard die Kachel Letzte Schutzübersicht, und wählen Sie über das Pulldown-Menü ein Plug-in aus.
++
+Das Dashboard zeigt ein Donut-Diagramm für Ressourcen an, die im primären Speicher gesichert sind und, falls zutreffend, für das Plug-in, ein Donut-Diagramm für Ressourcen, die auf dem sekundären Speicher gesichert sind.
+
++
+
+NOTE: Datensicherungsberichte sind nur für bestimmte Plug-ins-Typen verfügbar. Das Festlegen von *Alle Plug-ins* wird nicht unterstützt.
+
+. Klicken Sie auf die Donut-Schicht, die den Status darstellt, für den ein Bericht erstellt werden soll.
++
+Wenn Sie auf das Donut-Diagramm klicken, werden Sie von der Dashboard-Seite zu den Berichten und dann zur Plug-in-Seite umgeleitet. Der Bericht zeigt nur den Status des ausgewählten Plug-ins an. Sie können den Bericht prüfen oder auf Ihr lokales System herunterladen.
+
++
+
+NOTE: Umleitung zur Seite Berichte für SnapMirror-Donut-Diagramm und dateibasiertes SAP HANA-Backup wird nicht unterstützt.
+
+

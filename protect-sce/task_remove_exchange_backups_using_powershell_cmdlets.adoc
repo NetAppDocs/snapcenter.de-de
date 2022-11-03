@@ -1,0 +1,40 @@
+---
+permalink: protect-sce/task_remove_exchange_backups_using_powershell_cmdlets.html 
+sidebar: sidebar 
+keywords: backups 
+summary: 'Mit dem Cmdlet "Remove-SmBackup" können Sie Exchange-Backups löschen, wenn Sie diese nicht mehr für andere Datenschutzvorgänge benötigen.' 
+---
+= Entfernen Sie Exchange Backups mithilfe von PowerShell Cmdlets
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit dem Cmdlet "Remove-SmBackup" können Sie Exchange-Backups löschen, wenn Sie diese nicht mehr für andere Datenschutzvorgänge benötigen.
+
+Sie müssen die PowerShell Umgebung vorbereitet haben, um die PowerShell Cmdlets auszuführen.
+
+Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ können Sie auch auf die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["SnapCenter Software Cmdlet Referenzhandbuch"^].
+
+*Schritte*
+
+. Starten Sie eine Verbindungssitzung mit dem SnapCenter-Server für einen bestimmten Benutzer, indem Sie das Cmdlet "Open-SmConnection" verwenden.
++
+[listing]
+----
+Open-SmConnection  -SMSbaseurl  https://snapctr.demo.netapp.com:8146/
+----
+. Löschen Sie ein oder mehrere Backups mit dem `Remove-SmBackup` Cmdlet:
++
+In diesem Beispiel werden zwei Backups mithilfe der Backup-IDs gelöscht:
+
++
+[listing]
+----
+Remove-SmBackup -BackupIds 3,4
+Remove-SmBackup
+Are you sure want to remove the backup(s).
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
+----
+

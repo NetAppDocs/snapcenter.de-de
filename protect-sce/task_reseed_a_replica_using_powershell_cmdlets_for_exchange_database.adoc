@@ -1,0 +1,43 @@
+---
+permalink: protect-sce/task_reseed_a_replica_using_powershell_cmdlets_for_exchange_database.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können PowerShell Cmdlets verwenden, um eine fehlerhafte Kopie wiederherzustellen, indem Sie entweder die aktuellste Kopie auf demselben Host oder die aktuellste Kopie von einem alternativen Host verwenden. 
+---
+= Erneutes Seeding mit PowerShell cmdlets für Exchange Datenbank
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können PowerShell Cmdlets verwenden, um eine fehlerhafte Kopie wiederherzustellen, indem Sie entweder die aktuellste Kopie auf demselben Host oder die aktuellste Kopie von einem alternativen Host verwenden.
+
+Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ können Sie auch auf die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["SnapCenter Software Cmdlet Referenzhandbuch"^].
+
+*Schritte*
+
+. Starten Sie eine Verbindungssitzung mit dem SnapCenter-Server für einen bestimmten Benutzer, indem Sie den verwenden `Open-SmConnection` Cmdlet:
++
+[listing]
+----
+Open-smconnection  -SMSbaseurl  https:\\snapctr.demo.netapp.com:8146/
+----
+. Erneutes Seeding der Datenbank mithilfe des `reseed-SmDagReplicaCopy` Cmdlet:
++
+In diesem Beispiel wird die fehlgeschlagene Kopie der Datenbank namens execdb auf dem Host „mva-rx200.netapp.com" unter Verwendung des neuesten Backups auf diesem Host erneut bereitgestellt.
+
++
+[listing]
+----
+reseed-SmDagReplicaCopy -ReplicaHost "mva-rx200.netapp.com" -Database execdb
+----
++
+In diesem Beispiel wird die fehlgeschlagene Kopie der Datenbank namens execdb erneut mit dem neuesten Backup der Datenbank (Produktion/Kopie) auf einem alternativen Host „mva-rx201.netapp.com."“ neu definiert
+
++
+[listing]
+----
+reseed-SmDagReplicaCopy -ReplicaHost "mva-rx200.netapp.com" -Database  execdb -BackupHost "mva-rx201.netapp.com"
+----
+

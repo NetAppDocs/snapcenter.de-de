@@ -1,0 +1,30 @@
+---
+permalink: protect-hana/task_define_a_backup_strategy_for_sap_hana_databases.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: 'Wenn Sie eine Backup-Strategie definieren, bevor Sie Ihre Backup-Jobs erstellen, erhalten Sie die Backups, die Sie benötigen, um Ihre Ressourcen erfolgreich wiederherzustellen oder zu klonen. Ihr Service Level Agreement \ (SLA\), die Recovery-Zeitvorgabe \ (RTO\) und der Recovery-Zeitpunkt \ (RPO\) bestimmen weitgehend Ihre Backup-Strategie.' 
+---
+= Backup-Strategie für SAP HANA Datenbanken definieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie eine Backup-Strategie definieren, bevor Sie Ihre Backup-Jobs erstellen, erhalten Sie die Backups, die Sie benötigen, um Ihre Ressourcen erfolgreich wiederherzustellen oder zu klonen. Ihr Service Level Agreement (SLA), Recovery Time Objective (RTO) und Recovery Point Objective (RPO) bestimmen Ihre Backup-Strategie weitestgehend.
+
+*Über diese Aufgabe*
+
+Ein SLA definiert das erwartete Service-Level und behandelt viele Service-bezogene Probleme, einschließlich Verfügbarkeit und Performance des Service. Bei der RTO handelt es sich um die Zeit, die ein Geschäftsprozess nach einer Serviceunterbrechung wiederhergestellt werden muss. Der Recovery-Zeitpunkt definiert die Strategie für das Alter der Dateien, die aus dem Backup-Storage wiederhergestellt werden müssen, damit regelmäßige Betriebsabläufe nach einem Ausfall fortgesetzt werden können. SLA, RTO und RPO tragen zur Datensicherungsstrategie bei.
+
+*Schritte*
+
+. Bestimmen Sie, wann die Ressourcen gesichert werden sollen.
+. Legen Sie fest, wie viele Backup-Jobs Sie benötigen.
+. Geben Sie an, wie Sie Ihre Backups benennen.
+. Entscheiden Sie, ob Sie eine Richtlinie auf Basis von Snapshot Kopien erstellen möchten, um applikationskonsistente Snapshot Kopien der Datenbank zu sichern.
+. Entscheiden Sie, ob Sie die Integrität der Datenbank überprüfen möchten.
+. Entscheiden Sie, ob Sie NetApp SnapMirror Technologie zur Replizierung oder NetApp SnapVault Technologie zur langfristigen Aufbewahrung verwenden möchten.
+. Legen Sie die Aufbewahrungsdauer für die Snapshot Kopien auf dem Quell-Storage-System und dem SnapMirror Ziel fest.
+. Bestimmen Sie, ob Sie vor oder nach dem Backup Befehle ausführen möchten, und geben Sie ein Prescript oder ein Postscript an.
+

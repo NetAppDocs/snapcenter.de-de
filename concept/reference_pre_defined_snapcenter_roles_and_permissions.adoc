@@ -1,0 +1,824 @@
+---
+permalink: concept/reference_pre_defined_snapcenter_roles_and_permissions.html 
+sidebar: sidebar 
+keywords: RBAC, role, permission, pre-defined role 
+summary: 'Im Lieferumfang von SnapCenter sind vordefinierte Rollen enthalten, von denen jede bereits aktiviert ist. Beim Einrichten und Verwalten der rollenbasierten Zugriffssteuerung \(RBAC\) können Sie entweder diese vordefinierten Rollen verwenden oder neue erstellen.' 
+---
+= Vordefinierte SnapCenter-Rollen und -Berechtigungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Lieferumfang von SnapCenter sind vordefinierte Rollen enthalten, von denen jede bereits aktiviert ist. Beim Einrichten und Verwalten der rollenbasierten Zugriffssteuerung können Sie entweder die vordefinierten Rollen verwenden oder neue erstellen.
+
+SnapCenter umfasst die folgenden vordefinierten Rollen:
+
+* SnapCenter Administratorrolle
+* Administratorrolle für App Backup und Klonen
+* Backup und Clone Viewer-Rolle
+* Rolle für den Infrastrukturadministrator
+
+
+Wenn Sie einem Benutzer einer Rolle hinzufügen, müssen Sie entweder die Berechtigung StorageConnection zuweisen, um die Kommunikation mit der Storage Virtual Machine (SVM) zu aktivieren, oder dem Benutzer eine SVM zuweisen, damit die Berechtigung zur Verwendung der SVM aktiviert wird. Mit der Berechtigung für Speicherverbindungen können Benutzer SVM-Verbindungen erstellen.
+
+Ein Benutzer mit der Rolle „SnapCenter-Admin“ kann beispielsweise SVM-Verbindungen erstellen und einem Benutzer mit der Rolle „App-Backup“ und „Clone Admin“ zuweisen. Dieser besitzt standardmäßig keine Berechtigung, SVM-Verbindungen zu erstellen oder zu bearbeiten. Ohne SVM-Verbindung können Benutzer Backup-, Klon- oder Restore-Vorgänge nicht abschließen.
+
+
+
+== SnapCenter Administratorrolle
+
+In der SnapCenter-Administratorrolle sind alle Berechtigungen aktiviert. Sie können die Berechtigungen für diese Rolle nicht ändern. Sie können der Rolle Benutzer und Gruppen hinzufügen oder sie entfernen.
+
+
+
+== Administratorrolle für App Backup und Klonen
+
+Die Rolle „App Backup“ und „Clone Admin“ verfügt über die erforderlichen Berechtigungen zur Durchführung administrativer Aktionen für Applikations-Backups und klonbezogene Aufgaben. Diese Rolle verfügt nicht über Berechtigungen für Host-Management, Bereitstellung, Storage-Verbindungs-Management oder Remote-Installation.
+
+|===
+| Berechtigungen | Aktiviert | Erstellen | Lesen | Aktualisierung | Löschen 
+
+
+ a| 
+Ressourcengruppe
+ a| 
+Keine Angabe
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+
+
+
+ a| 
+Richtlinie
+ a| 
+Keine Angabe
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+
+
+
+ a| 
+Backup
+ a| 
+Keine Angabe
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+
+
+
+ a| 
+Host
+ a| 
+Keine Angabe
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+
+
+
+ a| 
+Storage-Anbindung
+ a| 
+Keine Angabe
+ a| 
+Nein
+ a| 
+Ja.
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+ a| 
+Klon
+ a| 
+Keine Angabe
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+
+
+
+ a| 
+Bereitstellung
+ a| 
+Keine Angabe
+ a| 
+Nein
+ a| 
+Ja.
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+ a| 
+Dashboard
+ a| 
+Ja.
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+
+
+
+ a| 
+Berichte An
+ a| 
+Ja.
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+
+
+
+ a| 
+Wiederherstellen
+ a| 
+Ja.
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+
+
+
+ a| 
+Ressource
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+
+
+
+ a| 
+Plug-in Installation/Deinstallation
+ a| 
+Nein
+ a| 
+Keine Angabe
+ a| 
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+
+
+
+ a| 
+Migration
+ a| 
+Nein
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+
+
+
+ a| 
+Montieren
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+
+
+
+ a| 
+Unmounten
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+
+
+
+ a| 
+Vollständige Volume-Wiederherstellung
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+
+
+
+ a| 
+Job-Überwachung
+ a| 
+Ja.
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+
+|===
+
+
+== Backup und Clone Viewer-Rolle
+
+Die Rolle Backup und Clone Viewer verfügt über eine schreibgeschützte Ansicht aller Berechtigungen. In dieser Rolle sind auch Berechtigungen für Erkennung, Berichterstellung und Zugriff auf das Dashboard aktiviert.
+
+|===
+| Berechtigungen | Aktiviert | Erstellen | Lesen | Aktualisierung | Löschen 
+
+
+ a| 
+Ressourcengruppe
+ a| 
+Keine Angabe
+ a| 
+Nein
+ a| 
+Ja.
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+ a| 
+Richtlinie
+ a| 
+Keine Angabe
+ a| 
+Nein
+ a| 
+Ja.
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+ a| 
+Backup
+ a| 
+Keine Angabe
+ a| 
+Nein
+ a| 
+Ja.
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+ a| 
+Host
+ a| 
+Keine Angabe
+ a| 
+Nein
+ a| 
+Ja.
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+ a| 
+Storage-Anbindung
+ a| 
+Keine Angabe
+ a| 
+Nein
+ a| 
+Ja.
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+ a| 
+Klon
+ a| 
+Keine Angabe
+ a| 
+Nein
+ a| 
+Ja.
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+ a| 
+Bereitstellung
+ a| 
+Keine Angabe
+ a| 
+Nein
+ a| 
+Ja.
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+ a| 
+Dashboard
+ a| 
+Ja.
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+
+
+
+ a| 
+Berichte An
+ a| 
+Ja.
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+
+
+
+ a| 
+Wiederherstellen
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+
+
+
+ a| 
+Ressource
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Nein
+
+
+
+ a| 
+Plug-in Installation/Deinstallation
+ a| 
+Nein
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+
+
+
+ a| 
+Migration
+ a| 
+Nein
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+
+
+
+ a| 
+Montieren
+ a| 
+Ja.
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+
+
+
+ a| 
+Unmounten
+ a| 
+Ja.
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+
+
+
+ a| 
+Vollständige Volume-Wiederherstellung
+ a| 
+Nein
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+
+
+
+ a| 
+Job-Überwachung
+ a| 
+Ja.
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+
+|===
+
+
+== Rolle für den Infrastrukturadministrator
+
+Die Rolle „Infrastrukturadministrator“ hat Berechtigungen für Host-Management, Storage-Management, Bereitstellung, Ressourcengruppen, Remote-Installationsberichte, Zugriff auf das Dashboard.
+
+|===
+| Berechtigungen | Aktiviert | Erstellen | Lesen | Aktualisierung | Löschen 
+
+
+ a| 
+Ressourcengruppe
+ a| 
+Keine Angabe
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+
+
+
+ a| 
+Richtlinie
+ a| 
+Keine Angabe
+ a| 
+Nein
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+
+
+
+ a| 
+Backup
+ a| 
+Keine Angabe
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+
+
+
+ a| 
+Host
+ a| 
+Keine Angabe
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+
+
+
+ a| 
+Storage-Anbindung
+ a| 
+Keine Angabe
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+
+
+
+ a| 
+Klon
+ a| 
+Keine Angabe
+ a| 
+Nein
+ a| 
+Ja.
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+ a| 
+Bereitstellung
+ a| 
+Keine Angabe
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+
+
+
+ a| 
+Dashboard
+ a| 
+Ja.
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+
+
+
+ a| 
+Berichte An
+ a| 
+Ja.
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+
+
+
+ a| 
+Wiederherstellen
+ a| 
+Ja.
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+
+
+
+ a| 
+Ressource
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+
+
+
+ a| 
+Plug-in Installation/Deinstallation
+ a| 
+Ja.
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+
+
+
+ a| 
+Migration
+ a| 
+Nein
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+
+
+
+ a| 
+Montieren
+ a| 
+Nein
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+
+
+
+ a| 
+Unmounten
+ a| 
+Nein
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+
+
+
+ a| 
+Vollständige Volume-Wiederherstellung
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+
+
+
+ a| 
+Job-Überwachung
+ a| 
+Ja.
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+
+|===

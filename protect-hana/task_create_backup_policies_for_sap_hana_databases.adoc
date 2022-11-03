@@ -1,0 +1,168 @@
+---
+permalink: protect-hana/task_create_backup_policies_for_sap_hana_databases.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: Bevor Sie SnapCenter zum Sichern von SAP HANA-Datenbankressourcen verwenden, müssen Sie eine Backup-Richtlinie für die Ressource oder Ressourcengruppe erstellen, die Sie sichern möchten. Eine Backup-Richtlinie ist eine Reihe von Regeln, die das Managen, Planen und Aufbewahren von Backups regeln. 
+---
+= Backup-Richtlinien für SAP HANA Datenbanken
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bevor Sie SnapCenter zum Sichern von SAP HANA-Datenbankressourcen verwenden, müssen Sie eine Backup-Richtlinie für die Ressource oder Ressourcengruppe erstellen, die Sie sichern möchten. Eine Backup-Richtlinie ist eine Reihe von Regeln, die das Managen, Planen und Aufbewahren von Backups regeln.
+
+*Was Sie brauchen*
+
+* Sie müssen Ihre Backup-Strategie definiert haben.
++
+Weitere Informationen zur Definition einer Datensicherungsstrategie für SAP HANA Datenbanken finden Sie in den Informationen.
+
+* Sie müssen auf die Datensicherung vorbereitet sein, indem Sie Aufgaben wie das Installieren von SnapCenter, das Hinzufügen von Hosts, das Einrichten von Verbindungen zu Storage-Systemen und das Hinzufügen von Ressourcen ausführen.
+* Der SnapCenter Administrator muss Ihnen die SVMs für die Quell- und Ziel-Volumes zuweisen, falls Sie Snapshot Kopien in eine Spiegelung oder einen Vault replizieren.
++
+Außerdem können Sie in der Richtlinie Replizierungs-, Skript- und Applikationseinstellungen festlegen. Diese Optionen sparen Zeit, wenn Sie die Richtlinie für eine andere Ressourcengruppe wiederverwenden möchten.
+
+
+
+*Über diese Aufgabe*
+
+* SAP HANA System Replication
++
+** Das primäre SAP HANA System ist gesichert, und alle Datensicherungsvorgänge können durchgeführt werden.
+** Sie können das sekundäre SAP HANA System schützen, aber die Backups können nicht erstellt werden.
++
+Nach dem Failover kann der gesamte Datensicherungsvorgang durchgeführt werden, wenn das sekundäre SAP HANA System zum primären SAP HANA System wird.
+
++
+Sie können kein Backup für SAP HANA Daten-Volume erstellen, aber SnapCenter schützt weiterhin die nicht-Daten-Volumes (NDV).
+
+
+
+
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Einstellungen*.
+. Klicken Sie auf der Seite Einstellungen auf *Richtlinien*.
+. Klicken Sie Auf *Neu*.
+. Geben Sie auf der Seite Name den Namen und die Beschreibung der Richtlinie ein.
+. Führen Sie auf der Seite Einstellungen die folgenden Schritte aus:
++
+** Wählen Sie den Sicherungstyp:
++
+|===
+| Ihr Ziel ist | Tun Sie das... 
+
+
+ a| 
+Führen Sie eine Integritätsprüfung der Datenbank durch
+ a| 
+Wählen Sie * File-Based Backup* Aus. Es werden nur aktive Mandanten gesichert.
+
+
+
+ a| 
+Erstellen Sie mit Snapshot-Kopiertechnologie ein Backup
+ a| 
+Wählen Sie *Snapshot-Basiert* Aus.
+
+|===
+** Geben Sie den Terminplantyp an, indem Sie *on Demand*, *hourly*, *Daily*, *Weekly* oder *Monthly* auswählen.
++
+
+NOTE: Sie können den Zeitplan (Startdatum, Enddatum und Häufigkeit) für den Backup-Vorgang beim Erstellen einer Ressourcengruppe angeben. So können Sie Ressourcengruppen erstellen, die dieselben Richtlinien und Backup-Häufigkeit verwenden, aber auch die Möglichkeit haben, den einzelnen Richtlinien unterschiedliche Backup-Zeitpläne zuzuweisen.
+
++
+image::../media/backup_settings.gif[Backup-Einstellungen]
+
++
+
+NOTE: Wenn Sie für 2:00 Uhr geplant sind, wird der Zeitplan während der Sommerzeit (DST) nicht ausgelöst.
+
+** Geben Sie im Abschnitt *Benutzerdefinierte Backup-Einstellungen* alle spezifischen Backup-Einstellungen an, die an das Plug-in Key-Value-Format übergeben werden müssen.
++
+Sie können mehrere wichtige Werte angeben, die an das Plug-in übergeben werden.
+
+
+
+. Geben Sie auf der Seite Aufbewahrung die Aufbewahrungseinstellungen für den Sicherungstyp und den auf der Seite Sicherungstyp ausgewählten Terminplantyp an:
++
+|===
+| Ihr Ziel ist | Dann... 
+
+
+ a| 
+Aufbewahrung einer bestimmten Anzahl von Snapshot Kopien
+ a| 
+Wählen Sie *Gesamtanzahl der zu behenden Snapshot-Kopien* aus, und geben Sie dann die Anzahl der Snapshot-Kopien an, die beibehalten werden sollen.
+
+Wenn die Anzahl der Snapshot Kopien die angegebene Anzahl überschreitet, werden die Snapshot Kopien mit den ältesten Kopien gelöscht, die zuerst gelöscht wurden.
+
+
+NOTE: Der maximale Aufbewahrungswert ist 1018 für Ressourcen auf ONTAP 9.4 oder höher und 254 für Ressourcen unter ONTAP 9.3 oder einer früheren Version. Backups schlagen fehl, wenn die Aufbewahrung auf einen Wert festgelegt ist, der höher ist, als die zugrunde liegende ONTAP Version unterstützt.
+
+
+IMPORTANT: Wenn Sie Snapshot Backups auf Basis von Kopien aktivieren SnapVault möchten, müssen Sie die Aufbewahrungsanzahl auf 2 oder höher festlegen. Wenn Sie die Aufbewahrungsanzahl auf 1 festlegen, kann der Aufbewahrungsvorgang möglicherweise fehlschlagen, da die erste Snapshot Kopie die Referenzkopie für die SnapVault-Beziehung ist, bis eine neuere Snapshot Kopie auf das Ziel repliziert wird.
+
+
+NOTE: Für die SAP HANA-Systemreplizierung wird empfohlen, alle Ressourcen des SAP HANA-Systems in einer Ressourcengruppe hinzuzufügen. So wird sichergestellt, dass die richtige Anzahl von Backups beibehalten wird.
+
+
+NOTE: Bei SAP HANA System Replication entsprechen die insgesamt erstellten Snapshot Kopien der für die Ressourcengruppe festgelegten Aufbewahrung. Die Entfernung der ältesten Snapshot Kopie basiert auf dem Node, auf dem sich die älteste Snapshot Kopie befindet. Die Aufbewahrung ist beispielsweise für eine Ressourcengruppe mit primärer SAP HANA System Replication und sekundärer SAP HANA System Replication auf 7 festgelegt. Es können maximal 7 Snapshot Kopien gleichzeitig erstellt werden, einschließlich primärer SAP HANA System Replication und sekundärer SAP HANA System Replication.
+
+
+
+ a| 
+Behalten Sie die Snapshot Kopien für eine bestimmte Anzahl von Tagen bei
+ a| 
+Wählen Sie *Snapshot Kopien behalten für* aus, und geben Sie dann die Anzahl der Tage an, für die Sie die Snapshot Kopien behalten möchten, bevor Sie sie löschen.
+
+|===
+. Geben Sie für Snapshot-Copy-basierte Backups die Replikationseinstellungen auf der Seite Replikation an:
++
+|===
+| Für dieses Feld... | Tun Sie das... 
+
+
+ a| 
+*Aktualisieren Sie SnapMirror nach dem Erstellen einer lokalen Snapshot Kopie*
+ a| 
+Wählen Sie dieses Feld aus, um Spiegelkopien der Backup-Sätze auf einem anderen Volume zu erstellen (SnapMirror Replikation).
+
+Wenn die Sicherungsbeziehung in ONTAP vom Typ Mirror und Vault beträgt und wenn Sie nur diese Option auswählen, wird die auf dem primären Volume erstellte Snapshot Kopie nicht an das Ziel übertragen, sondern dort aufgeführt. Wenn diese Snapshot Kopie aus dem Ziel ausgewählt wird, um einen Wiederherstellungsvorgang durchzuführen, wird der sekundäre Speicherort für die ausgewählte Fehlermeldung „vaulted/mirrored Backup“ angezeigt.
+
+
+
+ a| 
+*Aktualisieren Sie SnapVault nach dem Erstellen einer lokalen Snapshot Kopie*
+ a| 
+Wählen Sie diese Option aus, um Disk-to-Disk-Backup-Replikation (SnapVault-Backups) durchzuführen.
+
+
+
+ a| 
+*Sekundäres Policy-Label*
+ a| 
+Wählen Sie eine Snapshot-Bezeichnung aus.
+
+Abhängig von dem ausgewählten Etikett der Snapshot Kopie wendet ONTAP die Aufbewahrungsrichtlinie für sekundäre Snapshot Kopien an, die mit dem Etikett übereinstimmt.
+
+
+NOTE: Wenn Sie *Update SnapMirror nach dem Erstellen einer lokalen Snapshot Kopie* ausgewählt haben, können Sie optional das Label für die sekundäre Richtlinie angeben. Wenn Sie jedoch *Update SnapVault nach dem Erstellen einer lokalen Snapshot Kopie* ausgewählt haben, sollten Sie das sekundäre Policy Label angeben.
+
+
+
+ a| 
+*Anzahl der Wiederholversuche*
+ a| 
+Geben Sie die maximale Anzahl von Replikationsversuchen ein, die zulässig sind, bevor der Vorgang beendet wird.
+
+|===
++
+
+NOTE: Sie sollten die SnapMirror Aufbewahrungsrichtlinie in ONTAP für den sekundären Storage konfigurieren, um zu vermeiden, dass die maximale Anzahl an Snapshot Kopien auf dem sekundären Storage erreicht wird.
+
+. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
+

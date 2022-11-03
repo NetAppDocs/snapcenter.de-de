@@ -1,0 +1,74 @@
+---
+permalink: protect-sco/task_define_a_clone_strategy_for_oracle_databases.html 
+sidebar: sidebar 
+keywords: backup types, cloning type, clone name, limitations 
+summary: Eine Strategie vor dem Klonen Ihrer Datenbank definieren, um sicherzustellen, dass der Klonvorgang erfolgreich ist. 
+---
+= Klonstrategie für Oracle Datenbanken definieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Eine Strategie vor dem Klonen Ihrer Datenbank definieren, um sicherzustellen, dass der Klonvorgang erfolgreich ist.
+
+
+
+== Arten von Backups, die zum Klonen unterstützt werden
+
+SnapCenter unterstützt das Klonen verschiedener Backup-Typen von Oracle Datenbanken.
+
+* Online Daten-Backup
+* Online-Vollbackup
+* Backup für Offline-Mounten
+* Offline-Herunterfahren-Backup
+* Backups von Data Guard Standby-Datenbanken und Active Data Guard Standby-Datenbanken
+* Online-Daten-Backups, vollständige Online-Backups, Offline-Mount-Backups und Offline-Shutdown-Backups in einer RAC-Konfiguration (Real Application Clusters)
+* Online-Daten-Backups, vollständige Online-Backups, Offline-Mount-Backups und Offline-Shutdown-Backups in einer ASM-Konfiguration (Automatic Storage Management)
++
+
+IMPORTANT: SAN-Konfigurationen werden nicht unterstützt, wenn die Option „user_friendly_Names“ in der Multipath-Konfigurationsdatei auf „yes“ gesetzt ist.
+
+
+
+
+NOTE: Das Klonen von Backups für Archivprotokolle wird nicht unterstützt.
+
+
+
+== Arten von unterstützten Klonen für Oracle-Datenbanken
+
+In einer Oracle Datenbankumgebung unterstützt SnapCenter das Klonen eines Datenbank-Backups. Sie können das Backup aus primären und sekundären Storage-Systemen klonen.
+
+Der SnapCenter Server klont mit NetApp FlexClone Technologie Backups.
+
+Sie können einen Klon aktualisieren, indem Sie den Befehl „Refresh-SmClone“ ausführen. Mit diesem Befehl wird ein Backup der Datenbank erstellt, der vorhandene Klon gelöscht und ein Klon mit demselben Namen erstellt.
+
+
+NOTE: Die Klonaktualisierung kann nur mit den UNIX Befehlen ausgeführt werden.
+
+
+
+== Namenskonventionen für Klone für Oracle Datenbanken
+
+Von SnapCenter 3.0 unterscheidet sich die Namenskonvention für Klone von Dateisystemen von den Klonen von ASM-Festplattengruppen.
+
+* Die Namenskonvention für SAN oder NFS-File-Systeme ist FileSystemNamesourceDatabase_CLONESID.
+* Die Namenskonvention für ASM-Festplattengruppen ist SC_HASHCODEofDISKGROUP_CLONESID.
++
+HASHCODEofDISKGROUP ist eine automatisch generierte Nummer (2 bis 10 Ziffern), die für jede ASM-Laufwerksgruppe eindeutig ist.
+
+
+
+
+
+== Einschränkungen beim Klonen von Oracle Datenbanken
+
+Die Einschränkungen von Klonvorgängen sollten Sie beachten, bevor Sie die Datenbanken klonen.
+
+* Wenn Sie eine Oracle-Version von 11.2.0.4 bis 12.1.0.1 verwenden, befindet sich der Klonvorgang im Status „Hung“, wenn Sie den Befehl „_renamedg_“ ausführen. Sie können den Oracle Patch 19544733 anwenden, um dieses Problem zu beheben.
+* Das Klonen von Datenbanken aus einem LUN, die direkt an einen Host angebunden ist (z. B. durch die Verwendung von Microsoft iSCSI Initiator auf einem Windows Host), wird auf demselben Windows Host oder einem anderen Windows Host oder umgekehrt nicht unterstützt.
+* Das Stammverzeichnis des Volume-Bereitstellungspunkts kann kein freigegebenes Verzeichnis sein.
+* Wenn Sie eine LUN verschieben, die einen Klon in ein neues Volume enthält, kann der Klon nicht gelöscht werden.
+

@@ -1,0 +1,96 @@
+---
+permalink: protect-sco/backup-application-volume.html 
+sidebar: sidebar 
+keywords: application volume, back up 
+summary: Sie können ein Backup des Anwendungs-Volumes auf der Seite „Ressourcen“ erstellen, wenn das Anwendungs-Volume nicht zu einer Ressourcengruppen gehört. 
+---
+= Backup des Anwendungsvolumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn das Anwendungs-Volume nicht Teil einer Ressourcengruppe ist, können Sie das Anwendungs-Volume von der Seite Ressourcen sichern.
+
+*Über diese Aufgabe*
+
+Standardmäßig werden Backups von Konsistenzgruppen (CG) erstellt. Wenn Sie Volume-basierte Backups erstellen möchten, sollten Sie den Wert von *EnableOracleNdvVolumeBasedBackup* in der Datei _Web.config_ auf true setzen.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das Oracle Datenbank-Plug-in aus der Liste aus.
+. Wählen Sie auf der Seite Ressourcen in der Liste *Ansicht* die Option *Anwendungsvolumen* aus.
+. Klicken Sie Auf *image:../media/filter_icon.gif[""]*, und wählen Sie dann den Host-Namen und den Datenbanktyp, um die Ressourcen zu filtern.
++
+Sie können dann auf * klickenimage:../media/filter_icon.gif[""]* Zum Schließen des Filterfensters.
+
+. Wählen Sie das Anwendungsvolumen aus, das Sie sichern möchten.
++
+Die Seite Volume-Protect der Anwendung wird angezeigt.
+
+. Führen Sie auf der Seite „Ressource“ die folgenden Aktionen durch:
++
+|===
+| Für dieses Feld... | Tun Sie das... 
+
+
+ a| 
+Verwenden Sie für Snapshot-Kopie das benutzerdefinierte Namensformat
+ a| 
+Aktivieren Sie dieses Kontrollkästchen, und geben Sie anschließend ein benutzerdefiniertes Namensformat ein, das Sie für den Namen der Snapshot Kopie verwenden möchten.
+
+Beispiel: Custtext__Policy_hostname oder Resource_hostname. Standardmäßig wird ein Zeitstempel an den Namen der Snapshot Kopie angehängt.
+
+
+
+ a| 
+Ausschließen von Zielen für Archivprotokolle von der Sicherung
+ a| 
+Geben Sie die Ziele der Archivprotokolldateien an, die Sie nicht sichern möchten.
+
+|===
+. Führen Sie auf der Seite Richtlinien die folgenden Schritte aus:
++
+.. Wählen Sie eine oder mehrere Richtlinien aus der Dropdown-Liste aus.
++
+
+NOTE: Sie können eine Richtlinie auch erstellen, indem Sie auf * klickenimage:../media/add_policy_from_resourcegroup.gif[""]*.
+
+
+
++
+Im Abschnitt „Zeitpläne für ausgewählte Richtlinien konfigurieren“ werden die ausgewählten Richtlinien aufgelistet.
+
++
+.. Klicken Sie Auf image:../media/add_policy_from_resourcegroup.gif[""] In der Spalte Zeitplan konfigurieren für die Richtlinie konfigurieren, für die Sie einen Zeitplan konfigurieren möchten.
+.. Konfigurieren Sie im Fenster Add Schedules for Policy_Name_ den Zeitplan, und klicken Sie dann auf *OK*.
++
+_Policy_Name_ ist der Name der von Ihnen ausgewählten Richtlinie.
+
++
+Die konfigurierten Zeitpläne sind in der Spalte angewendete Zeitpläne aufgeführt.
+
+
+
+. Wählen Sie auf der Benachrichtigungsseite aus der Dropdown-Liste *E-Mail-Präferenz* die Szenarien aus, in denen Sie die E-Mails versenden möchten.
++
+Außerdem müssen Sie die E-Mail-Adressen für Absender und Empfänger sowie den Betreff der E-Mail angeben. Wenn Sie den Bericht über den Backup-Vorgang anhängen möchten, der an der Ressource durchgeführt wird, und dann wählen Sie *Job-Bericht anhängen*.
+
++
+
+NOTE: Für eine E-Mail-Benachrichtigung müssen Sie die SMTP-Serverdetails entweder mit der GUI oder mit dem PowerShell-Befehlssatz Set-SmtpServer angegeben haben.
+
+. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
++
+Die Topologieseite des Anwendungs-Volumes wird angezeigt.
+
+. Klicken Sie auf *Jetzt sichern*.
+. Führen Sie auf der Seite Backup die folgenden Schritte aus:
++
+.. Wenn Sie mehrere Richtlinien auf die Ressource angewendet haben, wählen Sie aus der Dropdown-Liste *Richtlinie* die Richtlinie aus, die Sie für das Backup verwenden möchten.
+.. Klicken Sie Auf *Backup*.
+
+
+. Überwachen Sie den Fortschritt des Vorgangs, indem Sie auf *Monitor* > *Jobs* klicken.
+
