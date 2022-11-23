@@ -20,7 +20,7 @@ Für die Datensicherung von Applikationen, Datenbanken, Filesystemen und Virtual
  a| 
 SnapCenter Standard Controller-basiert
  a| 
-Erforderlich für FAS, AFF und Amazon FSX
+Erforderlich für FAS und AFF
 
 Bei der SnapCenter Standard Lizenz handelt es sich um eine Controller-basierte Lizenz und ist im Rahmen des Premium Bundle enthalten. Wenn Sie die Lizenz für die SnapManager Suite besitzen, erhalten Sie auch die Standardlizenz von SnapCenter. Wenn Sie SnapCenter auf Testbasis mit FAS oder AFF Storage installieren möchten, wenden Sie sich an den Vertriebsmitarbeiter, um eine Evaluierungslizenz für das Premium Bundle zu erhalten.
 

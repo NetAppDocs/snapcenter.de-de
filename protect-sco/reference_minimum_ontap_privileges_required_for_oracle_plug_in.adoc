@@ -123,4 +123,10 @@ Die erforderlichen Mindestberechtigungen für ONTAP variieren je nach SnapCenter
 * Netzwerkschnittstelle wird angezeigt
 
 
+
+
+ a| 
+* MetroCluster zeigen
+
+
 |===

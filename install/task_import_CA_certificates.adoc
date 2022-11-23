@@ -55,7 +55,7 @@ Abschließen des Assistenten zum Importieren von Zertifikaten
 |===
 +
 
-NOTE: Der Import des Zertifikats sollte mit dem privaten Schlüssel gebündelt werden (unterstützte Formate sind: *.pfx, * p12, *.p7b).
+NOTE: Der Import des Zertifikats sollte mit dem privaten Schlüssel gebündelt werden (unterstützte Formate sind: *.pfx, *.p12 und *.p7b).
 
 . Wiederholen Sie Schritt 5 für den Ordner „persönlich“.
 

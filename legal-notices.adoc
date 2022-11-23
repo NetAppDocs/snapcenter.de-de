@@ -13,13 +13,14 @@ summary: Rechtliche Hinweise ermöglichen den Zugriff auf Copyright-Erklärungen
 :imagesdir: ./media/
 
 
+[role="lead"]
 Rechtliche Hinweise ermöglichen den Zugriff auf Copyright-Erklärungen, Marken, Patente und mehr.
 
 
 
 == Urheberrecht
 
-http://www.netapp.com/us/legal/copyright.aspx["http://www.netapp.com/us/legal/copyright.aspx"]
+http://www.netapp.com/us/legal/copyright.aspx[]
 
 
 
@@ -27,7 +28,7 @@ http://www.netapp.com/us/legal/copyright.aspx["http://www.netapp.com/us/legal/co
 
 NetApp, das NETAPP Logo und die auf der NetApp Markenseite aufgeführten Marken sind Marken von NetApp Inc. Andere Firmen- und Produktnamen können Marken der jeweiligen Eigentümer sein.
 
-http://www.netapp.com/us/legal/netapptmlist.aspx["http://www.netapp.com/us/legal/netapptmlist.aspx"]
+http://www.netapp.com/us/legal/netapptmlist.aspx[]
 
 
 
@@ -35,26 +36,18 @@ http://www.netapp.com/us/legal/netapptmlist.aspx["http://www.netapp.com/us/legal
 
 Eine aktuelle Liste der NetApp Patente finden Sie unter:
 
-https://www.netapp.com/us/media/patents-page.pdf["https://www.netapp.com/us/media/patents-page.pdf"]
+https://www.netapp.com/us/media/patents-page.pdf[]
 
 
 
 == Datenschutzrichtlinie
 
-https://www.netapp.com/us/legal/privacypolicy/index.aspx["https://www.netapp.com/us/legal/privacypolicy/index.aspx"]
-
-
-
-== Maschinelle Übersetzung
-
-Wichtige Informationen zu lokalisierten Inhalten.
-
-https://www.netapp.com/company/legal/machine-translation/["https://www.netapp.com/company/legal/machine-translation/"]
+https://www.netapp.com/us/legal/privacypolicy/index.aspx[]
 
 
 
 == Open Source
 
-Stellt Informationen über das Urheberrecht und die Lizenzen Dritter bereit, die in diesem Produkt verwendet werden. Ihr Produkt verwendet nicht unbedingt alle unten genannten Softwarekomponenten.
+In den Benachrichtigungsdateien finden Sie Informationen zu Urheberrechten und Lizenzen von Drittanbietern, die in der NetApp Software verwendet werden.
 
 https://library.netapp.com/ecm/ecm_download_file/ECMLP2883298["Hinweis zu SnapCenter 4.7"^]

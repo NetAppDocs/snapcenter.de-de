@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: sc-automation/concept_basic_operational_characterstics.html 
+permalink: sc-automation/concept_basic_operational_characteristics.html 
 keywords: request and response, object identifiers, synchronous, asynchronous 
 summary: IM RUHEZUSTAND werden einheitliche Technologien und Best Practices erstellt, jedoch können die Details jeder API je nach dem verfügbaren Design variieren. 
 ---

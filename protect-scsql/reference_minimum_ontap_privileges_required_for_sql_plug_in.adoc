@@ -184,9 +184,6 @@ vserver iscsi-Verbindung wird angezeigt
 
 vserver zeigen
 
-|===
-|===
-| Schreibgeschützter Befehl: Mindestberechtigungen für ONTAP 8.3.0 und höher erforderlich 
 
 
  a| 
@@ -195,5 +192,7 @@ Netzwerkschnittstelle
 Netzwerkschnittstelle wird angezeigt
 
 vserver
+
+MetroCluster zeigen
 
 |===

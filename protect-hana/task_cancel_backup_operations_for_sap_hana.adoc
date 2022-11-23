@@ -1,14 +1,9 @@
----
-permalink: protect-hana/task_cancel_backup_operations_for_sap_hana.html 
-sidebar: sidebar 
-keywords:  
-summary: Sie können Backup-Vorgänge in der Warteschlange abbrechen. 
----
-= Abbrechen der Backup-Vorgänge für SAP HANA
+= 
 :allow-uri-read: 
-:icons: font
-:imagesdir: ../media/
 
+
+'''
+Permalink: Protect-hana/task_cancel_backup_operations_for_sap_hana.html Sidebar: Sidebar Keywords: Summary: 'You can Cancel Backup Operations that are warned'. --- = Abbrechen von Sicherungsvorgängen für SAP HANA :Icons: Font :imagedir: ../media/
 
 Sie können Backup-Vorgänge in der Warteschlange abbrechen.
 
