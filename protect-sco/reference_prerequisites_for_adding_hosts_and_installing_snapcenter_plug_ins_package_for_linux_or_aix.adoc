@@ -314,7 +314,7 @@ SnapCenter verwendet Zugangsdaten, um Benutzer für SnapCenter-Vorgänge zu auth
 
 Die Anmeldeinformationen werden entweder für den Root-Benutzer oder für einen Benutzer ohne Root-Benutzer erstellt, der über sudo-Berechtigungen zum Installieren und Starten des Plug-in-Prozesses verfügt.
 
-Weitere Informationen finden Sie unter:  sudo privileges for non-root users for Linux host Oder  sudo privileges for non-root users for AIX host
+Weitere Informationen finden Sie unter: <<Konfigurieren von Sudo-Berechtigungen für Benutzer ohne Root-Zugriff auf Linux-Hosts>> Oder <<Konfigurieren Sie sudo-Berechtigungen für Benutzer, die nicht root sind, für AIX-Host>>
 
 |===
 
