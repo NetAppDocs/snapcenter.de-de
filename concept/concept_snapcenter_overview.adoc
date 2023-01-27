@@ -28,16 +28,19 @@ Es gibt folgende Möglichkeiten für die Implementierung von SnapCenter:
 +
 ** Daten auf primären ONTAP FAS oder AFF Systemen, die auf sekundäre ONTAP FAS oder AFF Systeme repliziert werden
 ** Daten auf primären ONTAP Select Systemen
+** Daten auf primären und sekundären ONTAP FAS- oder AFF-Systemen, die auf lokalem StorageGRID-Objekt-Storage gesichert sind (unter Verwendung der Cloud-Backup-Integration NetApp BlueXP)
 
 
 * Lokal in einer Hybrid Cloud zur Sicherung folgender Komponenten:
 +
-** Daten auf primären ONTAP FAS oder AFF Systemen, die auf sekundäre Cloud Volumes ONTAP oder NetApp Private Storage Systeme repliziert werden
+** Daten auf primären ONTAP FAS oder AFF Systemen, die auf Cloud Volumes ONTAP repliziert werden
+** Daten auf primären und sekundären ONTAP FAS oder AFF Systemen, die auf Objekt- und Archiv-Storage in der Cloud gesichert sind (unter Verwendung der NetApp BlueXP Cloud Backup Integration)
 
 
 * In einer Public Cloud zur Sicherung folgender Komponenten:
 +
 ** Daten auf primären Cloud Volumes ONTAP Systemen (früher ONTAP Cloud)
+** Daten auf Amazon FSX für ONTAP
 
 
 
@@ -82,10 +85,10 @@ SnapCenter umfasst REST-APIs für die meisten Funktionen zur Integration in jede
 Weitere Informationen zu REST-APIs finden Sie unter https://docs.netapp.com/us-en/snapcenter/sc-automation/overview_rest_apis.html["ÜBERSICHT ÜBER DIE REST-API"].
 
 +
-Weitere Informationen zu Windows Cmdlets finden Sie unter https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["SnapCenter Software Cmdlet Referenzhandbuch"^].
+Weitere Informationen zu Windows Cmdlets finden Sie unter https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["SnapCenter Software Cmdlet Referenzhandbuch"^].
 
 +
-Weitere Informationen zu UNIX-Befehlen finden Sie unter https://library.netapp.com/ecm/ecm_download_file/ECMLP2883301["SnapCenter Software Command Reference Guide"^].
+Weitere Informationen zu UNIX-Befehlen finden Sie unter https://library.netapp.com/ecm/ecm_download_file/ECMLP2885486["SnapCenter Software Command Reference Guide"^].
 
 * Zentrale Datensicherungs-Konsole und Berichterstellung
 * Rollenbasierte Zugriffssteuerung (Role Based Access Control, RBAC) für Sicherheit und Delegierung.

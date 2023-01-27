@@ -19,7 +19,7 @@ Die Recovery wird anhand der Archivprotokolle durchgeführt, die am konfiguriert
 
 Wenn Sie ASM-Datenbank von ASMLIB zu ASMFD migrieren, können die mit ASMLIB erstellten Backups nicht zur Wiederherstellung der Datenbank verwendet werden. Sie sollten Backups in der ASMFD-Konfiguration erstellen und diese Backups für die Wiederherstellung verwenden. Wenn die ASM-Datenbank von ASMFD zu ASMLIB migriert wird, sollten Sie zur Wiederherstellung auch Backups in der ASMLIB-Konfiguration erstellen.
 
-Wenn Sie eine Datenbank wiederherstellen, wird eine operative Sperrdatei (.SM_Lock_dbsid) auf dem Oracle-Datenbank-Host im Verzeichnis Dollar ORACLE_HOME/dbs erstellt, um zu vermeiden, dass mehrere Operationen auf der Datenbank ausgeführt werden. Nach dem Wiederherstellen der Datenbank wird die operative Sperrdatei automatisch entfernt.
+Wenn Sie eine Datenbank wiederherstellen, wird auf dem Oracle-Datenbank-Host im Verzeichnis _/var/opt/snapcenter/sco/lock_ eine operative Sperrdatei (.sm_Lock_dbsid) erstellt, um zu vermeiden, dass mehrere Vorgänge in der Datenbank ausgeführt werden. Nach dem Wiederherstellen der Datenbank wird die operative Sperrdatei automatisch entfernt.
 
 
 NOTE: Die Wiederherstellung der SPFILE- und Password-Datei wird nicht unterstützt.

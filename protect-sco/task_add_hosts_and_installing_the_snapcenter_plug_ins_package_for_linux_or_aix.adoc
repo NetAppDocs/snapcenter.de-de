@@ -115,7 +115,7 @@ In einem Flex ASM-Setup werden alle Knoten, unabhängig davon, ob es sich um ein
 
 
  a| 
-Überspringen Sie die Prüfungen vor der Installation
+Überspringen Sie optionale Prüfungen vor der Installation
  a| 
 Aktivieren Sie dieses Kontrollkästchen, wenn Sie die Plug-ins bereits manuell installiert haben und nicht überprüfen möchten, ob der Host die Anforderungen für die Installation des Plug-ins erfüllt.
 

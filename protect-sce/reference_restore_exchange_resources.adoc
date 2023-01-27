@@ -17,4 +17,4 @@ Im folgenden Workflow wird die Reihenfolge angezeigt, in der Sie die Wiederherst
 
 image:../media/all_plug_ins_restore_workflow.png[""]
 
-Außerdem können Sie PowerShell Cmdlets manuell oder in Skripten verwenden, um Backup- und Restore-Vorgänge durchzuführen. Ausführliche Informationen zu PowerShell Cmdlets finden Sie in der Hilfe zu SnapCenter Cmdlet oder unter https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["SnapCenter Software Cmdlet Referenzhandbuch"^].
+Außerdem können Sie PowerShell Cmdlets manuell oder in Skripten verwenden, um Backup- und Restore-Vorgänge durchzuführen. Ausführliche Informationen zu PowerShell Cmdlets finden Sie in der Hilfe zu SnapCenter Cmdlet oder unter https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["SnapCenter Software Cmdlet Referenzhandbuch"^].

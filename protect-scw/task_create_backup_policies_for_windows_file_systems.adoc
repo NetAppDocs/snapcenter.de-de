@@ -109,7 +109,7 @@ Wählen Sie diese Option, wenn Sie die Anzahl der Tage angeben möchten, die Sna
 |===
 +
 
-IMPORTANT: Sie sollten die Aufbewahrungsanzahl auf 2 oder höher einstellen, wenn Sie die SnapVault-Replikation aktivieren möchten. Wenn Sie die Replikationsanzahl auf 1 setzen, kann der Aufbewahrungsvorgang fehlschlagen. Dies liegt daran, dass die erste Snapshot Kopie die Referenzkopie für die SnapVault-Beziehung ist, bis die neuere Snapshot Kopie auf das Ziel repliziert wird.
+IMPORTANT: Sie sollten den Aufbewahrungswert auf 2 oder höher einstellen. Der Mindestwert für die Aufbewahrungsanzahl beträgt 2.
 
 +
 

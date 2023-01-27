@@ -75,4 +75,18 @@ Die oben genannten Operationen werden auf Geräten ohne Partitionen oder mit ein
 
 NOTE: Sie können Multipathing-Lösung für NVMe-Geräte konfigurieren, indem Sie die native Multipathing-Option im Kernel einstellen. Multipathing von Device Mapper (DM) wird nicht unterstützt.
 
-+ Aktuelle Informationen zu unterstützten Versionen finden Sie im https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"^].
+* Unterstützt alle nicht standardmäßigen Benutzer anstelle von oracle und Grid.
++
+Um die nicht-default-Benutzer zu unterstützen, sollten Sie die nicht-default-Benutzer einstellen, indem Sie die Werte der Parameter in der Datei *sco.properties* unter _file /var/opt/snapcenter/sco/etc/_ ändern.
+
++
+Die Standardwerte der Parameter werden als oracle und Grid festgelegt.
+
++
+** DB_USER=oracle
+** DB_GROUP=oinstall
+** GI_USER=Grid
+** GI_GROUP=oinstall
+
+
+

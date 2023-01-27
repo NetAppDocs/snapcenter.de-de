@@ -10,6 +10,20 @@ summary: Sie können andere Wege verwenden, um das SnapCenter Plug-ins Paket fü
 :imagesdir: ../media/
 
 
+[role="lead"]
+Sie können das Plug-ins-Paket für Linux oder AIX auch manuell installieren, indem Sie die Cmdlets oder CLIs verwenden.
+
+Vor der manuellen Installation des Plug-ins sollten Sie die Signatur des Binärpakets mit dem Schlüssel *snapcenter_public_key.Pub* und *snapcenter_linux_Host_Plugin.bin.sig* validieren. Diese befinden sich unter _C:\ProgramData\NetApp\SnapCenter\Package Repository_.
+
+
+NOTE: Vergewissern Sie sich, dass *OpenSSL 1.0.2g* auf dem Host installiert ist, auf dem Sie das Plug-in installieren möchten.
+
+Überprüfen Sie die Signatur des Binärpakets, indem Sie den Befehl ausführen:
+
+* Für Linux-Host: `openssl dgst -sha256 -verify snapcenter_public_key.pub -signature snapcenter_linux_host_plugin.bin.sig snapcenter_linux_host_plugin.bin`
+* Für AIX-Host: `openssl dgst -sha256 -verify snapcenter_public_key.pub -signature snapcenter_linux_host_plugin.bsx.sig snapcenter_linux_host_plugin.bsx`
+
+
 
 
 == Installieren Sie sie mithilfe von Cmdlets auf mehreren Remote Hosts
@@ -35,7 +49,7 @@ NOTE: Das Precheck-Skript überprüft den Firewall-Status des Plug-in-Ports nich
 . Geben Sie Ihre Anmeldeinformationen für die Remote-Installation ein.
 
 
-Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ können Sie auch auf die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["SnapCenter Software Cmdlet Referenzhandbuch"^].
+Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ können Sie auch auf die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["SnapCenter Software Cmdlet Referenzhandbuch"^].
 
 
 
@@ -65,9 +79,9 @@ NOTE: Es gibt veraltete Volumes, Verzeichnisse und Sperrdateien, wenn das Failov
 
 
 
-== Installieren Sie das Plug-ins-Paket für Linux im Silent-Modus oder im Konsolenmodus
+== Installieren Sie das Plug-ins-Paket für Linux im Silent-Modus
 
-Sie können das SnapCenter-Plug-ins-Paket für Linux entweder im Konsolenmodus oder im Silent-Modus installieren, indem Sie die Befehlszeilenschnittstelle (CLI) verwenden.
+Sie können das SnapCenter-Plug-ins-Paket für Linux im Silent-Modus mithilfe der Befehlszeilenschnittstelle (CLI) installieren.
 
 *Was Sie brauchen*
 
@@ -89,32 +103,10 @@ Bei der Installation im Konsolenmodus müssen Sie die erforderlichen Installatio
 Der Standardinstallationspfad ist _C:\ProgramData\NetApp\SnapCenter\PackageRepository_. Auf diesen Pfad kann von dem Host zugegriffen werden, auf dem der SnapCenter-Server installiert ist.
 
 . Navigieren Sie in der Eingabeaufforderung zum Verzeichnis, in dem Sie die Installationsdatei heruntergeladen haben.
-. Führen Sie je nach gewünschter Installationsart einen der folgenden Schritte aus.
+. Laufen
 +
-|===
-| Installationsmodus | Schritte 
-
-
- a| 
-Konsolenmodus
- a| 
-.. Ausführen:
-+
-`./SnapCenter_linux_host_plugin.bin –i console`
-
-.. Befolgen Sie die Anweisungen auf dem Bildschirm, um die Installation abzuschließen.
-
-
-
-
- a| 
-Silent-Modus
- a| 
-Ausführen:
-
 `./SnapCenter_linux_host_plugin.bin-i silent-DPORT=8145-DSERVER_IP=SnapCenter_Server_FQDN-DSERVER_HTTPS_PORT=SnapCenter_Server_Port-DUSER_INSTALL_DIR==/opt/custom_path`
 
-|===
 . Bearbeiten Sie die Datei spl.properties unter _/var/opt/snapcenter/spl/etc/_, um SPL_ENABLED_PLUGINS=SCO,SCU hinzuzufügen, und starten Sie dann den SnapCenter Plug-in Loader Service neu.
 
 

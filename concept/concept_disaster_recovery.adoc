@@ -33,6 +33,9 @@ Die Disaster Recovery-Funktion von SnapCenter verwendet FÜR das Backup des Snap
 +
 link:../sc-automation/rest_api_workflows_disaster_recovery_of_snapcenter_server.html["REST-API-Workflows für Disaster Recovery von SnapCenter Server"]
 
++
+Die Konfigurationsdatei für die Audit-Einstellungen wird nicht im DR-Backup gesichert und auch nicht auf dem DR-Server nach dem Wiederherstellungsvorgang. Sie sollten die Einstellungen für das Überwachungsprotokoll manuell wiederholen.
+
 * *SnapCenter Plug-in und Storage DR*
 +
 DR wird nur für das SnapCenter Plug-in für SQL Server unterstützt. Wenn das SnapCenter-Plug-in für SQL Server ausfällt, wechseln Sie zu einem anderen SQL-Host und stellen Sie die Daten mit wenigen Schritten wieder her.

@@ -1,6 +1,6 @@
 ---
 settings:
-  name: SnapCenter Software 4.7
+  name: SnapCenter Software 4.8
   internal:
     pdf_enabled: true
   prod:
@@ -9,6 +9,9 @@ settings:
   versions:
   - name: SnapCenter Software
     url: "/snapcenter"
+    version-number: '4.8'
+  - name: SnapCenter Software
+    url: "/snapcenter-47"
     version-number: '4.7'
   - name: SnapCenter Software
     url: "/snapcenter-46"
@@ -19,7 +22,7 @@ settings:
   langs: de-de,us-en,ja-jp,zh-cn,zh-tw,ko-kr,fr-fr
 sidebar:
   entries:
-  - title: SnapCenter Software 4.7 - Dokumentation
+  - title: SnapCenter Software 4.8 - Dokumentation
     url: "/index.html"
   - title: Versionshinweise
     url: "/release-notes.html"
@@ -42,7 +45,7 @@ homepage:
   - title: Los geht's
     links:
     - title: Versionshinweise
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2883299
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2885481
     - title: Weitere Informationen zu SnapCenter
       url: "/concept/concept_snapcenter_overview.html"
     - title: Kurzreferenz zum Schutz von SQL Server-Datenbanken
@@ -102,9 +105,9 @@ homepage:
   - title: Mehr Ressourcen
     links:
     - title: Cmdlet Referenzhandbuch
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482
     - title: Command Reference Guide
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2883301
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2885486
     - title: Dokumentation für frühere Versionen von SnapCenter
       url: https://www.netapp.com/data-protection/backup-recovery/snapcenter-backup-management/documentation/#ProseArticleLinkList13
     - title: NetApp Knowledge Base – SnapCenter

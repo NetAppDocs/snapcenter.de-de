@@ -27,9 +27,12 @@ Weitere Informationen finden Sie unter https://kb.netapp.com/Advice_and_Troubles
 * SnapCenter wird innerhalb der Firewall Ihres Unternehmens installiert, um den Zugriff auf den SnapCenter Server zu ermöglichen und die Kommunikation zwischen dem SnapCenter Server und den Plug-ins zu ermöglichen.
 * Für den SnapCenter-API- und -Betriebszugriff werden Tokens verwendet, die mit AES-Verschlüsselung verschlüsselt sind und nach 24 Stunden ablaufen.
 * SnapCenter lässt sich zur Anmeldung und zur rollenbasierten Zugriffssteuerung (Role Based Access Control, RBAC) in Windows Active Directory integrieren und ermöglicht die Zugriffsberechtigungen.
+* IPsec wird mit SnapCenter auf ONTAP für Windows- und Linux-Hostcomputer unterstützt. https://docs.netapp.com/us-en/ontap/networking/configure_ip_security_@ipsec@_over_wire_encryption.html#use-ipsec-identities["Weitere Informationen ."].
 * SnapCenter PowerShell Commandlets sind über die Sitzungen gesichert.
 * Nach einer Standardlaufzeit von 15 Minuten Inaktivität warnt Sie SnapCenter, dass Sie in 5 Minuten abgemeldet werden. Nach 20 Minuten Inaktivität meldet SnapCenter Sie aus, und Sie müssen sich erneut anmelden. Sie können den Ausloggen Zeitraum ändern.
 * Die Anmeldung ist nach 5 oder mehr falschen Anmeldeversuchen vorübergehend deaktiviert.
+* Unterstützt die Authentifizierung von CA-Zertifikaten zwischen SnapCenter Server und ONTAP. https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_securely_connect_SnapCenter_with_ONTAP_using_CA_certificate["Weitere Informationen ."].
+* Integritätsprüfung wird dem SnapCenter-Server und den Plug-ins hinzugefügt und validiert alle im Lieferumfang enthaltenen Binärdateien bei Neuinstallationen und Upgrades.
 
 
 
