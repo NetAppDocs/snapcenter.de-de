@@ -10,6 +10,7 @@ summary: Konfigurieren Sie das CA-Zertifikat für den benutzerdefinierten SnapCe
 :imagesdir: ../media/
 
 
+[role="lead"]
 Sie sollten das Passwort des benutzerdefinierten Plug-ins Keystore und dessen Zertifikat verwalten, das CA-Zertifikat konfigurieren, Root- oder Zwischenzertifikate für den benutzerdefinierten Plug-ins Trust-Store konfigurieren und das CA-signierte Schlüsselpaar auf benutzerdefinierte Plug-ins Trust-Store mit SnapCenter Custom Plug-ins Service konfigurieren, um das installierte digitale Zertifikat zu aktivieren.
 
 Benutzerdefinierte Plug-ins verwenden die Datei _keystore.jks_, die sich unter _C:\Program Files\NetApp\SnapCenter\SnapCenter Plug-in Creator\etc_ befindet, sowohl als Vertrauensspeicher als auch als Schlüsselspeicher.

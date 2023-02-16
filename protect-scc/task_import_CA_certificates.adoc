@@ -10,6 +10,7 @@ summary: Importieren Sie die CA-Zertifikate des SnapCenter-Servers und der Windo
 :imagesdir: ../media/
 
 
+[role="lead"]
 Sie müssen die CA-Zertifikate mithilfe der Microsoft-Verwaltungskonsole (MMC) auf den SnapCenter-Server und die Windows-Host-Plug-ins importieren.
 
 *Schritte*

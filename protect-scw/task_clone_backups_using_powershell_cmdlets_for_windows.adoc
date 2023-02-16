@@ -10,6 +10,7 @@ summary: Der Klon-Workflow umfasst die Planung, die Durchführung des Klonvorgan
 :imagesdir: ../media/
 
 
+[role="lead"]
 Der Klon-Workflow umfasst die Planung, die Durchführung des Klonvorgangs und die Überwachung des Vorgangs.
 
 Sie müssen die PowerShell Umgebung vorbereitet haben, um die PowerShell Cmdlets auszuführen.

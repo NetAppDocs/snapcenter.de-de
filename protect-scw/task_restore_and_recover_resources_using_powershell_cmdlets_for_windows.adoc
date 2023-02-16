@@ -10,6 +10,7 @@ summary: Zur Wiederherstellung eines Ressourcen-Backups gehört die Initiierung 
 :imagesdir: ../media/
 
 
+[role="lead"]
 Zur Wiederherstellung eines Ressourcen-Backups gehört die Initiierung einer Verbindungssitzung mit dem SnapCenter-Server, die Auflistung der Backups und das Abrufen von Backup-Informationen sowie die Wiederherstellung eines Backups.
 
 Sie müssen die PowerShell Umgebung vorbereitet haben, um die PowerShell Cmdlets auszuführen.

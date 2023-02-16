@@ -27,7 +27,6 @@ Um benutzerdefinierte Plug-ins in SnapCenter zu verwenden, müssen Sie die folge
 
 == Allgemeine Plug-in-Bearbeitung bei allen API-Aufrufen
 
-[role="lead"]
 Verwenden Sie für jeden API-Aufruf die folgenden Informationen:
 
 * Plug-in-Parameter

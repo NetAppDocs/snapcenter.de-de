@@ -2,7 +2,7 @@
 permalink: protect-scc/task_install_the_snapcenter_custom_plug_ins_on_linux_hosts_using_the_command_line_interface.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Sie sollten die benutzerdefinierten SnapCenter-Plug-ins über die SnapCenter-Benutzeroberfläche (UI) installieren. Wenn Ihre Umgebung die Remote-Installation des Plug-ins über die SnapCenter-Benutzeroberfläche nicht zulässt, können Sie das benutzerdefinierte Plug-in entweder im Konsolenmodus oder im Silent-Modus installieren, indem Sie die Befehlszeilenschnittstelle \(CLI\) verwenden.' 
+summary: 'Sie sollten die benutzerdefinierten SnapCenter-Plug-ins über die SnapCenter-Benutzeroberfläche (UI) installieren. Wenn Ihre Umgebung die Remote-Installation des Plug-ins über die SnapCenter-Benutzeroberfläche nicht zulässt, können Sie das benutzerdefinierte Plug-in entweder im Konsolenmodus oder im Ruhemodus installieren, indem Sie die Befehlszeilenschnittstelle (CLI) verwenden.' 
 ---
 = Installieren Sie die benutzerdefinierten SnapCenter-Plug-ins auf Linux-Hosts über die Befehlszeilenschnittstelle
 :allow-uri-read: 

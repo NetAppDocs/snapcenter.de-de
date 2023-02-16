@@ -10,6 +10,7 @@ summary: Sie sollten die CA-Zertifikate konfigurieren und die CA-Zertifikate im 
 :imagesdir: ../media/
 
 
+[role="lead"]
 Sie sollten die CA-Zertifikate konfigurieren und die CA-Zertifikate im SnapCenter-Server und den entsprechenden Plug-in-Hosts bereitstellen. Sie sollten die CA-Zertifikatsvalidierung für die Plug-ins aktivieren.
 
 *Was Sie brauchen*

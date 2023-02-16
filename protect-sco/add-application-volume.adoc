@@ -13,6 +13,9 @@ summary: Sie sollten die Anwendungsvolumes manuell hinzufügen.
 [role="lead"]
 SnapCenter unterstützt das Backup und Klonen von Applikations-Volumes einer Oracle Datenbank. Sie sollten die Anwendungsvolumes manuell hinzufügen. Die automatische Erkennung von Applikations-Volumes wird nicht unterstützt.
 
+
+NOTE: Applikations-Volumes unterstützen nur direkte NFS- und iSCSI-Verbindungen.
+
 *Schritte*
 
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das Oracle Datenbank-Plug-in aus der Liste aus.

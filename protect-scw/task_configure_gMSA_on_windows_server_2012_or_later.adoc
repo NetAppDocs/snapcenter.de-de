@@ -10,6 +10,7 @@ summary: 'Mit Windows Server 2012 oder höher können Sie ein Group Managed Serv
 :imagesdir: ../media/
 
 
+[role="lead"]
 Mit Windows Server 2012 oder höher können Sie ein Group Managed Service Account (gMSA) erstellen, das über ein verwaltetes Domain-Konto eine automatisierte Verwaltung von Service-Konten ermöglicht.
 
 *Was Sie brauchen*

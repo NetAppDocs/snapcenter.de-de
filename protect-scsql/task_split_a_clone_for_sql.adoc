@@ -10,6 +10,7 @@ summary: Sie können SnapCenter verwenden, um eine geklonte Ressource von der ü
 :imagesdir: ../media/
 
 
+[role="lead"]
 Sie können SnapCenter verwenden, um eine geklonte Ressource von der übergeordneten Ressource zu trennen. Der geteilte Klon ist unabhängig von der übergeordneten Ressource.
 
 *Über diese Aufgabe*

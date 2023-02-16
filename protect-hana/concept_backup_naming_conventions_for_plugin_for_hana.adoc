@@ -10,6 +10,7 @@ summary: Sie können entweder die standardmäßige Namenskonvention für Snapsho
 :imagesdir: ../media/
 
 
+[role="lead"]
 Sie können entweder die standardmäßige Namenskonvention für Snapshot Kopien verwenden oder eine individuelle Namenskonvention verwenden. Die standardmäßige Backup-Namenskonvention fügt einen Zeitstempel zu den Namen von Snapshot Kopien hinzu, der Ihnen hilft, zu identifizieren, wann die Kopien erstellt wurden.
 
 Die Snapshot Kopie verwendet die folgende standardmäßige Namenskonvention:

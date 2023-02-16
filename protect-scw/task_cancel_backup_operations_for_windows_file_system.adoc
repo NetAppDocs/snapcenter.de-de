@@ -10,6 +10,7 @@ summary: Sie können Backup-Vorgänge in der Warteschlange abbrechen.
 :imagesdir: ../media/
 
 
+[role="lead"]
 Sie können Backup-Vorgänge in der Warteschlange abbrechen.
 
 *Was Sie brauchen*

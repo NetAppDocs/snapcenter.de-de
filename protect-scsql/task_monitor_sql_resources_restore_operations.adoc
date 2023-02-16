@@ -10,6 +10,7 @@ summary: Sie können den Fortschritt der verschiedenen SnapCenter-Wiederherstell
 :imagesdir: ../media/
 
 
+[role="lead"]
 Sie können den Fortschritt der verschiedenen SnapCenter-Wiederherstellungen über die Seite Jobs überwachen. Sie können den Fortschritt eines Vorgangs überprüfen, um zu bestimmen, wann dieser abgeschlossen ist oder ob ein Problem vorliegt.
 
 *Über diese Aufgabe*

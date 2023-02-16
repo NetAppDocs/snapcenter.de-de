@@ -10,6 +10,7 @@ summary: Konfigurieren Sie das CA-Zertifikat mit Windows-Host-Plug-in-Diensten
 :imagesdir: ../media/
 
 
+[role="lead"]
 Sie sollten das CA-Zertifikat mit den Windows-Host-Plug-in-Diensten konfigurieren, um das installierte digitale Zertifikat zu aktivieren.
 
 Führen Sie die folgenden Schritte auf dem SnapCenter-Server und allen Plug-in-Hosts durch, auf denen CA-Zertifikate bereits bereitgestellt wurden.

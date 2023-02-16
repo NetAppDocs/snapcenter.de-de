@@ -10,6 +10,7 @@ summary: Sie können den Fortschritt der verschiedenen Backup-Vorgänge überwac
 :imagesdir: ../media/
 
 
+[role="lead"]
 Sie können den Fortschritt verschiedener Backup-Vorgänge über die Seite SnapCenterJobs überwachen. Sie können den Fortschritt überprüfen, um festzustellen, wann er abgeschlossen ist oder ob ein Problem vorliegt.
 
 *Über diese Aufgabe*

@@ -10,6 +10,7 @@ summary: 'Mit dem Cmdlet "Remove-SmBackup" können Sie Backups löschen, wenn Si
 :imagesdir: ../media/
 
 
+[role="lead"]
 Mit dem Cmdlet "Remove-SmBackup" können Sie Backups löschen, wenn Sie diese nicht mehr für andere Datenschutzvorgänge benötigen.
 
 Sie müssen die PowerShell Umgebung vorbereitet haben, um die PowerShell Cmdlets auszuführen.

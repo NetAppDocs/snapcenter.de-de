@@ -32,7 +32,7 @@ Auf diesen Pfad kann von dem Host zugegriffen werden, auf dem der SnapCenter-Ser
 
 . Kopieren Sie die Installationsdatei auf den Host, auf dem Sie das Plug-in installieren möchten.
 . Navigieren Sie von einer Windows-Eingabeaufforderung auf dem lokalen Host zum Verzeichnis, in das Sie die Plug-in-Installationsdateien gespeichert haben.
-. Geben Sie den folgenden Befehl ein, um die Variablen durch Ihre Daten zu ersetzen:
+. Geben Sie den folgenden Befehl ein, um das Plug-in zu installieren.
 +
 _Snapcenter_Windows_Host_Plugin.exe"/silent /debuglog“<Debug_Log_Path>“ /log“<Log_Path>“ BI_SNAPCENTER_PORT=<Num> SUITE_INSTALLDIR=“<Install_Directory_Path>“ BI_SERVICEACCOUNT=<Domain\<Administrator> BI_SERVICECEPWD= SCHEICE= SCHEINSW
 
@@ -46,8 +46,6 @@ _C:\ProgramData\NetApp\SnapCenter\Package Repository\snapcenter_Windows_Host_Plu
 
 NOTE: Alle während der Installation von Plug-in für Exchange übergebenen Parameter gelten bei der Groß-/Kleinschreibung.
 
-+
-.. _/silent /debuglog„C:\Installdebug.log“ /log„C:\temp“ BI_SNAPCENTER_PORT=8145 SUITE_INSTALLDIR=„C:\Programme“ BI_SERVICEACCOUNT=Demo\Administrator BI_SERVICEPWD=Netapp1! ISFeatureInstall=HPW, SCW_
 +
 Geben Sie die folgenden Werte für die Variablen ein:
 
@@ -99,8 +97,6 @@ ISFeatureInstall
 Geben Sie die Lösung an, die von SnapCenter auf dem Remote-Host implementiert werden soll.
 
 |===
-
-
 . Überwachen Sie den Windows Task Scheduler, die Hauptinstallationsprotokolldatei _C:\Installdebug.log_ und die zusätzlichen Installationsdateien in _C:\Temp_.
 . Überwachen Sie das Verzeichnis _%temp%_, um zu überprüfen, ob die Installer _msiexe.exe_ die Software fehlerfrei installieren.
 +

@@ -10,6 +10,7 @@ summary: Sie können die PowerShell Commandlets zum Sichern von SQL Server-Daten
 :imagesdir: ../media/
 
 
+[role="lead"]
 Sie können die PowerShell Commandlets zum Sichern von SQL Server-Datenbanken oder Windows-Dateisystemen verwenden. Dazu gehört die Sicherung einer SQL Server-Datenbank oder eines Windows-Dateisystems, einschließlich der Herstellung einer Verbindung mit dem SnapCenter-Server, der Ermittlung der SQL Server-Datenbankinstanzen oder Windows-Dateisysteme, das Hinzufügen einer Richtlinie, das Erstellen einer Backup-Ressourcengruppe, das Sichern und das Überprüfen des Backups.
 
 *Was Sie brauchen*

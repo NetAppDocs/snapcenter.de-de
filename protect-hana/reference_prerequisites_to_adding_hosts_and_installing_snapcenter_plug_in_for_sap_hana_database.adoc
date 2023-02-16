@@ -34,7 +34,7 @@ Bevor Sie einen Host hinzufügen und die Plug-in-Pakete installieren, müssen Si
 http://www.java.com/en/download/manual.jsp["Java-Downloads für alle Betriebssysteme"]
 
 +
-https://imt.netapp.com/matrix/imt.jsp?components=105284;&solution=1259&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"]
+https://imt.netapp.com/matrix/imt.jsp?components=108391;&solution=1259&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"]
 
 
 
@@ -48,7 +48,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=105284;&solution=1259&isHWU&src
 http://www.java.com/en/download/manual.jsp["Java-Downloads für alle Betriebssysteme"]
 
 +
-https://imt.netapp.com/matrix/imt.jsp?components=105284;&solution=1259&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"]
+https://imt.netapp.com/matrix/imt.jsp?components=108391;&solution=1259&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"]
 
 * Für SAP HANA-Datenbanken, die auf einem Linux-Host ausgeführt werden und das Plug-in für SAP HANA Database installieren, wird das SnapCenter-Plug-in für UNIX automatisch installiert.
 

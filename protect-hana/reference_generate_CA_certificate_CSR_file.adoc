@@ -10,6 +10,7 @@ summary: 'Sie können eine Zertifikatsignierungsanforderung (CSR) generieren und
 :imagesdir: ../media/
 
 
+[role="lead"]
 Sie können eine Zertifikatsignierungsanforderung (CSR) generieren und das Zertifikat importieren, das von einer Zertifizierungsstelle (CA) mit dem generierten CSR abgerufen werden kann. Dem Zertifikat ist ein privater Schlüssel zugeordnet.
 
 CSR ist ein Block von codiertem Text, der einem autorisierten Zertifikatanbieter zur Beschaffung des signierten CA-Zertifikats übergeben wird.

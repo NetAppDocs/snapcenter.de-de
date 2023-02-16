@@ -78,7 +78,7 @@ NOTE: Es wird empfohlen, aber nicht erforderlich, dass Sie SnapCenter Standard-L
 |===
 *Zusätzliche Anforderungen*
 
-Für die Mindestanforderungen des ONTAP und Applikations-Plug-ins siehe https://imt.netapp.com/matrix/imt.jsp?components=105961;&solution=1259&isHWU&src=IMT["Interoperabilitäts-Matrix-Tool"^]
+Für die Mindestanforderungen des ONTAP und Applikations-Plug-ins siehe https://imt.netapp.com/matrix/imt.jsp?components=108408;&solution=1259&isHWU&src=IMT["Interoperabilitäts-Matrix-Tool"^]
 
 |===
 | Hosts | Mindestanforderungen 
@@ -87,7 +87,7 @@ Für die Mindestanforderungen des ONTAP und Applikations-Plug-ins siehe https://
  a| 
 Betriebssystem (64 Bit)
  a| 
-Siehe https://imt.netapp.com/matrix/imt.jsp?components=105961;&solution=1259&isHWU&src=IMT["Interoperabilitäts-Matrix-Tool"^]
+Siehe https://imt.netapp.com/matrix/imt.jsp?components=108408;&solution=1259&isHWU&src=IMT["Interoperabilitäts-Matrix-Tool"^]
 
 
 

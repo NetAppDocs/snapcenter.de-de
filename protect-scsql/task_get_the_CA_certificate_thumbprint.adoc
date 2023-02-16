@@ -10,6 +10,7 @@ summary: Abrufen des Daumenabdrucks für das CA-Zertifikat
 :imagesdir: ../media/
 
 
+[role="lead"]
 Ein ZertifikatDaumendruck ist eine hexadezimale Zeichenfolge, die ein Zertifikat identifiziert. Ein Daumendruck wird aus dem Inhalt des Zertifikats mithilfe eines Daumendruckalgorithmus berechnet.
 
 *Schritte*

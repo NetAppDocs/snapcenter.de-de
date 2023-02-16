@@ -10,6 +10,7 @@ summary: Sie können den Status von SnapCenter-Klonvorgängen mithilfe der Seite
 :imagesdir: ../media/
 
 
+[role="lead"]
 Sie können den Status von SnapCenter-Klonvorgängen mithilfe der Seite Jobs überwachen. Sie können den Fortschritt eines Vorgangs überprüfen, um zu bestimmen, wann dieser abgeschlossen ist oder ob ein Problem vorliegt.
 
 *Über diese Aufgabe*

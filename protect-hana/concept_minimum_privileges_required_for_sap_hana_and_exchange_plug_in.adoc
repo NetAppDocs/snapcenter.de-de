@@ -10,6 +10,7 @@ summary: Die erforderlichen Mindestberechtigungen für ONTAP variieren je nach S
 :imagesdir: ../media/
 
 
+[role="lead"]
 Die erforderlichen Mindestberechtigungen für ONTAP variieren je nach SnapCenter Plug-ins, die Sie zur Datensicherung verwenden.
 
 |===

@@ -10,6 +10,7 @@ summary: Sie können den Fortschritt der Installation des SnapCenter-Plug-in-Pak
 :imagesdir: ../media/
 
 
+[role="lead"]
 Sie können den Fortschritt der Installation des SnapCenter-Plug-in-Pakets über die Seite Jobs überwachen. Möglicherweise möchten Sie den Installationsfortschritt prüfen, um festzustellen, wann die Installation abgeschlossen ist oder ob ein Problem vorliegt.
 
 *Über diese Aufgabe*

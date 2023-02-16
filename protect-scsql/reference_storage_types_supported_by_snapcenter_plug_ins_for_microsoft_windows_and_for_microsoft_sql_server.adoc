@@ -10,9 +10,10 @@ summary: SnapCenter unterstützt eine Vielzahl von Storage-Typen sowohl auf phys
 :imagesdir: ../media/
 
 
+[role="lead"]
 SnapCenter unterstützt eine Vielzahl von Storage-Typen sowohl auf physischen Computern als auch auf Virtual Machines. Sie müssen überprüfen, ob Ihr Speichertyp unterstützt wird, bevor Sie das Paket für Ihren Host installieren.
 
-SnapCenter Provisioning und Datensicherung werden unter Windows Server unterstützt. Aktuelle Informationen zu unterstützten Versionen finden Sie im https://imt.netapp.com/matrix/imt.jsp?components=105963;&solution=1258&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"^].
+SnapCenter Provisioning und Datensicherung werden unter Windows Server unterstützt. Aktuelle Informationen zu unterstützten Versionen finden Sie im  https://imt.netapp.com/matrix/imt.jsp?components=108395;&solution=1258&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"^].
 
 |===
 | Maschine | Storage-Typ | Bereitstellung mit | Support-Hinweise 

@@ -10,6 +10,7 @@ summary: Sie können Wiederherstellungsaufträge abbrechen, die in die Warteschl
 :imagesdir: ../media/
 
 
+[role="lead"]
 Sie können Wiederherstellungsaufträge abbrechen, die in die Warteschlange gestellt werden.
 
 Sie sollten als SnapCenter-Administrator oder -Auftragseigentümer angemeldet sein, um Wiederherstellungsvorgänge abzubrechen.

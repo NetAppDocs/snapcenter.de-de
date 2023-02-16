@@ -10,6 +10,7 @@ summary: Sie können Klonjobs, die in die Warteschlange gestellt werden, abbrech
 :imagesdir: ../media/
 
 
+[role="lead"]
 Sie können Klonvorgänge in die Warteschlange abbrechen.
 
 Sie sollten als SnapCenter-Administrator oder -Auftragseigentümer angemeldet sein, um Klonvorgänge abzubrechen.

@@ -1,10 +1,16 @@
-= 
+---
+permalink: protect-scsql/task_clone_backups_using_powershell_cmdlets_for_sql.html 
+sidebar: sidebar 
+keywords: clone 
+summary: Der Klon-Workflow umfasst die Planung, die Durchführung des Klonvorgangs und die Überwachung des Vorgangs. 
+---
+= Klonen von Backups mit PowerShell Cmdlets
 :allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
 
 
-'''
-Permalink: Protect-scsql/task_clone_backups_using_powershell_cmdlets_for_sql.html Sidebar: Sidebar Schlüsselwörter: Clone summary: 'Der Klon-Workflow umfasst die Planung, die Durchführung des Klonvorgangs und die Überwachung des Vorgangs.' --- = Clone-Backups mit PowerShell cmdlets :Icons: Font :imagedir: ../media/
-
+[role="lead"]
 Der Klon-Workflow umfasst die Planung, die Durchführung des Klonvorgangs und die Überwachung des Vorgangs.
 
 Sie müssen die PowerShell Umgebung vorbereitet haben, um die PowerShell Cmdlets auszuführen.

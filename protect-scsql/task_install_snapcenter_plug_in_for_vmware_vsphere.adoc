@@ -10,6 +10,7 @@ summary: 'Wenn Ihre Datenbanken auf Virtual Machines (VMs) gespeichert sind oder
 :imagesdir: ../media/
 
 
+[role="lead"]
 Wenn Ihre Datenbanken auf Virtual Machines (VMs) gespeichert sind oder VMs und Datastores geschützt werden sollen, müssen Sie das SnapCenter Plug-in für die virtuelle Appliance VMware vSphere implementieren.
 
 Informationen zur Bereitstellung finden Sie unter https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_get_started_overview.html["Implementierungsübersicht"^].

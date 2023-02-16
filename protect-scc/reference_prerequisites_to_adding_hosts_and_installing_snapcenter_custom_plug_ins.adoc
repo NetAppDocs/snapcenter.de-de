@@ -88,7 +88,7 @@ Wenn Sie Windows Server 2019 oder Windows Server 2016 für den SnapCenter-Server
 http://www.java.com/en/download/manual.jsp["Java-Downloads für alle Betriebssysteme"]
 
 +
-https://imt.netapp.com/matrix/imt.jsp?components=105308;&solution=1259&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"]
+https://imt.netapp.com/matrix/imt.jsp?components=108393;&solution=1259&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"]
 
 * Sie müssen sudo-Berechtigungen für den nicht-Root-Benutzer konfigurieren, um Zugriff auf mehrere Pfade zu ermöglichen. Fügen Sie die folgenden Zeilen zur Datei /etc/sudoers mit dem Dienstprogramm visudo Linux hinzu.
 +
