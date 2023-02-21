@@ -8,7 +8,7 @@ indexpage:
   - title: Los geht's
     links:
     - title: Versionshinweise
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2883299
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2885481
     - title: Weitere Informationen zu SnapCenter
       url: "/concept/concept_snapcenter_overview.html"
     - title: Kurzreferenz zum Schutz von SQL Server-Datenbanken
