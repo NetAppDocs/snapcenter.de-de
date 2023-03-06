@@ -9,7 +9,7 @@ entries:
 - title: REST-Web-Services-Grundlage
   url: "/sc-automation/concept_rest_web_services_foundation.html"
 - title: Grundlegende betriebliche Eigenschaften
-  url: "/sc-automation/concept_basic_operational_characterstics.html"
+  url: "/sc-automation/concept_basic_operational_characteristics.html"
 - title: Eingabevariablen, die eine API-Anforderung steuern
   url: "/sc-automation/concept_input_variables_controlling_an_api_request.html"
 - title: Interpretation einer API-Antwort
