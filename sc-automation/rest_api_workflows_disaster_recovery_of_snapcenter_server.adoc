@@ -4,14 +4,66 @@ sidebar: sidebar
 keywords:  
 summary: Die Disaster Recovery-Funktion von SnapCenter verwendet FÜR das Backup des SnapCenter Servers REST-APIs. 
 ---
-= REST API wird für Disaster Recovery von SnapCenter Server unterstützt
+= REST-APIs für Disaster Recovery (DR)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
+:firstname: [.lead]
+:author: [.lead]
+:authorinitials: [
+:authors: [.lead]
 
 
-[role="lead"]
-Die SnapCenter Disaster Recovery-Funktion (DR) verwendet REST-APIs für das Backup des SnapCenter Servers. Mithilfe VON REST-APIs können Sie die folgenden Operationen auf der SEITE REST APIs Swagger ausführen. Informationen zum Zugriff auf die Seite Swagger finden Sie unter link:https://docs.netapp.com/us-en/snapcenter/sc-automation/task_how%20to_access_rest_apis_using_the_swagger_api_web_page.html["Zugriff auf REST-APIs über die Swagger-API-Webseite"].
+Die SnapCenter Disaster Recovery-Funktion (DR) verwendet REST-APIs für das Backup des SnapCenter Servers. Führen Sie die folgenden Schritte aus, bevor Sie die DR-REST-APIs verwenden.
+
+*Schritte*
+
+. Neues Backup für Server-DR erstellen, das einen SnapCenter Server aus einem festgelegten DR-Backup mithilfe einer Rest-API für DR-Sicherung wiederherstellt: `/4.5/disasterrecovery/server/backup`
+. Richten Sie die sekundäre Servermaschine ein, bevor Sie den SnapCenter-Server auf dem sekundären Server installieren, sollten Sie die Voraussetzungen erfüllen.
++
+** Der alternative Server-Hostname/Host-FQDN sollte mit dem Host-Namen des primären Servers identisch sein, die IP-Adresse kann jedoch unterschiedlich sein.
+** Die Version des sekundären Servers sollte mit dem primären Server identisch sein.
+** Die sekundäre SnapCenter sollte am selben Standort und am gleichen Port wie die primäre installiert werden.
+
+
+. Bevor Sie den DR-Wiederherstellungsvorgang des Servers ausführen, sollten Sie nach dem Ausfall den Zielpfad oder den Pfad zum Speichern der DR-Backups verwenden.
++
+** Stellen Sie sicher, dass die DR-Backup-Dateien mit dem folgenden Befehl auf den neuen SnapCenter-Server kopiert werden:
+`xcopy <Ssource_Path> \\<Destination_Server_IP>\<Folder_Path> /O /X /E /H /K {ex : xcopy C:\DRBackup \\10.225.81.114\c$\DRBackup /O /X /E /H /K}`
+
+
+. Installieren Sie den SnapCenter-Server auf der sekundären Maschine.
++
+** Während der DR-Wiederherstellung sollten Sie sicherstellen, dass keine Jobs in Verbindung mit dem SnapCenter-Server ausgeführt werden.
+
+
+. Installieren Sie den sekundären SnapCenter-Server am gleichen Speicherort und auf demselben Port wie den primären Server.
++
+** Führen Sie die Server-DR-Wiederherstellung mithilfe der DR-Wiederherstellungs-API durch:  `/4.5/disasterrecovery/server/restore`
++
+Wenn das Plug-in den Hostnamen des Servers nicht auflösen kann, melden Sie sich bei jedem Plug-in-Host an und fügen Sie den Eintrag etc/Host für die neue IP im Format <New IP> SC_Server_Name hinzu. Beispiel: `10.225.81.35 SCServer1`
+
++
+Server etc/Host-Einträge werden nicht wiederhergestellt. Sie können sie manuell aus dem DR-Backup-Ordner wiederherstellen.
+
+
+
+
+
+
+NOTE: Für ein F5-Setup wird der Wiederherstellungsvorgang als eigenständiges Programm ausgeführt. Sie sollten eine Reihe von Befehlen ausführen, um das F5 erneut zu erstellen. Siehe, Link: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_Migrate_SnapCenter_migrate_to_another_Server["So migrieren Sie SnapCenter auf einen anderen Server"^]
+
+
+NOTE: Nach der DR-Wiederherstellung wird der Host hinzugefügt, Sie sollten das Plug-in jedoch manuell installieren.
+
+
+NOTE: Der Zeitplan für die Repository-Sicherung wird nur wiederhergestellt, wenn Sie das SnapCenter-Plug-in für Windows installieren und NetApp-LUN an die Servermaschine anbinden.
+
+
+
+== REST API wird für Disaster Recovery von SnapCenter Server unterstützt
+
+Mithilfe VON REST-APIs können Sie die folgenden Operationen auf der SEITE REST APIs Swagger ausführen. Informationen zum Zugriff auf die Seite Swagger finden Sie unter link:https://docs.netapp.com/us-en/snapcenter/sc-automation/task_how%20to_access_rest_apis_using_the_swagger_api_web_page.html["Zugriff auf REST-APIs über die Swagger-API-Webseite"].
 
 *Was Sie brauchen*
 
@@ -23,13 +75,10 @@ Die SnapCenter Disaster Recovery-Funktion (DR) verwendet REST-APIs für das Back
 
 SnapCenter Server DR unterstützt alle Plug-ins.
 
-[cols="10,40,50,10"]
 |===
-| Schritt | Beschreibung | REST API | HTTP-Methode 
+| Beschreibung | REST API | HTTP-Methode 
 
 
- a| 
-1
  a| 
 Holen Sie vorhandene DR-Backups des SnapCenter Servers
 
@@ -43,8 +92,6 @@ GET
 
 
  a| 
-2
- a| 
 Erstellen Sie ein neues Server-DR-Backup.
  a| 
 `/4.5/disasterrecovery/server/backup`
@@ -54,26 +101,7 @@ POST
 
 
  a| 
-3
- a| 
 Stellt einen SnapCenter-Server aus einem festgelegten Server-DR-Backup wieder her.
-
-*Voraussetzungen*
-
-* Der Name des alternativen Serverhosts sollte mit dem primären Server identisch sein, die IP-Adresse kann jedoch unterschiedlich sein.
-* Die Serverversion sollte die gleiche sein wie der primäre Server.
-* Stellen Sie sicher, dass die DR-Backup-Dateien mit dem folgenden Befehl auf den neuen SnapCenter-Server kopiert werden:
-+
-`xcopy <Ssource_Path> \\<Destination_Server_IP>\<Folder_Path> /O /X /E /H /K  {ex : xcopy C:\DRBackup \\10.225.81.114\c$\DRBackup /O /X /E /H /K}`
-
-
-
-Wenn das Plug-in den Hostnamen des Servers nicht lösen kann, melden Sie sich bei jedem Plug-in-Host an und fügen Sie den etc/Host-Eintrag für die neue IP im Format hinzu:
-`<New IP>	SC_Server_Name`
-
-Beispiel: 10.225.81.35 SCServer1
-
-Die Server- etc/Host-Datei wird nicht wiederhergestellt. Sie können sie manuell aus dem DR-Backup-Ordner wiederherstellen.
  a| 
 `/4.5/disasterrecovery/server/restore`
  a| 
@@ -81,8 +109,6 @@ POST
 
 
 
- a| 
-4
  a| 
 Löschen Sie das Server-DR-Backup auf Basis des Backup-Namens.
  a| 
@@ -92,8 +118,6 @@ Löschen
 
 
 
- a| 
-5
  a| 
 Aktiviert oder deaktiviert die Speicher-DR
  a| 

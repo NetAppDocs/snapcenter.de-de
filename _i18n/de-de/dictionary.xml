@@ -5307,32 +5307,18 @@
   <block id="607ae7a08e1d8da9ed8df0e56a63095d" category="summary">Die Disaster Recovery-Funktion von SnapCenter verwendet FÜR das Backup des SnapCenter Servers REST-APIs.</block>
   <block id="78a063ff38d2b793d6d796023bf46a0c" category="doc">REST API wird für Disaster Recovery von SnapCenter Server unterstützt</block>
   <block id="0e8b55402d6627c0f8102010e3494744" category="inline-link-macro">Zugriff auf REST-APIs über die Swagger-API-Webseite</block>
-  <block id="91ab0f2c983023d0027fbe07aa0f3fe7" category="paragraph">Die SnapCenter Disaster Recovery-Funktion (DR) verwendet REST-APIs für das Backup des SnapCenter Servers. Mithilfe VON REST-APIs können Sie die folgenden Operationen auf der SEITE REST APIs Swagger ausführen. Informationen zum Zugriff auf die Seite Swagger finden Sie unter <block ref="2025c045f65fe4c2f57ea8e2f34bc22a" category="inline-link-macro-rx"></block>.</block>
   <block id="c3801e49df2e57ee5488d512e1cf02b0" category="list-text">Der SnapCenter-Server sollte betriebsbereit sein, um die DR-Wiederherstellungs-API auszuführen.</block>
   <block id="a58600f18618dccbf582ceb82520f1ae" category="paragraph">SnapCenter Server DR unterstützt alle Plug-ins.</block>
-  <block id="48c7c41b72e1d678923ce3571aa65b2d" category="cell">Schritt</block>
   <block id="aba3d4b49c454e1974970e7b5514b001" category="cell">REST API</block>
   <block id="511e67fd33176b5c5df2fcf5169691d4" category="paragraph">Holen Sie vorhandene DR-Backups des SnapCenter Servers</block>
   <block id="c3117c33abd012814d4b2d7b924c1f8d" category="admonition">Sie sollten den Zielpfad angeben, in dem die DR-Backups gespeichert werden.</block>
   <block id="5683cd95d1258c1198131ee3fde12f8f" category="paragraph"><block ref="8165860b05af4f9b66e6a4ce08f04ef6" prefix="" category="inline-code"></block></block>
-  <block id="c81e728d9d4c2f636f067f89cc14862c" category="paragraph">2</block>
   <block id="2012ae142f225323da2a6e6b42372bd8" category="paragraph">Erstellen Sie ein neues Server-DR-Backup.</block>
   <block id="4d5710dee895c5f98e2a36bdeef9d63c" category="paragraph"><block ref="fe172164c0bbfbb71439d4e0d42883f5" prefix="" category="inline-code"></block></block>
-  <block id="eccbc87e4b5ce2fe28308fd9f2a7baf3" category="paragraph">3</block>
   <block id="3d53caca8e9b880190a77914260432ef" category="paragraph">Stellt einen SnapCenter-Server aus einem festgelegten Server-DR-Backup wieder her.</block>
-  <block id="fc01add8dc5e609f9be29c977daabdb7" category="paragraph">*Voraussetzungen*</block>
-  <block id="119b209f3bca82380d31e9ec34d4997b" category="list-text">Der Name des alternativen Serverhosts sollte mit dem primären Server identisch sein, die IP-Adresse kann jedoch unterschiedlich sein.</block>
-  <block id="f052ac36f43bc8a21796f6c4fc5a79e2" category="list-text">Die Serverversion sollte die gleiche sein wie der primäre Server.</block>
-  <block id="58d4bb8d9e64a51c8e256edf1012afef" category="list-text">Stellen Sie sicher, dass die DR-Backup-Dateien mit dem folgenden Befehl auf den neuen SnapCenter-Server kopiert werden:</block>
-  <block id="9d50f2e9dcf6f8828b93d76e4e348c5c" category="paragraph"><block ref="63645834ffd285c7ed3da7338fcb6d8b" prefix="" category="inline-code"></block></block>
-  <block id="6318bc3cec87bcdb03cab32f9670f6dc" category="paragraph">Wenn das Plug-in den Hostnamen des Servers nicht lösen kann, melden Sie sich bei jedem Plug-in-Host an und fügen Sie den etc/Host-Eintrag für die neue IP im Format hinzu:<block ref="6e5eb9ff6139cd7586b3cc2aa0497f7f" prefix=" " category="inline-code"></block></block>
-  <block id="a09638d3ee7f516207640b2340404009" category="paragraph">Beispiel: 10.225.81.35 SCServer1</block>
-  <block id="6d4bea151109003c5e0920bae84073a0" category="paragraph">Die Server- etc/Host-Datei wird nicht wiederhergestellt. Sie können sie manuell aus dem DR-Backup-Ordner wiederherstellen.</block>
   <block id="4be41a636618a9946610f44cdfd45adf" category="paragraph"><block ref="60709718d7a794a4b06a075a7df6ad86" prefix="" category="inline-code"></block></block>
-  <block id="a87ff679a2f3e71d9181a67b7542122c" category="paragraph">4</block>
   <block id="de7c2595c4bced19b8869303d92cef7d" category="paragraph">Löschen Sie das Server-DR-Backup auf Basis des Backup-Namens.</block>
   <block id="13914c16a90c0b0c44e99f78ba2183b2" category="paragraph"><block ref="fe172164c0bbfbb71439d4e0d42883f5" prefix="" category="inline-code"></block></block>
-  <block id="e4da3b7fbbce2345d7772b0674a318d5" category="paragraph">5</block>
   <block id="9aa96933bdaa05ec27830a1517e54f9a" category="paragraph">Aktiviert oder deaktiviert die Speicher-DR</block>
   <block id="9bb6ced642f1be37b6ad58e85292fffa" category="paragraph"><block ref="d1ce3cd66a1844665a722875b7dc8311" prefix="" category="inline-code"></block></block>
   <block id="6fc21adbf0e55cc3da583314e4540308" category="summary">Jede API-Anfrage generiert eine Antwort an den Client. Sie sollten die Antwort überprüfen, um festzustellen, ob sie erfolgreich war, und weitere Daten nach Bedarf abrufen.</block>
@@ -7956,4 +7942,28 @@
   <block id="62daf6a07ef62b5f47d64602451886c4" category="paragraph">Aktuelle Informationen zu unterstützten Versionen finden Sie unter<block ref="78bb88f9abe535c4182359f981c4d0d5" category="inline-link-rx"></block>.</block>
   <block id="8b64c44e24e9cf1c59554cf2c41479bf" category="paragraph">Ausführliche Informationen zu den unterstützten Anwendungen und Datenbanken finden Sie unter<block ref="78bb88f9abe535c4182359f981c4d0d5" category="inline-link-rx"></block>.</block>
   <block id="026ab5d2853d1f0c92bc7f3703d62e90" category="sidebar">SnapCenter Software ist eine einfache, zentralisierte und skalierbare Plattform, die applikationskonsistenten Datenschutz für Applikationen, Datenbanken, Host-Filesysteme und VMs bietet, die auf ONTAP Systemen in der Hybrid Cloud ausgeführt werden. Diese Dokumentationsbibliothek enthält Informationen zur Version 4.8.</block>
+  <block id="3f02fb62bfeb289d4be1d20d610004f0" category="doc">REST-APIs für Disaster Recovery (DR)</block>
+  <block id="d32779bdd599ffb81c5a1d466000d56e" category="paragraph">Die SnapCenter Disaster Recovery-Funktion (DR) verwendet REST-APIs für das Backup des SnapCenter Servers. Führen Sie die folgenden Schritte aus, bevor Sie die DR-REST-APIs verwenden.</block>
+  <block id="c78f6c96db76c1f69e91b5487e704f43" category="list-text">Neues Backup für Server-DR erstellen, das einen SnapCenter Server aus einem festgelegten DR-Backup mithilfe einer Rest-API für DR-Sicherung wiederherstellt:<block ref="fe172164c0bbfbb71439d4e0d42883f5" prefix=" " category="inline-code"></block></block>
+  <block id="f72771614abb57fc7a16f6aa264da665" category="list-text">Richten Sie die sekundäre Servermaschine ein, bevor Sie den SnapCenter-Server auf dem sekundären Server installieren, sollten Sie die Voraussetzungen erfüllen.</block>
+  <block id="494f2693f3776d355700eeab7dd75821" category="list-text">Der alternative Server-Hostname/Host-FQDN sollte mit dem Host-Namen des primären Servers identisch sein, die IP-Adresse kann jedoch unterschiedlich sein.</block>
+  <block id="31f27d6daa5ab50a1011f7c910c6e5d3" category="list-text">Die Version des sekundären Servers sollte mit dem primären Server identisch sein.</block>
+  <block id="7aafedae29efa6e49e3abbb250243837" category="list-text">Die sekundäre SnapCenter sollte am selben Standort und am gleichen Port wie die primäre installiert werden.</block>
+  <block id="8490b635a4e468a237b8b257d031011c" category="list-text">Bevor Sie den DR-Wiederherstellungsvorgang des Servers ausführen, sollten Sie nach dem Ausfall den Zielpfad oder den Pfad zum Speichern der DR-Backups verwenden.</block>
+  <block id="8972c05484753254a6f948a4962b6811" category="list-text">Stellen Sie sicher, dass die DR-Backup-Dateien mit dem folgenden Befehl auf den neuen SnapCenter-Server kopiert werden:<block ref="f9683fa16c9d437a04d3664577ef2872" prefix=" " category="inline-code"></block></block>
+  <block id="4939134c976f3894f29e1ce445b76428" category="list-text">Installieren Sie den SnapCenter-Server auf der sekundären Maschine.</block>
+  <block id="dc75347cc15e78823bdaadb0ea654097" category="list-text">Während der DR-Wiederherstellung sollten Sie sicherstellen, dass keine Jobs in Verbindung mit dem SnapCenter-Server ausgeführt werden.</block>
+  <block id="9a4130dee8443d03bcdf62bae505136e" category="list-text">Installieren Sie den sekundären SnapCenter-Server am gleichen Speicherort und auf demselben Port wie den primären Server.</block>
+  <block id="5753398a53564a3efa071ab4a2a25e75" category="list-text">Führen Sie die Server-DR-Wiederherstellung mithilfe der DR-Wiederherstellungs-API durch: <block ref="60709718d7a794a4b06a075a7df6ad86" prefix=" " category="inline-code"></block></block>
+  <block id="e729f7885b63addbf250ef2f33329efb" category="paragraph">Wenn das Plug-in den Hostnamen des Servers nicht auflösen kann, melden Sie sich bei jedem Plug-in-Host an und fügen Sie den Eintrag etc/Host für die neue IP im Format &lt;New IP&gt; SC_Server_Name hinzu. Beispiel:<block ref="787ca03a3d14e5cce46cedf0bba7ac2b" prefix=" " category="inline-code"></block></block>
+  <block id="421f836e09d607d08dad463276b0c52e" category="paragraph">Server etc/Host-Einträge werden nicht wiederhergestellt. Sie können sie manuell aus dem DR-Backup-Ordner wiederherstellen.</block>
+  <block id="cf6d86307a7decebf79e2175ef2bc96f" category="inline-link">So migrieren Sie SnapCenter auf einen anderen Server</block>
+  <block id="40b06602d6310e9f595ec07f57b84775" category="admonition">Für ein F5-Setup wird der Wiederherstellungsvorgang als eigenständiges Programm ausgeführt. Sie sollten eine Reihe von Befehlen ausführen, um das F5 erneut zu erstellen. Siehe, Link:<block ref="fb5c34144d693d79610d99e63e5e4e12" category="inline-link-rx"></block></block>
+  <block id="d51a9a84121a4ca319f6f0b5d481f073" category="admonition">Nach der DR-Wiederherstellung wird der Host hinzugefügt, Sie sollten das Plug-in jedoch manuell installieren.</block>
+  <block id="2dce035ff36be1c01663c842167acf77" category="admonition">Der Zeitplan für die Repository-Sicherung wird nur wiederhergestellt, wenn Sie das SnapCenter-Plug-in für Windows installieren und NetApp-LUN an die Servermaschine anbinden.</block>
+  <block id="d894da67863cc5e9abfa9afc40b47771" category="paragraph">Mithilfe VON REST-APIs können Sie die folgenden Operationen auf der SEITE REST APIs Swagger ausführen. Informationen zum Zugriff auf die Seite Swagger finden Sie unter <block ref="2025c045f65fe4c2f57ea8e2f34bc22a" category="inline-link-macro-rx"></block>.</block>
+  <block id="04f76259e3406e39f106d09b85354906" category="inline-link">Bei Backups mit SnapCenter für Exchange wird nur die Hälfte der Snapshots auf dem Ziel-Log-Volume von Vault gespeichert</block>
+  <block id="67e1d332319e6fe55fd35967c2ec989e" category="admonition">Erstellen Sie beim Umgang mit Exchange Volumes (LUNs) separate Vault-Richtlinien für Protokolle und Datenbanken, und setzen Sie die Keep (Retention) für die Protokollrichtlinie auf die doppelte Anzahl für jedes Label wie die Datenbankrichtlinie unter Verwendung derselben Labels. Weitere Informationen finden Sie unter:<block ref="069d987d34ba2a5b3f4862b42bb7f849" category="inline-link-rx"></block></block>
+  <block id="b885eb831c1b0ea66dc957240ef0bacd" category="admonition">Stellen Sie beim Wiederherstellen von Kontrolldateien sicher, dass die Verzeichnisstruktur entweder vorhanden ist oder mit dem korrekten Benutzer- und Gruppeneigentum erstellt werden soll, falls vorhanden, damit die Dateien durch den Wiederherstellungsvorgang an den Zielspeicherort kopiert werden können. Wenn das Verzeichnis nicht vorhanden ist, schlägt der Wiederherstellungsauftrag fehl.</block>
+  <block id="3a6eb59ee064b09b020c1a87c5de4988" category="admonition">IBM Java wird nicht unterstützt.</block>
 </blocks>

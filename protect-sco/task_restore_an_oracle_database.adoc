@@ -77,6 +77,9 @@ Kontrolldateien
 Wählen Sie *Kontrolldateien* aus.
 
 
+NOTE: Stellen Sie beim Wiederherstellen von Kontrolldateien sicher, dass die Verzeichnisstruktur entweder vorhanden ist oder mit dem korrekten Benutzer- und Gruppeneigentum erstellt werden soll, falls vorhanden, damit die Dateien durch den Wiederherstellungsvorgang an den Zielspeicherort kopiert werden können. Wenn das Verzeichnis nicht vorhanden ist, schlägt der Wiederherstellungsauftrag fehl.
+
+
 
  a| 
 Wiederholen Sie die Protokolldateien
