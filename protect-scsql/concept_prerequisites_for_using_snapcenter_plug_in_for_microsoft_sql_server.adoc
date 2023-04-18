@@ -30,13 +30,6 @@ Informationen zum Ausführen des Cmdlet finden Sie im https://library.netapp.com
 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/["Dokumentation zum SnapCenter Plug-in für VMware vSphere"]
 
 * Führen Sie die Host-seitige Storage-Bereitstellung mit dem SnapCenter Plug-in für Microsoft Windows durch.
-* Vorhandene Datenbanken auf NetApp Storage verschieben
-+
-Weitere Informationen finden Sie unter Informationen zum Importieren von SnapCenter.
-
-+
-link:concept_import_archived_backups_from_snapmanager_for_sql_to_snapcenter.html["Importieren Sie archivierte Backups von SnapManager für Microsoft SQL Server in SnapCenter"]
-
 * Richten Sie SnapMirror- und SnapVault-Beziehungen ein, falls Sie eine Backup-Replizierung möchten.
 
 

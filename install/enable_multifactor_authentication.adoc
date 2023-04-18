@@ -119,7 +119,7 @@ Die SnapCenter MFA-Funktion kann auch über REST-APIs aktiviert werden.
 
 Schließen Sie nach dem Aktivieren, Aktualisieren oder Deaktivieren der MFA-Einstellungen in SnapCenter alle Browser-Registerkarten und öffnen Sie einen Browser erneut, um sich erneut anzumelden. Dadurch werden die vorhandenen oder aktiven Session-Cookies gelöscht.
 
-Informationen zur Fehlerbehebung finden Sie unter link:..https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_login_in_multiple_tabs_shows_MFA_error%3A_The_SAML_message_response_(1)_doesn%E2%80%99t_match_the_expected_response_(2)["Bei der SnapCenter-Anmeldung in mehreren Registerkarten ist ein MFA-Fehler aufgetreten"]
+Informationen zur Fehlerbehebung finden Sie unter https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_MFA_login_error_The_SAML_message_response_1_doesnt_match_the_expected_response_2["Bei der SnapCenter-Anmeldung in mehreren Registerkarten ist ein MFA-Fehler aufgetreten"^].
 
 
 

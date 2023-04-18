@@ -196,13 +196,13 @@ Sie sollten einen Benutzer mit lokalen Administratorrechten mit lokalen Anmeldeb
 
 Sie sollten einen Benutzer mit sysadmin-Berechtigungen auf dem SQL Server haben. Das Plug-in verwendet Microsoft VDI Framework, für das ein Sysadmin-Zugriff erforderlich ist.
 
-Wenn Sie SnapManager für Microsoft SQL Server verwenden und Daten von SnapManager für Microsoft SQL Server in SnapCenter importieren möchten, lesen Sie link:../protect-scsql/concept_import_archived_backups_from_snapmanager_for_sql_to_snapcenter.html["Importieren Sie archivierte Backups"^]
-
 
 
 == Installieren Sie den SnapCenter-Server
 
-*SnapCenter-Server herunterladen und installieren*
+
+
+=== Laden Sie den SnapCenter-Server herunter, und installieren Sie ihn
 
 *Schritte*
 
@@ -221,7 +221,9 @@ NOTE: Das Sonderzeichen „%“ wird im benutzerdefinierten Pfad für die Instal
 . Klicken Sie Auf *Jetzt Installieren*.
 
 
-*Melden Sie sich bei SnapCenter* an
+
+
+=== Melden Sie sich bei SnapCenter an
 
 *Schritte*
 
@@ -236,7 +238,9 @@ Verwenden Sie für ein integriertes lokales Format für den Admin-Benutzernamen 
 . Klicken Sie Auf *Anmelden*.
 
 
-*Hinzufügen einer SnapCenter Standard Controller-basierten Lizenz*
+
+
+=== Fügen Sie eine Controller-basierte Lizenz für SnapCenter Standard hinzu
 
 *Schritte*
 
@@ -250,7 +254,9 @@ Verwenden Sie für ein integriertes lokales Format für den Admin-Benutzernamen 
 
 
 
-*Hinzufügen einer kapazitätsbasierten SnapCenter-Lizenz*
+
+
+=== Fügen Sie eine kapazitätsbasierte SnapCenter Lizenz hinzu
 
 *Schritte*
 
@@ -265,7 +271,9 @@ Verwenden Sie für ein integriertes lokales Format für den Admin-Benutzernamen 
 . Klicken Sie Auf *Fertig Stellen*.
 
 
-*Speichersystemverbindungen einrichten*
+
+
+=== Richten Sie Verbindungen zum Speichersystem ein
 
 *Schritte*
 
@@ -285,7 +293,9 @@ Verwenden Sie für ein integriertes lokales Format für den Admin-Benutzernamen 
 
 == Installieren Sie das Plug-in für Microsoft SQL Server
 
-*Einrichten von Run As Credentials, um das Plug-in für Microsoft SQL Server zu installieren*
+
+
+=== Richten Sie Run As Credentials ein, um das Plug-in für Microsoft SQL Server zu installieren
 
 *Schritte*
 
@@ -299,7 +309,9 @@ Verwenden Sie für ein integriertes lokales Format für den Admin-Benutzernamen 
 
 
 
-*Fügen Sie einen Host hinzu und installieren Sie das Plug-in für Microsoft SQL Server*
+
+
+=== Fügen Sie einen Host hinzu, und installieren Sie das Plug-in für Microsoft SQL Server
 
 *Schritte*
 
