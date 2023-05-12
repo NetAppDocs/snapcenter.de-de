@@ -19,7 +19,7 @@ Wenn Sie die MySQL High Availability (HA)-Funktion verwenden möchten, müssen S
 
 SnapCenter bietet die _get-SmReposityConfig_ und _set-SmRepositoryConfig_ PowerShell Commandlets zur Verwaltung der MySQL Replikation.
 
-Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ können Sie auch auf die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["SnapCenter Software Cmdlet Referenzhandbuch"^].
+Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ können Sie auch auf die verweisen https://["SnapCenter Software Cmdlet Referenzhandbuch"^].
 
 Beachten Sie die Einschränkungen für die MySQL HA-Funktion:
 
@@ -35,4 +35,4 @@ Wenn ein Failover aufgrund eines MySQL Servers oder SnapCenter Servers ausfällt
 
 
 
-Informationen zur Konfiguration der Hochverfügbarkeit finden Sie unter https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_NLB_and_ARR_with_SnapCenter["So konfigurieren Sie NLB und ARR mit SnapCenter"^].
+Informationen zur Konfiguration der Hochverfügbarkeit finden Sie unter https://["So konfigurieren Sie NLB und ARR mit SnapCenter"^].

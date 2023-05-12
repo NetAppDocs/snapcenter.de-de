@@ -24,7 +24,7 @@ NOTE: Die automatische Installation des SnapCenter-Servers über die Befehlszeil
 * Sie sollten sicherstellen, dass MySQL Server nicht auf dem Host installiert ist, auf dem Sie den SnapCenter-Server installieren möchten.
 * Sie sollten das Debuggen von Windows-Installateurs aktiviert haben.
 +
-Informationen zur Aktivierung finden Sie auf der Microsoft-Website https://support.microsoft.com/kb/223300["Windows Installer-Protokollierung"^].
+Informationen zur Aktivierung finden Sie auf der Microsoft-Website https://["Windows Installer-Protokollierung"^].
 
 +
 
@@ -34,7 +34,7 @@ NOTE: Sie sollten den SnapCenter-Server nicht auf einem Host mit Microsoft Excha
 
 *Schritte*
 
-. Laden Sie das Installationspaket für den SnapCenter Server von herunter https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab["NetApp Support Website"^].
+. Laden Sie das Installationspaket für den SnapCenter Server von herunter https://["NetApp Support Website"^].
 . Starten Sie die Installation des SnapCenter-Servers, indem Sie auf die heruntergeladene .exe-Datei doppelklicken.
 +
 Nach Beginn der Installation werden alle Vorabprüfungen durchgeführt und wenn die Mindestanforderungen nicht erfüllt werden, werden entsprechende Fehler- oder Warnmeldungen angezeigt.

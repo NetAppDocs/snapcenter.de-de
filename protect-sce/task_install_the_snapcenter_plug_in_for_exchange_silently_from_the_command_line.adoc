@@ -19,7 +19,7 @@ Sie sollten Plug-in für Exchange über die Benutzeroberfläche von SnapCenter i
 * Sie müssen die SnapCenter-Plug-in-Pakete installiert haben.
 * Vor der Installation müssen Sie die frühere Version des SnapCenter-Plug-ins für Microsoft SQL Server löschen.
 +
-Weitere Informationen finden Sie unter https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_Install_a_SnapCenter_Plug-In_manually_and_directly_from_thePlug-In_Host["So installieren Sie ein SnapCenter-Plug-in manuell und direkt über den Plug-in-Host"^].
+Weitere Informationen finden Sie unter https://["So installieren Sie ein SnapCenter-Plug-in manuell und direkt über den Plug-in-Host"^].
 
 
 

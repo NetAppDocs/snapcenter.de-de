@@ -40,7 +40,7 @@ Für das Management der VM-konsistenten Datensicherung von VMs, VMDKs und Datast
 * Wiederherstellung der SCV-Gastdatei
 
 
-Weitere Informationen finden Sie unter https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_types_of_rbac_for_snapcenter_users.html["RBAC-Typen für SnapCenter Plug-in für VMware vSphere Benutzer"^]
+Weitere Informationen finden Sie unter https://["RBAC-Typen für SnapCenter Plug-in für VMware vSphere Benutzer"^]
 
 |===
 

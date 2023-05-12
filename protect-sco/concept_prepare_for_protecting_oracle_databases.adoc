@@ -40,9 +40,9 @@ Siehe link:../protect-sco/reference_prerequisites_for_adding_hosts_and_installin
 
 * Wenn Sie Oracle-Datenbanken in SAN-Umgebungen nutzen, stellen Sie sicher, dass die SAN-Umgebung gemäß der in den folgenden Leitfäden genannten Empfehlung konfiguriert ist:
 +
-** https://library.netapp.com/ecm/ecm_download_file/ECMLP2547957["Empfohlene Host-Einstellungen für Linux Unified Host Utilities"^]
-** https://library.netapp.com/ecm/ecm_download_file/ECMLP2547958["Verwendung von Linux Hosts mit ONTAP Storage"^]
-** https://library.netapp.com/ecm/ecm_download_file/ECMP1119218["Host-Einstellungen, die von AIX Host Utilities betroffen sind"^]
+** https://["Empfohlene Host-Einstellungen für Linux Unified Host Utilities"^]
+** https://["Verwendung von Linux Hosts mit ONTAP Storage"^]
+** https://["Host-Einstellungen, die von AIX Host Utilities betroffen sind"^]
 
 
 * Wenn Sie Oracle-Datenbanken auf LVM in Oracle Linux- oder RHEL-Betriebssystemen haben, installieren Sie die neueste Version von Logical Volume Management (LVM).
@@ -54,7 +54,7 @@ Für Nutzer von SnapCenter 4.1.1 enthält die Dokumentation zum SnapCenter Plug-
 
 *Weitere Informationen*
 
-* https://imt.netapp.com/matrix/imt.jsp?components=108392;&solution=1259&isHWU&src=IMT["Interoperabilitäts-Matrix-Tool"^]
-* https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/index.html["Dokumentation zum SnapCenter Plug-in für VMware vSphere"^]
-* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Data_protection_operation_fails_in_a_non-multipath_environment_in_RHEL_7_and_later["Die Datensicherung schlägt in einer Umgebung ohne Multipath in RHEL 7 und höher fehl"^]
+* https://["Interoperabilitäts-Matrix-Tool"^]
+* https://["Dokumentation zum SnapCenter Plug-in für VMware vSphere"^]
+* https://["Die Datensicherung schlägt in einer Umgebung ohne Multipath in RHEL 7 und höher fehl"^]
 

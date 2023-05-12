@@ -13,4 +13,4 @@ summary: Liefert wichtige Informationen zu dieser Version von SnapCenter Server 
 [role="lead"]
 Liefert wichtige Informationen zu dieser Version von SnapCenter Server und den SnapCenter Plug-in-Paketen, einschließlich behoer Probleme, bekannter Probleme, Vorsichtsmaßnahmen und Einschränkungen.
 
-Weitere Informationen finden Sie im https://library.netapp.com/ecm/ecm_download_file/ECMLP2885481["Versionshinweise zu SnapCenter Software 4.8"^].
+Weitere Informationen finden Sie im https://["Versionshinweise zu SnapCenter Software 4.8"^].

@@ -31,7 +31,7 @@ Die Wiederherstellung der AG schlägt fehl, wenn eine der folgenden Bedingungen 
 * Wenn Sie benutzerdefinierte Protokollverzeichnis-Backups auf einen alternativen Host wiederherstellen, müssen der SnapCenter Server und der Plug-in-Host dieselbe SnapCenter-Version installiert haben.
 * Sie müssen Microsoft Hotfix, KB2887595, installiert haben. Die Microsoft Support Site enthält weitere Informationen über KB2887595.
 +
-https://support.microsoft.com/kb/2887595["Microsoft Support-Artikel 2887595: Windows RT 8.1, Windows 8.1 und Windows Server 2012 R2 Update Rollup: November 2013"]
+https://["Microsoft Support-Artikel 2887595: Windows RT 8.1, Windows 8.1 und Windows Server 2012 R2 Update Rollup: November 2013"]
 
 * Sie müssen die Ressourcengruppen oder die Datenbank gesichert haben.
 * Wenn Sie Snapshot Kopien in einen Spiegel oder Vault replizieren, muss dem SnapCenter Administrator die Storage Virtual Machines (SVMs) sowohl für die Quell-Volumes als auch die Ziel-Volumes zugewiesen haben.

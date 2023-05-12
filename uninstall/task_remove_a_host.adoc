@@ -20,7 +20,7 @@ Wenn der SnapCenter-Server einen Host entfernt, werden zunächst Backups, Klone,
 * Wenn der Host über eine Ressourcengruppe verfügt, die für einen anderen Host freigegeben ist, und Sie den Host löschen, wird auch die Ressourcengruppe gelöscht.
 * Sie sollten das Cmdlet _Remove-SmHost_ verwenden, um die nicht mehr verwendeten oder nicht erreichbaren Plug-in-Hosts zu entfernen.
 +
-Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ können Sie auch auf die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["SnapCenter Software Cmdlet Referenzhandbuch"^]
+Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ können Sie auch auf die verweisen https://["SnapCenter Software Cmdlet Referenzhandbuch"^]
 
 * Die zum Entfernen eines Hosts benötigte Zeit hängt von der Anzahl der Backups und den Aufbewahrungseinstellungen ab. Das liegt daran, dass die Snapshot Kopien von jedem Controller gelöscht werden und die Metadaten bereinigt werden.
 

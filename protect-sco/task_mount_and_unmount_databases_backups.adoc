@@ -30,7 +30,7 @@ Sie sollten eine Datenbanksicherung manuell mounten, wenn Sie auf die Dateien im
 
 
 
-NOTE: Informationen zum Bearbeiten des Parameters asm_diskstring finden Sie unter https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Disk_paths_are_not_added_to_the_asm_diskstring_database_parameter["So fügen Sie Datenträgerpfade zu asm_diskstring hinzu"^].
+NOTE: Informationen zum Bearbeiten des Parameters asm_diskstring finden Sie unter https://["So fügen Sie Datenträgerpfade zu asm_diskstring hinzu"^].
 
 * Sie sollten die ASM-Anmeldedaten und den ASM-Port konfigurieren, wenn er sich von der des Quelldatenbank-Hosts während des Mounten des Backups unterscheidet.
 * Wenn Sie ein Mount an einen alternativen Host mounten möchten, müssen Sie überprüfen, dass der alternative Host die folgenden Anforderungen erfüllt:
@@ -78,7 +78,7 @@ Wenn Sie das Backup einer ASM-Datenbank mounten, wird der Mount Path +diskgroupn
 `./sccli Get-Smbackup-BackupNamebackup_name`
 
 +
-Die Informationen zu den Parametern, die mit dem Befehl und deren Beschreibungen verwendet werden können, können durch Ausführen von get-Help _Command_Name_ abgerufen werden. Alternativ können Sie auch auf die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2885486["SnapCenter Software Command Reference Guide"^].
+Die Informationen zu den Parametern, die mit dem Befehl und deren Beschreibungen verwendet werden können, können durch Ausführen von get-Help _Command_Name_ abgerufen werden. Alternativ können Sie auch auf die verweisen https://["SnapCenter Software Command Reference Guide"^].
 
 
 

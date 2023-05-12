@@ -30,4 +30,4 @@ SnapCenter Plug-in für VMware vSphere
 |===
 Informationen zu SnapCenter-REST-APIs finden Sie unter link:../sc-automation/overview_rest_apis.html["Übersicht ÜBER REST-APIs"^]
 
-Informationen zum SnapCenter Plug-in für VMware vSphere REST-APIs finden Sie unter https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_rest_apis_overview.html["SnapCenter Plug-in für VMware vSphere REST-APIs"^]
+Informationen zum SnapCenter Plug-in für VMware vSphere REST-APIs finden Sie unter https://["SnapCenter Plug-in für VMware vSphere REST-APIs"^]

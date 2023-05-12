@@ -80,7 +80,7 @@ Sie sollten gültige Anmeldedaten für die NetApp Support Site haben.
 
 *Schritte*
 
-. Loggen Sie sich auf der NetApp Support Site unter ein http://mysupport.netapp.com/["mysupport.netapp.com"^].
+. Loggen Sie sich auf der NetApp Support Site unter ein http://["mysupport.netapp.com"^].
 . Navigieren Sie zu *Systems* > *Softwarelizenzen*.
 . Wählen Sie im Auswahlkriterienbereich im Dropdown-Menü „Show Me All: Serial Numbers and Licenses“ die Option *SC_STANDARD* aus.
 +
@@ -108,7 +108,7 @@ Wenn Sie Ihre Anmeldedaten für die NetApp Support Site und die Seriennummer der
 
 *Schritte*
 
-. Navigieren Sie zum https://register.netapp.com/register/eclg.xwic["NetApp Lizenzdatei-Generator"^].
+. Navigieren Sie zum https://["NetApp Lizenzdatei-Generator"^].
 . Geben Sie die erforderlichen Informationen ein.
 . Wählen Sie im Feld Produktlinie im Pulldown-Menü die Option *SnapCenter Standard (kapazitätsbasiert)* aus.
 . Geben Sie im Feld Seriennummer des Produkts die Seriennummer für die SnapCenter-Lizenz ein

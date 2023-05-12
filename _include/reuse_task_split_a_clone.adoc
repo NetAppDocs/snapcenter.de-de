@@ -14,7 +14,7 @@ Wenn Sie beispielsweise Klon1 aus einem Datenbank-Backup erstellen, können Sie 
 Nach dem Aufteilen von Klon2 können Sie den Clone Split-Vorgang auf Klon1 durchführen, da Klon1 nicht mehr der Zwischenklon ist.
 
 * Wenn Sie einen Klon aufteilen, werden die Backup-Kopien und Klonjobs des Klons gelöscht.
-* Informationen zu Einschränkungen für den Klon-Split-Vorgang finden Sie unter http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["ONTAP 9 Leitfaden für das Management von logischem Storage"^].
+* Informationen zu Einschränkungen für den Klon-Split-Vorgang finden Sie unter http://["ONTAP 9 Leitfaden für das Management von logischem Storage"^].
 * Stellen Sie sicher, dass das Volume oder Aggregat auf dem Storage-System online ist.
 
 
@@ -68,4 +68,4 @@ Der Startvorgang für die Klontrennung schlägt fehl, wenn gerade Backup-, Wiede
 
 *Weitere Informationen*
 
-https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_clone_or_verfication_fails_with_aggregate_does_not_exist["Der SnapCenter Klon oder die Überprüfung schlägt fehl, wenn das Aggregat nicht vorhanden ist"]
+https://["Der SnapCenter Klon oder die Überprüfung schlägt fehl, wenn das Aggregat nicht vorhanden ist"]

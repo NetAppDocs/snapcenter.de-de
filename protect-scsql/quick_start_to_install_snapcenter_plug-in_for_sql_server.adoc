@@ -78,7 +78,7 @@ NOTE: Es wird empfohlen, aber nicht erforderlich, dass Sie SnapCenter Standard-L
 |===
 *Zusätzliche Anforderungen*
 
-Für die Mindestanforderungen des ONTAP und Applikations-Plug-ins siehe https://imt.netapp.com/matrix/imt.jsp?components=108408;&solution=1259&isHWU&src=IMT["Interoperabilitäts-Matrix-Tool"^]
+Für die Mindestanforderungen des ONTAP und Applikations-Plug-ins siehe https://["Interoperabilitäts-Matrix-Tool"^]
 
 |===
 | Hosts | Mindestanforderungen 
@@ -87,7 +87,7 @@ Für die Mindestanforderungen des ONTAP und Applikations-Plug-ins siehe https://
  a| 
 Betriebssystem (64 Bit)
  a| 
-Siehe https://imt.netapp.com/matrix/imt.jsp?components=108408;&solution=1259&isHWU&src=IMT["Interoperabilitäts-Matrix-Tool"^]
+Siehe https://["Interoperabilitäts-Matrix-Tool"^]
 
 
 
@@ -171,7 +171,7 @@ Windows Plug-in-Hosts
 
 Neben den Ports 135 und 445 sollte auch der von Microsoft festgelegte dynamische Portbereich geöffnet sein. Remote-Installationsvorgänge verwenden den Windows Management Instrumentation (WMI)-Dienst, der diesen Portbereich dynamisch durchsucht.
 
-Informationen zum unterstützten dynamischen Portbereich finden Sie unter https://docs.microsoft.com/en-US/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements["Serviceübersicht und Netzwerkanschlussanforderungen für Windows"^].
+Informationen zum unterstützten dynamischen Portbereich finden Sie unter https://["Serviceübersicht und Netzwerkanschlussanforderungen für Windows"^].
 
 
 
@@ -206,7 +206,7 @@ Sie sollten einen Benutzer mit sysadmin-Berechtigungen auf dem SQL Server haben.
 
 *Schritte*
 
-. Laden Sie das Installationspaket für den SnapCenter-Server von herunter https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab["NetApp Support Website"^] Doppelklicken Sie anschließend auf die exe.
+. Laden Sie das Installationspaket für den SnapCenter-Server von herunter https://["NetApp Support Website"^] Doppelklicken Sie anschließend auf die exe.
 +
 Nach Beginn der Installation werden alle Vorabprüfungen durchgeführt und wenn die Mindestanforderungen nicht erfüllt werden, werden entsprechende Fehler- oder Warnmeldungen angezeigt. Sie können die Warnmeldungen ignorieren und mit der Installation fortfahren. Fehler sollten jedoch behoben werden.
 

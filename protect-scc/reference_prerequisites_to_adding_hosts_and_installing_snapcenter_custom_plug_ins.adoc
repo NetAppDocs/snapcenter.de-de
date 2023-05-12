@@ -49,7 +49,7 @@ Die Custom_Plugin_Prüfsummenliste ist Teil der benutzerdefinierten Plug-in-Inst
 +
 .. Hat den SHA512-Hash der Plug-in-ZIP-Datei erzeugt.
 +
-Sie können Online-Tools wie verwenden https://emn178.github.io/online-tools/sha512_file_hash.html["SHA512-Hash"^].
+Sie können Online-Tools wie verwenden https://["SHA512-Hash"^].
 
 .. Der erzeugte SHA512-Hash wurde in einer neuen Zeile der Datei Custom_Plugin_Checksumme_list hinzugefügt.
 +
@@ -85,10 +85,10 @@ Nachfolgend ein Beispiel für einen Eintrag von SHA512-Hash in der Prüfsummenda
 Wenn Sie Windows Server 2019 oder Windows Server 2016 für den SnapCenter-Server-Host verwenden, müssen Sie Java 1.8 oder Java 11 (64-Bit) installieren. Das Interoperabilitäts-Matrix-Tool (IMT) enthält aktuelle Informationen zu Anforderungen.
 
 +
-http://www.java.com/en/download/manual.jsp["Java-Downloads für alle Betriebssysteme"]
+http://["Java-Downloads für alle Betriebssysteme"]
 
 +
-https://imt.netapp.com/matrix/imt.jsp?components=108393;&solution=1259&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"]
+https://["NetApp Interoperabilitäts-Matrix-Tool"]
 
 * Sie müssen sudo-Berechtigungen für den nicht-Root-Benutzer konfigurieren, um Zugriff auf mehrere Pfade zu ermöglichen. Fügen Sie die folgenden Zeilen zur Datei /etc/sudoers mit dem Dienstprogramm visudo Linux hinzu.
 +

@@ -13,7 +13,7 @@ summary: Sie können PowerShell Cmdlets verwenden, um eine fehlerhafte Kopie wie
 [role="lead"]
 Sie können PowerShell Cmdlets verwenden, um eine fehlerhafte Kopie wiederherzustellen, indem Sie entweder die aktuellste Kopie auf demselben Host oder die aktuellste Kopie von einem alternativen Host verwenden.
 
-Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ können Sie auch auf die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["SnapCenter Software Cmdlet Referenzhandbuch"^].
+Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ können Sie auch auf die verweisen https://["SnapCenter Software Cmdlet Referenzhandbuch"^].
 
 *Schritte*
 

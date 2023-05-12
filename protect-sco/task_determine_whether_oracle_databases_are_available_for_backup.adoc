@@ -18,7 +18,7 @@ Ressourcen sind Oracle Datenbanken auf dem Host, die von SnapCenter gemanagt wer
 * Sie müssen Aufgaben wie das Installieren des SnapCenter-Servers, das Hinzufügen von Hosts, das Erstellen von Speichersystemverbindungen und das Hinzufügen von Anmeldeinformationen abgeschlossen haben.
 * Wenn die Datenbanken auf einer Virtual Machine Disk (VMDK) oder RDM (Raw Device Mapping) befinden, müssen Sie das SnapCenter Plug-in für VMware vSphere implementieren und das Plug-in mit SnapCenter registrieren.
 +
-Weitere Informationen finden Sie unter https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere.html["Implementieren Sie das SnapCenter Plug-in für VMware vSphere"^].
+Weitere Informationen finden Sie unter https://["Implementieren Sie das SnapCenter Plug-in für VMware vSphere"^].
 
 * Wenn sich Datenbanken auf einem VMDK-Dateisystem befinden, müssen Sie sich bei vCenter angemeldet und in *VM-Optionen* > *Erweitert* > *Konfiguration bearbeiten* navigiert haben, um den Wert von _Disk.enableUUID_ auf true für die VM festzulegen.
 * Sie müssen den Prozess überprüft haben, den SnapCenter befolgt, um verschiedene Typen und Versionen von Oracle Datenbanken zu ermitteln.

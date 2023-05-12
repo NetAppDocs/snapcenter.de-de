@@ -90,7 +90,7 @@ Sie sollten Assets hinzufügen, bevor Sie den Benutzern Zugriff zuweisen.
 
 
 
-IMPORTANT: Wenn Sie zum Schutz von VMs, VMDKs oder Datastores das SnapCenter Plug-in für VMware vSphere verwenden, sollten Sie ein vCenter Benutzer zu einem SnapCenter Plug-in für VMware vSphere hinzufügen. Weitere Informationen zu VMware vSphere-Rollen finden Sie unter https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_predefined_roles_packaged_with_snapcenter.html["Vordefinierte Rollen in Paketen mit SnapCenter Plug-in für VMware vSphere"^].
+IMPORTANT: Wenn Sie zum Schutz von VMs, VMDKs oder Datastores das SnapCenter Plug-in für VMware vSphere verwenden, sollten Sie ein vCenter Benutzer zu einem SnapCenter Plug-in für VMware vSphere hinzufügen. Weitere Informationen zu VMware vSphere-Rollen finden Sie unter https://["Vordefinierte Rollen in Paketen mit SnapCenter Plug-in für VMware vSphere"^].
 
 *Schritte*
 

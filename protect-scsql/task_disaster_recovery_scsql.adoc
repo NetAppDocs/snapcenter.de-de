@@ -29,4 +29,4 @@ link:https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_hosts.html["M
 . Importieren Sie Windows- und SQL-Zeitpläne aus dem SnapCenter-Plug-in für SQL Server-Ordner aus dem DR-Backup.
 
 
-Weitere Informationen finden Sie im https://www.youtube.com/watch?v=Nbr_wm9Cnd4&list=PLdXI3bZJEw7nofM6lN44eOe4aOSoryckg["Disaster Recovery-APIs"^] Video:
+Weitere Informationen finden Sie im https://["Disaster Recovery-APIs"^] Video:

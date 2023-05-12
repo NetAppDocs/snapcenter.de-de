@@ -77,7 +77,7 @@ IP-Adressen des Domänencontrollers
  a| 
 Wenn der Domain-FQDN nicht vom SnapCenter-Server resolbar ist, geben Sie eine oder mehrere IP-Adressen für den Domänencontroller an.
 
-Weitere Informationen finden Sie unter https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_does_not_allow_to_add_Domain_Controller_IP_for_untrusted_domain_from_GUI["Fügen Sie von der GUI eine Domänen-Controller-IP für eine nicht vertrauenswürdige Domäne hinzu"^].
+Weitere Informationen finden Sie unter https://["Fügen Sie von der GUI eine Domänen-Controller-IP für eine nicht vertrauenswürdige Domäne hinzu"^].
 
 |===
 .. Wenn Sie *LDAPS* auswählen, geben Sie die Informationen an, die zur Registrierung der nicht vertrauenswürdigen Domäne für LDAPS erforderlich sind:

@@ -55,7 +55,7 @@ Standardmäßig erkennt die SLM-Funktion regelmäßig die LUNs, die keine optimi
 
 +
 ** Sie können dies deaktivieren, indem Sie den Wert FÜR DEN PARAMETER ENABLE_LUNPATH_MONITORING auf false setzen.
-** Sie können die Häufigkeit angeben, in der die LUN-Pfade automatisch korrigiert werden, indem Sie den Wert (in Stunden) dem Parameter „LUNPATH_MONITORING_INTERVAL“ zuweisen. Informationen zu SLM finden Sie im http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanag/home.html["ONTAP 9 – Systemadministrationshandbuch"^].
+** Sie können die Häufigkeit angeben, in der die LUN-Pfade automatisch korrigiert werden, indem Sie den Wert (in Stunden) dem Parameter „LUNPATH_MONITORING_INTERVAL“ zuweisen. Informationen zu SLM finden Sie im http://["ONTAP 9 – Systemadministrationshandbuch"^].
 
 
 * Unterstützung für Non-Volatile Memory Express (NVMe) unter Linux

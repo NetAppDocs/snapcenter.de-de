@@ -55,7 +55,7 @@ Datensicherung wird unterstützt für Microsoft Exchange Server, Microsoft SQL S
 Datensicherung wird auch für andere standardmäßige oder benutzerdefinierte Applikationen und Datenbanken unterstützt, indem ein Framework für die Erstellung benutzerdefinierter SnapCenter Plug-ins bereitgestellt wird. Dadurch wird die Datensicherung für andere Applikationen und Datenbanken über dieselbe zentrale Konsole ermöglicht. Durch die Nutzung dieses Frameworks hat NetApp benutzerdefinierte SnapCenter Plug-ins für IBM DB2, MongoDB, MySQL usw. im NetApp Automation Store veröffentlicht.
 
 +
-https://automationstore.netapp.com/home.shtml["NetApp Storage Automation Store"^]
+https://["NetApp Storage Automation Store"^]
 
 * Richtlinienbasierte Backups
 +
@@ -82,13 +82,13 @@ Die SnapCenter Benutzeroberfläche bietet eine einheitliche, zentrale Benutzerob
 SnapCenter umfasst REST-APIs für die meisten Funktionen zur Integration in jede Orchestrierungssoftware sowie die Verwendung von Windows PowerShell Cmdlets und Befehlszeilenschnittstelle.
 
 +
-Weitere Informationen zu REST-APIs finden Sie unter https://docs.netapp.com/us-en/snapcenter/sc-automation/overview_rest_apis.html["ÜBERSICHT ÜBER DIE REST-API"].
+Weitere Informationen zu REST-APIs finden Sie unter https://["ÜBERSICHT ÜBER DIE REST-API"].
 
 +
-Weitere Informationen zu Windows Cmdlets finden Sie unter https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["SnapCenter Software Cmdlet Referenzhandbuch"^].
+Weitere Informationen zu Windows Cmdlets finden Sie unter https://["SnapCenter Software Cmdlet Referenzhandbuch"^].
 
 +
-Weitere Informationen zu UNIX-Befehlen finden Sie unter https://library.netapp.com/ecm/ecm_download_file/ECMLP2885486["SnapCenter Software Command Reference Guide"^].
+Weitere Informationen zu UNIX-Befehlen finden Sie unter https://["SnapCenter Software Command Reference Guide"^].
 
 * Zentrale Datensicherungs-Konsole und Berichterstellung
 * Rollenbasierte Zugriffssteuerung (Role Based Access Control, RBAC) für Sicherheit und Delegierung.
@@ -158,7 +158,7 @@ NOTE: Das SnapCenter Plug-in für UNIX ist kein eigenständiges Plug-in und kann
 
 * Benutzerdefinierte SnapCenter Plug-ins
 +
-Benutzerdefinierte Plug-ins werden von der Community unterstützt und können von heruntergeladen werden https://automationstore.netapp.com/home.shtml["NetApp Storage Automation Store"^].
+Benutzerdefinierte Plug-ins werden von der Community unterstützt und können von heruntergeladen werden https://["NetApp Storage Automation Store"^].
 
 
 
@@ -265,7 +265,7 @@ Linux oder Windows
  a| 
 Benutzerdefinierte Plug-ins
  a| 
-https://automationstore.netapp.com/home.shtml["NetApp Storage Automation Store"^]
+https://["NetApp Storage Automation Store"^]
  a| 
 Plug-in für Windows für File-System-Backups
  a| 
@@ -277,7 +277,7 @@ Linux oder Windows
 
 NOTE: Das SnapCenter Plug-in für VMware vSphere unterstützt absturzkonsistente und VM-konsistente Backup- und Restore-Prozesse für Virtual Machines (VMs), Datastores und Virtual Machine Disks (VMDKs). Zudem unterstützt es die applikationsspezifischen Plug-ins von SnapCenter, um applikationskonsistente Backup- und Restore-Vorgänge für virtualisierte Datenbanken und Filesysteme zu sichern.
 
-Für Nutzer von SnapCenter 4.1.1 enthält die Dokumentation zum SnapCenter Plug-in für VMware vSphere 4.1.1 Informationen zum Schutz von virtualisierten Datenbanken und Dateisystemen. Für Nutzer von SnapCenter 4.2.x, die NetApp Data Broker 1.0 und 1.0.1, enthält Dokumentation Informationen zum Schutz von virtualisierten Datenbanken und Dateisystemen mithilfe des SnapCenter Plug-ins für VMware vSphere, das durch die Linux-basierte NetApp Data Broker Virtual Appliance (Open Virtual Appliance Format) bereitgestellt wird. Für Benutzer, die SnapCenter 4.3 oder höher verwenden, finden Sie das https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/index.html["Dokumentation zum SnapCenter Plug-in für VMware vSphere"^] Informationen zum Schutz von virtualisierten Datenbanken und Dateisystemen mithilfe des Linux-basierten SnapCenter Plug-ins für die virtuelle VMware vSphere Appliance (Open Virtual Appliance-Format).
+Für Nutzer von SnapCenter 4.1.1 enthält die Dokumentation zum SnapCenter Plug-in für VMware vSphere 4.1.1 Informationen zum Schutz von virtualisierten Datenbanken und Dateisystemen. Für Nutzer von SnapCenter 4.2.x, die NetApp Data Broker 1.0 und 1.0.1, enthält Dokumentation Informationen zum Schutz von virtualisierten Datenbanken und Dateisystemen mithilfe des SnapCenter Plug-ins für VMware vSphere, das durch die Linux-basierte NetApp Data Broker Virtual Appliance (Open Virtual Appliance Format) bereitgestellt wird. Für Benutzer, die SnapCenter 4.3 oder höher verwenden, finden Sie das https://["Dokumentation zum SnapCenter Plug-in für VMware vSphere"^] Informationen zum Schutz von virtualisierten Datenbanken und Dateisystemen mithilfe des Linux-basierten SnapCenter Plug-ins für die virtuelle VMware vSphere Appliance (Open Virtual Appliance-Format).
 
 
 
@@ -348,7 +348,7 @@ ES werden NATIVE SAN-Geräte, Dateisysteme und LVM-Layouts unterstützt, die auf
 * Unterstützt sowohl Windows als auch Linux Umgebungen. In Windows Umgebungen können benutzerdefinierte Applikationen über benutzerdefinierte Plug-ins optional mit dem SnapCenter Plug-in für Microsoft Windows ausgeführt werden, um dateibasierte Backups zu erstellen.
 
 
-Individuelle Plug-in-Beispiele für MySQL, DB2 und MongoDB für SnapCenter Software können von heruntergeladen werden https://automationstore.netapp.com/home.shtml["NetApp Storage Automation Store"^].
+Individuelle Plug-in-Beispiele für MySQL, DB2 und MongoDB für SnapCenter Software können von heruntergeladen werden https://["NetApp Storage Automation Store"^].
 
 
 NOTE: Individuelle MySQL, DB2 und MongoDB Plug-ins werden nur durch die NetApp Communitys unterstützt.

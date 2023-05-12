@@ -35,7 +35,7 @@ SnapCenter unterstützt Data ONTAP in 7-Mode nicht. Mit dem 7-Mode Transition To
 
 Bevor Sie Daten von SnapManager 3.4.x für Oracle und SnapManager 3.4.x für SAP zu SnapCenter importieren, sollten Sie die Konfigurationen kennen, die vom SnapCenter Plug-in für Oracle Database unterstützt werden.
 
-Die mit dem SnapCenter Plug-in für Oracle Database unterstützten Konfigurationen sind im aufgeführt https://imt.netapp.com/matrix/imt.jsp?components=108392;&solution=1259&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"^].
+Die mit dem SnapCenter Plug-in für Oracle Database unterstützten Konfigurationen sind im aufgeführt https://["NetApp Interoperabilitäts-Matrix-Tool"^].
 
 
 

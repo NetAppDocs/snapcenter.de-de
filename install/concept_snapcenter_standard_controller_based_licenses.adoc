@@ -176,7 +176,7 @@ Wenn Sie keine gültigen Anmeldedaten eingeben, werden keine Informationen für 
 
 *Schritte*
 
-. Loggen Sie sich auf der NetApp Support Site unter ein http://mysupport.netapp.com/["mysupport.netapp.com"^].
+. Loggen Sie sich auf der NetApp Support Site unter ein http://["mysupport.netapp.com"^].
 . Navigieren Sie zu *Systems* > *Softwarelizenzen*.
 . Stellen Sie im Bereich „Selection Criteria“ (Auswahlkriterien) sicher, dass die Seriennummer (auf der Rückseite des Geräts) ausgewählt ist, geben Sie die Seriennummer des Controllers ein und klicken Sie dann auf *Go!*.
 +
@@ -238,7 +238,7 @@ NOTE: Das manuelle Entfernen einer Testlizenz ist nur erforderlich, wenn Sie ein
 .. Führen Sie das Cmdlet "Open-SmConnection" aus, um eine Verbindungssitzung mit dem SnapCenter-Server für ein SnapCenterAdmin-Konto zu initiieren.
 .. Führen Sie das Set-RepositRepositRepositSmoryPassword aus, um das MySQL-Passwort zurückzusetzen.
 +
-Informationen zu den Cmdlets finden Sie unter https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["SnapCenter Software Cmdlet Referenzhandbuch"^].
+Informationen zu den Cmdlets finden Sie unter https://["SnapCenter Software Cmdlet Referenzhandbuch"^].
 
 
 

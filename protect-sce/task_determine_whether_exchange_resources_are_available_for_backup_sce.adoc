@@ -17,7 +17,7 @@ Ressourcen sind die Datenbanken, Exchange Database Availability Groups, die von 
 
 * Sie müssen bereits Aufgaben abgeschlossen haben, wie z. B. das Installieren von SnapCenter-Servern, das Hinzufügen von Hosts, das Erstellen von Speichersystemverbindungen, das Hinzufügen von Anmeldeinformationen und das Installieren des Plug-ins für Exchange.
 * Um die Funktionen der Single Mailbox Recovery Software nutzen zu können, müssen Sie Ihre aktive Datenbank auf dem Exchange Server befinden, wo die Single Mailbox Recovery Software installiert ist.
-* Wenn Datenbanken auf VMware RDM LUNs vorhanden sind, müssen Sie das SnapCenter Plug-in für VMware vSphere implementieren und das Plug-in bei SnapCenter registrieren. Der https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_get_started_overview.html["Dokumentation zum SnapCenter Plug-in für VMware vSphere"] Bietet weitere Informationen.
+* Wenn Datenbanken auf VMware RDM LUNs vorhanden sind, müssen Sie das SnapCenter Plug-in für VMware vSphere implementieren und das Plug-in bei SnapCenter registrieren. Der https://["Dokumentation zum SnapCenter Plug-in für VMware vSphere"] Bietet weitere Informationen.
 
 
 *Über diese Aufgabe*

@@ -45,7 +45,7 @@ Dieses Tool verarbeitet automatisch die korrekte Einrichtung der ONTAP-Berechtig
 
 NOTE: Wenn Sie zu einem späteren Zeitpunkt ein Upgrade von SnapCenter oder ONTAP durchführen, sollten Sie das Tool RBAC User Creator für Data ONTAP erneut ausführen, um die zuvor erstellten Benutzerrollen zu aktualisieren. Benutzerrollen, die für eine frühere Version von SnapCenter oder ONTAP erstellt wurden, funktionieren nicht ordnungsgemäß mit aktualisierten Versionen. Wenn Sie das Tool erneut ausführen, übernimmt es automatisch die Aktualisierung. Sie müssen die Rollen nicht neu erstellen.
 
-Weitere Informationen zum Einrichten von ONTAP RBAC-Rollen finden Sie im http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-adm-auth-rbac/home.html["ONTAP 9 Administratorauthentifizierung und RBAC-Energiehandbuch"^].
+Weitere Informationen zum Einrichten von ONTAP RBAC-Rollen finden Sie im http://["ONTAP 9 Administratorauthentifizierung und RBAC-Energiehandbuch"^].
 
 
 NOTE: Aus Konsistenzgründen bezieht sich die SnapCenter-Dokumentation auf die Rollen als Verwenden von Berechtigungen. Die OnCommand System Manager GUI verwendet den Begriff _attribut_ anstelle von _Privilege_. Beim Einrichten von ONTAP RBAC-Rollen bedeuten beide Begriffe dasselbe.
