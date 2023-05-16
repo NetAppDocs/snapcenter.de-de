@@ -13,6 +13,10 @@ summary: Mit SnapCenter können Backups des Applikations-Volumes geklont, der Kl
 [role="lead"]
 Sie können SnapCenter zum Klonen der Backups des Applikations-Volumes verwenden.
 
+*Bevor Sie beginnen*
+
+Wenn Sie das Plug-in als nicht-root-Benutzer installiert haben, sollten Sie die Ausführungsberechtigungen manuell den Verzeichnissen Prescript und Postscript zuweisen.
+
 *Schritte*
 
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das Oracle Datenbank-Plug-in aus der Liste aus.

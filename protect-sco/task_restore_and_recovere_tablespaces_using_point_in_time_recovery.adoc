@@ -13,9 +13,11 @@ summary: 'Sie können einen bestimmten Satz von Tablespaces wiederherstellen, di
 [role="lead"]
 Sie können einen bestimmten Satz von Tablespaces wiederherstellen, die beschädigt oder verworfen wurden, ohne dass die anderen Tabellen der Datenbank beeinträchtigt werden. SnapCenter verwendet RMAN für die Durchführung des Point-in-Time Recovery (PITR) der Tabellen.
 
-*Was Sie brauchen*
+*Bevor Sie beginnen*
 
-Die Backups, die zur Durchführung von PITR von Tabellen erforderlich sind, sollten katalogisiert und gemountet werden.
+* Die Backups, die zur Durchführung von PITR von Tabellen erforderlich sind, sollten katalogisiert und gemountet werden.
+* Wenn Sie das Plug-in als nicht-root-Benutzer installiert haben, sollten Sie die Ausführungsberechtigungen manuell den Verzeichnissen Prescript und Postscript zuweisen.
+
 
 *Über diese Aufgabe*
 

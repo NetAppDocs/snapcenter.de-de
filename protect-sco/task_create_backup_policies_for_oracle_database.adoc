@@ -13,11 +13,12 @@ summary: Bevor Sie SnapCenter zum Backup von Oracle-Datenbankressourcen verwende
 [role="lead"]
 Bevor Sie SnapCenter zum Backup von Oracle-Datenbankressourcen verwenden, müssen Sie eine Backup-Richtlinie für die Ressource oder die Ressourcengruppe erstellen, die Sie sichern möchten. Eine Backup-Richtlinie ist eine Reihe von Regeln, die das Managen, Planen und Aufbewahren von Backups regeln. Sie können auch die Einstellungen für Replikation, Skript und Backup-Typ festlegen. Das Erstellen einer Richtlinie spart Zeit, wenn Sie die Richtlinie für eine andere Ressource oder Ressourcengruppe wiederverwenden möchten.
 
-*Was Sie brauchen*
+*Bevor Sie beginnen*
 
 * Sie müssen Ihre Backup-Strategie definiert haben.
 * Sie müssen auf die Datensicherung vorbereitet sein, indem Sie Aufgaben wie das Installieren von SnapCenter, das Hinzufügen von Hosts, das Erkennen von Datenbanken und das Erstellen von Speichersystemverbindungen ausführen.
 * Wenn Sie Snapshot Kopien in einen gespiegelten oder sekundären Vault-Storage replizieren, muss der SnapCenter Administrator Ihnen die SVMs sowohl für die Quell- als auch die Ziel-Volumes zugewiesen haben.
+* Wenn Sie das Plug-in als nicht-root-Benutzer installiert haben, sollten Sie die Ausführungsberechtigungen manuell den Verzeichnissen Prescript und Postscript zuweisen.
 
 
 *Schritte*

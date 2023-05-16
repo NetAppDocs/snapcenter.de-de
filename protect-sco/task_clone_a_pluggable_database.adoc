@@ -13,6 +13,10 @@ summary: 'Sie können eine steckbare Datenbank \(PDB\) auf einem anderen oder de
 [role="lead"]
 Sie können eine steckbare Datenbank (PDB) auf einem anderen oder demselben Ziel-CDB auf demselben Host oder einem anderen Host klonen. Sie können die geklonte PDB auch auf einem gewünschten SCN oder Datum und Uhrzeit wiederherstellen.
 
+*Bevor Sie beginnen*
+
+Wenn Sie das Plug-in als nicht-root-Benutzer installiert haben, sollten Sie die Ausführungsberechtigungen manuell den Verzeichnissen Prescript und Postscript zuweisen.
+
 *Schritte*
 
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.

@@ -13,12 +13,15 @@ summary: 'Sie können eine steckbare Datenbank (PDB) wiederherstellen, die besch
 [role="lead"]
 Sie können eine steckbare Datenbank (PDB) wiederherstellen, die beschädigt oder verworfen wurde, ohne die andere DBs in der Container-Datenbank (CDB) zu belasten. SnapCenter nutzt RMAN für die Durchführung von Point-in-Time Recoverys (PITR) der PDB.
 
-*Was Sie brauchen*
+*Bevor Sie beginnen*
 
-Die Backups, die für die PITR einer PDB benötigt werden, sollten katalogisiert und gemountet werden.
-
+* Die Backups, die für die PITR einer PDB benötigt werden, sollten katalogisiert und gemountet werden.
++
 
 NOTE: In einem RAC-Setup sollten Sie die PDB manuell schließen (ändern des Status in „MOUNT“) auf allen Knoten des RAC-Setups.
+
+* Wenn Sie das Plug-in als nicht-root-Benutzer installiert haben, sollten Sie die Ausführungsberechtigungen manuell den Verzeichnissen Prescript und Postscript zuweisen.
+
 
 *Über diese Aufgabe*
 

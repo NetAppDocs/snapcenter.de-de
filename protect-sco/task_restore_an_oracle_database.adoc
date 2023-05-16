@@ -13,6 +13,10 @@ summary: Bei einem Datenverlust können Sie mit SnapCenter Daten von einem oder 
 [role="lead"]
 Bei einem Datenverlust können Sie mit SnapCenter Daten von einem oder mehreren Backups auf Ihrem aktiven Dateisystem wiederherstellen und dann die Datenbank wiederherstellen.
 
+*Bevor Sie beginnen*
+
+Wenn Sie das Plug-in als nicht-root-Benutzer installiert haben, sollten Sie die Ausführungsberechtigungen manuell den Verzeichnissen Prescript und Postscript zuweisen.
+
 *Über diese Aufgabe*
 
 Die Recovery wird anhand der Archivprotokolle durchgeführt, die am konfigurierten Speicherort für das Archivprotokoll verfügbar sind. Wenn die Datenbank im ARCHIVELOG-Modus ausgeführt wird, speichert die Oracle-Datenbank die gefüllten Gruppen von Redo-Log-Dateien an einem oder mehreren Offline-Zielen, die gemeinsam als archiviertes Redo-Protokoll bezeichnet werden. SnapCenter identifiziert und bindet die optimale Anzahl von Protokoll-Backups auf Basis der angegebenen SCN, des ausgewählten Datums und der ausgewählten Uhrzeit oder der Option „Protokolle“. Wenn die für die Recovery erforderlichen Archivprotokolle nicht am konfigurierten Speicherort verfügbar sind, sollten Sie die Snapshot Kopie mit den Protokollen mounten und den Pfad als externe Archivprotokolle angeben.

@@ -7963,4 +7963,5 @@
   <block id="158e3fb1c7bf72fb1db969f281a7a097" category="list-text"><block ref="f5ba209e62536d23f7b5fe25e81421e2" prefix="" category="inline-code"></block></block>
   <block id="198803c71459bc222adc91a3d7048f01" category="paragraph">Die Option *Benutzerdefiniertes Logverzeichnis verwenden* ist nur verfügbar, wenn Sie *Datenbank auf einen alternativen Host wiederherstellen* oder *Datenbank mit vorhandenen Datenbankdateien wiederherstellen* ausgewählt haben. Sie können auch den freigegebenen Pfad verwenden, aber sicherstellen, dass der SQL-Benutzer auf den Pfad zugreifen kann.</block>
   <block id="17049c1cdf73c2b4b41219f99ace3f81" category="list-text">Sie sollten *bash* als Standard-Shell für die Plug-in-Installation haben.</block>
+  <block id="b3fae7a36581789e46e17a83505c11b3" category="paragraph">Wenn Sie das Plug-in als nicht-root-Benutzer installiert haben, sollten Sie die Ausführungsberechtigungen manuell den Verzeichnissen Prescript und Postscript zuweisen.</block>
 </blocks>
