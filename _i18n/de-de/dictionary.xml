@@ -1550,19 +1550,14 @@
   <block id="070716b587ce6b006f4906a8222fc505" category="list-text"><block ref="c4a58f5a89534f3c56fb45bf5a2dca6a" prefix="" category="inline-code"></block></block>
   <block id="2bad882b7fb5945b0373cf8c526cb4ac" category="list-text"><block ref="4ec835b54c4394861b7aec03ca73cfcb" prefix="" category="inline-code"></block></block>
   <block id="c30d59401403b986989fc4a149ff2aea" category="summary">SnapCenter setzt strenge Sicherheits- und Authentifizierungsfunktionen ein, damit Ihre Daten sicher bleiben.</block>
-  <block id="606d5e037822a442727a528828b14a45" category="doc">Multi-Faktor-Authentifizierung (MFA) aktivieren</block>
-  <block id="ef3ab6fc872d21b146098f5850df64c9" category="paragraph">Um MFA-Funktionen zu aktivieren, sollten Sie einige Schritte im Active Directory Federation Service (AD FS)-Server und im SnapCenter-Server durchführen.</block>
   <block id="b2f9ddbfbf0bb6739ee75e8c2a6ac138" category="list-text">Der Windows Active Directory Federation Service (AD FS) sollte in der jeweiligen Domäne ausgeführt werden.</block>
-  <block id="ff213a826598e59e3839e9ee5713eb9a" category="list-text">Sie sollten über beliebige von AD FS unterstützte Multi-Faktor-Authentifizierungsdienste wie Azure MFA, Cisco Duo usw. verfügen.</block>
   <block id="cb7f79bbeb52e82fa7926e0724dba11e" category="list-text">Der SnapCenter- und AD-FS-Server-Zeitstempel sollte unabhängig von der Zeitzone gleich sein.</block>
   <block id="0ee03cd1523961dfa875fac5c6817350" category="list-text">Beschaffung und Konfiguration des autorisierten CA-Zertifikats für den SnapCenter-Server.</block>
   <block id="4090d0adfa0a73ca248f3a29df56f147" category="paragraph">CA-Zertifikat ist aus folgenden Gründen obligatorisch:</block>
-  <block id="e26a403b5bc4392b06e59bf0ea5f3734" category="list-text">Stellt sicher, dass die ADFS-F5-Kommunikation nicht unterbrochen wird, da die selbst signierten Zertifikate auf Knotenebene eindeutig sind.</block>
   <block id="3e3aa2cc7dad01d563ee8f2059cd8120" category="list-text">Stellt sicher, dass bei Upgrade, Reparatur oder Disaster Recovery (DR) in einer Standalone- oder Hochverfügbarkeitskonfiguration das selbstsignierte Zertifikat nicht wiederhergestellt wird, wodurch MFA neu konfiguriert werden kann.</block>
   <block id="6c09b2d713717656ff82620da0253eb5" category="list-text">Stellt IP-FQDN-Auflösungen sicher.</block>
   <block id="760bd9baa4b7633c0843cb714f00a44e" category="paragraph">Informationen zum CA-Zertifikat finden Sie unter <block ref="de78619abe7dcb7b53be3c4ab98b1283" category="inline-link-macro-rx"></block>.</block>
   <block id="c746671a4c0cb7e7a37abe538fe2107e" category="list-text">SnapCenter unterstützt SSO-basierte Anmeldungen, wenn andere Applikationen mit demselben AD FS konfiguriert werden. In bestimmten AD FS-Konfigurationen erfordert SnapCenter möglicherweise aus Sicherheitsgründen die Benutzerauthentifizierung in Abhängigkeit von der Persistenz der AD FS-Session.</block>
-  <block id="0d432c3383a301d652dc61c7708c5724" category="list-text">Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von Get-Help Command_Name abgerufen werden. Alternativ können Sie auch auf die verweisen<block ref="5df59c30e631270dc31bf843919ab849" category="inline-link-rx"></block>.</block>
   <block id="0470044badbfb7d0d8a4ec5bab24ebb3" category="list-text">Stellen Sie eine Verbindung zum Active Directory Federation Services (AD FS)-Host her.</block>
   <block id="6ef1300bebff7801c85a1789a6c0790a" category="list-text">Laden Sie die AD FS Federation-Metadatendatei von herunter <block ref="a9571343becbc81f25857902551c1e72" category="inline-link-rx"></block> FQDN&gt;/FederationMetadaten/2007-06/FederationMetadata.XML“</block>
   <block id="cc53a56f022408c7c918dae3f5120646" category="list-text">Kopieren Sie die heruntergeladene Datei auf SnapCenter-Server, um die MFA-Funktion zu aktivieren.</block>
@@ -1570,16 +1565,12 @@
   <block id="696ac2aea44e94108d138faca1e6061a" category="list-text">Generieren Sie mithilfe der PowerShell-Sitzung die SnapCenter MFA-Metadatendatei mit dem Cmdlet _New-SmMultifactorAuthenticationMetadata -Path_.</block>
   <block id="c82bb0422af1b29a8b9694bbfe3ebe9e" category="paragraph">Der Parameter Path gibt den Pfad an, in dem die MFA-Metadatendatei im SnapCenter-Server-Host gespeichert werden soll.</block>
   <block id="56fcee91de3134d2db0d32a05335e432" category="list-text">Kopieren Sie die generierte Datei auf den AD FS-Host, um SnapCenter als Client-Einheit zu konfigurieren.</block>
-  <block id="9268a48919705f415838693aa4146e28" category="list-text">Aktivieren Sie MFA für SnapCenter-Server mit dem Cmdlet _set-SmMultiFactorAuthentication -enable -Path_.</block>
   <block id="588a899e5cfd7ee10458176f79204605" category="paragraph">Der Parameter PATH gibt den Speicherort der XML-Metadatendatei AD FS MFA an, die in Schritt 3 auf den SnapCenter-Server kopiert wurde.</block>
-  <block id="b47bdbc8d57f844fea0134ffbecf2242" category="list-text">(Optional) Überprüfen Sie den MFA-Konfigurationsstatus und die Einstellungen mit dem Cmdlet _get-SmMultiFactorAuthentication_.</block>
   <block id="9e93c22d2a1e4426ec1fd94bd4ac31b3" category="list-text">Gehen Sie zur Microsoft Management Console (MMC), und führen Sie die folgenden Schritte aus:</block>
   <block id="9bcb5adfefb899867ed5b11f042b98db" category="list-text">Klicken Sie Auf *Datei* &gt; *Snapin Hinzufügen/Entfernen*.</block>
   <block id="cf424f2e43207d2c78b3d27a5dc0fda2" category="list-text">Klicken Sie Auf *Konsolenwurzel* &gt; *Zertifikate – Lokaler Computer* &gt; *Persönlich* &gt; *Zertifikate*.</block>
   <block id="b245a32518063d47ab60cd9ae65b7937" category="list-text">Klicken Sie mit der rechten Maustaste auf das CA-Zertifikat, das an SnapCenter gebunden ist, und wählen Sie dann *Alle Aufgaben* &gt; *Privater Schlüssel verwalten* aus.</block>
   <block id="39b5fcc1b0398cd4cdbf088d9851aa36" category="list-text">Führen Sie auf dem Berechtigungsassistenten die folgenden Schritte aus:</block>
-  <block id="cd55bfd42602b8f720a9d41caf148f78" category="list-text">Klicken Sie Auf *Hinzufügen*</block>
-  <block id="fc4f9883b30f507feb5ab0b4d42267cd" category="list-text">Klicken Sie auf *Locations* und wählen Sie den entsprechenden Host aus (Hierarchieoberst).</block>
   <block id="198e6981b37af309244a71441c5344c9" category="list-text">Klicken Sie im Popup-Fenster *Locations* auf *OK*.</block>
   <block id="80f7b3672de7c3d1051cd5ee2c883f05" category="list-text">Geben Sie im Feld Objektname ‘IIS_IUSRS’ ein, und klicken Sie auf *Namen überprüfen* und klicken Sie auf *OK*.</block>
   <block id="576824a9a44254550a67ab8aab39ac32" category="paragraph">Wenn die Prüfung erfolgreich war, klicken Sie auf *OK*.</block>
@@ -1587,38 +1578,29 @@
   <block id="90fa18d048bbd4d789b594ebceeb2490" category="list-text">Klicken Sie mit der rechten Maustaste auf *vertraut auf Partei* &gt; *Vertrauensbeschuss hinzufügen* &gt; *Start*.</block>
   <block id="0179eedc054410462409658b0bad268c" category="list-text">Wählen Sie die zweite Option aus, und durchsuchen Sie die SnapCenter MFA-Metadatendatei und klicken Sie auf *Weiter*.</block>
   <block id="b6312d7d51f31ed2e0c8dc5372435335" category="list-text">Geben Sie einen Anzeigenamen an und klicken Sie auf *Weiter*.</block>
-  <block id="0e94f80e83724112f00526866ff5106f" category="list-text">Wählen Sie die Richtlinien zur Zugriffskontrolle nach Bedarf und klicken Sie auf *Weiter*.</block>
-  <block id="148d7f6f40daf98c2955bdd9fe18e6c1" category="list-text">Legen Sie die Einstellungen auf der nächsten Registerkarte auf Standard fest.</block>
   <block id="0c43eee88d95f645135455225ef45492" category="paragraph">SnapCenter wird jetzt als vertrauensanzeige-Partei mit dem angegebenen Anzeigenamen dargestellt.</block>
   <block id="72636fa45db48574ba9c546fdd1db0a8" category="list-text">Wählen Sie den Namen aus, und führen Sie die folgenden Schritte aus:</block>
   <block id="fcfb637a4b496a9a140b628cdb573932" category="list-text">Klicken Sie Auf *Richtlinie Zur Bearbeitung Von Forderungen*.</block>
   <block id="082c51e92370324bc62e7c80c44d8941" category="list-text">Klicken Sie auf *Regel hinzufügen* und klicken Sie auf *Weiter*.</block>
-  <block id="6def5028f1988fc94fac52ad11230808" category="list-text">Geben Sie einen Namen für die Forderungsregel an</block>
   <block id="894da100f84831f7c70c6bfa7616298a" category="list-text">Wählen Sie *Active Directory* als Attributspeicher aus.</block>
   <block id="7fdc58355431a6a3d9515f7519f55a21" category="list-text">Wählen Sie das Attribut als *Benutzer-Principal-Name* und den ausgehenden Antragsart als *Name-ID* aus.</block>
   <block id="adfd9f210cddba9223539ba1793c20cb" category="list-text">Führen Sie die folgenden PowerShell-Befehle auf dem ADFS-Server aus.</block>
-  <block id="ac4be3bbcd220f4cca6269e289646cd3" category="paragraph">_Set-AdfsRelyingPartyTrust -TargetName ‘&lt;Anzeigename der Treueparty &gt;’ -SigningCertificateRevisionCheck None_</block>
-  <block id="573e4455d62a0e745b09afd6c4db34f0" category="paragraph">_Set-AdfsRelyingPartyTrust -TargetName ‘&lt;Anzeigename der Treueparty &gt;’ -VerschlüsselungZertifikateRevisionCheck Keine_</block>
   <block id="06a6a46ff24f4c0f682d4804aaf90175" category="list-text">Führen Sie die folgenden Schritte durch, um zu bestätigen, dass die Metadaten erfolgreich importiert wurden.</block>
   <block id="c3613ef2b11238bd320ee942d11e6fe4" category="list-text">Klicken Sie mit der rechten Maustaste auf das Vertrauen der Vertrauensbesteller und wählen Sie *Eigenschaften*.</block>
   <block id="35602ea96136092b8b885fe1ef749873" category="list-text">Stellen Sie sicher, dass die Felder Endpoints, Identifikatoren und Signatur ausgefüllt sind.</block>
   <block id="907fe6bfcd498fe3e561f7fb3ee67c89" category="paragraph">Die SnapCenter MFA-Funktion kann auch über REST-APIs aktiviert werden.</block>
-  <block id="1958e9c22cb352dba19d476e05b4a53b" category="paragraph">Schließen Sie nach dem Aktivieren, Aktualisieren oder Deaktivieren der MFA-Einstellungen in SnapCenter alle Browser-Registerkarten und öffnen Sie einen Browser erneut, um sich erneut anzumelden. Dadurch werden die vorhandenen oder aktiven Session-Cookies gelöscht.</block>
   <block id="442ed19a31ac1f651ba7bf07effe122c" category="inline-link-macro">Bei der SnapCenter-Anmeldung in mehreren Registerkarten ist ein MFA-Fehler aufgetreten</block>
   <block id="aeb89440d41f10fd9cc43ab75d800138" category="section-title">AD FS MFA-Metadaten aktualisieren</block>
   <block id="19b3ff63dd3f3b6c1e3e48e8b3be6141" category="paragraph">Sie sollten die AD FS MFA-Metadaten in SnapCenter aktualisieren, sobald es Änderungen im AD FS-Server gibt, wie z. B. Upgrade, CA-Zertifikatverlängerung, DR usw.</block>
   <block id="2a18eff05051b9c720a786193ade4742" category="list-text">Kopieren Sie die heruntergeladene Datei auf SnapCenter-Server, um die MFA-Konfiguration zu aktualisieren.</block>
   <block id="0129ab4e23da78e3b3d44732592d15ea" category="list-text">Aktualisieren Sie die AD FS Metadaten in SnapCenter, indem Sie das folgende Cmdlet ausführen:</block>
-  <block id="16c05d08e46f0d446d2623a535219dd1" category="paragraph">_Set-SmMultiFactorAuthentication -Path &lt;Speicherort der ADFS MFA-Metadatendatei&gt;_</block>
   <block id="97088f26ec75cb4d55c4fe5eeb3b62b4" category="section-title">SnapCenter MFA-Metadaten aktualisieren</block>
   <block id="ac82039d46e3be923c813d3d4c5456e4" category="paragraph">Sie sollten die SnapCenter MFA-Metadaten in AD FS immer dann aktualisieren, wenn es Änderungen am ADFS-Server gibt, wie Reparatur, CA-Zertifikatverlängerung, DR usw.</block>
   <block id="56ec825045a003fc115765658ea8b639" category="list-text">Klicken Sie Auf *Treuhand-Party-Trusts*.</block>
   <block id="83e84b83a6a686044df5e13021693e95" category="list-text">Klicken Sie mit der rechten Maustaste auf das Vertrauen der Vertrauensgesellschaft, das für SnapCenter erstellt wurde, und klicken Sie auf *Löschen*.</block>
   <block id="d929cc2f30ed7ebb91266d0b79b5f2cf" category="paragraph">Der benutzerdefinierte Name des Vertrauensverhältnisses wird angezeigt.</block>
   <block id="18231d11def74e66e747d2eb30fc1c50" category="list-text">Multi-Faktor-Authentifizierung (MFA) aktivieren.</block>
-  <block id="7c83e4b143b42aa42696c765109a8cc2" category="paragraph">Siehe <block ref="5ec6b0ec41fc91e8184fa478c63adb14" category="inline-link-macro-rx"></block></block>
   <block id="a606674f3f6a9cee6f0ddf2eef03b07b" category="section-title">Multi-Faktor-Authentifizierung (MFA) deaktivieren</block>
-  <block id="3ed7d0eb5098b6db6af6c5b3eb2ce30f" category="paragraph">Deaktivieren Sie MFA, und bereinigen Sie die Konfigurationsdateien, die beim Aktivieren von MFA erstellt wurden, indem Sie _Set-SmMultiFactorAuthentication -Disable_ Cmdlet verwenden.</block>
   <block id="4f208af6a990c3a6dbb3b1a7f78ab5d4" category="summary">Um eine SMB3-Freigabe auf einer Storage Virtual Machine (SVM) zu konfigurieren, können Sie entweder die SnapCenter Benutzeroberfläche oder PowerShell Commandlets verwenden.</block>
   <block id="61e81eb53b72fd5418e7a2bd125c8686" category="doc">SMB-Freigaben erstellen und managen</block>
   <block id="e716be3faae541eba0074c1e65cdb45f" category="cell">*Best Practice:* die Verwendung der Cmdlets wird empfohlen, da es Ihnen ermöglicht, die Vorteile von Vorlagen mit SnapCenter zur Automatisierung der Share-Konfiguration zu nutzen.</block>
@@ -3918,13 +3900,9 @@
   <block id="3e1681ef9d874ce4b60e8af499ec495a" category="paragraph">Selbst bei einer stark ausgelasteten Ressource ist es nicht mehr als ein oder zwei Mal pro Tag erforderlich, ein komplettes Backup auszuführen. So könnten beispielsweise regelmäßige Transaktions-Log-Backups ausreichen, um sicherzustellen, dass Sie die Backups haben, die Sie benötigen. Je öfter Sie Ihre Datenbanken sichern, desto weniger Transaktions-Logs benötigt SnapCenter zum Zeitpunkt der Wiederherstellung, was zu schnelleren Restore-Vorgängen führen kann.</block>
   <block id="a9c04949b14fd7574e1168207d5adc46" category="paragraph">Die Backup-Häufigkeit (wie oft Backups durchgeführt werden sollen), die für einige Plug-ins als _Schedule Type_ bezeichnet wird, ist Teil einer Richtlinienkonfiguration. Sie können stündlich, täglich, wöchentlich oder monatlich als Sicherungshäufigkeit für die Richtlinie auswählen. Wenn Sie keine dieser Frequenzen auswählen, ist die erstellte Richtlinie eine reine On-Demand-Richtlinie. Sie können auf Richtlinien zugreifen, indem Sie auf *Einstellungen* &gt; *Richtlinien* klicken.</block>
   <block id="a54ab9a48da734a10b9ef93ce5ee4d05" category="doc">Backup-Namenskonventionen für SQL Server</block>
-  <block id="93cc1cc2daa04d11bc708425a3170d4d" category="summary">Wenn das SnapCenter-Plug-in für SQL Server ausfällt, können Sie ein paar manuelle Schritte durchführen.</block>
   <block id="dc894d281805d8d1c222c04f94404928" category="doc">Disaster Recovery eines SnapCenter Plug-ins für SQL Server</block>
-  <block id="37ffa79bbd2952586645cff30d8eba05" category="paragraph">Wenn das SnapCenter-Plug-in für SQL Server ausfällt, wechseln Sie zu einem anderen SQL-Host und stellen Sie die Daten mit wenigen Schritten wieder her.</block>
   <block id="7a1a91fe74f7d2f66d8eabb50e547d5f" category="list-text">Der sekundäre Host sollte das gleiche Betriebssystem, die gleiche Anwendung und den gleichen Hostnamen wie der primäre Host haben.</block>
-  <block id="6ed11385ad389d901916b25a0b21aef9" category="list-text">Schieben Sie das SnapCenter-Plug-in für SQL Server auf einen anderen Host, indem Sie die Seite *Add Host* oder *Modify Host* verwenden.</block>
   <block id="51929aa5ac08be2aca8dda46b9a095b1" category="inline-link-macro">Management von Hosts</block>
-  <block id="fc11fadbfb2b2b87f8c260a133d75ad2" category="paragraph"><block ref="fc11fadbfb2b2b87f8c260a133d75ad2" category="inline-link-macro-rx"></block></block>
   <block id="8bcdd66a940ad127d312a11316df6669" category="list-text">Wählen Sie den Host auf der Seite *Hosts* aus, um das SnapCenter-Plug-in für SQL Server zu ändern und zu installieren.</block>
   <block id="2a1a78f96ec6b03f3ccdd06b708e6f1a" category="list-text">(Optional) Ersetzen Sie das SnapCenter-Plug-in für SQL Server-Konfigurationsdateien vom Disaster Recovery-Backup (DR) auf die neue Maschine.</block>
   <block id="9f2c74676fb5b339a2fd4a0ccd75bd1e" category="list-text">Importieren Sie Windows- und SQL-Zeitpläne aus dem SnapCenter-Plug-in für SQL Server-Ordner aus dem DR-Backup.</block>
@@ -5423,19 +5401,8 @@
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="doc">Versionshinweise</block>
   <block id="3d94bcd4444e768c821c4af7214a7a73" category="summary">Sie können den SnapCenter-Server bei einem Ausfall wie z. B. Ressourcenbeschädigung oder Serverabsturz mithilfe der SnapCenter Disaster Recovery-Funktion wiederherstellen.</block>
   <block id="e413eba49b15917b0c9dbf2620f3e66e" category="doc">Disaster Recovery</block>
-  <block id="948b4d6914f4248c5e96a053c1d7ae63" category="paragraph">Sie können den SnapCenter-Server bei einem Ausfall wie z. B. Ressourcenbeschädigung oder Serverabsturz mithilfe der SnapCenter Disaster Recovery-Funktion wiederherstellen. Sie können SnapCenter Repositorys, Serverzeitpläne und Serverkonfigurationskomponenten wiederherstellen.</block>
-  <block id="685c106cf385da9da7d774e7b6cddea8" category="paragraph">Sie können auch das SnapCenter Plug-in für SQL Server und das SnapCenter Plug-in für SQL Server Storage wiederherstellen.</block>
-  <block id="7b7cd2b9067ed1c82323fb382c11f370" category="paragraph">Im Folgenden sind die Arten der Disaster Recovery (DR):</block>
-  <block id="1636245b9e25bb600e733929465df761" category="list-text">*SnapCenter Server DR*</block>
-  <block id="8fa1aa495cfe5fdc95202bda34adafcd" category="paragraph">Die Daten des SnapCenter Servers werden gesichert und wiederhergestellt, unabhängig davon, ob ein Plug-in von SnapCenter Server hinzugefügt oder verwaltet wurde.</block>
   <block id="db73b4bff7f9b92f00d36e2a3fa01152" category="paragraph">Der sekundäre SnapCenter Server sollte auf demselben Installationsverzeichnis und auf demselben Port wie der primäre SnapCenter-Server installiert sein.</block>
-  <block id="d1e90d50eb139f0fd560c55b6bf37057" category="paragraph">Schließen Sie bei Multi-Faktor-Authentifizierung (MFA), wenn die DR-Wiederherstellung für SnapCenter Server durchgeführt wird, alle Browser-Registerkarten, und öffnen Sie einen Browser erneut, um sich anzumelden. Dadurch werden die vorhandenen oder aktiven Session-Cookies gelöscht und sichergestellt, dass die korrekten Konfigurationsdaten aktualisiert werden.</block>
   <block id="eb3b9ec963eb618621a779602a309514" category="inline-link-macro">REST-API-Workflows für Disaster Recovery von SnapCenter Server</block>
-  <block id="e667e897b20b02966f899ad38ce1ba39" category="paragraph"><block ref="e667e897b20b02966f899ad38ce1ba39" category="inline-link-macro-rx"></block></block>
-  <block id="30c24db21140190d4033af17ccd83090" category="list-text">*SnapCenter Plug-in und Storage DR*</block>
-  <block id="0554390053842752b7d1d3059c743b32" category="paragraph">DR wird nur für das SnapCenter Plug-in für SQL Server unterstützt. Wenn das SnapCenter-Plug-in für SQL Server ausfällt, wechseln Sie zu einem anderen SQL-Host und stellen Sie die Daten mit wenigen Schritten wieder her.</block>
-  <block id="47046db67c1574cb29142c431fb68f1f" category="paragraph"><block ref="47046db67c1574cb29142c431fb68f1f" category="inline-link-macro-rx"></block></block>
-  <block id="196a4a3e452864b82a133adc0c1c5228" category="paragraph">SnapCenter nutzt ONTAP SnapMirror Technologie zur Datenreplizierung. Er kann zur DR an einem sekundären Standort repliziert und synchron gehalten werden. Ein Failover kann durch die Unterbrechung der Replizierungsbeziehung in SnapMirror initiiert werden. Während Failback kann die Synchronisierung umgekehrt werden und Daten vom DR-Standort zurück zum primären Standort repliziert werden.</block>
   <block id="34c24f1d15647adba6dcde96f1a84b95" category="summary">MITHILFE VON REST-APIs lassen sich verschiedene SnapCenter-Managementvorgänge ausführen. REST-APIs sind über die Swagger Webseite zugänglich. Sie können auf die Swagger-Webseite zugreifen, um die REST-API-Dokumentation anzuzeigen und einen API-Aufruf manuell zu tätigen. Mit REST-APIs können Sie Ihren SnapCenter Server oder Ihren SnapCenter vSphere Host managen.</block>
   <block id="c8e5654e4bfafe9239ad785c178eec35" category="doc">SnapCenter-Automatisierung mit REST-APIs</block>
   <block id="4da05a98f7d43c6ecf97005050dd8b4c" category="cell">DIE REST-APIs für...</block>
@@ -7955,7 +7922,6 @@
   <block id="cc12c6014b5ec85f58b6fb31a26a66f7" category="section-title">Richten Sie Verbindungen zum Speichersystem ein</block>
   <block id="1d765f352f6f5ec7cfa899be682026d8" category="section-title">Richten Sie Run As Credentials ein, um das Plug-in für Microsoft SQL Server zu installieren</block>
   <block id="10976e15f1cbbbbb65eaf072d358489b" category="section-title">Fügen Sie einen Host hinzu, und installieren Sie das Plug-in für Microsoft SQL Server</block>
-  <block id="a066d76a64fcb852398ad527b862a806" category="paragraph">Informationen zur Fehlerbehebung finden Sie unter<block ref="f832f6c8f890b8aacf5c6ca5adeb731b" category="inline-link-rx"></block>.</block>
   <block id="9756c6d75626032c8da05d425c1d0ca9" category="inline-link">SnapCenter-Upgrade oder -Installation schlägt bei Legacy-Systemen ohne Internetverbindung fehl</block>
   <block id="462fbac4d281be78bedf063a9dbd9f61" category="paragraph">Informationen zur .NET-spezifischen Fehlerbehebung finden Sie unter<block ref="b173f6267e94bec8cf82a1d95b991ed7" category="inline-link-rx"></block>.</block>
   <block id="0cf3e7b313a6954f7aed921dae42be39" category="list-text"><block ref="36ad9b98fe40ea7db5d149de26f34551" prefix="" category="inline-code"></block></block>
@@ -7964,4 +7930,44 @@
   <block id="198803c71459bc222adc91a3d7048f01" category="paragraph">Die Option *Benutzerdefiniertes Logverzeichnis verwenden* ist nur verfügbar, wenn Sie *Datenbank auf einen alternativen Host wiederherstellen* oder *Datenbank mit vorhandenen Datenbankdateien wiederherstellen* ausgewählt haben. Sie können auch den freigegebenen Pfad verwenden, aber sicherstellen, dass der SQL-Benutzer auf den Pfad zugreifen kann.</block>
   <block id="17049c1cdf73c2b4b41219f99ace3f81" category="list-text">Sie sollten *bash* als Standard-Shell für die Plug-in-Installation haben.</block>
   <block id="b3fae7a36581789e46e17a83505c11b3" category="paragraph">Wenn Sie das Plug-in als nicht-root-Benutzer installiert haben, sollten Sie die Ausführungsberechtigungen manuell den Verzeichnissen Prescript und Postscript zuweisen.</block>
+  <block id="a8d03bc12fa704a66e02c6802c0766f8" category="summary">Wenn das SnapCenter-Plug-in für SQL Server ausgefallen ist, führen Sie die folgenden manuellen Schritte aus, um das Plug-in wiederherzustellen.</block>
+  <block id="4846f8fb7f3c4d1460329ca7b77ea8ea" category="paragraph">Wenn das SnapCenter-Plug-in für SQL Server ausfällt, führen Sie die folgenden Schritte aus, um zu einem anderen SQL-Host zu wechseln und die Daten wiederherzustellen.</block>
+  <block id="d59db7846bd10b6d60d21543df9faa9e" category="list-title">Was Sie benötigen</block>
+  <block id="112fa4c1243fe1af31b4cf57c26ced23" category="list-text">Schieben Sie das SnapCenter-Plug-in für SQL Server auf einen anderen Host, indem Sie die Seite *Add Host* oder *Modify Host* verwenden. Siehe <block ref="fc11fadbfb2b2b87f8c260a133d75ad2" category="inline-link-macro-rx"></block> Finden Sie weitere Informationen.</block>
+  <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">Schritte</block>
+  <block id="d13de4a83d7b44c2e65495def8ef1c7b" category="paragraph-title">Finden Sie weitere Informationen</block>
+  <block id="ab9238ca6f628634f6f6f2cf63502cdb" category="paragraph">Siehe <block ref="44de5c9fafab2e4e76e19e3717abc2e2" category="inline-link-macro-rx"></block> Video:</block>
+  <block id="94c4200231b3891f27561beda5d4e31f" category="doc">SnapCenter Disaster Recovery</block>
+  <block id="1da5a00a663269fc81a2098b0d91e4d6" category="paragraph">Mithilfe der Disaster Recovery-Funktion von SnapCenter können Sie den SnapCenter Server im Falle von Ausfällen wie einer Beschädigung von Ressourcen oder einem Serverabsturz wiederherstellen. Sie können SnapCenter Repositorys, Serverzeitpläne und Serverkonfigurationskomponenten wiederherstellen. Sie können auch das SnapCenter Plug-in für SQL Server und das SnapCenter Plug-in für SQL Server Storage wiederherstellen.</block>
+  <block id="68e856b5be6554a8e4ee8b393b327b0b" category="paragraph">In diesem Abschnitt werden die beiden Arten der Disaster Recovery (DR) in SnapCenter beschrieben:</block>
+  <block id="4bafae51c760477df325c1b3815da1aa" category="list-title">DR mit SnapCenter Servern</block>
+  <block id="4561e7fcd617a663505d8992af88d242" category="list-text">Die Daten des SnapCenter Servers werden gesichert und können ohne Plug-in wiederhergestellt werden, das dem SnapCenter Server hinzugefügt oder durch ihn gemanagt wird.</block>
+  <block id="3dbcd484a9ede0a6feaf76cb9d8a6868" category="list-text">Für die Multi-Faktor-Authentifizierung (MFA) schließen Sie während der SnapCenter-Server-Wiederherstellung alle Browser-Registerkarten und öffnen Sie einen Browser erneut, um sich erneut anzumelden. Dadurch werden die vorhandenen oder aktiven Sitzungscookies gelöscht und die korrekten Konfigurationsdaten aktualisiert.</block>
+  <block id="20383b74f2f17a4c5b8bc914455eed3d" category="list-text">Die Disaster Recovery-Funktion von SnapCenter verwendet FÜR das Backup des SnapCenter Servers REST-APIs. Siehe <block ref="e667e897b20b02966f899ad38ce1ba39" category="inline-link-macro-rx"></block>.</block>
+  <block id="717bb61127675bdfbac9d09d06c4bd89" category="paragraph-title">SnapCenter Plug-in und Storage DR</block>
+  <block id="a3c30c25a1e544471bac224e74207425" category="paragraph">DR wird nur für das SnapCenter Plug-in für SQL Server unterstützt. Wenn das SnapCenter-Plug-in für SQL Server ausfällt, wechseln Sie zu einem anderen SQL-Host und stellen Sie die Daten mit wenigen Schritten wieder her. Siehe <block ref="47046db67c1574cb29142c431fb68f1f" category="inline-link-macro-rx"></block>.</block>
+  <block id="9fbd6c9c898d3b24f2f3cfa67bb8c2b2" category="paragraph">SnapCenter nutzt ONTAP SnapMirror Technologie zur Datenreplizierung. Er kann zur DR an einem sekundären Standort repliziert und synchron gehalten werden. Ein Failover kann durch die Unterbrechung der Replizierungsbeziehung in SnapMirror initiiert werden. Während Failback kann die Synchronisierung umgekehrt werden und Daten vom DR-Standort zurück zum primären Standort repliziert werden.</block>
+  <block id="d4dbc002513d2615e9e9009874835b86" category="doc">Multi-Faktor-Authentifizierung (MFA) managen</block>
+  <block id="eba5e183c4f404bb057076dc4ea10e64" category="paragraph">In diesem Thema wird beschrieben, wie die Multi-Faktor-Authentifizierung (MFA) im Active Directory-Verbunddienst (AD FS) und SnapCenter-Server verwaltet wird.</block>
+  <block id="8e5ca8947d2ccd889e10c25276502da0" category="section-title">Multi-Faktor-Authentifizierung (MFA) aktivieren</block>
+  <block id="cf9e251e098e2f47bcb8e04e9e5ff28a" category="paragraph">In diesem Thema wird beschrieben, wie die MFA-Funktionalität im Active Directory-Verbunddienst (AD FS)-Server und SnapCenter-Server aktiviert wird.</block>
+  <block id="bbe48fb854ea022537208eeeff822f91" category="list-title">Über diese Aufgabe</block>
+  <block id="1f6600010f63592c168af66c387c499f" category="list-text">Die Informationen zu den Parametern, die mit dem Cmdlet verwendet werden können und deren Beschreibungen können durch Ausführen abgerufen werden<block ref="b306feeed6ddda97d08ef1f2a0ba62d9" prefix=" " category="inline-code"></block>. Alternativ können Sie auch sehen<block ref="5df59c30e631270dc31bf843919ab849" category="inline-link-rx"></block>.</block>
+  <block id="4ceb1d36799251586ba061a0c2b9a7a8" category="list-text">Sie sollten über einen AD FS-unterstützten Multi-Faktor-Authentifizierungsservice wie Azure MFA, Cisco Duo usw. verfügen.</block>
+  <block id="090c9bbbd344aa7f6441901f2b8792f8" category="list-text">Stellt sicher, dass die ADFS-F5-Kommunikation nicht unterbrochen wird, da die selbstsignierten Zertifikate auf Knotenebene eindeutig sind.</block>
+  <block id="30c7dffa036eadcc0342139cec28fa70" category="list-text">Laden Sie die AD FS Federation-Metadatendatei von herunter <block ref="a9571343becbc81f25857902551c1e72" category="inline-link-rx"></block> FQDN&gt;/FederationMetadata/2007-06/FederationMetadata.XML“.</block>
+  <block id="aae311364aff04070e63a86b4fe0296f" category="list-text">Aktivieren Sie MFA für SnapCenter-Server mithilfe von<block ref="1254f269a5dd80690678b4df201e88a5" prefix=" " category="inline-code"></block> Cmdlet:</block>
+  <block id="13cb11c142fa4483919ae32dd2a04113" category="list-text">(Optional) Überprüfen Sie den MFA-Konfigurationsstatus und die Einstellungen mit<block ref="d99b90475295700e9775deadcb723ac6" prefix=" " category="inline-code"></block> Cmdlet:</block>
+  <block id="67fadfdbaf1af58c1560a82586252863" category="list-text">Klicken Sie auf *Standorte* und wählen Sie den betreffenden Host (oben in der Hierarchie) aus.</block>
+  <block id="35adcaf3c3f08c3b4becd894c0fafea3" category="list-text">Wählen Sie eine Zugangskontrollrichtlinie nach Bedarf aus und klicken Sie auf *Weiter*.</block>
+  <block id="ba119cc36777aa5836242da63619667d" category="list-text">Wählen Sie die Einstellungen auf der nächsten Registerkarte standardmäßig aus.</block>
+  <block id="55257e6ccdd63f9f4ab886869cbbf5cf" category="list-text">Geben Sie einen Namen für die Antragsregel an.</block>
+  <block id="6e98d99dca8f4518c9e7567d19ce708c" category="paragraph"><block ref="513dca79729c465b5c3001bf26148c0c" prefix="" category="inline-code"></block></block>
+  <block id="a339a650564d067ea1ade511a61340e3" category="paragraph"><block ref="9111d0f1b6d8fdece369a21eacf0663f" prefix="" category="inline-code"></block></block>
+  <block id="e5111e1a8d09cf3b9cc87da0144221fb" category="list-text">Schließen Sie alle Browser-Registerkarten und öffnen Sie einen Browser erneut, um die vorhandenen oder aktiven Session-Cookies zu löschen, und melden Sie sich erneut an.</block>
+  <block id="4df2c26ea6368491393f05baf8841e6d" category="paragraph">Für Informationen zur Fehlerbehebung. Siehe <block ref="46642a8ad62fd1a061e94d6b7bf62dc5" category="inline-link-macro-rx"></block>.</block>
+  <block id="f668cd2acef670f8b213c6c785ddf8d6" category="paragraph"><block ref="7da21d8fe0787a3171af06722db1ee6f" prefix="" category="inline-code"></block></block>
+  <block id="0f5b112cebb37022dbfe2c80e388d605" category="paragraph">Siehe <block ref="5ec6b0ec41fc91e8184fa478c63adb14" category="inline-link-macro-rx"></block>.</block>
+  <block id="a8d67928879d7cbd7d3c5d1b6d797736" category="list-text">Deaktivieren Sie MFA, und bereinigen Sie die Konfigurationsdateien, die bei der Aktivierung von MFA mithilfe des erstellt wurden<block ref="3f459b2c524cc44ef57664fd75d5c093" prefix=" " category="inline-code"></block> Cmdlet:</block>
+  <block id="6bcc192d7209e867a0f8afd8938c62eb" category="sidebar">Multi-Faktor-Authentifizierung (MFA) managen</block>
 </blocks>
