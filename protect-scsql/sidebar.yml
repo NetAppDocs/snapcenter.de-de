@@ -59,7 +59,13 @@ entries:
   - title: Definieren Sie eine Klonstrategie für SQL Server
     url: "/protect-scsql/task_define_a_clone_strategy_for_sql_server.html"
 - title: Schnellstart zur Installation des SnapCenter-Plug-ins für Microsoft SQL Server
-  url: "/protect-scsql/quick_start_to_install_snapcenter_plug-in_for_sql_server.html"
+  entries:
+  - title: Vorbereiten der Installation von SnapCenter Server und Plug-in
+    url: "/protect-scsql/quick-start-to-prepare-for-snapcenter-plug-in-install-for-sql-server.html"
+  - title: Installieren Sie SnapCenter Server für Microsoft SQL Server
+    url: "/protect-scsql/task-install-snapcenter-server-for-sql-server.html"
+  - title: Installieren Sie das SnapCenter Plug-in für Microsoft SQL Server
+    url: "/protect-scsql/task-install-snapcenter-plug-in-for-sql-server.html"
 - title: Bereiten Sie die Installation des SnapCenter-Plug-ins für Microsoft SQL Server
     vor
   entries:

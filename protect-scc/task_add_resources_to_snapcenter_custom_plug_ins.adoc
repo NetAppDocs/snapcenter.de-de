@@ -13,24 +13,18 @@ summary: Sie müssen die Ressourcen hinzufügen, die Sie sichern oder klonen mö
 [role="lead"]
 Sie müssen die Ressourcen hinzufügen, die Sie sichern oder klonen möchten. Je nach Umgebung können sich die Ressourcen entweder um Datenbankinstanzen oder Sammlungen handeln, die Sie sichern oder klonen möchten.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 * Sie müssen Aufgaben wie das Installieren des SnapCenter-Servers, das Hinzufügen von Hosts, das Erstellen von Speichersystemverbindungen und das Hinzufügen von Anmeldeinformationen abgeschlossen haben.
-* Sie müssen ein benutzerdefiniertes Plug-in erstellt haben.
-+
-link:concept_develop_a_plug_in_for_your_application.html["Entwickeln Sie ein Plug-in für Ihre Applikation"]
-
+* Dieser muss unbedingt vorhanden sein link:concept_develop_a_plug_in_for_your_application.html["Es wurde ein benutzerdefiniertes Plug-in für Ihre Anwendung erstellt"].
 * Sie müssen die Plug-ins auf SnapCenter Server hochgeladen haben.
 
 
-*Über diese Aufgabe*
-
+.Über diese Aufgabe
 Sie können auch Ressourcen für MySQL- und DB2-Anwendungen hinzufügen. Diese Plug-ins können von heruntergeladen werden https://automationstore.netapp.com/home.shtml["NetApp Storage Automation Store"].
 
-*Schritte*
-
-. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
-. Klicken Sie auf der Seite Ressourcen auf *Ressource hinzufügen*.
+.Schritte
+. Wählen Sie im linken Navigationsbereich *Ressourcen* aus, und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Wählen Sie auf der Seite Ressourcen die Option *Ressource hinzufügen*.
 . Führen Sie auf der Seite „Ressourcendetails bereitstellen“ die folgenden Aktionen durch:
 +
 |===
@@ -73,9 +67,9 @@ Mount-Pfade
 Geben Sie die Mount-Pfade ein, auf denen die Ressource angehängt ist. Dies gilt nur für einen Windows-Host.
 
 |===
-. Wählen Sie auf der Seite Speicher-Footprint angeben ein Speichersystem aus und wählen Sie ein oder mehrere Volumes, LUNs und qtrees aus, und klicken Sie dann auf *Speichern*.
+. Wählen Sie auf der Seite „Speicherplatz bereitstellen“ ein Speichersystem aus und wählen Sie ein oder mehrere Volumes, LUNs und qtrees aus, und wählen Sie dann *Speichern* aus.
 +
-Optional: Klicken Sie auf das image:../media/add_policy_from_resourcegroup.gif[""] Symbol, um weitere Volumes, LUNs und qtrees von anderen Speichersystemen hinzuzufügen.
+Optional: Wählen Sie die aus image:../media/add_policy_from_resourcegroup.gif["Plus-Symbol"] Symbol, um weitere Volumes, LUNs und qtrees von anderen Speichersystemen hinzuzufügen.
 
 +
 
@@ -95,18 +89,16 @@ NOTE: Stellen Sie sicher, dass DIE Wörter HOST und PORT in Großbuchstaben steh
 +
 image::../media/resource_settings.gif[Ressourceneinstellungen]
 
-. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
+. Überprüfen Sie die Zusammenfassung, und wählen Sie dann *Fertig stellen*.
 
 
-*Ergebnis*
-
+.Ergebnis
 Die Ressourcen werden zusammen mit Informationen wie Typ, Host- oder Cluster-Name, zugeordnete Ressourcengruppen und Richtlinien sowie dem Gesamtstatus angezeigt.
 
 
 IMPORTANT: Sie müssen die Ressourcen aktualisieren, wenn die Datenbanken außerhalb von SnapCenter umbenannt werden.
 
-*Nach Ihrer Beendigung*
-
+.Nachdem Sie fertig sind
 Wenn Sie anderen Benutzern Zugriff auf die Assets gewähren möchten, muss der SnapCenter-Administrator diesen Benutzern Assets zuweisen. Auf diese Weise können Benutzer die Aktionen ausführen, für die sie über Berechtigungen für die ihnen zugewiesenen Assets verfügen.
 
 Nachdem Sie die Ressourcen hinzugefügt haben, können Sie die Ressourcendetails ändern. Wenn einer benutzerdefinierten Plug-in-Ressource Backups zugeordnet sind, können die folgenden Felder nicht geändert werden: Ressourcenname, Ressourcentyp und Hostname.

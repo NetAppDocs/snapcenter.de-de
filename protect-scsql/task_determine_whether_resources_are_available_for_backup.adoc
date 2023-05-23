@@ -13,8 +13,7 @@ summary: Ressourcen sind die Datenbanken, Applikationsinstanzen, Verfügbarkeits
 [role="lead"]
 Ressourcen sind die Datenbanken, Applikationsinstanzen, Verfügbarkeitsgruppen und ähnliche Komponenten, die von den installierten Plug-ins gewartet werden. Sie können diese Ressourcen zu Ressourcengruppen hinzufügen, sodass Sie Datensicherungsjobs ausführen können. Zunächst müssen Sie jedoch ermitteln, welche Ressourcen Sie zur Verfügung haben. Das ermitteln der verfügbaren Ressourcen überprüft außerdem, ob die Plug-in-Installation erfolgreich abgeschlossen wurde.
 
-*Was Sie brauchen*
-
+.Was Sie benötigen
 * Sie müssen bereits Aufgaben abgeschlossen haben, wie z. B. das Installieren von SnapCenter-Servern, das Hinzufügen von Hosts, das Erstellen von Speichersystemverbindungen und das Hinzufügen von Anmeldeinformationen.
 * Um die Microsoft SQL-Datenbanken zu ermitteln, sollte eine der folgenden Bedingungen erfüllt sein.
 +
@@ -30,8 +29,7 @@ Weitere Informationen finden Sie unter https://docs.netapp.com/us-en/sc-plugin-v
 * Wenn der Host mit gMSA hinzugefügt wird und der gMSA über Login- und System Admin-Berechtigungen verfügt, wird das gMSA verwendet, um eine Verbindung zur SQL-Instanz herzustellen.
 
 
-*Über diese Aufgabe*
-
+.Über diese Aufgabe
 Datenbanken können nicht gesichert werden, wenn die Option *Gesamtstatus* auf der Seite Details auf nicht verfügbar für Backups eingestellt ist. Die Option *Gesamtstatus* ist für die Sicherung auf nicht verfügbar eingestellt, wenn eine der folgenden Optionen zutrifft:
 
 * Datenbanken sind nicht auf einer NetApp LUN.
@@ -48,8 +46,7 @@ Wenn ein Benutzer beispielsweise nur Zugriff auf die Datenbank hat, können Date
 
 NOTE: SnapCenter kann nur die primäre Datenbank sichern, wenn Sie eine Verfügbarkeitsgruppe auf der SQL Server Standard Edition haben.
 
-*Schritte*
-
+.Schritte
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
 . Wählen Sie auf der Seite Ressourcen in der Dropdown-Liste *Ansicht* * oder *Instanz* oder *Verfügbarkeitsgruppe* aus.
 +
@@ -81,4 +78,5 @@ Sie können keine Datensicherungsvorgänge für eine Datenbank ausführen, die s
 
 NOTE: Wenn Sie beim Einrichten der Anmeldeinformationen eine SQL-Authentifizierung aktiviert haben, wird die erkannte Instanz oder Datenbank mit einem roten Vorhängeschloss-Symbol angezeigt. Wenn das Vorhängeschloss-Symbol angezeigt wird, müssen Sie die Instanz oder die Datenbankanmeldeinformationen angeben, damit die Instanz oder Datenbank einer Ressourcengruppe erfolgreich hinzugefügt werden kann.
 
-Nachdem der SnapCenter-Administrator einem RBAC-Benutzer die Ressourcen zuweist, muss sich der RBAC-Benutzer anmelden und auf *Ressourcen aktualisieren* klicken, um die neuesten *Gesamtstatus* der Ressourcen anzuzeigen.
+. Nachdem der SnapCenter-Administrator einem RBAC-Benutzer die Ressourcen zuweist, muss sich der RBAC-Benutzer anmelden und auf *Ressourcen aktualisieren* klicken, um die neuesten *Gesamtstatus* der Ressourcen anzuzeigen.
+
