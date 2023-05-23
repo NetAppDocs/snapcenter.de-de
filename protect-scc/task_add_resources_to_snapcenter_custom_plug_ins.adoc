@@ -25,7 +25,7 @@ link:concept_develop_a_plug_in_for_your_application.html["Entwickeln Sie ein Plu
 
 *Über diese Aufgabe*
 
-Sie können auch Ressourcen für MySQL- und DB2-Anwendungen hinzufügen. Diese Plug-ins können von heruntergeladen werden https://["NetApp Storage Automation Store"].
+Sie können auch Ressourcen für MySQL- und DB2-Anwendungen hinzufügen. Diese Plug-ins können von heruntergeladen werden https://automationstore.netapp.com/home.shtml["NetApp Storage Automation Store"].
 
 *Schritte*
 

@@ -131,7 +131,7 @@ Die XML-Datei Deskriptor im Ordner gezipptes benutzerdefiniertes Plug-in wird vo
 Die benutzerdefinierten Plug-ins, die auf den SnapCenter-Server hochgeladen werden, werden aufgelistet.
 
 +
-Wenn Sie MySQL oder DB2 Applikationen managen möchten, können Sie die benutzerdefinierten MySQL und DB2 Plug-ins verwenden, die von NetApp zur Verfügung gestellt werden. Die benutzerdefinierten MySQL und DB2 Plug-ins sind im verfügbar https://["NetApp Automation Store"]
+Wenn Sie MySQL oder DB2 Applikationen managen möchten, können Sie die benutzerdefinierten MySQL und DB2 Plug-ins verwenden, die von NetApp zur Verfügung gestellt werden. Die benutzerdefinierten MySQL und DB2 Plug-ins sind im verfügbar https://automationstore.netapp.com/home.shtml["NetApp Automation Store"]
 
 
 

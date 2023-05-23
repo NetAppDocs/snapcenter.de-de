@@ -33,7 +33,7 @@ NOTE: Wenn die Befehle in der Befehlsliste nicht vorhanden sind, schlägt der Vo
 
 *Über diese Aufgabe*
 
-Informationen zu Einschränkungen für den Klon-Split-Vorgang finden Sie unter http://["ONTAP 9 Leitfaden für das Management von logischem Storage"^].
+Informationen zu Einschränkungen für den Klon-Split-Vorgang finden Sie unter http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["ONTAP 9 Leitfaden für das Management von logischem Storage"^].
 
 *Schritte*
 

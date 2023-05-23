@@ -15,41 +15,40 @@ Eine Ressourcengruppe ist eine Sammlung von Ressourcen auf einem Host oder Clust
 
 Auf der Seite „Ressourcen“ können Sie ein Backup einer Ressourcengruppe nach Bedarf erstellen. Wenn eine Ressourcengruppe über eine Richtlinie und einen konfigurierten Zeitplan verfügt, werden die Backups automatisch gemäß dem Zeitplan durchgeführt.
 
-*Schritte*
-
-. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+.Schritte
+. Wählen Sie im linken Navigationsbereich *Ressourcen* und das entsprechende Plug-in aus der Liste aus.
 . Wählen Sie auf der Seite Ressourcen in der Liste *Ansicht* die Option *Ressourcengruppe* aus.
+. Geben Sie den Namen der Ressourcengruppe in das Suchfeld ein, oder klicken Sie auf image:../media/filter_icon.gif["Filtersymbol"], Und wählen Sie das Tag aus.
 +
-Sie können die Ressourcengruppe entweder durch Eingabe des Ressourcengruppennamens in das Suchfeld oder durch Klicken auf * durchsuchenimage:../media/filter_icon.gif[""]* Und dann das Tag auswählen. Sie können dann auf * klickenimage:../media/filter_icon.gif[""]* Zum Schließen des Filterfensters.
+Klicken Sie Auf image:../media/filter_icon.gif["Filtersymbol"] Um den Filterbereich zu schließen.
 
-. Wählen Sie auf der Seite Ressourcengruppen die Ressourcengruppe aus, die Sie sichern möchten, und klicken Sie dann auf *Jetzt sichern*.
+. Wählen Sie auf der Seite Ressourcengruppe die Ressourcengruppe aus, die gesichert werden soll.
 +
 
-NOTE: Wenn Sie eine föderierte Ressourcengruppe mit zwei Datenbanken haben und eine der Datenbanken Datendatei auf nicht-NetApp-Storage hat, wird der Backup-Vorgang abgebrochen, obwohl sich die andere Datenbank auf NetApp Storage befindet.
+NOTE: Wenn Sie eine gebündelte Ressourcengruppe mit zwei Datenbanken haben und eine Daten auf nicht-NetApp Speicher hat, wird der Backup-Vorgang abgebrochen, obwohl sich die andere Datenbank auf NetApp Speicher befindet.
 
 . Führen Sie auf der Seite Backup die folgenden Schritte aus:
 +
-.. Wenn Sie der Ressourcengruppe mehrere Richtlinien zugeordnet haben, wählen Sie aus der Dropdown-Liste *Richtlinie* die Richtlinie aus, die Sie zum Sichern verwenden möchten.
+.. Wenn Sie mehrere Richtlinien mit der Ressourcengruppe verknüpft haben, wählen Sie die zu verwendende Sicherungsrichtlinie aus der Dropdown-Liste *Policy* aus.
 +
 Wenn die für das On-Demand-Backup ausgewählte Richtlinie einem Backup-Zeitplan zugeordnet ist, werden die On-Demand-Backups auf Basis der für den Zeitplantyp festgelegten Aufbewahrungseinstellungen beibehalten.
 
-.. Klicken Sie Auf *Backup*.
+.. Wählen Sie *Backup*.
 
 
-. Überwachen Sie den Fortschritt des Vorgangs, indem Sie auf *Monitor* > *Jobs* klicken.
+. Überwachen Sie den Fortschritt, indem Sie *Monitor > Jobs* auswählen.
 
 
-*Nach Ihrer Beendigung*
-
-* In AIX Setup können Sie den Befehl lkdev zum Sperren und den Befehl rendev verwenden, um die Festplatten umzubenennen, auf denen sich die gesicherte Datenbank befand.
+.Nachdem Sie fertig sind
+* Im AIX-Setup können Sie den verwenden `lkdev` Befehl zum Sperren und der `rendev` Befehl zum Umbenennen der Festplatten, auf denen sich die gesicherte Datenbank befand.
 +
 Das Sperren oder Umbenennen von Geräten hat keine Auswirkungen auf den Wiederherstellungsvorgang, wenn Sie die Wiederherstellung mit diesem Backup durchführen.
 
-* Wenn der Backup-Vorgang fehlschlägt, weil die Ausführungszeit der Datenbankabfrage den Timeout-Wert überschritten hat, sollten Sie den Wert der PARAMETER ORACLE_SQL_QUERY_TIMEOUT und ORACLE_PLUGIN_SQL_QUERY_TIMEOUT ändern, indem Sie das Cmdlet Set-SmConfigSettings ausführen:
+* Wenn der Backup-Vorgang fehlschlägt, weil die Ausführungszeit der Datenbankabfrage den Timeout-Wert überschritten hat, sollten Sie den Wert der Parameter ORACLE_SQL_QUERY_TIMEOUT und ORACLE_PLUGIN_SQL_QUERY_TIMEOUT ändern, indem Sie den ausführen `Set-SmConfigSettings` Cmdlet:
 +
 Nachdem Sie den Wert der Parameter geändert haben, starten Sie den SnapCenter-Plug-in-Loader-Dienst (SPL) neu, indem Sie den folgenden Befehl ausführen `/opt/NetApp/snapcenter/spl/bin/spl restart`
 
-* Wenn die Datei nicht zugänglich ist und der Mount-Punkt während des Verifizierungsvorgangs nicht verfügbar ist, kann der Vorgang mit dem Fehlercode DBV-00100 der angegebenen Datei fehlschlagen. Sie sollten die Werte der Parameter VERIFICATION_DELAY und VERIFICATION_RETRY_COUNT in sco.properties ändern.
+* Wenn die Datei nicht zugänglich ist und der Mount-Punkt während des Verifizierungsvorgangs nicht verfügbar ist, kann der Vorgang mit dem Fehlercode DBV-00100 der angegebenen Datei fehlschlagen. Sie sollten die Werte DER Parameter VERIFICATION_DELAY_ und VERIFICATION_RETRY_COUNT in sco.properties ändern.
 +
 Nachdem Sie den Wert der Parameter geändert haben, starten Sie den SnapCenter-Plug-in-Loader-Dienst (SPL) neu, indem Sie den folgenden Befehl ausführen `/opt/NetApp/snapcenter/spl/bin/spl restart`
 

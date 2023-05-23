@@ -16,7 +16,7 @@ Ressourcen sind die LUNs und ähnliche Komponenten in Ihrem Dateisystem, die von
 *Was Sie brauchen*
 
 * Sie müssen bereits Aufgaben abgeschlossen haben, z. B. das Installieren von SnapCenter-Servern, das Hinzufügen von Hosts, das Erstellen von SVM-Verbindungen (Storage Virtual Machine) und das Hinzufügen von Anmeldeinformationen.
-* Wenn Dateien auf VMware RDM-LUNs oder VMDKs vorhanden sind, müssen Sie das SnapCenter Plug-in für VMware vSphere implementieren und das Plug-in mit SnapCenter registrieren. Weitere Informationen finden Sie unter https://["Dokumentation zum SnapCenter Plug-in für VMware vSphere"^].
+* Wenn Dateien auf VMware RDM-LUNs oder VMDKs vorhanden sind, müssen Sie das SnapCenter Plug-in für VMware vSphere implementieren und das Plug-in mit SnapCenter registrieren. Weitere Informationen finden Sie unter https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/["Dokumentation zum SnapCenter Plug-in für VMware vSphere"^].
 
 
 *Schritte*

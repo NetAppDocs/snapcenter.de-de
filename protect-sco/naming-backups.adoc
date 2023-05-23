@@ -1,0 +1,33 @@
+---
+permalink: protect-sco/naming-backups.html 
+sidebar: sidebar 
+keywords: oracle databases discover 
+summary: So entdeckt SnapCenter Oracle Datenbanken. 
+---
+= Konventionen bei Backup-Namen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können entweder die standardmäßige Namenskonvention für Snapshot Kopien verwenden oder eine individuelle Namenskonvention verwenden. Die standardmäßige Backup-Namenskonvention fügt einen Zeitstempel zu den Namen von Snapshot Kopien hinzu, der Ihnen hilft, zu identifizieren, wann die Kopien erstellt wurden.
+
+Die Snapshot Kopie verwendet die folgende standardmäßige Namenskonvention:
+
+`resourcegroupname_hostname_timestamp`
+
+Sie sollten Ihre Backup-Ressourcengruppen logisch benennen, wie im folgenden Beispiel:
+
+[listing]
+----
+dts1_mach1x88_03-12-2015_23.17.26
+----
+In diesem Beispiel haben die Syntaxelemente folgende Bedeutungen:
+
+* _Dts1_ ist der Name der Ressourcengruppe.
+* _Mach1x88_ ist der Hostname.
+* _03-12-2015_23.17.26_ ist das Datum und der Zeitstempel.
+
+
+Alternativ können Sie das Namensformat für die Snapshot-Kopie angeben und Ressourcen oder Ressourcengruppen schützen, indem Sie *Verwenden Sie benutzerdefiniertes Namensformat für die Snapshot-Kopie* wählen. Beispiel: Custtext_resourcegruppe_Policy_hostname oder resourcegruppe_hostname. Standardmäßig wird dem Namen der Snapshot Kopie das Suffix mit dem Zeitstempel hinzugefügt.

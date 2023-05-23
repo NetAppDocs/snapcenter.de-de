@@ -2,7 +2,7 @@
 permalink: protect-sco/task_define_a_backup_strategy_for_oracle_databases.html 
 sidebar: sidebar 
 keywords: backup type, preferred nodes, catalog backups, schedules, backup name format, retention, verification 
-summary: 'Wenn Sie eine Backup-Strategie definieren, bevor Sie Ihre Backup-Jobs erstellen, stellen Sie sicher, dass Sie über die Backups verfügen, die Sie benötigen, um Ihre Datenbanken erfolgreich wiederherzustellen oder zu klonen. Ihr Service Level Agreement (SLA), Recovery Time Objective (RTO) und Recovery Point Objective (RPO) bestimmen Ihre Backup-Strategie weitestgehend.' 
+summary: Durch das Definieren einer Backup-Strategie wird sichergestellt, dass Sie die Möglichkeit haben, Ihre Datenbanken erfolgreich wiederherzustellen oder zu klonen. 
 ---
 = Backup-Strategie für Oracle Datenbanken definieren
 :allow-uri-read: 
@@ -11,9 +11,14 @@ summary: 'Wenn Sie eine Backup-Strategie definieren, bevor Sie Ihre Backup-Jobs 
 
 
 [role="lead"]
-Wenn Sie eine Backup-Strategie definieren, bevor Sie Ihre Backup-Jobs erstellen, stellen Sie sicher, dass Sie über die Backups verfügen, die Sie benötigen, um Ihre Datenbanken erfolgreich wiederherzustellen oder zu klonen. Ihr Service Level Agreement (SLA), Recovery Time Objective (RTO) und Recovery Point Objective (RPO) bestimmen Ihre Backup-Strategie weitestgehend.
+Definieren Sie eine Backup-Strategie, um sicherzustellen, dass Sie die Mittel haben, Ihre Datenbanken erfolgreich wiederherzustellen oder zu klonen.
 
-Ein SLA definiert das erwartete Service-Level und behandelt viele Service-bezogene Probleme, einschließlich Verfügbarkeit und Performance des Service. Bei der RTO handelt es sich um die Zeit, die ein Geschäftsprozess nach einer Serviceunterbrechung wiederhergestellt werden muss. Der Recovery-Zeitpunkt definiert die Strategie für das Alter der Dateien, die aus dem Backup-Storage wiederhergestellt werden müssen, damit regelmäßige Betriebsabläufe nach einem Ausfall fortgesetzt werden können. SLA, RTO und RPO tragen zur Datensicherungsstrategie bei.
+Ihr Service Level Agreement (SLA), Recovery Time Objective (RTO) und Recovery Point Objective (RPO) bestimmen Ihre Backup-Strategie weitestgehend.
+
+* SLA definiert das erwartete Servicelevel und behandelt servicebezogene Probleme wie die Verfügbarkeit und Performance des Service.
+* RTO definiert die Zeit, die ein Geschäftsprozess nach einer Service-Unterbrechung wiederhergestellt werden muss.
+* RPO definiert das Alter der Dateien, die für den regulären Betrieb nach einem Ausfall aus dem Backup-Speicher wiederhergestellt werden müssen.
+
 
 
 
@@ -55,7 +60,7 @@ NOTE: PDB-Migration und PDB-Klonvorgänge werden nicht unterstützt.
 
 
 
-Aktuelle Informationen zu unterstützten Oracle-Versionen finden Sie unter https://["NetApp Interoperabilitäts-Matrix-Tool"^].
+Aktuelle Informationen zu unterstützten Oracle-Versionen finden Sie unter https://imt.netapp.com/matrix/imt.jsp?components=108392;&solution=1259&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"^].
 
 
 
@@ -224,7 +229,7 @@ Nachdem Sie den Wert des Parameters geändert haben, starten Sie den SnapCenter-
 
 `/opt/NetApp/snapcenter/spl/bin/spl restart`
 
-Die Informationen zu den Parametern, die mit dem Befehl und deren Beschreibungen verwendet werden können, können durch Ausführen von get-Help Command_Name abgerufen werden. Alternativ können Sie auch auf die verweisen https://["SnapCenter Software Command Reference Guide"^].
+Die Informationen zu den Parametern, die mit dem Befehl und deren Beschreibungen verwendet werden können, können durch Ausführen von get-Help Command_Name abgerufen werden. Alternativ können Sie auch auf die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2885486["SnapCenter Software Command Reference Guide"^].
 
 
 

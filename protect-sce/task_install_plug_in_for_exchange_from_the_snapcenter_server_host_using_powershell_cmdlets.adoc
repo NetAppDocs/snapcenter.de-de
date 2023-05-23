@@ -27,7 +27,7 @@ Sie sollten das Plug-in für Exchange über die SnapCenter-Benutzeroberfläche i
 . Erstellen Sie auf dem SnapCenter-Server-Host eine Sitzung mit dem Cmdlet _Open-SmConnection_, und geben Sie dann Ihre Anmeldeinformationen ein.
 . Fügen Sie den Host hinzu, auf dem Sie das Plug-in für Exchange installieren möchten, mit dem Cmdlet _Add-SmHost_ mit den erforderlichen Parametern.
 +
-Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ können Sie auch auf die verweisen https://["SnapCenter Software Cmdlet Referenzhandbuch"^].
+Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ können Sie auch auf die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["SnapCenter Software Cmdlet Referenzhandbuch"^].
 
 +
 Es kann sich dabei um einen Standalone-Host oder eine DAG handeln. Wenn Sie eine DAG angeben, ist der Parameter _-IsDAG_ erforderlich.

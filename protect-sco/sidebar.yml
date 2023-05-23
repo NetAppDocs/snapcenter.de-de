@@ -44,33 +44,52 @@ entries:
   url: "/protect-sco/concept_prepare_for_protecting_oracle_databases.html"
 - title: Backup von Oracle Datenbanken
   entries:
-  - title: Backup-Workflow
+  - title: Backup-Übersicht
     url: "/protect-sco/backup-workflow.html"
-  - title: Backup-Strategie für Oracle Datenbanken definieren
+  - title: Konfigurationsinformationen sichern
+    entries:
+    - title: Unterstützte Backup-Konfigurationen
+      url: "/protect-sco/supported_backup_configs.html"
+    - title: Backup-Typen
+      url: "/protect-sco/backup_types.html"
+    - title: Wie SnapCenter Oracle Datenbanken erkennt
+      url: "/protect-sco/discover-oracle-database.html"
+    - title: Zu verwendende bevorzugte Nodes
+      url: "/protect-sco/preferred-nodes.html"
+    - title: Katalog-Backups
+      url: "/protect-sco/catalog-backups.html"
+    - title: Vordefinierte Umgebungsvariablen
+      url: "/protect-sco/predefined-environment-variables-prescript-postscript-backup.html"
+    - title: Backup-Aufbewahrung
+      url: "/protect-sco/retention-backups.html"
+    - title: Backup-Pläne
+      url: "/protect-sco/schedule-backups.html"
+    - title: Namenskonventionen
+      url: "/protect-sco/naming-backups.html"
+  - title: Definition der Backup-Strategie
     url: "/protect-sco/task_define_a_backup_strategy_for_oracle_databases.html"
-  - title: Vordefinierte Umgebungsvariablen für Backup-spezifische Prescript und Postscript
-    url: "/protect-sco/predefined-environment-variables-prescript-postscript-backup.html"
-  - title: Ermitteln Sie, ob Oracle-Datenbanken für Backups verfügbar sind
-    url: "/protect-sco/task_determine_whether_oracle_databases_are_available_for_backup.html"
-  - title: Erstellung von Backup-Richtlinien für Oracle Datenbanken
-    url: "/protect-sco/task_create_backup_policies_for_oracle_database.html"
-  - title: Erstellen von Ressourcengruppen und Anhängen von Richtlinien für Oracle-Datenbanken
-    url: "/protect-sco/task_create_resource_groups_and_attaching_policies_for_oracle_databases.html"
-  - title: Anforderungen für das Backup einer Oracle-Datenbank
+  - title: Backup-Anforderungen prüfen
     url: "/protect-sco/reference_requirements_for_backing_up_an_oracle_database.html"
+  - title: Entdecken Sie die Oracle Database
+    url: "/protect-sco/task_determine_whether_oracle_databases_are_available_for_backup.html"
+  - title: Backup-Richtlinien erstellen
+    url: "/protect-sco/task_create_backup_policies_for_oracle_database.html"
+  - title: Erstellen von Ressourcengruppen (optional)
+    url: "/protect-sco/task_create_resource_groups_and_attach_policies_for_oracle_databases.html"
   - title: Oracle-Ressourcen sichern
     url: "/protect-sco/task_back_up_oracle_resources.html"
-  - title: Sichern Sie Oracle Database Resource Groups
+  - title: Sichern von Ressourcengruppen
     url: "/protect-sco/task_back_up_oracle_database_resource_groups.html"
-  - title: Sichern Sie Oracle Datenbanken mit UNIX Befehlen
-    url: "/protect-sco/task_back_up_oracle_databases_using_unix_commands.html"
-  - title: Überwachen Sie die Backup-Vorgänge für die Oracle Datenbank
+  - title: Überwachen Sie den Sicherungsfortschritt
     url: "/protect-sco/task_monitor_oracle_database_backup_operations.html"
-  - title: Backup-Vorgänge von Oracle-Datenbanken abbrechen
-    url: "/protect-sco/task_cancel_the_snapcenter_plug_in_for_oracle_database_backup_operations.html"
-  - title: Sehen Sie sich Backups und Klone von Oracle Datenbanken auf der Seite Topologie
-      an
-    url: "/protect-sco/task_view_oracle_databse_backups_and_clones_in_the_topology_page.html"
+  - title: Andere Backup-Vorgänge
+    entries:
+    - title: Sichern Sie mithilfe von UNIX-Befehlen
+      url: "/protect-sco/task_back_up_oracle_databases_using_unix_commands.html"
+    - title: Abbrechen von Backup-Vorgängen
+      url: "/protect-sco/task_cancel_the_snapcenter_plug_in_for_oracle_database_backup_operations.html"
+    - title: Anzeigen von Backups
+      url: "/protect-sco/task_view_oracle_databse_backups_and_clones_in_the_topology_page.html"
 - title: Binden Sie Datenbank-Backups ein und heben Sie sie ab
   url: "/protect-sco/task_mount_and_unmount_databases_backups.html"
 - title: Stellen Sie Oracle Datenbanken wieder her

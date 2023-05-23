@@ -126,7 +126,7 @@ Außerdem müssen Sie die E-Mail-Adressen für Absender und Empfänger sowie den
 Für eine E-Mail-Benachrichtigung müssen Sie die SMTP-Serverdetails entweder mithilfe des GUI- oder PowerShell-Befehls angegeben haben `Set-SmSmtpServer`.
 
 +
-Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ können Sie auch auf die verweisen https://["SnapCenter Software Cmdlet Referenzhandbuch"^].
+Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ können Sie auch auf die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["SnapCenter Software Cmdlet Referenzhandbuch"^].
 
 . Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
 

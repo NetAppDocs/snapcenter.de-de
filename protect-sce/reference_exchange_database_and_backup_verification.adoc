@@ -20,4 +20,4 @@ Das Microsoft Exchange Eseutil Tool ist ein Befehlszeilen-Dienstprogramm, das in
 
 | *Best Practice:* Es ist nicht erforderlich, Konsistenzprüfungen auf Datenbanken durchzuführen, die Teil einer Database Availability Group (DAG) Konfiguration mit mindestens zwei Replikaten sind. 
 |===
-Weitere Informationen finden Sie unter https://["Microsoft Exchange Server-Dokumentation"^].
+Weitere Informationen finden Sie unter https://docs.microsoft.com/en-us/exchange/exchange-server?view=exchserver-2019["Microsoft Exchange Server-Dokumentation"^].

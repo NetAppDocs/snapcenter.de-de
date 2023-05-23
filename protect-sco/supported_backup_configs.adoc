@@ -1,0 +1,47 @@
+---
+permalink: protect-sco/supported_backup_configs.html 
+sidebar: sidebar 
+keywords: backup type, preferred nodes, catalog backups, schedules, backup name format, retention, verification 
+summary: SnapCenter unterstützt das Backup verschiedener Oracle Database Konfigurationen. 
+---
+= Unterstützte Oracle Database Konfigurationen für Backups
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter unterstützt das Backup verschiedener Oracle Database Konfigurationen.
+
+* Oracle Standalone
+* Oracle Real Application Clusters (RAC)
+* Oracle Standalone Legacy
+* Oracle Standalone Container-Datenbank (CDB)
+* Oracle Data Guard Standby
++
+Sie können nur Offline-Mount-Backups von Data Guard Standby-Datenbanken erstellen. Offline-Shutdown-Backup, Backup nur für Archivprotokolle und vollständiges Backup werden nicht unterstützt.
+
+* Oracle Active Data Guard Standby
++
+Sie können nur Online-Backups von Active Data Guard Standby-Datenbanken erstellen. Backup nur für Archivprotokolle und vollständige Backups werden nicht unterstützt.
+
++
+Vor dem Erstellen eines Backups von Data Guard Standby oder der Active Data Guard Standby Datenbank wird der Managed Recovery-Prozess (MRP) angehalten und nach dem Erstellen des Backups wird MRP gestartet.
+
+* Automatisches Storage-Management (ASM)
++
+** ASM Standalone und ASM RAC auf Virtual Machine Disk (VMDK)
++
+Unter allen für Oracle-Datenbanken unterstützten Wiederherstellungsmethoden können Sie nur eine Verbindung-und-Kopie-Wiederherstellung von ASM RAC-Datenbanken auf VMDK durchführen.
+
+** ASM Standalone und ASM RAC on Raw Device Mapping (RDM) + Sie können Backup-, Wiederherstellungs- und Klonvorgänge auf Oracle-Datenbanken auf ASM mit oder ohne ASMLib durchführen.
+** Oracle ASM Filtertreiber (ASMFD)
++
+PDB-Migration und PDB-Klonvorgänge werden nicht unterstützt.
+
+** Oracle Flex ASM
+
+
+
+
+Aktuelle Informationen zu unterstützten Oracle-Versionen finden Sie unter https://imt.netapp.com/matrix/imt.jsp?components=105283;&solution=1259&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"^].

@@ -1,0 +1,65 @@
+---
+permalink: protect-sco/discover-oracle-database.html 
+sidebar: sidebar 
+keywords: oracle databases discover 
+summary: So entdeckt SnapCenter Oracle Datenbanken. 
+---
+= Wie SnapCenter Oracle Datenbanken erkennt
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bei den Ressourcen handelt es sich um Oracle-Datenbanken auf dem Host, die von SnapCenter verwaltet werden. Diese Datenbanken können Ressourcengruppen hinzugefügt werden, um Datensicherungsvorgänge auszuführen, nachdem Sie die verfügbaren Datenbanken ermittelt haben.
+
+In den folgenden Abschnitten wird der Prozess beschrieben, den SnapCenter zur Ermittlung verschiedener Typen und Versionen von Oracle-Datenbanken verwendet.
+
+
+
+== Für Oracle-Versionen 11__g_ bis 12__c__R1
+
+.RAC-Datenbank
+Die RAC-Datenbanken werden nur anhand von /etc/oratab`Einträgen ermittelt. Sie sollten die Datenbankeinträge in der Datei /etc/oratab haben.
+
+.Standalone
+Die eigenständigen Datenbanken werden nur anhand von /etc/oratab-Einträgen ermittelt.
+
+.ASM
+Der ASM-Instanzeintrag sollte in der Datei /etc/oratab verfügbar sein.
+
+.RAC 1-Knoten
+Die RAC One Node-Datenbanken werden nur anhand von /etc/oratab-Einträgen ermittelt. Die Datenbanken sollten entweder im nomount-, Mount- oder Open-Zustand sein. Sie sollten die Datenbankeinträge in der Datei /etc/oratab haben.
+
+Der RAC One Node Datenbankstatus wird als umbenannt oder gelöscht markiert, wenn die Datenbank bereits erkannt und Backups mit der Datenbank verknüpft sind.
+
+Wenn die Datenbank verschoben wird, sollten Sie die folgenden Schritte ausführen:
+
+. Fügen Sie den umgelagerten Datenbankeintrag manuell in der Datei /etc/oratab auf dem Knoten Failed-over RAC hinzu.
+. Aktualisieren Sie die Ressourcen manuell.
+. Wählen Sie auf der Ressourcen-Seite die RAC One Node-Datenbank aus, und klicken Sie dann auf Datenbankeinstellungen.
+. Konfigurieren Sie die Datenbank so, dass die bevorzugten Cluster-Knoten auf den RAC-Knoten eingestellt werden, der derzeit die Datenbank hostet.
+. Führen Sie die SnapCenter Vorgänge aus.
+. Wenn Sie eine Datenbank von einem Knoten auf einen anderen Knoten verschoben haben und der Eintrag Oratab im früheren Knoten nicht gelöscht wird, löschen Sie den Oratab-Eintrag manuell, um zu vermeiden, dass dieselbe Datenbank zweimal angezeigt wird.
+
+
+
+
+== Für Oracle Versionen 12cR2 bis 18c
+
+.RAC-Datenbank
+Die RAC-Datenbanken werden mit dem Befehl srvctl config ermittelt. Sie sollten die Datenbankeinträge in der Datei /etc/oratab haben.
+
+.Standalone
+Die eigenständigen Datenbanken werden anhand der Einträge in der Datei /etc/oratab und der Ausgabe des Befehls srvctl config ermittelt.
+
+.ASM
+Der ASM-Instanzeintrag muss sich nicht in der Datei /etc/oratab befinden.
+
+.RAC 1-Knoten
+Die RAC One Node-Datenbanken werden nur mit dem Befehl srvctl config ermittelt. Die Datenbanken sollten entweder im nomount-, Mount- oder Open-Zustand sein. Der RAC One Node Datenbankstatus wird als umbenannt oder gelöscht markiert, wenn die Datenbank bereits erkannt und Backups mit der Datenbank verknüpft sind.
+
+Wenn die Datenbank verschoben wird, sollten Sie die folgenden Schritte ausführen: . Aktualisieren Sie die Ressourcen manuell. . Wählen Sie auf der Ressourcen-Seite die RAC One Node-Datenbank aus, und klicken Sie dann auf Datenbankeinstellungen. . Konfigurieren Sie die Datenbank so, dass die bevorzugten Cluster-Knoten auf den RAC-Knoten eingestellt werden, der derzeit die Datenbank hostet. . Führen Sie die SnapCenter Vorgänge aus.
+
+
+NOTE: Wenn in der Datei /etc/oratab Oracle 12__c__R2 und 18__c__-Datenbankeinträge vorhanden sind und dieselbe Datenbank beim Befehl srvctl config registriert ist, beseitigt SnapCenter die doppelten Datenbankeinträge. Wenn veraltete Datenbankeinträge vorhanden sind, wird die Datenbank erkannt, die Datenbank ist jedoch nicht erreichbar und der Status ist offline.

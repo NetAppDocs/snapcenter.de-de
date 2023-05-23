@@ -45,7 +45,7 @@ Auf der Seite *Job Details* empfiehlt eine Warnmeldung, dass der Kunde die Skrip
 
 . Laden Sie das SnapCenter Server-Installationspaket von der NetApp Support Website herunter.
 +
-https://[]
+https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab[]
 
 . Erstellen Sie eine Kopie von Web.config unter C:\Programme\NetApp\SnapCenter WebApp.
 . Exportieren Sie die SnapCenter-Zeitpläne für Plug-in-Hosts aus dem Windows-Aufgabenplan, damit Sie diese verwenden können, um die Zeitpläne bei einem Upgrade-Fehler wiederherzustellen.

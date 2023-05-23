@@ -72,7 +72,7 @@ Windows Plug-in-Hosts
 
 Neben den Ports 135 und 445 sollte auch der von Microsoft festgelegte dynamische Portbereich geöffnet sein. Remote-Installationsvorgänge verwenden den Windows Management Instrumentation (WMI)-Dienst, der diesen Portbereich dynamisch durchsucht.
 
-Informationen zum unterstützten dynamischen Portbereich finden Sie unter https://["Serviceübersicht und Netzwerkanschlussanforderungen für Windows"^]
+Informationen zum unterstützten dynamischen Portbereich finden Sie unter https://support.microsoft.com/kb/832017["Serviceübersicht und Netzwerkanschlussanforderungen für Windows"^]
 
 Die Ports dienen zur Kommunikation zwischen dem SnapCenter-Server und dem Host, auf dem das Plug-in installiert wird. Um Plug-in-Binärdateien auf Windows-Plug-in-Hosts zu übertragen, müssen die Ports nur auf dem Plug-in-Host geöffnet sein, und sie können nach der Installation geschlossen werden.
 

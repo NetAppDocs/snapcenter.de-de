@@ -1,8 +1,8 @@
 ---
-permalink: protect-sco/task_create_resource_groups_and_attaching_policies_for_oracle_databases.html 
+permalink: protect-sco/task_create_resource_groups_and_attach_policies_for_oracle_databases.html 
 sidebar: sidebar 
 keywords: run as 
-summary: Eine Ressourcengruppe ist der Container, dem Sie Ressourcen hinzufügen müssen, die Sie sichern und schützen möchten. Mit einer Ressourcengruppen können Sie alle Daten sichern, die einer bestimmten Anwendung zugeordnet sind. 
+summary: Eine Ressourcengruppe ist ein Container, in dem Sie Ressourcen hinzufügen, die Sie sichern und schützen möchten. Mit einer Ressourcengruppe können Sie alle Daten, die einer bestimmten Anwendung zugeordnet sind, gleichzeitig sichern. 
 ---
 = Erstellen von Ressourcengruppen und Anhängen von Richtlinien für Oracle-Datenbanken
 :allow-uri-read: 
@@ -11,62 +11,38 @@ summary: Eine Ressourcengruppe ist der Container, dem Sie Ressourcen hinzufügen
 
 
 [role="lead"]
-Eine Ressourcengruppe ist der Container, dem Sie Ressourcen hinzufügen müssen, die Sie sichern und schützen möchten. Mit einer Ressourcengruppen können Sie alle Daten sichern, die einer bestimmten Anwendung zugeordnet sind.
+Eine Ressourcengruppe ist ein Container, in dem Sie Ressourcen hinzufügen, die Sie sichern und schützen möchten. Mit einer Ressourcengruppe können Sie alle Daten, die einer bestimmten Anwendung zugeordnet sind, gleichzeitig sichern.
 
-*Über diese Aufgabe*
+.Über diese Aufgabe
+Eine Datenbank mit Dateien in ASM-Datenträgergruppen muss sich im „MOUNT“- oder „OPEN“-Zustand befinden, um ihre Backups mit dem Dienstprogramm Oracle DBVERIFY zu überprüfen.
 
-Sie sollten sicherstellen, dass die Datenbank mit Dateien auf den ASM-Laufwerksgruppen entweder im „MOUNT“- oder „OPEN“-Zustand sein sollte, um die Backups mit dem Oracle DBVERIFY-Dienstprogramm zu überprüfen.
-
-Sie sollten eine oder mehrere Richtlinien an die Ressourcengruppe anhängen, um den Typ des Datensicherungsauftrags zu definieren, den Sie ausführen möchten.
+Fügen Sie der Ressourcengruppe eine oder mehrere Richtlinien hinzu, um den Typ des Datenschutzauftrags zu definieren, den Sie ausführen möchten.
 
 Das folgende Bild veranschaulicht die Beziehung zwischen Ressourcen, Ressourcengruppen und Richtlinien für Datenbanken:
 
 image::../media/sco_resourcegroup_policy.gif[sco-Ressourcengruppenrichtlinie]
 
-*Schritte*
-
-. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+.Schritte
+. Wählen Sie im linken Navigationsbereich *Ressourcen* und das entsprechende Plug-in aus der Liste aus.
 . Klicken Sie auf der Seite Ressourcen auf *Neue Ressourcengruppe*.
 . Führen Sie auf der Seite Name die folgenden Aktionen durch:
 +
-|===
-| Für dieses Feld... | Tun Sie das... 
-
-
- a| 
-Name
- a| 
-Geben Sie einen Namen für die Ressourcengruppe ein.
-
+.. Geben Sie im Feld Name einen Namen für die Ressourcengruppe ein.
++
 
 NOTE: Der Name der Ressourcengruppe darf 250 Zeichen nicht überschreiten.
 
-
-
- a| 
-Tags
- a| 
-Geben Sie eine oder mehrere Bezeichnungen ein, die Ihnen bei der späteren Suche nach der Ressourcengruppe helfen.
-
+.. Geben Sie eine oder mehrere Beschriftungen in das Feld Tag ein, um später nach der Ressourcengruppe zu suchen.
++
 Wenn Sie beispielsweise HR als Tag zu mehreren Ressourcengruppen hinzufügen, können Sie später alle Ressourcengruppen finden, die mit dem HR-Tag verknüpft sind.
 
-
-
- a| 
-Verwenden Sie für Snapshot-Kopie das benutzerdefinierte Namensformat
- a| 
-Aktivieren Sie dieses Kontrollkästchen, und geben Sie ein benutzerdefiniertes Namensformat ein, das Sie für den Namen der Snapshot Kopie verwenden möchten.
-
+.. Aktivieren Sie dieses Kontrollkästchen, und geben Sie ein benutzerdefiniertes Namensformat ein, das Sie für den Namen der Snapshot Kopie verwenden möchten.
++
 Beispiel: Custtext_Resource Group_Policy_hostname oder Resource Group_hostname. Standardmäßig wird ein Zeitstempel an den Namen der Snapshot Kopie angehängt.
 
+.. Geben Sie die Ziele der Archivprotokolldateien an, die Sie nicht sichern möchten.
 
 
- a| 
-Ausschließen von Zielen für Archivprotokolle von der Sicherung
- a| 
-Geben Sie die Ziele der Archivprotokolldateien an, die Sie nicht sichern möchten.
-
-|===
 . Wählen Sie auf der Seite Ressourcen einen Oracle-Datenbank-Hostnamen aus der Dropdown-Liste *Host* aus.
 +
 
@@ -82,12 +58,12 @@ NOTE: Sie können Datenbanken von Linux- und AIX-Hosts in einer einzigen Ressour
 .. Wählen Sie eine oder mehrere Richtlinien aus der Dropdown-Liste aus.
 +
 
-NOTE: Sie können eine Richtlinie auch erstellen, indem Sie auf klicken image:../media/add_policy_from_resourcegroup.gif[""].
+NOTE: Sie können eine Richtlinie auch erstellen, indem Sie auf klicken image:../media/add_policy_from_resourcegroup.gif["Symbol hinzufügen"].
 
 +
 Im Abschnitt „Zeitpläne für ausgewählte Richtlinien konfigurieren“ werden die ausgewählten Richtlinien aufgelistet.
 
-.. Klicken Sie Auf *image:../media/add_policy_from_resourcegroup.gif[""]* In der Spalte Zeitplan konfigurieren für die Richtlinie, für die Sie einen Zeitplan konfigurieren möchten.
+.. Klicken Sie Auf image:../media/add_policy_from_resourcegroup.gif["Symbol hinzufügen"] In der Spalte Zeitplan konfigurieren für die Richtlinie konfigurieren, für die Sie einen Zeitplan konfigurieren möchten.
 .. Konfigurieren Sie im Fenster Add Schedules for Policy_Name_ den Zeitplan, und klicken Sie dann auf *OK*.
 +
 Dabei ist _Policy_Name_ der Name der von Ihnen ausgewählten Richtlinie.
@@ -103,7 +79,7 @@ Backup-Zeitpläne von Drittanbietern werden nicht unterstützt, wenn sie sich mi
 . Führen Sie auf der Seite Überprüfung die folgenden Schritte aus:
 +
 .. Klicken Sie auf *Lokatoren laden*, um die SnapMirror oder SnapVault Volumes zu laden, um eine Überprüfung auf dem sekundären Speicher durchzuführen.
-.. Klicken Sie Auf *image:../media/add_policy_from_resourcegroup.gif[""]* In der Spalte Zeitplan konfigurieren, um den Überprüfungsplan für alle Zeitplantypen der Richtlinie zu konfigurieren.
+.. Klicken Sie Auf image:../media/add_policy_from_resourcegroup.gif["Symbol hinzufügen"] In der Spalte Configure Schedules (Zeitpläne konfigurieren), um den Überprüfungsplan für alle Zeitplantypen der Richtlinie zu konfigurieren.
 .. Führen Sie im Dialogfeld Add Verification Schedules Policy_Name die folgenden Aktionen durch:
 +
 |===

@@ -23,7 +23,7 @@ Wenn Sie beispielsweise Klon1 aus einem Datenbank-Backup erstellen, können Sie 
 Nach dem Aufteilen von Klon2 können Sie den Clone Split-Vorgang auf Klon1 durchführen, da Klon1 nicht mehr der Zwischenklon ist.
 
 * Wenn Sie einen Klon aufteilen, werden die Backup-Kopien des Klons gelöscht.
-* Informationen zu den Einschränkungen für den Klon-Split-Vorgang finden Sie im http://["ONTAP 9 Leitfaden für das Management von logischem Storage"^].
+* Informationen zu den Einschränkungen für den Klon-Split-Vorgang finden Sie im http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["ONTAP 9 Leitfaden für das Management von logischem Storage"^].
 * Stellen Sie sicher, dass das Volume oder Aggregat auf dem Storage-System online ist.
 
 

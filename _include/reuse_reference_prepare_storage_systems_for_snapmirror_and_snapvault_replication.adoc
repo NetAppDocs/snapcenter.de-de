@@ -14,7 +14,7 @@ Eine Datensicherungsbeziehung repliziert Daten auf dem Primärspeicher (das Quel
 
 NOTE: SnapCenter unterstützt keine Kaskadenbeziehungen zwischen SnapMirror und SnapVault Volumes (*Primary* > *Mirror* > *Vault*). Sie sollten Fanout-Beziehungen verwenden.
 
-SnapCenter unterstützt das Management von versionsflexiblen SnapMirror Beziehungen. Informationen zu Beziehungen zwischen Versionen und SnapMirror sowie deren Einrichtung finden Sie im http://["ONTAP-Dokumentation"^].
+SnapCenter unterstützt das Management von versionsflexiblen SnapMirror Beziehungen. Informationen zu Beziehungen zwischen Versionen und SnapMirror sowie deren Einrichtung finden Sie im http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.ic-base%2Fresources%2Fhome.html["ONTAP-Dokumentation"^].
 
 
 NOTE: SnapCenter unterstützt keine *Sync_mirror* Replikation.

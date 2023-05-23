@@ -23,7 +23,7 @@ Mit SnapCenter können Sie gesicherte Exchange Datenbanken wiederherstellen.
 Führen Sie die aus `Move-ActiveMailboxDatabase` Befehl, um die passive Datenbankkopie als aktive Datenbankkopie zu erstellen.
 
 +
-Der https://["Microsoft-Dokumentation"^] Enthält Informationen zu diesem Befehl.
+Der https://docs.microsoft.com/en-us/powershell/module/exchange/move-activemailboxdatabase?view=exchange-ps["Microsoft-Dokumentation"^] Enthält Informationen zu diesem Befehl.
 
 
 

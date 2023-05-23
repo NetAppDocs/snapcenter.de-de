@@ -22,7 +22,7 @@ Bevor Sie einen Host hinzufügen und die Plug-in-Pakete installieren, müssen Si
 * Wenn SnapManager für Microsoft Exchange Server und SnapDrive für Windows bereits installiert sind, müssen Sie den von SnapDrive für Windows verwendeten VSS Hardware Provider deinstallieren, bevor Sie Plug-in für Exchange auf demselben Exchange-Server installieren, um den erfolgreichen Datenschutz mit SnapCenter zu gewährleisten.
 * Wenn SnapManager für Microsoft Exchange Server und das Plug-in für Exchange auf demselben Server installiert sind, müssen Sie alle vom SnapManager für Microsoft Exchange Server erstellten Zeitpläne aussetzen oder löschen.
 * Der Host muss auf den vollständig qualifizierten Domänennamen (FQDN) vom Server resolable sein. Wenn die Hosts-Datei geändert wird, damit sie resolable ist und wenn sowohl der Kurzname als auch der FQDN in der Datei Hosts angegeben sind, erstellen Sie einen Eintrag in der Datei SnapCenter Hosts im folgenden Format: _<ip_Address> <Host_fqdn> <Host_Name>_.
-* Stellen Sie sicher, dass die folgenden Ports in der Firewall nicht blockiert sind, da sonst der Vorgang zum Hinzufügen eines Hosts fehlschlägt. Um dieses Problem zu lösen, müssen Sie den dynamischen Portbereich konfigurieren. Weitere Informationen finden Sie unter https://["Microsoft-Dokumentation"^].
+* Stellen Sie sicher, dass die folgenden Ports in der Firewall nicht blockiert sind, da sonst der Vorgang zum Hinzufügen eines Hosts fehlschlägt. Um dieses Problem zu lösen, müssen Sie den dynamischen Portbereich konfigurieren. Weitere Informationen finden Sie unter https://docs.microsoft.com/en-us/troubleshoot/windows-server/networking/configure-rpc-dynamic-port-allocation-with-firewalls["Microsoft-Dokumentation"^].
 +
 ** Port-Bereich 50000 - 51000 für Windows 2016 und Exchange 2016
 ** Port-Bereich 6000 - 6500 für Windows 2012 R2 und Exchange 2013
@@ -57,7 +57,7 @@ Betriebssysteme
  a| 
 Microsoft Windows
 
-Aktuelle Informationen zu unterstützten Versionen finden Sie im https://["NetApp Interoperabilitäts-Matrix-Tool"^].
+Aktuelle Informationen zu unterstützten Versionen finden Sie im https://imt.netapp.com/matrix/imt.jsp?components=108395;&solution=1258&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"^].
 
 
 
@@ -86,9 +86,9 @@ Erforderliche Softwarepakete
 * PowerShell 4.0 oder höher
 
 
-Aktuelle Informationen zu unterstützten Versionen finden Sie im https://["NetApp Interoperabilitäts-Matrix-Tool"^].
+Aktuelle Informationen zu unterstützten Versionen finden Sie im https://imt.netapp.com/matrix/imt.jsp?components=108395;&solution=1258&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"^].
 
-Informationen zur .NET-spezifischen Fehlerbehebung finden Sie unter https://["Das Upgrade oder die Installation von SnapCenter schlägt bei älteren Systemen, die keine Internetverbindung haben, fehl."]
+Informationen zur .NET-spezifischen Fehlerbehebung finden Sie unter https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_upgrade_or_install_fails_with_This_KB_is_not_related_to_the_OS["Das Upgrade oder die Installation von SnapCenter schlägt bei älteren Systemen, die keine Internetverbindung haben, fehl."]
 
 |===
 
@@ -141,7 +141,7 @@ Betriebssysteme
  a| 
 Microsoft Windows
 
-Aktuelle Informationen zu unterstützten Versionen finden Sie im https://["NetApp Interoperabilitäts-Matrix-Tool"^].
+Aktuelle Informationen zu unterstützten Versionen finden Sie im https://imt.netapp.com/matrix/imt.jsp?components=108395;&solution=1258&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"^].
 
 
 
@@ -170,8 +170,8 @@ Erforderliche Softwarepakete
 * PowerShell 4.0 oder höher
 
 
-Aktuelle Informationen zu unterstützten Versionen finden Sie im https://["NetApp Interoperabilitäts-Matrix-Tool"^].
+Aktuelle Informationen zu unterstützten Versionen finden Sie im https://imt.netapp.com/matrix/imt.jsp?components=108395;&solution=1258&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"^].
 
-Informationen zur .NET-spezifischen Fehlerbehebung finden Sie unter https://["Das Upgrade oder die Installation von SnapCenter schlägt bei älteren Systemen, die keine Internetverbindung haben, fehl."]
+Informationen zur .NET-spezifischen Fehlerbehebung finden Sie unter https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_upgrade_or_install_fails_with_This_KB_is_not_related_to_the_OS["Das Upgrade oder die Installation von SnapCenter schlägt bei älteren Systemen, die keine Internetverbindung haben, fehl."]
 
 |===

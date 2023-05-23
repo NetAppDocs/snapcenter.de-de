@@ -33,9 +33,9 @@ IMPORTANT: Wenn in Ihrem Webbrowser mehrere Registerkarten geöffnet sind, melde
 |===
 Die Standard-GUI-URL ist eine sichere Verbindung zum Standardport 8146 auf dem Server, auf dem der SnapCenter-Server installiert ist (_\https://server:8146_). Wenn Sie während der SnapCenter-Installation einen anderen Server-Port bereitgestellt haben, wird dieser Port verwendet.
 
-Für die Implementierung von Hochverfügbarkeit (High Availability, HA) müssen Sie über die virtuelle Cluster-IP _\https://Virtual_Cluster_IP_or_FQDN:8146_ auf SnapCenter zugreifen können. Wenn Sie die SnapCenter-Benutzeroberfläche nicht sehen, wenn Sie im Internet Explorer (IE) zu _\https://Virtual_Cluster_IP_or_FQDN:8146_ navigieren, müssen Sie die IP-Adresse des virtuellen Clusters oder den FQDN als vertrauenswürdige Site in IE auf jedem Plug-in-Host hinzufügen, oder Sie müssen die erweiterte Sicherheit des IE auf jedem Plug-in-Host deaktivieren. Weitere Informationen finden Sie unter https://["Der Zugriff auf die Cluster-IP-Adresse kann nicht vom externen Netzwerk aus erfolgen"^].
+Für die Implementierung von Hochverfügbarkeit (High Availability, HA) müssen Sie über die virtuelle Cluster-IP _\https://Virtual_Cluster_IP_or_FQDN:8146_ auf SnapCenter zugreifen können. Wenn Sie die SnapCenter-Benutzeroberfläche nicht sehen, wenn Sie im Internet Explorer (IE) zu _\https://Virtual_Cluster_IP_or_FQDN:8146_ navigieren, müssen Sie die IP-Adresse des virtuellen Clusters oder den FQDN als vertrauenswürdige Site in IE auf jedem Plug-in-Host hinzufügen, oder Sie müssen die erweiterte Sicherheit des IE auf jedem Plug-in-Host deaktivieren. Weitere Informationen finden Sie unter https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_access_cluster_IP_address_from_outside_network["Der Zugriff auf die Cluster-IP-Adresse kann nicht vom externen Netzwerk aus erfolgen"^].
 
-Über die SnapCenter GUI hinaus können Sie mit PowerShell Cmdlets Skripte erstellen, um Konfigurations-, Backup- und Restore-Vorgänge durchzuführen. Einige Cmdlets haben sich möglicherweise bei jeder SnapCenter Version geändert. Der https://["SnapCenter Software Cmdlet Referenzhandbuch"^] Enthält die Details.
+Über die SnapCenter GUI hinaus können Sie mit PowerShell Cmdlets Skripte erstellen, um Konfigurations-, Backup- und Restore-Vorgänge durchzuführen. Einige Cmdlets haben sich möglicherweise bei jeder SnapCenter Version geändert. Der https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["SnapCenter Software Cmdlet Referenzhandbuch"^] Enthält die Details.
 
 
 NOTE: Wenn Sie sich zum ersten Mal bei SnapCenter anmelden, müssen Sie sich mit den Anmeldeinformationen anmelden, die Sie während des Installationsvorgangs angegeben haben.
@@ -78,7 +78,7 @@ Ihre aktuellen Benutzer und die zugehörige Rolle werden nach der Anmeldung oben
 
 Die Seite Dashboard wird angezeigt.
 
-Wenn die Protokollierung fehlschlägt und der Fehler aufgetreten ist, dass die Site nicht erreicht werden kann, sollten Sie das SSL-Zertifikat SnapCenter zuordnen. https://["Weitere Informationen ."^]
+Wenn die Protokollierung fehlschlägt und der Fehler aufgetreten ist, dass die Site nicht erreicht werden kann, sollten Sie das SSL-Zertifikat SnapCenter zuordnen. https://kb.netapp.com/?title=Advice_and_Troubleshooting%2FData_Protection_and_Security%2FSnapCenter%2FSnapCenter_will_not_open_with_error_%2522This_site_can%2527t_be_reached%2522["Weitere Informationen ."^]
 
 *Nach Ihrer Beendigung*
 

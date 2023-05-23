@@ -30,7 +30,7 @@ Folgende Zertifikate werden generiert:
 
 . Richten Sie die SSL-Zertifikate und Schlüsseldateien für MySQL-Server und -Clients unter Windows mithilfe des openssl-Befehls ein.
 +
-Weitere Informationen finden Sie unter https://["MySQL Version 5.7: Erstellen von SSL-Zertifikaten und -Schlüsseln mit openssl"^]
+Weitere Informationen finden Sie unter https://dev.mysql.com/doc/refman/5.7/en/creating-ssl-files-using-openssl.html["MySQL Version 5.7: Erstellen von SSL-Zertifikaten und -Schlüsseln mit openssl"^]
 
 +
 
@@ -146,7 +146,7 @@ Auf einem der HA-Nodes wird ein CA-Zertifikat generiert, und dieses CA-Zertifika
 
 . Richten Sie beim ersten HA-Knoten die SSL-Zertifikate und Schlüsseldateien für MySQL Server und Clients unter Windows mithilfe des openssl-Befehls ein.
 +
-Weitere Informationen finden Sie unter https://["MySQL Version 5.7: Erstellen von SSL-Zertifikaten und -Schlüsseln mit openssl"^]
+Weitere Informationen finden Sie unter https://dev.mysql.com/doc/refman/5.7/en/creating-ssl-files-using-openssl.html["MySQL Version 5.7: Erstellen von SSL-Zertifikaten und -Schlüsseln mit openssl"^]
 
 +
 
@@ -221,7 +221,7 @@ NOTE: Sie dürfen kein CA-Zertifikat erneut erstellen. Sie sollten nur das öffe
 
 .. Richten Sie beim ersten HA-Knoten die SSL-Zertifikate und Schlüsseldateien für MySQL Server und Clients unter Windows mithilfe des openssl-Befehls ein.
 +
-https://["MySQL Version 5.7: Erstellen von SSL-Zertifikaten und -Schlüsseln mit openssl"]
+https://dev.mysql.com/doc/refman/5.7/en/creating-ssl-files-using-openssl.html["MySQL Version 5.7: Erstellen von SSL-Zertifikaten und -Schlüsseln mit openssl"]
 
 +
 

@@ -140,7 +140,7 @@ Es wird eine implizite Ressourcengruppe erstellt. Sie können dies anzeigen, ind
 
 * In MetroCluster-Konfigurationen kann SnapCenter nach einem Failover möglicherweise keine Sicherungsbeziehung erkennen.
 +
-https://["SnapMirror oder SnapVault-Beziehung kann nach MetroCluster Failover nicht erkannt werden"]
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["SnapMirror oder SnapVault-Beziehung kann nach MetroCluster Failover nicht erkannt werden"]
 
 * Wenn Sie Anwendungsdaten auf VMDKs sichern und die Java Heap-Größe für das SnapCenter-Plug-in für VMware vSphere nicht groß genug ist, kann die Sicherung fehlschlagen. Um die Java-Heap-Größe zu erhöhen, suchen Sie nach der Skriptdatei /opt/netapp/init_scvservice. In diesem Skript, das `do_start method` Befehl startet den SnapCenter-VMware-Plug-in-Service. Aktualisieren Sie diesen Befehl auf Folgendes: `Java -jar -Xmx8192M -Xms4096M`.
 
@@ -151,8 +151,8 @@ link:task_create_backup_policies_for_sql_server_databases.html["Erstellen von Ba
 
 link:task_back_up_resources_using_powershell_cmdlets_for_sql.html["Sichern Sie Ressourcen mit PowerShell cmdlets"]
 
-https://["Backup-Vorgänge schlagen wegen der Verzögerung im TCP_TIMEOUT bei MySQL-Verbindungsfehler fehl"]
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Clone_operation_might_fail_or_take_longer_time_to_complete_with_default_TCP_TIMEOUT_value["Backup-Vorgänge schlagen wegen der Verzögerung im TCP_TIMEOUT bei MySQL-Verbindungsfehler fehl"]
 
-https://["Das Backup schlägt mit dem Windows Scheduler-Fehler fehl"]
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Backup_fails_with_Windows_scheduler_error["Das Backup schlägt mit dem Windows Scheduler-Fehler fehl"]
 
-https://["Fehler beim Quiesce oder Gruppieren von Ressourcen"]
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Quiesce_or_grouping_resources_operations_fail["Fehler beim Quiesce oder Gruppieren von Ressourcen"]

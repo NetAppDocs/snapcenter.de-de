@@ -4,13 +4,19 @@ sidebar: sidebar
 keywords: SnapCenter Server, monitor, backup, activity pane, data protection 
 summary: Sie können den Fortschritt der verschiedenen Backup-Vorgänge überwachen, indem Sie die Seite SnapCenter-Jobs verwenden. Sie können den Fortschritt überprüfen, um festzustellen, wann er abgeschlossen ist oder ob ein Problem vorliegt. 
 ---
-= Überwachen Sie die Backup-Vorgänge für die Oracle Datenbank
+= Überwachen Sie das Backup von Oracle Datenbanken
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Erfahren Sie, wie Sie den Fortschritt von Backup-Vorgängen und Datensicherungsvorgängen überwachen.
+
+
+
+== Überwachen Sie die Backup-Vorgänge für die Oracle Datenbank
+
 Sie können den Fortschritt verschiedener Backup-Vorgänge über die Seite SnapCenterJobs überwachen. Sie können den Fortschritt überprüfen, um festzustellen, wann er abgeschlossen ist oder ob ein Problem vorliegt.
 
 *Über diese Aufgabe*

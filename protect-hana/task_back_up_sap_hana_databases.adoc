@@ -27,7 +27,7 @@ link:task_back_up_resource_groups_sap_hana.html["Sichern von Ressourcengruppen"]
 
 * Wenn Sie ein dateibasiertes Backup erstellen möchten, wenn eine oder mehrere Mandanten-Datenbanken nicht verfügbar sind, setzen Sie DEN PARAMETER ALLOW_FILE_BASED_BACKUP_IFINACTIVE_TENANTS_PRESENT in der HANA-Eigenschaftendatei mit AUF *JA* `Set-SmConfigSettings` Cmdlet:
 +
-Die Informationen zu den Parametern, die mit dem Cmdlet verwendet werden können, und deren Beschreibungen können durch Ausführen von Get-Help _Command_Name_ abgerufen werden. Alternativ können Sie auch auf die verweisen https://["SnapCenter Software Cmdlet Referenzhandbuch"]
+Die Informationen zu den Parametern, die mit dem Cmdlet verwendet werden können, und deren Beschreibungen können durch Ausführen von Get-Help _Command_Name_ abgerufen werden. Alternativ können Sie auch auf die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["SnapCenter Software Cmdlet Referenzhandbuch"]
 
 * Um Befehle vor und nach quiesce, Snapshot Kopie und unquiesce Vorgängen auszuführen, sollten Sie überprüfen, ob die Befehle in der Befehlsliste vorhanden sind, die auf dem Plug-in Host verfügbar ist, aus den folgenden Pfaden:
 +
@@ -155,7 +155,7 @@ Wenn die für das On-Demand-Backup ausgewählte Richtlinie einem Backup-Zeitplan
 +
 ** In MetroCluster-Konfigurationen kann SnapCenter nach einem Failover möglicherweise keine Sicherungsbeziehung erkennen.
 +
-Weitere Informationen finden Sie unter: https://["SnapMirror oder SnapVault-Beziehung kann nach MetroCluster Failover nicht erkannt werden"^]
+Weitere Informationen finden Sie unter: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["SnapMirror oder SnapVault-Beziehung kann nach MetroCluster Failover nicht erkannt werden"^]
 
 ** Wenn Sie Anwendungsdaten auf VMDKs sichern und die Java Heap-Größe für das SnapCenter-Plug-in für VMware vSphere nicht groß genug ist, kann die Sicherung fehlschlagen.
 +

@@ -51,7 +51,7 @@ Ab SnapCenter 4.6 unterstützt SCE die Mandantenfähigkeit und Sie können einen
 |===
 Plug-in für Exchange hängt vom SnapCenter Plug-ins-Paket für Windows ab, die Versionen müssen identisch sein. Während der Installation von Plug-in für Exchange wird das SnapCenter Plug-ins Paket für Windows standardmäßig ausgewählt und zusammen mit dem VSS-Hardwareanbieter installiert.
 
-Falls SnapManager für Microsoft Exchange Server und SnapDrive für Windows bereits installiert sind, Und Sie möchten Plug-in für Exchange auf demselben Exchange-Server installieren, müssen Sie den von SnapDrive für Windows verwendeten VSS Hardware-Anbieter deaktivieren, da er mit dem VSS Hardware Provider, der mit Plug-in für Exchange und SnapCenter Plug-ins Package für Windows installiert ist, nicht kompatibel ist. Weitere Informationen finden Sie unter https://["So registrieren Sie den Data ONTAP VSS Hardware Provider manuell"].
+Falls SnapManager für Microsoft Exchange Server und SnapDrive für Windows bereits installiert sind, Und Sie möchten Plug-in für Exchange auf demselben Exchange-Server installieren, müssen Sie den von SnapDrive für Windows verwendeten VSS Hardware-Anbieter deaktivieren, da er mit dem VSS Hardware Provider, der mit Plug-in für Exchange und SnapCenter Plug-ins Package für Windows installiert ist, nicht kompatibel ist. Weitere Informationen finden Sie unter https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_manually_register_the_Data_ONTAP_VSS_Hardware_Provider["So registrieren Sie den Data ONTAP VSS Hardware Provider manuell"].
 
 *Schritte*
 

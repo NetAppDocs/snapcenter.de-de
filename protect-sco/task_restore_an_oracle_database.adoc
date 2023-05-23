@@ -170,8 +170,8 @@ Wenn Archivprotokolle im Rahmen der Sicherung beschnitten werden und Sie die erf
 
 NOTE: Sie sollten den Pfad und den Inhalt des Mount-Pfads überprüfen, bevor Sie ihn als externen Speicherort des Protokolls auflisten.
 
-** http://["Technischer Bericht 4591 zu Datenbanksicherheit, Recovery, Replizierung und DR"^]
-** https://["Der Vorgang schlägt mit ORA-00308-Fehler fehl"^]
+** http://www.netapp.com/us/media/tr-4591.pdf["Technischer Bericht 4591 zu Datenbanksicherheit, Recovery, Replizierung und DR"^]
+** https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/ORA-00308%3A_cannot_open_archived_log_ORA_LOG_arch1_123_456789012.arc["Der Vorgang schlägt mit ORA-00308-Fehler fehl"^]
 
 
 |===
@@ -232,8 +232,8 @@ NOTE: Für eine E-Mail-Benachrichtigung müssen Sie die SMTP-Serverdetails entwe
 
 *Für weitere Informationen*
 
-* https://["Oracle RAC One-Knoten-Datenbank wird zur Durchführung von SnapCenter-Operationen übersprungen"^]
-* https://["Fehler beim Wiederherstellen von einem sekundären SnapMirror- oder SnapVault-Standort"^]
-* https://["Wiederherstellung aus einem Backup einer verwaisten Inkarnation fehlgeschlagen"^]
-* https://["Anpassbare Parameter für Backup-, Wiederherstellungs- und Klonvorgänge auf AIX-Systemen"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Oracle_RAC_One_Node_database_is_skipped_for_performing_SnapCenter_operations["Oracle RAC One-Knoten-Datenbank wird zur Durchführung von SnapCenter-Operationen übersprungen"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Failed_to_restore_from_a_secondary_SnapMirror_or_SnapVault_location["Fehler beim Wiederherstellen von einem sekundären SnapMirror- oder SnapVault-Standort"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Failed_to_restore_when_a_backup_of_an_orphan_incarnation_is_selected["Wiederherstellung aus einem Backup einer verwaisten Inkarnation fehlgeschlagen"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/What_are_the_customizable_parameters_for_backup_restore_and_clone_operations_on_AIX_systems["Anpassbare Parameter für Backup-, Wiederherstellungs- und Klonvorgänge auf AIX-Systemen"^]
 

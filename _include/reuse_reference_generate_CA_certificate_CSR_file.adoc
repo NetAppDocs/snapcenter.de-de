@@ -6,7 +6,7 @@ Sie können eine Zertifikatsignierungsanforderung (CSR) generieren und das Zerti
 
 CSR ist ein Block von codiertem Text, der einem autorisierten Zertifikatanbieter zur Beschaffung des signierten CA-Zertifikats übergeben wird.
 
-Informationen zum Generieren einer CSR finden Sie unter https://["So generieren Sie eine CSR-Datei für das CA-Zertifikat"^].
+Informationen zum Generieren einer CSR finden Sie unter https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_generate_CA_Certificate_CSR_file["So generieren Sie eine CSR-Datei für das CA-Zertifikat"^].
 
 
 NOTE: Wenn Sie das CA-Zertifikat für Ihre Domain (*.domain.company.com) oder Ihr System (machine1.domain.company.com) besitzen, können Sie die Erstellung der CA-Zertifikat-CSR-Datei überspringen. Sie können das vorhandene CA-Zertifikat mit SnapCenter bereitstellen.

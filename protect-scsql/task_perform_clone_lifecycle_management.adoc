@@ -112,7 +112,7 @@ Außerdem müssen Sie die E-Mail-Adressen für Absender und Empfänger sowie den
 NOTE: Für eine E-Mail-Benachrichtigung müssen Sie die SMTP-Serverdetails entweder mit der GUI oder mit dem PowerShell-Befehlssatz Set-SmtpServer angegeben haben.
 
 +
-Informationen zu EMS finden Sie unter https://["EMS-Datenerfassung managen"]
+Informationen zu EMS finden Sie unter https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_ems_data_collection.html["EMS-Datenerfassung managen"]
 
 . Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
 

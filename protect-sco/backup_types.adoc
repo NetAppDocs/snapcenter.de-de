@@ -1,0 +1,43 @@
+---
+permalink: protect-sco/backup_types.html 
+sidebar: sidebar 
+keywords: backup type, preferred nodes, catalog backups, schedules, backup name format, retention, verification 
+summary: Für Oracle-Datenbanken unterstützte Backup-Typen 
+---
+= Arten von Backups, die für Oracle-Datenbanken unterstützt werden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Sicherungstyp gibt den Sicherungstyp an, den Sie erstellen möchten. SnapCenter unterstützt Online- und Offline-Backups für Oracle Datenbanken.
+
+
+
+== Online-Backup
+
+Ein Backup, das erstellt wird, wenn sich die Datenbank im Online-Status befindet, wird als Online-Backup bezeichnet. Auch als Hot Backup bezeichnet, ermöglicht ein Online-Backup die Erstellung eines Backups der Datenbank, ohne dass es heruntergefahren werden muss.
+
+Im Rahmen des Online-Backups können Sie eine Sicherung der folgenden Dateien erstellen:
+
+* Nur Datendateien und Kontrolldateien
+* Nur Archivprotokolldateien (in diesem Szenario wird die Datenbank nicht in den Backup-Modus versetzt)
+* Vollständige Datenbank, die Datendateien, Kontrolldateien und Archivprotokolldateien umfasst
+
+
+
+
+== Offline-Backup
+
+Ein Backup, das erstellt wird, wenn sich die Datenbank entweder im gemounteten oder Herunterfahrzustand befindet, wird als Offline-Backup bezeichnet. Ein Offline-Backup wird auch als Cold Backup bezeichnet. Sie können nur Datendateien und Steuerdateien in Offline-Backups einbeziehen. Sie können entweder einen Offline-Mount- oder Offline-Shutdown-Backup erstellen.
+
+* Wenn Sie ein Offline-Mount-Backup erstellen, müssen Sie sicherstellen, dass sich die Datenbank in einem gemounteten Zustand befindet.
++
+Wenn sich die Datenbank in einem anderen Zustand befindet, schlägt der Backup-Vorgang fehl.
+
+* Beim Erstellen einer Offline-Shutdown-Sicherung kann sich die Datenbank in einem beliebigen Zustand befinden.
++
+Der Datenbankstatus wird in den erforderlichen Zustand geändert, um ein Backup zu erstellen. Nach dem Erstellen des Backups wird der Datenbankzustand in den ursprünglichen Zustand zurückgesetzt.
+
+

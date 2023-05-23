@@ -334,7 +334,7 @@ Leere Liste
 Diese Liste enthält alle Meldungen, die ein Plug-in zum Server zurückkehren möchte. Der SnapCenter-Server zeigt diese Meldungen in der CLI oder GUI an.
 
 |===
-Der SnapCenter Agent stellt Builders zur Verfügung (https://["Baumuster"]) Für alle seine Ergebnistypen. Daher ist es sehr einfach, sie zu verwenden:
+Der SnapCenter Agent stellt Builders zur Verfügung (https://en.wikipedia.org/wiki/Builder_pattern["Baumuster"]) Für alle seine Ergebnistypen. Daher ist es sehr einfach, sie zu verwenden:
 
 ....
 Result result = Result.builder()

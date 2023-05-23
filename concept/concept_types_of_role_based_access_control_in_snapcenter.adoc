@@ -67,7 +67,7 @@ Wenn Sie Datensicherungsvorgänge in einer Oracle-Datenbank durchführen möchte
 
 Wenn Sie das SnapCenter VMware Plug-in für die VM-konsistente Datensicherung nutzen, bietet der vCenter Server zusätzliche RBAC-Level. Das SnapCenter VMware Plug-in unterstützt sowohl vCenter Server RBAC als auch Data ONTAP RBAC.
 
-Weitere Informationen finden Sie unter https://["SnapCenter Plug-in für VMware vSphere RBAC"^]
+Weitere Informationen finden Sie unter https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_role_based_access_control.html["SnapCenter Plug-in für VMware vSphere RBAC"^]
 
 
 

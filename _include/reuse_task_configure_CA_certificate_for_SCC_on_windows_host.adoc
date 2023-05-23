@@ -108,7 +108,7 @@ Diesen Wert mit dem Schlüssel SCC_CERTIFICATE_ALIAS aktualisieren.
 
 *Über diese Aufgabe*
 
-* Informationen zum Herunterladen der neuesten CRL-Datei für das zugehörige CA-Zertifikat finden Sie unter https://["Aktualisieren der Listendatei für Zertifikatsperrlisten im SnapCenter CA-Zertifikat"].
+* Informationen zum Herunterladen der neuesten CRL-Datei für das zugehörige CA-Zertifikat finden Sie unter https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_update_certificate_revocation_list_file_in_SnapCenter_CA_Certificate["Aktualisieren der Listendatei für Zertifikatsperrlisten im SnapCenter CA-Zertifikat"].
 * Benutzerdefinierte SnapCenter-Plug-ins suchen in einem vorkonfigurierten Verzeichnis nach den CRL-Dateien.
 * Das Standardverzeichnis für die CRL-Dateien für benutzerdefinierte SnapCenter Plug-ins ist _'C:\Programme\NetApp\SnapCenter\SnapCenter Plug-in Creator\ etc\crl'_.
 

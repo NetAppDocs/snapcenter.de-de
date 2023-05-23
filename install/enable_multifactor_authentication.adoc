@@ -21,7 +21,7 @@ In diesem Thema wird beschrieben, wie die MFA-Funktionalität im Active Director
 
 .Über diese Aufgabe
 * SnapCenter unterstützt SSO-basierte Anmeldungen, wenn andere Applikationen mit demselben AD FS konfiguriert werden. In bestimmten AD FS-Konfigurationen erfordert SnapCenter möglicherweise aus Sicherheitsgründen die Benutzerauthentifizierung in Abhängigkeit von der Persistenz der AD FS-Session.
-* Die Informationen zu den Parametern, die mit dem Cmdlet verwendet werden können und deren Beschreibungen können durch Ausführen abgerufen werden `Get-Help command_name`. Alternativ können Sie auch sehen https://["SnapCenter Software Cmdlet Referenzhandbuch"^].
+* Die Informationen zu den Parametern, die mit dem Cmdlet verwendet werden können und deren Beschreibungen können durch Ausführen abgerufen werden `Get-Help command_name`. Alternativ können Sie auch sehen https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["SnapCenter Software Cmdlet Referenzhandbuch"^].
 
 
 .Was Sie benötigen
@@ -45,7 +45,7 @@ Informationen zum CA-Zertifikat finden Sie unter link:../install/reference_gener
 
 .Schritte
 . Stellen Sie eine Verbindung zum Active Directory Federation Services (AD FS)-Host her.
-. Laden Sie die AD FS Federation-Metadatendatei von herunter "https://[] FQDN>/FederationMetadata/2007-06/FederationMetadata.XML“.
+. Laden Sie die AD FS Federation-Metadatendatei von herunter "https://<host[] FQDN>/FederationMetadata/2007-06/FederationMetadata.XML“.
 . Kopieren Sie die heruntergeladene Datei auf SnapCenter-Server, um die MFA-Funktion zu aktivieren.
 . Melden Sie sich bei SnapCenter Server als SnapCenter-Administrator-Benutzer über PowerShell an.
 . Generieren Sie mithilfe der PowerShell-Sitzung die SnapCenter MFA-Metadatendatei mit dem Cmdlet _New-SmMultifactorAuthenticationMetadata -Path_.
@@ -128,7 +128,7 @@ Für Informationen zur Fehlerbehebung. Siehe link:..https://kb.netapp.com/Advice
 Sie sollten die AD FS MFA-Metadaten in SnapCenter aktualisieren, sobald es Änderungen im AD FS-Server gibt, wie z. B. Upgrade, CA-Zertifikatverlängerung, DR usw.
 
 .Schritte
-. Laden Sie die AD FS Federation-Metadatendatei von herunter "https://[] FQDN>/FederationMetadaten/2007-06/FederationMetadata.XML“
+. Laden Sie die AD FS Federation-Metadatendatei von herunter "https://<host[] FQDN>/FederationMetadaten/2007-06/FederationMetadata.XML“
 . Kopieren Sie die heruntergeladene Datei auf SnapCenter-Server, um die MFA-Konfiguration zu aktualisieren.
 . Aktualisieren Sie die AD FS Metadaten in SnapCenter, indem Sie das folgende Cmdlet ausführen:
 +

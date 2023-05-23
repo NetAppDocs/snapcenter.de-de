@@ -1,0 +1,42 @@
+---
+permalink: protect-sco/preferred-nodes.html 
+sidebar: sidebar 
+keywords: oracle databases discover 
+summary: So entdeckt SnapCenter Oracle Datenbanken. 
+---
+= Bevorzugte Knoten im RAC-Setup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In Oracle Real Application Clusters (RAC)-Setup können Sie die bevorzugten Knoten angeben, die SnapCenter für die Durchführung des Backup-Vorgangs verwendet. Wenn Sie den bevorzugten Node nicht angeben, weist SnapCenter automatisch einen Node als bevorzugten Node zu und auf diesem Node wird das Backup erstellt.
+
+Die bevorzugten Knoten können einer oder alle Cluster-Knoten sein, wo die RAC-Datenbankinstanzen vorhanden sind. Der Sicherungsvorgang wird nur auf diesen bevorzugten Knoten in der Reihenfolge der Präferenz ausgelöst.
+
+.Beispiel
+Die RAC-Datenbank cdbrac hat drei Instanzen: Cdbrac1 auf node1, cdbrac2 auf node2 und cdbrac3 auf node3.
+
+Die Instanzen node1 und node2 werden als bevorzugte Nodes konfiguriert, wobei node2 die erste Präferenz und node1 als zweite Präferenz. Wenn Sie einen Sicherungsvorgang ausführen, wird in node2 der erste Vorgang versucht, da er der erste bevorzugte Node ist.
+
+Wenn node2 nicht in dem Status zum Sichern ist, was aus mehreren Gründen, wie z. B. dem Plug-in-Agent, auf dem Host nicht ausgeführt werden kann, ist die Datenbankinstanz auf dem Host nicht im erforderlichen Zustand für den angegebenen Backup-Typ, Oder die Datenbankinstanz auf node2 in einer FlexASM-Konfiguration wird nicht von der lokalen ASM-Instanz bereitgestellt; dann wird der Vorgang auf node1 versucht.
+
+Das node3 wird nicht für das Backup verwendet, da es sich nicht auf der Liste der bevorzugten Nodes befindet.
+
+
+
+== Flex ASM-Einrichtung
+
+In einem Flex ASM-Setup werden Leaf-Knoten nicht als bevorzugte Knoten aufgeführt, wenn die Kardinalität kleiner als die Anzahl der Knoten im RAC-Cluster ist. Wenn sich Änderungen an den Flex ASM-Cluster-Knotenrollen ergeben, sollten Sie manuell ermitteln, damit die bevorzugten Nodes aktualisiert werden.
+
+
+
+== Erforderlicher Datenbankstatus
+
+Die RAC-Datenbankinstanzen auf den bevorzugten Nodes müssen den erforderlichen Status aufweisen, damit das Backup erfolgreich abgeschlossen werden kann:
+
+* Eine der RAC-Datenbankinstanzen in den konfigurierten bevorzugten Knoten muss sich im offenen Zustand befinden, um ein Online-Backup zu erstellen.
+* Eine der RAC-Datenbankinstanzen in den konfigurierten bevorzugten Knoten muss sich im Mount-Status befinden, und alle anderen Instanzen, einschließlich anderer bevorzugter Knoten, müssen sich im Mount-Status oder niedriger befinden, um ein Offline-Mount-Backup zu erstellen.
+* Instanzen von RAC Datenbanken können in jedem Zustand sein. Sie müssen jedoch die bevorzugten Nodes angeben, um ein Offline-Herunterfahren-Backup zu erstellen.
+

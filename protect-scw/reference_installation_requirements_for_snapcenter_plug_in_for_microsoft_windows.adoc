@@ -39,7 +39,7 @@ Betriebssysteme
  a| 
 Microsoft Windows
 
-Aktuelle Informationen zu unterstützten Versionen finden Sie im https://["NetApp Interoperabilitäts-Matrix-Tool"^].
+Aktuelle Informationen zu unterstützten Versionen finden Sie im https://imt.netapp.com/matrix/imt.jsp?components=108395;&solution=1258&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"^].
 
 
 
@@ -68,9 +68,9 @@ Erforderliche Softwarepakete
 * PowerShell 4.0 oder höher
 
 
-Aktuelle Informationen zu unterstützten Versionen finden Sie im https://["NetApp Interoperabilitäts-Matrix-Tool"^].
+Aktuelle Informationen zu unterstützten Versionen finden Sie im https://imt.netapp.com/matrix/imt.jsp?components=108395;&solution=1258&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"^].
 
-Informationen zur .NET-spezifischen Fehlerbehebung finden Sie unter https://["Das Upgrade oder die Installation von SnapCenter schlägt bei älteren Systemen, die keine Internetverbindung haben, fehl."]
+Informationen zur .NET-spezifischen Fehlerbehebung finden Sie unter https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_upgrade_or_install_fails_with_This_KB_is_not_related_to_the_OS["Das Upgrade oder die Installation von SnapCenter schlägt bei älteren Systemen, die keine Internetverbindung haben, fehl."]
 
 |===
 

@@ -23,7 +23,7 @@ Bevor Sie eine Oracle-Datenbank wiederherstellen, sollten Sie sicherstellen, das
 * Im parameter asm_diskstring sollten Sie _AFD:*_ konfigurieren, wenn Sie ASMFD verwenden oder _ORCL:*_ konfigurieren, wenn Sie ASMLIB verwenden.
 +
 
-NOTE: Informationen zum Bearbeiten des Parameters asm_diskstring finden Sie unter https://["So fügen Sie Datenträgerpfade zu asm_diskstring hinzu"^]
+NOTE: Informationen zum Bearbeiten des Parameters asm_diskstring finden Sie unter https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Disk_paths_are_not_added_to_the_asm_diskstring_database_parameter["So fügen Sie Datenträgerpfade zu asm_diskstring hinzu"^]
 
 * Sie sollten den statischen Listener in der Datei *Listener.ora* konfigurieren, die bei _ € ORACLE_HOME/Network/admin_ für nicht-ASM-Datenbanken verfügbar ist, und _ € GRID_HOME/Network/admin_ für ASM-Datenbanken, wenn Sie die Betriebssystemauthentifizierung deaktiviert und die Oracle-Datenbankauthentifizierung für eine Oracle-Datenbank aktiviert haben, und die Datendateien und Kontrolldateien dieser Datenbank wiederherstellen möchten.
 * Sie sollten den Wert des SCORestoreTimeout-Parameters erhöhen, indem Sie den Befehl Set- SmConfigSettings ausführen, wenn sich die Datenbankgröße in Terabyte (TB) befindet.

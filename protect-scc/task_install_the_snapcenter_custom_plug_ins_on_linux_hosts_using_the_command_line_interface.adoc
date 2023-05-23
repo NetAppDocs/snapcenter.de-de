@@ -36,7 +36,7 @@ Sie können von dem Host, auf dem der SnapCenter-Server installiert ist, auf die
 ----
 . Fügen Sie den Host mit dem Cmdlet "Add-Smhost" und den erforderlichen Parametern zum SnapCenter-Server hinzu.
 +
-Die Informationen zu den Parametern, die mit dem Befehl und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ können Sie auch auf die verweisen https://["SnapCenter Software Cmdlet Referenzhandbuch"^].
+Die Informationen zu den Parametern, die mit dem Befehl und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ können Sie auch auf die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["SnapCenter Software Cmdlet Referenzhandbuch"^].
 
 . Melden Sie sich bei SnapCenter an und laden Sie das benutzerdefinierte Plug-in über die UI oder mithilfe von PowerShell Cmdlets hoch.
 +
@@ -46,6 +46,6 @@ Sie können das benutzerdefinierte Plug-in über die Benutzeroberfläche hochlad
 Die SnapCenter Cmdlet Hilfe und die Cmdlet Referenzinformationen enthalten weitere Informationen zu PowerShell Cmdlets.
 
 +
-https://["SnapCenter Software Cmdlet Referenzhandbuch"^].
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["SnapCenter Software Cmdlet Referenzhandbuch"^].
 
 

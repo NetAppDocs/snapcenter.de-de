@@ -152,7 +152,7 @@ Außerdem müssen Sie die E-Mail-Adressen für Absender und Empfänger sowie den
 NOTE: Für eine E-Mail-Benachrichtigung müssen Sie die SMTP-Serverdetails entweder mit der GUI oder mit dem PowerShell-Befehlssatz Set-SmtpServer angegeben haben.
 
 +
-Informationen zu EMS finden Sie unter https://["EMS-Datenerfassung managen"]
+Informationen zu EMS finden Sie unter https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_ems_data_collection.html["EMS-Datenerfassung managen"]
 
 . Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
 . Überwachen Sie den Fortschritt des Vorgangs, indem Sie auf *Monitor* > *Jobs* klicken.
@@ -168,6 +168,6 @@ link:reference_back_up_sql_server_database_or_instance_or_availability_group.htm
 
 link:task_clone_backups_using_powershell_cmdlets_for_sql.html["Klonen von Backups mit PowerShell Cmdlets"]
 
-https://["Der Klonvorgang kann fehlschlagen oder längere Zeit zum Abschließen mit dem Standardwert für TCP_TIMEOUT benötigen"]
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Clone_operation_might_fail_or_take_longer_time_to_complete_with_default_TCP_TIMEOUT_value["Der Klonvorgang kann fehlschlagen oder längere Zeit zum Abschließen mit dem Standardwert für TCP_TIMEOUT benötigen"]
 
-https://["Der Datenbankklon für die Failover-Cluster-Instanz ist fehlgeschlagen"]
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/The_failover_cluster_instance_database_clone_fails["Der Datenbankklon für die Failover-Cluster-Instanz ist fehlgeschlagen"]
