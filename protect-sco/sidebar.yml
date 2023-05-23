@@ -66,15 +66,13 @@ entries:
       url: "/protect-sco/schedule-backups.html"
     - title: Namenskonventionen
       url: "/protect-sco/naming-backups.html"
-  - title: Definition der Backup-Strategie
-    url: "/protect-sco/task_define_a_backup_strategy_for_oracle_databases.html"
   - title: Backup-Anforderungen prüfen
     url: "/protect-sco/reference_requirements_for_backing_up_an_oracle_database.html"
   - title: Entdecken Sie die Oracle Database
     url: "/protect-sco/task_determine_whether_oracle_databases_are_available_for_backup.html"
   - title: Backup-Richtlinien erstellen
     url: "/protect-sco/task_create_backup_policies_for_oracle_database.html"
-  - title: Erstellen von Ressourcengruppen (optional)
+  - title: Erstellen von Ressourcengruppen
     url: "/protect-sco/task_create_resource_groups_and_attach_policies_for_oracle_databases.html"
   - title: Oracle-Ressourcen sichern
     url: "/protect-sco/task_back_up_oracle_resources.html"
