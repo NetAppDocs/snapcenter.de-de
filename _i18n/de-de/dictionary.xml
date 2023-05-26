@@ -8124,4 +8124,6 @@
   <block id="6c0673b42ebb5475d507b9bee432a6e1" category="image-alt">Screenshot der Auswahlkriterien und Eingabe der Seriennummer.</block>
   <block id="e54115ab5aedb070ef9c763b003e67f1" category="section-title">Schritt 5: Controller-basierte Lizenz hinzufügen</block>
   <block id="392e651b70e91641288713738f526ce0" category="section-title">Schritt 6: Entfernen Sie die Testlizenz</block>
+  <block id="46d55a8aefdec15a8ce44087c8123826" category="inline-link">Der Vorgang schlägt fehl, da der Fehler nicht in der Lage ist, das Gerät für die LUN zu ermitteln</block>
+  <block id="24642a08e354f43168ca4f1178850f84" category="list-text">Sie sollten sicherstellen, dass die LUN nicht dem AIX-Host mit iGroup zugeordnet ist, die aus gemischten Protokollen iSCSI und FC besteht. Weitere Informationen finden Sie unter<block ref="94f247529a6b6f563b3a8d4772877431" category="inline-link-rx"></block>.</block>
 </blocks>

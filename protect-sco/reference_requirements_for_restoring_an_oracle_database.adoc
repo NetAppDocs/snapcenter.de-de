@@ -31,4 +31,5 @@ NOTE: Informationen zum Bearbeiten des Parameters asm_diskstring finden Sie unte
 +
 Wenn die Lizenzen nicht installiert oder auf dem neuesten Stand sind, wird eine Warnmeldung angezeigt. Wenn Sie die Warnung ignorieren und fortfahren, schlägt die Wiederherstellung aus RDM fehl.
 
+* Sie sollten sicherstellen, dass die LUN nicht dem AIX-Host mit iGroup zugeordnet ist, die aus gemischten Protokollen iSCSI und FC besteht. Weitere Informationen finden Sie unter https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_Plug-in_for_Oracle_operations_fail_with_error_Unable_to_discover_the_device_for_LUN_LUN_PATH["Der Vorgang schlägt fehl, da der Fehler nicht in der Lage ist, das Gerät für die LUN zu ermitteln"^].
 
