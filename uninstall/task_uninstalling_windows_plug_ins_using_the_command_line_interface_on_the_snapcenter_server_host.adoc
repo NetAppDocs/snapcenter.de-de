@@ -21,6 +21,6 @@ Sie sollten sich bei SnapCenter als Domänenbenutzer mit lokalen Administratorre
 . Geben Sie auf dem Host des SnapCenter-Servers den Befehl _Open-SMConnection -SMSbaseUrl \https://SNAPCENTER_SERVER_NAME/DOMAIN_NAME_ ein, und geben Sie anschließend Ihre Anmeldeinformationen ein.
 . Deinstallieren Sie die Windows-Plug-ins mit dem Cmdlet _Uninstall-SmHostPackage_ und den erforderlichen Parametern.
 +
-Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ können Sie auch die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["SnapCenter Software Cmdlet Referenzhandbuch"^].
+Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ können Sie auch die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["SnapCenter Software Cmdlet Referenzhandbuch"^].
 
 

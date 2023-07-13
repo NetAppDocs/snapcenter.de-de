@@ -11,20 +11,20 @@ summary: SnapCenter setzt strenge Sicherheits- und Authentifizierungsfunktionen 
 
 
 [role="lead"]
-In diesem Thema wird beschrieben, wie die Multi-Faktor-Authentifizierung (MFA) im Active Directory-Verbunddienst (AD FS) und SnapCenter-Server verwaltet wird.
+Sie können die Multi-Faktor-Authentifizierung (MFA)-Funktion im Active Directory-Verbunddienst (AD FS) und im SnapCenter-Server verwalten.
 
 
 
 == Multi-Faktor-Authentifizierung (MFA) aktivieren
 
-In diesem Thema wird beschrieben, wie die MFA-Funktionalität im Active Directory-Verbunddienst (AD FS)-Server und SnapCenter-Server aktiviert wird.
+Sie können die MFA-Funktionalität für SnapCenter-Server mithilfe von PowerShell-Befehlen aktivieren.
 
 .Über diese Aufgabe
 * SnapCenter unterstützt SSO-basierte Anmeldungen, wenn andere Applikationen mit demselben AD FS konfiguriert werden. In bestimmten AD FS-Konfigurationen erfordert SnapCenter möglicherweise aus Sicherheitsgründen die Benutzerauthentifizierung in Abhängigkeit von der Persistenz der AD FS-Session.
-* Die Informationen zu den Parametern, die mit dem Cmdlet verwendet werden können und deren Beschreibungen können durch Ausführen abgerufen werden `Get-Help command_name`. Alternativ können Sie auch sehen https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["SnapCenter Software Cmdlet Referenzhandbuch"^].
+* Die Informationen zu den Parametern, die mit dem Cmdlet verwendet werden können und deren Beschreibungen können durch Ausführen abgerufen werden `Get-Help command_name`. Alternativ können Sie auch sehen https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["SnapCenter Software Cmdlet Referenzhandbuch"^].
 
 
-.Was Sie benötigen
+.Bevor Sie beginnen
 * Der Windows Active Directory Federation Service (AD FS) sollte in der jeweiligen Domäne ausgeführt werden.
 * Sie sollten über einen AD FS-unterstützten Multi-Faktor-Authentifizierungsservice wie Azure MFA, Cisco Duo usw. verfügen.
 * Der SnapCenter- und AD-FS-Server-Zeitstempel sollte unabhängig von der Zeitzone gleich sein.
@@ -53,10 +53,7 @@ Informationen zum CA-Zertifikat finden Sie unter link:../install/reference_gener
 Der Parameter Path gibt den Pfad an, in dem die MFA-Metadatendatei im SnapCenter-Server-Host gespeichert werden soll.
 
 . Kopieren Sie die generierte Datei auf den AD FS-Host, um SnapCenter als Client-Einheit zu konfigurieren.
-. Aktivieren Sie MFA für SnapCenter-Server mithilfe von `Set-SmMultiFactorAuthentication -Enable -Path` Cmdlet:
-+
-Der Parameter PATH gibt den Speicherort der XML-Metadatendatei AD FS MFA an, die in Schritt 3 auf den SnapCenter-Server kopiert wurde.
-
+. Aktivieren Sie MFA für SnapCenter-Server mithilfe von `Set-SmMultiFactorAuthentication` Cmdlet:
 . (Optional) Überprüfen Sie den MFA-Konfigurationsstatus und die Einstellungen mit `Get-SmMultiFactorAuthentication` Cmdlet:
 . Gehen Sie zur Microsoft Management Console (MMC), und führen Sie die folgenden Schritte aus:
 +
@@ -119,7 +116,7 @@ SnapCenter wird jetzt als vertrauensanzeige-Partei mit dem angegebenen Anzeigena
 
 Die SnapCenter MFA-Funktion kann auch über REST-APIs aktiviert werden.
 
-Für Informationen zur Fehlerbehebung. Siehe link:..https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_login_in_multiple_tabs_shows_MFA_error%3A_The_SAML_message_response_(1)_doesn%E2%80%99t_match_the_expected_response_(2)["Bei der SnapCenter-Anmeldung in mehreren Registerkarten ist ein MFA-Fehler aufgetreten"].
+Informationen zur Fehlerbehebung finden Sie unter https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_MFA_login_error_The_SAML_message_response_1_doesnt_match_the_expected_response_2["Gleichzeitige Anmeldeversuche auf mehreren Registerkarten zeigen MFA-Fehler an"].
 
 
 
@@ -165,6 +162,6 @@ Siehe link:../install/enable_multifactor_authentication.html["Multi-Faktor-Authe
 == Multi-Faktor-Authentifizierung (MFA) deaktivieren
 
 .Schritte
-. Deaktivieren Sie MFA, und bereinigen Sie die Konfigurationsdateien, die bei der Aktivierung von MFA mithilfe des erstellt wurden `Set-SmMultiFactorAuthentication -Disable` Cmdlet:
+. Deaktivieren Sie MFA, und bereinigen Sie die Konfigurationsdateien, die bei der Aktivierung von MFA mithilfe des erstellt wurden `Set-SmMultiFactorAuthentication` Cmdlet:
 . Schließen Sie alle Browser-Registerkarten und öffnen Sie einen Browser erneut, um die vorhandenen oder aktiven Session-Cookies zu löschen, und melden Sie sich erneut an.
 

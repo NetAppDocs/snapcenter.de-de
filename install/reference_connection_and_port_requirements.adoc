@@ -43,6 +43,8 @@ SnapCenter-Port
 
 Wird für die Kommunikation zwischen dem SnapCenter-Client (dem SnapCenter-Benutzer) und dem SnapCenter-Server verwendet. Wird auch zur Kommunikation von den Plug-in-Hosts mit dem SnapCenter-Server verwendet.
 
+Informationen zum Anpassen des Ports finden Sie unter https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["Installieren Sie den SnapCenter-Server mithilfe des Installationsassistenten."]
+
 
 
  a| 
@@ -51,6 +53,8 @@ SnapCenter SMCore-Kommunikations-Port
 8145 (HTTPS), bidirektional, anpassbar
 
 Der Port wird für die Kommunikation zwischen dem SnapCenter-Server und den Hosts verwendet, auf denen die SnapCenter-Plug-ins installiert sind.
+
+Informationen zum Anpassen des Ports finden Sie unter https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["Installieren Sie den SnapCenter-Server mithilfe des Installationsassistenten."]
 
 
 
@@ -62,6 +66,8 @@ MySQL-Anschluss
 Der Port wird für die Kommunikation zwischen SnapCenter und der MySQL Repository Datenbank verwendet.
 
 Sie können sichere Verbindungen vom SnapCenter-Server zum MySQL-Server erstellen. link:../install/concept_configure_secured_mysql_connections_with_snapcenter_server.html["Weitere Informationen ."]
+
+Informationen zum Anpassen des Ports finden Sie unter https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["Installieren Sie den SnapCenter-Server mithilfe des Installationsassistenten."]
 
 
 
@@ -96,6 +102,8 @@ Der Port wird für die Kommunikation zwischen SMCore und Hosts verwendet, auf de
 
 Der Kommunikationspfad muss auch zwischen der SVM-Management-LIF und dem SnapCenter-Server offen sein.
 
+Informationen zum Anpassen des Ports finden Sie unter https://docs.netapp.com/us-en/snapcenter/protect-scw/task_add_hosts_and_install_snapcenter_plug_in_for_microsoft_windows.html["Fügen Sie Hosts hinzu und installieren Sie das SnapCenter Plug-in für Microsoft Windows"] Oder https://docs.netapp.com/us-en/snapcenter/protect-sco/task_add_hosts_and_installing_the_snapcenter_plug_ins_package_for_linux_or_aix.html["Fügen Sie Hosts hinzu, und installieren Sie das SnapCenter-Plug-ins-Paket für Linux oder AIX."]
+
 
 
  a| 
@@ -104,6 +112,8 @@ SnapCenter Plug-in für Oracle Database
 27216, anpassbar
 
 Der Standard-JDBC-Port wird vom Plug-in für Oracle für die Verbindung mit der Oracle-Datenbank verwendet.
+
+Informationen zum Anpassen des Ports finden Sie unter https://docs.netapp.com/us-en/snapcenter/protect-sco/task_add_hosts_and_installing_the_snapcenter_plug_ins_package_for_linux_or_aix.html["Fügen Sie Hosts hinzu, und installieren Sie das SnapCenter-Plug-ins-Paket für Linux oder AIX."]
 
 
 
@@ -135,6 +145,8 @@ SnapCenter-Plug-in für SAP HANA-Datenbank vCode Zauber-Checkerports
 Bei einem einzelnen Mandanten mit mandantenfähigen Datenbank-Containern (MDC) endet die Port-Nummer mit 13. Für einen nicht-MDC-Server endet die Port-Nummer mit 15.
 
 Beispielsweise ist 32013 die Portnummer für die Instanz 20 und 31015 die Portnummer für Instanz 10.
+
+Informationen zum Anpassen des Ports finden Sie unter https://docs.netapp.com/us-en/snapcenter/protect-hana/task_add_hosts_and_install_plug_in_packages_on_remote_hosts_sap_hana.html["Fügen Sie Hosts hinzu und installieren Sie Plug-in-Pakete auf Remote-Hosts."]
 
 
 

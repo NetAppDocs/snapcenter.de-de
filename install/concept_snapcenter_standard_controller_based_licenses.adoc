@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_snapcenter_standard_controller_based_licenses.html 
 sidebar: sidebar 
-keywords: controller-based licenses, standard license, SnapManager Suite license, FAS, AFF, retrieve controller serial number, controller serial number, controller-based license serial number, add controller-based license, remove trial license 
-summary: Wenn Sie FAS oder AFF Storage Controller verwenden, ist eine Controller-basierte SnapCenter Standard-Lizenz erforderlich. 
+keywords: 'controller-based licenses, standard license, SnapManager Suite license, FAS, AFF, All SAN Array (ASA), retrieve controller serial number, controller serial number, controller-based license serial number, add controller-based license, remove trial license' 
+summary: Wenn Sie FAS, AFF oder ASA Storage Controller verwenden, ist eine Controller-basierte Lizenz für SnapCenter Standard erforderlich. 
 ---
 = Controller-basierte SnapCenter Standard-Lizenzen hinzufügen
 :allow-uri-read: 
@@ -11,13 +11,13 @@ summary: Wenn Sie FAS oder AFF Storage Controller verwenden, ist eine Controller
 
 
 [role="lead"]
-Wenn Sie FAS oder AFF Storage Controller verwenden, ist eine Controller-basierte SnapCenter Standard-Lizenz erforderlich.
+Wenn Sie FAS, AFF oder All SAN Array (ASA) Storage Controller verwenden, ist eine Controller-basierte Lizenz für SnapCenter Standard erforderlich.
 
 Die Controller-basierte Lizenz weist folgende Merkmale auf:
 
 * SnapCenter Standard-Nutzungsberechtigung ist beim Kauf von Premium oder Flash Bundle enthalten (nicht im Basispaket).
 * Unbegrenzte Storage-Nutzung
-* Wird aktiviert, indem sie direkt zum FAS oder AFF Storage Controller hinzugefügt wird. Dazu wird entweder der ONTAP System Manager oder die Storage-Cluster-Befehlszeile verwendet
+* Sie kann entweder über den ONTAP System Manager oder die Storage-Cluster-Befehlszeile direkt zum FAS, AFF oder ASA Storage Controller hinzugefügt werden
 +
 
 NOTE: Sie geben keine Lizenzinformationen in der SnapCenter GUI für die Controller-basierten SnapCenter Lizenzen ein.
@@ -31,7 +31,7 @@ Informationen zu den erforderlichen Lizenzen finden Sie unter link:../install/co
 
 == Schritt 1: Überprüfen Sie, ob die SnapManager Suite-Lizenz installiert ist
 
-Mit der SnapCenter GUI können Sie anzeigen, ob eine Lizenz der SnapManager Suite auf primären FAS oder AFF Storage-Systemen installiert ist, und ermitteln, welche Storage-Systeme möglicherweise Lizenzen der SnapManager Suite benötigen. Lizenzen der SnapManager Suite gelten nur für FAS und AFF SVMs oder Cluster auf primären Storage-Systemen.
+Sie können die SnapCenter GUI verwenden, um festzustellen, ob eine SnapManager Suite Lizenz auf primären Storage-Systemen von FAS, AFF oder ASA installiert ist, und um zu ermitteln, für welche Storage-Systeme möglicherweise Lizenzen der SnapManager Suite erforderlich sind. Lizenzen der SnapManager Suite gelten nur für FAS, AFF und ASA SVMs oder Cluster auf primären Storage-Systemen.
 
 
 NOTE: Wenn Sie auf Ihrem Controller bereits eine Lizenz für die SnapManager Suite besitzen, wird die Controller-basierte SnapCenter Standard-Lizenzberechtigung automatisch bereitgestellt. Die Namen SnapManagerSuite Lizenz und SnapCenter Standard Controller-basierte Lizenz werden austauschbar verwendet, aber sie beziehen sich auf dieselbe Lizenz.
@@ -52,8 +52,8 @@ Wenn Sie den Cluster-Namen auswählen, werden alle SVMs, die Teil des Clusters s
 In der Spalte „Controller License“ wird der folgende Status angezeigt:
 
 +
-** image:../media/controller_licensed_icon.gif["Ein Häkchen"] Zeigt an, dass eine Lizenz der SnapManager Suite auf einem primären FAS oder AFF Speichersystem installiert ist.
-** image:../media/controller_not_licensed_icon.gif["Ein Abbrechen-Symbol"] Zeigt an, dass keine SnapManager Suite-Lizenz auf einem primären FAS oder AFF-Speichersystem installiert ist.
+** image:../media/controller_licensed_icon.gif["Ein Häkchen"] Zeigt an, dass eine SnapManager Suite-Lizenz auf einem primären Speichersystem von FAS, AFF oder ASA installiert ist.
+** image:../media/controller_not_licensed_icon.gif["Ein Abbrechen-Symbol"] Zeigt an, dass keine SnapManager Suite-Lizenz auf einem primären Speichersystem von FAS, AFF oder ASA installiert ist.
 ** Nicht zutreffend. Dies zeigt an, dass keine Lizenz für die SnapManager Suite gilt, da der Speicher-Controller auf Cloud Volumes ONTAP-, ONTAP Select- oder sekundären Speicherplattformen ausgeführt wird.
 
 
@@ -63,7 +63,7 @@ In der Spalte „Controller License“ wird der folgende Status angezeigt:
 
 == Schritt 2: Identifizieren Sie die auf dem Controller installierten Lizenzen
 
-Mit der ONTAP-Befehlszeile können Sie alle auf dem Controller installierten Lizenzen anzeigen. Sie sollten ein Cluster-Administrator auf dem FAS oder AFF System sein.
+Mit der ONTAP-Befehlszeile können Sie alle auf dem Controller installierten Lizenzen anzeigen. Sie sollten Cluster-Administrator auf dem FAS-, AFF- oder ASA-System sein.
 
 
 NOTE: Die Controller-basierte SnapCenter Standard-Lizenz wird auf dem Controller als SnapManagerSuite-Lizenz angezeigt.
@@ -110,7 +110,7 @@ Da hier beispielsweise die SnapManagerSuite Lizenz installiert ist, ist keine zu
 
 == Schritt 3: Rufen Sie die Seriennummer des Controllers ab
 
-Sie benötigen die Controller-Seriennummer zum Abrufen der Seriennummer Ihrer Controller-basierten Lizenz. Sie können die Seriennummer des Controllers über die ONTAP-Befehlszeile abrufen. Sie sollten ein Cluster-Administrator auf dem FAS oder AFF System sein.
+Sie benötigen die Controller-Seriennummer zum Abrufen der Seriennummer Ihrer Controller-basierten Lizenz. Sie können die Seriennummer des Controllers über die ONTAP-Befehlszeile abrufen. Sie sollten Cluster-Administrator auf dem FAS-, AFF- oder ASA-System sein.
 
 .Schritte
 . Loggen Sie sich über die ONTAP-Befehlszeile beim Controller ein.
@@ -189,15 +189,15 @@ Eine Liste der Lizenzen für den angegebenen Controller wird angezeigt.
 
 == Schritt 5: Controller-basierte Lizenz hinzufügen
 
-Sie können die ONTAP-Befehlszeile verwenden, um eine SnapCenter Controller-basierte Lizenz hinzuzufügen, wenn Sie FAS oder AFF Systeme verwenden, und Sie verfügen über eine SnapCenter Standard- oder SnapManagerSuite-Lizenz.
+Sie können die ONTAP Befehlszeile verwenden, um eine SnapCenter Controller-basierte Lizenz hinzuzufügen, wenn Sie FAS-, AFF- oder ASA-Systeme verwenden und über eine SnapCenter Standard- oder SnapManagerSuite-Lizenz verfügen.
 
 .Bevor Sie beginnen
-* Sie sollten ein Cluster-Administrator auf dem FAS oder AFF System sein.
+* Sie sollten Cluster-Administrator auf dem FAS-, AFF- oder ASA-System sein.
 * Sie sollten über die Lizenz für SnapCenter Standard oder SnapManagerSuite verfügen.
 
 
 .Über diese Aufgabe
-Wenn Sie SnapCenter als Testlizenz mit FAS oder AFF Storage installieren möchten, können Sie eine Evaluierungslizenz für das Premium Bundle erhalten, die auf Ihrem Controller installiert wird.
+Wenn Sie SnapCenter Testversionen mit FAS, AFF oder ASA Storage installieren möchten, erhalten Sie eine Evaluierungslizenz für das Premium Bundle, die auf Ihrem Controller installiert wird.
 
 Wenn Sie SnapCenter auf Testbasis installieren möchten, sollten Sie sich an Ihren Ansprechpartner wenden, um eine Evaluierungslizenz für das Premium Bundle zu erhalten, die auf Ihrem Controller installiert wird.
 
@@ -231,7 +231,7 @@ NOTE: Das manuelle Entfernen einer Testlizenz ist nur erforderlich, wenn Sie ein
 .. Führen Sie das Cmdlet "Open-SmConnection" aus, um eine Verbindungssitzung mit dem SnapCenter-Server für ein SnapCenterAdmin-Konto zu initiieren.
 .. Führen Sie das Set-RepositRepositRepositSmoryPassword aus, um das MySQL-Passwort zurückzusetzen.
 +
-Informationen zu den Cmdlets finden Sie unter https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["SnapCenter Software Cmdlet Referenzhandbuch"^].
+Informationen zu den Cmdlets finden Sie unter https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["SnapCenter Software Cmdlet Referenzhandbuch"^].
 
 
 

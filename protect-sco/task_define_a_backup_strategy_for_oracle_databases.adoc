@@ -60,7 +60,7 @@ NOTE: PDB-Migration und PDB-Klonvorgänge werden nicht unterstützt.
 
 
 
-Aktuelle Informationen zu unterstützten Oracle-Versionen finden Sie unter https://imt.netapp.com/matrix/imt.jsp?components=108392;&solution=1259&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"^].
+Aktuelle Informationen zu unterstützten Oracle-Versionen finden Sie unter https://imt.netapp.com/matrix/imt.jsp?components=112391;&solution=1259&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"^].
 
 
 
@@ -229,7 +229,7 @@ Nachdem Sie den Wert des Parameters geändert haben, starten Sie den SnapCenter-
 
 `/opt/NetApp/snapcenter/spl/bin/spl restart`
 
-Die Informationen zu den Parametern, die mit dem Befehl und deren Beschreibungen verwendet werden können, können durch Ausführen von get-Help Command_Name abgerufen werden. Alternativ können Sie auch auf die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2885486["SnapCenter Software Command Reference Guide"^].
+Die Informationen zu den Parametern, die mit dem Befehl und deren Beschreibungen verwendet werden können, können durch Ausführen von get-Help Command_Name abgerufen werden. Alternativ können Sie auch auf die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2886206["SnapCenter Software Command Reference Guide"^].
 
 
 

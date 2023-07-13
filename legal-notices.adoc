@@ -50,4 +50,4 @@ https://www.netapp.com/us/legal/privacypolicy/index.aspx[]
 
 In den Benachrichtigungsdateien finden Sie Informationen zu Urheberrechten und Lizenzen von Drittanbietern, die in der NetApp Software verwendet werden.
 
-https://library.netapp.com/ecm/ecm_download_file/ECMLP2884814["Hinweis zu SnapCenter 4.8"^]
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2886209["Hinweis für SnapCenter 4.9"^]

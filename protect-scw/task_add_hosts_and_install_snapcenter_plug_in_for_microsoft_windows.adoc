@@ -47,6 +47,10 @@ Sie können das Plug-in für Windows nicht auf einem mit E-Series Storage verbun
 
 
 
+
+NOTE: SnapCenter unterstützt das Hinzufügen desselben Hosts (Plug-in-Host) zu SnapCenter nicht, wenn der Host bereits Teil einer Arbeitsgruppe ist und in eine andere Domäne geändert wurde oder umgekehrt.
+Wenn Sie denselben Host hinzufügen möchten, sollten Sie den Host aus SnapCenter entfernen und erneut hinzufügen.
+
 *Schritte*
 
 . Klicken Sie im linken Navigationsbereich auf *Hosts*.

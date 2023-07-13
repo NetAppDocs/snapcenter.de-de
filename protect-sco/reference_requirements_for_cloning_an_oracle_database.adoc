@@ -32,13 +32,11 @@ Informationen zum Bearbeiten des Parameters asm_diskstring finden Sie unter http
 ** Der Klon-Host sollte LUNs vom primären oder sekundären Storage erkennen können.
 +
 *** Wenn Sie vom primären Storage oder sekundären Storage (Vault oder Mirror) in einem alternativen Host klonen, stellen Sie sicher, dass eine iSCSI-Sitzung zwischen dem sekundären Storage und dem alternativen Host aufgebaut ist oder richtig für FC abgegrenzt wird.
-+
-**** https://library.netapp.com/ecm/ecm_download_file/ECMLP2547936["Linux Host Utilities Installation and Setup Guide"^]
-**** https://library.netapp.com/ecm/ecm_download_file/ECMP1119223["AIX Host Utilities Installation and Setup Guide"^]
-
-
 *** Wenn Sie von Vault oder Mirror Storage auf demselben Host klonen, stellen Sie sicher, dass eine iSCSI-Sitzung zwischen dem Vault- oder Mirror-Storage und dem Host eingerichtet oder richtig für FC abgegrenzt wird.
 *** Wenn Sie in einer virtualisierten Umgebung klonen, stellen Sie sicher, dass entweder eine iSCSI-Sitzung zwischen dem primären oder sekundären Storage und dem ESX-Server, der den alternativen Host hostet, eingerichtet oder ordnungsgemäß für FC.
++
+Weitere Informationen finden Sie unter https://docs.netapp.com/us-en/ontap-sanhost/["Dokumentation zu Host Utilities"].
+
 
 
 ** Wenn die Quelldatenbank eine ASM-Datenbank ist:

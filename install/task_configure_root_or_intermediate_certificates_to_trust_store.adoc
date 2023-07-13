@@ -1,0 +1,56 @@
+---
+permalink: install/task_configure_root_or_intermediate_certificates_to_trust_store.html 
+sidebar: sidebar 
+keywords: enable certificate-based authentication,configure CA signed key pair,configure root, configure intermediate certificates 
+summary: Sie sollten die Stammzertifikate oder Zwischenzertifikate für den SPL-Vertrauensspeicher konfigurieren. 
+---
+= Konfigurieren Sie Root- oder Zwischenzertifikate in SPL Trust-Store
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie sollten die Stammzertifikate oder Zwischenzertifikate für den SPL-Vertrauensspeicher konfigurieren. Sie sollten das Root-CA-Zertifikat und anschließend die Zwischenzertifizierungszertifikate hinzufügen.
+
+*Schritte*
+
+. Navigieren Sie zu dem Ordner, der den SPL-Keystore enthält: `/var/opt/snapcenter/spl/etc`.
+. Suchen Sie die Datei `keystore.jks`.
+. Liste der hinzugefügten Zertifikate im Schlüsselspeicher:
+`$ keytool -list -v -keystore keystore.jks`
+. Fügen Sie ein Stammzertifikat oder ein Zwischenzertifikat hinzu:
+`$ keytool -import -trustcacerts -alias <AliasNameForCerticateToBeImported> -file /<CertificatePath> -keystore` `keystore.jks`
+. Starten Sie den Dienst neu, nachdem Sie die Stammzertifikate oder Zwischenzertifikate in den SPL Trust-Store konfiguriert haben.
+
+
+
+
+== Konfigurieren Sie das CA-signierte Schlüsselpaar für SPL Trust-Store
+
+Sie sollten das CA-Schlüsselpaar für den SPL Trust-Store konfigurieren.
+
+*Schritte*
+
+. Navigieren Sie zu dem Ordner, der den SPL-Keystore enthält `/var/opt/snapcenter/spl/etc`.
+. Suchen Sie die Datei `keystore.jks``.
+. Liste der hinzugefügten Zertifikate im Schlüsselspeicher:
+`$ keytool -list -v -keystore keystore.jks`
+. Fügen Sie das CA-Zertifikat mit einem privaten und einem öffentlichen Schlüssel hinzu.
+`$ keytool -importkeystore -srckeystore <CertificatePathToImport> -srcstoretype pkcs12 -destkeystore keystore.jks` `-deststoretype JKS`
+. Listen Sie die hinzugefügten Zertifikate im Schlüsselspeicher auf.
+`$ keytool -list -v -keystore keystore.jks`
+. Vergewissern Sie sich, dass der Schlüsselspeicher den Alias enthält, der dem neuen CA-Zertifikat entspricht, das dem Schlüsselspeicher hinzugefügt wurde.
+. Ändern Sie das hinzugefügte Passwort für den privaten Schlüssel für das CA-Zertifikat in das Schlüsselspeicher-Passwort.
++
+Standard-SPL-Keystore-Kennwort ist der Wert des Schlüssels SPL_KEYSTORE_PASS in `spl.properties` Datei:
+
++
+`$ keytool -keypasswd -alias "<aliasNameOfAddedCertInKeystore>" -keystore keystore.jks``
+
+. Wenn der Alias-Name im CA-Zertifikat lang ist und Leerzeichen oder Sonderzeichen enthält („*",","), ändern Sie den Alias-Namen in einen einfachen Namen:
+`$ keytool -changealias -alias "<OrignalAliasName>" -destalias "<NewAliasName>" -keystore keystore.jks``
+. Konfigurieren Sie den Aliasnamen aus dem Schlüsselspeicher in `spl.properties` Datei:
+Diesen Wert mit dem Schlüssel SPL_CERTIFICATE_ALIAS aktualisieren.
+. Starten Sie den Dienst neu, nachdem Sie das CA-signierte Schlüsselpaar auf SPL Trust-Store konfiguriert haben.
+

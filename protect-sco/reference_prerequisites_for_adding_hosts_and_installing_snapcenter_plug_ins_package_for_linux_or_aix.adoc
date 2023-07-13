@@ -104,7 +104,7 @@ NOTE: Stellen Sie sicher, dass Sie nur die zertifizierte Version VON JAVA 11 auf
 Wenn SIE JAVA auf die neueste Version aktualisiert haben, müssen Sie sicherstellen, dass die JAVA_HOME-Option unter /var/opt/snapcenter/spl/etc/spl.properties auf die richtige JAVA-Version und den richtigen Pfad eingestellt ist.
 
 |===
-Aktuelle Informationen zu unterstützten Versionen finden Sie im https://imt.netapp.com/matrix/imt.jsp?components=108392;&solution=1259&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"^].
+Aktuelle Informationen zu unterstützten Versionen finden Sie im https://imt.netapp.com/matrix/imt.jsp?components=112391;&solution=1259&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"^].
 
 
 
@@ -228,7 +228,7 @@ Erforderliche Softwarepakete
 Wenn SIE JAVA auf die neueste Version aktualisiert haben, müssen Sie sicherstellen, dass die JAVA_HOME-Option unter /var/opt/snapcenter/spl/etc/spl.properties auf die richtige JAVA-Version und den richtigen Pfad eingestellt ist.
 
 |===
-Aktuelle Informationen zu unterstützten Versionen finden Sie im https://imt.netapp.com/matrix/imt.jsp?components=108392;&solution=1259&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"^].
+Aktuelle Informationen zu unterstützten Versionen finden Sie im https://imt.netapp.com/matrix/imt.jsp?components=112391;&solution=1259&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"^].
 
 
 

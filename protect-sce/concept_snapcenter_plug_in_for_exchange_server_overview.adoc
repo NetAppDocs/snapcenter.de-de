@@ -16,3 +16,6 @@ Das SnapCenter Plug-in für Microsoft Exchange Server ist eine Host-seitige Komp
 Wenn das Plug-in für Exchange installiert ist, können Sie mithilfe von SnapCenter mit NetApp SnapMirror Technologie gespiegelte Kopien von Backups auf einem anderen Volume erstellen. In diesem Fall ermöglicht NetApp SnapVault Technologie eine Disk-to-Disk-Backup-Replizierung, um Standard-Compliance- oder Archivierungszwecke zu erfüllen.
 
 Wenn Sie E-Mails oder Mailboxen statt der gesamten Exchange Datenbank wiederherstellen möchten, können Sie die Single Mailbox Recovery (SMBR) Software verwenden.
+Die Einstellung der Verfügbarkeit für NetApp Single Mailbox Recovery (EOA) steht am 12. Mai 2023 fest. NetApp unterstützt Kunden, die für den Zeitraum der Support-Berechtigung Mailbox-Kapazität, Wartung und Support erworben haben, weiterhin über die am 24. Juni 2020 eingeführten Marketing-Teilenummern.
+
+NetApp Single Mailbox Recovery ist ein Partnerprodukt von Ontrack. OnTrack PowerControls bietet ähnliche Funktionen wie NetApp Single Mailbox Recovery. Kunden können von Ontrack (bis licensingteam@ontrack.com) neue Ontrack PowerControls Softwarelizenzen und Ontrack PowerControls Wartungs- und Supportverlängerungen für eine granulare Mailbox-Recovery erwerben.

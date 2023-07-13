@@ -2,7 +2,7 @@
 permalink: admin/concept_overview_of_dashboard.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Über das Navigationsfenster von SnapCenter links erhalten Sie einen ersten Überblick über den Systemzustand. Dazu gehören die aktuelle Jobaktivität, Warnungen, Sicherungsübersicht, Storage-Effizienz und -Nutzung, der Status von SnapCenter Jobs \ (Backup, Klonen, Wiederherstellung\), der Konfigurationsstatus für Standalone- und Windows-Cluster-Hosts. Anzahl von Storage Virtual Machines \ (SVMs\), die von SnapCenter gemanagt werden, und Lizenzkapazität.' 
+summary: 'Im linken Navigationsbereich von SnapCenter bietet das Dashboard einen ersten Überblick über den Systemzustand, einschließlich aktueller Jobaktivitäten, Warnmeldungen, Sicherungszusammenfassungen, Storage-Effizienz und -Auslastung, Status von SnapCenter-Jobs \ (Backup, Klonen, Wiederherstellung\), Konfigurationsstatus für Standalone- und Windows-Cluster-Hosts, Anzahl der von SnapCenter gemanagten Storage Virtual Machines (SVMs) sowie Lizenzkapazität.' 
 ---
 = Überblick über das Dashboard
 :allow-uri-read: 
@@ -263,7 +263,7 @@ Anzahl der Hosts, auf denen Plug-in-Installation oder Deinstallation ausgeführt
 Die Kachel „lizenzierte Kapazität“ zeigt Informationen über die gesamte lizenzierte Kapazität, die genutzte Kapazität, Warnmeldungen zu Kapazitätsschwellenwerten und Benachrichtigungen zum Ablauf von Lizenzen für kapazitätsbasierte SnapCenter Lizenzen an.
 
 
-NOTE: Diese Anzeige wird nur angezeigt, wenn Sie kapazitätsbasierte SnapCenter-Lizenzen auf Cloud Volumes ONTAP- oder ONTAP Select-Plattformen verwenden. Bei FAS oder AFF Plattformen ist die SnapCenter Lizenz Controller-basiert und für unbegrenzte Kapazität lizenziert. Es ist keine Kapazitätslizenz erforderlich.
+NOTE: Diese Anzeige wird nur angezeigt, wenn Sie kapazitätsbasierte SnapCenter-Lizenzen auf Cloud Volumes ONTAP- oder ONTAP Select-Plattformen verwenden. Bei FAS-, AFF- oder All SAN Array (ASA)-Plattformen ist die SnapCenter Lizenz Controller-basiert und lizenziert für unbegrenzte Kapazität, und es ist keine Kapazitätslizenz erforderlich.
 
 |===
 | Lizenzstatus | Beschreibung 

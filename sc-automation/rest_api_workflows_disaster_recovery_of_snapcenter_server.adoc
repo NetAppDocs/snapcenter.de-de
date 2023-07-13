@@ -60,6 +60,15 @@ NOTE: Nach der DR-Wiederherstellung wird der Host hinzugefügt, Sie sollten das 
 NOTE: Der Zeitplan für die Repository-Sicherung wird nur wiederhergestellt, wenn Sie das SnapCenter-Plug-in für Windows installieren und NetApp-LUN an die Servermaschine anbinden.
 
 
+NOTE: Wenn die DLLs beschädigt sind, können Sie versuchen, den SnapCenter-Server zu reparieren oder die fehlerhafte Installation zu korrigieren.
+
+
+NOTE: Wenn NSM- oder Konfigurationsdateien beschädigt sind, können Sie den SnapCenter-Server mit derselben Version deinstallieren und neu installieren.
+
+
+NOTE: Wenn die VM beschädigt ist, starten Sie eine andere VM oder eine Maschine mit demselben Namen und installieren Sie SnapCenter Server mit derselben Version.
+
+
 
 == REST API wird für Disaster Recovery von SnapCenter Server unterstützt
 
