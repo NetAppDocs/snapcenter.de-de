@@ -32,7 +32,7 @@ PROTOKOLL_LEVEL
  a| 
 Zeigt die unterstützten Protokollebenen an.
 
-Die möglichen Werte sind INFO, DEBUG, TRACE, ERROR, FATAL, Und WARNEN.
+Mögliche Werte sind TRACE, DEBUG, INFO, WARN, FEHLER, Und TÖDLICH.
 
 
 
