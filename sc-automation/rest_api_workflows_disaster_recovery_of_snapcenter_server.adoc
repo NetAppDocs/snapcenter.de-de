@@ -1,7 +1,7 @@
 ---
 permalink: sc-automation/rest_api_workflows_disaster_recovery_of_snapcenter_server.html 
 sidebar: sidebar 
-keywords:  
+keywords: REST API, disaster recovery, DR 
 summary: Die Disaster Recovery-Funktion von SnapCenter verwendet FÜR das Backup des SnapCenter Servers REST-APIs. 
 ---
 = REST-APIs für Disaster Recovery (DR)
@@ -74,14 +74,12 @@ NOTE: Wenn die VM beschädigt ist, starten Sie eine andere VM oder eine Maschine
 
 Mithilfe VON REST-APIs können Sie die folgenden Operationen auf der SEITE REST APIs Swagger ausführen. Informationen zum Zugriff auf die Seite Swagger finden Sie unter link:https://docs.netapp.com/us-en/snapcenter/sc-automation/task_how%20to_access_rest_apis_using_the_swagger_api_web_page.html["Zugriff auf REST-APIs über die Swagger-API-Webseite"].
 
-*Was Sie brauchen*
-
+.Was Sie benötigen
 * Sie sollten sich als SnapCenter Admin-Benutzer einloggen.
 * Der SnapCenter-Server sollte betriebsbereit sein, um die DR-Wiederherstellungs-API auszuführen.
 
 
-*Über diese Aufgabe*
-
+.Über diese Aufgabe
 SnapCenter Server DR unterstützt alle Plug-ins.
 
 |===
@@ -91,8 +89,7 @@ SnapCenter Server DR unterstützt alle Plug-ins.
  a| 
 Holen Sie vorhandene DR-Backups des SnapCenter Servers
 
-
-NOTE: Sie sollten den Zielpfad angeben, in dem die DR-Backups gespeichert werden.
+Sie sollten den Zielpfad angeben, in dem die DR-Backups gespeichert werden.
  a| 
 `/4.5/disasterrecovery/server/backup?targetpath={path}`
  a| 
@@ -135,4 +132,5 @@ Aktiviert oder deaktiviert die Speicher-DR
 POST
 
 |===
-Weitere Informationen finden Sie im https://www.youtube.com/watch?v=Nbr_wm9Cnd4&list=PLdXI3bZJEw7nofM6lN44eOe4aOSoryckg["Disaster Recovery-APIs"^] Video:
+.Finden Sie weitere Informationen
+Siehe link:https://www.youtube.com/watch?v=Nbr_wm9Cnd4&list=PLdXI3bZJEw7nofM6lN44eOe4aOSoryckg["Disaster Recovery-APIs"^] Video:

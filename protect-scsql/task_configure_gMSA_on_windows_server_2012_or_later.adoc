@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_configure_gMSA_on_windows_server_2012_or_later.html 
 sidebar: sidebar 
-keywords:  
+keywords: gMSA 
 summary: 'Mit Windows Server 2012 oder höher können Sie ein Group Managed Service Account \(gMSA\) erstellen, das über ein verwaltetes Domain-Konto eine automatisierte Verwaltung von Service-Konten ermöglicht.' 
 ---
 = Konfigurieren Sie gMSA unter Windows Server 2012 oder höher

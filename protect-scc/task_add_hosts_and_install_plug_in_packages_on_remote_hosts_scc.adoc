@@ -31,9 +31,9 @@ Wenn Sie Plug-ins auf einem Cluster (WSFC) installieren, werden die Plug-ins auf
 
 *Schritte*
 
-. Klicken Sie im linken Navigationsbereich auf *Hosts*.
+. Wählen Sie im linken Navigationsbereich *Hosts* aus.
 . Überprüfen Sie, ob die Registerkarte *verwaltete Hosts* oben ausgewählt ist.
-. Klicken Sie Auf *Hinzufügen*.
+. Wählen Sie *Hinzufügen*.
 . Führen Sie auf der Seite Hosts die folgenden Aktionen durch:
 +
 |===
@@ -83,7 +83,7 @@ NOTE: Der Authentifizierungsmodus für die Anmeldeinformationen wird durch den H
 
 |===
 . Wählen Sie im Abschnitt *Plug-ins zur Installation auswählen* die zu installierenden Plug-ins aus.
-. (Optional) Klicken Sie Auf *Weitere Optionen*.
+. (Optional) Wählen Sie *Weitere Optionen*.
 +
 |===
 | Für dieses Feld... | Tun Sie das... 
@@ -116,14 +116,14 @@ Optional können Sie den Pfad anpassen.
 
 ** Für die benutzerdefinierten SnapCenter Plug-ins:
 +
-... Klicken Sie im Abschnitt Benutzerdefinierte Plug-ins auf *Durchsuchen* und wählen Sie den Ordner mit dem gezippten benutzerdefinierten Plug-in aus.
+... Wählen Sie im Abschnitt Benutzerdefinierte Plug-ins die Option *Durchsuchen* aus, und wählen Sie den Ordner für das benutzerdefinierte Plug-in mit Reißverschluss aus.
 +
 Der Ordner mit gezippten Daten enthält den benutzerdefinierten Plug-in-Code und die XML-Datei Deskriptor.
 
 +
 Navigieren Sie zum Storage Plug-in zu _C:\ProgramData\NetApp\SnapCenter\Package Repository_, und wählen Sie aus `Storage.zip` Ordner.
 
-... Klicken Sie Auf *Upload*.
+... Wählen Sie *Hochladen*.
 +
 Die XML-Datei Deskriptor im Ordner gezipptes benutzerdefiniertes Plug-in wird vor dem Hochladen des Pakets validiert.
 
@@ -158,7 +158,7 @@ IMPORTANT: Geben Sie den gMSA-Namen in folgendem Format an: Domainname\AccountNa
 NOTE: GSSA wird nur für den SnapCenter-Plug-in für Windows-Dienst als Anmelde-Dienstkonto verwendet.
 
 |===
-. Klicken Sie Auf *Absenden*.
+. Wählen Sie *Senden*.
 +
 Wenn Sie das Kontrollkästchen *Vorabprüfungen* nicht aktiviert haben, wird der Host validiert, um zu überprüfen, ob der Host die Anforderungen für die Installation des Plug-ins erfüllt. Der Festplattenspeicher, der RAM, die PowerShell-Version, die .NET-Version, der Speicherort (für Windows-Plug-ins) und die Java-Version (für Linux-Plug-ins) werden anhand der Mindestanforderungen validiert. Wenn die Mindestanforderungen nicht erfüllt werden, werden entsprechende Fehler- oder Warnmeldungen angezeigt.
 
@@ -169,7 +169,7 @@ Wenn der Fehler mit dem Festplattenspeicher oder RAM zusammenhängt, können Sie
 
 NOTE: Wenn Sie in einem HA-Setup die Datei „Web.config“ aktualisieren, müssen Sie die Datei auf beiden Knoten aktualisieren.
 
-. Wenn der Hosttyp Linux ist, überprüfen Sie den Fingerabdruck und klicken Sie dann auf *Bestätigen und Senden*.
+. Wenn der Hosttyp Linux ist, überprüfen Sie den Fingerabdruck und wählen Sie dann *Bestätigen und Senden*.
 +
 
 NOTE: Eine Fingerabdruck-Verifizierung ist erforderlich, auch wenn zuvor derselbe Host zu SnapCenter hinzugefügt wurde und der Fingerabdruck bestätigt wurde.

@@ -13,8 +13,7 @@ summary: Der Klon-Workflow umfasst die Durchführung des Klonvorgangs und die Ü
 [role="lead"]
 Der Klon-Workflow umfasst die Durchführung des Klonvorgangs und die Überwachung des Vorgangs.
 
-*Über diese Aufgabe*
-
+.Über diese Aufgabe
 * Sie können auf dem SAP HANA-Quellserver klonen.
 * Sie können Ressourcen-Backups aus den folgenden Gründen klonen:
 +

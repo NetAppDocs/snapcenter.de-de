@@ -48,10 +48,8 @@
   <block id="d71af843d2746ce96eb5d7b9a854feec" category="paragraph">Optional können Sie den Pfad anpassen.</block>
   <block id="62347d4194e2615853e43f2ff2f58f2f" category="list-text">Für das SnapCenter Plug-ins-Paket für Linux lautet der Standardpfad: /Opt/NetApp/snapcenter.</block>
   <block id="dbd5f1a081ee2b60f9256f0d615c8572" category="list-text">Für die benutzerdefinierten SnapCenter Plug-ins:</block>
-  <block id="e8b613a2e921767ecd62245525569678" category="list-text">Klicken Sie im Abschnitt Benutzerdefinierte Plug-ins auf *Durchsuchen* und wählen Sie den Ordner mit dem gezippten benutzerdefinierten Plug-in aus.</block>
   <block id="908b8e036ea9ce39ce7b1ef72289d440" category="paragraph">Der Ordner mit gezippten Daten enthält den benutzerdefinierten Plug-in-Code und die XML-Datei Deskriptor.</block>
   <block id="8f535444470b871cb3339061c5c490aa" category="paragraph">Navigieren Sie zum Storage Plug-in zu _C:\ProgramData\NetApp\SnapCenter\Package Repository_, und wählen Sie aus<block ref="1ae0ec02713418737a2965bdbb97e689" prefix=" " category="inline-code"></block> Ordner.</block>
-  <block id="c1d36bef52fc074303f12c52de7b144f" category="list-text">Klicken Sie Auf *Upload*.</block>
   <block id="14c63a85dc0d2eb17d6a4de481e630f9" category="paragraph">Die XML-Datei Deskriptor im Ordner gezipptes benutzerdefiniertes Plug-in wird vor dem Hochladen des Pakets validiert.</block>
   <block id="22b9c22ece0544103d4ef5fde3f3591c" category="paragraph">Die benutzerdefinierten Plug-ins, die auf den SnapCenter-Server hochgeladen werden, werden aufgelistet.</block>
   <block id="00ebf5cec061915cd0462d73602dcad8" category="inline-link">NetApp Automation Store</block>
@@ -395,10 +393,8 @@
   <block id="52a580de823d89b3d7b0e19883cf0a1b" category="paragraph">Verwenden Sie für Snapshot-Kopie das benutzerdefinierte Namensformat</block>
   <block id="aff716d8309a2ea5e7dcffc15638b023" category="paragraph">Aktivieren Sie dieses Kontrollkästchen, und geben Sie ein benutzerdefiniertes Namensformat ein, das Sie für den Namen der Snapshot Kopie verwenden möchten.</block>
   <block id="a80db864d152c8b32afdc8aba08be8a4" category="paragraph">Beispiel: _Custext_Resource Group_Policy_hostname oder Resource Group_hostname_. Standardmäßig wird ein Zeitstempel an den Namen der Snapshot Kopie angehängt.</block>
-  <block id="94f48d06961651ce76410fb0e6059f76" category="list-text">Optional: Wählen Sie auf der Seite Ressourcen einen Hostnamen aus der Dropdown-Liste *Host* und Ressourcentyp aus der Dropdown-Liste *Ressourcentyp* aus.</block>
   <block id="667a5a1d21c8b2c591be7bfcf5d1b5ae" category="paragraph">Dadurch können Informationen auf dem Bildschirm gefiltert werden.</block>
   <block id="c7e757b993a892f1adbc4d9d429ada9a" category="list-text">Wählen Sie die Ressourcen im Abschnitt *Verfügbare Ressourcen* aus und klicken Sie dann auf den rechten Pfeil, um sie in den Abschnitt *Ausgewählte Ressourcen* zu verschieben.</block>
-  <block id="08b935061f93c6a0dff0b7e6979bd0d5" category="list-text">Optional: Gehen Sie auf der Seite Anwendungseinstellungen wie folgt vor:</block>
   <block id="8cc859910effe8112e2912d3644f0bc8" category="paragraph">Aktivieren Sie das Backup von Konsistenzgruppen und führen Sie die folgenden Aufgaben aus:</block>
   <block id="a99f0aeaf38081c20a7370fb0f80e5fb" category="paragraph">Es dauert nicht lange, bis der Snapshot-Vorgang der Konsistenzgruppe abgeschlossen ist</block>
   <block id="16bfcf20ed729d5958d62a1310952406" category="paragraph">Wählen Sie „dringend“, „Mittel“ oder „entspannt“, um die Wartezeit zum Abschluss des Snapshot-Kopiervorgangs anzugeben.</block>
@@ -602,7 +598,6 @@
   <block id="16e83f7e57633cd58a4377b7c1b63e8b" category="paragraph">Mount-Pfade</block>
   <block id="1b77d8b94cdc028e50a0681f82c70f25" category="paragraph">Geben Sie die Mount-Pfade ein, auf denen die Ressource angehängt ist. Dies gilt nur für einen Windows-Host.</block>
   <block id="44dab87fe2da08cd26ee4f07dbdf1d56" category="list-text">Wählen Sie auf der Seite Speicher-Footprint angeben ein Speichersystem aus und wählen Sie ein oder mehrere Volumes, LUNs und qtrees aus, und klicken Sie dann auf *Speichern*.</block>
-  <block id="e0a8c4d2ea78ad79b3f4ddb809734576" category="admonition">Die benutzerdefinierten Plug-ins von SnapCenter unterstützen nicht die automatische Erkennung von Ressourcen und Storage-Details für physische und virtuelle Umgebungen. Sie müssen Storage-Informationen für physische und virtuelle Umgebungen bereitstellen und gleichzeitig Ressourcen erstellen.</block>
   <block id="e855bfeca424d5d865b9bac0eaf01f53" category="image-alt">Storage-Platzbedarf</block>
   <block id="d98e943b0122d016274bcbbeba1d647d" category="list-text">Stellen Sie auf der Seite „Ressourceneinstellungen“ benutzerdefinierte Key-Value-Paare für die Ressource bereit.</block>
   <block id="863fe064f77b5a2b8dd60206770de2c1" category="paragraph">Verwenden Sie die benutzerdefinierten Schlüssel-Wert-Paare, wenn Sie ressourcenspezifische Informationen übergeben möchten. Wenn Sie beispielsweise das MySQL-Plug-in verwenden, müssen Sie einen HOST als HOST=hostname, PORT =Port-no angeben, der für MySQL und Master-Slave-Konfiguration als MASTER_SLAVE = „`YES`“ oder „`NO`“ verwendet wird (Name ist MASTER_SLAVE und Wert ist „`JA`“ oder „`NO`“).</block>
@@ -3560,7 +3555,6 @@
   <block id="f688549fef75ce58097dcbad1e2f175e" category="paragraph">Wenn Sie den Vorgang vor der Überprüfung abbrechen, wird der Vorgang abgebrochen und der Verifizierungsvorgang wird nicht durchgeführt.</block>
   <block id="bfed89e7bc468020d264ba44570cb258" category="list-text">Sie können einen Sicherungsvorgang entweder über die Seite Überwachen oder über den Aktivitätsbereich abbrechen.</block>
   <block id="f0328f4bbf4f6731b30cee2c8cf43fbe" category="list-text">Zusätzlich zur Verwendung der SnapCenter GUI können Sie PowerShell cmdlets verwenden, um Vorgänge abzubrechen.</block>
-  <block id="2aa4120bd1aaa066e763141ca0f141c7" category="list-text">Wählen Sie den Job aus und klicken Sie auf *Job abbrechen* .</block>
   <block id="53606748062c599b4ce202237295ee32" category="list-text">Klicken Sie nach dem Starten des Backup-Jobs auf <block ref="f176a951032bbb2fc179630a5e58fad8" category="inline-image-macro-rx" type="image"></block> Im Aktivitätsbereich werden die fünf letzten Vorgänge angezeigt.</block>
   <block id="fc62bcd97b198f575c1a4245110155ad" category="paragraph">Der Vorgang wird abgebrochen und die Ressource wird in den vorherigen Status zurückgesetzt. Wenn der Vorgang, den Sie abgebrochen haben, im Status „Abbrechen“ oder „Ausführen“ nicht reagiert, sollten Sie den ausführen<block ref="8037a97354d9ccbfa7534041a3c02003" prefix=" " category="inline-code"></block> Cmdlet zum gewaltsamen Beenden des Backup-Vorgangs.</block>
   <block id="4311a9aa7335c4d3eaea1abc109915e9" category="summary">Nachdem Sie Ihr NetApp Storage-System mit dem SnapCenter Plug-in für Microsoft Windows bereitgestellt haben, können Sie Ihre Ressourcen zum NetApp Storage-System oder von einer NetApp LUN zu einer anderen NetApp LUN migrieren. Dabei stehen Ihnen entweder die SnapCenter Graphical User Interface \ (GUI\) oder die PowerShell Commandlets zur Verfügung.</block>
@@ -3607,9 +3601,7 @@
   <block id="53c98fb3ede460fb23424f1db6ea0273" category="list-text">Aktivieren Sie auf der Seite Ressourcen das Kontrollkästchen *Custom Name Format for Snapshot copy* und geben Sie dann ein benutzerdefiniertes Namensformat ein, das Sie für den Namen der Snapshot Kopie verwenden möchten.</block>
   <block id="3b9b501ce9ff4819d459190476007edc" category="paragraph">Beispiel: Custtext_Policy_hostname oder Resource_hostname. Standardmäßig wird ein Zeitstempel an den Namen der Snapshot Kopie angehängt.</block>
   <block id="075e5d48960664645c5727a530a7c640" category="list-text">Wählen Sie im Abschnitt Richtlinien eine oder mehrere Richtlinien aus der Dropdown-Liste aus.</block>
-  <block id="8651b9793bd6c1e48d295567e332b963" category="paragraph">Sie können eine Richtlinie erstellen, indem Sie auf * klicken<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>* Um den Policy Wizard zu starten.</block>
   <block id="204b899f0e95e32b80ec8ea79f53c1ec" category="paragraph">Im Abschnitt * Zeitpläne für ausgewählte Richtlinien konfigurieren* werden die ausgewählten Richtlinien aufgelistet.</block>
-  <block id="730f69a1c6fa686c684abab6e3e4ce4c" category="list-text">In der Option * Pläne für Police hinzufügen*<block ref="4595028aeeeb2fdba0f5fec9c2385d0d" prefix=" " category="inline-code"></block> Konfigurieren Sie den Zeitplan, und klicken Sie dann auf *OK*.</block>
   <block id="08fe75bd987fb2dedbe7641f478927f0" category="paragraph">Hier<block ref="4595028aeeeb2fdba0f5fec9c2385d0d" prefix=" " category="inline-code"></block> Ist der Name der Richtlinie, die Sie ausgewählt haben.</block>
   <block id="af797b4b95d0c81734522a69680e6163" category="list-text">Wählen Sie den Microsoft SQL Server Scheduler verwenden* aus, und wählen Sie dann die Planerinstanz aus der Dropdown-Liste *Scheduler Instance* aus, die mit der Planungsrichtlinie verknüpft ist.</block>
   <block id="8aad6e1ddba0855250f3f027cd30ba41" category="list-text">Führen Sie auf der Seite Überprüfung die folgenden Schritte aus:</block>
@@ -3843,7 +3835,6 @@
   <block id="2a1a78f96ec6b03f3ccdd06b708e6f1a" category="list-text">(Optional) Ersetzen Sie das SnapCenter-Plug-in für SQL Server-Konfigurationsdateien vom Disaster Recovery-Backup (DR) auf die neue Maschine.</block>
   <block id="9f2c74676fb5b339a2fd4a0ccd75bd1e" category="list-text">Importieren Sie Windows- und SQL-Zeitpläne aus dem SnapCenter-Plug-in für SQL Server-Ordner aus dem DR-Backup.</block>
   <block id="27e7993c4841ae5fd670cdd945ccb96d" category="inline-link">Disaster Recovery-APIs</block>
-  <block id="90840bc3d6109c892e0f709274fdc6b6" category="paragraph">Weitere Informationen finden Sie im<block ref="af818973dd6acaf1e28a3bd4ca9bd4a5" category="inline-link-rx"></block> Video:</block>
   <block id="51d95bab000b8bd5e8f9d83c3f25d453" category="summary">Erneutes Seeding ist eine Option zur Wiederherstellung von Datenbanken der Verfügbarkeitsgruppe \(AG\). Sollte die Synchronisierung einer sekundären Datenbank mit der primären Datenbank in einer AG nicht mehr synchronisiert werden, können Sie die sekundäre Datenbank erneut speichern.</block>
   <block id="951ead00aca07936d7cbe2d0eaf3bdde" category="doc">Datenbanken der Verfügbarkeitsgruppe erneut erstellen</block>
   <block id="86c8bce86a1532578679c840db2996d0" category="paragraph">Erneutes Seeding ist eine Option zur Wiederherstellung von Datenbanken der Availability Group (AG). Sollte die Synchronisierung einer sekundären Datenbank mit der primären Datenbank in einer AG nicht mehr synchronisiert werden, können Sie die sekundäre Datenbank erneut speichern.</block>
@@ -4115,7 +4106,6 @@
   <block id="ee00c31059f22ec3b8beab1b62936c4e" category="paragraph">Aktivieren Sie dieses Kontrollkästchen, um alle Clusterknoten in einer WSFC- oder SQL-Verfügbarkeitsgruppe hinzuzufügen. Sie sollten alle Cluster-Knoten hinzufügen, indem Sie das entsprechende Kontrollkästchen Cluster in der GUI aktivieren, wenn Sie mehrere verfügbare SQL-Verfügbarkeitsgruppen in einem Cluster verwalten und identifizieren möchten.</block>
   <block id="4ced74f19d0af1905bae82fc201e12b3" category="admonition">Wenn der Host mit gMSA hinzugefügt wird und der gMSA über Login- und sys Admin-Berechtigungen verfügt, wird das gMSA verwendet, um eine Verbindung zur SQL-Instanz herzustellen.</block>
   <block id="17bb48cb5022ca80557cfc9621510f56" category="list-text">Wählen Sie für das SQL-Plug-in den Host aus, um das Protokollverzeichnis zu konfigurieren.</block>
-  <block id="5ecc20833e4d1392fd69f4308b10ca8d" category="list-text">Klicken Sie auf *Logverzeichnis konfigurieren* und klicken Sie auf der Seite Hostprotokollverzeichnis konfigurieren auf *Durchsuchen* und führen Sie die folgenden Schritte aus:</block>
   <block id="a2e95b3d87ce22a616602c8fe4a615be" category="paragraph">Nur NetApp LUNs (Laufwerke) werden zur Auswahl aufgeführt. SnapCenter sichert und repliziert im Rahmen des Backup-Vorgangs das Host-Protokollverzeichnis.</block>
   <block id="94f93df508e8b907861c0cbf749c1a16" category="image-alt">Plug-in-Seite konfigurieren</block>
   <block id="4ec95bc4f94136d65bed56645b271dc1" category="list-text">Wählen Sie den Laufwerksbuchstaben oder den Bereitstellungspunkt auf dem Host aus, auf dem das Hostprotokoll gespeichert werden soll.</block>
@@ -4129,9 +4119,6 @@
   <block id="9197b9c8161503bb3182537ae54e9805" category="list-text">Wenn das gemountete Klonlaufwerk während eines SnapCenter Klonvorgangs nicht gefunden werden kann, sollten Sie den Parameter CloneRetryTimeout von SnapCenter Server in 300 ändern.</block>
   <block id="abef260cca88daddcff288732257933c" category="list-text">Stellen Sie sicher, dass nur ein VFC- oder FC-Initiator mit jedem Host verbunden ist. Der Grund dafür ist, dass SnapCenter nur einen Initiator pro Host unterstützt.</block>
   <block id="4632a6c67f803e17d68ebb34598a6785" category="admonition">Das Klonen eines Backups einer Instanz wird nicht unterstützt.</block>
-  <block id="25c32a730da76a44edba3eed7970d7b5" category="list-text">Wählen Sie auf der Ansicht „Kopien verwalten“ das Backup entweder aus dem primären oder sekundären (gespiegelten oder ausgelagerten) Storage-System aus.</block>
-  <block id="d9f15a1f5a532a10eedb724ee7cefae8" category="list-text">Wählen Sie das Backup aus, und klicken Sie dann auf *<block ref="44cb43ff1bef6ac179dd09e52aa35b83" category="inline-image-macro-rx" type="image"></block>*.</block>
-  <block id="01e2b44d2ed56123a7aac06f5ddcc2c1" category="list-text">Führen Sie auf der Seite „Klonoptionen“ die folgenden Aktionen durch:</block>
   <block id="530587cce0e3987bdf3bb0fa8eb1fafb" category="paragraph">Wählen Sie einen Host aus, auf dem der Klon erstellt werden soll.</block>
   <block id="ac2c35e8a2e69fb56e582c6ffe7704d3" category="paragraph">Wählen Sie eine Kloninstanz aus, zu der Sie das Datenbank-Backup klonen möchten.</block>
   <block id="ac2d05702ddec9ebed8b673fa20113b6" category="paragraph">Diese SQL-Instanz muss sich auf dem angegebenen Klon-Server befinden.</block>
@@ -4144,7 +4131,6 @@
   <block id="47a39e3dec41c4e6f868ceda0ae37ee9" category="paragraph">Wählen Sie diese Option, um die Datenbank auf Basis der Backup-Protokolle zu klonen, die bis zum Backup-Protokoll mit dem ausgewählten Datum erstellt wurden.</block>
   <block id="21c614f77a0f65336c4db1c8bc7fde75" category="paragraph">Geben Sie Datum und Uhrzeit an, nach denen die Transaktionsprotokolle nicht auf die geklonte Datenbank angewendet werden.</block>
   <block id="418da21041a76d47214208138e1523e2" category="paragraph">Dieser Point-in-Time-Klon stoppt den Klon der Transaktions-Log-Einträge, die nach dem angegebenen Datum und der angegebenen Zeit aufgezeichnet wurden.</block>
-  <block id="1813891225fbe3440817ee7ab349f81e" category="list-text">Geben Sie auf der Seite Skript das Skript-Timeout, den Pfad und die Argumente für das Prescript oder das Postscript ein, das vor bzw. nach dem Klonvorgang ausgeführt werden soll.</block>
   <block id="b8ceb1eaf0d60af03679989562024d6b" category="paragraph">Nach dem Erstellen des Klons sollten Sie ihn nicht mehr umbenennen.</block>
   <block id="8a2bd81e968aaadb6ec10a1b58f541cc" category="inline-link-macro">Sichern Sie die SQL Server-Datenbank, -Instanz oder -Verfügbarkeitsgruppe</block>
   <block id="38c78702a48e457f5ef291281168432e" category="paragraph"><block ref="38c78702a48e457f5ef291281168432e" category="inline-link-macro-rx"></block></block>
@@ -4172,19 +4158,13 @@
   <block id="3a1dd416224e7a96b7d4be1dfc9536cf" category="list-text">Sie müssen die Anmeldedaten einem Benutzer mit rollenbasierter Zugriffssteuerung (Role-Based Access Control, RBAC) ohne sysadmin-Zugriff zuweisen, wenn die folgenden Bedingungen erfüllt sind:</block>
   <block id="7a16850a47fecec0d6cb2c66daae6fca" category="list-text">Die Anmeldeinformationen werden einer SQL-Instanz zugewiesen.</block>
   <block id="6707464a5871a6aa26dcf785bea4052c" category="list-text">Die SQL Instanz oder der Host wird einem RBAC-Benutzer zugewiesen.</block>
-  <block id="afebb28fd320ef1336620e367e1e9af9" category="list-text">Klicken Sie zum Hinzufügen einer neuen Anmeldedaten auf *Neu*.</block>
   <block id="4ef7e21a631ca3e8e53bd58d8f6a3dd8" category="list-text">Konfigurieren Sie auf der Seite Anmeldeinformationen:</block>
   <block id="2babd6364b44c08eef5ab4738c3db862" category="paragraph">Geben Sie den Benutzernamen ein, der für die SQL Server-Authentifizierung verwendet wird.</block>
   <block id="2532aba4399cff0e09437703bc91a9d4" category="list-text">Domänenadministrator oder ein Mitglied der Administratorgruppe Geben Sie den Domänenadministrator oder ein Mitglied der Administratorgruppe auf dem System an, auf dem Sie das SnapCenter-Plug-in installieren. Gültige Formate für das Feld *Benutzername* sind:</block>
   <block id="b2634f07b0a3a46ef7a5b2fe1993d6e2" category="list-text">Lokaler Administrator (nur für Arbeitsgruppen) für Systeme, die zu einer Arbeitsgruppe gehören, geben Sie den integrierten lokalen Administrator auf dem System an, auf dem Sie das SnapCenter-Plug-in installieren. Sie können ein lokales Benutzerkonto angeben, das zur lokalen Administratorengruppe gehört, wenn das Benutzerkonto über erhöhte Berechtigungen verfügt oder die Benutzerzugriffssteuerungsfunktion auf dem Hostsystem deaktiviert ist. Das zulässige Format für das Feld *Benutzername* lautet: _Username_</block>
   <block id="66c5f2a1877b1e04cfa2731f1e12aa5e" category="paragraph">Wählen Sie den SQL Server-Authentifizierungsmodus aus. Sie können auch die Windows-Authentifizierung auswählen, wenn der Windows-Benutzer sysadmin-Berechtigungen auf dem SQL-Server hat.</block>
   <block id="1c6aec216640420d37199ef0555beab9" category="paragraph">Wählen Sie die SQL Server-Instanz aus.</block>
-  <block id="a52c72cddb788a0e54ae847cfde710d9" category="list-text">Klicken Sie auf *OK*, um die Anmeldedaten hinzuzufügen.</block>
-  <block id="9cfc80fa5227a423a76220ce430d990c" category="list-text">Klicken Sie im linken Navigationsbereich auf *Ressourcen*.</block>
   <block id="9b2d19ed2c6ef4ad66cf85a7f008aa99" category="list-text">Wählen Sie auf der Seite Ressourcen in der Liste *Ansicht* die Option *Instanz* aus.</block>
-  <block id="ae829e34e763c62f7fbf84dd61e419e2" category="list-text">Klicken Sie Auf <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block>Und wählen Sie dann den Hostnamen aus, um die Instanzen zu filtern.</block>
-  <block id="e50f0759502e9232b70d6a9904881524" category="list-text">Klicken Sie Auf <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block> Um den Filterbereich zu schließen.</block>
-  <block id="3729214a02912f5fc0f81c3f5dffad3b" category="list-text">Schützen Sie die Instanz auf der Seite Schützen, und klicken Sie bei Bedarf auf *Anmeldeinformationen konfigurieren*.</block>
   <block id="5479732a2e06d6b7a50f564e8fe27e30" category="paragraph">Wenn der beim SnapCenter-Server angemeldete Benutzer keinen Zugriff auf das SnapCenter-Plugin für Microsoft SQL-Server hat, muss der Benutzer die Anmeldeinformationen konfigurieren.</block>
   <block id="8cfd48e3d0704f372da00b7de212f299" category="admonition">Die Anmeldeinformationsoption gilt nicht für Datenbanken und Verfügbarkeitsgruppen.</block>
   <block id="a52716605edda155f499cf4c4572c6d5" category="list-text">Klicken Sie Auf *Ressourcen Aktualisieren*.</block>
@@ -4293,7 +4273,6 @@
   <block id="619da134802c3fcab97a2b7c6d14c4ec" category="paragraph">Wenn die Transaktionsprotokolle intakt bleiben, kann jede Backup-Anwendung die Datenbanken wiederherstellen. In der Regel sollten Sie die Option nur kopieren unter anderen Umständen nicht verwenden.</block>
   <block id="31bbc81dcc68057ff34be7ba42a87cf4" category="admonition">Microsoft SQL unterstützt nicht die Option *nur kopieren Backup* zusammen mit der Option *Vollbackup und Log Backup* für sekundären Speicher.</block>
   <block id="e55dcbdf8fe92f0410aacdc7a5cf00d7" category="list-text">Führen Sie im Abschnitt Einstellungen für Verfügbarkeitsgruppen die folgenden Aktionen durch:</block>
-  <block id="6ebdb233abe23750440d3e587915a892" category="paragraph">Wählen Sie diese Option aus, um nur auf dem bevorzugten Backup-Replikat zu sichern. Über die für die AG im SQL Server konfigurierten Backup-Einstellungen wird das bevorzugte Backup-Replikat entschieden.</block>
   <block id="0a87197768544d35cfd757d20f1dab26" category="paragraph">Wählen Sie das primäre AG-Replikat oder das sekundäre AG-Replikat für das Backup aus.</block>
   <block id="fb8750264c3bbfea89908048e10ef06c" category="paragraph">Geben Sie eine Mindestanzahl der Backup-Prioritäten und eine Nummer der maximalen Backup-Priorität an, die das AG-Replikat für das Backup entscheidet. Sie können beispielsweise eine Mindestpriorität von 10 und eine maximale Priorität von 50 haben. In diesem Fall werden alle AG-Replikate mit einer Priorität von mehr als 10 und weniger als 50 für Backups in Betracht gezogen.</block>
   <block id="4035686675283d0f53d4a20e3a9588f0" category="admonition">Standardmäßig ist die Mindestpriorität 1 und die maximale Priorität 100.</block>
@@ -7753,7 +7732,6 @@
   <block id="17049c1cdf73c2b4b41219f99ace3f81" category="list-text">Sie sollten *bash* als Standard-Shell für die Plug-in-Installation haben.</block>
   <block id="b3fae7a36581789e46e17a83505c11b3" category="paragraph">Wenn Sie das Plug-in als nicht-root-Benutzer installiert haben, sollten Sie die Ausführungsberechtigungen manuell den Verzeichnissen Prescript und Postscript zuweisen.</block>
   <block id="a8d03bc12fa704a66e02c6802c0766f8" category="summary">Wenn das SnapCenter-Plug-in für SQL Server ausgefallen ist, führen Sie die folgenden manuellen Schritte aus, um das Plug-in wiederherzustellen.</block>
-  <block id="4846f8fb7f3c4d1460329ca7b77ea8ea" category="paragraph">Wenn das SnapCenter-Plug-in für SQL Server ausfällt, führen Sie die folgenden Schritte aus, um zu einem anderen SQL-Host zu wechseln und die Daten wiederherzustellen.</block>
   <block id="d59db7846bd10b6d60d21543df9faa9e" category="list-title">Was Sie benötigen</block>
   <block id="112fa4c1243fe1af31b4cf57c26ced23" category="list-text">Schieben Sie das SnapCenter-Plug-in für SQL Server auf einen anderen Host, indem Sie die Seite *Add Host* oder *Modify Host* verwenden. Siehe <block ref="fc11fadbfb2b2b87f8c260a133d75ad2" category="inline-link-macro-rx"></block> Finden Sie weitere Informationen.</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">Schritte</block>
@@ -7969,7 +7947,6 @@
   <block id="aa829ddf1acbdd2a8aa6a61635c33dec" category="inline-link-macro">Importieren Sie archivierte Backups</block>
   <block id="b06af5128852d56366a94b0a3584c1a6" category="paragraph">Wenn Sie SnapManager für Microsoft SQL Server verwenden und Daten von SnapManager für Microsoft SQL Server in SnapCenter importieren möchten, lesen Sie <block ref="0079f46f6850618db9fdf32f5f6051e0" category="inline-link-macro-rx"></block></block>
   <block id="96a63fe0cf1de573b75ba5f458cbdc60" category="doc">Erstellen von Ressourcengruppen und Anhängen von Richtlinien in SnapCenter</block>
-  <block id="3b6d3b427a92116014d4ee868e0f04ba" category="paragraph">Eine Ressourcengruppe ist der Container, dem Sie Ressourcen hinzufügen müssen, die Sie sichern und schützen möchten. Damit können Sie alle Daten, die einer bestimmten Applikation zugeordnet sind, gleichzeitig sichern und für alle Datensicherungsjobs erforderlich sind. Sie müssen der Ressourcengruppe auch eine oder mehrere Richtlinien zuordnen, um den Typ des Datensicherungsauftrags zu definieren, den Sie ausführen möchten.</block>
   <block id="0b5045b3b137ebb25cf08b5081075426" category="list-text">Wählen Sie im linken Navigationsbereich *Ressourcen* aus, und wählen Sie dann das entsprechende Plug-in aus der Liste aus.</block>
   <block id="b68b243f9420806e3cfb840322caf2eb" category="list-text">Wählen Sie auf der Seite Ressourcen die Option Neue Ressourcengruppe aus.</block>
   <block id="2ace8412659382e8d9b1bc3d644b1428" category="paragraph">Hinweis: Der Name der Ressourcengruppe darf 250 Zeichen nicht überschreiten.</block>
@@ -7985,7 +7962,6 @@
   <block id="b11a42908bee80055dfed2bb0e9a583a" category="list-text">Wählen Sie in der Spalte *Configure Schedules* * aus<block ref="a55421dd685609006a21f2507444357f" category="inline-image-macro-rx" type="image"></block>* Für die Richtlinie, die Sie konfigurieren möchten.</block>
   <block id="729d9de2082bbc8f839869a30daadc5d" category="list-text">Konfigurieren Sie im Dialogfeld Add Schedules for Policy _Policy_Name_ den Zeitplan, und wählen Sie OK aus.</block>
   <block id="f389a38ece1c258dbc71da8826870236" category="paragraph">Wobei Policy_Name der Name der ausgewählten Richtlinie ist.</block>
-  <block id="8417b61ea6ac680285a40b7f679829a2" category="list-text">Wählen Sie aus der Dropdown-Liste *E-Mail-Präferenz* auf der Benachrichtigungsseite die Szenarien aus, in denen Sie die E-Mails senden möchten.</block>
   <block id="7444cb400c788a3d3aad71fb264fbbee" category="list-text">Überprüfen Sie die Zusammenfassung, und wählen Sie dann *Fertig stellen*.</block>
   <block id="135b308ed83c53f1516b7c754566d1c4" category="list-title">Bevor Sie beginnen</block>
   <block id="be2d786365162f9949969e2f176ef13a" category="inline-link-macro">Es wurde ein benutzerdefiniertes Plug-in für Ihre Anwendung erstellt</block>
@@ -8443,4 +8419,57 @@ Die Einstellung der Verfügbarkeit für NetApp Single Mailbox Recovery (EOA) ste
   <block id="78a044d413487b3c49b37567f8df9e4f" category="sidebar">Importieren Sie das CA-Zertifikat in die UNIX-Host-Plug-ins</block>
   <block id="7fbe6e40125b7d1b2f5c5c05044e7526" category="sidebar">Aktivieren Sie die zertifikatbasierte Authentifizierung</block>
   <block id="20c5c92c0148a7ebef737c442e93b7ec" category="paragraph">Mögliche Werte sind TRACE, DEBUG, INFO, WARN, FEHLER, Und TÖDLICH.</block>
+  <block id="e1d3704586d47446c7a9812c933e6d8e" category="paragraph">Eine Ressourcengruppe ist der Container, dem Sie Ressourcen hinzufügen müssen, die Sie sichern und schützen möchten. Es ermöglicht Ihnen, alle Daten, die einer bestimmten Anwendung zugeordnet sind, gleichzeitig zu sichern. Sie müssen der Ressourcengruppe auch eine oder mehrere Richtlinien zuordnen, um den Typ des Datensicherungsauftrags zu definieren, den Sie ausführen möchten.</block>
+  <block id="8b6f1fa932c2bed4baaccef3ddcf4695" category="paragraph">Wenn Sie beispielsweise HR als Tag zu mehreren Ressourcengruppen hinzufügen, finden Sie später alle Ressourcengruppen, die mit dem HR-Tag verknüpft sind.</block>
+  <block id="80b9fb843a72da0cf0206625d0d30b8a" category="list-text">Optional: Wählen Sie auf der Seite Ressourcen einen Hostnamen aus der Dropdown-Liste *Host* und den Ressourcentyp aus der Dropdown-Liste *Ressourcentyp* aus.</block>
+  <block id="780a0c83cea1287e3268125158ca86c9" category="list-text">Optional: Gehen Sie auf der Seite *Anwendungseinstellungen* wie folgt vor:</block>
+  <block id="d40040f6fe85caa89878dd7a41e7b55b" category="list-text">Wählen Sie aus der Dropdown-Liste *E-Mail-Präferenz* auf der Seite *Benachrichtigung* die Szenarien aus, in denen Sie die E-Mails senden möchten.</block>
+  <block id="6e495826070e65e2f969743716fcc30b" category="list-text">Wählen Sie im linken Navigationsbereich *Hosts* aus.</block>
+  <block id="fa12509cfb8e8ccded16e2a254e988c4" category="list-text">Wählen Sie *Hinzufügen*.</block>
+  <block id="78145f74ff2b901e893d47fe728a85ae" category="list-text">(Optional) Wählen Sie *Weitere Optionen*.</block>
+  <block id="7b8c46b7e7cbdb1b301a0eea6904e6e8" category="list-text">Wählen Sie im Abschnitt Benutzerdefinierte Plug-ins die Option *Durchsuchen* aus, und wählen Sie den Ordner für das benutzerdefinierte Plug-in mit Reißverschluss aus.</block>
+  <block id="3268d25ce0e47e87022d19706bd20155" category="list-text">Wählen Sie *Hochladen*.</block>
+  <block id="b623e6ded9a852f4e7cd9765578d0c08" category="list-text">Wählen Sie *Senden*.</block>
+  <block id="8fa2fcad4f9983d73cc8cf50dc7850bb" category="list-text">Wenn der Hosttyp Linux ist, überprüfen Sie den Fingerabdruck und wählen Sie dann *Bestätigen und Senden*.</block>
+  <block id="afd0ab14821626fd96f2cb4c5a17df67" category="admonition">Benutzerdefinierte SnapCenter-Plug-ins unterstützen keine automatische Erkennung der Ressourcen. Die Speicherdetails physischer und virtueller Umgebungen werden ebenfalls nicht automatisch erkannt. Sie müssen Storage-Informationen für physische und virtuelle Umgebungen bereitstellen und gleichzeitig Ressourcen erstellen.</block>
+  <block id="c2726cace6e0f9e9086903f875043343" category="list-text">Wählen Sie auf der Seite Einstellungen die Option *Credential* aus.</block>
+  <block id="f18b9ca36991d69a62cb8fbdb85edee5" category="list-text">Um eine neue Anmeldeinformation hinzuzufügen, wählen Sie *Neu*.</block>
+  <block id="eddab474a4b2f17a38ed31fed490fdbb" category="list-text">Wählen Sie *OK*, um die Zugangsdaten hinzuzufügen.</block>
+  <block id="09ce3191fe3676c6210a1738c2f05204" category="list-text">Wählen Sie im linken Navigationsbereich *Ressourcen* aus.</block>
+  <block id="b630478df4d6cf0a952d6dc7f39a7398" category="inline-image-macro">Filtersymbol</block>
+  <block id="11b8f8a290f9576d0523bb2aff082ee5" category="list-text">Wählen Sie <block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>Und wählen Sie dann den Hostnamen aus, um die Instanzen zu filtern.</block>
+  <block id="1f65f6f4c9a3e304b67ca876cc39c183" category="list-text">Wählen Sie <block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block> Um den Filterbereich zu schließen.</block>
+  <block id="051b221bf083fcbfb5979e9ec6dbe18a" category="list-text">Schützen Sie die Instanz auf der Seite Instance Protect, und wählen Sie bei Bedarf *Credentials konfigurieren*.</block>
+  <block id="2379b04b6a65be095d50d18636142893" category="list-text">Wählen Sie *Ressourcen Aktualisieren*.</block>
+  <block id="2e762fd0e60aafdb91d875990b24b8b6" category="list-text">Wählen Sie im linken Navigationsbereich *Ressourcen* aus, und wählen Sie dann *SnapCenter Plug-in für SQL Server* aus der Liste aus.</block>
+  <block id="ed43d12f020a2ac9ec05bbbd7c15c12b" category="list-text">Wählen Sie auf der Ansichtsseite *Kopien verwalten* das Backup entweder aus dem primären oder sekundären (gespiegelten oder gewölbten) Speichersystem aus.</block>
+  <block id="eef23094c2eec5203f366204abff92cc" category="list-text">Wählen Sie die Sicherung aus, und wählen Sie dann * aus<block ref="11ec183c45ca833d0220ddbf2e2e1d98" category="inline-image-macro-rx" type="image"></block>*.</block>
+  <block id="7512cfe200e4fec543b47a5d62fc6149" category="list-text">Führen Sie auf der Seite *Clone Options* die folgenden Aktionen durch:</block>
+  <block id="0f3c122791256078177582e458c97afc" category="list-text">Geben Sie auf der Seite *Script* das Skript-Timeout, den Pfad und die Argumente des Prescript oder Postscript ein, die vor bzw. nach dem Klonvorgang ausgeführt werden sollen.</block>
+  <block id="b723e46bf782113e1476771841c2a253" category="list-text">Wählen Sie auf der Seite *Benachrichtigung* aus der Dropdown-Liste *E-Mail-Präferenz* die Szenarien aus, in denen Sie die E-Mails versenden möchten.</block>
+  <block id="4a3f04f42ebeabccfad7128de3983c4a" category="list-text">Überwachen Sie den Vorgangsfortschritt, indem Sie *Monitor* &gt; *Jobs* auswählen.</block>
+  <block id="01e12de62fa77fda2815719aed8ff892" category="paragraph-title">Wie es weiter geht</block>
+  <block id="30f60d67f457bb040dffde52197a54da" category="paragraph-title">Verwandte Informationen</block>
+  <block id="4e8e38544f2984e4fb0264f8624f3ff3" category="list-text">Wählen Sie im linken Navigationsbereich *Monitor* &gt; *Jobs*.</block>
+  <block id="31c92bb27ecf43c83829e1d2d3504819" category="list-text">Wählen Sie den Job aus und wählen Sie *Job abbrechen* .</block>
+  <block id="7d37ee39b4ee19fcd30604efdc61fb89" category="inline-image-macro">Symbol im Aktivitätsbereich</block>
+  <block id="ae7d57fd9ca74c48255817041aead2f3" category="list-text">Wählen Sie nach dem Initiieren des Backupjobs aus <block ref="64eace402f8f00b7a999e38fb6d87e55" category="inline-image-macro-rx" type="image"></block> Im Aktivitätsbereich werden die fünf letzten Vorgänge angezeigt.</block>
+  <block id="8467b6fc978e958889122b3f0f4500ef" category="list-text">Wählen Sie auf der Seite Job-Details die Option *Job abbrechen* aus.</block>
+  <block id="7adb9efc9727efcae1dc90797b6d14b7" category="paragraph">Sie können die Ressourcengruppe entweder durch Eingabe des Namens der Ressourcengruppe im Suchfeld oder durch Auswählen von * durchsuchen<block ref="5daa1c5d91da80c848b68dcd336ec220" category="inline-image-macro-rx" type="image"></block>* Und dann das Tag auswählen. Sie können dann * auswählen<block ref="5daa1c5d91da80c848b68dcd336ec220" category="inline-image-macro-rx" type="image"></block>* Zum Schließen des Filterfensters.</block>
+  <block id="8689f97c3da81b19465f71f756e66bdf" category="list-text">Wählen Sie auf der Seite Ressourcengruppen die Ressourcengruppe aus, die Sie sichern möchten, und wählen Sie dann *Jetzt sichern* aus.</block>
+  <block id="3f297ef15cde0668e93b35f2752fd4fd" category="paragraph-title">Was kommt als Nächstes?</block>
+  <block id="527845dfb36351f269fc0788cbb25f31" category="list-text">Wählen Sie auf der Seite Einstellungen die Option *Richtlinien* aus.</block>
+  <block id="35f738c979f3c37836b8abb8e955fca3" category="list-text">Wählen Sie *Neu*.</block>
+  <block id="f8c86cc4b1c8e607fa2e36ce41958b14" category="list-text">Geben Sie auf der Seite *Name* den Namen und die Beschreibung der Richtlinie ein.</block>
+  <block id="3d1c37669eb86e13510933bc14bebf44" category="paragraph">Wählen Sie diese Option aus, um nur auf dem bevorzugten Backup-Replikat zu sichern. Über die für die AG im SQL Server konfigurierten Backup-Einstellungen wird das bevorzugte Backup-Replikat entschieden.</block>
+  <block id="b0f08815e23be7ac7c232a9a309233ba" category="list-text">Wählen Sie *Weitere Optionen*.</block>
+  <block id="05bb5a497f917848f517fcac62315ce3" category="list-text">Wählen Sie *Protokollverzeichnis konfigurieren* und wählen Sie auf der Seite Hostprotokoll konfigurieren *Durchsuchen* aus, und führen Sie die folgenden Schritte aus:</block>
+  <block id="10492389e94efdebbb66f7b0cd8a1324" category="list-text">Wählen Sie *Speichern*.</block>
+  <block id="0b9cc363682aeee89eeabab96120ae6d" category="paragraph">Wenn das SnapCenter-Plug-in für SQL Server ausfällt, führen Sie die folgenden Schritte aus, um zu einem anderen SQL-Host zu wechseln und die Daten wiederherzustellen.</block>
+  <block id="51967c03859d379ed44f57ea268dd825" category="paragraph">Sie können eine Richtlinie erstellen, indem Sie * auswählen<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>* Um den Policy Wizard zu starten.</block>
+  <block id="c59876ddcf6af9e6a82eee54645805c2" category="list-text">Wählen Sie *<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>* In der Spalte Zeitplan konfigurieren für die Richtlinie, für die Sie einen Zeitplan konfigurieren möchten.</block>
+  <block id="8eca00bd5e799ca761dc094888307893" category="list-text">In der Option * Pläne für Police hinzufügen*<block ref="4595028aeeeb2fdba0f5fec9c2385d0d" prefix=" " category="inline-code"></block> Konfigurieren Sie den Zeitplan, und wählen Sie dann *OK*.</block>
+  <block id="28d224f5fce20ca21cc66cf83832a2b1" category="list-text">Wählen Sie die Richtlinie aus, für die Sie Ihren Überprüfungsplan konfigurieren möchten, und wählen Sie dann * aus<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>*.</block>
+  <block id="3d1c64d2c8b1e4058225a78c3ef09fa6" category="list-text">Wählen Sie *OK*.</block>
+  <block id="5477ea177e290e8ac1c03a7ee8f2a92b" category="list-text">Wählen Sie *Jetzt sichern*.</block>
 </blocks>

@@ -43,10 +43,10 @@ Sie können die GET API verwenden, um den Wert der Taste anzuzeigen. SET-API wir
 
 == Schritt: Richtliniennamen Erstellen
 
-. Klicken Sie im linken Navigationsbereich auf *Einstellungen*.
-. Klicken Sie auf der Seite Einstellungen auf *Richtlinien*.
-. Klicken Sie Auf *Neu*.
-. Geben Sie auf der Seite Name den Namen und die Beschreibung der Richtlinie ein.
+. Wählen Sie im linken Navigationsbereich *Einstellungen*.
+. Wählen Sie auf der Seite Einstellungen die Option *Richtlinien* aus.
+. Wählen Sie *Neu*.
+. Geben Sie auf der Seite *Name* den Namen und die Beschreibung der Richtlinie ein.
 
 
 
@@ -336,5 +336,5 @@ NOTE: Der Pfad für Prescripts oder Postscripts darf keine Laufwerke oder Shares
 
 == Schritt 7: Zusammenfassung überprüfen
 
-. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
+. Überprüfen Sie die Zusammenfassung, und wählen Sie dann *Fertig stellen*.
 

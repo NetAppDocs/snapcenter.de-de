@@ -13,8 +13,7 @@ summary: Sie können SnapCenter zum Klonen einer Backup verwenden. Sie können v
 [role="lead"]
 Sie können SnapCenter zum Klonen einer Backup verwenden. Sie können von primärem oder sekundärem Backup klonen.
 
-*Was Sie brauchen*
-
+.Was Sie benötigen
 * Sie sollten die Ressourcen oder Ressourcengruppe gesichert haben.
 * Sie sollten sicherstellen, dass die Aggregate, die die Volumes hosten, sich in der Liste der zugewiesenen Aggregate der Storage Virtual Machine (SVM) befinden.
 * Sie können keine dateibasierten Backups klonen.
@@ -31,12 +30,10 @@ Für Linux: _/var/opt/snapcenter/scc/allowed_befiehlt_list.txt_
 
 NOTE: Wenn die Befehle in der Befehlsliste nicht vorhanden sind, schlägt der Vorgang fehl.
 
-*Über diese Aufgabe*
-
+.Über diese Aufgabe
 Informationen zu Einschränkungen für den Klon-Split-Vorgang finden Sie unter http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["ONTAP 9 Leitfaden für das Management von logischem Storage"^].
 
-*Schritte*
-
+.Schritte
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
 . Filtern Sie auf der Seite Ressourcen die Ressourcen aus der Dropdown-Liste *Ansicht* nach Ressourcentyp.
 +

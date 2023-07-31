@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_add_resources_to_snapcenter_custom_plug_ins.html 
 sidebar: sidebar 
-keywords:  
+keywords: custom plug-in, resources, snapcenter 
 summary: Sie müssen die Ressourcen hinzufügen, die Sie sichern oder klonen möchten. Je nach Umgebung können sich die Ressourcen entweder um Datenbankinstanzen oder Sammlungen handeln, die Sie sichern oder klonen möchten. 
 ---
 = Benutzerdefinierte SnapCenter Plug-ins mit Ressourcen ergänzen
@@ -13,7 +13,7 @@ summary: Sie müssen die Ressourcen hinzufügen, die Sie sichern oder klonen mö
 [role="lead"]
 Sie müssen die Ressourcen hinzufügen, die Sie sichern oder klonen möchten. Je nach Umgebung können sich die Ressourcen entweder um Datenbankinstanzen oder Sammlungen handeln, die Sie sichern oder klonen möchten.
 
-.Bevor Sie beginnen
+.Was Sie benötigen
 * Sie müssen Aufgaben wie das Installieren des SnapCenter-Servers, das Hinzufügen von Hosts, das Erstellen von Speichersystemverbindungen und das Hinzufügen von Anmeldeinformationen abgeschlossen haben.
 * Dieser muss unbedingt vorhanden sein link:concept_develop_a_plug_in_for_your_application.html["Es wurde ein benutzerdefiniertes Plug-in für Ihre Anwendung erstellt"].
 * Sie müssen die Plug-ins auf SnapCenter Server hochgeladen haben.
@@ -73,7 +73,7 @@ Optional: Wählen Sie die aus image:../media/add_policy_from_resourcegroup.gif["
 
 +
 
-NOTE: Die benutzerdefinierten Plug-ins von SnapCenter unterstützen nicht die automatische Erkennung von Ressourcen und Storage-Details für physische und virtuelle Umgebungen. Sie müssen Storage-Informationen für physische und virtuelle Umgebungen bereitstellen und gleichzeitig Ressourcen erstellen.
+NOTE: Benutzerdefinierte SnapCenter-Plug-ins unterstützen keine automatische Erkennung der Ressourcen. Die Speicherdetails physischer und virtueller Umgebungen werden ebenfalls nicht automatisch erkannt. Sie müssen Storage-Informationen für physische und virtuelle Umgebungen bereitstellen und gleichzeitig Ressourcen erstellen.
 
 +
 image::../media/storage_footprint.gif[Storage-Platzbedarf]

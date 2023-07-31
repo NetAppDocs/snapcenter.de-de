@@ -13,14 +13,13 @@ summary: Auf der Seite „Ressourcen“ können Sie ein Backup einer Ressourceng
 [role="lead"]
 Auf der Seite „Ressourcen“ können Sie ein Backup einer Ressourcengruppe nach Bedarf erstellen. Wenn eine Ressourcengruppe über eine Richtlinie und einen konfigurierten Zeitplan verfügt, werden die Backups automatisch gemäß dem Zeitplan durchgeführt.
 
-*Schritte*
-
-. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+.Schritte
+. Wählen Sie im linken Navigationsbereich *Ressourcen* aus, und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
 . Wählen Sie auf der Seite Ressourcen in der Liste *Ansicht* die Option *Ressourcengruppe* aus.
 +
-Sie können die Ressourcengruppe entweder durch Eingabe des Ressourcengruppennamens in das Suchfeld oder durch Klicken auf * durchsuchenimage:../media/filter_icon.gif[""]* Und dann das Tag auswählen. Sie können dann auf * klickenimage:../media/filter_icon.gif[""]* Zum Schließen des Filterfensters.
+Sie können die Ressourcengruppe entweder durch Eingabe des Namens der Ressourcengruppe im Suchfeld oder durch Auswählen von * durchsuchenimage:../media/filter_icon.gif["Filtersymbol"]* Und dann das Tag auswählen. Sie können dann * auswählenimage:../media/filter_icon.gif["Filtersymbol"]* Zum Schließen des Filterfensters.
 
-. Wählen Sie auf der Seite Ressourcengruppen die Ressourcengruppe aus, die Sie sichern möchten, und klicken Sie dann auf *Jetzt sichern*.
+. Wählen Sie auf der Seite Ressourcengruppen die Ressourcengruppe aus, die Sie sichern möchten, und wählen Sie dann *Jetzt sichern* aus.
 . Führen Sie auf der Seite Backup die folgenden Schritte aus:
 +
 .. Wenn Sie der Ressourcengruppe mehrere Richtlinien zugeordnet haben, wählen Sie aus der Dropdown-Liste *Richtlinie* die Richtlinie aus, die Sie zum Sichern verwenden möchten.
@@ -31,14 +30,13 @@ Wenn die für das On-Demand-Backup ausgewählte Richtlinie einem Backup-Zeitplan
 +
 Die Option *Verify* in der Richtlinie gilt nur für geplante Jobs.
 
-.. Klicken Sie Auf *Backup*.
+.. Wählen Sie *Backup*.
 
 
-. Überwachen Sie den Fortschritt des Vorgangs, indem Sie auf *Monitor* > *Jobs* klicken.
+. Überwachen Sie den Vorgangsfortschritt, indem Sie *Monitor* > *Jobs* auswählen.
 
 
-*Weitere Informationen*
-
+.Was kommt als Nächstes?
 link:task_create_backup_policies_for_sql_server_databases.html["Erstellen von Backup-Richtlinien für SQL Server-Datenbanken"]
 
 link:task_create_resource_groups_and_attach_policies_for_sql_server.html["Erstellen von Ressourcengruppen und Anhängen von Richtlinien für SQL Server"]

@@ -1,7 +1,7 @@
 ---
 permalink: protect-hana/task_restore_and_recover_resources_using_powershell_cmdlets_hana.html 
 sidebar: sidebar 
-keywords:  
+keywords: restore resources, snapcenter 
 summary: Zur Wiederherstellung eines Ressourcen-Backups gehört die Initiierung einer Verbindungssitzung mit dem SnapCenter-Server, die Auflistung der Backups und das Abrufen von Backup-Informationen sowie die Wiederherstellung eines Backups. 
 ---
 = Stellen Sie Ressourcen mithilfe von PowerShell Cmdlets wieder her

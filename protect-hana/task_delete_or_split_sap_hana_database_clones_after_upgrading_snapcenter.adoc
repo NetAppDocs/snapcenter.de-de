@@ -13,12 +13,10 @@ summary: Nach einem Upgrade auf SnapCenter 4.3 werden die Klone nicht mehr angez
 [role="lead"]
 Nach einem Upgrade auf SnapCenter 4.3 werden die Klone nicht mehr angezeigt. Sie können den Klon löschen oder die Klone auf der Topologieseite der Ressource, aus der die Klone erstellt wurden, aufteilen.
 
-*Über diese Aufgabe*
-
+.Über diese Aufgabe
 Um den Platzbedarf für die versteckten Klone zu ermitteln, führen Sie den folgenden Befehl aus: `Get-SmClone -ListStorageFootprint`
 
-*Schritte*
-
+.Schritte
 . Löschen Sie die Backups der geklonten Ressourcen mit dem Cmdlet "remove-smbackup".
 . Löschen Sie die Ressourcengruppe der geklonten Ressourcen mit dem Cmdlet "remove-sresourcgruppe".
 . Entfernen Sie den Schutz der geklonten Ressource mit dem Cmdlet "remove-smprotectResource".

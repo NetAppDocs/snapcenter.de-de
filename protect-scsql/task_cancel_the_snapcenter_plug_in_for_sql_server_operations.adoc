@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_cancel_the_snapcenter_plug_in_for_sql_server_operations.html 
 sidebar: sidebar 
-keywords:  
+keywords: cancel, backup 
 summary: Sie können laufende, in die Warteschlange eingereihte oder nicht reaktionsfähige Backup-Vorgänge abbrechen. Wenn Sie einen Backup-Vorgang abbrechen, stoppt der SnapCenter-Server den Vorgang und entfernt alle Snapshot-Kopien aus dem Storage, falls das erstellte Backup nicht beim SnapCenter Server registriert ist. Wenn das Backup bereits beim SnapCenter Server registriert ist, wird die bereits erstellte Snapshot-Kopie nicht wieder zurückgeführt, auch wenn der Vorgang ausgelöst wird. 
 ---
 = Abbrechen des SnapCenter-Plug-ins für Microsoft SQL Server-Backup-Vorgänge
@@ -13,8 +13,7 @@ summary: Sie können laufende, in die Warteschlange eingereihte oder nicht reakt
 [role="lead"]
 Sie können laufende, in die Warteschlange eingereihte oder nicht reaktionsfähige Backup-Vorgänge abbrechen. Wenn Sie einen Backup-Vorgang abbrechen, stoppt der SnapCenter-Server den Vorgang und entfernt alle Snapshot-Kopien aus dem Storage, falls das erstellte Backup nicht beim SnapCenter Server registriert ist. Wenn das Backup bereits beim SnapCenter Server registriert ist, wird die bereits erstellte Snapshot-Kopie nicht wieder zurückgeführt, auch wenn der Vorgang ausgelöst wird.
 
-*Was Sie brauchen*
-
+.Was Sie benötigen
 * Sie müssen als SnapCenter-Administrator oder -Auftragseigentümer angemeldet sein, um Wiederherstellungsvorgänge abzubrechen.
 * Sie können nur das Protokoll oder die vollständigen Backup-Vorgänge abbrechen, die in die Warteschlange gestellt werden oder ausgeführt werden.
 * Sie können den Vorgang nicht abbrechen, nachdem die Überprüfung gestartet wurde.
@@ -27,8 +26,7 @@ Wenn Sie den Vorgang vor der Überprüfung abbrechen, wird der Vorgang abgebroch
 * Wenn Sie *Alle Mitglieder dieser Rolle sehen und auf anderen Mitgliedsobjekten* auf der Seite Benutzer\Gruppen arbeiten können, während Sie eine Rolle erstellen, können Sie die in der Warteschlange befindlichen Backup-Vorgänge anderer Mitglieder abbrechen, während Sie diese Rolle verwenden.
 
 
-*Schritt*
-
+.Schritte
 Führen Sie eine der folgenden Aktionen aus:
 
 |===
@@ -38,8 +36,8 @@ Führen Sie eine der folgenden Aktionen aus:
  a| 
 Monitor-Seite
  a| 
-. Klicken Sie im linken Navigationsbereich auf *Monitor* > *Jobs*.
-. Wählen Sie den Job aus und klicken Sie auf *Job abbrechen* .
+. Wählen Sie im linken Navigationsbereich *Monitor* > *Jobs*.
+. Wählen Sie den Job aus und wählen Sie *Job abbrechen* .
 
 
 
@@ -47,12 +45,11 @@ Monitor-Seite
  a| 
 Aktivitätsbereich
  a| 
-. Klicken Sie nach dem Starten des Backup-Jobs auf image:../media/activity_pane_icon.gif[""] Im Aktivitätsbereich werden die fünf letzten Vorgänge angezeigt.
+. Wählen Sie nach dem Initiieren des Backupjobs aus image:../media/activity_pane_icon.gif["Symbol im Aktivitätsbereich"] Im Aktivitätsbereich werden die fünf letzten Vorgänge angezeigt.
 . Wählen Sie den Vorgang aus.
-. Klicken Sie auf der Seite Jobdetails auf *Job abbrechen*.
+. Wählen Sie auf der Seite Job-Details die Option *Job abbrechen* aus.
 
 
 |===
-*Ergebnis*
-
+.Ergebnis
 Der Vorgang wird abgebrochen und die Ressource wird in den vorherigen Status zurückgesetzt. Wenn der Vorgang, den Sie abgebrochen haben, im Status „Abbrechen“ oder „Ausführen“ nicht reagiert, sollten Sie den ausführen `Cancel-SmJob -JobID <int> -Force` Cmdlet zum gewaltsamen Beenden des Backup-Vorgangs.

@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_create_resource_groups_and_attach_policies.html 
 sidebar: sidebar 
-keywords:  
+keywords: resource groups, attach policies, snapcenter 
 summary: Eine Ressourcengruppe ist der Container, dem Sie Ressourcen hinzufügen müssen, die Sie sichern und schützen möchten. 
 ---
 = Erstellen von Ressourcengruppen und Anhängen von Richtlinien in SnapCenter
@@ -10,7 +10,7 @@ summary: Eine Ressourcengruppe ist der Container, dem Sie Ressourcen hinzufügen
 :imagesdir: ../media/
 
 
-Eine Ressourcengruppe ist der Container, dem Sie Ressourcen hinzufügen müssen, die Sie sichern und schützen möchten. Damit können Sie alle Daten, die einer bestimmten Applikation zugeordnet sind, gleichzeitig sichern und für alle Datensicherungsjobs erforderlich sind. Sie müssen der Ressourcengruppe auch eine oder mehrere Richtlinien zuordnen, um den Typ des Datensicherungsauftrags zu definieren, den Sie ausführen möchten.
+Eine Ressourcengruppe ist der Container, dem Sie Ressourcen hinzufügen müssen, die Sie sichern und schützen möchten. Es ermöglicht Ihnen, alle Daten, die einer bestimmten Anwendung zugeordnet sind, gleichzeitig zu sichern. Sie müssen der Ressourcengruppe auch eine oder mehrere Richtlinien zuordnen, um den Typ des Datensicherungsauftrags zu definieren, den Sie ausführen möchten.
 
 .Schritte
 . Wählen Sie im linken Navigationsbereich *Ressourcen* aus, und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
@@ -35,7 +35,7 @@ Tags
  a| 
 Geben Sie eine oder mehrere Bezeichnungen ein, die Ihnen bei der späteren Suche nach der Ressourcengruppe helfen.
 
-Wenn Sie beispielsweise HR als Tag zu mehreren Ressourcengruppen hinzufügen, können Sie später alle Ressourcengruppen finden, die mit dem HR-Tag verknüpft sind.
+Wenn Sie beispielsweise HR als Tag zu mehreren Ressourcengruppen hinzufügen, finden Sie später alle Ressourcengruppen, die mit dem HR-Tag verknüpft sind.
 
 
 
@@ -47,12 +47,12 @@ Aktivieren Sie dieses Kontrollkästchen, und geben Sie ein benutzerdefiniertes N
 Beispiel: _Custext_Resource Group_Policy_hostname oder Resource Group_hostname_. Standardmäßig wird ein Zeitstempel an den Namen der Snapshot Kopie angehängt.
 
 |===
-. Optional: Wählen Sie auf der Seite Ressourcen einen Hostnamen aus der Dropdown-Liste *Host* und Ressourcentyp aus der Dropdown-Liste *Ressourcentyp* aus.
+. Optional: Wählen Sie auf der Seite Ressourcen einen Hostnamen aus der Dropdown-Liste *Host* und den Ressourcentyp aus der Dropdown-Liste *Ressourcentyp* aus.
 +
 Dadurch können Informationen auf dem Bildschirm gefiltert werden.
 
 . Wählen Sie die Ressourcen aus dem Abschnitt *Verfügbare Ressourcen* aus, und wählen Sie dann den Pfeil nach rechts, um sie in den Abschnitt *Ausgewählte Ressourcen* zu verschieben.
-. Optional: Gehen Sie auf der Seite Anwendungseinstellungen wie folgt vor:
+. Optional: Gehen Sie auf der Seite *Anwendungseinstellungen* wie folgt vor:
 +
 .. Wählen Sie den Pfeil Backups aus, um zusätzliche Backup-Optionen festzulegen:
 +
@@ -188,7 +188,7 @@ Die konfigurierten Zeitpläne sind in der Spalte angewendete Zeitpläne aufgefü
 
 
 
-. Wählen Sie aus der Dropdown-Liste *E-Mail-Präferenz* auf der Benachrichtigungsseite die Szenarien aus, in denen Sie die E-Mails senden möchten.
+. Wählen Sie aus der Dropdown-Liste *E-Mail-Präferenz* auf der Seite *Benachrichtigung* die Szenarien aus, in denen Sie die E-Mails senden möchten.
 +
 Außerdem müssen Sie die E-Mail-Adressen für Absender und Empfänger sowie den Betreff der E-Mail angeben. Der SMTP-Server muss unter *Einstellungen* > *Globale Einstellungen* konfiguriert sein.
 

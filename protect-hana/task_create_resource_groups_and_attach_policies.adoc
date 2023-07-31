@@ -1,7 +1,7 @@
 ---
 permalink: protect-hana/task_create_resource_groups_and_attach_policies.html 
 sidebar: sidebar 
-keywords: run as 
+keywords: resource groups, attach policies, snapcenter 
 summary: Eine Ressourcengruppe ist der Container, dem Sie Ressourcen hinzufügen müssen, die Sie sichern und schützen möchten. Mit einer Ressourcengruppen können Sie alle Daten sichern, die einer bestimmten Anwendung zugeordnet sind. Für jeden Datenschutzauftrag ist eine Ressourcengruppen erforderlich. Sie müssen der Ressourcengruppe auch eine oder mehrere Richtlinien zuordnen, um den Typ des Datensicherungsauftrags zu definieren, den Sie ausführen möchten. 
 ---
 = Erstellen von Ressourcengruppen und Anhängen von Richtlinien
@@ -13,12 +13,10 @@ summary: Eine Ressourcengruppe ist der Container, dem Sie Ressourcen hinzufügen
 [role="lead"]
 Eine Ressourcengruppe ist der Container, dem Sie Ressourcen hinzufügen müssen, die Sie sichern und schützen möchten. Mit einer Ressourcengruppen können Sie alle Daten sichern, die einer bestimmten Anwendung zugeordnet sind. Für jeden Datenschutzauftrag ist eine Ressourcengruppen erforderlich. Sie müssen der Ressourcengruppe auch eine oder mehrere Richtlinien zuordnen, um den Typ des Datensicherungsauftrags zu definieren, den Sie ausführen möchten.
 
-*Über diese Aufgabe*
-
+.Über diese Aufgabe
 Zur Erstellung von SAP HANA System-Replikations-Backups wird empfohlen, alle Ressourcen des SAP HANA-Systems zu einer Ressourcengruppe hinzuzufügen. So wird für ein nahtloses Backup im Takeover-Failback-Modus gesorgt.
 
-*Schritte*
-
+.Schritte
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
 . Klicken Sie auf der Seite Ressourcen auf *Neue Ressourcengruppe*.
 . Führen Sie auf der Seite Name die folgenden Aktionen durch:

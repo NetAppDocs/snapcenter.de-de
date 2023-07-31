@@ -13,8 +13,7 @@ summary: Bevor Sie SnapCenter zum Sichern von SAP HANA-Datenbankressourcen verwe
 [role="lead"]
 Bevor Sie SnapCenter zum Sichern von SAP HANA-Datenbankressourcen verwenden, müssen Sie eine Backup-Richtlinie für die Ressource oder Ressourcengruppe erstellen, die Sie sichern möchten. Eine Backup-Richtlinie ist eine Reihe von Regeln, die das Managen, Planen und Aufbewahren von Backups regeln.
 
-*Was Sie brauchen*
-
+.Was Sie benötigen
 * Sie müssen Ihre Backup-Strategie definiert haben.
 +
 Weitere Informationen zur Definition einer Datensicherungsstrategie für SAP HANA Datenbanken finden Sie in den Informationen.
@@ -26,8 +25,7 @@ Außerdem können Sie in der Richtlinie Replizierungs-, Skript- und Applikations
 
 
 
-*Über diese Aufgabe*
-
+.Über diese Aufgabe
 * SAP HANA System Replication
 +
 ** Das primäre SAP HANA System ist gesichert, und alle Datensicherungsvorgänge können durchgeführt werden.
@@ -42,8 +40,7 @@ Sie können kein Backup für SAP HANA Daten-Volume erstellen, aber SnapCenter sc
 
 
 
-*Schritte*
-
+.Schritte
 . Klicken Sie im linken Navigationsbereich auf *Einstellungen*.
 . Klicken Sie auf der Seite Einstellungen auf *Richtlinien*.
 . Klicken Sie Auf *Neu*.

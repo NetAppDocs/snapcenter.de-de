@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_clone_from_a_sql_server_database_backup.html 
 sidebar: sidebar 
-keywords:  
+keywords: clone 
 summary: Sie können das Backup einer SQL Server Datenbank mit SnapCenter klonen. Wenn Sie auf eine ältere Version der Daten zugreifen oder diese wiederherstellen möchten, können Sie Datenbank-Backups nach Bedarf klonen. 
 ---
 = Klonen aus einem Backup der SQL Server Datenbank
@@ -13,8 +13,7 @@ summary: Sie können das Backup einer SQL Server Datenbank mit SnapCenter klonen
 [role="lead"]
 Sie können das Backup einer SQL Server Datenbank mit SnapCenter klonen. Wenn Sie auf eine ältere Version der Daten zugreifen oder diese wiederherstellen möchten, können Sie Datenbank-Backups nach Bedarf klonen.
 
-*Was Sie brauchen*
-
+.Was Sie benötigen
 * Sie sollten sich auf den Datenschutz vorbereiten, indem Sie Aufgaben wie das Hinzufügen von Hosts, die Identifizierung von Ressourcen und das Erstellen von Verbindungen zum Speichersystem abschließen.
 * Sie sollten Datenbanken oder Ressourcengruppen gesichert haben.
 * Der Sicherungstyp wie Mirror, Vault oder Mirror-Vault für Daten-LUN und Protokoll-LUN sollte dieselben sein, um sekundäre Lokatoren beim Klonen zu einem alternativen Host mithilfe von Protokoll-Backups zu erkennen.
@@ -22,8 +21,7 @@ Sie können das Backup einer SQL Server Datenbank mit SnapCenter klonen. Wenn Si
 * Sie sollten sicherstellen, dass die Aggregate, die die Volumes hosten, sich in der Liste der zugewiesenen Aggregate der Storage Virtual Machine (SVM) befinden.
 
 
-*Über diese Aufgabe*
-
+.Über diese Aufgabe
 * Stellen Sie beim Klonen auf eine eigenständige Datenbankinstanz sicher, dass der Mount-Point-Pfad vorhanden ist und dass es sich um eine dedizierte Festplatte handelt.
 * Beim Klonen in eine Failover Cluster-Instanz (FCI) stellen Sie sicher, dass die Mount-Punkte vorhanden sind, dass es sich um eine freigegebene Festplatte handelt, und der Pfad und die FCI sollten zur gleichen SQL-Ressourcengruppe gehören.
 * Stellen Sie sicher, dass nur ein VFC- oder FC-Initiator mit jedem Host verbunden ist. Der Grund dafür ist, dass SnapCenter nur einen Initiator pro Host unterstützt.
@@ -43,22 +41,17 @@ Sie können die GET API verwenden, um den Wert der Taste anzuzeigen. SET-API wir
 
 NOTE: Stellen Sie für virtuelle Umgebungen (VMDK/RDM) sicher, dass der Bereitstellungspunkt eine dedizierte Festplatte ist.
 
-*Schritte*
-
-. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann *SnapCenter-Plug-in für SQL Server* aus der Liste aus.
+.Schritte
+. Wählen Sie im linken Navigationsbereich *Ressourcen* aus, und wählen Sie dann *SnapCenter Plug-in für SQL Server* aus der Liste aus.
 . Wählen Sie auf der Seite Ressourcen die Option *Datenbank* oder *Ressourcengruppe* aus der Liste *Ansicht* aus.
 +
 
 NOTE: Das Klonen eines Backups einer Instanz wird nicht unterstützt.
 
-
-
-*Schritte*
-
 . Wählen Sie die Datenbank oder Ressourcengruppe aus.
-. Wählen Sie auf der Ansicht „Kopien verwalten“ das Backup entweder aus dem primären oder sekundären (gespiegelten oder ausgelagerten) Storage-System aus.
-. Wählen Sie das Backup aus, und klicken Sie dann auf *image:../media/clone_icon.gif[""]*.
-. Führen Sie auf der Seite „Klonoptionen“ die folgenden Aktionen durch:
+. Wählen Sie auf der Ansichtsseite *Kopien verwalten* das Backup entweder aus dem primären oder sekundären (gespiegelten oder gewölbten) Speichersystem aus.
+. Wählen Sie die Sicherung aus, und wählen Sie dann * ausimage:../media/clone_icon.gif["Klon-Symbol"]*.
+. Führen Sie auf der Seite *Clone Options* die folgenden Aktionen durch:
 +
 |===
 | Für dieses Feld... | Tun Sie das... 
@@ -132,7 +125,7 @@ Geben Sie Datum und Uhrzeit an, nach denen die Transaktionsprotokolle nicht auf 
 Dieser Point-in-Time-Klon stoppt den Klon der Transaktions-Log-Einträge, die nach dem angegebenen Datum und der angegebenen Zeit aufgezeichnet wurden.
 
 |===
-. Geben Sie auf der Seite Skript das Skript-Timeout, den Pfad und die Argumente für das Prescript oder das Postscript ein, das vor bzw. nach dem Klonvorgang ausgeführt werden soll.
+. Geben Sie auf der Seite *Script* das Skript-Timeout, den Pfad und die Argumente des Prescript oder Postscript ein, die vor bzw. nach dem Klonvorgang ausgeführt werden sollen.
 +
 Beispielsweise können Sie ein Skript ausführen, um SNMP-Traps zu aktualisieren, Warnmeldungen zu automatisieren, Protokolle zu senden usw.
 
@@ -143,7 +136,7 @@ NOTE: Der Pfad für Prescripts oder Postscripts darf keine Laufwerke oder Shares
 +
 Das Standard-Skript-Timeout beträgt 60 Sekunden.
 
-. Wählen Sie auf der Benachrichtigungsseite aus der Dropdown-Liste *E-Mail-Präferenz* die Szenarien aus, in denen Sie die E-Mails versenden möchten.
+. Wählen Sie auf der Seite *Benachrichtigung* aus der Dropdown-Liste *E-Mail-Präferenz* die Szenarien aus, in denen Sie die E-Mails versenden möchten.
 +
 Außerdem müssen Sie die E-Mail-Adressen für Absender und Empfänger sowie den Betreff der E-Mail angeben. Wenn Sie den Bericht über den ausgeführten Klonvorgang anhängen möchten, wählen Sie *Job-Bericht anhängen* aus.
 
@@ -154,16 +147,14 @@ NOTE: Für eine E-Mail-Benachrichtigung müssen Sie die SMTP-Serverdetails entwe
 +
 Informationen zu EMS finden Sie unter https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_ems_data_collection.html["EMS-Datenerfassung managen"]
 
-. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
-. Überwachen Sie den Fortschritt des Vorgangs, indem Sie auf *Monitor* > *Jobs* klicken.
+. Überprüfen Sie die Zusammenfassung, und wählen Sie dann *Fertig stellen*.
+. Überwachen Sie den Vorgangsfortschritt, indem Sie *Monitor* > *Jobs* auswählen.
 
 
-*Nach Ihrer Beendigung*
-
+.Wie es weiter geht
 Nach dem Erstellen des Klons sollten Sie ihn nicht mehr umbenennen.
 
-*Weitere Informationen*
-
+.Verwandte Informationen
 link:reference_back_up_sql_server_database_or_instance_or_availability_group.html["Sichern Sie die SQL Server-Datenbank, -Instanz oder -Verfügbarkeitsgruppe"]
 
 link:task_clone_backups_using_powershell_cmdlets_for_sql.html["Klonen von Backups mit PowerShell Cmdlets"]

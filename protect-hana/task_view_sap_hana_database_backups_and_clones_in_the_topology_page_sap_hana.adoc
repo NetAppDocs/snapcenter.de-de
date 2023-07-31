@@ -13,8 +13,7 @@ summary: Bei der Vorbereitung von Backups und Klonen einer Ressource ist es unte
 [role="lead"]
 Bei der Vorbereitung von Backups und Klonen einer Ressource ist es unter Umständen hilfreich, eine grafische Darstellung aller Backups und Klone auf dem primären und sekundären Storage anzuzeigen.
 
-*Über diese Aufgabe*
-
+.Über diese Aufgabe
 In der Ansicht Kopien managen können Sie die folgenden Symbole überprüfen, um festzustellen, ob die Backups und Klone auf dem primären oder sekundären Storage (Mirror-Kopien oder Vault-Kopien) verfügbar sind.
 
 * image:../media/topology_primary_storage.gif["Symbol für primären Speicher"] Zeigt die Anzahl der Backups und Klone an, die auf dem primären Speicher verfügbar sind.
@@ -34,8 +33,7 @@ NOTE: Bei der SAP HANA Systemreplizierung werden die Restore- und Löschvorgäng
 
 Auf der Seite Topology sehen Sie alle Backups und Klone, die für die ausgewählte Ressource oder Ressourcengruppe zur Verfügung stehen. Sie können die Details zu diesen Backups und Klonen anzeigen und diese dann zur Durchführung von Datensicherungsvorgängen auswählen.
 
-*Schritte*
-
+.Schritte
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
 . Wählen Sie auf der Seite Ressourcen entweder die Ressource oder Ressourcengruppe aus der Dropdown-Liste *Ansicht* aus.
 . Wählen Sie die Ressource entweder in der Ansicht „Ressourcendetails“ oder in der Ansicht „Ressourcengruppendetails“ aus.

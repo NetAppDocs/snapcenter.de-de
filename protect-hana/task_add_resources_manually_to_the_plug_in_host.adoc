@@ -13,16 +13,14 @@ summary: Automatische Erkennung wird für bestimmte HANA-Instanzen nicht unterst
 [role="lead"]
 Automatische Erkennung wird für bestimmte HANA-Instanzen nicht unterstützt. Sie müssen diese Ressourcen manuell hinzufügen.
 
-*Was Sie brauchen*
-
+.Was Sie benötigen
 * Sie müssen Aufgaben wie die Installation des SnapCenter-Servers, das Hinzufügen von Hosts, das Einrichten von Speichersystemverbindungen und das Hinzufügen des HDB-Benutzerspeicherschlüssels abgeschlossen haben.
 * Für die SAP HANA Systemreplizierung wird empfohlen, alle Ressourcen dieses HANA-Systems in eine Ressourcengruppe hinzuzufügen und ein Ressourcengruppenbackup durchzuführen. So wird für ein nahtloses Backup im Takeover-Failback-Modus gesorgt.
 
 
 link:task_create_resource_groups_and_attach_policies.html["Erstellen von Ressourcengruppen und Anhängen von Richtlinien"].
 
-*Über diese Aufgabe*
-
+.Über diese Aufgabe
 Die automatische Erkennung wird für die folgenden Konfigurationen nicht unterstützt:
 
 * RDM- und VMDK-Layouts
@@ -36,8 +34,7 @@ NOTE: Falls die oben genannten Ressourcen ermittelt werden, werden die Datensich
 * Kaskadierte Replikationsumgebung im System Replication-Modus
 
 
-*Schritte*
-
+.Schritte
 . Wählen Sie im linken Navigationsbereich das SnapCenter-Plug-in für SAP HANA-Datenbank aus der Dropdown-Liste aus und klicken Sie dann auf *Ressourcen*.
 . Klicken Sie auf der Seite Ressourcen auf *SAP HANA-Datenbank hinzufügen*.
 . Führen Sie auf der Seite „Ressourcendetails bereitstellen“ die folgenden Aktionen durch:
