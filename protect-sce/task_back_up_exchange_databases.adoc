@@ -39,7 +39,7 @@ Auf der Seite „Ressourcen“ werden die angezeigt image:../media/not_supported
 NOTE: Wenn sich in einer DAG eine aktive Datenbankkopie auf einem Storage anderer Anbieter befindet und mindestens eine passive Datenbankkopie auf einem NetApp Storage gespeichert ist, können Sie die Datenbank schützen.
 
 +
-Klicken Sie Auf *image:../media/filter_icon.gif[""]*, und wählen Sie dann den Host-Namen und den Datenbanktyp, um die Ressourcen zu filtern. Sie können dann auf * klickenimage:../media/filter_icon.gif[""]* Zum Schließen des Filterfensters.
+Klicken Sie Auf *image:../media/filter_icon.png[""]*, und wählen Sie dann den Host-Namen und den Datenbanktyp, um die Ressourcen zu filtern. Sie können dann auf * klickenimage:../media/filter_icon.png[""]* Zum Schließen des Filterfensters.
 
 +
 ** Wenn Sie eine Datenbank sichern möchten, klicken Sie auf den Datenbanknamen.

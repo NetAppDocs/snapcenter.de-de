@@ -41,19 +41,19 @@ Für Linux: _/var/opt/snapcenter/scc/allowed_befiehlt_list.txt_
 NOTE: Wenn die Befehle in der Befehlsliste nicht vorhanden sind, schlägt der Vorgang fehl.
 
 .Schritte
-. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Wählen Sie im linken Navigationsbereich *Ressourcen* aus, und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
 . Filtern Sie auf der Seite Ressourcen die Ressourcen aus der Dropdown-Liste *Ansicht* nach Ressourcentyp.
 +
-Klicken Sie Auf *image:../media/filter_icon.gif[""]*, und wählen Sie dann den Host-Namen und den Ressourcentyp, um die Ressourcen zu filtern. Sie können dann auf klicken image:../media/filter_icon.gif[""] Um den Filterbereich zu schließen.
+Wählen Sie *image:../media/filter_icon.png[""]*, und wählen Sie dann den Host-Namen und den Ressourcentyp, um die Ressourcen zu filtern. Sie können dann auswählen image:../media/filter_icon.png[""] Um den Filterbereich zu schließen.
 
-. Klicken Sie auf die Ressource, die Sie sichern möchten.
+. Wählen Sie die Ressource aus, die Sie sichern möchten.
 . Wählen Sie auf der Seite „Ressource“ *Benutzerdefiniertes Namensformat für Snapshot-Kopie verwenden* aus, und geben Sie dann ein benutzerdefiniertes Namensformat ein, das Sie für den Namen der Snapshot-Kopie verwenden möchten.
 +
 Beispiel: _Custext_Policy_hostname_ oder _Resource_hostname_. Standardmäßig wird ein Zeitstempel an den Namen der Snapshot Kopie angehängt.
 
 . Gehen Sie auf der Seite Anwendungseinstellungen wie folgt vor:
 +
-** Klicken Sie auf den Pfeil *Backups*, um zusätzliche Backup-Optionen festzulegen:
+** Wählen Sie den Pfeil *Backups*, um zusätzliche Backup-Optionen festzulegen:
 +
 Aktivieren Sie bei Bedarf das Backup der Konsistenzgruppe, und führen Sie die folgenden Aufgaben aus:
 
@@ -75,12 +75,12 @@ Deaktivieren Sie WAFL Sync
 Wählen Sie diese Option aus, um zu vermeiden, einen WAFL Konsistenzpunkt zu erzwingen.
 
 |===
-** Klicken Sie auf den Pfeil *Scripts*, um vor- und Post-Befehle für quiesce, Snapshot copy und unquiesce-Vorgänge auszuführen.
+** Wählen Sie den Pfeil von *Scripts* aus, um Pre- und Post-Befehle für Stilllegung-, Snapshot Kopie- und Stilllegung-Vorgänge auszuführen.
 +
 Sie können auch vor dem Beenden des Sicherungsvorgangs Vorbefehle ausführen. Prescripts und Postscripts werden auf dem SnapCenter Server ausgeführt.
 
-** Klicken Sie auf den Pfeil **Custom Configurations**und geben Sie dann die für alle Jobs mit dieser Ressource erforderlichen benutzerdefinierten Wertpaare ein.
-** Klicken Sie auf den Pfeil *Snapshot-Kopie-Tool*, um das Tool zum Erstellen von Snapshot-Kopien auszuwählen:
+** Wählen Sie den Pfeil **Custom Configurations**, und geben Sie dann die für alle Jobs, die diese Ressource verwenden, erforderlichen benutzerdefinierten Wertpaare ein.
+** Wählen Sie den Pfeil *Snapshot Copy Tool* aus, um das Tool zum Erstellen von Snapshot Kopien auszuwählen:
 +
 |===
 | Ihre Situation | Dann... 
@@ -121,8 +121,8 @@ NOTE: Sie können eine Richtlinie auch erstellen, indem Sie auf * klickenimage:.
 +
 Im Abschnitt „Zeitpläne für ausgewählte Richtlinien konfigurieren“ werden die ausgewählten Richtlinien aufgelistet.
 
-.. Klicken Sie Auf *image:../media/add_policy_from_resourcegroup.gif[""]* In der Spalte Zeitplan konfigurieren für die Richtlinie, für die Sie einen Zeitplan konfigurieren möchten.
-.. Konfigurieren Sie im Dialogfeld Add Schedules for Policy_Policy_Name_ den Zeitplan, und klicken Sie dann auf *OK*.
+.. Wählen Sie *image:../media/add_policy_from_resourcegroup.gif[""]* In der Spalte Zeitplan konfigurieren für die Richtlinie, für die Sie einen Zeitplan konfigurieren möchten.
+.. Konfigurieren Sie im Dialogfeld Add Schedules for Policy _Policy_Name_ den Zeitplan, und wählen Sie dann *OK* aus.
 +
 _Policy_Name_ ist der Name der von Ihnen ausgewählten Richtlinie.
 
@@ -135,18 +135,18 @@ Die konfigurierten Zeitpläne sind in der Spalte angewendete Zeitpläne aufgefü
 +
 Außerdem müssen Sie die E-Mail-Adressen für Absender und Empfänger sowie den Betreff der E-Mail angeben. SMTP muss auch unter *Einstellungen* > *Globale Einstellungen* konfiguriert werden.
 
-. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
+. Überprüfen Sie die Zusammenfassung, und wählen Sie dann *Fertig stellen*.
 +
 Die Seite „Ressourcen-Topologie“ wird angezeigt.
 
-. Klicken Sie auf *Jetzt sichern*.
+. Wählen Sie *Jetzt sichern*.
 . Führen Sie auf der Seite Backup die folgenden Schritte aus:
 +
 .. Wenn Sie mehrere Richtlinien auf die Ressource angewendet haben, wählen Sie aus der Dropdown-Liste *Richtlinie* die Richtlinie aus, die Sie für das Backup verwenden möchten.
 +
 Wenn die für das On-Demand-Backup ausgewählte Richtlinie einem Backup-Zeitplan zugeordnet ist, werden die On-Demand-Backups auf Basis der für den Zeitplantyp festgelegten Aufbewahrungseinstellungen beibehalten.
 
-.. Klicken Sie Auf *Backup*.
+.. Wählen Sie *Backup*.
 
 
 . Überwachen Sie den Fortschritt des Vorgangs, indem Sie auf *Monitor* > *Jobs* klicken.

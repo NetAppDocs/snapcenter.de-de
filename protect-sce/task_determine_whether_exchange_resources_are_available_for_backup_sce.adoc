@@ -42,7 +42,7 @@ Datenbanken befinden sich nicht im normalen Zustand, wenn sie sich im Mount-, Un
 Alle Datenbanken und DAGs werden mit ihren DAG- oder Hostnamen im FQDN-Format angezeigt, sodass Sie zwischen mehreren Datenbanken unterscheiden können.
 
 +
-Klicken Sie Auf image:../media/filter_icon.gif[""] Und wählen Sie den Hostnamen und den Exchange Server aus, um die Ressourcen zu filtern. Sie können dann auf klicken image:../media/filter_icon.gif[""] Um den Filterbereich zu schließen.
+Klicken Sie Auf image:../media/filter_icon.png[""] Und wählen Sie den Hostnamen und den Exchange Server aus, um die Ressourcen zu filtern. Sie können dann auf klicken image:../media/filter_icon.png[""] Um den Filterbereich zu schließen.
 
 . Klicken Sie Auf *Ressourcen Aktualisieren*.
 +

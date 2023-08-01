@@ -24,7 +24,7 @@ Wenn eine einzelne benutzerdefinierte Plug-in-Ressource nicht zu einer Ressource
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
 . Filtern Sie auf der Seite Ressourcen die Ressourcen aus der Dropdown-Liste *Ansicht* nach Ressourcentyp.
 +
-Klicken Sie Auf image:../media/filter_icon.gif[""]Und wählen Sie dann den Hostnamen und den Ressourcentyp aus, um die Ressourcen zu filtern. Sie können dann auf klicken image:../media/filter_icon.gif[""] Um den Filterbereich zu schließen.
+Klicken Sie Auf image:../media/filter_icon.png[""]Und wählen Sie dann den Hostnamen und den Ressourcentyp aus, um die Ressourcen zu filtern. Sie können dann auf klicken image:../media/filter_icon.png[""] Um den Filterbereich zu schließen.
 
 . Klicken Sie auf die Ressource, die Sie sichern möchten.
 . Wenn Sie auf der Seite „Ressource“ einen benutzerdefinierten Namen verwenden möchten, aktivieren Sie das Kontrollkästchen *benutzerdefiniertes Namensformat für Snapshot-Kopie verwenden* und geben dann ein benutzerdefiniertes Namensformat für den Namen der Snapshot-Kopie ein.

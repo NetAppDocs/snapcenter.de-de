@@ -31,7 +31,7 @@ IMPORTANT: Wenn Sie in einem Windows-Dateisystemkontext arbeiten, sichern Sie ke
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
 . Wählen Sie auf der Seite Ressourcen in der Liste *Ansicht* die Option *Ressourcengruppe* aus.
 +
-Sie können die Ressourcengruppe entweder durch Eingabe des Ressourcengruppennamens in das Suchfeld oder durch Klicken durchsuchen image:../media/filter_icon.gif[""] Und das Tag auswählen. Sie können dann auf klicken image:../media/filter_icon.gif[""] Um den Filterbereich zu schließen.
+Sie können die Ressourcengruppe entweder durch Eingabe des Ressourcengruppennamens in das Suchfeld oder durch Klicken durchsuchen image:../media/filter_icon.png[""] Und das Tag auswählen. Sie können dann auf klicken image:../media/filter_icon.png[""] Um den Filterbereich zu schließen.
 
 . Wählen Sie auf der Seite Ressourcengruppen die Ressourcengruppe aus, die Sie sichern möchten, und klicken Sie dann auf *Jetzt sichern*.
 +

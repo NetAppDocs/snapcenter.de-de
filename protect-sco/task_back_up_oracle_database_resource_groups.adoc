@@ -11,16 +11,16 @@ summary: Eine Ressourcengruppe ist eine Sammlung von Ressourcen auf einem Host o
 
 
 [role="lead"]
-Eine Ressourcengruppe ist eine Sammlung von Ressourcen auf einem Host oder Cluster. Für alle in der Ressourcengruppe definierten Ressourcen wird ein Sicherungsvorgang in der Ressourcengruppe durchgeführt.
+Eine Ressourcengruppe ist eine Sammlung von Ressourcen auf einem Host oder Cluster. Der Backup-Vorgang wird für alle Ressourcen durchgeführt, die in der Ressourcengruppe definiert sind.
 
-Auf der Seite „Ressourcen“ können Sie ein Backup einer Ressourcengruppe nach Bedarf erstellen. Wenn eine Ressourcengruppe über eine Richtlinie und einen konfigurierten Zeitplan verfügt, werden die Backups automatisch gemäß dem Zeitplan durchgeführt.
+Auf der Seite „Ressourcen“ können Sie ein Backup einer Ressourcengruppe nach Bedarf erstellen. Wenn einer Ressourcengruppe eine Richtlinie angehängt und ein Zeitplan konfiguriert ist, werden Backups gemäß dem Zeitplan erstellt.
 
 .Schritte
 . Wählen Sie im linken Navigationsbereich *Ressourcen* und das entsprechende Plug-in aus der Liste aus.
 . Wählen Sie auf der Seite Ressourcen in der Liste *Ansicht* die Option *Ressourcengruppe* aus.
-. Geben Sie den Namen der Ressourcengruppe in das Suchfeld ein, oder klicken Sie auf image:../media/filter_icon.gif["Filtersymbol"], Und wählen Sie das Tag aus.
+. Geben Sie den Namen der Ressourcengruppe in das Suchfeld ein, oder klicken Sie auf image:../media/filter_icon.png["Filtersymbol"], Und wählen Sie das Tag aus.
 +
-Klicken Sie Auf image:../media/filter_icon.gif["Filtersymbol"] Um den Filterbereich zu schließen.
+Klicken Sie Auf image:../media/filter_icon.png["Filtersymbol"] Um den Filterbereich zu schließen.
 
 . Wählen Sie auf der Seite Ressourcengruppe die Ressourcengruppe aus, die gesichert werden soll.
 +

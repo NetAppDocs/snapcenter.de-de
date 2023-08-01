@@ -28,13 +28,13 @@ Es gibt folgende Möglichkeiten für die Implementierung von SnapCenter:
 +
 ** Daten auf primären ONTAP FAS-, AFF- oder All-SAN-Array- (ASA) Systemen, die auf sekundäre ONTAP FAS-, AFF- oder ASA-Systeme repliziert werden
 ** Daten auf primären ONTAP Select Systemen
-** Daten auf primären und sekundären ONTAP FAS, AFF oder ASA Systemen, die auf lokalem StorageGRID Objekt-Storage gesichert sind (mithilfe der Cloud-Backup-Integration von NetApp BlueXP)
+** Daten auf primären und sekundären ONTAP FAS, AFF oder ASA Systemen, die auf lokalem StorageGRID Objekt-Storage gesichert sind
 
 
 * Lokal in einer Hybrid Cloud zur Sicherung folgender Komponenten:
 +
 ** Daten auf primären ONTAP FAS, AFF oder ASA Systemen, die auf Cloud Volumes ONTAP repliziert werden
-** Daten auf primären und sekundären ONTAP FAS-, AFF- oder ASA-Systemen, gesichert auf Objekt- und Archiv-Storage in der Cloud (mittels NetApp BlueXP Cloud Backup-Integration)
+** Daten auf primären und sekundären ONTAP FAS-, AFF- oder ASA-Systemen, gesichert auf Objekt- und Archiv-Storage in der Cloud (mithilfe der BlueXP Backup- und Recovery-Integration)
 
 
 * In einer Public Cloud zur Sicherung folgender Komponenten:
@@ -184,9 +184,10 @@ Der SnapCenter-Server kommuniziert mit den Windows-Plug-ins über den Host-Agent
 
 
 
-Der SnapCenter-Server und die Plug-ins kommunizieren mit dem Host-Agent über HTTPS.
+Der SnapCenter-Server und die Plug-ins kommunizieren mit dem Host-Agent über HTTPS. Informationen zu den Vorgängen von SnapCenter werden im SnapCenter Repository gespeichert.
 
-Informationen zu den Vorgängen von SnapCenter werden im SnapCenter Repository gespeichert.
+
+NOTE: SnapCenter unterstützt ungemeinsamen Namespace für Windows Hosts. Wenn Sie Probleme bei der Verwendung von ungemeinsamem Namespace haben, finden Sie weitere Informationen unter https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_is_unable_to_discover_resources_when_using_disjoint_namespace["SnapCenter kann bei Verwendung von nicht gemeinsamem Namespace keine Ressourcen erkennen"].
 
 
 
