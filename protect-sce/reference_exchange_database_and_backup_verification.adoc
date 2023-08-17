@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/reference_exchange_database_and_backup_verification.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter Plug-in for Microsoft Exchange Server 
 summary: Das SnapCenter Plug-in für Microsoft Exchange Server bietet keine Backup-Überprüfung. Sie können jedoch das mit Exchange zur Verfügung gestellte Eseutil Tool verwenden, um Exchange-Datenbanken und Backups zu überprüfen. 
 ---
 = Exchange Datenbank und Backup-Verifizierung

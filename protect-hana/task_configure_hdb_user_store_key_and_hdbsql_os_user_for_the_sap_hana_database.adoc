@@ -13,7 +13,7 @@ summary: Sie müssen den HDB-Benutzerspeicherschlüssel und den HDBSQL OS-Benutz
 [role="lead"]
 Sie müssen den HDB-Benutzerspeicherschlüssel und den HDBSQL OS-Benutzer konfigurieren, um Datenschutzvorgänge in SAP HANA-Datenbanken durchzuführen.
 
-.Was Sie benötigen
+.Bevor Sie beginnen
 * Wenn in der SAP HANA-Datenbank nicht der HDB Secure User Store Key und der HDB SQL OS User konfiguriert sind, wird nur für die automatisch erkannten Ressourcen ein rotes Vorhängeschloss-Symbol angezeigt. Wenn sich während einer anschließenden Ermittlung der konfigurierte HDB Secure User Store Key als falsch herausstellte oder keinen Zugriff auf die Datenbank selbst bot, wird das rote Vorhängeschloss-Symbol erneut angezeigt.
 * Sie müssen den HDB Secure User Store Key und den HDB SQL OS Benutzer so konfigurieren, dass sie die Datenbank schützen oder einer Ressourcengruppe hinzufügen können, um Datenschutzvorgänge durchzuführen.
 * Sie müssen HDB SQL OS User konfigurieren, um auf die Systemdatenbank zugreifen zu können. Wenn HDB SQL OS User für den Zugriff auf nur die Mandantendatenbank konfiguriert ist, schlägt der Erkennungsvorgang fehl.

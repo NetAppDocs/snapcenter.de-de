@@ -13,7 +13,7 @@ summary: Automatische Erkennung wird für bestimmte HANA-Instanzen nicht unterst
 [role="lead"]
 Automatische Erkennung wird für bestimmte HANA-Instanzen nicht unterstützt. Sie müssen diese Ressourcen manuell hinzufügen.
 
-.Was Sie benötigen
+.Bevor Sie beginnen
 * Sie müssen Aufgaben wie die Installation des SnapCenter-Servers, das Hinzufügen von Hosts, das Einrichten von Speichersystemverbindungen und das Hinzufügen des HDB-Benutzerspeicherschlüssels abgeschlossen haben.
 * Für die SAP HANA Systemreplizierung wird empfohlen, alle Ressourcen dieses HANA-Systems in eine Ressourcengruppe hinzuzufügen und ein Ressourcengruppenbackup durchzuführen. So wird für ein nahtloses Backup im Takeover-Failback-Modus gesorgt.
 

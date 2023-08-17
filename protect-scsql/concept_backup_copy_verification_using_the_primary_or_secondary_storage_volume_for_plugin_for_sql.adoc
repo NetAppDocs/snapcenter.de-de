@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/concept_backup_copy_verification_using_the_primary_or_secondary_storage_volume_for_plugin_for_sql.html 
 sidebar: sidebar 
-keywords:  
+keywords: Backup copy verification 
 summary: Sie können Backup-Kopien auf dem primären Storage Volume oder auf dem sekundären SnapMirror oder SnapVault Storage Volume überprüfen. Bei der Überprüfung und Verwendung eines sekundären Storage-Volumes wird die Last für das primäre Storage Volume verringert. 
 ---
 = Verifizierung von Backup-Kopien für SQL Server mithilfe des primären oder sekundären Storage Volumes

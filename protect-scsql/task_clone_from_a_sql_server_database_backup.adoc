@@ -13,7 +13,7 @@ summary: Sie können das Backup einer SQL Server Datenbank mit SnapCenter klonen
 [role="lead"]
 Sie können das Backup einer SQL Server Datenbank mit SnapCenter klonen. Wenn Sie auf eine ältere Version der Daten zugreifen oder diese wiederherstellen möchten, können Sie Datenbank-Backups nach Bedarf klonen.
 
-.Was Sie benötigen
+.Bevor Sie beginnen
 * Sie sollten sich auf den Datenschutz vorbereiten, indem Sie Aufgaben wie das Hinzufügen von Hosts, die Identifizierung von Ressourcen und das Erstellen von Verbindungen zum Speichersystem abschließen.
 * Sie sollten Datenbanken oder Ressourcengruppen gesichert haben.
 * Der Sicherungstyp wie Mirror, Vault oder Mirror-Vault für Daten-LUN und Protokoll-LUN sollte dieselben sein, um sekundäre Lokatoren beim Klonen zu einem alternativen Host mithilfe von Protokoll-Backups zu erkennen.
@@ -151,7 +151,7 @@ Informationen zu EMS finden Sie unter https://docs.netapp.com/us-en/snapcenter/a
 . Überwachen Sie den Vorgangsfortschritt, indem Sie *Monitor* > *Jobs* auswählen.
 
 
-.Wie es weiter geht
+.Nachdem Sie fertig sind
 Nach dem Erstellen des Klons sollten Sie ihn nicht mehr umbenennen.
 
 .Verwandte Informationen

@@ -13,7 +13,7 @@ summary: Wenn eine Ressource noch nicht zu einer Ressourcengruppe gehört, könn
 [role="lead"]
 Wenn eine Ressource noch nicht zu einer Ressourcengruppe gehört, können Sie die Ressource auf der Seite Ressourcen sichern.
 
-.Was Sie benötigen
+.Bevor Sie beginnen
 * Sie müssen eine Sicherungsrichtlinie erstellt haben.
 * Wenn Sie eine Ressource mit einer SnapMirror Beziehung mit einem sekundären Storage sichern möchten, sollte die dem Storage-Benutzer zugewiesene ONTAP-Rolle die Berechtigung „`snapmirror all`“ enthalten. Wenn Sie jedoch die Rolle „`vsadmin`“ verwenden, ist die Berechtigung „`snapmirror all`“ nicht erforderlich.
 * Stellen Sie beim Backup-Vorgang auf Basis von Snapshot Kopien sicher, dass alle Mandantendatenbanken gültig und aktiv sind.

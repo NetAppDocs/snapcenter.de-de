@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/reference_backup_schedules_of_custom_plug_in_resources.html 
 sidebar: sidebar 
-keywords:  
+keywords: custom plug-in 
 summary: Der wichtigste Faktor beim Bestimmen eines Backup-Zeitplans ist die Änderungsrate für die Ressource. Je öfter Sie Ihre Ressourcen sichern, desto weniger Archivprotokolle, die SnapCenter für die Wiederherstellung verwenden muss, was zu schnelleren Restore-Vorgängen führen kann. 
 ---
 = Backup-Pläne für benutzerdefinierte Plug-in-Ressourcen

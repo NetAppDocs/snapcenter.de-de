@@ -19,8 +19,7 @@ SnapCenter ermöglicht Ihnen, Rollen, Benutzer und Gruppen zu ändern.
 
 Sie können eine SnapCenter-Rolle ändern, um Benutzer oder Gruppen zu entfernen und die mit der Rolle verknüpften Berechtigungen zu ändern. Es ist besonders nützlich, Rollen zu ändern, wenn Sie die Berechtigungen einer ganzen Rolle ändern oder löschen möchten.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 Sie müssen sich als „SnapCenterAdmin“-Rolle angemeldet haben.
 
 
@@ -49,8 +48,7 @@ NOTE: Wenn diese Option aktiviert ist, ist es nicht erforderlich, Benutzern Zugr
 
 Sie können SnapCenter-Benutzer oder -Gruppen ändern, um ihre Rollen und Assets zu ändern.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 Sie müssen als SnapCenter-Administrator angemeldet sein.
 
 *Schritte*

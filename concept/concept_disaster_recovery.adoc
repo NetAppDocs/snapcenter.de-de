@@ -1,7 +1,7 @@
 ---
 permalink: concept/concept_disaster_recovery.html 
 sidebar: sidebar 
-keywords:  
+keywords: Disaster Recovery 
 summary: Sie können den SnapCenter-Server bei einem Ausfall wie z. B. Ressourcenbeschädigung oder Serverabsturz mithilfe der SnapCenter Disaster Recovery-Funktion wiederherstellen. 
 ---
 = SnapCenter Disaster Recovery

@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/task_view_exchange_backups_in_the_topology_page.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter plug-in for Exchange Server 
 summary: Wenn Sie die Datensicherung vorbereiten, ist es Ihnen eventuell hilfreich, eine grafische Darstellung aller Backups auf den primären und sekundären Speichern anzuzeigen. 
 ---
 = Zeigen Sie Exchange-Backups auf der Seite Topologie an
@@ -13,8 +13,7 @@ summary: Wenn Sie die Datensicherung vorbereiten, ist es Ihnen eventuell hilfrei
 [role="lead"]
 Wenn Sie die Datensicherung vorbereiten, ist es Ihnen eventuell hilfreich, eine grafische Darstellung aller Backups auf den primären und sekundären Speichern anzuzeigen.
 
-*Über diese Aufgabe*
-
+.Über diese Aufgabe
 Auf der Seite Topology sehen Sie alle Backups, die für die ausgewählte Ressource oder Ressourcengruppe verfügbar sind. Sie können die Details zu diesen Backups anzeigen und sie zur Durchführung von Datensicherungsvorgängen auswählen.
 
 Mithilfe des folgenden Symbols in der Ansicht Kopien verwalten können Sie bestimmen, ob die Backups auf dem primären oder sekundären Speicher verfügbar sind (gespiegelte Kopien oder Vault-Kopien).
@@ -37,8 +36,7 @@ Wenn Sie beispielsweise 6 Backups mit einer Richtlinie für die Aufbewahrung von
 |===
 
 
-*Schritte*
-
+.Schritte
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
 . Wählen Sie auf der Seite Ressourcen die Datenbank, die Ressource oder die Ressourcengruppe aus der Dropdown-Liste *Ansicht* aus.
 . Wählen Sie die Ressource entweder in der Datenbank-Detailansicht oder in der Ansicht Ressourcengruppen-Details aus.

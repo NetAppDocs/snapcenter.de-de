@@ -1,7 +1,7 @@
 ---
 permalink: protect-scw/task_view_related_backups_and_clones_in_the_topology_page.html 
 sidebar: sidebar 
-keywords:  
+keywords: view backups, view clones 
 summary: Wenn Sie die Erstellung von Backups oder Klonen einer Ressource vorbereiten, können Sie eine grafische Darstellung aller Backups und Klone auf dem primären und sekundären Storage anzeigen. Auf der Seite Topology sehen Sie alle Backups und Klone, die für die ausgewählte Ressource oder Ressourcengruppe zur Verfügung stehen. Sie können die Details zu diesen Backups und Klonen anzeigen und diese dann zur Durchführung von Datensicherungsvorgängen auswählen. 
 ---
 = Sehen Sie sich zugehörige Backups und Klone auf der Seite Topologie an
@@ -13,8 +13,7 @@ summary: Wenn Sie die Erstellung von Backups oder Klonen einer Ressource vorbere
 [role="lead"]
 Wenn Sie die Erstellung von Backups oder Klonen einer Ressource vorbereiten, können Sie eine grafische Darstellung aller Backups und Klone auf dem primären und sekundären Storage anzeigen. Auf der Seite Topology sehen Sie alle Backups und Klone, die für die ausgewählte Ressource oder Ressourcengruppe zur Verfügung stehen. Sie können die Details zu diesen Backups und Klonen anzeigen und diese dann zur Durchführung von Datensicherungsvorgängen auswählen.
 
-*Über diese Aufgabe*
-
+.Über diese Aufgabe
 In der Ansicht Kopien managen können Sie die folgenden Symbole überprüfen, um festzustellen, ob die Backups und Klone auf dem primären oder sekundären Storage (Mirror-Kopien oder Vault-Kopien) verfügbar sind.
 
 * image:../media/topology_primary_storage.gif["Symbol für primären Speicher"] Zeigt die Anzahl der Backups und Klone an, die auf dem primären Speicher verfügbar sind.
@@ -34,8 +33,7 @@ NOTE: Klone eines Backups einer versionsflexiblen Spiegelung auf einem Volume vo
 
 NOTE: Klone eines Backups einer versionsflexiblen Spiegelung auf einem Volume vom Typ Mirror werden in der Topologieansicht angezeigt, aber die Anzahl der gespiegelten Backups in der Topologieansicht umfasst nicht das versionsflexible Backup.
 
-*Schritte*
-
+.Schritte
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
 . Wählen Sie auf der Seite Ressourcen entweder die Ressource oder Ressourcengruppe aus der Dropdown-Liste *Ansicht* aus.
 . Wählen Sie die Ressource entweder in der Ansicht „Ressourcendetails“ oder in der Ansicht „Ressourcengruppendetails“ aus.
@@ -67,9 +65,8 @@ Wenn Sie benutzerdefinierte SnapCenter-Plug-ins verwenden, können Sie die Backu
 ** Wenn Sie SnapCenter Plug-ins Package für Linux verwenden und das Backup mit Oracle Recovery Manager (RMAN) katalogisiert haben, können Sie diese katalogisierten Backups nicht umbenennen.
 
 
-. Wenn Sie einen Klon löschen möchten, wählen Sie den Klon aus der Tabelle aus, und klicken Sie auf image:../media/delete_icon.gif[""] Um den Klon zu löschen.
+. Wenn Sie einen Klon löschen möchten, wählen Sie den Klon aus der Tabelle aus, und klicken Sie auf image:../media/delete_icon.gif["Symbol Löschen"] Um den Klon zu löschen.
 
 
-*Beispiel für Backups und Klone auf dem primären Speicher*
-
+.Beispiel für Backups und Klone auf dem Primärspeicher
 image:../media/topology_backups_and_clones_primary_storage.gif["Topologieansicht von Backup und Klonen im primären Storage"]

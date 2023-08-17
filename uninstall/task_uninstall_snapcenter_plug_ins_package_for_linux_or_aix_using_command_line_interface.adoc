@@ -13,12 +13,10 @@ summary: Sie können das SnapCenter Plug-ins Package für Linux oder das SnapCen
 [role="lead"]
 Sie können das SnapCenter Plug-ins Package für Linux oder das SnapCenter Plug-ins Package für AIX über die Befehlszeilenschnittstelle deinstallieren.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 * Stellen Sie sicher, dass Sie die geplanten Jobs gelöscht haben
 * Stellen Sie sicher, dass alle laufenden Jobs abgeschlossen sind.
 
 
-*Schritt*
-
+.Schritt
 Führen Sie _/Custom_Location/NetApp/snapcenter/spl/Installation/Plugins/uninstall_ aus, um die Deinstallation zu starten.

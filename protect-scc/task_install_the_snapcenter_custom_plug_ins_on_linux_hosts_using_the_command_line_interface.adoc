@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_install_the_snapcenter_custom_plug_ins_on_linux_hosts_using_the_command_line_interface.html 
 sidebar: sidebar 
-keywords:  
+keywords: install, custom plug-in 
 summary: 'Sie sollten die benutzerdefinierten SnapCenter-Plug-ins über die SnapCenter-Benutzeroberfläche (UI) installieren. Wenn Ihre Umgebung die Remote-Installation des Plug-ins über die SnapCenter-Benutzeroberfläche nicht zulässt, können Sie das benutzerdefinierte Plug-in entweder im Konsolenmodus oder im Ruhemodus installieren, indem Sie die Befehlszeilenschnittstelle (CLI) verwenden.' 
 ---
 = Installieren Sie die benutzerdefinierten SnapCenter-Plug-ins auf Linux-Hosts über die Befehlszeilenschnittstelle
@@ -13,8 +13,7 @@ summary: 'Sie sollten die benutzerdefinierten SnapCenter-Plug-ins über die Snap
 [role="lead"]
 Sie sollten die benutzerdefinierten SnapCenter-Plug-ins über die SnapCenter-Benutzeroberfläche (UI) installieren. Wenn Ihre Umgebung die Remote-Installation des Plug-ins über die SnapCenter-Benutzeroberfläche nicht zulässt, können Sie die benutzerdefinierten Plug-ins entweder im Konsolenmodus oder im Ruhemodus mithilfe der Befehlszeilenschnittstelle (CLI) installieren.
 
-*Schritte*
-
+.Schritte
 . Kopieren Sie das SnapCenter Plug-ins Paket für die Linux Installationsdatei (snapcenter_linux_Host_Plugin.bin) von C:\ProgramData\NetApp\SnapCenter\Paket-Repository auf den Host, auf dem Sie die benutzerdefinierten Plug-ins installieren möchten.
 +
 Sie können von dem Host, auf dem der SnapCenter-Server installiert ist, auf diesen Pfad zugreifen.

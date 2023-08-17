@@ -1,7 +1,7 @@
 ---
 permalink: admin/concept_manage_hosts.html 
 sidebar: sidebar 
-keywords:  
+keywords: Manage hosts 
 summary: Sie können Hosts hinzufügen und SnapCenter-Plug-in-Pakete installieren, einen Verifizierungsserver hinzufügen, Hosts entfernen, Backup-Jobs migrieren und den Host aktualisieren, um Plug-in-Pakete zu aktualisieren oder neue Plug-in-Pakete hinzuzufügen. Abhängig vom verwendeten Plug-in können Sie auch Festplatten bereitstellen, SMB-Freigaben managen, Initiatorgruppen \\ managen, iSCSI-Sessions managen und Daten migrieren. 
 ---
 = Management von Hosts
@@ -244,7 +244,7 @@ Es kann jeweils nur ein Feld geändert werden.
 . Klicken Sie Auf *Absenden*.
 
 
-*Ergebnisse*
+*Ergebnis*
 
 Der Host wurde validiert und zum SnapCenter-Server hinzugefügt.
 
@@ -291,7 +291,7 @@ NOTE: Sie müssen den Plug-in-Dienst nicht zuerst beenden. Der Plug-in-Dienst ka
 
 
 
-*Ergebnisse*
+*Ergebnis*
 
 Nachdem Sie die Zeitpläne auf dem Host unterbrochen haben, wird auf der Seite Managed Hosts *suspended* im Feld Gesamtstatus des Hosts angezeigt.
 

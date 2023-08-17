@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/task_install_the_snapcenter_plug_in_for_exchange_silently_from_the_command_line.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter plug-in for Exchange Server 
 summary: Sie sollten Plug-in für Exchange über die Benutzeroberfläche von SnapCenter installieren. Wenn Sie jedoch aus irgendeinem Grund nicht in der Lage sind, das Installationsprogramm Plug-in for Exchange unbeaufsichtigt im Silent-Modus von der Windows-Befehlszeile aus auszuführen. 
 ---
 = Installieren Sie das SnapCenter Plug-in für Exchange im Hintergrund über die Befehlszeile
@@ -13,8 +13,7 @@ summary: Sie sollten Plug-in für Exchange über die Benutzeroberfläche von Sna
 [role="lead"]
 Sie sollten Plug-in für Exchange über die Benutzeroberfläche von SnapCenter installieren. Wenn Sie jedoch aus irgendeinem Grund nicht in der Lage sind, das Installationsprogramm Plug-in for Exchange unbeaufsichtigt im Silent-Modus von der Windows-Befehlszeile aus auszuführen.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 * Sie müssen Ihre Microsoft Exchange Server-Ressourcen gesichert haben.
 * Sie müssen die SnapCenter-Plug-in-Pakete installiert haben.
 * Vor der Installation müssen Sie die frühere Version des SnapCenter-Plug-ins für Microsoft SQL Server löschen.
@@ -23,8 +22,7 @@ Weitere Informationen finden Sie unter https://kb.netapp.com/Advice_and_Troubles
 
 
 
-*Schritte*
-
+.Schritte
 . Überprüfen Sie, ob der Ordner _C:\temp_ auf dem Plug-in-Host vorhanden ist und der angemeldete Benutzer vollständigen Zugriff darauf hat.
 . Laden Sie das SnapCenter Plug-in für Microsoft Windows von _C:\ProgramData\NetApp\SnapCenter\Paket_ Repository herunter.
 +

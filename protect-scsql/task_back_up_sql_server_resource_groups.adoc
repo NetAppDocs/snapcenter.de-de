@@ -36,7 +36,7 @@ Die Option *Verify* in der Richtlinie gilt nur für geplante Jobs.
 . Überwachen Sie den Vorgangsfortschritt, indem Sie *Monitor* > *Jobs* auswählen.
 
 
-.Was kommt als Nächstes?
+.Verwandte Informationen
 link:task_create_backup_policies_for_sql_server_databases.html["Erstellen von Backup-Richtlinien für SQL Server-Datenbanken"]
 
 link:task_create_resource_groups_and_attach_policies_for_sql_server.html["Erstellen von Ressourcengruppen und Anhängen von Richtlinien für SQL Server"]

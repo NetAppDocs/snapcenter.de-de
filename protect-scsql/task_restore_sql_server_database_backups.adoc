@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_restore_sql_server_database_backups.html 
 sidebar: sidebar 
-keywords:  
+keywords: restore operation 
 summary: Sie können SnapCenter verwenden, um gesicherte SQL Server-Datenbanken wiederherzustellen. Die Wiederherstellung der Datenbank ist ein mehrphasiger Prozess, der alle Daten- und Protokollseiten von einem bestimmten SQL Server-Backup in eine angegebene Datenbank kopiert. 
 ---
 = Stellen Sie Backups von SQL Server Datenbanken wieder her
@@ -13,8 +13,7 @@ summary: Sie können SnapCenter verwenden, um gesicherte SQL Server-Datenbanken 
 [role="lead"]
 Sie können SnapCenter verwenden, um gesicherte SQL Server-Datenbanken wiederherzustellen. Die Wiederherstellung der Datenbank ist ein mehrphasiger Prozess, der alle Daten- und Protokollseiten von einem bestimmten SQL Server-Backup in eine angegebene Datenbank kopiert.
 
-*Über diese Aufgabe*
-
+.Über diese Aufgabe
 * Sie können die gesicherten SQL Server Datenbanken auf einer anderen SQL Server-Instanz auf demselben Host wiederherstellen, auf dem das Backup erstellt wurde.
 +
 Sie können SnapCenter verwenden, um die gesicherten SQL Server Datenbanken auf einem anderen Pfad wiederherzustellen, sodass Sie keine Produktionsversion ersetzen.
@@ -36,8 +35,7 @@ Sie können die GET API verwenden, um den Wert der Taste anzuzeigen. SET-API wir
 * Die meisten Felder auf den Seiten des Assistenten Wiederherstellen sind selbsterklärend. In den folgenden Informationen werden die Felder beschrieben, für die Sie möglicherweise eine Anleitung benötigen.
 
 
-*Schritte*
-
+.Schritte
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
 . Wählen Sie auf der Seite Ressourcen die Option *Datenbank* oder *Ressourcengruppe* aus der Liste *Ansicht* aus.
 . Wählen Sie die Datenbank oder die Ressourcengruppe aus der Liste aus.
@@ -190,8 +188,7 @@ Außerdem müssen Sie die E-Mail-Adressen für Absender und Empfänger sowie den
 . Überwachen Sie den Wiederherstellungsprozess mithilfe der Seite *Monitor* > *Jobs*.
 
 
-*Weitere Informationen*
-
+.Verwandte Informationen
 link:task_restore_and_recover_resources_using_powershell_cmdlets_for_sql.html["Stellen Sie Ressourcen mithilfe von PowerShell cmdlets wieder her"]
 
 link:task_restore_a_sql_server_database_from_secondary_storage.html["Wiederherstellung einer SQL Server-Datenbank aus dem sekundären Storage"]

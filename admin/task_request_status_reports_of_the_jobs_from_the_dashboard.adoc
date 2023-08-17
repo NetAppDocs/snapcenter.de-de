@@ -1,7 +1,7 @@
 ---
 permalink: admin/task_request_status_reports_of_the_jobs_from_the_dashboard.html 
 sidebar: sidebar 
-keywords:  
+keywords: dashboard, snapcenter 
 summary: Sie können Berichte über Backup-, Wiederherstellungs- und Klonaufträge über die Dashboard-Seite anfordern. Dies ist nützlich, wenn Sie die Gesamtzahl der erfolgreichen oder fehlgeschlagenen Jobs in Ihrer SnapCenter-Umgebung ermitteln möchten. 
 ---
 = Statusberichte der Jobs über das Dashboard anfordern
@@ -29,6 +29,6 @@ Wenn Sie auf das Donut-Diagramm klicken, werden Sie von der Dashboard-Seite zur 
 . Klicken Sie oben auf der Monitor-Seite auf *Berichte*.
 
 
-*Ergebnisse*
+*Ergebnis*
 
 Der Bericht zeigt nur Informationen für den ausgewählten Job an. Sie können den Bericht prüfen oder auf Ihr lokales System herunterladen.

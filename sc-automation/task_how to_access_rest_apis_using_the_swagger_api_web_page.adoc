@@ -17,8 +17,7 @@ Sie sollten die Management-IP-Adresse oder den Domain-Namen des SnapCenter Serve
 
 Für die Ausführung des REST-API-Clients sind keine speziellen Berechtigungen erforderlich. Jeder Benutzer kann auf die Swagger Webseite zugreifen. Die entsprechenden Berechtigungen für die Objekte, auf die über DIE REST-API zugegriffen wird, basieren auf dem Benutzer, der das Token generiert, um sich bei DER REST-API anzumelden.
 
-*Schritte*
-
+.Schritte
 . Geben Sie in einem Browser die URL ein, um die Swagger Webseite im Format _\https://<SnapCenter_IP_address_or_name>:<SnapCenter_port>/swagger/_ aufzurufen.
 +
 

@@ -1,7 +1,7 @@
 ---
 permalink: admin/concept_overview_of_dashboard.html 
 sidebar: sidebar 
-keywords:  
+keywords: dashboard 
 summary: 'Im linken Navigationsbereich von SnapCenter bietet das Dashboard einen ersten Überblick über den Systemzustand, einschließlich aktueller Jobaktivitäten, Warnmeldungen, Sicherungszusammenfassungen, Storage-Effizienz und -Auslastung, Status von SnapCenter-Jobs \ (Backup, Klonen, Wiederherstellung\), Konfigurationsstatus für Standalone- und Windows-Cluster-Hosts, Anzahl der von SnapCenter gemanagten Storage Virtual Machines (SVMs) sowie Lizenzkapazität.' 
 ---
 = Überblick über das Dashboard

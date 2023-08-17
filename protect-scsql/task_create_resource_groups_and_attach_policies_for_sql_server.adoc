@@ -15,8 +15,7 @@ Eine Ressourcengruppe ist ein Container, dem Sie Ressourcen hinzufügen, die Sie
 
 Sie können Ressourcen einzeln schützen, ohne eine neue Ressourcengruppe zu erstellen. Sie können Backups auf der geschützten Ressource erstellen.
 
-*Schritte*
-
+.Schritte
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
 . Wählen Sie auf der Seite Ressourcen in der Liste *Ansicht* die Option *Datenbank* aus.
 +
@@ -143,6 +142,5 @@ NOTE: Für eine E-Mail-Benachrichtigung müssen Sie die SMTP-Serverdetails entwe
 . Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
 
 
-*Weitere Informationen*
-
+.Verwandte Informationen
 link:task_create_backup_policies_for_sql_server_databases.html["Erstellen von Backup-Richtlinien für SQL Server-Datenbanken"]

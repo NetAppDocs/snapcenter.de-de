@@ -13,8 +13,7 @@ summary: Wenn eine Datenbank nicht Teil einer Ressourcengruppe ist, können Sie 
 [role="lead"]
 Wenn eine Datenbank nicht Teil einer Ressourcengruppe ist, können Sie die Datenbank oder die Datenbankverfügbarkeitsgruppe auf der Seite Ressourcen sichern.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 * Sie müssen eine Sicherungsrichtlinie erstellt haben.
 * Sie müssen das Aggregat, das vom Backup-Vorgang verwendet wird, der SVM zugewiesen haben, die von der Datenbank verwendet wird.
 * Wenn Sie eine Ressource mit einer SnapMirror Beziehung mit einem sekundären Storage sichern möchten, sollte die dem Storage-Benutzer zugewiesene Rolle die Berechtigung „`snapmirror all`“ enthalten. Wenn Sie jedoch die Rolle „`vsadmin`“ verwenden, ist die Berechtigung „`snapmirror all`“ nicht erforderlich.
@@ -27,8 +26,7 @@ Wenn eine Datenbank nicht Teil einer Ressourcengruppe ist, können Sie die Daten
 |===
 
 
-*Schritte*
-
+.Schritte
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das *Microsoft Exchange Server Plug-in* aus der Liste aus.
 . Wählen Sie auf der Seite Ressourcen entweder *Datenbank* oder *Datenbank-Verfügbarkeitsgruppe* aus der Liste *Ansicht* aus.
 +

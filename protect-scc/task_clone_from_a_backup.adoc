@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_clone_from_a_backup.html 
 sidebar: sidebar 
-keywords:  
+keywords: clone 
 summary: Sie können SnapCenter zum Klonen einer Backup verwenden. Sie können von primärem oder sekundärem Backup klonen. Die Funktionen der Klonvorgänge hängen vom verwendeten Plug-in ab. 
 ---
 = Klonen aus einem Backup
@@ -13,17 +13,15 @@ summary: Sie können SnapCenter zum Klonen einer Backup verwenden. Sie können v
 [role="lead"]
 Sie können SnapCenter zum Klonen einer Backup verwenden. Sie können von primärem oder sekundärem Backup klonen. Die Funktionen der Klonvorgänge hängen vom verwendeten Plug-in ab.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 * Sie müssen die Ressourcen oder Ressourcengruppe gesichert haben.
 * Bei dem Standardklonvorgang werden nur Storage-Objekte geklont. Klonvorgänge auf Applikationsebene können nur durchgeführt werden, wenn das benutzerdefinierte Plug-in diese Funktion bietet.
 * Sie sollten sicherstellen, dass die Aggregate, die die Volumes hosten, sich in der Liste der zugewiesenen Aggregate der Storage Virtual Machine (SVM) befinden.
 
 
-*Schritte*
-
+.Schritte
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
-. Filtern Sie auf der Seite Ressourcen die Ressourcen aus der Dropdown-Liste *Ansicht* nach Ressourcentyp.
+. Filtern Sie auf der Seite *Ressourcen* die Ressourcen aus der Dropdown-Liste *Ansicht* nach Ressourcentyp.
 +
 Die Ressourcen werden zusammen mit Informationen wie Typ, Host- oder Cluster-Name, zugeordnete Ressourcengruppen und -Richtlinien sowie der Status angezeigt.
 
@@ -64,7 +62,7 @@ Beispiel: rs1_Clone. Wenn Sie auf demselben Host wie die Originalressource klone
 +
 Wenn die ausgewählte Ressource eine LUN ist und wenn Sie über ein sekundäres Backup klonen, werden die Ziel-Volumes aufgelistet. Es kann mehrere Ziel-Volumes vorhanden sein.
 
-. Führen Sie auf der Seite Einstellungen folgende Schritte aus:
+. Führen Sie auf der Seite *Einstellungen* folgende Schritte aus:
 +
 |===
 | Für dieses Feld... | Tun Sie das... 
@@ -99,7 +97,7 @@ Mount-Befehl für ein Volume oder qtree auf einem Linux-Rechner: Mount<VSERVER_N
 
 
 
-. Wählen Sie auf der Benachrichtigungsseite aus der Dropdown-Liste *E-Mail-Präferenz* die Szenarien aus, in denen Sie die E-Mails versenden möchten.
+. Wählen Sie auf der Seite *Benachrichtigung* aus der Dropdown-Liste *E-Mail-Präferenz* die Szenarien aus, in denen Sie die E-Mails versenden möchten.
 +
 Außerdem müssen Sie die E-Mail-Adressen für Absender und Empfänger sowie den Betreff der E-Mail angeben.
 

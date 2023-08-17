@@ -1,7 +1,7 @@
 ---
 permalink: admin/concept_monitor_jobs_schedules_events_and_logs.html 
 sidebar: sidebar 
-keywords:  
+keywords: Monitor jobs, schedules, events, logs 
 summary: Sie können den Fortschritt Ihrer Jobs überwachen, Informationen zu geplanten Jobs abrufen und Ereignisse und Protokolle auf der Seite Überwachen überprüfen. 
 ---
 = Überwachen von Jobs, Zeitplänen, Ereignissen und Protokollen
@@ -135,6 +135,5 @@ Sie müssen den Host nicht in den Wartungsmodus versetzen, um Jobs zu entfernen.
 . Überprüfen Sie auf der Seite Jobs den Status des Jobs.
 
 
-*Weitere Informationen*
-
+.Verwandte Informationen
 Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ können Sie auch auf die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["SnapCenter Software Cmdlet Referenzhandbuch"^].

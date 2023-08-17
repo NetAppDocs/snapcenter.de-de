@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/concept_requirements_for_restoring_an_exchange_database.html 
 sidebar: sidebar 
-keywords:  
+keywords: restoring an Exchange database 
 summary: Bevor Sie eine Exchange Server-Datenbank aus einem SnapCenter Plug-in für Microsoft Exchange Server-Backup wiederherstellen, müssen Sie sicherstellen, dass mehrere Anforderungen erfüllt sind. 
 ---
 = Anforderungen für die Wiederherstellung einer Exchange-Datenbank

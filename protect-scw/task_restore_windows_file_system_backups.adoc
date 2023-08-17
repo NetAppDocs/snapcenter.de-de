@@ -13,8 +13,7 @@ summary: Sie können SnapCenter verwenden, um Backups von Dateisystemen wiederhe
 [role="lead"]
 Sie können SnapCenter verwenden, um Backups von Dateisystemen wiederherzustellen. Die Wiederherstellung des Dateisystems ist ein mehrphasiger Prozess, bei dem alle Daten von einem angegebenen Backup an den ursprünglichen Speicherort des Filesystems kopiert werden.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 * Sie müssen das Dateisystem gesichert haben.
 * Wenn ein geplanter Vorgang, z. B. ein Backup-Vorgang, derzeit für ein Dateisystem ausgeführt wird, muss dieser Vorgang abgebrochen werden, bevor Sie einen Wiederherstellungsvorgang starten können.
 * Sie können ein Dateisystem-Backup nur am ursprünglichen Speicherort, nicht in einem alternativen Pfad wiederherstellen.
@@ -25,8 +24,7 @@ Sie können keine einzelne Datei aus einem Backup wiederherstellen, da das wiede
 * SnapCenter kann Filesysteme in einem Windows Cluster wiederherstellen, ohne die Cluster-Gruppe offline zu schalten.
 
 
-*Über diese Aufgabe*
-
+.Über diese Aufgabe
 * DER SCRIPTS_PATH wird mit dem PredefinedWindowsScriptDirectory-Schlüssel definiert, der sich in der SMCoreServiceHost.exe.Config-Datei des Plug-in-Hosts befindet.
 +
 Bei Bedarf können Sie diesen Pfad ändern und den SMCore Service neu starten. Es wird empfohlen, den Standardpfad für die Sicherheit zu verwenden.
@@ -39,8 +37,7 @@ Sie können die GET API verwenden, um den Wert der Taste anzuzeigen. SET-API wir
 
 
 
-*Schritte*
-
+.Schritte
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
 . Um die Liste der Ressourcen zu filtern, wählen Sie die Optionen Dateisystem und Ressourcengruppen aus.
 . Wählen Sie eine Ressourcengruppe aus der Liste aus, und klicken Sie dann auf *Wiederherstellen*.

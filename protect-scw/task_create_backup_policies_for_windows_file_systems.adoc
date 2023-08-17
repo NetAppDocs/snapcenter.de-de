@@ -1,7 +1,7 @@
 ---
 permalink: protect-scw/task_create_backup_policies_for_windows_file_systems.html 
 sidebar: sidebar 
-keywords:  
+keywords: backup policy 
 summary: Sie können eine neue Sicherungsrichtlinie für Ressourcen erstellen, bevor Sie SnapCenter zum Sichern von Windows-Dateisystemen verwenden, oder Sie können eine neue Backup-Richtlinie zum Zeitpunkt der Erstellung einer Ressourcengruppen oder beim Backup einer Ressource erstellen. 
 ---
 = Erstellen von Backup-Richtlinien für Windows Filesysteme
@@ -13,8 +13,7 @@ summary: Sie können eine neue Sicherungsrichtlinie für Ressourcen erstellen, b
 [role="lead"]
 Sie können eine neue Sicherungsrichtlinie für Ressourcen erstellen, bevor Sie SnapCenter zum Sichern von Windows-Dateisystemen verwenden, oder Sie können eine neue Backup-Richtlinie zum Zeitpunkt der Erstellung einer Ressourcengruppen oder beim Backup einer Ressource erstellen.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 * Sie müssen Ihre Backup-Strategie definiert haben. link:task_define_a_backup_strategy_for_windows_file_systems.html["Weitere Informationen ."^]
 * Sie müssen auf die Datensicherung vorbereitet sein.
 +
@@ -27,8 +26,7 @@ Der Standardwert ist false
 
 
 
-*Über diese Aufgabe*
-
+.Über diese Aufgabe
 * DER SCRIPTS_PATH wird mit dem PredefinedWindowsScriptDirectory-Schlüssel definiert, der sich in der SMCoreServiceHost.exe.Config-Datei des Plug-in-Hosts befindet.
 +
 Bei Bedarf können Sie diesen Pfad ändern und den SMCore Service neu starten. Es wird empfohlen, den Standardpfad für die Sicherheit zu verwenden.
@@ -41,8 +39,7 @@ Sie können die GET API verwenden, um den Wert der Taste anzuzeigen. SET-API wir
 
 
 
-*Schritte*
-
+.Schritte
 . Klicken Sie im linken Navigationsbereich auf *Einstellungen*.
 . Klicken Sie auf der Seite Einstellungen auf *Richtlinien*.
 . Um zu bestimmen, ob Sie eine vorhandene Richtlinie verwenden können, wählen Sie den Richtliniennamen aus und klicken Sie dann auf *Details*.

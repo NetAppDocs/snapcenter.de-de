@@ -1,7 +1,7 @@
 ---
 permalink: admin/concept_manage_the_snapcenter_server_repository.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter Server 
 summary: Informationen zu verschiedenen von SnapCenter durchgeführten Vorgängen werden im Datenbank-Repository des SnapCenter Servers gespeichert. Sie müssen Backups des Repositorys erstellen, um den SnapCenter-Server vor Datenverlust zu schützen. 
 ---
 = Verwalten des SnapCenter-Server-Repositorys
@@ -139,8 +139,7 @@ Das Datenverzeichnis finden Sie in der Regel unter C:\ProgramData\MySQL\MySQL Se
 
 Das MySQL Server Repository-Datenbankkennwort wird bei der Installation des SnapCenter Servers von SnapCenter 4.2 automatisch generiert. Dieses automatisch generierte Passwort ist dem SnapCenter-Benutzer an keinem Punkt bekannt. Wenn Sie auf die Repository-Datenbank zugreifen möchten, sollten Sie das Passwort zurücksetzen.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 Sie sollten über die SnapCenter-Administratorrechte verfügen, um das Kennwort zurückzusetzen.
 
 *Schritte*
@@ -163,6 +162,5 @@ Successfully updated the MySQL server password.
 ----
 
 
-*Weitere Informationen*
-
+.Verwandte Informationen
 Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ können Sie auch auf die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["SnapCenter Software Cmdlet Referenzhandbuch"^].

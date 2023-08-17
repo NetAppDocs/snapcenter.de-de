@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/reference_restore_sql_server_resources.html 
 sidebar: sidebar 
-keywords:  
+keywords: Restore workflow 
 summary: Sie können SnapCenter verwenden, um SQL Server Datenbanken wiederherzustellen, indem Sie die Daten von einem oder mehreren Backups auf Ihr aktives File-System wiederherstellen und dann die Datenbank wiederherstellen. Sie können auch Datenbanken wiederherstellen, die sich in Verfügbarkeitsgruppen befinden, und dann die wiederhergestellten Datenbanken der Verfügbarkeitsgruppe hinzufügen. Vor dem Wiederherstellen einer SQL Server-Datenbank müssen Sie mehrere vorbereitende Aufgaben ausführen. 
 ---
 = Wiederherstellung des Workflows

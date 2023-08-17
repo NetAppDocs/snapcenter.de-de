@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/reference_sources_and_destinations_for_a_restore_operation.html 
 sidebar: sidebar 
-keywords:  
+keywords: restore operation 
 summary: Sie können eine SQL Server Datenbank aus einer Backup-Kopie auf einem primären oder sekundären Storage wiederherstellen. Sie können die Datenbank zusätzlich zum ursprünglichen Speicherort auch an verschiedenen Zielen wiederherstellen, sodass Sie das Ziel auswählen können, das Ihre Anforderungen unterstützt. 
 ---
 = Quellen und Ziele für einen Wiederherstellungsvorgang

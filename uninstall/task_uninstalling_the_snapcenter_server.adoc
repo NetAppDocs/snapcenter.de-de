@@ -13,8 +13,7 @@ summary: Wenn Sie den SnapCenter-Server nicht mehr für die Verwaltung von Daten
 [role="lead"]
 Wenn Sie den SnapCenter-Server nicht mehr für die Verwaltung von Datensicherungsaufgaben verwenden möchten, können Sie SnapCenter Server mit der Systemsteuerung Programme und Funktionen des SnapCenter-Servers deinstallieren. Durch die Deinstallation des SnapCenter Servers werden alle Komponenten entfernt.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 * Stellen Sie sicher, dass mindestens 2 GB freier Speicherplatz auf dem Laufwerk vorhanden ist, auf dem der SnapCenter-Server installiert ist.
 * Stellen Sie sicher, dass die Domäne, in der der SnapCenter-Server installiert ist, nicht entfernt wird.
 +
@@ -23,8 +22,7 @@ Wenn Sie die Domäne entfernen, in der der SnapCenter-Server installiert wurde, 
 * Sie sollten die Repository-Datenbank gesichert haben, da die Repository-Datenbank bereinigt und deinstalliert wird.
 
 
-*Schritte*
-
+.Schritte
 . Wechseln Sie auf dem SnapCenter-Server-Host zur Systemsteuerung.
 . Stellen Sie sicher, dass Sie sich in der Ansicht *Kategorie* befinden.
 . Klicken Sie unter Programme auf *Programm deinstallieren*.

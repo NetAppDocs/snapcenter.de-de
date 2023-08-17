@@ -13,15 +13,13 @@ summary: Ressourcen sind die Datenbanken, Exchange Database Availability Groups,
 [role="lead"]
 Ressourcen sind die Datenbanken, Exchange Database Availability Groups, die von den von Ihnen installierten Plug-ins verwaltet werden. Sie können diese Ressourcen zu Ressourcengruppen hinzufügen, sodass Sie Datensicherungsjobs ausführen können. Zunächst müssen Sie jedoch ermitteln, welche Ressourcen Sie zur Verfügung haben. Das ermitteln der verfügbaren Ressourcen überprüft außerdem, ob die Plug-in-Installation erfolgreich abgeschlossen wurde.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 * Sie müssen bereits Aufgaben abgeschlossen haben, wie z. B. das Installieren von SnapCenter-Servern, das Hinzufügen von Hosts, das Erstellen von Speichersystemverbindungen, das Hinzufügen von Anmeldeinformationen und das Installieren des Plug-ins für Exchange.
 * Um die Funktionen der Single Mailbox Recovery Software nutzen zu können, müssen Sie Ihre aktive Datenbank auf dem Exchange Server befinden, wo die Single Mailbox Recovery Software installiert ist.
 * Wenn Datenbanken auf VMware RDM LUNs vorhanden sind, müssen Sie das SnapCenter Plug-in für VMware vSphere implementieren und das Plug-in bei SnapCenter registrieren. Der https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_get_started_overview.html["Dokumentation zum SnapCenter Plug-in für VMware vSphere"] Bietet weitere Informationen.
 
 
-*Über diese Aufgabe*
-
+.Über diese Aufgabe
 * Datenbanken können nicht gesichert werden, wenn die Option *Gesamtstatus* auf der Seite Details auf nicht verfügbar für Backups eingestellt ist. Die Option *Gesamtstatus* ist für die Sicherung auf nicht verfügbar eingestellt, wenn eine der folgenden Optionen zutrifft:
 +
 ** Datenbanken sind nicht auf einer NetApp LUN.
@@ -34,15 +32,14 @@ Datenbanken befinden sich nicht im normalen Zustand, wenn sie sich im Mount-, Un
 * Wenn Sie über eine Datenbankverfügbarkeitsgruppe (DAG) verfügen, können Sie alle Datenbanken in der Gruppe sichern, indem Sie den Sicherungsauftrag von der DAG ausführen.
 
 
-*Schritte*
-
+.Schritte
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann in der Dropdown-Liste Plug-ins in der oberen linken Ecke der Seite Ressourcen * Microsoft Exchange Server* aus.
 . Wählen Sie auf der Seite Ressourcen in der Dropdown-Liste *Ansicht* die Option *Datenbank*, oder *Database Availability Group* oder *Ressourcengruppe* aus.
 +
 Alle Datenbanken und DAGs werden mit ihren DAG- oder Hostnamen im FQDN-Format angezeigt, sodass Sie zwischen mehreren Datenbanken unterscheiden können.
 
 +
-Klicken Sie Auf image:../media/filter_icon.png[""] Und wählen Sie den Hostnamen und den Exchange Server aus, um die Ressourcen zu filtern. Sie können dann auf klicken image:../media/filter_icon.png[""] Um den Filterbereich zu schließen.
+Klicken Sie Auf image:../media/filter_icon.png["Filtersymbol"] Und wählen Sie den Hostnamen und den Exchange Server aus, um die Ressourcen zu filtern. Sie können dann auf klicken image:../media/filter_icon.png["Filtersymbol"] Um den Filterbereich zu schließen.
 
 . Klicken Sie Auf *Ressourcen Aktualisieren*.
 +

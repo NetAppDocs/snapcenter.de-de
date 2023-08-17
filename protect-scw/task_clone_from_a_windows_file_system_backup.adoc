@@ -13,8 +13,7 @@ summary: Sie können SnapCenter zum Klonen eines Windows Filesystem-Backups verw
 [role="lead"]
 Sie können SnapCenter zum Klonen eines Windows Filesystem-Backups verwenden. Wenn Sie eine Kopie einer einzelnen Datei wünschen, die versehentlich gelöscht oder geändert wurde, können Sie ein Backup klonen und auf diese Datei im Klon zugreifen.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 * Sie sollten auf die Datensicherung vorbereitet sein, indem Sie Aufgaben wie das Hinzufügen von Hosts, die Identifizierung von Ressourcen und das Erstellen von SVM-Verbindungen (Storage Virtual Machine) abschließen.
 * Sie sollten eine Sicherung des Dateisystems haben.
 * Sie sollten sicherstellen, dass die Aggregate, die die Volumes hosten, sich in der Liste der zugewiesenen Aggregate der Storage Virtual Machine (SVM) befinden.
@@ -28,8 +27,7 @@ Sie können SnapCenter zum Klonen eines Windows Filesystem-Backups verwenden. We
 * Sie können nicht über mehrere Umgebungen hinweg klonen. Zum Beispiel Klonen von einer physischen Festplatte auf eine virtuelle Festplatte oder umgekehrt.
 
 
-*Über diese Aufgabe*
-
+.Über diese Aufgabe
 * DER SCRIPTS_PATH wird mit dem PredefinedWindowsScriptDirectory-Schlüssel definiert, der sich in der SMCoreServiceHost.exe.Config-Datei des Plug-in-Hosts befindet.
 +
 Bei Bedarf können Sie diesen Pfad ändern und den SMCore Service neu starten. Es wird empfohlen, den Standardpfad für die Sicherheit zu verwenden.
@@ -42,8 +40,7 @@ Sie können die GET API verwenden, um den Wert der Taste anzuzeigen. SET-API wir
 
 
 
-*Schritte*
-
+.Schritte
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
 . Wählen Sie auf der Seite Ressourcen die Option *Dateisysteme* aus der Liste aus.
 . Wählen Sie den Host aus.

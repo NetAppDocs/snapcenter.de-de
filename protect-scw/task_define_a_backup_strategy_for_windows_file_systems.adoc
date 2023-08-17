@@ -1,7 +1,7 @@
 ---
 permalink: protect-scw/task_define_a_backup_strategy_for_windows_file_systems.html 
 sidebar: sidebar 
-keywords:  
+keywords: backup strategy 
 summary: 'Wenn Sie eine Backup-Strategie definieren, bevor Sie Ihre Backups erstellen, erhalten Sie die Backups, die Sie benötigen, um Ihre File-Systeme erfolgreich wiederherzustellen oder zu klonen. Ihr Service Level Agreement (SLA), Recovery Time Objective (RTO) und Recovery Point Objective (RPO) bestimmen Ihre Backup-Strategie weitestgehend.' 
 ---
 = Definieren einer Backup-Strategie für Windows File-Systeme

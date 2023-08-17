@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_migrate_resources_to_netapp_storage.html 
 sidebar: sidebar 
-keywords:  
+keywords: migrate resources 
 summary: 'Nachdem Sie Ihr NetApp Storage-System mit dem SnapCenter Plug-in für Microsoft Windows bereitgestellt haben, können Sie Ihre Ressourcen zum NetApp Storage-System oder von einer NetApp LUN zu einer anderen NetApp LUN migrieren. Dabei stehen Ihnen entweder die SnapCenter Graphical User Interface \ (GUI\) oder die PowerShell Commandlets zur Verfügung.' 
 ---
 = Migrieren von Ressourcen auf ein NetApp Storage-System
@@ -13,16 +13,14 @@ summary: 'Nachdem Sie Ihr NetApp Storage-System mit dem SnapCenter Plug-in für 
 [role="lead"]
 Nachdem Sie Ihr NetApp Storage-System mit dem SnapCenter Plug-in für Microsoft Windows bereitgestellt haben, können Sie Ihre Ressourcen auf das NetApp Storage-System oder von einer NetApp LUN zu einer anderen NetApp LUN migrieren. Hierzu stehen entweder die SnapCenter Graphical User Interface (GUI) oder die PowerShell Commandlets zur Verfügung.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 * Sie müssen dem SnapCenter-Server Storage-Systeme hinzugefügt haben.
 * Sie müssen die SQL Server-Ressourcen aktualisiert (erkannt) haben.
 
 
 Die meisten Felder auf diesen Assistentenseiten sind selbsterklärend. In den folgenden Informationen werden einige der Felder beschrieben, für die Sie möglicherweise eine Anleitung benötigen.
 
-*Schritte*
-
+.Schritte
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
 . Wählen Sie auf der Seite Ressourcen in der Dropdown-Liste *Ansicht* die Option *Datenbank* oder *Instanz* aus.
 . Wählen Sie entweder die Datenbank oder die Instanz aus der Liste aus und klicken Sie auf *Migrieren*.

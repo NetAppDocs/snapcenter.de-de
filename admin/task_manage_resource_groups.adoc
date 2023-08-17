@@ -1,7 +1,7 @@
 ---
 permalink: admin/task_manage_resource_groups.html 
 sidebar: sidebar 
-keywords:  
+keywords: Manage resource groups 
 summary: Sie können verschiedene Vorgänge an Ressourcengruppen ausführen. 
 ---
 = Verwalten von Ressourcengruppen

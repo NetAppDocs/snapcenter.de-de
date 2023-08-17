@@ -13,7 +13,7 @@ summary: Mit SnapCenter können Daten von einem oder mehreren Backups wiederherg
 [role="lead"]
 Mit SnapCenter können Daten von einem oder mehreren Backups wiederhergestellt werden.
 
-.Was Sie benötigen
+.Bevor Sie beginnen
 * Sie müssen die Ressource oder Ressourcengruppen gesichert haben.
 * Sie müssen einen Backup-Vorgang abgebrochen haben, der derzeit für die Ressource oder Ressourcengruppe ausgeführt wird, die Sie wiederherstellen möchten.
 * Für Befehle vor der Wiederherstellung, nach der Wiederherstellung, nach dem Einhängen und vor dem unmounten sollten Sie überprüfen, ob die Befehle in der Befehlsliste auf dem Plug-in-Host aus den folgenden Pfaden vorhanden sind:

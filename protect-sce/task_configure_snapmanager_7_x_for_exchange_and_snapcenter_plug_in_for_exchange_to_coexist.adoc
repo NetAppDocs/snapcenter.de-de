@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/task_configure_snapmanager_7_x_for_exchange_and_snapcenter_plug_in_for_exchange_to_coexist.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter plug-in for Exchange Server 
 summary: Damit das SnapCenter Plug-in für Microsoft Exchange Server gemeinsam mit SnapManager für Microsoft Exchange Server eingesetzt werden kann, müssen Sie das SnapCenter Plug-in für Microsoft Exchange Server auf demselben Exchange Server installieren, auf dem SnapManager für Microsoft Exchange Server installiert ist, indem Sie die Zeitpläne für SnapManager für Exchange deaktivieren. Und neue Zeitpläne und Backups mit dem SnapCenter Plug-in für Microsoft Exchange Server konfigurieren. 
 ---
 = Konfigurieren Sie SnapManager 7.x für Exchange und SnapCenter, um koexistieren zu können
@@ -13,8 +13,7 @@ summary: Damit das SnapCenter Plug-in für Microsoft Exchange Server gemeinsam m
 [role="lead"]
 Damit das SnapCenter Plug-in für Microsoft Exchange Server gemeinsam mit SnapManager für Microsoft Exchange Server eingesetzt werden kann, müssen Sie das SnapCenter Plug-in für Microsoft Exchange Server auf demselben Exchange Server installieren, auf dem SnapManager für Microsoft Exchange Server installiert ist, indem Sie die Zeitpläne für SnapManager für Exchange deaktivieren. Und neue Zeitpläne und Backups mit dem SnapCenter Plug-in für Microsoft Exchange Server konfigurieren.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 * SnapManager für Microsoft Exchange Server und SnapDrive für Windows sind bereits installiert und Backups von SnapManager für Microsoft Exchange Server sind im System und im SnapInfo Verzeichnis vorhanden.
 * Sie sollten die von SnapManager für Microsoft Exchange Server erstellten Backups gelöscht oder zurückgewonnen haben, die Sie nicht mehr benötigen.
 * Sie sollten alle Zeitpläne ausgesetzt oder gelöscht haben, die von SnapManager für Microsoft Exchange Server aus dem Windows-Scheduler erstellt wurden.
@@ -28,8 +27,7 @@ Wenn Sie SnapManager für Microsoft Exchange Server nach der Installation des Sn
 
 
 
-*Schritte*
-
+.Schritte
 . Bestimmen Sie mithilfe von PowerShell auf allen DAG-Knoten, ob der SnapDrive für Windows VSS Hardware Provider registriert ist: _Vssadmin list Providers_
 +
 [listing]

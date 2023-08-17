@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/task_create_backup_policies_for_exchange_server_databases.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter plug-in for Exchange Server 
 summary: Sie können eine Backup-Richtlinie für die Exchange-Ressourcen oder für die Ressourcengruppen erstellen, bevor Sie SnapCenter zum Sichern von Microsoft Exchange Server-Ressourcen verwenden. Alternativ können Sie beim Erstellen einer Ressourcengruppen oder beim Backup einer einzelnen Ressource eine Backup-Richtlinie erstellen. 
 ---
 = Erstellen von Backup-Richtlinien für Exchange Server-Datenbanken
@@ -13,8 +13,7 @@ summary: Sie können eine Backup-Richtlinie für die Exchange-Ressourcen oder f�
 [role="lead"]
 Sie können eine Backup-Richtlinie für die Exchange-Ressourcen oder für die Ressourcengruppen erstellen, bevor Sie SnapCenter zum Sichern von Microsoft Exchange Server-Ressourcen verwenden. Alternativ können Sie beim Erstellen einer Ressourcengruppen oder beim Backup einer einzelnen Ressource eine Backup-Richtlinie erstellen.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 * Sie müssen Ihre Datensicherungsstrategie definiert haben.
 +
 Weitere Informationen finden Sie in den Informationen zur Definition einer Datensicherungsstrategie für Exchange Datenbanken.
@@ -28,8 +27,7 @@ Der Standardwert ist false
 
 
 
-*Über diese Aufgabe*
-
+.Über diese Aufgabe
 * Eine Backup-Richtlinie ist eine Reihe von Regeln, die festlegen, wie Backups gemanagt und aufbewahrt werden und wie oft die Ressourcen- oder Ressourcengruppe gesichert wird. Außerdem können Sie Skripteinstellungen festlegen. Durch das Festlegen von Optionen in einer Richtlinie wird Zeit eingespart, wenn die Richtlinie für eine andere Ressourcengruppe wiederverwendet werden soll.
 * Eine vollständige Backup-Aufbewahrung ist spezifisch für eine bestimmte Richtlinie. Eine Datenbank oder Ressource, die Richtlinien A mit einer vollständigen Backup-Aufbewahrung von 4 verwendet, behält 4 volle Backups bei und hat keine Auswirkungen auf Richtlinie B für die gleiche Datenbank oder Ressource, die möglicherweise eine Aufbewahrung von 3 haben, um 3 vollständige Backups aufzubewahren.
 * Die Backup-Aufbewahrung von Protokollen ist über alle Richtlinien hinweg wirksam und wird für alle Backup-Protokollierung einer Datenbank oder Ressource angewendet. Wenn ein vollständiges Backup mit Richtlinie B durchgeführt wird, wirkt sich die Einstellung für die Protokollaufbewahrung auf die von Richtlinie A erstellten Protokoll-Backups in derselben Datenbank oder Ressource aus. Ebenso wirkt sich die Einstellung für die Protokollaufbewahrung für Policy A auf die von Richtlinie B erstellten Protokoll-Backups in derselben Datenbank aus.
@@ -50,8 +48,7 @@ Sie können die GET API verwenden, um den Wert der Taste anzuzeigen. SET-API wir
 
 | *Best Practice:* Es ist am besten, dass Sie die sekundäre Aufbewahrungsrichtlinie auf der Grundlage der Anzahl der vollständigen und Log-Backups insgesamt konfigurieren, die Sie behalten möchten. Wenn Sie sekundäre Aufbewahrungsrichtlinien konfigurieren, sollten Sie bedenken, dass bei Datenbanken und Protokollen, die in verschiedenen Volumes vorhanden sind, jedes Backup drei Snapshot Kopien haben kann. Wenn sich Datenbanken und Protokolle in demselben Volume befinden, kann jedes Backup zwei Snapshot Kopien haben. 
 |===
-*Schritte*
-
+.Schritte
 . Klicken Sie im linken Navigationsbereich auf *Einstellungen*.
 . Klicken Sie auf der Seite Einstellungen auf *Richtlinien*.
 . Klicken Sie Auf *Neu*.

@@ -13,12 +13,10 @@ summary: 'Sie können das SnapCenter-Plug-in für Microsoft SQL Server auf mehre
 [role="lead"]
 Sie können das SnapCenter-Plug-in für Microsoft SQL Server auf mehreren Hosts gleichzeitig installieren, indem Sie das Cmdlet "Install-SmHostPackage PowerShell" verwenden.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 Sie müssen sich bei SnapCenter als Domänenbenutzer mit lokalen Administratorrechten auf jedem Host, auf dem Sie das Plug-in-Paket installieren möchten, angemeldet haben.
 
-*Schritte*
-
+.Schritte
 . Starten Sie PowerShell.
 . Erstellen Sie auf dem SnapCenter-Server-Host eine Sitzung mit dem Cmdlet "Open-SmConnection" und geben Sie dann Ihre Anmeldeinformationen ein.
 . Installieren Sie das SnapCenter-Plug-in für Microsoft SQL Server auf mehreren Remote-Hosts mit dem Cmdlet "Install-SmHostPackage" und den erforderlichen Parametern.

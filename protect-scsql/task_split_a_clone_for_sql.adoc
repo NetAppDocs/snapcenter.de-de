@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_split_a_clone_for_sql.html 
 sidebar: sidebar 
-keywords:  
+keywords: split clone 
 summary: Sie können SnapCenter verwenden, um eine geklonte Ressource von der übergeordneten Ressource zu trennen. Der geteilte Klon ist unabhängig von der übergeordneten Ressource. 
 ---
 = Teilen Sie einen Klon auf
@@ -13,8 +13,7 @@ summary: Sie können SnapCenter verwenden, um eine geklonte Ressource von der ü
 [role="lead"]
 Sie können SnapCenter verwenden, um eine geklonte Ressource von der übergeordneten Ressource zu trennen. Der geteilte Klon ist unabhängig von der übergeordneten Ressource.
 
-*Über diese Aufgabe*
-
+.Über diese Aufgabe
 * Sie können den Clone-Split-Vorgang nicht für einen Zwischenkon ausführen.
 +
 Wenn Sie beispielsweise Klon1 aus einem Datenbank-Backup erstellen, können Sie eine Sicherung von Klon1 erstellen und dann dieses Backup klonen (Klon2). Nach dem Erstellen von Klon2 ist Klon1 ein Zwischenkon, und Sie können den Klonteilvorgang auf Klon1 nicht ausführen. Sie können jedoch den Vorgang zum Aufteilen von Klonen auf Klon2 durchführen.
@@ -27,10 +26,9 @@ Nach dem Aufteilen von Klon2 können Sie den Clone Split-Vorgang auf Klon1 durch
 * Stellen Sie sicher, dass das Volume oder Aggregat auf dem Storage-System online ist.
 
 
-*Schritte*
-
+.Schritte
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
-. Wählen Sie auf der Seite Ressourcen die entsprechende Option aus der Liste Ansicht aus:
+. Wählen Sie auf der Seite *Ressourcen* die entsprechende Option aus der Liste Ansicht aus:
 +
 |===
 | Option | Beschreibung 
@@ -53,7 +51,7 @@ Wählen Sie in der Liste Ansicht *Pfad* aus.
 +
 Die Seite „Ressourcentopologie“ wird angezeigt.
 
-. Wählen Sie in der Ansicht Kopien managen die geklonte Ressource aus (z. B. die Datenbank oder LUN), und klicken Sie dann auf *image:../media/split_cone.gif[""]*.
+. Wählen Sie in der Ansicht *Manage Copies* die geklonte Ressource aus (z. B. die Datenbank oder LUN), und klicken Sie dann auf *image:../media/split_cone.gif["Symbol „Clone teilen“"]*.
 . Überprüfen Sie die geschätzte Größe des zu teilenden Klons und den benötigten Speicherplatz auf dem Aggregat, und klicken Sie dann auf *Start*.
 . Überwachen Sie den Fortschritt des Vorgangs, indem Sie auf *Monitor* > *Jobs* klicken.
 +
@@ -75,6 +73,5 @@ Der Startvorgang für die Klontrennung schlägt fehl, wenn gerade Backup-, Wiede
 
 
 
-*Weitere Informationen*
-
+.Verwandte Informationen
 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_clone_or_verfication_fails_with_aggregate_does_not_exist["Der SnapCenter Klon oder die Überprüfung schlägt fehl, wenn das Aggregat nicht vorhanden ist"]

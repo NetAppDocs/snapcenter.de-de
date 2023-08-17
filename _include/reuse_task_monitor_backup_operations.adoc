@@ -4,8 +4,7 @@
 
 Sie können den Fortschritt verschiedener Backup-Vorgänge über die Seite SnapCenterJobs überwachen. Sie können den Fortschritt überprüfen, um festzustellen, wann er abgeschlossen ist oder ob ein Problem vorliegt.
 
-*Über diese Aufgabe*
-
+.Über diese Aufgabe
 Die folgenden Symbole werden auf der Seite Jobs angezeigt und zeigen den entsprechenden Status der Vorgänge an:
 
 * image:../media/progress_icon.gif["Symbol „in Bearbeitung“"] In Bearbeitung
@@ -13,11 +12,10 @@ Die folgenden Symbole werden auf der Seite Jobs angezeigt und zeigen den entspre
 * image:../media/failed_icon.gif["Fehlersymbol"] Fehlgeschlagen
 * image:../media/warning_icon.gif["Abgeschlossen mit Warnsymbol"] Abgeschlossen mit Warnungen oder konnte aufgrund von Warnungen nicht gestartet werden
 * image:../media/verification_job_in_queue.gif["Überprüfungsjob wird in die Warteschlange gestellt"] Warteschlange
-* image:../media/cancel_icon.gif[""] Storniert
+* image:../media/cancel_icon.gif["Symbol Abbrechen"] Storniert
 
 
-*Schritte*
-
+.Schritte
 . Klicken Sie im linken Navigationsbereich auf *Monitor*.
 . Klicken Sie auf der Seite Überwachen auf *Jobs*.
 . Führen Sie auf der Seite Jobs die folgenden Schritte aus:

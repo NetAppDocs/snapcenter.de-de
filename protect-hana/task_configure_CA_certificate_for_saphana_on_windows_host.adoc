@@ -19,8 +19,7 @@ Benutzerdefinierte Plug-ins verwenden die Datei _keystore.jks_, die sich unter _
 
 == Passwort für benutzerdefinierten Plug-in-Schlüsselspeicher und Alias des verwendeten CA-signierten Schlüsselpaares verwalten
 
-*Schritte*
-
+.Schritte
 . Sie können benutzerdefinierte Plug-in Schlüsselspeicher Standardpasswort aus benutzerdefinierten Plug-in Agent Eigenschaftsdatei abrufen.
 +
 Es ist der Wert, der dem Schlüssel _KEYSTORE_PASS_ entspricht.
@@ -56,8 +55,7 @@ NOTE: Das Kennwort für den benutzerdefinierten Plug-in-Schlüsselspeicher und f
 
 Sie sollten die Stammzertifikate oder Zwischenzertifikate ohne privaten Schlüssel als benutzerdefinierten Plug-in-Vertrauensspeicher konfigurieren.
 
-*Schritte*
-
+.Schritte
 . Navigieren Sie zum Ordner mit dem benutzerdefinierten Plug-in Schlüsselspeicher _C:\Programme\NetApp\SnapCenter\SnapCenter Plug-in Creator\etc_
 . Suchen Sie die Datei 'keystore.jks'.
 . Liste der hinzugefügten Zertifikate im Schlüsselspeicher:
@@ -80,8 +78,7 @@ NOTE: Sie sollten das Root-CA-Zertifikat und anschließend die Zwischenzertifizi
 
 Sie sollten das CA-signierte Schlüsselpaar für den benutzerdefinierten Plug-in Trust-Store konfigurieren.
 
-*Schritte*
-
+.Schritte
 . Navigieren Sie zum Ordner mit dem benutzerdefinierten Plug-in Schlüsselspeicher _C:\Programme\NetApp\SnapCenter\SnapCenter Plug-in Creator\etc_
 . Suchen Sie die Datei _keystore.jks_.
 . Liste der hinzugefügten Zertifikate im Schlüsselspeicher:
@@ -115,15 +112,13 @@ Diesen Wert mit dem Schlüssel SCC_CERTIFICATE_ALIAS aktualisieren.
 
 == Konfigurieren der Zertifikatsperrliste (CRL) für benutzerdefinierte SnapCenter-Plug-ins
 
-*Über diese Aufgabe*
-
+.Über diese Aufgabe
 * Informationen zum Herunterladen der neuesten CRL-Datei für das zugehörige CA-Zertifikat finden Sie unter https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_update_certificate_revocation_list_file_in_SnapCenter_CA_Certificate["Aktualisieren der Listendatei für Zertifikatsperrlisten im SnapCenter CA-Zertifikat"].
 * Benutzerdefinierte SnapCenter-Plug-ins suchen in einem vorkonfigurierten Verzeichnis nach den CRL-Dateien.
 * Das Standardverzeichnis für die CRL-Dateien für benutzerdefinierte SnapCenter Plug-ins ist _'C:\Programme\NetApp\SnapCenter\SnapCenter Plug-in Creator\ etc\crl'_.
 
 
-*Schritte*
-
+.Schritte
 . Sie können das Standardverzeichnis in der Datei _agent.properties_ mit dem Schlüssel CRL_PATH ändern und aktualisieren.
 . Sie können mehrere CRL-Dateien in diesem Verzeichnis platzieren.
 +

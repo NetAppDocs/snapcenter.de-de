@@ -1,7 +1,7 @@
 ---
 permalink: protect-scw/reference_back_up_windows_file_systems.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter 
 summary: Wenn das SnapCenter-Plug-in für Microsoft Windows in Ihrer Umgebung installiert wird, können Sie mit SnapCenter Backups der Windows Filesysteme erstellen. Sie können ein einzelnes Dateisystem oder eine Ressourcengruppe sichern, die mehrere Dateisysteme enthält. Sie können Backups nach Bedarf oder gemäß einem definierten Schutzzeitplan erstellen. 
 ---
 = Sichern Sie Windows File-Systeme

@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_create_policies_for_custom_plug_in_resources.html 
 sidebar: sidebar 
-keywords:  
+keywords: create policies, custom plug-in 
 summary: Bevor Sie mit SnapCenter benutzerdefinierte Plug-in-spezifische Ressourcen sichern, müssen Sie eine Backup-Richtlinie für die Ressource oder Ressourcengruppe erstellen, die Sie sichern möchten. 
 ---
 = Erstellen von Richtlinien für benutzerdefinierte Plug-in-Ressourcen
@@ -13,8 +13,7 @@ summary: Bevor Sie mit SnapCenter benutzerdefinierte Plug-in-spezifische Ressour
 [role="lead"]
 Bevor Sie mit SnapCenter benutzerdefinierte Plug-in-spezifische Ressourcen sichern, müssen Sie eine Backup-Richtlinie für die Ressource oder Ressourcengruppe erstellen, die Sie sichern möchten.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 * Sie sollten Ihre Backup-Strategie definiert haben.
 +
 Weitere Informationen finden Sie in den Informationen zur Definition einer Datensicherungsstrategie für benutzerdefinierte Plug-ins.
@@ -30,14 +29,12 @@ Der SnapCenter Administrator muss Ihnen die SVMs für die Quell- und Ziel-Volume
 * Sie sollten die Ressourcen, die Sie schützen möchten, manuell hinzugefügt haben.
 
 
-*Über diese Aufgabe*
-
+.Über diese Aufgabe
 * Eine Backup-Richtlinie ist eine Reihe von Regeln, die das Managen, Planen und Aufbewahren von Backups regeln. Außerdem können Sie Replizierungs-, Skript- und Applikationseinstellungen festlegen.
 * Durch das Festlegen von Optionen in einer Richtlinie wird Zeit eingespart, wenn die Richtlinie für eine andere Ressourcengruppe wiederverwendet werden soll.
 
 
-*Schritte*
-
+.Schritte
 . Klicken Sie im linken Navigationsbereich auf *Einstellungen*.
 . Klicken Sie auf der Seite Einstellungen auf *Richtlinien*.
 . Klicken Sie Auf *Neu*.
@@ -50,7 +47,7 @@ Der SnapCenter Administrator muss Ihnen die SVMs für die Quell- und Ziel-Volume
 NOTE: Sie können den Zeitplan (Startdatum, Enddatum und Häufigkeit) für den Backup-Vorgang beim Erstellen einer Ressourcengruppe angeben. So können Sie Ressourcengruppen erstellen, die dieselben Richtlinien- und Backup-Häufigkeit verwenden, aber Sie können jeder Richtlinie verschiedene Backup-Zeitpläne zuweisen.
 
 +
-image::../media/backup_settings.gif[Backup-Einstellungen]
+image::../media/backup_settings.gif[Seite „Backup-Einstellungen“]
 
 +
 
@@ -59,7 +56,7 @@ NOTE: Wenn Sie für 2:00 Uhr geplant sind, wird der Zeitplan während der Sommer
 ** Geben Sie im Abschnitt Benutzerdefinierte Backup-Einstellungen alle spezifischen Backup-Einstellungen an, die an das Plug-in-in-Schlüsselwert-Format übergeben werden müssen. Sie können mehrere wichtige Werte angeben, die an das Plug-in übergeben werden.
 
 
-. Geben Sie auf der Seite Aufbewahrung die Aufbewahrungseinstellungen für den Sicherungstyp und den auf der Seite Sicherungstyp ausgewählten Terminplantyp an:
+. Geben Sie auf der Seite *Aufbewahrung* die Aufbewahrungseinstellungen für den Sicherungstyp und den auf der Seite *Sicherungstyp* ausgewählten Zeitplantyp an:
 +
 |===
 | Ihr Ziel ist | Dann... 
@@ -86,7 +83,7 @@ Behalten Sie die Snapshot Kopien für eine bestimmte Anzahl von Tagen bei
 Wählen Sie *Snapshot Kopien behalten für* aus, und geben Sie dann die Anzahl der Tage an, für die Sie die Snapshot Kopien behalten möchten, bevor Sie sie löschen.
 
 |===
-. Geben Sie auf der Seite Replikation die Replikationseinstellungen an:
+. Geben Sie auf der Seite *Replikation* die Replikationseinstellungen an:
 +
 |===
 | Für dieses Feld... | Tun Sie das... 

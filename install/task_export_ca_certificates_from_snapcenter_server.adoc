@@ -13,8 +13,7 @@ summary: Sie sollten die CA-Zertifikate vom SnapCenter-Server auf die Plug-in-Ho
 [role="lead"]
 Sie sollten die CA-Zertifikate über die Microsoft Management Console (MMC) vom SnapCenter-Server auf die Plug-in-Hosts exportieren.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 Sie sollten die bidirektionale SSL-Konfiguration vorgenommen haben.
 
 *Schritte*

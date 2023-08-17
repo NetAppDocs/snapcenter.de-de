@@ -61,8 +61,7 @@ Der Windows-Host sieht die LUNs auf Ihrem Storage-System als virtuelle Festplatt
 
 Wenn Sie Festplatten außerhalb von SnapCenter erstellen und formatieren möchten, werden nur NTFS- und CSVFS-Dateisysteme unterstützt.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 * Sie müssen ein Volume für die LUN auf Ihrem Speichersystem erstellt haben.
 +
 Das Volume sollte nur LUNs enthalten und nur LUNs, die mit SnapCenter erstellt wurden.
@@ -329,8 +328,7 @@ SnapCenter Größe der Festplatte neu.
 
 Sie können den Assistenten zum Verbinden von Festplatten verwenden, um eine vorhandene LUN mit einem Host zu verbinden, oder um eine getrennte LUN erneut zu verbinden.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 * Sie müssen den FC- oder iSCSI-Service auf dem Storage-System gestartet haben.
 * Wenn Sie iSCSI verwenden, müssen Sie eine iSCSI-Sitzung mit dem Speichersystem eingerichtet haben.
 * Sie können eine LUN nicht mit mehr als einem Host verbinden, es sei denn, die LUN wird von Hosts in einem Windows Server Failover Cluster gemeinsam genutzt.
@@ -512,8 +510,7 @@ SnapCenter verbindet die LUN mit dem angegebenen Laufwerk- oder Laufwerkspfad am
 
 Sie können eine LUN ohne Auswirkungen auf den Inhalt der LUN von einem Host trennen, mit einer Ausnahme: Wenn Sie einen Klon vor dessen Trennung trennen, verlieren Sie den Inhalt des Klons.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 * Stellen Sie sicher, dass die LUN nicht von einer Applikation verwendet wird.
 * Stellen Sie sicher, dass die LUN nicht mit Monitoring-Software überwacht wird.
 * Wenn die LUN gemeinsam genutzt wird, entfernen Sie die Abhängigkeiten der Cluster-Ressourcen aus der LUN, und überprüfen Sie, ob alle Nodes im Cluster eingeschaltet sind, ordnungsgemäß funktionieren und SnapCenter zur Verfügung stehen.

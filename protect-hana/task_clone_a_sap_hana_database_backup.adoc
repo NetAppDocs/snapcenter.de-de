@@ -13,7 +13,7 @@ summary: Sie können SnapCenter zum Klonen einer Backup verwenden. Sie können v
 [role="lead"]
 Sie können SnapCenter zum Klonen einer Backup verwenden. Sie können von primärem oder sekundärem Backup klonen.
 
-.Was Sie benötigen
+.Bevor Sie beginnen
 * Sie sollten die Ressourcen oder Ressourcengruppe gesichert haben.
 * Sie sollten sicherstellen, dass die Aggregate, die die Volumes hosten, sich in der Liste der zugewiesenen Aggregate der Storage Virtual Machine (SVM) befinden.
 * Sie können keine dateibasierten Backups klonen.

@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/reference_clone_sql_server_database_resources.html 
 sidebar: sidebar 
-keywords:  
+keywords: Clone workflow 
 summary: Vor dem Klonen von Datenbankressourcen aus einem Backup müssen Sie mehrere Aufgaben mit SnapCenter Server ausführen. Beim Datenbankklonen wird eine zeitpunktgenaue Kopie einer Produktionsdatenbank oder des zugehörigen Backup-Satzes erstellt. Sie können Datenbanken klonen, um Funktionen zu testen, die mit der aktuellen Datenbankstruktur und dem Inhalt während der Anwendungsentwicklungszyklen implementiert werden müssen, um die Werkzeuge zur Datenextraktion und -Bearbeitung beim Befüllen von Data Warehouses zu verwenden oder Daten, die versehentlich gelöscht oder geändert wurden, wiederherzustellen. 
 ---
 = Klon-Workflow

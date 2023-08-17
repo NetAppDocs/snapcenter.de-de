@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_back_up_resource_groups_of_custom_plug_in_resources.html 
 sidebar: sidebar 
-keywords:  
+keywords: backup, custom plug-in 
 summary: Auf der Seite „Ressourcen“ können Sie ein Backup einer Ressourcengruppe nach Bedarf erstellen. Wenn eine Ressourcengruppe über eine Richtlinie und einen konfigurierten Zeitplan verfügt, werden die Backups automatisch gemäß dem Zeitplan durchgeführt. 
 ---
 = Sichern Sie Ressourcengruppen benutzerdefinierter Plug-in-Ressourcen
@@ -13,18 +13,16 @@ summary: Auf der Seite „Ressourcen“ können Sie ein Backup einer Ressourceng
 [role="lead"]
 Auf der Seite „Ressourcen“ können Sie ein Backup einer Ressourcengruppe nach Bedarf erstellen. Wenn eine Ressourcengruppe über eine Richtlinie und einen konfigurierten Zeitplan verfügt, werden die Backups automatisch gemäß dem Zeitplan durchgeführt.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 * Sie müssen eine Ressourcengruppe mit einer angehängten Richtlinie erstellt haben.
 * Wenn Sie eine Ressource mit einer SnapMirror Beziehung zum sekundären Storage sichern möchten, sollte die dem Storage-Benutzer zugewiesene ONTAP-Rolle die Berechtigung „`snapmirror all`“ enthalten. Wenn Sie jedoch die Rolle „`vsadmin`“ verwenden, ist die Berechtigung „`snapmirror all`“ nicht erforderlich.
 
 
-*Schritte*
-
+.Schritte
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
 . Wählen Sie auf der Seite Ressourcen in der Liste *Ansicht* die Option *Ressourcengruppe* aus.
 +
-Sie können die Ressourcengruppe entweder durch Eingabe des Ressourcengruppennamens in das Suchfeld oder durch Klicken durchsuchen image:../media/filter_icon.png[""] Und das Tag auswählen. Sie können dann auf klicken image:../media/filter_icon.png[""] Um den Filterbereich zu schließen.
+Sie können die Ressourcengruppe entweder durch Eingabe des Ressourcengruppennamens in das Suchfeld oder durch Klicken durchsuchen image:../media/filter_icon.png["Filtersymbol"] Und das Tag auswählen. Sie können dann auf klicken image:../media/filter_icon.png["Filtersymbol"] Um den Filterbereich zu schließen.
 
 . Wählen Sie auf der Seite Ressourcengruppen die Ressourcengruppe aus, die Sie sichern möchten, und klicken Sie dann auf *Jetzt sichern*.
 . Führen Sie auf der Seite Backup die folgenden Schritte aus:

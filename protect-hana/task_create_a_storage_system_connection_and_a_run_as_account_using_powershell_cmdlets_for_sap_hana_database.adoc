@@ -13,7 +13,7 @@ summary: 'Sie müssen eine SVM-Verbindung (Storage Virtual Machine) und Zugangsd
 [role="lead"]
 Sie müssen eine SVM-Verbindung (Storage Virtual Machine) und Zugangsdaten erstellen, bevor Sie PowerShell cmdlets verwenden können, um SAP HANA Datenbanken zu sichern, wiederherzustellen oder zu klonen.
 
-.Was Sie benötigen
+.Bevor Sie beginnen
 * Sie sollten die PowerShell Umgebung auf die Ausführung der PowerShell Commandlets vorbereitet haben.
 * Sie sollten die erforderlichen Berechtigungen in der Rolle „Infrastrukturadministrator“ besitzen, um Speicherverbindungen zu erstellen.
 * Sie sollten sicherstellen, dass die Plug-in-Installationen nicht ausgeführt werden.

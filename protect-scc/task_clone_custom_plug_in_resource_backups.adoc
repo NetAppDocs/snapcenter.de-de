@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_clone_custom_plug_in_resource_backups.html 
 sidebar: sidebar 
-keywords:  
+keywords: clone, custom plug-in 
 summary: Der Klon-Workflow umfasst die Durchführung des Klonvorgangs und die Überwachung des Vorgangs. 
 ---
 = Klonen benutzerdefinierter Plug-in-Ressourcen-Backups
@@ -13,8 +13,7 @@ summary: Der Klon-Workflow umfasst die Durchführung des Klonvorgangs und die Ü
 [role="lead"]
 Der Klon-Workflow umfasst die Durchführung des Klonvorgangs und die Überwachung des Vorgangs.
 
-*Über diese Aufgabe*
-
+.Über diese Aufgabe
 Sie können Ressourcen-Backups aus den folgenden Gründen klonen:
 
 * Zum Testen von Funktionen, die während der Applikationsentwicklungszyklen mit der aktuellen Ressourcenstruktur und dem aktuellen Inhalt implementiert werden müssen

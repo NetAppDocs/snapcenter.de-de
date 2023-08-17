@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/reference_storage_types_supported_by_snapcenter_custom_plug_in.html 
 sidebar: sidebar 
-keywords:  
+keywords: Custom Plug-ins 
 summary: SnapCenter unterstützt zahlreiche Storage-Typen sowohl auf physischen als auch auf Virtual Machines. Sie müssen die Unterstützung Ihres Speichertyps überprüfen, bevor Sie benutzerdefinierte SnapCenter-Plug-ins installieren. 
 ---
 = Von benutzerdefinierten SnapCenter Plug-ins unterstützte Storage-Typen

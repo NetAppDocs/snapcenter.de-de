@@ -13,8 +13,7 @@ summary: 'SnapCenter unterstützt die rollenbasierte Zugriffssteuerung (Role Bas
 [role="lead"]
 SnapCenter unterstützt die rollenbasierte Zugriffssteuerung (Role Based Access Control, RBAC). Der SnapCenter Administrator weist über die SnapCenter RBAC Rollen und Ressourcen entweder einem Benutzer in der Arbeitsgruppe oder im aktiven Verzeichnis oder Gruppen im aktiven Verzeichnis zu. Der RBAC-Benutzer kann sich nun mit den zugewiesenen Rollen bei SnapCenter anmelden.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 * Sie sollten den Windows Process Activation Service (WAR) in Windows Server Manager aktivieren.
 * Wenn Sie Internet Explorer als Browser verwenden möchten, um sich beim SnapCenter-Server anzumelden, sollten Sie sicherstellen, dass der geschützte Modus in Internet Explorer deaktiviert ist.
 
@@ -74,7 +73,7 @@ Ihre aktuellen Benutzer und die zugehörige Rolle werden nach der Anmeldung oben
 
 
 
-*Ergebnisse*
+*Ergebnis*
 
 Die Seite Dashboard wird angezeigt.
 
@@ -92,8 +91,7 @@ Wenn Sie nicht vertrauenswürdige Active Directory-Domänen haben, die von SnapC
 
 SnapCenter Server unterstützt MFA für Domain-Konto, das Teil des Active Directory ist.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 * Sie sollten MFA aktiviert haben.
 +
 Informationen zum Aktivieren von MFA finden Sie unter link:../install/enable_multifactor_authentication.html["Multi-Faktor-Authentifizierung aktivieren"]

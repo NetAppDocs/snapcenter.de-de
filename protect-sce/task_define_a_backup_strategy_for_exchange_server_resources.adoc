@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/task_define_a_backup_strategy_for_exchange_server_resources.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter plug-in for Exchange Server 
 summary: 'Wenn Sie eine Backup-Strategie definieren, bevor Sie Ihre Backup-Jobs erstellen, können Sie sicherstellen, dass Sie über die Backups verfügen, die Sie benötigen, um Ihre Datenbanken erfolgreich wiederherzustellen. Ihre Service Level Agreement (SLA), Recovery Time Objective (RTO) und Recovery Point Objective \ (RPO\) bestimmen Ihre Backup-Strategie weitestgehend.' 
 ---
 = Backup-Strategie für Exchange Server-Ressourcen definieren

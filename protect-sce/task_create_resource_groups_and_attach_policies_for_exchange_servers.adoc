@@ -13,8 +13,7 @@ summary: Für jeden Datenschutzauftrag ist eine Ressourcengruppen erforderlich. 
 [role="lead"]
 Für jeden Datenschutzauftrag ist eine Ressourcengruppen erforderlich. Sie müssen der Ressourcengruppe auch eine oder mehrere Richtlinien zuordnen, um den Typ des zu erfütienden Datenschutzauftrags und den Schutzzeitplan zu definieren.
 
-*Über diese Aufgabe*
-
+.Über diese Aufgabe
 * DER SCRIPTS_PATH wird mit dem PredefinedWindowsScriptDirectory-Schlüssel definiert, der sich in der SMCoreServiceHost.exe.Config-Datei des Plug-in-Hosts befindet.
 +
 Bei Bedarf können Sie diesen Pfad ändern und den SMCore Service neu starten. Es wird empfohlen, den Standardpfad für die Sicherheit zu verwenden.
@@ -27,8 +26,7 @@ Sie können die GET API verwenden, um den Wert der Taste anzuzeigen. SET-API wir
 
 
 
-*Schritte*
-
+.Schritte
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das Microsoft Exchange Server-Plug-in aus der Liste aus.
 . Wählen Sie auf der Seite Ressourcen in der Liste *Ansicht* die Option *Datenbank* aus.
 +
@@ -99,7 +97,7 @@ Ressourcengruppen von SnapCenter für Microsoft Exchange Server können nicht me
 .. Wählen Sie eine oder mehrere Richtlinien aus der Dropdown-Liste aus.
 +
 
-NOTE: Sie können eine Richtlinie auch erstellen, indem Sie auf * klickenimage:../media/add_policy_from_resourcegroup.gif[""]*.
+NOTE: Sie können eine Richtlinie auch erstellen, indem Sie auf * klickenimage:../media/add_policy_from_resourcegroup.gif["Plus-Symbol"]*.
 
 +
 
@@ -108,7 +106,7 @@ NOTE: Wenn eine Richtlinie die Option *Sicherungskopien auf Servern enthält, di
 +
 Im Abschnitt „Zeitpläne für ausgewählte Richtlinien konfigurieren“ werden die ausgewählten Richtlinien aufgelistet.
 
-.. Klicken Sie im Abschnitt Zeitpläne für ausgewählte Richtlinien konfigurieren auf *image:../media/add_policy_from_resourcegroup.gif[""]* In der Spalte *Zeitplan konfigurieren* für die Richtlinie, für die Sie den Zeitplan konfigurieren möchten.
+.. Klicken Sie im Abschnitt Zeitpläne für ausgewählte Richtlinien konfigurieren auf *image:../media/add_policy_from_resourcegroup.gif["Plus-Symbol"]* In der Spalte *Zeitplan konfigurieren* für die Richtlinie, für die Sie den Zeitplan konfigurieren möchten.
 .. Konfigurieren Sie den Zeitplan im Dialogfeld Add Schedules for Policy_Name_, indem Sie das Startdatum, das Ablaufdatum und die Häufigkeit angeben und dann auf *OK* klicken.
 +
 Sie müssen dies für jede in der Richtlinie angegebene Frequenz tun. Die konfigurierten Zeitpläne werden in der Spalte *angewendete Zeitpläne* im Abschnitt Zeitpläne für ausgewählte Richtlinien konfigurieren aufgelistet.

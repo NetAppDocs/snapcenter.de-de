@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_get_the_CA_certificate_thumbprint.html 
 sidebar: sidebar 
-keywords: SnapCenter 
+keywords: SnapCenter, CA certificate 
 summary: Abrufen des Daumenabdrucks für das CA-Zertifikat 
 ---
 = Abrufen des Daumenabdrucks für das CA-Zertifikat
@@ -13,8 +13,7 @@ summary: Abrufen des Daumenabdrucks für das CA-Zertifikat
 [role="lead"]
 Ein ZertifikatDaumendruck ist eine hexadezimale Zeichenfolge, die ein Zertifikat identifiziert. Ein Daumendruck wird aus dem Inhalt des Zertifikats mithilfe eines Daumendruckalgorithmus berechnet.
 
-*Schritte*
-
+.Schritte
 . Führen Sie auf der GUI folgende Schritte durch:
 +
 .. Doppelklicken Sie auf das Zertifikat.

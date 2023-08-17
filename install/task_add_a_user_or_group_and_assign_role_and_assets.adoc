@@ -13,8 +13,7 @@ summary: Um die rollenbasierte Zugriffssteuerung für SnapCenter-Benutzer zu kon
 [role="lead"]
 Um die rollenbasierte Zugriffssteuerung für SnapCenter-Benutzer zu konfigurieren, können Sie Benutzer oder Gruppen hinzufügen und Rollen zuweisen. Die Rolle legt die Optionen fest, auf die SnapCenter-Benutzer zugreifen können.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 * Sie müssen sich als „SnapCenterAdmin“-Rolle angemeldet haben.
 * Sie müssen die Benutzer- oder Gruppenkonten in Active Directory im Betriebssystem oder in der Datenbank erstellt haben. Sie können SnapCenter nicht zum Erstellen dieser Konten verwenden.
 +

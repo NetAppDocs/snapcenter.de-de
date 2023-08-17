@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/reference_perl.html 
 sidebar: sidebar 
-keywords:  
+keywords: custom plug-in 
 summary: Entwickeln Sie das Plug-in mithilfe VON PERL. 
 ---
 = PERL-basierte Entwicklung

@@ -57,3 +57,47 @@ https://imt.netapp.com/matrix/imt.jsp?components=112393;&solution=1259&isHWU&src
 * Für SAP HANA-Datenbanken, die auf einem Linux-Host ausgeführt werden und das Plug-in für SAP HANA Database installieren, wird das SnapCenter-Plug-in für UNIX automatisch installiert.
 * Sie sollten *bash* als Standard-Shell für die Plug-in-Installation haben.
 
+
+
+
+== Zusätzliche Befehle
+
+Um einen zusätzlichen Befehl für das SnapCenter-Plug-in für SAP HANA auszuführen, müssen Sie ihn in das eingeben `allowed_commands.config` Datei:
+
+`allowed_commands.config` Datei befindet sich im Unterverzeichnis „etc“ des SnapCenter Plug-in for SAP HANA Verzeichnisses.
+
+.Windows Hosts
+Standard: `C:\Program Files\NetApp\SnapCenter\HANA\etc\allowed_commands.config`
+
+Benutzerdefinierter Pfad: `<Custome_Directory>\NetApp\SnapCenter\HANA\etc\allowed_commands.config`
+Windows-Host:
+
+.Linux-Hosts
+Standard: `/opt/NetApp/snapcenter/scc/etc/allowed_commands.config`
+
+Benutzerdefinierter Pfad: `<Custome_Directory>/NetApp/snapcenter/scc/etc/allowed_commands.config`
+
+Öffnen Sie, um zusätzliche Befehle auf dem Plug-in-Host zuzulassen `allowed_commands.config` Datei in einem Editor. Geben Sie jeden Befehl in einer eigenen Zeile ein. Die Groß-/Kleinschreibung wird nicht beachtet.
+Beispiel:
+
+Befehl: Montieren
+
+Befehl: Umount
+
+Stellen Sie sicher, dass Sie den vollständigen Pfadnamen angeben. Schließen Sie den Pfadnamen in Anführungszeichen (") ein, wenn er Leerzeichen enthält.
+Beispiel:
+
+Befehl: „C:\Program Files\NetApp\SnapCreator commands\sdcli.exe“
+
+Befehl: myscript.bat
+
+Wenn der `allowed_commands.config` Datei ist nicht vorhanden, die Befehle oder die Skriptausführung werden blockiert und der Workflow schlägt mit folgendem Fehler fehl:
+
+„[/mnt/Mount -a] Ausführung nicht zulässig. Autorisieren Sie, indem Sie den Befehl in der Datei %s auf dem Plugin-Host hinzufügen.“
+
+Wenn der Befehl oder das Skript nicht im vorhanden ist `allowed_commands.config`, Die Ausführung des Befehls oder Skripts wird blockiert und der Workflow wird mit folgendem Fehler fehlschlagen:
+
+„[/mnt/Mount -a] Ausführung nicht zulässig. Autorisieren Sie, indem Sie den Befehl in der Datei %s auf dem Plugin-Host hinzufügen.“
+
+
+NOTE: Sie sollten keinen Platzhaltereintrag (*) verwenden, um alle Befehle zuzulassen.

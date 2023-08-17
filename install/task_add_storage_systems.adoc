@@ -15,8 +15,7 @@ Sie sollten das Storage-System einrichten, mit dem SnapCenter Zugriff auf ONTAP 
 
 Sie können entweder eine eigenständige SVM oder ein Cluster aus mehreren SVMs hinzufügen. Wenn Sie Amazon FSX für NetApp ONTAP verwenden, können Sie entweder FSX Admin LIF aus mehreren SVMs mit fsxadmin-Konto hinzufügen oder FSX SVM in SnapCenter hinzufügen.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 * Sie sollten die erforderlichen Berechtigungen in der Rolle „Infrastrukturadministrator“ besitzen, um Speicherverbindungen zu erstellen.
 * Sie sollten sicherstellen, dass die Plug-in-Installationen nicht ausgeführt werden.
 +
@@ -111,7 +110,7 @@ Der Standardwert ist 60 Sekunden.
 . Klicken Sie Auf *Absenden*.
 
 
-*Ergebnisse*
+*Ergebnis*
 
 Führen Sie auf der Seite Storage Systems aus dem Dropdown-Menü *Typ* eine der folgenden Aktionen aus:
 
@@ -138,7 +137,7 @@ NOTE: Wenn Sie ein Upgrade der FAS- oder AFF-Speichersysteme auf All-SAN-Array (
 
 Ein Cluster-Administrator muss AutoSupport auf jedem Node des Storage-Systems aktivieren, um E-Mail-Benachrichtigungen von allen Storage-Systemen zu senden, auf die SnapCenter Zugriff hat, indem der folgende Befehl über die Befehlszeile des Storage-Systems ausgeführt wird:
 
-`autosupport trigger modify -node nodename -autosupport-message client.app.info enable -noteto enable`
+`autosupport trigger modify -node nodename -autosupport-message client.app.info -to enable -noteto enable`
 
 
 NOTE: Der SVM-Administrator hat keinen Zugriff auf AutoSupport.

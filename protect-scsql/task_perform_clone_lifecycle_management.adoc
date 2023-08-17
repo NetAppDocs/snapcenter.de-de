@@ -15,8 +15,7 @@ Mit SnapCenter können Sie Klone aus einer Ressourcengruppe oder Datenbank erste
 
 SnapCenter ermöglicht die Planung mehrerer Klonvorgänge zur gleichzeitigen Ausführung über mehrere Server hinweg.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 * Stellen Sie beim Klonen auf eine eigenständige Datenbankinstanz sicher, dass der Mount-Point-Pfad vorhanden ist und dass es sich um eine dedizierte Festplatte handelt.
 * Beim Klonen in eine Failover Cluster-Instanz (FCI) stellen Sie sicher, dass die Mount-Punkte vorhanden sind, dass es sich um eine freigegebene Festplatte handelt, und der Pfad und die FCI sollten zur gleichen SQL-Ressourcengruppe gehören.
 * Wenn sich die Quelldatenbank oder die Zielinstanz auf einem gemeinsam genutzten Cluster-Volume (csv) befindet, befindet sich die geklonte Datenbank auf dem csv.
@@ -25,8 +24,7 @@ SnapCenter ermöglicht die Planung mehrerer Klonvorgänge zur gleichzeitigen Aus
 
 NOTE: Stellen Sie für virtuelle Umgebungen (VMDK/RDM) sicher, dass der Bereitstellungspunkt eine dedizierte Festplatte ist.
 
-*Über diese Aufgabe*
-
+.Über diese Aufgabe
 * DER SCRIPTS_PATH wird mit dem PredefinedWindowsScriptDirectory-Schlüssel definiert, der sich in der SMCoreServiceHost.exe.Config-Datei des Plug-in-Hosts befindet.
 +
 Bei Bedarf können Sie diesen Pfad ändern und den SMCore Service neu starten. Es wird empfohlen, den Standardpfad für die Sicherheit zu verwenden.
@@ -40,8 +38,7 @@ Sie können die GET API verwenden, um den Wert der Taste anzuzeigen. SET-API wir
 * Die meisten Felder auf den Seiten des Clone Lifecycle Wizard sind selbsterklärend. In den folgenden Informationen werden die Felder beschrieben, für die Sie möglicherweise eine Anleitung benötigen.
 
 
-*Schritte*
-
+.Schritte
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
 . Wählen Sie auf der Seite Ressourcen die Option *Datenbank* oder *Ressourcengruppe* aus der Liste *Ansicht* aus.
 . Wählen Sie die Ressourcengruppe oder -Datenbank aus, und klicken Sie dann auf *Lebenszyklus klonen*.

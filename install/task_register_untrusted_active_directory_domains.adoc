@@ -1,7 +1,7 @@
 ---
 permalink: install/task_register_untrusted_active_directory_domains.html 
 sidebar: sidebar 
-keywords:  
+keywords: Active Directory 
 summary: Sie sollten das Active Directory beim SnapCenter-Server registrieren, um Hosts, Benutzer und Gruppen aus mehreren nicht vertrauenswürdigen Active Directory-Domänen zu verwalten. 
 ---
 = Registrieren Sie nicht vertrauenswürdige Active Directory-Domänen
@@ -13,8 +13,7 @@ summary: Sie sollten das Active Directory beim SnapCenter-Server registrieren, u
 [role="lead"]
 Sie sollten das Active Directory beim SnapCenter-Server registrieren, um Hosts, Benutzer und Gruppen aus mehreren nicht vertrauenswürdigen Active Directory-Domänen zu verwalten.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 *LDAP- und LDAPS-Protokolle*
 
 * Sie können die nicht vertrauenswürdigen Active Directory-Domänen entweder über das LDAP- oder LDAPS-Protokoll registrieren.

@@ -13,8 +13,7 @@ summary: Sie sollten die CA-Zertifikate konfigurieren und die CA-Zertifikatvalid
 [role="lead"]
 Sie sollten die CA-Zertifikate konfigurieren und die CA-Zertifikatvalidierung für den SnapCenter-Server aktivieren.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 * Sie können die CA-Zertifikate mit dem Cmdlet "Set-SmCertificateSettings" aktivieren oder deaktivieren.
 * Sie können den Zertifikatsstatus für den SnapCenter-Server mit dem Cmdlet Get-SmCertificateSettings anzeigen.
 

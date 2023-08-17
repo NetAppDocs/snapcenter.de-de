@@ -1,7 +1,7 @@
 ---
 permalink: protect-scw/task_install_the_snapcenter_plug_in_for_windows_silently_from_the_command_line.html 
 sidebar: sidebar 
-keywords:  
+keywords: install, snapcenter 
 summary: Sie können das SnapCenter-Plug-in für Microsoft Windows lokal auf einem Windows-Host installieren, wenn Sie das Plug-in nicht Remote über die SnapCenter-Benutzeroberfläche installieren können. Sie können das SnapCenter-Plug-in für Microsoft Windows-Installationsprogramm unbeaufsichtigt, im Silent-Modus, über die Windows-Befehlszeile ausführen. 
 ---
 = Installieren Sie das SnapCenter-Plug-in für Microsoft Windows im Hintergrund über die Befehlszeile
@@ -13,16 +13,14 @@ summary: Sie können das SnapCenter-Plug-in für Microsoft Windows lokal auf ein
 [role="lead"]
 Sie können das SnapCenter-Plug-in für Microsoft Windows lokal auf einem Windows-Host installieren, wenn Sie das Plug-in nicht Remote über die SnapCenter-Benutzeroberfläche installieren können. Sie können das SnapCenter-Plug-in für Microsoft Windows-Installationsprogramm unbeaufsichtigt, im Silent-Modus, über die Windows-Befehlszeile ausführen.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 * Sie müssen Microsoft .Net 4.7.2 oder höher installiert haben.
 * Sie müssen PowerShell 4.0 oder höher installiert haben.
 * Sie müssen die Windows-Nachrichtenwarteschlange aktiviert haben.
 * Sie müssen ein lokaler Administrator auf dem Host sein.
 
 
-*Schritte*
-
+.Schritte
 . Laden Sie das SnapCenter-Plug-in für Microsoft Windows von Ihrem Installationsort herunter.
 +
 Beispielsweise lautet der Standardinstallationspfad C:\ProgramData\NetApp\SnapCenter\Package Repository.

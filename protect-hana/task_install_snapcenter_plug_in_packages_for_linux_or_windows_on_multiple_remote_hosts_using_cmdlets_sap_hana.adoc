@@ -13,7 +13,7 @@ summary: 'Sie können die SnapCenter-Plug-in-Pakete für Linux oder Windows glei
 [role="lead"]
 Sie können die SnapCenter-Plug-in-Pakete für Linux oder Windows gleichzeitig auf mehreren Hosts installieren, indem Sie das Cmdlet "Install-SmHostPackage PowerShell" verwenden.
 
-.Was Sie benötigen
+.Bevor Sie beginnen
 Sie müssen sich bei SnapCenter als Domänenbenutzer mit lokalen Administratorrechten auf jedem Host, auf dem Sie das Plug-in-Paket installieren möchten, angemeldet haben.
 
 .Schritte

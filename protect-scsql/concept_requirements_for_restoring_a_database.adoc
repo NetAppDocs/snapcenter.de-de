@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/concept_requirements_for_restoring_a_database.html 
 sidebar: sidebar 
-keywords:  
+keywords: Requirements 
 summary: Bevor Sie eine SQL Server-Datenbank aus einem SnapCenter Plug-in für Microsoft SQL Server-Backup wiederherstellen, müssen Sie sicherstellen, dass mehrere Anforderungen erfüllt sind. 
 ---
 = Anforderungen für das Wiederherstellen einer Datenbank

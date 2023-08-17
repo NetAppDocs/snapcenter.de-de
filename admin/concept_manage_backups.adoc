@@ -1,7 +1,7 @@
 ---
 permalink: admin/concept_manage_backups.html 
 sidebar: sidebar 
-keywords:  
+keywords: Manage backups 
 summary: Sie können Backups umbenennen und löschen. Sie können auch mehrere Backups gleichzeitig löschen. 
 ---
 = Backup-Management
@@ -44,8 +44,7 @@ Wenn Sie die Backups von Oracle-Datenbanken mithilfe von Oracle Recovery Manager
 
 Backups können gelöscht werden, wenn das Backup für andere Datensicherungsvorgänge nicht mehr benötigt wird.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 Sie müssen die zugehörigen Klone gelöscht haben, bevor Sie ein Backup löschen.
 
 

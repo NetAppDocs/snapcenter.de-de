@@ -15,8 +15,7 @@ Der Klon-Workflow umfasst die Planung, die Durchführung des Klonvorgangs und di
 
 Sie müssen die PowerShell Umgebung vorbereitet haben, um die PowerShell Cmdlets auszuführen.
 
-*Schritte*
-
+.Schritte
 . Starten Sie eine Verbindungssitzung mit dem SnapCenter-Server für einen bestimmten Benutzer, indem Sie das Cmdlet "Open-SmConnection" verwenden.
 +
 [listing]

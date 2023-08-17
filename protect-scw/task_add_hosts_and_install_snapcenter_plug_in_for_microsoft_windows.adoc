@@ -13,8 +13,7 @@ summary: Sie können die Seite SnapCenter Add Host verwenden, um Windows Hosts h
 [role="lead"]
 Sie können die Seite SnapCenter Add Host verwenden, um Windows Hosts hinzuzufügen. Das SnapCenter-Plug-in für Microsoft Windows wird automatisch auf dem angegebenen Host installiert. Dies ist die empfohlene Methode zum Installieren von Plug-ins. Sie können einen Host hinzufügen und ein Plug-in entweder für einen einzelnen Host oder ein Cluster installieren.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 * Sie müssen ein Benutzer sein, der einer Rolle zugewiesen ist, die über die Berechtigungen für die Plug-in-Installation und -Deinstallation verfügt, wie z. B. die Rolle „SnapCenter-Administrator“.
 * Wenn Sie ein Plug-in auf einem Windows-Host installieren, müssen Sie UAC auf dem Host deaktivieren, wenn Sie keine Anmeldedaten angeben, die nicht integriert sind, oder wenn der Benutzer zu einem lokalen Workgroup-Benutzer gehört.
 * Der SnapCenter-Benutzer sollte der Rolle „`Anmelden als Dienst`“ des Windows-Servers hinzugefügt werden.
@@ -25,8 +24,7 @@ link:task_configure_gMSA_on_windows_server_2012_or_later.html["Konfigurieren Sie
 
 
 
-*Über diese Aufgabe*
-
+.Über diese Aufgabe
 * Sie können einen SnapCenter-Server nicht als Plug-in-Host zu einem anderen SnapCenter-Server hinzufügen.
 * Windows Plug-ins
 +
@@ -51,8 +49,7 @@ Sie können das Plug-in für Windows nicht auf einem mit E-Series Storage verbun
 NOTE: SnapCenter unterstützt das Hinzufügen desselben Hosts (Plug-in-Host) zu SnapCenter nicht, wenn der Host bereits Teil einer Arbeitsgruppe ist und in eine andere Domäne geändert wurde oder umgekehrt.
 Wenn Sie denselben Host hinzufügen möchten, sollten Sie den Host aus SnapCenter entfernen und erneut hinzufügen.
 
-*Schritte*
-
+.Schritte
 . Klicken Sie im linken Navigationsbereich auf *Hosts*.
 . Vergewissern Sie sich, dass *verwaltete Hosts* oben ausgewählt ist.
 . Klicken Sie Auf *Hinzufügen*.

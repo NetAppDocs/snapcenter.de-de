@@ -19,8 +19,7 @@ Benutzerdefinierte Plug-ins verwenden die Datei 'keystore.jks', die sich unter _
 
 == Passwort für benutzerdefinierten Plug-in-Schlüsselspeicher und Alias des verwendeten CA-signierten Schlüsselpaares verwalten
 
-*Schritte*
-
+.Schritte
 . Sie können benutzerdefinierte Plug-in Schlüsselspeicher Standardpasswort aus benutzerdefinierten Plug-in Agent Eigenschaftsdatei abrufen.
 +
 Es ist der Wert, der dem Schlüssel 'KEYSTORE_PASS' entspricht.
@@ -46,8 +45,7 @@ NOTE: Das Kennwort für den benutzerdefinierten Plug-in-Schlüsselspeicher und f
 
 Sie sollten die Stammzertifikate oder Zwischenzertifikate ohne privaten Schlüssel als benutzerdefinierten Plug-in-Vertrauensspeicher konfigurieren.
 
-*Schritte*
-
+.Schritte
 . Navigieren Sie zum Ordner mit dem benutzerdefinierten Plug-in keystore: /Opt/NetApp/snapcenter/scc/etc.
 . Suchen Sie die Datei 'keystore.jks'.
 . Liste der hinzugefügten Zertifikate im Schlüsselspeicher:
@@ -69,8 +67,7 @@ NOTE: Sie sollten das Root-CA-Zertifikat und anschließend die Zwischenzertifizi
 
 Sie sollten das CA-signierte Schlüsselpaar für den benutzerdefinierten Plug-in Trust-Store konfigurieren.
 
-*Schritte*
-
+.Schritte
 . Navigieren Sie zum Ordner mit dem benutzerdefinierten Plug-in keystore /opt/NetApp/snapcenter/scc/etc.
 . Suchen Sie die Datei 'keystore.jks'.
 . Liste der hinzugefügten Zertifikate im Schlüsselspeicher:
@@ -106,14 +103,12 @@ Diesen Wert mit dem Schlüssel SCC_CERTIFICATE_ALIAS aktualisieren.
 
 == Konfigurieren der Zertifikatsperrliste (CRL) für benutzerdefinierte SnapCenter-Plug-ins
 
-*Über diese Aufgabe*
-
+.Über diese Aufgabe
 * Benutzerdefinierte SnapCenter-Plug-ins suchen in einem vorkonfigurierten Verzeichnis nach den CRL-Dateien.
 * Das Standardverzeichnis für die CRL-Dateien für SnapCenter Custom Plug-ins ist ' opt/NetApp/snapcenter/scc/etc/crl'.
 
 
-*Schritte*
-
+.Schritte
 . Sie können das Standardverzeichnis in der Datei agent.properties mit dem Schlüssel CRL_PATH ändern und aktualisieren.
 +
 Sie können mehrere CRL-Dateien in diesem Verzeichnis platzieren. Die eingehenden Zertifikate werden gegen jede CRL überprüft.

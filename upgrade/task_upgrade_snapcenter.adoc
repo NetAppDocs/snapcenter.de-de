@@ -13,8 +13,7 @@ summary: Sie können die ausführbare Datei für das SnapCenter-Server-Installat
 [role="lead"]
 Sie können die ausführbare Datei für das SnapCenter-Server-Installationsprogramm verwenden, um den SnapCenter-Server zu aktualisieren.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 * Der SnapCenter-Server-Host muss mit Windows-Updates auf dem neuesten Stand sein, ohne dass das System neu gestartet werden muss.
 * Stellen Sie sicher, dass vor dem Start des Upgrades keine weiteren Vorgänge ausgeführt werden.
 * Sie sollten die Datenbank des SnapCenter Repository (MySQL) sichern, nachdem Sie sichergestellt haben, dass keine Jobs ausgeführt werden. Dies wird vor einem Upgrade des SnapCenter Servers und des Exchange Plug-ins empfohlen.
@@ -27,8 +26,7 @@ Beispiele für SnapCenter-Konfigurationsdateien: SnapDriveService.exe.config, SM
 
 
 
-*Über diese Aufgabe*
-
+.Über diese Aufgabe
 * Während des Upgrades wird der Host automatisch in den Wartungsmodus versetzt, um zu verhindern, dass der Host geplante Jobs ausführt. Nach einem Upgrade wird der Host automatisch aus dem Wartungsmodus entfernt.
 * Während des Upgrades wird ein SQL-Skript ausgeführt, um die Exchange-Daten in der NSM-Datenbank zu aktualisieren, die DAG und Host-Kurzname in FQDN konvertiert. Dies gilt nur, wenn Sie SnapCenter Server mit Exchange Plug-in verwenden.
 * Wenn Sie den Host manuell in den Wartungsmodus versetzt haben, müssen Sie nach dem Upgrade den Wartungsmodus des Hosts manuell beenden, indem Sie auf *Hosts* > *Zeitplan aktivieren* klicken.
@@ -41,8 +39,7 @@ Auf der Seite *Job Details* empfiehlt eine Warnmeldung, dass der Kunde die Skrip
 
 
 
-*Schritte*
-
+.Schritte
 . Laden Sie das SnapCenter Server-Installationspaket von der NetApp Support Website herunter.
 +
 https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab[]
@@ -79,8 +76,7 @@ Wenn Sie auf die Schaltfläche *Abbrechen* klicken, wird der Upgrade-Workflow ab
 |===
 
 
-*Nach Ihrer Beendigung*
-
+.Nachdem Sie fertig sind
 * Wenn das Plug-in mit einem sudo-Benutzer installiert wird, sollten Sie die Sha224-Schlüssel kopieren, die unter _C:\ProgramData\NetApp\SnapCenter\Package Repository\oracle_checksum.txt verfügbar sind, um die Datei _/etc/sudoers_ zu aktualisieren.
 * Sie sollten eine neue Bestandsaufnahme der Ressourcen auf den Hosts durchführen.
 +

@@ -1,7 +1,7 @@
 ---
 permalink: admin/concept_overview_of_snapcenter_reports.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter reports 
 summary: SnapCenter bietet eine Vielzahl von Berichtsoptionen, mit denen Sie den Systemzustand und den Betrieb überwachen und managen können. 
 ---
 = Überblick über die Berichterstellungsfunktionen von SnapCenter
@@ -130,8 +130,7 @@ Mit dieser Option wird der SMTP-Server zum Senden aller Datensicherheitsjobberic
 
 Wenn Sie regelmäßige Aktualisierungen für den SnapCenter-Datenschutz an sich selbst oder andere Benutzer senden möchten, damit Sie den Status dieser Updates überwachen können, können Sie die Option konfigurieren, die SnapCenter-Berichte per E-Mail zu senden, wenn Sie eine Ressourcengruppe erstellen.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 Sie müssen Ihren SMTP-Server auf der Seite Globale Einstellungen unter Einstellungen konfiguriert haben.
 
 *Schritte*

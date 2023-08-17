@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_storage_disaster_recovery_for_scsql.html 
 sidebar: sidebar 
-keywords:  
+keywords: disaster recovery 
 summary: Sie können das SnapCenter Plug-in für SQL Server Storage wiederherstellen, indem Sie den DR-Modus für Storage auf der Seite Globale Einstellungen aktivieren. 
 ---
 = Storage Disaster Recovery (DR) für SnapCenter Plug-in für SQL Server
@@ -13,8 +13,7 @@ summary: Sie können das SnapCenter Plug-in für SQL Server Storage wiederherste
 [role="lead"]
 Sie können das SnapCenter Plug-in für SQL Server Storage wiederherstellen, indem Sie den DR-Modus für Storage auf der Seite Globale Einstellungen aktivieren.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 * Stellen Sie sicher, dass sich die Plug-ins im Wartungsmodus befinden.
 * SnapMirror/SnapVault Beziehung aufhebenlink:https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-950/GUID-8A3F828F-CD3D-48E8-A171-393581FEB2ED.html["SnapMirror Beziehungen unterbrechen"]
 * Verbinden Sie die LUN aus dem sekundären Server mit dem gleichen Laufwerksbuchstaben.
@@ -23,20 +22,17 @@ Sie können das SnapCenter Plug-in für SQL Server Storage wiederherstellen, ind
 * Stellen Sie sicher, dass die SQL-Ressourcen wieder online sind.
 
 
-*Über diese Aufgabe*
-
+.Über diese Aufgabe
 Disaster Recovery (DR) wird auf VMDK- und RDM-Konfigurationen nicht unterstützt.
 
-*Schritte*
-
+.Schritte
 . Navigieren Sie auf der Seite Einstellungen zu *Einstellungen* > *Globale Einstellungen* > *Disaster Recovery*.
 . Wählen Sie *Disaster Recovery Aktivieren*.
 . Klicken Sie Auf *Anwenden*.
 . Überprüfen Sie, ob der DR-Job aktiviert ist oder nicht, indem Sie auf *Monitor* > *Jobs* klicken.
 
 
-*Nach Ihrer Beendigung*
-
+.Nachdem Sie fertig sind
 * Falls neue Datenbanken nach dem Failover erstellt werden, befinden sich die Datenbanken außerhalb des DR-Modus.
 +
 Die neuen Datenbanken laufen weiterhin so wie vor dem Failover.

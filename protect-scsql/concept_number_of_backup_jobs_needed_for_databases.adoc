@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/concept_number_of_backup_jobs_needed_for_databases.html 
 sidebar: sidebar 
-keywords:  
+keywords: Number of backup jobs 
 summary: 'Zu den Faktoren, die die Anzahl der erforderlichen Backup-Jobs bestimmen, gehören die Größe der Datenbank, die Anzahl der verwendeten Volumes, die Änderungsrate der Datenbank und Ihr Service Level Agreement \ (SLA\).' 
 ---
 = Anzahl der für Datenbanken erforderlichen Backup-Jobs

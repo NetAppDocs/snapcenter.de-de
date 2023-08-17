@@ -1,7 +1,7 @@
 ---
 permalink: admin/concept_manage_policies.html 
 sidebar: sidebar 
-keywords:  
+keywords: Manage policies 
 summary: Sie können Richtlinien von einer Ressource oder Ressourcengruppe trennen, ändern, löschen, anzeigen und kopieren. 
 ---
 = Management von Richtlinien
@@ -78,8 +78,7 @@ Sie können Richtlinien jederzeit von einer Ressource oder Ressourcengruppe tren
 
 Wenn Sie keine Richtlinien mehr benötigen, können Sie sie löschen.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 Sie sollten die Richtlinie von Ressourcen- oder Ressourcengruppen trennen, wenn die Richtlinie mit einer Ressource oder Ressourcengruppe verknüpft ist.
 
 *Schritte*

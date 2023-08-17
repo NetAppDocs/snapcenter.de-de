@@ -13,8 +13,7 @@ summary: Sie können mit den Sicherheits-Login-Befehlen eine ONTAP RBAC-Rolle hi
 [role="lead"]
 Sie können mit den Sicherheits-Login-Befehlen eine ONTAP RBAC-Rolle hinzufügen, wenn auf Ihren Storage-Systemen Clustered ONTAP ausgeführt wird.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 * Bevor Sie eine ONTAP RBAC-Rolle für Storage-Systeme mit Clustered ONTAP erstellen, müssen Sie Folgendes angeben:
 +
 ** Die Aufgabe (oder Aufgaben), die Sie ausführen möchten

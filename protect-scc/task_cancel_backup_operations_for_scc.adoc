@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_cancel_backup_operations_for_scc.html 
 sidebar: sidebar 
-keywords:  
+keywords: cancel backup, custom plug-in 
 summary: Sie können Backup-Vorgänge in der Warteschlange abbrechen. 
 ---
 = Abbrechen der Backup-Vorgänge für benutzerdefinierte Plug-ins

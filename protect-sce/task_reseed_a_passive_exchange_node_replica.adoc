@@ -13,8 +13,7 @@ summary: Wenn Sie eine Replikatkopie erneut übertragen müssen, beispielsweise 
 [role="lead"]
 Wenn Sie eine Replikatkopie erneut übertragen müssen, beispielsweise wenn eine Kopie beschädigt ist, können Sie sie mithilfe der Funktion zum erneuten Seeding in SnapCenter erneut in das neueste Backup übertragen.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 * Sie müssen SnapCenter Server 4.1 oder höher und Plug-in für Exchange 4.1 oder höher verwenden.
 +
 Erneutes Seeding eines Replikats wird in SnapCenter-Versionen vor 4.1 nicht unterstützt.
@@ -27,8 +26,7 @@ Erneutes Seeding eines Replikats wird in SnapCenter-Versionen vor 4.1 nicht unte
 
 | *Best Practice:* um einen Rückgang zwischen den Knoten zu vermeiden, empfehlen wir Ihnen, entweder ein neues Backup zu erstellen, bevor Sie einen erneuten Vorgang durchführen, oder den Host mit dem neuesten Backup auszuwählen. 
 |===
-*Schritte*
-
+.Schritte
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann *Microsoft Exchange Server Plug-in* aus der Liste aus.
 . Wählen Sie auf der Seite Ressourcen die entsprechende Option aus der Liste Ansicht aus:
 +

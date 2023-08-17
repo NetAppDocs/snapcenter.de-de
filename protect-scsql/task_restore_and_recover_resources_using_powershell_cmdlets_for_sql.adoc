@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_restore_and_recover_resources_using_powershell_cmdlets_for_sql.html 
 sidebar: sidebar 
-keywords:  
+keywords: restore resources 
 summary: Zur Wiederherstellung eines Ressourcen-Backups gehört die Initiierung einer Verbindungssitzung mit dem SnapCenter-Server, die Auflistung der Backups und das Abrufen von Backup-Informationen sowie die Wiederherstellung eines Backups. 
 ---
 = Stellen Sie Ressourcen mithilfe von PowerShell Cmdlets wieder her
@@ -15,8 +15,7 @@ Zur Wiederherstellung eines Ressourcen-Backups gehört die Initiierung einer Ver
 
 Sie müssen die PowerShell Umgebung vorbereitet haben, um die PowerShell Cmdlets auszuführen.
 
-*Schritte*
-
+.Schritte
 . Starten Sie eine Verbindungssitzung mit dem SnapCenter-Server für einen bestimmten Benutzer, indem Sie das Cmdlet "Open-SmConnection" verwenden.
 +
 [listing]

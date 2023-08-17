@@ -1,7 +1,7 @@
 ---
 permalink: install/reference_provision_storage_using_powershell_cmdlets.html 
 sidebar: sidebar 
-keywords:  
+keywords: Provision storage, snapcenter 
 summary: Wenn Sie die SnapCenter GUI nicht zum Ausführen von Aufgaben zur Host-Bereitstellung und zur Speicherplatzrückgewinnung verwenden möchten, können Sie die PowerShell Commandlets verwenden, die vom SnapCenter Plug-in für Microsoft Windows zur Verfügung gestellt werden. Sie können Cmdlets direkt verwenden oder zu Skripten hinzufügen. 
 ---
 = Stellen Sie Storage mit PowerShell cmdlets bereit

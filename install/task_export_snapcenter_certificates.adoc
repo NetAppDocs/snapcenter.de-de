@@ -60,6 +60,6 @@ Assistent zum Exportieren von Zertifikaten abschließen
 |===
 
 
-*Ergebnisse*
+*Ergebnis*
 
 Zertifikate werden im .pfx-Format exportiert.

@@ -1,7 +1,7 @@
 ---
 permalink: admin/task_request_reports_of_the_protection_status_from_the_dashboard.html 
 sidebar: sidebar 
-keywords:  
+keywords: dashboard 
 summary: Sie können Sicherungsdetails für Ressourcen anfordern, die von bestimmten Plug-ins gemanagt werden, über das Dashboard. 
 ---
 = Berichte zum Sicherungsstatus können über das Dashboard angefordert werden

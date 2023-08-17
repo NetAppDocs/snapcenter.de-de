@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_back_up_individual_custom_plug_in_resources.html 
 sidebar: sidebar 
-keywords:  
+keywords: backup, custom plug-in 
 summary: Wenn eine einzelne benutzerdefinierte Plug-in-Ressource nicht zu einer Ressourcengruppe gehört, können Sie die Ressource über die Seite Ressourcen sichern. Sie können die Ressource nach Bedarf sichern, oder wenn die Ressource über eine Richtlinie und einen konfigurierten Zeitplan verfügt, werden die Backups automatisch gemäß dem Zeitplan durchgeführt. 
 ---
 = Sicherung individueller Plug-in-Ressourcen
@@ -13,18 +13,16 @@ summary: Wenn eine einzelne benutzerdefinierte Plug-in-Ressource nicht zu einer 
 [role="lead"]
 Wenn eine einzelne benutzerdefinierte Plug-in-Ressource nicht zu einer Ressourcengruppe gehört, können Sie die Ressource über die Seite Ressourcen sichern. Sie können die Ressource nach Bedarf sichern, oder wenn die Ressource über eine Richtlinie und einen konfigurierten Zeitplan verfügt, werden die Backups automatisch gemäß dem Zeitplan durchgeführt.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 * Sie müssen eine Sicherungsrichtlinie erstellt haben.
 * Wenn Sie eine Ressource mit einer SnapMirror Beziehung mit einem sekundären Storage sichern möchten, sollte die dem Storage-Benutzer zugewiesene ONTAP-Rolle die Berechtigung „`snapmirror all`“ enthalten. Wenn Sie jedoch die Rolle „`vsadmin`“ verwenden, ist die Berechtigung „`snapmirror all`“ nicht erforderlich.
 
 
-*Schritte*
-
+.Schritte
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
 . Filtern Sie auf der Seite Ressourcen die Ressourcen aus der Dropdown-Liste *Ansicht* nach Ressourcentyp.
 +
-Klicken Sie Auf image:../media/filter_icon.png[""]Und wählen Sie dann den Hostnamen und den Ressourcentyp aus, um die Ressourcen zu filtern. Sie können dann auf klicken image:../media/filter_icon.png[""] Um den Filterbereich zu schließen.
+Klicken Sie Auf image:../media/filter_icon.png[""]Und wählen Sie dann den Hostnamen und den Ressourcentyp aus, um die Ressourcen zu filtern. Sie können dann auf klicken image:../media/filter_icon.png["Filtersymbol"] Um den Filterbereich zu schließen.
 
 . Klicken Sie auf die Ressource, die Sie sichern möchten.
 . Wenn Sie auf der Seite „Ressource“ einen benutzerdefinierten Namen verwenden möchten, aktivieren Sie das Kontrollkästchen *benutzerdefiniertes Namensformat für Snapshot-Kopie verwenden* und geben dann ein benutzerdefiniertes Namensformat für den Namen der Snapshot-Kopie ein.
@@ -58,7 +56,7 @@ Wählen Sie diese Option aus, um zu vermeiden, einen WAFL Konsistenzpunkt zu erz
 
 |===
 +
-image:../media/application_settings.gif[""]
+image:../media/application_settings.gif["Seite „Anwendungseinstellungen“"]
 
 .. Klicken Sie auf den Pfeil *Scripts*, um vor- und Post-Befehle für quiesce, Snapshot copy und unquiesce-Vorgänge auszuführen. Sie können auch vor dem Beenden des Sicherungsvorgangs Vorbefehle ausführen.
 +
@@ -98,12 +96,12 @@ Wählen Sie *other* aus, und geben Sie dann den Befehl ein, um eine Snapshot Kop
 .. Wählen Sie eine oder mehrere Richtlinien aus der Dropdown-Liste aus.
 +
 
-NOTE: Sie können eine Richtlinie auch erstellen, indem Sie auf klicken image:../media/add_policy_from_resourcegroup.gif[""].
+NOTE: Sie können eine Richtlinie auch erstellen, indem Sie auf klicken image:../media/add_policy_from_resourcegroup.gif["Symbol hinzufügen"].
 
 +
 Im Abschnitt „Zeitpläne für ausgewählte Richtlinien konfigurieren“ werden die ausgewählten Richtlinien aufgelistet.
 
-.. Klicken Sie Auf image:../media/add_policy_from_resourcegroup.gif[""] In der Spalte Zeitplan konfigurieren für die Richtlinie konfigurieren, für die Sie einen Zeitplan konfigurieren möchten.
+.. Klicken Sie Auf image:../media/add_policy_from_resourcegroup.gif["Symbol hinzufügen"] In der Spalte Zeitplan konfigurieren für die Richtlinie konfigurieren, für die Sie einen Zeitplan konfigurieren möchten.
 .. Konfigurieren Sie im Dialogfeld Add Schedules for Policy_Policy_Name_ den Zeitplan, und klicken Sie dann auf *OK*.
 +
 Dabei ist _Policy_Name_ der Name der von Ihnen ausgewählten Richtlinie.

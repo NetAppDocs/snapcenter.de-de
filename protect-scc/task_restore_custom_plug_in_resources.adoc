@@ -13,8 +13,7 @@ summary: Der Restore- und Recovery-Workflow umfasst Planung, Durchführung von R
 [role="lead"]
 Der Restore- und Recovery-Workflow umfasst Planung, Durchführung von Restore-Vorgängen und Monitoring von Vorgängen.
 
-*Über diese Aufgabe*
-
+.Über diese Aufgabe
 Der folgende Workflow zeigt die Reihenfolge, in der Sie den Wiederherstellungsvorgang durchführen müssen:
 
 image::../media/restore_workflow.gif[Wiederherstellung des Workflows]

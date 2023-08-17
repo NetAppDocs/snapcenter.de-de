@@ -13,7 +13,7 @@ summary: Ressourcen sind SAP HANA Datenbanken und nicht-Daten-Volumes auf dem Li
 [role="lead"]
 Ressourcen sind SAP HANA Datenbanken und nicht-Daten-Volumes auf dem Linux-Host, die von SnapCenter gemanagt werden. Diese Ressourcen können Ressourcengruppen hinzugefügt werden, um Datensicherungsvorgänge durchzuführen, nachdem die verfügbaren SAP HANA Datenbanken ermittelt wurden.
 
-.Was Sie benötigen
+.Bevor Sie beginnen
 * Sie müssen bereits Aufgaben abgeschlossen haben, wie z. B. die Installation des SnapCenter-Servers, das Hinzufügen des HDB-Benutzerspeicherschlüssels, das Hinzufügen von Hosts und das Einrichten der Speichersystemverbindungen.
 * Sie müssen den HDB Secure User Store Key und den HDB SQL OS-Benutzer auf dem Linux-Host konfiguriert haben.
 +
@@ -31,9 +31,9 @@ Die automatisch ermittelten Ressourcen können nicht geändert oder gelöscht we
 .Schritte
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das Plug-in für SAP HANA aus der Liste aus.
 . Wählen Sie auf der Seite Ressourcen den Ressourcentyp aus der Liste Ansicht aus.
-. (Optional) Klicken Sie Auf *image:../media/filter_icon.png[""]*, und wählen Sie dann den Hostnamen aus.
+. (Optional) Klicken Sie Auf *image:../media/filter_icon.png["Filtersymbol"]*, und wählen Sie dann den Hostnamen aus.
 +
-Sie können dann auf * klickenimage:../media/filter_icon.png[""]* Zum Schließen des Filterfensters.
+Sie können dann auf * klickenimage:../media/filter_icon.png["Filtersymbol"]* Zum Schließen des Filterfensters.
 
 . Klicken Sie auf *Ressourcen aktualisieren*, um die auf dem Host verfügbaren Ressourcen zu ermitteln.
 +
@@ -52,7 +52,7 @@ NOTE: Wenn in der SAP HANA-Datenbank kein HDB-sicherer Benutzerspeicherschlüsse
 
 IMPORTANT: Sie müssen die Ressourcen aktualisieren, wenn die Datenbanken außerhalb von SnapCenter umbenannt werden.
 
-.Was kommt als Nächstes?
+.Nachdem Sie fertig sind
 Sie müssen den HDB Secure User Store Key und den HDBSQL OS User so konfigurieren, dass sie die Datenbank schützen oder zur Ressourcengruppe hinzufügen können, um Datenschutzvorgänge durchzuführen.
 
 link:task_configure_hdb_user_store_key_and_hdbsql_os_user_for_the_sap_hana_database.html["Konfiguration des HDB-Benutzerspeicherschlüssels und des HDBSQL OS-Benutzers für die SAP HANA-Datenbank"]

@@ -6,8 +6,7 @@ Sie sollten das CA-Zertifikat mit den Windows-Host-Plug-in-Diensten konfiguriere
 
 Führen Sie die folgenden Schritte auf dem SnapCenter-Server und allen Plug-in-Hosts durch, auf denen CA-Zertifikate bereits bereitgestellt wurden.
 
-*Schritte*
-
+.Schritte
 . Entfernen Sie die vorhandene Zertifikatbindung mit SMCore-Standardport 8145, indem Sie den folgenden Befehl ausführen:
 +
 `> netsh http delete sslcert ipport=0.0.0.0:_<SMCore Port>`

@@ -13,8 +13,7 @@ summary: Das Sichern einer Exchange Server-Datenbank umfasst die Einrichtung ein
 [role="lead"]
 Das Sichern einer Exchange Server-Datenbank umfasst die Einrichtung einer Verbindung mit dem SnapCenter-Server, die Ermittlung der Exchange Server-Datenbank, das Hinzufügen einer Richtlinie, das Erstellen einer Backup-Ressourcengruppe, das Sichern und das Anzeigen des Backup-Status.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 * Sie müssen die PowerShell Umgebung vorbereitet haben, um die PowerShell Cmdlets auszuführen.
 * Sie müssen die Speichersystemverbindung hinzugefügt und Anmeldedaten erstellt haben.
 * Sie müssen Hosts hinzugefügt und Ressourcen erkannt haben.
@@ -23,8 +22,7 @@ Das Sichern einer Exchange Server-Datenbank umfasst die Einrichtung einer Verbin
 
 NOTE: Das Plug-in für Exchange unterstützt keine Klonvorgänge. Daher wird der CloneType-Parameter für das Cmdlet "Add-SmPolicy" für Plug-in für Exchange nicht unterstützt
 
-*Schritte*
-
+.Schritte
 . Starten Sie eine Verbindungssitzung mit dem SnapCenter-Server für einen bestimmten Benutzer, indem Sie das Cmdlet "Open-SmConnection" verwenden.
 +
 [listing]

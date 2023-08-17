@@ -13,7 +13,7 @@ summary: Das Sichern einer Datenbank umfasst die Einrichtung einer Verbindung mi
 [role="lead"]
 Das Sichern einer Datenbank umfasst die Einrichtung einer Verbindung mit dem SnapCenter-Server, das Hinzufügen von Ressourcen, das Hinzufügen einer Richtlinie, das Erstellen einer Backup-Ressourcengruppen und das Sichern von Ressourcen.
 
-.Was Sie benötigen
+.Bevor Sie beginnen
 * Sie müssen die PowerShell Umgebung vorbereitet haben, um die PowerShell Cmdlets auszuführen.
 * Sie müssen die Speichersystemverbindung hinzugefügt und Anmeldedaten erstellt haben.
 

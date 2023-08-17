@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_restore_a_sql_server_database_from_secondary_storage.html 
 sidebar: sidebar 
-keywords:  
+keywords: restore operation 
 summary: 'Sie können die gesicherten SQL Server Datenbanken aus den physischen LUNs \ (RDM, iSCSI oder FCP\) auf einem sekundären Speichersystem wiederherstellen. Die Funktion „Restore“ ist ein mehrphasiger Prozess, bei dem alle Daten und Protokollseiten von einem bestimmten SQL Server Backup im sekundären Storage-System in eine angegebene Datenbank kopiert werden.' 
 ---
 = Wiederherstellung einer SQL Server-Datenbank aus dem sekundären Storage
@@ -13,15 +13,13 @@ summary: 'Sie können die gesicherten SQL Server Datenbanken aus den physischen 
 [role="lead"]
 Sie können die gesicherten SQL Server Datenbanken von den physischen LUNs (RDM, iSCSI oder FCP) auf einem sekundären Speichersystem wiederherstellen. Die Funktion „Restore“ ist ein mehrphasiger Prozess, bei dem alle Daten und Protokollseiten von einem bestimmten SQL Server Backup im sekundären Storage-System in eine angegebene Datenbank kopiert werden.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 * Sie müssen die Snapshot Kopien vom primären zum sekundären Storage-System replizieren.
 * Sie müssen sicherstellen, dass der SnapCenter-Server und der Plug-in-Host eine Verbindung zum sekundären Speichersystem herstellen können.
 * Die meisten Felder auf den Seiten des Assistenten Wiederherstellen werden im grundlegenden Wiederherstellungsprozess erläutert. In den folgenden Informationen werden einige der Felder beschrieben, für die Sie möglicherweise eine Anleitung benötigen.
 
 
-*Schritte*
-
+.Schritte
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann *SnapCenter-Plug-in für SQL Server* aus der Liste aus.
 . Wählen Sie auf der Seite Ressourcen in der Dropdown-Liste *Ansicht* die Option *Datenbank* oder *Ressourcengruppe* aus.
 . Wählen Sie die Datenbank oder Ressourcengruppe aus.

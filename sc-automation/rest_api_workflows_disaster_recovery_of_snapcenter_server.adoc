@@ -74,9 +74,12 @@ NOTE: Wenn die VM beschädigt ist, starten Sie eine andere VM oder eine Maschine
 
 Mithilfe VON REST-APIs können Sie die folgenden Operationen auf der SEITE REST APIs Swagger ausführen. Informationen zum Zugriff auf die Seite Swagger finden Sie unter link:https://docs.netapp.com/us-en/snapcenter/sc-automation/task_how%20to_access_rest_apis_using_the_swagger_api_web_page.html["Zugriff auf REST-APIs über die Swagger-API-Webseite"].
 
-.Was Sie benötigen
+.Bevor Sie beginnen
 * Sie sollten sich als SnapCenter Admin-Benutzer einloggen.
 * Der SnapCenter-Server sollte betriebsbereit sein, um die DR-Wiederherstellungs-API auszuführen.
+* Wenn die DLLs beschädigt sind, reparieren Sie die SnapCenter-Serverinstallation.
+* Wenn NSM beschädigt ist oder Konfigurationsdateien beschädigt sind, deinstallieren Sie den SnapCenter-Server mit derselben Version und installieren Sie ihn erneut.
+* Wenn die VM beschädigt ist, starten Sie eine andere VM mit demselben Namen und installieren Sie SnapCenter Server mit derselben Version.
 
 
 .Über diese Aufgabe
@@ -132,5 +135,5 @@ Aktiviert oder deaktiviert die Speicher-DR
 POST
 
 |===
-.Finden Sie weitere Informationen
+.Verwandte Informationen
 Siehe link:https://www.youtube.com/watch?v=Nbr_wm9Cnd4&list=PLdXI3bZJEw7nofM6lN44eOe4aOSoryckg["Disaster Recovery-APIs"^] Video:

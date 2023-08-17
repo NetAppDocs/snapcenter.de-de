@@ -13,7 +13,7 @@ summary: Sie müssen die Ressourcen hinzufügen, die Sie sichern oder klonen mö
 [role="lead"]
 Sie müssen die Ressourcen hinzufügen, die Sie sichern oder klonen möchten. Je nach Umgebung können sich die Ressourcen entweder um Datenbankinstanzen oder Sammlungen handeln, die Sie sichern oder klonen möchten.
 
-.Was Sie benötigen
+.Bevor Sie beginnen
 * Sie müssen Aufgaben wie das Installieren des SnapCenter-Servers, das Hinzufügen von Hosts, das Erstellen von Speichersystemverbindungen und das Hinzufügen von Anmeldeinformationen abgeschlossen haben.
 * Dieser muss unbedingt vorhanden sein link:concept_develop_a_plug_in_for_your_application.html["Es wurde ein benutzerdefiniertes Plug-in für Ihre Anwendung erstellt"].
 * Sie müssen die Plug-ins auf SnapCenter Server hochgeladen haben.

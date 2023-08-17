@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_restore_a_resource_backup.html 
 sidebar: sidebar 
-keywords:  
+keywords: restore 
 summary: Mit SnapCenter können Sie Ressourcen wiederherstellen. Die Funktionen der Restore-Vorgänge hängen vom verwendeten Plug-in ab. 
 ---
 = Wiederherstellen eines Ressourcenbackups
@@ -13,19 +13,16 @@ summary: Mit SnapCenter können Sie Ressourcen wiederherstellen. Die Funktionen 
 [role="lead"]
 Mit SnapCenter können Sie Ressourcen wiederherstellen. Die Funktionen der Restore-Vorgänge hängen vom verwendeten Plug-in ab.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 * Sie müssen die Ressource oder Ressourcengruppen gesichert haben.
 * Der SnapCenter Administrator muss Ihnen die Storage Virtual Machines (SVMs) sowohl für die Quell-Volumes als auch Ziel-Volumes zugewiesen haben, wenn Sie Snapshot Kopien in einer Spiegelung oder einem Vault replizieren.
 * Sie müssen einen Backup-Vorgang abgebrochen haben, der derzeit für die Ressource oder Ressourcengruppe ausgeführt wird, die wiederhergestellt werden soll.
 
 
-*Über diese Aufgabe*
-
+.Über diese Aufgabe
 Der Standardwiederherstellungsvorgang stellt nur Storage-Objekte wieder her. Restore-Vorgänge auf Applikationsebene können nur durchgeführt werden, wenn das benutzerdefinierte Plug-in diese Funktion bietet.
 
-*Schritte*
-
+.Schritte
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
 . Filtern Sie auf der Seite Ressourcen die Ressourcen aus der Dropdown-Liste *Ansicht* nach Ressourcentyp.
 +
@@ -64,7 +61,7 @@ Wenn die Ressource Volumes oder qtrees als Storage-Platzbedarf enthält, werden 
 
 
 
-. Führen Sie auf der Seite Wiederherstellungstyp die folgenden Schritte aus: Wählen Sie Option, um Protokolle anzuwenden. Vergewissern Sie sich, dass Ihr Plugin alle Protokolle und Protokolle unterstützt, bis Sie den Typ wiederherstellen, bevor Sie ihn auswählen.
+. Führen Sie auf der Seite *Wiederherstellungstyp* die folgenden Schritte aus: Wählen Sie Option, um Protokolle anzuwenden. Vergewissern Sie sich, dass Ihr Plugin alle Protokolle und Protokolle unterstützt, bis Sie den Typ wiederherstellen, bevor Sie ihn auswählen.
 +
 |===
 | Ihr Ziel ist | Tun Sie das... 
@@ -90,9 +87,9 @@ Stellen Sie das Ressourcen-Backup wieder her
 Wählen Sie *Keine*.
 
 |===
-. Geben Sie auf der Seite Pre OPS die Befehle vor dem Wiederherstellen ein und heben Sie sie ab, bevor Sie einen Wiederherstellungsauftrag ausführen.
-. Geben Sie auf der Seite Post OPS Mount- und Post-Restore-Befehle ein, die ausgeführt werden sollen, nachdem eine Wiederherstellung durchgeführt wurde.
-. Wählen Sie auf der Benachrichtigungsseite aus der Dropdown-Liste *E-Mail-Präferenz* die Szenarien aus, in denen Sie die E-Mails versenden möchten.
+. Geben Sie auf der Seite *Pre OPS* die Befehle Pre Restore und Unmount ein, die ausgeführt werden sollen, bevor Sie einen Wiederherstellungsauftrag ausführen.
+. Geben Sie auf der Seite *Post OPS* die Befehle Mount und Post Restore ein, die ausgeführt werden sollen, nachdem ein Wiederherstellungsauftrag ausgeführt wurde.
+. Wählen Sie auf der Seite *Benachrichtigung* aus der Dropdown-Liste *E-Mail-Präferenz* die Szenarien aus, in denen Sie die E-Mails versenden möchten.
 +
 Außerdem müssen Sie die E-Mail-Adressen für Absender und Empfänger sowie den Betreff der E-Mail angeben. SMTP muss auch auf der Seite *Einstellungen* > *Globale Einstellungen* konfiguriert werden.
 

@@ -13,7 +13,7 @@ summary: Sie müssen die SnapCenterAdd Host-Seite verwenden, um Hosts hinzuzufü
 [role="lead"]
 Sie müssen die Seite SnapCenter *Add Host* verwenden, um Hosts hinzuzufügen und das Plug-ins-Paket zu installieren. Die Plug-ins werden automatisch auf den Remote-Hosts installiert.
 
-.Was Sie benötigen
+.Bevor Sie beginnen
 * Sie müssen ein Benutzer sein, der einer Rolle zugewiesen ist, die über die Berechtigungen für die Plug-in-Installation und -Deinstallation verfügt, wie z. B. die Rolle „SnapCenter-Administrator“.
 * Wenn Sie ein Plug-in auf einem Windows-Host installieren, sollten Sie UAC auf dem Host deaktivieren, wenn Sie keine integrierten Anmeldeinformationen angeben.
 * Stellen Sie sicher, dass der Nachrichtenwarteschlange in Betrieb ist.

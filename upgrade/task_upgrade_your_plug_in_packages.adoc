@@ -15,8 +15,7 @@ Die Plug-in-Pakete werden im Rahmen des SnapCenter Upgrades verteilt.
 
 Durch das Upgrade-Verfahren wird Ihr Windows-, Linux- oder AIX-Host in den Modus `maintBuße` versetzt, sodass der Host keine geplanten Jobs ausführen kann.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 * Wenn Sie nicht-Root-Benutzer mit Zugriff auf die Linux-Maschinen sind, sollten Sie die Datei _/etc/sudoers_ vor der Durchführung des Upgrade-Vorgangs mit den neuesten Prüfsummenwerten aktualisieren.
 * Standardmäßig erkennt SnapCenter JAVA_HOME von der Umgebung. Wenn Sie eine feste JAVA_HOME-DATEI verwenden möchten und wenn Sie die Plug-ins auf einem Linux-Host aktualisieren, sollten Sie den PARAMETER SKIP_JAVAHOME_UPDATE manuell in die Datei _spl.properties_ unter _/var/opt/snapcenter/spl/etc/_ hinzufügen und den Wert auf TRUE setzen.
 +
@@ -28,8 +27,7 @@ Beispiele für SnapCenter-Konfigurationsdateien: SnapDriveService.exe.config, SM
 
 
 
-*Über diese Aufgabe*
-
+.Über diese Aufgabe
 * Durch das Upgrade-Verfahren wird Ihr Windows-, Linux- oder AIX-Host in den Modus `maintBuße` versetzt, sodass der Host keine geplanten Jobs ausführen kann.
 * Für das SnapCenter-Plug-in für Microsoft SQL Server, das SnapCenter-Plug-in für Microsoft Exchange Server und das SnapCenter Plug-in für Microsoft Windows wird empfohlen, sowohl den Server als auch die Plug-in-Hosts auf die neueste Version für DIE Ausführung VON SCRIPTS_PATH zu aktualisieren.
 +
@@ -40,8 +38,7 @@ Auf der Seite *Job Details* empfiehlt eine Warnmeldung, dass der Kunde die Skrip
 
 
 
-*Schritte*
-
+.Schritte
 . Klicken Sie im linken Navigationsbereich auf *Hosts* > *verwaltete Hosts*.
 . Aktualisieren Sie die Hosts, indem Sie eine der folgenden Aufgaben ausführen:
 +

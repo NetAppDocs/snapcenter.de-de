@@ -18,8 +18,7 @@ Optional können Sie mithilfe von PowerShell Cmdlets mehrere Installations- und 
 
 NOTE: Die automatische Installation des SnapCenter-Servers über die Befehlszeile wird nicht unterstützt.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 * Der SnapCenter-Server-Host muss mit Windows-Updates auf dem neuesten Stand sein, ohne dass das System neu gestartet werden muss.
 * Sie sollten sicherstellen, dass MySQL Server nicht auf dem Host installiert ist, auf dem Sie den SnapCenter-Server installieren möchten.
 * Sie sollten das Debuggen von Windows-Installateurs aktiviert haben.

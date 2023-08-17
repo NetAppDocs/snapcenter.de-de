@@ -13,8 +13,7 @@ summary: Eine Ressourcengruppe ist der Container, zu dem Sie mehrere Dateisystem
 [role="lead"]
 Eine Ressourcengruppe ist der Container, zu dem Sie mehrere Dateisysteme hinzufügen können, die Sie schützen möchten. Sie müssen auch eine oder mehrere Richtlinien an die Ressourcengruppe anhängen, um den Typ des Datensicherungsauftrags zu definieren, den Sie ausführen möchten, und dann den Backup-Zeitplan festlegen.
 
-*Schritte*
-
+.Schritte
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
 . Wählen Sie auf der Seite Ressourcen die Option *Dateisysteme* aus der Liste aus.
 +
@@ -75,12 +74,12 @@ Um ein einzelnes Dateisystem hinzuzufügen, deaktivieren Sie die Option *Autosel
 Sie können eine beliebige vorhandene Richtlinie auswählen und auf *Details* klicken, um zu bestimmen, ob Sie diese Richtlinie verwenden können.
 
 +
-Wenn keine vorhandene Richtlinie Ihren Anforderungen entspricht, können Sie eine neue Richtlinie erstellen, indem Sie auf * klickenimage:../media/add_policy_from_resourcegroup.gif[""]* Um den Policy Wizard zu starten.
+Wenn keine vorhandene Richtlinie Ihren Anforderungen entspricht, können Sie eine neue Richtlinie erstellen, indem Sie auf * klickenimage:../media/add_policy_from_resourcegroup.gif["Plus-Symbol"]* Um den Policy Wizard zu starten.
 
 +
 Die ausgewählten Richtlinien werden in der Spalte Richtlinie im Abschnitt „Zeitpläne für ausgewählte Richtlinien konfigurieren“ aufgeführt.
 
-.. Klicken Sie im Abschnitt Zeitpläne für ausgewählte Richtlinien konfigurieren auf *image:../media/add_policy_from_resourcegroup.gif[""]* In der Spalte Zeitplan konfigurieren für die Richtlinie, für die Sie den Zeitplan konfigurieren möchten.
+.. Klicken Sie im Abschnitt Zeitpläne für ausgewählte Richtlinien konfigurieren auf *image:../media/add_policy_from_resourcegroup.gif["Plus-Symbol"]* In der Spalte Zeitplan konfigurieren für die Richtlinie, für die Sie den Zeitplan konfigurieren möchten.
 .. Wenn die Richtlinie mit mehreren Terminplantypen (Frequenzen) verknüpft ist, wählen Sie die Frequenz aus, die Sie konfigurieren möchten.
 .. Konfigurieren Sie den Zeitplan im Dialogfeld Add Schedules for Policy_Name_, indem Sie das Startdatum, das Ablaufdatum und die Häufigkeit angeben und dann auf *Finish* klicken.
 +

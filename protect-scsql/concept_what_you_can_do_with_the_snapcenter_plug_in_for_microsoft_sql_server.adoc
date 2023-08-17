@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/concept_what_you_can_do_with_the_snapcenter_plug_in_for_microsoft_sql_server.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter Plug-in for Microsoft SQL Server 
 summary: Wenn das SnapCenter Plug-in für Microsoft SQL Server in Ihrer Umgebung installiert ist, können Sie mit SnapCenter die SQL Server Datenbanken sichern, wiederherstellen und klonen. 
 ---
 = Welche Möglichkeiten bietet das SnapCenter Plug-in für Microsoft SQL Server
