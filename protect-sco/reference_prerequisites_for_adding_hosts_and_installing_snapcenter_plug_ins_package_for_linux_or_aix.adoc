@@ -77,7 +77,7 @@ NOTE: Wenn Sie die Oracle-Datenbank auf LVM unter Oracle Linux oder Red hat Ente
  a| 
 MindestRAM für das SnapCenter Plug-in auf dem Host
  a| 
-1 GB
+2 GB
 
 
 
@@ -211,7 +211,7 @@ MindestRAM für das SnapCenter Plug-in auf dem Host
  a| 
 Minimale Installation und Protokollierung von Speicherplatz für das SnapCenter Plug-in auf dem Host
  a| 
-1 GB
+2 GB
 
 
 NOTE: Sie sollten genügend Festplattenspeicher zuweisen und den Speicherverbrauch durch den Protokollordner überwachen. Der erforderliche Protokollspeicherplatz ist abhängig von der Anzahl der zu sichernden Einheiten und der Häufigkeit von Datensicherungsvorgängen. Wenn kein ausreichender Festplattenspeicher vorhanden ist, werden die Protokolle für die kürzlich ausgeführten Vorgänge nicht erstellt.
