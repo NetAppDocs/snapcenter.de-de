@@ -1,0 +1,95 @@
+---
+permalink: protect-scu/concept_overview_snapcenter_plug_in_for_UNIX_file_systems.html 
+sidebar: sidebar 
+keywords: overview, unix file system, plug-in for unix file system, backup, restore, clone 
+summary: Plug-in für Unix-Dateisysteme unterstützt das Sichern, Wiederherstellen und Klonen von tof Unix-Dateisystemen. 
+---
+= Was Sie mit dem SnapCenter-Plug-in für Unix-Dateisysteme tun können
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn das Plug-in für Unix-Dateisysteme in Ihrer Umgebung installiert ist, können Sie mit SnapCenter Unix-Dateisysteme sichern, wiederherstellen und klonen. Sie können auch Aufgaben zur Unterstützung dieser Operationen ausführen.
+
+* Und entdecken Sie Ressourcen
+* Sichern Sie Unix-Dateisysteme
+* Planen von Backup-Vorgängen
+* Wiederherstellung von Dateisystemsicherungen
+* Backups von Dateisystemen klonen
+* Monitoring von Backup-, Restore- und Klonvorgängen
+
+
+
+
+== Unterstützte Konfigurationen
+
+|===
+| Element | Unterstützte Konfiguration 
+
+
+ a| 
+Umgebungen Beschrieben Sind
+ a| 
+* Physischer Server
+* Virtueller Server
+
+
+
+
+ a| 
+Betriebssysteme
+ a| 
+* Red Hat Enterprise Linux
+* Oracle Linux
+* SUSE Linux Enterprise Server (SLES)
+
+
+
+
+ a| 
+File-Systeme
+ a| 
+* SAN
++
+** Sowohl LVM- als auch nicht-LVM-basierte Dateisysteme
+** LVM über VMDK ext3, ext4 und xfs
+
+
+* NFS: NFS v3, NFS v4.x
+
+
+
+
+ a| 
+Protokolle
+ a| 
+* FC
+* FCoE
+* ISCSI
+* NFS
+
+
+
+
+ a| 
+Multipath
+ a| 
+ja
+
+|===
+
+
+== Einschränkungen
+
+* Die Kombination aus RDMs und virtuellen Laufwerken in einer Volume-Gruppe wird nicht unterstützt.
+* Wiederherstellung auf Dateiebene wird nicht unterstützt.
++
+Sie können jedoch manuell Wiederherstellungen auf Dateiebene durchführen, indem Sie das Backup klonen und die Dateien dann manuell kopieren.
+
+* Kombination aus auf VMDKs verteilten Filesystemen, die sowohl von NFS- als auch von VMFS-Datastore stammen, wird nicht unterstützt.
+* NVMe wird nicht unterstützt.
+* SnapMirror Business Continuity (SM-BC) wird nicht unterstützt.
+* Bereitstellung wird nicht unterstützt.
+

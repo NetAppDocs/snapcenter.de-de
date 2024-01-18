@@ -1,0 +1,93 @@
+---
+permalink: protect-scu/task_create_resource_groups_and_attach_policies_for_unix_file_systems.html 
+sidebar: sidebar 
+keywords: unix file systems, resource group, policy 
+summary: Eine Ressourcengruppe ist ein Container, in dem Sie Ressourcen hinzufügen, die Sie sichern und schützen möchten. 
+---
+= Erstellen von Ressourcengruppen und Anhängen von Richtlinien für Unix-Dateisysteme
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Eine Ressourcengruppe ist ein Container, in dem Sie Ressourcen hinzufügen, die Sie sichern und schützen möchten. Mit einer Ressourcengruppe können Sie alle Daten sichern, die mit den Dateisystemen verknüpft sind.
+
+.Schritte
+. Wählen Sie im linken Navigationsbereich *Ressourcen* und das entsprechende Plug-in aus der Liste aus.
+. Klicken Sie auf der Seite Ressourcen auf *Neue Ressourcengruppe*.
+. Führen Sie auf der Seite Name die folgenden Aktionen durch:
++
+.. Geben Sie im Feld Name einen Namen für die Ressourcengruppe ein.
++
+
+NOTE: Der Name der Ressourcengruppe darf 250 Zeichen nicht überschreiten.
+
+.. Geben Sie eine oder mehrere Beschriftungen in das Feld Tag ein, um später nach der Ressourcengruppe zu suchen.
++
+Wenn Sie beispielsweise HR als Tag zu mehreren Ressourcengruppen hinzufügen, können Sie später alle Ressourcengruppen finden, die mit dem HR-Tag verknüpft sind.
+
+.. Aktivieren Sie das Kontrollkästchen, und geben Sie ein benutzerdefiniertes Namensformat ein, das Sie für den Namen der Snapshot Kopie verwenden möchten.
++
+Beispiel: Custtext_Resource Group_Policy_hostname oder Resource Group_hostname. Standardmäßig wird ein Zeitstempel an den Namen der Snapshot Kopie angehängt.
+
+
+
+. Wählen Sie auf der Seite Ressourcen einen Host-Namen für Unix-Dateisysteme aus der Dropdown-Liste *Host* aus.
++
+
+NOTE: Die Ressourcen werden im Abschnitt Verfügbare Ressourcen nur dann aufgelistet, wenn die Ressource erfolgreich ermittelt wurde. Wenn Sie vor Kurzem Ressourcen hinzugefügt haben, werden diese erst nach einer Aktualisierung der Ressourcenliste in der Liste der verfügbaren Ressourcen angezeigt.
+
+. Wählen Sie im Abschnitt Verfügbare Ressourcen die Ressourcen aus, und verschieben Sie sie in den Abschnitt Ausgewählte Ressourcen.
+. Führen Sie auf der Seite Anwendungseinstellungen die folgenden Schritte aus:
++
+** Wählen Sie den Pfeil für Skripte aus und geben Sie die Befehle vor und nach für Stilllegung, Snapshot Kopie und Stilllegung ein. Sie können auch die vor dem Beenden auszuführenden Vorbefehle im Falle eines Fehlers eingeben.
+** Wählen Sie eine der Backup-Konsistenzoptionen aus:
++
+*** Wählen Sie *File System consistent* aus, wenn Sie sicherstellen möchten, dass die zwischengespeicherten Daten der Dateisysteme vor der Erstellung der Sicherung gelöscht werden und keine ein- oder Ausgabevorgänge im Dateisystem während der Erstellung der Sicherung erlaubt sind.
++
+
+NOTE: Für File-System-konsistente Snapshots werden für LUNs, die in der Volume-Gruppe beteiligt sind, Snapshots von Konsistenzgruppen erstellt.
+
+*** Wählen Sie *Crash-konsistent*, wenn Sie sicherstellen möchten, dass die zwischengespeicherten Daten der Dateisysteme vor der Erstellung der Sicherung gelöscht werden.
++
+
+NOTE: Wenn Sie verschiedene Dateisysteme in der Ressourcengruppe hinzugefügt haben, werden alle Volumes aus verschiedenen Dateisystemen in der Ressourcengruppe in eine Konsistenzgruppe aufgenommen.
+
+
+
+
+
+. Führen Sie auf der Seite Richtlinien die folgenden Schritte aus:
++
+.. Wählen Sie eine oder mehrere Richtlinien aus der Dropdown-Liste aus.
++
+
+NOTE: Sie können eine Richtlinie auch erstellen, indem Sie auf klicken image:../media/add_policy_from_resourcegroup.gif["Symbol hinzufügen"].
+
++
+Im Abschnitt „Zeitpläne für ausgewählte Richtlinien konfigurieren“ werden die ausgewählten Richtlinien aufgelistet.
+
+.. Klicken Sie Auf image:../media/add_policy_from_resourcegroup.gif["Symbol hinzufügen"] In der Spalte Zeitplan konfigurieren für die Richtlinie konfigurieren, für die Sie einen Zeitplan konfigurieren möchten.
+.. Konfigurieren Sie im Fenster Add Schedules for Policy_Name_ den Zeitplan, und klicken Sie dann auf *OK*.
++
+Dabei ist _Policy_Name_ der Name der von Ihnen ausgewählten Richtlinie.
+
++
+Die konfigurierten Zeitpläne sind in der Spalte angewendete Zeitpläne aufgeführt.
+
+
+
++
+Backup-Zeitpläne von Drittanbietern werden nicht unterstützt, wenn sie sich mit SnapCenter Backup-Zeitplänen überschneiden.
+
+. Wählen Sie auf der Benachrichtigungsseite aus der Dropdown-Liste *E-Mail-Präferenz* die Szenarien aus, in denen Sie die E-Mails versenden möchten.
++
+Außerdem müssen Sie die E-Mail-Adressen für Absender und Empfänger sowie den Betreff der E-Mail angeben. Wenn Sie den Bericht des Vorgangs anhängen möchten, der in der Ressourcengruppe ausgeführt wird, wählen Sie *Job-Bericht anhängen*.
+
++
+
+NOTE: Für eine E-Mail-Benachrichtigung müssen Sie die SMTP-Serverdetails entweder mit der GUI oder mit dem PowerShell-Befehlssatz Set-SmtpServer angegeben haben.
+
+. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
+

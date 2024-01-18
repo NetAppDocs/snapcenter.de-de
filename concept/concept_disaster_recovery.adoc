@@ -19,7 +19,7 @@ In diesem Abschnitt werden die beiden Arten der Disaster Recovery (DR) in SnapCe
 * Die Daten des SnapCenter Servers werden gesichert und können ohne Plug-in wiederhergestellt werden, das dem SnapCenter Server hinzugefügt oder durch ihn gemanagt wird.
 * Der sekundäre SnapCenter Server sollte auf demselben Installationsverzeichnis und auf demselben Port wie der primäre SnapCenter-Server installiert sein.
 * Für die Multi-Faktor-Authentifizierung (MFA) schließen Sie während der SnapCenter-Server-Wiederherstellung alle Browser-Registerkarten und öffnen Sie einen Browser erneut, um sich erneut anzumelden. Dadurch werden die vorhandenen oder aktiven Sitzungscookies gelöscht und die korrekten Konfigurationsdaten aktualisiert.
-* Die Disaster Recovery-Funktion von SnapCenter verwendet FÜR das Backup des SnapCenter Servers REST-APIs. Siehe link:../sc-automation/rest_api_workflows_disaster_recovery_of_snapcenter_server.html["REST-API-Workflows für Disaster Recovery von SnapCenter Server"].
+* Die Disaster Recovery-Funktion von SnapCenter verwendet FÜR das Backup des SnapCenter Servers REST-APIs. Siehe link:../tech-refresh/task_tech_refresh_server_host.html["REST-API-Workflows für Disaster Recovery von SnapCenter Server"].
 * Die Konfigurationsdatei für die Audit-Einstellungen wird nicht im DR-Backup gesichert und auch nicht auf dem DR-Server nach dem Wiederherstellungsvorgang. Sie sollten die Einstellungen für das Überwachungsprotokoll manuell wiederholen.
 
 

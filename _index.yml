@@ -3,12 +3,12 @@ indexpage:
   lead: SnapCenter Software ist eine einfache, zentralisierte und skalierbare Plattform,
     die applikationskonsistenten Datenschutz für Applikationen, Datenbanken, Host-Filesysteme
     und VMs bietet, die auf ONTAP Systemen in der Hybrid Cloud ausgeführt werden.
-    Diese Dokumentationsbibliothek enthält Informationen zu Version 4.9.
+    Diese Dokumentationsbibliothek enthält Informationen zu Version 5.0.
   tiles:
   - title: Los geht's
     links:
     - title: Versionshinweise
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886204
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886893
     - title: Weitere Informationen zu SnapCenter
       url: "/concept/concept_snapcenter_overview.html"
     - title: Kurzreferenz zum Schutz von SQL Server-Datenbanken
@@ -26,7 +26,7 @@ indexpage:
     - title: Konfigurieren Sie Hochverfügbarkeit mit F5
       url: "/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html"
     - title: Disaster Recovery für SnapCenter Server
-      url: "/sc-automation/rest_api_workflows_disaster_recovery_of_snapcenter_server.html"
+      url: "/tech-refresh/task_tech_refresh_server_host.html"
   - title: Microsoft SQL Server Datenbanken schützen
     links:
     - title: Installieren Sie das SnapCenter Plug-in für Microsoft SQL Server-Datenbank
@@ -68,9 +68,9 @@ indexpage:
   - title: Mehr Ressourcen
     links:
     - title: Cmdlet Referenzhandbuch
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895
     - title: Command Reference Guide
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886206
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886896
     - title: Dokumentation für frühere Versionen von SnapCenter
       url: https://www.netapp.com/data-protection/backup-recovery/snapcenter-backup-management/documentation/#ProseArticleLinkList13
     - title: NetApp Knowledge Base – SnapCenter

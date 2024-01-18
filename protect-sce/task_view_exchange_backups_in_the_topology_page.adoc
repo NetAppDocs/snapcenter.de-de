@@ -50,6 +50,15 @@ Im Abschnitt „Übersichtskarte“ wird die Gesamtanzahl der Backups und die Ge
 +
 Durch Klicken auf die Schaltfläche *Aktualisieren* wird eine Abfrage des Speichers gestartet, um eine genaue Anzahl anzuzeigen.
 
++
+Wenn ein SnapLock-fähiges Backup durchgeführt wird, wird durch Klicken auf die Schaltfläche *Aktualisieren* die primäre und sekundäre SnapLock-Ablaufzeit aktualisiert, die von ONTAP abgerufen wird. Ein wöchentlicher Zeitplan aktualisiert auch die primäre und sekundäre SnapLock-Ablaufzeit, die von ONTAP abgerufen wird.
+
++
+Wenn die Applikationsressource über mehrere Volumes verteilt ist, ist die SnapLock Verfallszeit für das Backup die längste SnapLock Verfallszeit, die für eine Snapshot Kopie in einem Volume festgelegt ist. Die längste SnapLock-Ablaufzeit wird von ONTAP abgerufen.
+
++
+Nach On-Demand-Backup, durch Klicken auf die Schaltfläche * Aktualisieren* aktualisiert die Details der Sicherung oder des Klons.
+
 . Klicken Sie in der Ansicht Kopien verwalten auf *Backups* auf dem primären oder sekundären Speicher, um Details zu einem Backup anzuzeigen.
 +
 Die Details der Backups werden in einem Tabellenformat angezeigt.

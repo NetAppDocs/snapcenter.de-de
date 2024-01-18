@@ -30,6 +30,13 @@ Die Anzahl der angezeigten Backups umfasst die Backups, die aus dem sekundären 
 
 NOTE: Klone eines Backups einer versionsflexiblen Spiegelung auf einem Volume vom Typ Mirror werden in der Topologieansicht angezeigt, aber die Anzahl der gespiegelten Backups in der Topologieansicht umfasst nicht das versionsflexible Backup.
 
+Wenn Sie eine sekundäre Beziehung als SnapMirror Business Continuity (SM-BC) haben, werden die folgenden zusätzlichen Symbole angezeigt:
+
+* image:../media/topology_replica_site_up.png["Replikatstandort oben"] Impliziert, dass der Replikatstandort hochgefahren ist.
+* image:../media/topology_replica_site_down.png["Replikatstandort nicht verfügbar"]  Bedeutet, dass der Replikatstandort ausgefallen ist.
+* image:../media/topology_reestablished.png["Beziehung wird wiederhergestellt"] Impliziert, dass die sekundäre Spiegel- oder Vault-Beziehung nicht wiederhergestellt wurde.
+
+
 *Schritte*
 
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
@@ -44,6 +51,20 @@ Im Abschnitt „Übersichtskarte“ wird die Gesamtanzahl der Backups und Klone 
 
 +
 Durch Klicken auf die Schaltfläche *Aktualisieren* wird eine Abfrage des Speichers gestartet, um eine genaue Anzahl anzuzeigen.
+
++
+Wenn ein SnapLock-fähiges Backup durchgeführt wird, wird durch Klicken auf die Schaltfläche *Aktualisieren* die primäre und sekundäre SnapLock-Ablaufzeit aktualisiert, die von ONTAP abgerufen wird. Ein wöchentlicher Zeitplan aktualisiert auch die primäre und sekundäre SnapLock-Ablaufzeit, die von ONTAP abgerufen wird.
+
++
+Wenn die Applikationsressource über mehrere Volumes verteilt ist, ist die SnapLock Verfallszeit für das Backup die längste SnapLock Verfallszeit, die für eine Snapshot Kopie in einem Volume festgelegt ist. Die längste SnapLock-Ablaufzeit wird von ONTAP abgerufen.
+
++
+Wenn Sie für SnapMirror Business Continuity (SM-BC) auf die Schaltfläche * Aktualisieren* klicken, wird das SnapCenter-Backup-Inventar aktualisiert, indem Sie ONTAP sowohl für primäre als auch für Replikatstandorte abfragen. Ein wöchentlicher Zeitplan führt diese Aktivität auch für alle Datenbanken durch, die eine SM-BC-Beziehung enthalten.
+
++
+** Bei SM-BC sollten die Beziehungen zwischen Async Mirror, Vault und MirrorVault zum neuen primären Ziel nach dem Failover manuell konfiguriert werden.
+** Nach dem Failover sollte ein Backup erstellt werden, damit SnapCenter den Failover erkennt. Sie können erst dann auf *Refresh* klicken, wenn ein Backup erstellt wurde.
+
 
 . Klicken Sie in der Ansicht Kopien verwalten auf *Backups* oder *Klone* auf dem primären oder sekundären Speicher, um Details zu einem Backup oder Klon anzuzeigen.
 +
@@ -66,4 +87,4 @@ Wenn der für SnapmirrorStatusUpdateWaitTime zugewiesene Wert kleiner ist, werde
 
 Die Informationen zu den Parametern, die mit dem Befehl und deren Beschreibungen verwendet werden können, können durch Ausführen von get-Help _Command_Name_ abgerufen werden.
 
-Alternativ können Sie auch auf die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2886206["SnapCenter Software Command Reference Guide"^] Oder https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["SnapCenter Software Cmdlet Referenzhandbuch"^].
+Alternativ können Sie auch auf die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2886896["SnapCenter Software Command Reference Guide"^] Oder https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["SnapCenter Software Cmdlet Referenzhandbuch"^].

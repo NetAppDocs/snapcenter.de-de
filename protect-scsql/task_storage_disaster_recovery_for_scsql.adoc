@@ -44,7 +44,7 @@ Neben den neuen Backups wird ein „i“-Symbol angezeigt, das angibt, dass dies
 * Sie können das SnapCenter-Plug-in für SQL Server Backups löschen, die während des Failovers erstellt wurden, entweder mit der UI oder mit dem folgenden Cmdlet: `Remove-SmBackup`
 * Wenn sich nach dem Failover einige der Ressourcen nicht im DR-Modus befinden sollen, verwenden Sie das folgende Cmdlet: `Remove-SmResourceDRMode`
 +
-Weitere Informationen finden Sie im https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["SnapCenter Software Cmdlet Referenzhandbuch"^].
+Weitere Informationen finden Sie im https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["SnapCenter Software Cmdlet Referenzhandbuch"^].
 
 * SnapCenter Server verwaltet die einzelnen Storage-Ressourcen (SQL-Datenbanken) im DR- oder nicht-DR-Modus, jedoch nicht die Ressourcengruppe mit Storage-Ressourcen, die sich im DR-Modus oder nicht im DR-Modus befinden.
 

@@ -94,8 +94,8 @@ NOTE: Sie sollten genügend Festplattenspeicher zuweisen und den Speicherverbrau
  a| 
 Erforderliche Softwarepakete
  a| 
-* Java 1.8.x (64-Bit) Oracle Java und OpenJDK Varianten
-* Java 11 (64-Bit), Oracle Java und OpenJDK
+* Java 1.8.x (64 Bit) Oracle Java und OpenJDK
+* Java 11 (64 Bit) Oracle Java und OpenJDK
 
 
 

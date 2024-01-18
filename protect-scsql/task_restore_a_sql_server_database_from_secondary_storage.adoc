@@ -19,6 +19,9 @@ Sie können die gesicherten SQL Server Datenbanken von den physischen LUNs (RDM,
 * Die meisten Felder auf den Seiten des Assistenten Wiederherstellen werden im grundlegenden Wiederherstellungsprozess erläutert. In den folgenden Informationen werden einige der Felder beschrieben, für die Sie möglicherweise eine Anleitung benötigen.
 
 
+.Über diese Aufgabe
+Wenn Sie für Richtlinien mit aktiviertem SnapLock für ONTAP 9.12.1 und ältere Versionen eine Sperrfrist für Snapshot Kopien angeben, übernehmen die Klone, die im Rahmen der Wiederherstellung aus den manipulationssicheren Snapshot Kopien erstellt wurden, die Verfallszeit von SnapLock. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
+
 .Schritte
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann *SnapCenter-Plug-in für SQL Server* aus der Liste aus.
 . Wählen Sie auf der Seite Ressourcen in der Dropdown-Liste *Ansicht* die Option *Datenbank* oder *Ressourcengruppe* aus.

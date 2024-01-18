@@ -19,6 +19,26 @@ Bevor Sie SnapCenter zum Backup von Oracle-Datenbankressourcen verwenden, müsse
 * Sie müssen auf die Datensicherung vorbereitet sein, indem Sie Aufgaben wie das Installieren von SnapCenter, das Hinzufügen von Hosts, das Erkennen von Datenbanken und das Erstellen von Speichersystemverbindungen ausführen.
 * Wenn Sie Snapshot Kopien in einen gespiegelten oder sekundären Vault-Storage replizieren, muss der SnapCenter Administrator Ihnen die SVMs sowohl für die Quell- als auch die Ziel-Volumes zugewiesen haben.
 * Wenn Sie das Plug-in als nicht-root-Benutzer installiert haben, sollten Sie die Ausführungsberechtigungen manuell den Verzeichnissen Prescript und Postscript zuweisen.
+* Voraussetzungen und Einschränkungen für SnapMirror Business Continuity (SM-BC) finden Sie unter https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["Objektbeschränkungen für SnapMirror Business Continuity"].
+
+
+.Über diese Aufgabe
+* SnapLock
++
+** Wenn die Option „Backup-Kopien für eine bestimmte Anzahl von Tagen aufbewahren“ ausgewählt ist, muss die SnapLock Aufbewahrungsfrist kleiner oder gleich den genannten Aufbewahrungstagen sein.
++
+Durch Angabe einer Sperrfrist für Snapshot-Kopien wird das Löschen der Snapshot-Kopien bis zum Ablauf der Aufbewahrungsfrist verhindert. Dies könnte dazu führen, dass eine größere Anzahl an Snapshot Kopien aufbewahrt wird als in der Richtlinie angegeben.
+
++
+Wenn Sie für ONTAP 9.12.1 und ältere Versionen eine Sperrfrist für Snapshot Kopien angeben, übernehmen die durch manipulationssichere Snapshot Kopien erstellten Klone die Ablaufdatum von SnapLock. Sie sollten die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
+
++
+
+NOTE: Die primären SnapLock-Einstellungen werden in der SnapCenter-Backup-Richtlinie und auf dem sekundären gemanagt
+SnapLock-Einstellungen werden von ONTAP gemanagt.
+
+
+
 
 
 *Schritte*
@@ -139,6 +159,15 @@ Behalten Sie die Snapshot Kopien für eine bestimmte Anzahl von Tagen bei
  a| 
 Wählen Sie *Snapshot Kopien behalten für* aus, und geben Sie dann die Anzahl der Tage an, für die Sie die Snapshot Kopien behalten möchten, bevor Sie sie löschen.
 
+
+
+ a| 
+Sperrfrist von Snapshot-Kopien
+ a| 
+Wählen Sie die Sperrfrist für Snapshot Kopien aus und wählen Sie Tage, Monate oder Jahre aus.
+
+Die SnapLock-Aufbewahrungsfrist sollte weniger als 100 Jahre betragen.
+
 |===
 +
 
@@ -155,12 +184,24 @@ Aktualisieren Sie SnapMirror nach dem Erstellen einer lokalen Snapshot Kopie
  a| 
 Wählen Sie dieses Feld aus, um Spiegelkopien der Backup-Sätze auf einem anderen Volume zu erstellen (SnapMirror Replikation).
 
+Diese Option sollte für SnapMirror Business Continuity (SM-BC) aktiviert sein.
+
+Während der sekundären Replizierung wird mit der SnapLock-Ablaufzeit die primäre SnapLock-Ablaufzeit geladen.
+
+Durch Klicken auf die Schaltfläche * Aktualisieren* auf der Seite Topologie wird die sekundäre und primäre SnapLock-Ablaufzeit aktualisiert, die von ONTAP abgerufen werden.
+
 
 
  a| 
 Aktualisieren Sie SnapVault nach dem Erstellen einer lokalen Snapshot Kopie
  a| 
 Wählen Sie diese Option aus, um Disk-to-Disk-Backup-Replikation (SnapVault-Backups) durchzuführen.
+
+Wenn SnapLock nur auf dem sekundären aus ONTAP, dem sogenannten SnapLock-Vault, konfiguriert ist, wird durch Klicken auf die Schaltfläche * Aktualisieren* auf der Seite Topologie die Sperrfrist auf dem sekundären, das von ONTAP abgerufen wird, aktualisiert.
+
+Weitere Informationen zu SnapLock Vault finden Sie unter https://docs.netapp.com/us-en/ontap/snaplock/commit-snapshot-copies-worm-concept.html["Speichern von Snapshot-Kopien in WORM-KOPIEN auf einem Vault-Ziel"]
+
+Siehe link:..protect-sco/task_view_oracle_databse_backups_and_clones_in_the_topology_page.html["Sehen Sie sich Backups und Klone von Oracle Datenbanken auf der Seite Topologie an"].
 
 
 

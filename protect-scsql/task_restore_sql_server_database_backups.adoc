@@ -33,6 +33,8 @@ Der Wert des Schlüssels kann von Swagger über die API angezeigt werden: API /4
 Sie können die GET API verwenden, um den Wert der Taste anzuzeigen. SET-API wird nicht unterstützt.
 
 * Die meisten Felder auf den Seiten des Assistenten Wiederherstellen sind selbsterklärend. In den folgenden Informationen werden die Felder beschrieben, für die Sie möglicherweise eine Anleitung benötigen.
+* Für die Wiederherstellung von SnapMirror Business Continuity (SM-BC) müssen Sie das Backup vom primären Standort auswählen.
+* Wenn Sie für Richtlinien mit aktiviertem SnapLock für ONTAP 9.12.1 und ältere Versionen eine Sperrfrist für Snapshot Kopien angeben, übernehmen die Klone, die im Rahmen der Wiederherstellung aus den manipulationssicheren Snapshot Kopien erstellt wurden, die Verfallszeit von SnapLock. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
 
 
 .Schritte

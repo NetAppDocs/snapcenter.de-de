@@ -24,6 +24,7 @@ Zur Vorbereitung auf die Datensicherung müssen Aufgaben wie das Installieren vo
 +
 Der Standardwert ist false
 
+* Weitere Informationen zu Voraussetzungen und Einschränkungen finden Sie unter SnapMirror Business Continuity (SM-BC) https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["Objektbeschränkungen für SnapMirror Business Continuity"].
 
 
 .Über diese Aufgabe
@@ -37,7 +38,17 @@ Der Wert des Schlüssels kann von Swagger über die API angezeigt werden: API /4
 +
 Sie können die GET API verwenden, um den Wert der Taste anzuzeigen. SET-API wird nicht unterstützt.
 
+* SnapLock
++
+** Wenn die Option „Backup-Kopien für eine bestimmte Anzahl von Tagen aufbewahren“ ausgewählt ist, muss die SnapLock Aufbewahrungsfrist kleiner oder gleich den genannten Aufbewahrungstagen sein.
+** Durch Angabe einer Sperrfrist für Snapshot-Kopien wird das Löschen der Snapshot-Kopien bis zum Ablauf der Aufbewahrungsfrist verhindert. Dies könnte dazu führen, dass eine größere Anzahl an Snapshot Kopien aufbewahrt wird als in der Richtlinie angegeben.
+** Wenn Sie für ONTAP 9.12.1 und ältere Versionen eine Sperrfrist für Snapshot Kopien angeben, übernehmen die durch manipulationssichere Snapshot Kopien erstellten Klone die Ablaufdatum von SnapLock. Sie sollten die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
 
+
+
+
+
+NOTE: Die primären SnapLock-Einstellungen werden in der SnapCenter Backup Policy gemanagt, und die sekundären SnapLock-Einstellungen werden von ONTAP gemanagt.
 
 .Schritte
 . Klicken Sie im linken Navigationsbereich auf *Einstellungen*.
@@ -103,6 +114,15 @@ Snapshot Kopien löschen, die älter als sind
  a| 
 Wählen Sie diese Option, wenn Sie die Anzahl der Tage angeben möchten, die SnapCenter eine Backup-Kopie behält, bevor Sie sie löschen.
 
+
+
+ a| 
+Sperrfrist von Snapshot-Kopien
+ a| 
+Wählen Sie die Sperrfrist für Snapshot Kopien aus und wählen Sie Tage, Monate oder Jahre aus.
+
+Die SnapLock-Aufbewahrungsfrist sollte weniger als 100 Jahre betragen.
+
 |===
 +
 
@@ -119,9 +139,15 @@ NOTE: Der maximale Aufbewahrungswert ist 1018 für Ressourcen auf ONTAP 9.4 oder
 
 
  a| 
-Aktualisieren Sie SnapMirror nach dem Erstellen einer lokalen Snapshot Kopie
+*Aktualisieren Sie SnapMirror nach dem Erstellen einer lokalen Snapshot Kopie*
  a| 
 Wählen Sie diese Option aus, um Spiegelkopien von Backup-Sets auf einem anderen Volume (SnapMirror) zu erstellen.
+
+Diese Option sollte für SnapMirror Business Continuity (SM-BC) aktiviert sein.
+
+Während der sekundären Replizierung wird mit der SnapLock-Ablaufzeit die primäre SnapLock-Ablaufzeit geladen. Durch Klicken auf die Schaltfläche * Aktualisieren* auf der Seite Topologie wird die sekundäre und primäre SnapLock-Ablaufzeit aktualisiert, die von ONTAP abgerufen werden.
+
+Siehe link:../protect-scw/task_view_related_backups_and_clones_in_the_topology_page.html["Sehen Sie sich zugehörige Backups und Klone auf der Seite Topologie an"].
 
 
 
@@ -129,6 +155,12 @@ Wählen Sie diese Option aus, um Spiegelkopien von Backup-Sets auf einem anderen
 Aktualisieren Sie die SnapVault nach dem Erstellen einer Snapshot Kopie
  a| 
 Wählen Sie diese Option aus, um die Disk-to-Disk-Backup-Replikation durchzuführen.
+
+Während der sekundären Replizierung wird mit der SnapLock-Ablaufzeit die primäre SnapLock-Ablaufzeit geladen. Durch Klicken auf die Schaltfläche Aktualisieren auf der Seite Topologie wird die sekundäre und primäre SnapLock-Ablaufzeit, die von ONTAP abgerufen werden, aktualisiert.
+
+Wenn SnapLock nur auf dem sekundären aus ONTAP, dem sogenannten SnapLock-Vault, konfiguriert ist, wird durch Klicken auf die Schaltfläche Aktualisieren auf der Seite Topologie die Sperrfrist auf dem sekundären, das von ONTAP abgerufen wird, aktualisiert.
+
+Weitere Informationen zu SnapLock Vault finden Sie unter https://docs.netapp.com/us-en/ontap/snaplock/commit-snapshot-copies-worm-concept.html["Speichern von Snapshot-Kopien in WORM-KOPIEN auf einem Vault-Ziel"]
 
 
 

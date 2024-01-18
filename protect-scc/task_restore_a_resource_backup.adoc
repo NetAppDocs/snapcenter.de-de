@@ -20,7 +20,9 @@ Mit SnapCenter können Sie Ressourcen wiederherstellen. Die Funktionen der Resto
 
 
 .Über diese Aufgabe
-Der Standardwiederherstellungsvorgang stellt nur Storage-Objekte wieder her. Restore-Vorgänge auf Applikationsebene können nur durchgeführt werden, wenn das benutzerdefinierte Plug-in diese Funktion bietet.
+* Der Standardwiederherstellungsvorgang stellt nur Storage-Objekte wieder her. Restore-Vorgänge auf Applikationsebene können nur durchgeführt werden, wenn das benutzerdefinierte Plug-in diese Funktion bietet.
+* Wenn Sie für Richtlinien mit aktiviertem SnapLock für ONTAP 9.12.1 und ältere Versionen eine Sperrfrist für Snapshot Kopien angeben, übernehmen die Klone, die im Rahmen der Wiederherstellung aus den manipulationssicheren Snapshot Kopien erstellt wurden, die Verfallszeit von SnapLock. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
+
 
 .Schritte
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.

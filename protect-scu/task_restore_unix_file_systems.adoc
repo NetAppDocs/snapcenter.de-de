@@ -1,0 +1,58 @@
+---
+permalink: protect-scu/task_restore_unix_file_systems.html 
+sidebar: sidebar 
+keywords: restore, recover, Unix file systems 
+summary: Im Falle eines Datenverlusts können Sie SnapCenter verwenden, um Daten wiederherzustellen. 
+---
+= Stellen Sie Unix-Dateisysteme wieder her
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Falle eines Datenverlustes können Sie SnapCenter verwenden, um Unix-Dateisysteme wiederherzustellen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Wählen Sie auf der Seite Ressourcen entweder *Pfad* oder *Ressourcengruppe* aus der Liste *Ansicht* aus.
+. Wählen Sie das Dateisystem entweder in der Detailansicht oder in der Detailansicht der Ressourcengruppe aus.
++
+Die Topologieseite wird angezeigt.
+
+. Wählen Sie in der Ansicht Kopien verwalten die Option *Backups* aus den primären oder sekundären (gespiegelten oder replizierten) Speichersystemen aus.
+. Wählen Sie das Backup aus der Tabelle aus, und klicken Sie dann auf *image:../media/restore_icon.gif["Symbol Wiederherstellen"]*.
+. Gehen Sie auf der Seite Wiederherstellungsumfang wie folgt vor:
++
+** Bei NFS-Dateisystemen ist standardmäßig *Connect and Copy* Restore ausgewählt. Sie können auch *Volume Revert* oder *Fast Restore* auswählen.
+** Für Dateisysteme, die kein NFS sind, wird der Wiederherstellungsumfang abhängig vom Layout ausgewählt.
++
+Die neuen Dateien, die nach der Sicherung erstellt wurden, sind nach der Wiederherstellung möglicherweise nicht verfügbar, je nach Typ und Layout des Dateisystems.
+
+
+
+. Geben Sie auf der Seite PreOps die vor der Wiederherstellung ausgeführten Befehle ein, bevor Sie einen Wiederherstellungsjob ausführen.
+. Geben Sie auf der PostOps-Seite Post-Restore-Befehle ein, die nach der Durchführung eines Wiederherstellungsjobs ausgeführt werden sollen.
++
+
+NOTE: Sie sollten überprüfen, ob die Befehle in der Befehlsliste vorhanden sind, die auf dem Plug-in-Host verfügbar ist, und zwar über den Pfad _/opt/NetApp/snapcenter/scc/etc/allowed_commands.config_.
+
+. Wählen Sie auf der Seite Benachrichtigung aus der Dropdown-Liste *E-Mail-Präferenz* die Szenarien aus, in denen Sie die E-Mail-Benachrichtigungen senden möchten.
++
+Außerdem müssen Sie die E-Mail-Adressen für Absender und Empfänger sowie den Betreff der E-Mail angeben. Wenn Sie den Bericht über den ausgeführten Wiederherstellungsvorgang anhängen möchten, müssen Sie *Job-Bericht anhängen* auswählen.
+
++
+
+NOTE: Für eine E-Mail-Benachrichtigung müssen Sie die SMTP-Serverdetails entweder mit der GUI oder mit dem PowerShell-Befehlssatz Set-SmtpServer angegeben haben.
+
+. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
++
+
+IMPORTANT: Wenn der Wiederherstellungsvorgang fehlschlägt, wird ein Rollback nicht unterstützt.
+
++
+
+NOTE: Bei der Wiederherstellung eines Dateisystems, das sich auf der Volume-Gruppe befindet, werden die alten Inhalte im Dateisystem nicht gelöscht. Nur der Inhalt des geklonten Dateisystems wird in das Quelldateisystem kopiert. Dies gilt, wenn mehrere Dateisysteme auf der Volume-Gruppe und standardmäßige NFS-Dateisystemwiederherstellungen vorhanden sind.
+
+. Überwachen Sie den Fortschritt des Vorgangs, indem Sie auf *Monitor* > *Jobs* klicken.
+

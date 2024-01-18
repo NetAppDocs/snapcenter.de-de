@@ -32,7 +32,17 @@ Der SnapCenter Administrator muss Ihnen die SVMs für die Quell- und Ziel-Volume
 .Über diese Aufgabe
 * Eine Backup-Richtlinie ist eine Reihe von Regeln, die das Managen, Planen und Aufbewahren von Backups regeln. Außerdem können Sie Replizierungs-, Skript- und Applikationseinstellungen festlegen.
 * Durch das Festlegen von Optionen in einer Richtlinie wird Zeit eingespart, wenn die Richtlinie für eine andere Ressourcengruppe wiederverwendet werden soll.
+* SnapLock
++
+** Wenn die Option „Backup-Kopien für eine bestimmte Anzahl von Tagen aufbewahren“ ausgewählt ist, muss die SnapLock Aufbewahrungsfrist kleiner oder gleich den genannten Aufbewahrungstagen sein.
+** Durch Angabe einer Sperrfrist für Snapshot-Kopien wird das Löschen der Snapshot-Kopien bis zum Ablauf der Aufbewahrungsfrist verhindert. Dies könnte dazu führen, dass eine größere Anzahl an Snapshot Kopien aufbewahrt wird als in der Richtlinie angegeben.
+** Wenn Sie für ONTAP 9.12.1 und ältere Versionen eine Sperrfrist für Snapshot Kopien angeben, übernehmen die durch manipulationssichere Snapshot Kopien erstellten Klone die Ablaufdatum von SnapLock. Sie sollten die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
 
+
+
+
+
+NOTE: Die primären SnapLock-Einstellungen werden in der SnapCenter Backup Policy gemanagt, und die sekundären SnapLock-Einstellungen werden von ONTAP gemanagt.
 
 .Schritte
 . Klicken Sie im linken Navigationsbereich auf *Einstellungen*.
@@ -82,6 +92,15 @@ Behalten Sie die Snapshot Kopien für eine bestimmte Anzahl von Tagen bei
  a| 
 Wählen Sie *Snapshot Kopien behalten für* aus, und geben Sie dann die Anzahl der Tage an, für die Sie die Snapshot Kopien behalten möchten, bevor Sie sie löschen.
 
+
+
+ a| 
+Sperrfrist von Snapshot-Kopien
+ a| 
+Wählen Sie die Sperrfrist für Snapshot Kopien aus und wählen Sie Tage, Monate oder Jahre aus.
+
+Die SnapLock-Aufbewahrungsfrist sollte weniger als 100 Jahre betragen.
+
 |===
 . Geben Sie auf der Seite *Replikation* die Replikationseinstellungen an:
 +
@@ -96,12 +115,27 @@ Wählen Sie dieses Feld aus, um Spiegelkopien der Backup-Sätze auf einem andere
 
 Wenn die Sicherungsbeziehung in ONTAP vom Typ Mirror und Vault beträgt und wenn Sie nur diese Option auswählen, wird die auf dem primären Volume erstellte Snapshot Kopie nicht an das Ziel übertragen, sondern dort aufgeführt. Wenn diese Snapshot Kopie aus dem Ziel ausgewählt wird, einen Wiederherstellungsvorgang durchzuführen, wird die folgende Fehlermeldung angezeigt: Sekundärer Standort ist für das ausgewählte gewölbte/gespiegelte Backup nicht verfügbar.
 
+Während der sekundären Replizierung wird mit der SnapLock-Ablaufzeit die primäre SnapLock-Ablaufzeit geladen.
+
+Durch Klicken auf die Schaltfläche * Aktualisieren* auf der Seite Topologie wird die sekundäre und primäre SnapLock-Ablaufzeit aktualisiert, die von ONTAP abgerufen werden.
+
+Siehe link:protect-scc/task_view_custom_plug_in_resource_backups_and_clones_in_the_topology_page.html["Sehen Sie sich auf der Seite Topologie benutzerdefinierte Backups und Klone zu den Plug-in-Ressourcen an"].
+
 
 
  a| 
 *Aktualisieren Sie SnapVault nach dem Erstellen einer lokalen Snapshot Kopie*
  a| 
 Wählen Sie diese Option aus, um Disk-to-Disk-Backup-Replikation (SnapVault-Backups) durchzuführen.
+
+Während der sekundären Replizierung wird mit der SnapLock-Ablaufzeit die primäre SnapLock-Ablaufzeit geladen. Durch Klicken auf die Schaltfläche * Aktualisieren* auf der Seite Topologie wird die sekundäre und primäre SnapLock-Ablaufzeit aktualisiert, die von ONTAP abgerufen werden.
+
+Wenn SnapLock nur auf dem sekundären aus ONTAP, dem sogenannten SnapLock-Vault, konfiguriert ist, wird durch Klicken auf die Schaltfläche * Aktualisieren* auf der Seite Topologie die Sperrfrist auf dem sekundären, das von ONTAP abgerufen wird, aktualisiert.
+
+Weitere Informationen zu SnapLock Vault finden Sie unter Versetzen von Snapshot Kopien auf WORM in einem Vault
+Ziel
+
+Siehe link:protect-scc/task_view_custom_plug_in_resource_backups_and_clones_in_the_topology_page.html["Sehen Sie sich auf der Seite Topologie benutzerdefinierte Backups und Klone zu den Plug-in-Ressourcen an"].
 
 
 

@@ -26,7 +26,7 @@ link:task_back_up_resource_groups_sap_hana.html["Sichern von Ressourcengruppen"]
 
 * Wenn Sie ein dateibasiertes Backup erstellen möchten, wenn eine oder mehrere Mandanten-Datenbanken nicht verfügbar sind, setzen Sie DEN PARAMETER ALLOW_FILE_BASED_BACKUP_IFINACTIVE_TENANTS_PRESENT in der HANA-Eigenschaftendatei mit AUF *JA* `Set-SmConfigSettings` Cmdlet:
 +
-Die Informationen zu den Parametern, die mit dem Cmdlet verwendet werden können, und deren Beschreibungen können durch Ausführen von Get-Help _Command_Name_ abgerufen werden. Alternativ können Sie auch auf die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["SnapCenter Software Cmdlet Referenzhandbuch"]
+Die Informationen zu den Parametern, die mit dem Cmdlet verwendet werden können, und deren Beschreibungen können durch Ausführen von Get-Help _Command_Name_ abgerufen werden. Alternativ können Sie auch auf die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["SnapCenter Software Cmdlet Referenzhandbuch"]
 
 * Um Befehle vor und nach quiesce, Snapshot Kopie und unquiesce Vorgängen auszuführen, sollten Sie überprüfen, ob die Befehle in der Befehlsliste vorhanden sind, die auf dem Plug-in Host verfügbar ist, aus den folgenden Pfaden:
 +

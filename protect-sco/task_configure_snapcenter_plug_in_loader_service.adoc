@@ -156,25 +156,40 @@ Wenn einer dieser Parameter dem Standardwert nicht zugewiesen ist oder Sie den W
 
 . Führen Sie bei Bedarf eine der folgenden Aktionen aus:
 +
-** Starten Sie den SnapCenter Plug-in Loader-Dienst als Root-Benutzer:
+** Starten Sie den SnapCenter-Plug-in-Loader-Dienst:
 +
- `/custom_location/NetApp/snapcenter/spl/bin/spl start`
+*** Führen Sie als Root-Benutzer Folgendes aus: `/custom_location/NetApp/snapcenter/spl/bin/spl start`
+*** Führen Sie als Benutzer ohne Root Folgendes aus: `sudo /custom_location/NetApp/snapcenter/spl/bin/spl start`
+
+
 ** Stoppen Sie den SnapCenter-Plug-in-Loader-Dienst:
 +
- `/custom_location/NetApp/snapcenter/spl/bin/spl stop`
+*** Führen Sie als Root-Benutzer Folgendes aus: `/custom_location/NetApp/snapcenter/spl/bin/spl stop`
+*** Führen Sie als Benutzer ohne Root Folgendes aus: `sudo /custom_location/NetApp/snapcenter/spl/bin/spl stop`
 +
 
 NOTE: Sie können die Option -Force mit dem Befehl STOP verwenden, um den SnapCenter Plug-in Loader Dienst nachdrücklich zu stoppen. Vor diesem Verfahren sollten Sie jedoch Vorsicht walten lassen, da auch die bestehenden Vorgänge beendet werden.
 
+
+
 ** Starten Sie den SnapCenter-Plug-in-Loader-Dienst neu:
 +
- `/custom_location/NetApp/snapcenter/spl/bin/spl restart`
+*** Führen Sie als Root-Benutzer Folgendes aus: `/custom_location/NetApp/snapcenter/spl/bin/spl restart`
+*** Führen Sie als Benutzer ohne Root Folgendes aus: `sudo /custom_location/NetApp/snapcenter/spl/bin/spl restart`
+
+
 ** Suchen Sie den Status des SnapCenter-Plug-in-Loader-Dienstes:
 +
- `/custom_location/NetApp/snapcenter/spl/bin/spl status`
+*** Führen Sie als Root-Benutzer Folgendes aus: `/custom_location/NetApp/snapcenter/spl/bin/spl status`
+*** Führen Sie als Benutzer ohne Root Folgendes aus: `sudo /custom_location/NetApp/snapcenter/spl/bin/spl status`
+
+
 ** Finden Sie die Änderung im SnapCenter-Plug-in-Loader-Dienst:
 +
- `/custom_location/NetApp/snapcenter/spl/bin/spl change`
+*** Führen Sie als Root-Benutzer Folgendes aus: `/custom_location/NetApp/snapcenter/spl/bin/spl change`
+*** Führen Sie als Benutzer ohne Root Folgendes aus: `sudo /custom_location/NetApp/snapcenter/spl/bin/spl change`
+
+
 
 
 

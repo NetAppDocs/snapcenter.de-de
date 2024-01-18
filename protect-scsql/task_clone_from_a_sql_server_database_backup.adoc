@@ -41,6 +41,9 @@ Sie können die GET API verwenden, um den Wert der Taste anzuzeigen. SET-API wir
 
 NOTE: Stellen Sie für virtuelle Umgebungen (VMDK/RDM) sicher, dass der Bereitstellungspunkt eine dedizierte Festplatte ist.
 
+* Wenn Sie für Richtlinien mit aktiviertem SnapLock für ONTAP 9.12.1 und ältere Versionen eine Sperrfrist für Snapshot Kopien angeben, übernehmen die aus manipulationssicheren Snapshot Kopien erstellten Klone die SnapLock Ablaufzeit. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
+
+
 .Schritte
 . Wählen Sie im linken Navigationsbereich *Ressourcen* aus, und wählen Sie dann *SnapCenter Plug-in für SQL Server* aus der Liste aus.
 . Wählen Sie auf der Seite Ressourcen die Option *Datenbank* oder *Ressourcengruppe* aus der Liste *Ansicht* aus.

@@ -48,7 +48,7 @@ NOTE: Sie sollten genügend Festplattenspeicher zuweisen und den Speicherverbrau
  a| 
 Erforderliche Softwarepakete
  a| 
-Java 1.8.x (64-Bit)Oracle Java und OpenJDK Varianten
+Java 1.8.x (64 Bit) Oracle Java und OpenJDK
 
 Wenn SIE JAVA auf die neueste Version aktualisiert haben, müssen Sie sicherstellen, dass die JAVA_HOME-Option unter /var/opt/snapcenter/spl/etc/spl.properties auf die richtige JAVA-Version und den richtigen Pfad eingestellt ist.
 

@@ -48,6 +48,6 @@ Sie können von dem Host, auf dem der SnapCenter-Server installiert ist, auf die
 . Bearbeiten Sie die Datei /<Installationsverzeichnis>/NetApp/snapcenter/scc/etc/SC_SMS_Services.properties und fügen SIE dann DEN Parameter PLUGINS_ENABLED = hana:3.0 hinzu.
 . Fügen Sie den Host mit dem Cmdlet "Add-Smhost" und den erforderlichen Parametern zum SnapCenter-Server hinzu.
 +
-Die Informationen zu den Parametern, die mit dem Befehl und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ können Sie auch auf die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["SnapCenter Software Cmdlet Referenzhandbuch"^].
+Die Informationen zu den Parametern, die mit dem Befehl und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ können Sie auch auf die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["SnapCenter Software Cmdlet Referenzhandbuch"^].
 
 

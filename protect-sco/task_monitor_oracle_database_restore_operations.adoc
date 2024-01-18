@@ -43,8 +43,4 @@ Die folgenden Symbole werden auf der Seite Aufträge angezeigt und geben den Sta
 +
 Die Schaltfläche *Protokolle anzeigen* zeigt die detaillierten Protokolle für den ausgewählten Vorgang an.
 
-+
-
-IMPORTANT: Nach der Volume-basierten Wiederherstellung werden die Backup-Metadaten aus dem SnapCenter-Repository gelöscht, die Backup-Katalogeinträge bleiben aber im SAP HANA-Katalog. Der Status des Wiederherstellungsjobs wird angezeigt image:../media/success_icon.gif["Symbol „Abgeschlossen“"], Sie sollten auf Jobdetails klicken, um das Warnzeichen einiger der untergeordneten Aufgaben anzuzeigen. Klicken Sie auf das Warnschild und löschen Sie die angezeigten Backup-Katalog-Einträge.
-
 

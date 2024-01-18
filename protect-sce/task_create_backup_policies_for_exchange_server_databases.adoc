@@ -41,13 +41,29 @@ Der Wert des Schlüssels kann von Swagger über die API angezeigt werden: API /4
 +
 Sie können die GET API verwenden, um den Wert der Taste anzuzeigen. SET-API wird nicht unterstützt.
 
-
-
++
 |===
 
 
 | *Best Practice:* Es ist am besten, dass Sie die sekundäre Aufbewahrungsrichtlinie auf der Grundlage der Anzahl der vollständigen und Log-Backups insgesamt konfigurieren, die Sie behalten möchten. Wenn Sie sekundäre Aufbewahrungsrichtlinien konfigurieren, sollten Sie bedenken, dass bei Datenbanken und Protokollen, die in verschiedenen Volumes vorhanden sind, jedes Backup drei Snapshot Kopien haben kann. Wenn sich Datenbanken und Protokolle in demselben Volume befinden, kann jedes Backup zwei Snapshot Kopien haben. 
 |===
+* SnapLock
++
+** Wenn die Option „Backup-Kopien für eine bestimmte Anzahl von Tagen aufbewahren“ ausgewählt ist, muss die SnapLock Aufbewahrungsfrist kleiner oder gleich den genannten Aufbewahrungstagen sein.
++
+Durch Angabe einer Sperrfrist für Snapshot-Kopien wird das Löschen der Snapshot-Kopien bis zum Ablauf der Aufbewahrungsfrist verhindert.  Dies könnte dazu führen, dass eine größere Anzahl an Snapshot Kopien aufbewahrt wird als in der Richtlinie angegeben.
+
++
+Wenn Sie für ONTAP 9.12.1 und ältere Versionen eine Sperrfrist für Snapshot Kopien angeben, übernehmen die durch manipulationssichere Snapshot Kopien erstellten Klone die Ablaufdatum von SnapLock.  Sie sollten die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
+
++
+
+NOTE: Die primären SnapLock-Einstellungen werden in der SnapCenter Backup Policy gemanagt, und die sekundären SnapLock-Einstellungen werden von ONTAP gemanagt.
+
+
+
+
+
 .Schritte
 . Klicken Sie im linken Navigationsbereich auf *Einstellungen*.
 . Klicken Sie auf der Seite Einstellungen auf *Richtlinien*.
@@ -190,6 +206,15 @@ Wählen Sie die Option *Protokollsicherungen für letzte* aufbewahren und geben 
 
 Aufbewahrung der Log-Backups bis zur Anzahl von Tagen voller Backups.
 
+
+
+ a| 
+Sperrfrist von Snapshot-Kopien
+ a| 
+Wählen Sie *Sperrfrist der Snapshot-Kopie* aus und wählen Sie Tage, Monate oder Jahre aus.
+
+Die SnapLock-Aufbewahrungsfrist sollte weniger als 100 Jahre betragen.
+
 |===
 +
 Wenn Sie als Backup-Typ *Log Backup* ausgewählt haben, werden Log-Backups als Teil der up-to-the-minute-Aufbewahrungseinstellungen für vollständige Backups beibehalten.
@@ -213,6 +238,15 @@ Wenn die Anzahl der vollständigen Backups die angegebene Anzahl überschreitet,
 Bewahren Sie vollständige Backups für eine bestimmte Anzahl an Tagen auf
  a| 
 Wählen Sie die Option *Snapshot Kopien für* beibehalten und geben Sie die Anzahl der Tage an, um Snapshot Kopien zu behalten (vollständige Backups).
+
+
+
+ a| 
+Sperrfrist von Snapshot-Kopien
+ a| 
+Wählen Sie *Sperrfrist der Snapshot-Kopie* aus und wählen Sie Tage, Monate oder Jahre aus.
+
+Die SnapLock-Aufbewahrungsfrist sollte weniger als 100 Jahre betragen.
 
 |===
 +
@@ -239,6 +273,12 @@ Im Beispiel bedeutet der Wert 10, dass Sie bis zu 10 Log-Backups auf dem Host au
 
  a| 
 Aktualisieren Sie SnapMirror nach dem Erstellen einer lokalen Snapshot Kopie
+
+Während der sekundären Replizierung wird mit der SnapLock-Ablaufzeit die primäre SnapLock-Ablaufzeit geladen.
+
+Durch Klicken auf die Schaltfläche * Aktualisieren* auf der Seite Topologie wird die sekundäre und primäre SnapLock-Ablaufzeit aktualisiert, die von ONTAP abgerufen werden.
+
+Siehe link:..protect-sce/task_view_exchange_backups_in_the_topology_page.html["Zeigen Sie Exchange-Backups auf der Seite Topologie an"].
  a| 
 Wählen Sie diese Option aus, um Spiegelkopien von Backup-Sets auf einem anderen Volume (SnapMirror) zu behalten.
 

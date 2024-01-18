@@ -32,6 +32,7 @@ NOTE: Wenn die Befehle in der Befehlsliste nicht vorhanden sind, schlägt der Vo
 .Über diese Aufgabe
 * Dateibasierte Backup-Kopien können nicht aus SnapCenter wiederhergestellt werden.
 * Nach einem Upgrade auf SnapCenter 4.3 können die in SnapCenter 4.2 erstellten Backups wiederhergestellt werden, können aber nicht wiederhergestellt werden. Zur Wiederherstellung der in SnapCenter 4.2 erstellten Backups muss HANA Studio oder HANA-Recovery-Skripte außerhalb von SnapCenter verwendet werden.
+* Wenn Sie für Richtlinien mit aktiviertem SnapLock für ONTAP 9.12.1 und ältere Versionen eine Sperrfrist für Snapshot Kopien angeben, übernehmen die Klone, die im Rahmen der Wiederherstellung aus den manipulationssicheren Snapshot Kopien erstellt wurden, die Verfallszeit von SnapLock. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
 
 
 .Schritte
@@ -156,6 +157,10 @@ Unmount-Befehle sind für automatisch erkannte Ressourcen nicht verfügbar.
 . Geben Sie auf der Seite Post OPS Mount- und Post-Restore-Befehle ein, die ausgeführt werden sollen, nachdem eine Wiederherstellung durchgeführt wurde.
 +
 Mount-Befehle sind für automatisch erkannte Ressourcen nicht verfügbar.
+
++
+
+NOTE: Für Pre- und Post-Befehle für Quiesce-, Snapshot-Kopie- und Unquiesce-Vorgänge sollten Sie prüfen, ob die Befehle in der Befehlsliste vorhanden sind, die auf dem Plug-in-Host über den _/opt/snapcenter/snapenter/scc/allowed_commands.config_ Pfad für Linux und _C:\Programme\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands_list.txt_ für Windows verfügbar ist.
 
 . Wählen Sie auf der Benachrichtigungsseite aus der Dropdown-Liste *E-Mail-Präferenz* die Szenarien aus, in denen Sie die E-Mails versenden möchten.
 +

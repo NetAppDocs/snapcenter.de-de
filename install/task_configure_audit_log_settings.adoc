@@ -36,7 +36,7 @@ Freigegebene oder netzwerkbasierte Laufwerke werden nicht unterstützt.
 * Wenn das UDP-Protokoll in den Einstellungen des Syslog-Servers verwendet wird, sind Fehler aufgrund des Ports ausgefallen oder nicht verfügbar. Es kann weder als Fehler noch als Warnung in SnapCenter erfasst werden.
 * Sie können Set-SmAuditSettings und Get-SmAuditSettings Befehle verwenden, um die Prüfprotokolle zu konfigurieren.
 +
-Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von Get-Help Command_Name abgerufen werden. Alternativ können Sie auch die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["SnapCenter Software Cmdlet Referenzhandbuch"^].
+Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von Get-Help Command_Name abgerufen werden. Alternativ können Sie auch die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["SnapCenter Software Cmdlet Referenzhandbuch"^].
 
 
 

@@ -19,19 +19,26 @@ Wenn Sie das Plug-in als nicht-root-Benutzer installiert haben, sollten Sie die 
 
 *Über diese Aufgabe*
 
-Der Klonvorgang erstellt eine Kopie der Datenbankdatendateien und erstellt neue Online-Protokolldateien für die Wiederherstellung sowie Kontrolldateien. Die Datenbank kann auf Basis der angegebenen Wiederherstellungsoptionen optional bis zu einem bestimmten Zeitpunkt wiederhergestellt werden.
-
+* Der Klonvorgang erstellt eine Kopie der Datenbankdatendateien und erstellt neue Online-Protokolldateien für die Wiederherstellung sowie Kontrolldateien. Die Datenbank kann auf Basis der angegebenen Wiederherstellungsoptionen optional bis zu einem bestimmten Zeitpunkt wiederhergestellt werden.
++
 
 NOTE: Das Klonen schlägt fehl, wenn Sie versuchen, ein Backup zu klonen, das auf einem Linux Host auf einem AIX Host erstellt wurde, oder umgekehrt.
 
++
 SnapCenter erstellt eine Standalone-Datenbank, wenn sie aus einem Backup einer Oracle RAC Datenbank geklont wird. SnapCenter unterstützt die Erstellung von Klonen aus der Backup von Data Guard Standby und Active Data Guard Standby Datenbanken.
 
++
 Während des Klonens montierte SnapCenter die optimale Anzahl von Protokoll-Backups auf Basis von SCN oder dat und die Zeit für Recovery-Vorgänge. Nach der Wiederherstellung wird die Protokollsicherung abgehängt. Alle diese Klone sind unter _/var/opt/snapcenter/scu/Clones/_ eingebunden. Wenn Sie ASM über NFS verwenden, sollten Sie _/var/opt/snapcenter/scu/Clones/*/*_ zum vorhandenen Pfad hinzufügen, der im Parameter asm_diskstring definiert ist.
 
++
 Beim Klonen eines Backups einer ASM-Datenbank in einer SAN-Umgebung werden udev-Regeln für die geklonten Host-Geräte unter _/etc/udev/rules.d/999-scu-netapp.rules_ erstellt. Diese udev-Regeln, die den geklonten Host-Geräten zugeordnet sind, werden beim Löschen des Klons gelöscht.
 
++
 
 NOTE: In einem Flex ASM-Setup können Sie keinen Klonvorgang auf Leaf-Knoten ausführen, wenn die Kardinalität kleiner als die Anzahl der Knoten im RAC-Cluster ist.
+
+* Wenn Sie für Richtlinien mit aktiviertem SnapLock für ONTAP 9.12.1 und ältere Versionen eine Sperrfrist für Snapshot Kopien angeben, übernehmen die Klone, die im Rahmen der Wiederherstellung aus den manipulationssicheren Snapshot Kopien erstellt wurden, die Verfallszeit von SnapLock. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
+
 
 *Schritte*
 
