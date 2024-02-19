@@ -16,7 +16,7 @@ Eine Ressourcengruppe ist ein Container, dem Sie Ressourcen hinzufügen, die Sie
 Sie können Ressourcen einzeln schützen, ohne eine neue Ressourcengruppe zu erstellen. Sie können Backups auf der geschützten Ressource erstellen.
 
 .Über diese Aufgabe
-* Wenn Sie für Richtlinien mit aktiviertem SnapLock für ONTAP 9.12.1 und ältere Versionen eine Sperrfrist für Snapshot Kopien angeben, übernehmen die aus manipulationssicheren Snapshot Kopien erstellten Klone die SnapLock Ablaufzeit. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
+* Bei ONTAP 9.12.1 und niedriger Version übernehmen die im Rahmen der Wiederherstellung erstellten Klone der SnapLock Vault Snapshots die Verfallszeit von SnapLock Vault. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
 * Das Hinzufügen neuer Datenbanken ohne SM-BC zu einer vorhandenen Ressourcengruppe, die Ressourcen mit SM-BC enthält, wird nicht unterstützt.
 * Das Hinzufügen neuer Datenbanken zu einer vorhandenen Ressourcengruppe im Failover-Modus von SM-BC wird nicht unterstützt. Sie können der Ressourcengruppe nur im regulären oder Failback-Status Ressourcen hinzufügen.
 

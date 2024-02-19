@@ -16,7 +16,7 @@ Sie können eine gesicherte Exchange Server Datenbank aus dem sekundären Storag
 Sie müssen die Snapshot Kopien vom primären Storage in einen sekundären Storage replizieren.
 
 .Über diese Aufgabe
-* Wenn Sie für Richtlinien mit aktiviertem SnapLock für ONTAP 9.12.1 und ältere Versionen eine Sperrfrist für Snapshot Kopien angeben, übernehmen die Klone, die im Rahmen der Wiederherstellung aus den manipulationssicheren Snapshot Kopien erstellt wurden, die Verfallszeit von SnapLock. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
+* Bei ONTAP 9.12.1 und niedriger Version übernehmen die im Rahmen der Wiederherstellung erstellten Klone der SnapLock Vault Snapshots die Verfallszeit von SnapLock Vault. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
 
 
 .Schritte

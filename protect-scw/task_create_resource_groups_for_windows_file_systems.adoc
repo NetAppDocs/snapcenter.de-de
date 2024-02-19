@@ -14,7 +14,7 @@ summary: Eine Ressourcengruppe ist der Container, zu dem Sie mehrere Dateisystem
 Eine Ressourcengruppe ist der Container, zu dem Sie mehrere Dateisysteme hinzufügen können, die Sie schützen möchten. Sie müssen auch eine oder mehrere Richtlinien an die Ressourcengruppe anhängen, um den Typ des Datensicherungsauftrags zu definieren, den Sie ausführen möchten, und dann den Backup-Zeitplan festlegen.
 
 .Über diese Aufgabe
-* Wenn Sie für Richtlinien mit aktiviertem SnapLock für ONTAP 9.12.1 und ältere Versionen eine Sperrfrist für Snapshot Kopien angeben, übernehmen die Klone, die im Rahmen der Wiederherstellung aus den manipulationssicheren Snapshot Kopien erstellt wurden, die Verfallszeit von SnapLock. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
+* Bei ONTAP 9.12.1 und niedriger Version übernehmen die im Rahmen der Wiederherstellung erstellten Klone der SnapLock Vault Snapshots die Verfallszeit von SnapLock Vault. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
 * Das Hinzufügen neuer Dateisysteme ohne SM-BC zu einer vorhandenen Ressourcengruppe, die Ressourcen mit SM-BC enthält, wird nicht unterstützt.
 * Das Hinzufügen neuer Dateisysteme zu einer vorhandenen Ressourcengruppe im Failover-Modus von SM-BC wird nicht unterstützt. Sie können der Ressourcengruppe nur im regulären oder Failback-Status Ressourcen hinzufügen.
 

@@ -30,7 +30,7 @@ Bevor Sie SnapCenter zum Backup von Oracle-Datenbankressourcen verwenden, müsse
 Durch Angabe einer Sperrfrist für Snapshot-Kopien wird das Löschen der Snapshot-Kopien bis zum Ablauf der Aufbewahrungsfrist verhindert. Dies könnte dazu führen, dass eine größere Anzahl an Snapshot Kopien aufbewahrt wird als in der Richtlinie angegeben.
 
 +
-Wenn Sie für ONTAP 9.12.1 und ältere Versionen eine Sperrfrist für Snapshot Kopien angeben, übernehmen die durch manipulationssichere Snapshot Kopien erstellten Klone die Ablaufdatum von SnapLock. Sie sollten die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
+Bei ONTAP 9.12.1 und niedriger Version übernehmen die im Rahmen der Wiederherstellung erstellten Klone der SnapLock Vault Snapshots die Verfallszeit von SnapLock Vault. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
 
 +
 

@@ -86,7 +86,7 @@ NOTE: Es wird empfohlen, aber nicht erforderlich, dass Sie SnapCenter Standard-L
 
 === Anforderungen an Host und Port
 
-Für die Mindestanforderungen des ONTAP und Applikations-Plug-ins siehe https://imt.netapp.com/matrix/imt.jsp?components=112389;&solution=1259&isHWU&src=IMT["Interoperabilitäts-Matrix-Tool"^].
+Für die Mindestanforderungen des ONTAP und Applikations-Plug-ins siehe https://imt.netapp.com/matrix/imt.jsp?components=117008;&solution=1259&isHWU&src=IMT["Interoperabilitäts-Matrix-Tool"^].
 
 [cols="1,3"]
 |===
@@ -96,7 +96,7 @@ Für die Mindestanforderungen des ONTAP und Applikations-Plug-ins siehe https://
  a| 
 Betriebssystem (64 Bit)
  a| 
-Siehe https://imt.netapp.com/matrix/imt.jsp?components=108408;&solution=1259&isHWU&src=IMT["Interoperabilitäts-Matrix-Tool"^]
+Siehe https://imt.netapp.com/matrix/imt.jsp?components=117008;&solution=1259&isHWU&src=IMT["Interoperabilitäts-Matrix-Tool"^]
 
 
 
