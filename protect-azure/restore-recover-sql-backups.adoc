@@ -1,0 +1,41 @@
+---
+permalink: protect-azure/restore-recover-sql-backups.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SQL Server Database, restore, recover 
+summary: Mit SnapCenter können Daten von einem oder mehreren Backups wiederhergestellt werden. 
+---
+= Stellen Sie SQL Server Datenbanken wieder her
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können SnapCenter verwenden, um gesicherte SQL Server-Datenbanken wiederherzustellen. Die Datenbankwiederherstellung ist ein mehrstufiger Prozess, der alle Daten und Protokollseiten aus einem angegebenen SQL Server-Backup in eine angegebene Datenbank kopiert.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Wählen Sie auf der Seite Ressourcen entweder *Datenbank* oder *Ressourcengruppe* aus der Liste Ansicht aus.
+. Wählen Sie die Datenbank oder die Ressourcengruppe aus der Liste aus.
+. Wählen Sie in der Ansicht Manage Copies die Option *Backups* aus dem Speichersystem aus.
+. Wählen Sie das Backup aus der Tabelle aus, und klicken Sie dann auf das image:../media/restore_icon.gif["Symbol Wiederherstellen"] Symbol.
+. Wählen Sie auf der Seite „Bereich wiederherstellen“ eine der folgenden Optionen aus:
++
+.. Wählen Sie *Datenbank auf demselben Host wiederherstellen, auf dem die Sicherung erstellt wurde*, wenn Sie die Datenbank auf demselben SQL Server wiederherstellen möchten, auf dem die Backups durchgeführt werden.
+.. Wählen Sie *Wiederherstellen der Datenbank auf einem alternativen Host*, wenn Sie möchten, dass die Datenbank auf einem anderen SQL-Server auf demselben oder einem anderen Host wiederhergestellt wird, auf dem Backups durchgeführt werden.
+
+
+. Wählen Sie auf der Seite „Recovery Scope“ eine der folgenden Optionen aus:
++
+.. Wählen Sie *Keine* aus, wenn Sie nur das vollständige Backup ohne Protokolle wiederherstellen müssen.
+.. Wählen Sie *Alle Protokollsicherungen* Up-to-the-minute Backup Restore Operation, um alle verfügbaren Protokollsicherungen nach dem vollständigen Backup wiederherzustellen.
+.. Wählen Sie *nach Log-Backups*, um einen Point-in-Time-Wiederherstellungsvorgang durchzuführen, der die Datenbank basierend auf Backup-Protokollen bis zum ausgewählten Datum wiederherstellt.
+.. Wählen Sie *nach einem bestimmten Datum bis*, um Datum und Uhrzeit anzugeben, nach denen Transaktionsprotokolle nicht auf die wiederhergestellte Datenbank angewendet werden.
+.. Wenn Sie *Alle Log-Backups*, *durch Log-Backups* oder *nach einem bestimmten Datum bis* ausgewählt haben und sich die Protokolle an einem benutzerdefinierten Speicherort befinden, wählen Sie *Benutzerdefiniertes Log-Verzeichnis verwenden* und geben Sie dann den Speicherort an.
+
+
+. Geben Sie auf der Seite Pre-Ops und Post Ops die erforderlichen Details an.
+. Wählen Sie auf der Benachrichtigungsseite aus der Dropdown-Liste *E-Mail-Präferenz* die Szenarien aus, in denen Sie die E-Mails versenden möchten.
+. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
+. Überwachen Sie den Wiederherstellungsprozess mithilfe der Seite *Monitor* > *Jobs*.
+

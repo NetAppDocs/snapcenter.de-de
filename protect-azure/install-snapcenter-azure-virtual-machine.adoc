@@ -1,0 +1,44 @@
+---
+permalink: protect-azure/install-snapcenter-azure-virtual-machine.html 
+sidebar: sidebar 
+keywords: snapcenter server, azure virtual machine, install 
+summary: Laden Sie SnapCenter auf der Azure Virtual Machine herunter und installieren Sie sie. 
+---
+= Installieren Sie SnapCenter auf der Azure Virtual Machine
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die SnapCenter-Software von der NetApp-Support-Website herunterladen und die Software auf der virtuellen Azure-Maschine installieren.
+
+.Bevor Sie beginnen
+Vergewissern Sie sich, dass die virtuelle Azure Windows-Maschine die Anforderungen für die Installation des SnapCenter-Servers erfüllt. Weitere Informationen finden Sie unter link:../install/reference_domain_and_workgroup_requirements.html["Bereiten Sie sich auf die Installation des SnapCenter-Servers vor"].
+
+.Schritte
+. Laden Sie das Installationspaket für den SnapCenter Server von herunter https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab["NetApp Support Website"].
+. Starten Sie die Installation des SnapCenter-Servers, indem Sie auf die heruntergeladene .exe-Datei doppelklicken.
++
+Nachdem Sie die Installation gestartet haben, werden alle Vorabprüfungen durchgeführt und wenn die Mindestanforderungen nicht erfüllt sind, werden entsprechende Fehler- oder Warnmeldungen angezeigt. Sie können die Warnmeldungen ignorieren und mit der Installation fortfahren. Fehler sollten jedoch behoben werden.
+
+. Überprüfen Sie die für die SnapCenter Server-Installation erforderlichen vordefinierten Werte, und ändern Sie sie, falls erforderlich.
++
+Sie müssen das Kennwort für die MySQL Server Repository-Datenbank nicht angeben. Während der Installation des SnapCenter Servers wird das Passwort automatisch generiert.
+
++
+
+NOTE: Das Sonderzeichen „%“ wird im benutzerdefinierten Pfad für die Repository-Datenbank nicht unterstützt. Wenn Sie „%“ in den Pfad aufnehmen, schlägt die Installation fehl.
+
+. Klicken Sie Auf *Jetzt Installieren*.
++
+Wenn Sie ungültige Werte angegeben haben, werden entsprechende Fehlermeldungen angezeigt. Geben Sie die Werte erneut ein, und starten Sie dann die Installation.
+
++
+
+NOTE: Wenn Sie auf die Schaltfläche *Abbrechen* klicken, wird der ausgeführte Schritt abgeschlossen und der Rollback-Vorgang gestartet. Der SnapCenter-Server wird vollständig vom Host entfernt.
+
++
+Wenn Sie jedoch *Abbrechen* klicken, wenn die Vorgänge „Neustart des SnapCenter-Servers“ oder „Warten auf Start des SnapCenter-Servers“ ausgeführt werden, wird die Installation ohne Abbrechen des Vorgangs fortgesetzt.
+
+

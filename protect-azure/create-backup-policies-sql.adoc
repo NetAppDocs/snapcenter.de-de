@@ -1,0 +1,69 @@
+---
+permalink: protect-azure/create-backup-policies-sql.html 
+sidebar: sidebar 
+keywords: create policies, sql, backup policies 
+summary: Erstellen Sie eine Sicherungsrichtlinie für die Ressource oder Ressourcengruppe, die Sie sichern möchten. 
+---
+= Erstellen von Backup-Richtlinien für SQL Server-Datenbanken
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Sicherungsrichtlinie für die Ressource oder die Ressourcengruppe erstellen, bevor Sie SnapCenter zum Sichern von SQL Server-Ressourcen verwenden. Alternativ können Sie beim Erstellen einer Ressourcengruppen oder beim Sichern einer einzelnen Ressource eine Backup-Richtlinie erstellen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Einstellungen*.
+. Klicken Sie auf der Seite Einstellungen auf *Richtlinien*.
+. Klicken Sie Auf *Neu*.
+. Geben Sie auf der Seite Name den Namen und die Beschreibung der Richtlinie ein.
+. Führen Sie auf der Seite Einstellungen die folgenden Schritte aus:
++
+.. Wählen Sie den Sicherungstyp aus.
++
+... Wählen Sie *Full Backup and Log Backup* aus, wenn Sie Datenbankdateien und Transaktionsprotokolle sichern möchten.
+... Wählen Sie *Full Backup*, wenn Sie nur die Datenbankdateien sichern möchten.
+... Wählen Sie *Log Backup*, wenn Sie nur die Transaktionsprotokolle sichern möchten.
+... Wählen Sie *nur Backup kopieren*, wenn Sie Ihre Ressourcen mit einer anderen Anwendung sichern möchten.
+
+
+.. Führen Sie im Abschnitt Einstellungen für Verfügbarkeitsgruppen die folgenden Aktionen durch:
++
+... Wählen Sie auf bevorzugtem Backup-Replikat sichern, wenn Sie nur auf dem Replikat sichern möchten.
+... Wählen Sie das primäre AG-Replikat oder das sekundäre AG-Replikat für das Backup aus.
+... Wählen Sie die Backup-Priorität aus.
+
+
+.. Geben Sie den Zeitplantyp an.
+
+
+. Legen Sie auf der Seite Aufbewahrung je nach ausgewähltem Sicherungstyp die Aufbewahrungseinstellungen fest.
++
+
+NOTE: Die Replizierung auf sekundären Speicher wird nicht unterstützt.
+
+. Führen Sie auf der Seite Überprüfung die folgenden Schritte aus:
++
+.. Wählen Sie im Abschnitt Überprüfung ausführen für folgende Backup-Pläne die Zeitplanhäufigkeit aus.
+.. Führen Sie im Abschnitt Optionen für die Datenbankkonsistenzprüfung die folgenden Aktionen durch:
++
+... Wählen Sie *Beschränkung der Integritätsstruktur auf physische Struktur der Datenbank (PHYSICAL_ONLY)* aus, um die Integritätsprüfung auf die physische Struktur der Datenbank zu begrenzen und um gerissene Seiten, Prüfsummenfehler und häufige Hardwarefehler zu erkennen, die die Datenbank beeinträchtigen.
+... Wählen Sie *Alle Informationsmeldungen unterdrücken (NO_INFOMSGS)*, um alle Informationsmeldungen zu unterdrücken.
++
+Standardmäßig ausgewählt.
+
+... Wählen Sie *Alle gemeldeten Fehlermeldungen pro Objekt anzeigen (ALL_ERRORMSGS)* aus, um alle gemeldeten Fehler pro Objekt anzuzeigen.
+... Wählen Sie * nicht gruppierte Indizes (NOINDEX)* aus, wenn Sie keine nicht geclusterten Indizes überprüfen möchten.
++
+Die SQL Server-Datenbank verwendet Microsoft SQL Server Database Consistency Checker (DBCC), um die logische und physische Integrität der Objekte in der Datenbank zu überprüfen.
+
+... Wählen Sie *Limit the Checks und erhalten Sie die Sperren anstatt eine interne Datenbank Snapshot Kopie (TABLOCK)* zu verwenden, um die Prüfungen zu begrenzen und Sperren zu erhalten, anstatt eine interne Datenbank Snapshot Kopie zu verwenden.
+
+
+.. Wählen Sie im Abschnitt *Protokollsicherung* die Option *Protokollsicherung nach Abschluss bestätigen* aus, um die Protokollsicherung nach Abschluss zu überprüfen.
+.. Geben Sie im Abschnitt *Verification Script settings* den Pfad und die Argumente des Vorskripts bzw. Postscript ein, die vor oder nach dem Verifizierungsvorgang ausgeführt werden sollen.
+
+
+. Überprüfen Sie die Zusammenfassung und klicken Sie auf *Fertig stellen*.
+

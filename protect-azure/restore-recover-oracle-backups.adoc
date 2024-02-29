@@ -1,0 +1,125 @@
+---
+permalink: protect-azure/restore-recover-oracle-backups.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for Oracle Database, restore, recover, tablespaces, pluggable databases, point-in-time 
+summary: Mit SnapCenter können Daten von einem oder mehreren Backups wiederhergestellt werden. 
+---
+= Stellen Sie Oracle Datenbanken wieder her
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bei einem Datenverlust können Sie mit SnapCenter Daten von einem oder mehreren Backups auf Ihrem aktiven Dateisystem wiederherstellen und dann die Datenbank wiederherstellen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Wählen Sie auf der Seite Ressourcen entweder *Datenbank* oder *Ressourcengruppe* aus der Liste Ansicht aus.
+. Wählen Sie die Datenbank oder die Ressourcengruppe aus der Liste aus.
+. Wählen Sie in der Ansicht Manage Copies die Option *Backups* aus dem primären Speichersystem aus.
+. Wählen Sie das Backup aus der Tabelle aus, und klicken Sie dann auf *image:../media/restore_icon.gif["Symbol Wiederherstellen"]*.
+. Führen Sie auf der Seite „Wiederherstellungsumfang“ die folgenden Aufgaben durch:
++
+.. Wählen Sie RAC aus, wenn Sie ein Backup einer Datenbank in der RAC-Umgebung ausgewählt haben.
+.. Führen Sie folgende Aktionen durch:
++
+... Wählen Sie *Alle Datendateien* aus, wenn Sie nur die Datenbankdateien wiederherstellen möchten.
+... Wählen Sie *Tablespaces*, wenn Sie nur die Tablespaces wiederherstellen möchten.
+... Wählen Sie *Protokolldateien wiederholen* aus, wenn Sie die Redo-Protokolldateien der Data Guard Standby- oder Active Data Guard-Standby-Datenbanken wiederherstellen möchten.
+... Wählen Sie *Pluggable Databases* aus und geben Sie die PDBs an, die Sie wiederherstellen möchten.
+... Wählen Sie *Pluggable Database (PDB) Tablespaces* aus, und geben Sie dann die PDB und die Tablespaces dieser PDB an, die Sie wiederherstellen möchten.
+... Wählen Sie *Datenbank auf demselben Host wiederherstellen, auf dem die Sicherung erstellt wurde*, wenn Sie die Datenbank auf demselben SQL Server wiederherstellen möchten, auf dem die Backups durchgeführt werden.
+... Wählen Sie *Wiederherstellen der Datenbank auf einem alternativen Host*, wenn Sie möchten, dass die Datenbank auf einem anderen SQL-Server auf demselben oder einem anderen Host wiederhergestellt wird, auf dem Backups durchgeführt werden.
+... Wählen Sie *Datenbankstatus ändern, falls erforderlich für Wiederherstellung und Wiederherstellung*, um den Status der Datenbank in den Zustand zu ändern, der für die Wiederherstellung und Wiederherstellung erforderlich ist.
+... Wählen Sie *erzwingen in place Restore* aus, wenn Sie in den Szenarien, in denen neue Datendateien nach dem Backup hinzugefügt werden, oder wenn LUNs zu einer LVM-Laufwerksgruppe hinzugefügt, gelöscht oder neu erstellt werden sollen, in-place-Wiederherstellung durchführen möchten.
+
+
+
+
+. Wählen Sie auf der Seite „Recovery Scope“ eine der folgenden Optionen aus:
++
+.. Wählen Sie *Alle Protokolle*, wenn Sie die letzte Transaktion wiederherstellen möchten.
+.. Wählen Sie *bis SCN (System Change Number)*, wenn Sie eine Wiederherstellung auf eine bestimmte SCN durchführen möchten.
+.. Wählen Sie *Datum und Uhrzeit*, wenn Sie sich auf ein bestimmtes Datum und eine bestimmte Uhrzeit wiederherstellen möchten.
+.. Wählen Sie *Keine Wiederherstellung*, wenn Sie nicht wiederherstellen möchten.
+.. Wählen Sie *Geben Sie externe Archivprotokollspeicherorte an*, wenn Sie den Speicherort der externen Archivprotokolldateien angeben möchten.
+
+
+. Geben Sie auf der Seite Pre-Ops und Post Ops die erforderlichen Details an.
+. Wählen Sie auf der Benachrichtigungsseite aus der Dropdown-Liste *E-Mail-Präferenz* die Szenarien aus, in denen Sie die E-Mails versenden möchten.
+. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
+. Überwachen Sie den Fortschritt des Vorgangs, indem Sie auf *Monitor* > *Jobs* klicken.
+
+
+
+
+== Wiederherstellen von Tabellen mit Point-in-Time Recovery
+
+Sie können eine Teilmenge an beschädigten oder abfallenen Tablespaces wiederherstellen, ohne die anderen Tablespaces in der Datenbank zu beeinträchtigen. SnapCenter verwendet RMAN für die Durchführung des Point-in-Time Recovery (PITR) der Tabellen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Wählen Sie auf der Seite Ressourcen entweder *Datenbank* oder *Ressourcengruppe* aus der Liste Ansicht aus.
+. Wählen Sie die Datenbank des Typs Einzelinstanz (mandantenfähig) aus.
+. Wählen Sie aus der Ansicht Kopien verwalten im Speichersystem *Backups* aus.
++
+Wenn die Sicherung nicht katalogisiert ist, sollten Sie die Sicherung auswählen und auf *Katalog* klicken.
+
+. Wählen Sie die katalogisierte Sicherung aus, und klicken Sie dann auf *image:../media/restore_icon.gif["Symbol Wiederherstellen"]*.
+. Führen Sie auf der Seite „Wiederherstellungsumfang“ die folgenden Aufgaben durch:
++
+.. Wählen Sie *RAC* aus, wenn Sie ein Backup einer Datenbank in einer RAC-Umgebung ausgewählt haben.
+.. Wählen Sie *Tablespaces*, wenn Sie nur die Tablespaces wiederherstellen möchten.
+.. Wählen Sie *Datenbankstatus ändern, falls erforderlich für Wiederherstellung und Wiederherstellung*, um den Status der Datenbank in den Zustand zu ändern, der für die Wiederherstellung und Wiederherstellung erforderlich ist.
+
+
+. Wählen Sie auf der Seite „Recovery Scope“ eine der folgenden Optionen aus:
++
+.. Wählen Sie *bis SCN (System Change Number)*, wenn Sie eine Wiederherstellung auf eine bestimmte SCN durchführen möchten.
+.. Wählen Sie *Datum und Uhrzeit*, wenn Sie sich auf ein bestimmtes Datum und eine bestimmte Uhrzeit wiederherstellen möchten.
+
+
+. Geben Sie auf der Seite Pre-Ops und Post Ops die erforderlichen Details an.
+. Wählen Sie auf der Benachrichtigungsseite aus der Dropdown-Liste *E-Mail-Präferenz* die Szenarien aus, in denen Sie die E-Mails versenden möchten.
+. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
+. Überwachen Sie den Wiederherstellungsprozess mithilfe der Seite *Monitor* > *Jobs*.
+
+
+
+
+== Wiederherstellen steckbarer Datenbanken über zeitpunktgenaues Recovery
+
+Sie können eine steckbare Datenbank (PDB) wiederherstellen, die beschädigt oder verworfen wurde, ohne die andere DBs in der Container-Datenbank (CDB) zu belasten. SnapCenter nutzt RMAN für die Durchführung von Point-in-Time Recoverys (PITR) der PDB.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Wählen Sie auf der Seite Ressourcen entweder *Datenbank* oder *Ressourcengruppe* aus der Liste Ansicht aus.
+. Wählen Sie die Datenbank des Typs Einzelinstanz (mandantenfähig) aus.
+. Wählen Sie aus der Ansicht Kopien verwalten im Speichersystem *Backups* aus.
++
+Wenn die Sicherung nicht katalogisiert ist, sollten Sie die Sicherung auswählen und auf *Katalog* klicken.
+
+. Wählen Sie die katalogisierte Sicherung aus, und klicken Sie dann auf *image:../media/restore_icon.gif["Symbol Wiederherstellen"]*.
+. Führen Sie auf der Seite „Wiederherstellungsumfang“ die folgenden Aufgaben durch:
++
+.. Wählen Sie *RAC* aus, wenn Sie ein Backup einer Datenbank in einer RAC-Umgebung ausgewählt haben.
+.. Je nachdem, ob Sie die PDB oder Tablespaces in einer PDB wiederherstellen möchten, führen Sie eine der folgenden Aktionen aus:
++
+*** Wählen Sie *Pluggable Databases (PDBs)* aus, wenn Sie eine PDB wiederherstellen möchten.
+*** Wählen Sie *Pluggable Database (PDB) Tablespaces* aus, wenn Sie Tablespaces in einer PDB wiederherstellen möchten.
+
+
+
+
+. Wählen Sie auf der Seite „Recovery Scope“ eine der folgenden Optionen aus:
++
+.. Wählen Sie *bis SCN (System Change Number)*, wenn Sie eine Wiederherstellung auf eine bestimmte SCN durchführen möchten.
+.. Wählen Sie *Datum und Uhrzeit*, wenn Sie sich auf ein bestimmtes Datum und eine bestimmte Uhrzeit wiederherstellen möchten.
+
+
+. Geben Sie auf der Seite Pre-Ops und Post Ops die erforderlichen Details an.
+. Wählen Sie auf der Benachrichtigungsseite aus der Dropdown-Liste *E-Mail-Präferenz* die Szenarien aus, in denen Sie die E-Mails versenden möchten.
+. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
+. Überwachen Sie den Wiederherstellungsprozess mithilfe der Seite *Monitor* > *Jobs*.
+

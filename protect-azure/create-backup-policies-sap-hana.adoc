@@ -1,0 +1,38 @@
+---
+permalink: protect-azure/create-backup-policies-sap-hana.html 
+sidebar: sidebar 
+keywords: create policies, SAP HANA, backup policies 
+summary: Erstellen Sie eine Sicherungsrichtlinie für die Ressource oder Ressourcengruppe, die Sie sichern möchten. 
+---
+= Backup-Richtlinien für SAP HANA Datenbanken
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bevor Sie SnapCenter zum Sichern von SAP HANA-Datenbankressourcen verwenden, müssen Sie eine Backup-Richtlinie für die Ressource oder Ressourcengruppe erstellen, die Sie sichern möchten.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Einstellungen*.
+. Klicken Sie auf der Seite Einstellungen auf *Richtlinien*.
+. Klicken Sie Auf *Neu*.
+. Geben Sie auf der Seite Name den Namen und die Beschreibung der Richtlinie ein.
+. Führen Sie auf der Seite Einstellungen die folgenden Schritte aus:
++
+.. Wählen Sie den Sicherungstyp aus.
++
+... Wählen Sie *File-based Backup* aus, wenn Sie eine Integritätsprüfung der Datenbank durchführen möchten.
+... Wählen Sie *Snapshot Based* aus, wenn Sie ein Backup mit Snapshot Kopiertechnologie erstellen möchten.
+
+
+.. Geben Sie den Zeitplantyp an.
+
+
+. Geben Sie auf der Seite Aufbewahrung die Aufbewahrungseinstellungen für den Sicherungstyp und den ausgewählten Zeitplantyp an.
++
+
+NOTE: Die Replizierung auf sekundären Speicher wird nicht unterstützt.
+
+. Überprüfen Sie die Zusammenfassung und klicken Sie auf *Fertig stellen*.
+

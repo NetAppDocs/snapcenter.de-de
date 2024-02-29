@@ -1,0 +1,41 @@
+---
+permalink: protect-azure/add-hosts-install-plugin-for-sap-hana.html 
+sidebar: sidebar 
+keywords: add host, install, install plug-in, SAP HANA 
+summary: Fügen Sie Hosts hinzu, und installieren Sie dann die Plug-ins-Pakete. 
+---
+= Fügen Sie Hosts hinzu und installieren Sie das SnapCenter Plug-in für die SAP HANA Datenbank
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen Hosts über die Seite SnapCenter Add Host hinzufügen hinzufügen und dann die Plug-ins-Pakete installieren. Die Plug-ins werden automatisch auf den Remote-Hosts installiert.
+
+.Bevor Sie beginnen
+* Sie müssen ein Benutzer sein, der einer Rolle zugewiesen ist, die über die Berechtigungen für die Plug-in-Installation und -Deinstallation verfügt, wie z. B. die Rolle „SnapCenter-Administrator“.
+* Wenn Sie ein Plug-in auf einem Windows-Host installieren, wenn Sie keine Anmeldedaten angeben oder der Benutzer zu einem lokalen Workgroup-Benutzer gehört, müssen Sie UAC auf dem Host deaktivieren.
+* Wenn Sie auf dem zentralen Host installieren, stellen Sie sicher, dass die SAP HANA-Clientsoftware auf diesem Host installiert ist, und öffnen Sie die erforderlichen Ports auf dem SAP HANA-Datenbankhost, um die HDB-SQL-Abfragen Remote auszuführen.
+
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Hosts*.
+. Vergewissern Sie sich, dass die Registerkarte *verwaltete Hosts* ausgewählt ist.
+. Klicken Sie Auf *Hinzufügen*.
+. Führen Sie auf der Seite Hosts die folgenden Aktionen durch:
++
+.. Wählen Sie im Feld Hosttyp den Hosttyp aus.
+.. Geben Sie im Feld Hostname den vollständig qualifizierten Domänennamen (FQDN) oder die IP-Adresse des Hosts ein.
+.. Geben Sie im Feld Anmeldeinformationen die von Ihnen erstellten Anmeldeinformationen ein.
+
+
+. Wählen Sie im Abschnitt Plug-ins zum Installieren auswählen die zu installierenden Plug-ins aus.
+. (Optional) Klicken Sie auf *Weitere Optionen* und geben Sie die Details an.
+. Klicken Sie Auf *Absenden*.
+. Wenn der Hosttyp Linux ist, überprüfen Sie den Fingerabdruck und klicken Sie dann auf *Bestätigen und Senden*.
++
+In einer Cluster-Einrichtung sollten Sie den Fingerabdruck aller Nodes im Cluster überprüfen.
+
+. Überwachen Sie den Installationsfortschritt.
+

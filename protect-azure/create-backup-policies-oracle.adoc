@@ -1,0 +1,35 @@
+---
+permalink: protect-azure/create-backup-policies-oracle.html 
+sidebar: sidebar 
+keywords: create policies, Oracle, backup policies 
+summary: Erstellen Sie eine Sicherungsrichtlinie für die Ressource oder Ressourcengruppe, die Sie sichern möchten. 
+---
+= Erstellung von Backup-Richtlinien für Oracle Datenbanken
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bevor Sie SnapCenter zum Backup von Oracle-Datenbankressourcen verwenden, müssen Sie eine Backup-Richtlinie für die Ressource oder die Ressourcengruppe erstellen, die Sie sichern möchten.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Einstellungen*.
+. Klicken Sie auf der Seite Einstellungen auf *Richtlinien*.
+. Wählen Sie Oracle Database aus der Dropdown-Liste aus.
+. Klicken Sie Auf *Neu*.
+. Geben Sie auf der Seite Name den Namen und die Beschreibung der Richtlinie ein.
+. Führen Sie auf der Seite Sicherungstyp die folgenden Schritte durch:
++
+.. Wählen Sie den Sicherungstyp als Online- oder Offline-Backup aus.
+.. Legen Sie die Zeitplanhäufigkeit fest.
+.. Wenn Sie das Backup mit Oracle Recovery Manager (RMAN) katalogisieren möchten, wählen Sie *Katalog-Backup mit Oracle Recovery Manager (RMAN)* aus.
+.. Wenn Sie Archivprotokolle nach Backup beschneiden möchten, wählen Sie *Prune Archivprotokolle nach Backup* aus.
+.. Geben Sie die Einstellungen für das Archivprotokoll zum Löschen an.
+
+
+. Geben Sie auf der Seite Aufbewahrung die Aufbewahrungseinstellungen an.
+. Geben Sie auf der Seite Skript den Pfad und die Argumente des Prescript oder Postscript ein, das Sie vor oder nach dem Backup ausführen möchten.
+. Wählen Sie auf der Seite Verifizierung den Backup-Zeitplan aus, für den Sie den Überprüfungsvorgang durchführen möchten, und geben Sie den Pfad und die Argumente des Prescript- oder Postscript ein, das Sie vor bzw. nach dem Überprüfungsvorgang ausführen möchten.
+. Überprüfen Sie die Zusammenfassung und klicken Sie auf *Fertig stellen*.
+

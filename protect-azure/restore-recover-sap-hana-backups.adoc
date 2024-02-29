@@ -1,0 +1,49 @@
+---
+permalink: protect-azure/restore-recover-sap-hana-backups.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database, restore, recover 
+summary: Mit SnapCenter können Daten von einem oder mehreren Backups wiederhergestellt werden. 
+---
+= Wiederherstellung von SAP HANA Datenbanken
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Daten aus den Backups wiederherstellen und wiederherstellen.
+
+.Über diese Aufgabe
+Wenn für automatisch erkannte HANA-Systeme die Option *Complete Resource* ausgewählt ist, wird die Wiederherstellung mithilfe der Single File Snapshot-Wiederherstellungstechnologie durchgeführt. Wenn das Kontrollkästchen * Fast Restore* aktiviert ist, wird die Volume Revert-Technologie verwendet.
+
+Für manuell hinzugefügte Ressourcen wird die Volume Revert-Technologie immer verwendet.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Filtern Sie auf der Seite Ressourcen die Ressourcen aus der Dropdown-Liste *Ansicht* nach Ressourcentyp.
+. Wählen Sie die Ressource aus, oder wählen Sie eine Ressourcengruppe aus, und wählen Sie dann eine Ressource in dieser Gruppe aus.
+. Wählen Sie in der Ansicht „Kopien verwalten“ die Option *Backups* aus den primären oder sekundären (gespiegelten oder ausgelagerten) Speichersystemen aus.
+. Wählen Sie in der Tabelle primäre(n) Backups das Backup aus, von dem Sie wiederherstellen möchten, und klicken Sie dann auf *image:../media/restore_icon.gif["Symbol Wiederherstellen"]*.
+. Wählen Sie auf der Seite Wiederherstellungsbereich die Option *komplette Ressource* aus.
++
+Alle konfigurierten Datenvolumes der SAP HANA-Datenbank werden wiederhergestellt.
+
+. Führen Sie für automatisch ermittelte HANA-Systeme auf der Seite Wiederherstellungsumfang die folgenden Aktionen durch:
++
+.. Wählen Sie *in den letzten Zustand wiederherstellen*, wenn Sie so nah wie möglich an der aktuellen Zeit wiederherstellen möchten.
+.. Wählen Sie *Recover to Point in Time* aus, wenn Sie sich an den angegebenen Zeitpunkt wiederherstellen möchten.
+.. Wählen Sie *Recover to specified Data Backup*, wenn Sie eine bestimmte Datensicherung wiederherstellen möchten.
+.. Wählen Sie *Keine Erholung*, wenn Sie jetzt nicht wiederherstellen möchten.
+.. Geben Sie die Speicherorte für die Protokollsicherung an.
+.. Geben Sie den Speicherort des Backup-Katalogs an.
+
+
+. Geben Sie auf der Seite Pre OPS die Befehle vor dem Wiederherstellen ein und heben Sie sie ab, bevor Sie einen Wiederherstellungsauftrag ausführen.
+. Geben Sie auf der Seite Post OPS Mount- und Post-Restore-Befehle ein, die ausgeführt werden sollen, nachdem eine Wiederherstellung durchgeführt wurde.
+. Wählen Sie auf der Benachrichtigungsseite aus der Dropdown-Liste *E-Mail-Präferenz* die Szenarien aus, in denen Sie die E-Mails versenden möchten.
++
+Außerdem müssen Sie die E-Mail-Adressen für Absender und Empfänger sowie den Betreff der E-Mail angeben. SMTP muss auch auf der Seite *Einstellungen* > *Globale Einstellungen* konfiguriert werden.
+
+. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
+. Überwachen Sie den Fortschritt des Vorgangs, indem Sie auf *Monitor* > *Jobs* klicken.
+

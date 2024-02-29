@@ -1,0 +1,43 @@
+---
+permalink: protect-azure/add-sap-hana-database.html 
+sidebar: sidebar 
+keywords: add, add SAP HANA database, manual discovery, automatic discovery 
+summary: Fügen Sie die SAP HANA-Datenbanken hinzu. 
+---
+= Fügen Sie die SAP HANA-Datenbank hinzu
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie sollten die SAP HANA-Datenbank manuell hinzufügen.
+
+.Über diese Aufgabe
+Ressourcen müssen manuell hinzugefügt werden, wenn das Plug-in auf einem zentralen Server installiert ist. Wenn das SAP HANA-Plug-in auf dem HANA-Datenbank-Host installiert ist, wird das HANA-System automatisch erkannt.
+
+
+NOTE: Die automatische Erkennung wird für die HANA-Konfiguration mit mehreren Hosts nicht unterstützt, sondern muss nur über ein zentralisiertes Plug-in hinzugefügt werden.
+
+.Schritte
+. Wählen Sie im linken Navigationsbereich das SnapCenter-Plug-in für SAP HANA-Datenbank aus der Dropdown-Liste aus und klicken Sie dann auf *Ressourcen*.
+. Klicken Sie auf der Seite Ressourcen auf *SAP HANA-Datenbank hinzufügen*.
+. Führen Sie auf der Seite „Ressourcendetails bereitstellen“ die folgenden Aktionen durch:
++
+.. Geben Sie den Ressourcentyp entweder als Single Container, Multimandant Database Container oder Non-Data Volume ein.
+.. Geben Sie den SAP HANA-Systemnamen ein.
+.. Geben Sie die System-ID (SID) ein.
+.. Wählen Sie den Plug-in-Host aus.
+.. Geben Sie den Schlüssel für die Verbindung zum SAP HANA-System ein.
+.. Geben Sie den Benutzernamen ein, für den der HDB Secure User Store Key konfiguriert ist.
+
+
+. Wählen Sie auf der Seite Speicher bereitstellen die Option *Azure NetApp Files* als Speichertyp aus.
++
+.. Wählen Sie das Azure NetApp Konto aus.
+.. Wählen Sie den Kapazitäts-Pool und die zugehörigen Volumes aus.
+.. Klicken Sie Auf *Speichern*.
+
+
+. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
+

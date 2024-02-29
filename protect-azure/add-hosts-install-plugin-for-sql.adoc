@@ -1,0 +1,39 @@
+---
+permalink: protect-azure/add-hosts-install-plugin-for-sql.html 
+sidebar: sidebar 
+keywords: add host, install, install plug-in, SQL 
+summary: Fügen Sie Hosts hinzu, und installieren Sie dann die Plug-ins-Pakete. 
+---
+= Fügen Sie Hosts hinzu und installieren Sie das SnapCenter Plug-in für die SQL Server-Datenbank
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter unterstützt die Datensicherung von SQL-Instanzen auf SMB-Freigaben auf Azure NetApp Files. Die Standalone- und Verfügbarkeitsgruppen-Konfigurationen werden unterstützt.
+
+Sie müssen die Seite SnapCenter Host hinzufügen verwenden, um Hosts hinzuzufügen, und dann das Plug-ins-Paket installieren. Die Plug-ins werden automatisch auf den Remote-Hosts installiert.
+
+.Bevor Sie beginnen
+* Sie müssen ein Benutzer sein, der einer Rolle zugewiesen ist, die über die Berechtigungen für die Plug-in-Installation und -Deinstallation verfügt, wie z. B. die Rolle „SnapCenter-Administrator“.
+* Wenn Sie ein Plug-in auf einem Windows-Host installieren, wenn Sie keine Anmeldedaten angeben oder der Benutzer zu einem lokalen Workgroup-Benutzer gehört, müssen Sie UAC auf dem Host deaktivieren.
+
+
+.Schritte
+. Wählen Sie im linken Navigationsbereich *Hosts* aus.
+. Überprüfen Sie, ob die Registerkarte *verwaltete Hosts* oben ausgewählt ist.
+. Wählen Sie *Hinzufügen*.
+. Gehen Sie auf der Seite Hosts wie folgt vor:
++
+.. Wählen Sie im Feld Hosttyp den Hosttyp aus.
+.. Geben Sie im Feld Hostname den vollständig qualifizierten Domänennamen (FQDN) oder die IP-Adresse des Hosts ein.
+.. Geben Sie im Feld Anmeldeinformationen die von Ihnen erstellten Anmeldeinformationen ein.
+
+
+. Wählen Sie im Abschnitt *Plug-ins zur Installation auswählen* die zu installierenden Plug-ins aus.
+. (Optional) Klicken Sie auf *Weitere Optionen* und geben Sie die Details an.
+. Wählen Sie *Senden*.
+. Wählen Sie *Configure log Directory* und geben Sie auf der Seite Configure Host log Directory den SMB-Pfad des Host-Protokollverzeichnisses ein, und klicken Sie auf *Save*.
+. Klicken Sie auf *Absenden* und überwachen Sie den Installationsfortschritt.
+

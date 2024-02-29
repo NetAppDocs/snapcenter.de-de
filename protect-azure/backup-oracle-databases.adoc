@@ -1,0 +1,45 @@
+---
+permalink: protect-azure/backup-oracle-databases.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for Oracle Database, back up, databases, Azure NetApp Files 
+summary: Sichern Sie die Ressource auf der Seite „Ressourcen“. 
+---
+= Sichern Sie auf Azure NetApp Files laufende Oracle Datenbanken
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn eine Ressource noch nicht zu einer Ressourcengruppe gehört, können Sie die Ressource auf der Seite Ressourcen sichern.
+
+.Schritte
+. Wählen Sie im linken Navigationsbereich *Ressourcen* aus, und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Wählen Sie auf der Seite Ressource aus der Dropdown-Liste Ansicht die Option *Datenbank* aus.
+. Wählen Sie auf der Seite „Ressource“ *Benutzerdefiniertes Namensformat für Snapshot-Kopie verwenden* aus, und geben Sie dann ein benutzerdefiniertes Namensformat ein, das Sie für den Namen der Snapshot-Kopie verwenden möchten.
+. Führen Sie auf der Seite Richtlinien die folgenden Schritte aus:
++
+.. Wählen Sie eine oder mehrere Richtlinien aus der Dropdown-Liste aus.
+.. Wählen Sie *image:../media/add_policy_from_resourcegroup.gif[""]* In der Spalte Zeitplan konfigurieren für die Richtlinie, für die Sie einen Zeitplan konfigurieren möchten.
+.. Konfigurieren Sie im Dialogfeld Add Schedules for Policy _Policy_Name_ den Zeitplan, und wählen Sie dann *OK* aus.
+
+
+. Führen Sie auf der Seite Überprüfung die folgenden Schritte aus:
++
+.. Wählen Sie den Überprüfungsserver aus.
+.. Wählen Sie die Richtlinie aus, für die Sie Ihren Verifizierungszeitplan konfigurieren möchten, und klicken Sie dann auf *image:../media/add_policy_from_resourcegroup.gif[""]*.
+.. Wählen Sie entweder *Verifizierung nach Backup ausführen* oder *geplante Verifizierung ausführen*.
+.. Klicken Sie auf OK.
+
+
+. Wählen Sie auf der Benachrichtigungsseite aus der Dropdown-Liste *E-Mail-Präferenz* die Szenarien aus, in denen Sie die E-Mails versenden möchten.
+. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
+. Wählen Sie *Jetzt sichern*.
+. Führen Sie auf der Seite Backup die folgenden Schritte aus:
++
+.. Wenn der Ressource mehrere Richtlinien zugeordnet sind, wählen Sie aus der Dropdown-Liste *Policy* die Richtlinie aus, die Sie für die Sicherung verwenden möchten.
+.. Klicken Sie Auf *Backup*.
+
+
+. Überwachen Sie den Fortschritt des Vorgangs, indem Sie auf *Monitor* > *Jobs* klicken.
+

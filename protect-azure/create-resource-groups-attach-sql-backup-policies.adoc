@@ -1,0 +1,67 @@
+---
+permalink: protect-azure/create-resource-groups-attach-sql-backup-policies.html 
+sidebar: sidebar 
+keywords: resource groups, attach policies, snapcenter, sql, backup polices, schedule 
+summary: Eine Ressourcengruppe ist der Container, dem Sie Ressourcen hinzufügen müssen, die Sie sichern und schützen möchten. 
+---
+= Erstellen von Ressourcengruppen und Anhängen von SQL-Backup-Richtlinien
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Eine Ressourcengruppe ist der Container, dem Sie Ressourcen hinzufügen müssen, die Sie sichern und schützen möchten.
+
+Mit einer Ressourcengruppen können Sie alle Daten sichern, die einer bestimmten Anwendung zugeordnet sind. Für jeden Datenschutzauftrag ist eine Ressourcengruppen erforderlich. Sie müssen der Ressourcengruppe auch eine oder mehrere Richtlinien zuordnen, um den Typ des Datensicherungsauftrags zu definieren, den Sie ausführen möchten.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Klicken Sie auf der Seite Ressourcen auf *Neue Ressourcengruppe*.
+. Führen Sie auf der Seite Name die folgenden Aktionen durch:
++
+|===
+| Für dieses Feld... | Tun Sie das... 
+
+
+ a| 
+Name
+ a| 
+Geben Sie einen Namen für die Ressourcengruppe ein.
+
+
+
+ a| 
+Tags
+ a| 
+Geben Sie eine oder mehrere Bezeichnungen ein, die Ihnen bei der späteren Suche nach der Ressourcengruppe helfen.
+
+
+
+ a| 
+Verwenden Sie für Snapshot-Kopie das benutzerdefinierte Namensformat
+ a| 
+Aktivieren Sie dieses Kontrollkästchen, und geben Sie ein benutzerdefiniertes Namensformat ein, das Sie für den Namen der Snapshot Kopie verwenden möchten.
+
+|===
+. Wählen Sie auf der Seite Ressourcen einen Hostnamen aus der Dropdown-Liste *Host* und Ressourcentyp aus der Dropdown-Liste *Ressourcentyp* aus.
+. Wählen Sie die Ressourcen im Abschnitt *Verfügbare Ressourcen* aus und klicken Sie dann auf den rechten Pfeil, um sie in den Abschnitt *Ausgewählte Ressourcen* zu verschieben.
+. Führen Sie auf der Seite Richtlinien die folgenden Schritte aus:
++
+.. Wählen Sie eine oder mehrere Richtlinien aus der Dropdown-Liste aus.
+.. Klicken Sie in der Spalte Zeitplan konfigurieren auf *image:../media/add_policy_from_resourcegroup.gif[""]* Für die Richtlinie, die Sie konfigurieren möchten.
+.. Konfigurieren Sie im Dialogfeld Add Schedules for Policy_Policy_Name_ den Zeitplan, und klicken Sie dann auf *OK*.
+.. Wählen Sie den Microsoft SQL Server Scheduler aus.
+
+
+. Führen Sie auf der Seite Überprüfung die folgenden Schritte aus:
++
+.. Wählen Sie den Überprüfungsserver aus.
+.. Wählen Sie die Richtlinie aus, für die Sie Ihren Verifizierungszeitplan konfigurieren möchten, und klicken Sie dann auf *image:../media/add_policy_from_resourcegroup.gif[""]*.
+.. Wählen Sie entweder *Verifizierung nach Backup ausführen* oder *geplante Verifizierung ausführen*.
+.. Klicken Sie auf *OK*.
+
+
+. Wählen Sie auf der Benachrichtigungsseite aus der Dropdown-Liste *E-Mail-Präferenz* die Szenarien aus, in denen Sie die E-Mails versenden möchten.
+. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
+

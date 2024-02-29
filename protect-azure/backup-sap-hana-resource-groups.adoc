@@ -1,0 +1,30 @@
+---
+permalink: protect-azure/backup-sap-hana-resource-groups.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database, back up, resource groups 
+summary: Eine Ressourcengruppe ist eine Sammlung von Ressourcen auf einem Host. Für alle in der Ressourcengruppe definierten Ressourcen wird ein Sicherungsvorgang in der Ressourcengruppe durchgeführt. 
+---
+= Backup von SAP HANA-Ressourcengruppen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Eine Ressourcengruppe ist eine Sammlung von Ressourcen auf einem Host. Für alle in der Ressourcengruppe definierten Ressourcen wird ein Sicherungsvorgang in der Ressourcengruppe durchgeführt.
+
+.Schritte
+. Wählen Sie im linken Navigationsbereich *Ressourcen* aus, und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Wählen Sie auf der Seite Ressourcen in der Liste *Ansicht* die Option *Ressourcengruppe* aus.
+. Wählen Sie auf der Seite Ressourcengruppen die Ressourcengruppe aus, die Sie sichern möchten, und wählen Sie dann *Jetzt sichern* aus.
+. Führen Sie auf der Seite Backup die folgenden Schritte aus:
++
+.. Wenn der Ressourcengruppe mehrere Richtlinien zugeordnet sind, wählen Sie aus der Dropdown-Liste *Policy* die Richtlinie aus, die Sie für das Backup verwenden möchten.
++
+Wenn die für das On-Demand-Backup ausgewählte Richtlinie einem Backup-Zeitplan zugeordnet ist, werden die On-Demand-Backups auf Basis der für den Zeitplantyp festgelegten Aufbewahrungseinstellungen beibehalten.
+
+.. Wählen Sie *Backup*.
+
+
+. Überwachen Sie den Vorgangsfortschritt, indem Sie *Monitor* > *Jobs* auswählen.
+

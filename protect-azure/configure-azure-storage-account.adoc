@@ -1,0 +1,23 @@
+---
+permalink: protect-azure/configure-azure-storage-account.html 
+sidebar: sidebar 
+keywords: snapcenter, azure, azure storage account, subscription ID, azure credential, azure netapp account 
+summary: Konfigurieren Sie das Azure Storage-Konto in SnapCenter. 
+---
+= Konfigurieren Sie das Azure Storage-Konto
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie sollten das Azure Storage-Konto in SnapCenter konfigurieren.
+
+Das Azure Storage-Konto enthält Details zu Abonnement-ID, Azure Zugangsdaten und Azure NetApp Konto.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speichersysteme*.
+. Wählen Sie auf der Seite Speichersysteme *Azure NetApp Files* aus und klicken Sie auf *Neu*.
+. Wählen Sie die Zugangsdaten, die Abonnement-ID und das NetApp-Konto in den entsprechenden Dropdown-Listen aus.
+. Klicken Sie Auf *Absenden*.
+
