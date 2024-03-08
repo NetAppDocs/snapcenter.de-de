@@ -5269,7 +5269,6 @@
   <block id="96c2f121719642c9bb76de237a79a8f7" category="list-text">Alle Anmeldedaten in SnapCenter werden mit AES-Verschlüsselung (Advanced Encryption Standard) geschützt.</block>
   <block id="f8f9feb00e019b3a4905536ed6898cbc" category="list-text">SnapCenter verwendet Sicherheitsalgorithmen, die dem Federal Information Processing Standard (FIPS) entsprechen.</block>
   <block id="6e48ef9c3b9eee75beadb62ef46ee1fe" category="list-text">SnapCenter unterstützt die Verwendung der vom Kunden bereitgestellten autorisierten CA-Zertifikate.</block>
-  <block id="4c0acb13d249f2227e8b1f1cf0ce1119" category="list-text">SnapCenter 4.1.1 oder höher unterstützt die Kommunikation mit ONTAP über TLS (Transport Layer Security) 1.2. Sie können auch die TLS 1.2-Kommunikation zwischen Clients und Servern verwenden.</block>
   <block id="bf3e76e4f1322979745fbde954cda8f3" category="list-text">SnapCenter unterstützt einen bestimmten Satz von SSL-Cipher-Suites, um die Sicherheit der Netzwerkkommunikation zu gewährleisten.</block>
   <block id="5d06d972bc910c7d332d38f29622193f" category="inline-link">So konfigurieren Sie die unterstützte SSL Cipher Suite</block>
   <block id="f63adc493855850c393ed81600d0452d" category="paragraph">Weitere Informationen finden Sie unter<block ref="30d10745fe88e7ddd3a6030b89647570" category="inline-link-rx"></block>.</block>
@@ -8607,7 +8606,6 @@ Zusammenfassung: 'Sie können SnapCenter verwenden, um eine geklonte Ressource v
   <block id="ffc2be1279cc0930ef2358aa6770f7ff" category="paragraph">Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ siehe<block ref="7fb83b6cbb928f4072ab9a7c4ce09c24" category="inline-link-rx"></block>.</block>
   <block id="43fd8846b62a01de615c215f6601836d" category="paragraph">Außerdem können Sie PowerShell Cmdlets manuell oder in Skripten verwenden, um Backup- und Restore-Vorgänge durchzuführen. Ausführliche Informationen zu PowerShell Cmdlets finden Sie in der Hilfe zu SnapCenter Cmdlet oder unter<block ref="7fb83b6cbb928f4072ab9a7c4ce09c24" category="inline-link-rx"></block>.</block>
   <block id="d239ebbabeedcdb87dfeedbd548986ac" category="list-text">Die Disaster Recovery-Funktion von SnapCenter verwendet FÜR das Backup des SnapCenter Servers REST-APIs. Siehe <block ref="6bd0ca01dc1606a35edfa9534e3c90d2" category="inline-link-macro-rx"></block>.</block>
-  <block id="71e2b65158ea1d86e4f878e40777dafd" category="list-text">SnapCenter 5.0 unterstützt die TLS-1.3-Kommunikation (Transport Layer Security) mit ONTAP.</block>
   <block id="c53d4394b4b820e8039b31483c1dfd5e" category="paragraph">Weitere Informationen zu Windows Cmdlets finden Sie unter<block ref="7fb83b6cbb928f4072ab9a7c4ce09c24" category="inline-link-rx"></block>.</block>
   <block id="9f41dc9894f346b6e32aabf91c683469" category="paragraph">Weitere Informationen zu UNIX-Befehlen finden Sie unter<block ref="a6fc2394a8b2095d1929066d59f6fcc9" category="inline-link-rx"></block>.</block>
   <block id="e6c4248fcff66b43c157dbc37ec22080" category="paragraph">SnapLock ist eine hochperformante Compliance-Lösung für Unternehmen, die mit WORM-Storage (Write Once, Read Many) Dateien aus gesetzlichen und Governance-Gründen in unveränderter Form aufbewahren.</block>
@@ -9046,4 +9044,16 @@ SnapLock-Einstellungen werden von ONTAP gemanagt.</block>
   <block id="97f2c8bf124398ba05bca9cc6fb869b1" category="list-text">Daten auf primärem Azure NetApp Files (Oracle, Microsoft SQL und SAP HANA)</block>
   <block id="3559da2fac74b3e69a2cd678efee3582" category="sidebar">Sichern Sie Applikationen, die auf Azure NetApp Files ausgeführt werden</block>
   <block id="dd5c6b13be74557c3408d452b60be7a6" category="sidebar">Installieren Sie SnapCenter und erstellen Sie Anmeldeinformationen</block>
+  <block id="e353c96a332f0cabee61ee0d1183ced5" category="list-text">SnapCenter 4.1.1 oder höher unterstützt TLS 1.2 (Transport Layer Security) für die Kommunikation mit ONTAP. Sie können TLS 1.2 auch für die Kommunikation zwischen Clients und Servern verwenden.</block>
+  <block id="35fdfe6dd04402c29d3fc6d0df727357" category="paragraph">Ab 5.0 unterstützt SnapCenter (TLS) 1.3 für die Kommunikation mit ONTAP.</block>
+  <block id="e9d6209daed73f3a8f0578d27a8a2a85" category="summary">Applikations-Volumes sind der Storage, in dem Informationen zu Oracle Database gespeichert werden.</block>
+  <block id="daa2e304f0d45a22bbdaee82fe42256f" category="doc">Was sind Applikations-Volumes</block>
+  <block id="b9ef14bd380b22129789d2a58055fd71" category="paragraph">Anwendungsvolumes sind der Speicher, in dem Informationen wie Konfigurations-, Installer- und andere nicht-Datendateien im Zusammenhang mit der Oracle-Datenbank gespeichert werden.</block>
+  <block id="6a6e355317fc46c557aae7efee2616ae" category="paragraph">Das SnapCenter Plug-in für Oracle Database ermöglicht Ihnen die Erstellung eines konsistenten Backups von Applikations-Volumes (nicht-Datenvolumen) zusammen mit den Oracle Datenbanken.</block>
+  <block id="23c8668967f14b47c49239015f1a75e6" category="paragraph">Das Plug-in automatisiert das Backup und das Klonen von Applikations-Volumes.</block>
+  <block id="460056168fe8cfae225fcede48618f89" category="list-text">Schützen Sie Anwendungs-Volumes zusammen mit Oracle Database Volumes in einer einzigen Ressourcengruppe.</block>
+  <block id="8d4879d1f00447108f920120663f3d07" category="list-text">Erstellen Sie Backups von Applikations-Volumes.</block>
+  <block id="af3d150952bdf0ab3693bd9da33bd032" category="list-text">Erstellen Sie Backups von Oracle Datenbanken zusammen mit Applikations-Volumes.</block>
+  <block id="39240126e5a114efbf72c14cc21a7094" category="list-text">Erstellen Sie bis zu zeitpunktbezogene Klone von Datenbanken und Applikations-Volumes.</block>
+  <block id="c3f918653f9d61e3b2472e16235d9f90" category="list-text">Anzeigen von Berichten zu Backup- und Klonvorgängen</block>
 </blocks>
