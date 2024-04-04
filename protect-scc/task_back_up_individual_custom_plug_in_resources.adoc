@@ -25,9 +25,9 @@ Wenn eine einzelne benutzerdefinierte Plug-in-Ressource nicht zu einer Ressource
 Klicken Sie Auf image:../media/filter_icon.png[""]Und wählen Sie dann den Hostnamen und den Ressourcentyp aus, um die Ressourcen zu filtern. Sie können dann auf klicken image:../media/filter_icon.png["Filtersymbol"] Um den Filterbereich zu schließen.
 
 . Klicken Sie auf die Ressource, die Sie sichern möchten.
-. Wenn Sie auf der Seite „Ressource“ einen benutzerdefinierten Namen verwenden möchten, aktivieren Sie das Kontrollkästchen *benutzerdefiniertes Namensformat für Snapshot-Kopie verwenden* und geben dann ein benutzerdefiniertes Namensformat für den Namen der Snapshot-Kopie ein.
+. Wenn Sie auf der Seite Ressource einen benutzerdefinierten Namen verwenden möchten, aktivieren Sie das Kontrollkästchen *Benutzerdefiniertes Namensformat für Snapshot-Kopie verwenden* und geben dann ein benutzerdefiniertes Namensformat für den Snapshot-Namen ein.
 +
-Beispiel: _Custext_Policy_hostname_ oder _Resource_hostname_. Standardmäßig wird ein Zeitstempel an den Namen der Snapshot Kopie angehängt.
+Beispiel: _Custext_Policy_hostname_ oder _Resource_hostname_. Standardmäßig wird an den Snapshot Namen ein Zeitstempel angehängt.
 
 . Gehen Sie auf der Seite Anwendungseinstellungen wie folgt vor:
 +
@@ -43,7 +43,7 @@ Aktivieren Sie bei Bedarf das Backup der Konsistenzgruppe, und führen Sie die f
  a| 
 Es dauert nicht lange, bis der Snapshot-Vorgang der Konsistenzgruppe abgeschlossen ist
  a| 
-Wählen Sie „dringend“, „Mittel“ oder „entspannt“, um die Wartezeit zum Abschluss des Snapshot-Kopiervorgangs anzugeben.
+Wählen Sie dringend, Mittel oder entspannt aus, um die Wartezeit für den Snapshot-Vorgang anzugeben.
 
 Dringend = 5 Sekunden, Mittel = 7 Sekunden und entspannt = 20 Sekunden.
 
@@ -58,35 +58,35 @@ Wählen Sie diese Option aus, um zu vermeiden, einen WAFL Konsistenzpunkt zu erz
 +
 image:../media/application_settings.gif["Seite „Anwendungseinstellungen“"]
 
-.. Klicken Sie auf den Pfeil *Scripts*, um vor- und Post-Befehle für quiesce, Snapshot copy und unquiesce-Vorgänge auszuführen. Sie können auch vor dem Beenden des Sicherungsvorgangs Vorbefehle ausführen.
+.. Klicken Sie auf den Pfeil *Scripts*, um Pre- und Post-Befehle für Stilllegung, Snapshot und Stilllegung auszuführen. Sie können auch vor dem Beenden des Sicherungsvorgangs Vorbefehle ausführen.
 +
 Prescripts und Postscripts werden auf dem SnapCenter Server ausgeführt.
 
 .. Klicken Sie auf den Pfeil *Benutzerdefinierte Konfigurationen*, und geben Sie dann die für alle Aufträge, die diese Ressource verwenden, erforderlichen benutzerdefinierten Wertpaare ein.
-.. Klicken Sie auf den Pfeil *Snapshot-Kopie-Tool*, um das Tool zum Erstellen von Snapshot-Kopien auszuwählen:
+.. Klicken Sie auf den Pfeil *Snapshot Copy Tool*, um das Tool zum Erstellen von Snapshots auszuwählen:
 +
 |===
 | Ihre Situation | Dann... 
 
 
  a| 
-SnapCenter zum Erstellen einer Snapshot Kopie auf Storage-Ebene
+SnapCenter zur Erstellung eines Snapshots auf Storage-Ebene
  a| 
 Wählen Sie *SnapCenter ohne Dateisystemkonsistenz* aus.
 
 
 
  a| 
-SnapCenter, um das Filesystem mithilfe des Windows Plug-ins in einen konsistenten Zustand zu versetzen und dann eine Snapshot Kopie zu erstellen
+SnapCenter, um das Filesystem mit dem Plug-in für Windows in einen konsistenten Zustand zu versetzen und anschließend einen Snapshot zu erstellen
  a| 
 Wählen Sie *SnapCenter mit Dateisystemkonsistenz* aus.
 
 
 
  a| 
-Geben Sie den Befehl ein, um eine Snapshot Kopie zu erstellen
+Um den Befehl zum Erstellen eines Snapshots einzugeben
  a| 
-Wählen Sie *other* aus, und geben Sie dann den Befehl ein, um eine Snapshot Kopie zu erstellen.
+Wählen Sie *other* aus, und geben Sie dann den Befehl ein, um einen Snapshot zu erstellen.
 
 |===
 

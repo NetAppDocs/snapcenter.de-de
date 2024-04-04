@@ -2,7 +2,7 @@
 permalink: protect-scw/concept_snapcenter_plug_in_for_windows_features.html 
 sidebar: sidebar 
 keywords: SnapCenter 
-summary: Das Plug-in für Windows lässt sich in NetApp Snapshot-Kopien auf dem Storage-System integrieren. Um mit dem Plug-in für Windows zu arbeiten, verwenden Sie die SnapCenter-Schnittstelle. 
+summary: Das Plug-in für Windows ist in NetApp Snapshot Technologie auf dem Storage-System integriert. Um mit dem Plug-in für Windows zu arbeiten, verwenden Sie die SnapCenter-Schnittstelle. 
 ---
 = SnapCenter Plug-in für Windows Funktionen
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Das Plug-in für Windows lässt sich in NetApp Snapshot-Kopien auf dem 
 
 
 [role="lead"]
-Das Plug-in für Windows lässt sich in NetApp Snapshot-Kopien auf dem Storage-System integrieren. Um mit dem Plug-in für Windows zu arbeiten, verwenden Sie die SnapCenter-Schnittstelle.
+Das Plug-in für Windows ist in NetApp Snapshot Technologie auf dem Storage-System integriert. Um mit dem Plug-in für Windows zu arbeiten, verwenden Sie die SnapCenter-Schnittstelle.
 
 Das Plug-in für Windows umfasst folgende Hauptfunktionen:
 
@@ -23,9 +23,9 @@ Die SnapCenter-Schnittstelle bietet Standardisierung und Konsistenz über Plug-i
 +
 Sie können routinemäßige File-System-Backups planen, die Backup-Aufbewahrung richtlinienbasiert konfigurieren und Restore-Vorgänge einrichten. Zudem lässt sich die File-System-Umgebung proaktiv überwachen, indem SnapCenter so konfiguriert wird, dass E-Mail-Warnmeldungen gesendet werden.
 
-* *Unterbrechungsfreie NetApp Snapshot Kopie-Technologie*
+* *Unterbrechungsfreie NetApp Snapshots*
 +
-Das Plug-in für Windows verwendet die NetApp Snapshot Kopiertechnologie. So können Sie File-Systeme in Sekundenschnelle sichern und schnell wiederherstellen, ohne das Host offline zu schalten. Snapshot Kopien belegen nur minimalen Speicherplatz.
+Das Plug-in für Windows verwendet NetApp Snapshot Technologie. So können Sie File-Systeme in Sekundenschnelle sichern und schnell wiederherstellen, ohne das Host offline zu schalten. Snapshots belegen nur minimalen Speicherplatz.
 
 
 

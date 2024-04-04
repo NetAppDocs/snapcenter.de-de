@@ -29,9 +29,9 @@ IMPORTANT: Wenn Sie in einem Windows-Dateisystemkontext arbeiten, sichern Sie ke
 +
 Legen Sie die Schutzeinstellungen fest, wie in den Aufgaben zum Erstellen von Ressourcengruppen beschrieben.
 
-. Optional: Geben Sie auf der Seite „Ressource“ des Assistenten ein benutzerdefiniertes Namensformat für die Snapshot Kopie ein.
+. Optional: Geben Sie auf der Seite Ressource des Assistenten ein benutzerdefiniertes Namensformat für den Snapshot ein.
 +
-Beispiel: Custtext_resourcegruppe_Policy_hostname oder resourcegruppe_hostname. Standardmäßig wird ein Zeitstempel an den Namen der Snapshot Kopie angehängt.
+Beispiel: Custtext_resourcegruppe_Policy_hostname oder resourcegruppe_hostname. Standardmäßig wird an den Snapshot Namen ein Zeitstempel angehängt.
 
 . Führen Sie auf der Seite Richtlinien die folgenden Aufgaben aus:
 +

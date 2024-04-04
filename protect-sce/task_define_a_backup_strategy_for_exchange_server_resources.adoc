@@ -19,7 +19,7 @@ Ein SLA definiert das erwartete Service-Level und löst zahlreiche Service-bezog
 
 == Arten von Backups, die für Exchange-Datenbank unterstützt werden
 
-Für das Backup von Exchange Mailboxen mit SnapCenter müssen Sie den Ressourcentyp auswählen, beispielsweise Datenbanken und Datenbankverfügbarkeitsgruppen (Database Availability Groups, DAG). Mithilfe der Snapshot Kopiertechnologie lassen sich online schreibgeschützte Kopien der Volumes erstellen, auf denen sich die Ressourcen befinden.
+Für das Backup von Exchange Mailboxen mit SnapCenter müssen Sie den Ressourcentyp auswählen, beispielsweise Datenbanken und Datenbankverfügbarkeitsgruppen (Database Availability Groups, DAG). Mithilfe der Snapshot Technologie werden schreibgeschützte Online-Kopien der Volumes erstellt, auf denen sich die Ressourcen befinden.
 
 |===
 | Backup-Typ | Beschreibung 
@@ -85,9 +85,9 @@ Zu den Faktoren, die die Anzahl der erforderlichen Backup-Jobs bestimmen, zähle
 
 == Konventionen bei Backup-Namen
 
-Sie können entweder die standardmäßige Namenskonvention für Snapshot Kopien verwenden oder eine individuelle Namenskonvention verwenden. Die standardmäßige Backup-Namenskonvention fügt einen Zeitstempel zu den Namen von Snapshot Kopien hinzu, der Ihnen hilft, zu identifizieren, wann die Kopien erstellt wurden.
+Sie können entweder die standardmäßige Snapshot-Namenskonvention verwenden oder eine benutzerdefinierte Namenskonvention verwenden. Die standardmäßige Backup-Namenskonvention fügt Snapshot Namen einen Zeitstempel hinzu, der Ihnen dabei hilft, zu ermitteln, wann die Kopien erstellt wurden.
 
-Die Snapshot Kopie verwendet die folgende standardmäßige Namenskonvention:
+Für den Snapshot wird die folgende Standard-Namenskonvention verwendet:
 
 `resourcegroupname_hostname_timestamp`
 
@@ -104,7 +104,7 @@ In diesem Beispiel haben die Syntaxelemente folgende Bedeutungen:
 * _03-12-2015_23.17.26_ ist das Datum und der Zeitstempel.
 
 
-Alternativ können Sie das Namensformat für die Snapshot-Kopie angeben und Ressourcen oder Ressourcengruppen schützen, indem Sie *Verwenden Sie benutzerdefiniertes Namensformat für die Snapshot-Kopie* wählen. Beispiel: Custtext_resourcegruppe_Policy_hostname oder resourcegruppe_hostname. Standardmäßig wird dem Namen der Snapshot Kopie das Suffix mit dem Zeitstempel hinzugefügt.
+Alternativ können Sie das Snapshot-Namensformat beim Schutz von Ressourcen oder Ressourcengruppen angeben, indem Sie *Benutzerdefiniertes Namensformat für Snapshot-Kopie verwenden* auswählen. Beispiel: Custtext_resourcegruppe_Policy_hostname oder resourcegruppe_hostname. Standardmäßig wird dem Snapshot-Namen das Suffix mit dem Zeitstempel hinzugefügt.
 
 
 

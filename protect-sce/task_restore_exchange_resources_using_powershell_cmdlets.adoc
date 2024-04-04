@@ -16,7 +16,7 @@ Beim Wiederherstellen einer Exchange-Datenbank wird eine Verbindungssitzung mit 
 Sie müssen die PowerShell Umgebung vorbereitet haben, um die PowerShell Cmdlets auszuführen.
 
 .Über diese Aufgabe
-Bei ONTAP 9.12.1 und niedriger Version übernehmen die im Rahmen der Wiederherstellung erstellten Klone der SnapLock Vault Snapshots die Verfallszeit von SnapLock Vault. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
+Bei ONTAP Version 9.12.1 und niedriger übernehmen die im Rahmen der Wiederherstellung aus den SnapLock Vault Snapshots erstellten Klone die Verfallszeit von SnapLock Vault. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
 
 .Schritte
 . Starten Sie eine Verbindungssitzung mit dem SnapCenter-Server für einen bestimmten Benutzer, indem Sie den verwenden `Open-SmConnection` Cmdlet:

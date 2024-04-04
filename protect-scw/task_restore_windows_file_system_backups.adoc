@@ -36,7 +36,7 @@ Der Wert des Schlüssels kann von Swagger über die API angezeigt werden: API /4
 Sie können die GET API verwenden, um den Wert der Taste anzuzeigen. SET-API wird nicht unterstützt.
 
 * Für die Wiederherstellung von SnapMirror Business Continuity (SM-BC) müssen Sie das Backup vom primären Standort auswählen.
-* Bei ONTAP 9.12.1 und niedriger Version übernehmen die im Rahmen der Wiederherstellung erstellten Klone der SnapLock Vault Snapshots die Verfallszeit von SnapLock Vault. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
+* Bei ONTAP Version 9.12.1 und niedriger übernehmen die im Rahmen der Wiederherstellung aus den SnapLock Vault Snapshots erstellten Klone die Verfallszeit von SnapLock Vault. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
 
 
 .Schritte

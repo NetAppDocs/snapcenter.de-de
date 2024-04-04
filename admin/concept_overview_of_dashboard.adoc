@@ -41,7 +41,7 @@ Wenn Sie auf eine bestimmte Warnmeldung klicken, werden Sie zur Seite „Meldung
 
 == Aktuelle Zusammenfassung Des Schutzes
 
-Die Kachel Letzte Protection Summary gibt Ihnen den Schutzstatus für alle Einheiten an, auf die Sie Zugriff haben. Standardmäßig wird die Anzeige so eingestellt, dass der Status aller Plug-ins angezeigt wird. Statusinformationen werden für Ressourcen bestimmt, die im Primärspeicher als Snapshot-Kopien und auf sekundären Storage mithilfe von SnapMirror und SnapVault Technologien gesichert werden. Die Verfügbarkeit von Schutzstatusinformationen für den sekundären Speicher basiert auf dem ausgewählten Plug-in-Typ.
+Die Kachel Letzte Protection Summary gibt Ihnen den Schutzstatus für alle Einheiten an, auf die Sie Zugriff haben. Standardmäßig wird die Anzeige so eingestellt, dass der Status aller Plug-ins angezeigt wird. Statusinformationen werden für Ressourcen bereitgestellt, die im Primärspeicher als Snapshots gesichert werden, und für Sekundärspeicher mithilfe von SnapMirror und SnapVault Technologien. Die Verfügbarkeit von Schutzstatusinformationen für den sekundären Speicher basiert auf dem ausgewählten Plug-in-Typ.
 
 
 NOTE: Wenn Sie eine Mirror-Vault-Schutzrichtlinie verwenden, werden die Zähler für die Sicherungszusammenfassung im SnapVault-Übersichtsdiagramm und nicht im SnapMirror Diagramm angezeigt.
@@ -52,7 +52,7 @@ Der Schutzstatus für einzelne Plug-ins wird durch Auswahl eines Plug-ins im Dro
 IMPORTANT: Berichte über sekundären Storage gelten nur für SnapVault. SnapMirror Berichte werden nicht unterstützt.
 
 
-NOTE: SAP HANA bietet Sicherungsstatusinformationen für primären und sekundären Storage für Snapshot Kopien. Für dateibasierte Backups steht nur der Schutzstatus des primären Storage zur Verfügung.
+NOTE: SAP HANA bietet Informationen zum Sicherungsstatus für primären und sekundären Storage für Snapshots. Für dateibasierte Backups steht nur der Schutzstatus des primären Storage zur Verfügung.
 
 |===
 | Sicherungsstatus | Primärspeicher | Sekundär-Storage 
@@ -141,9 +141,9 @@ Anzahl der aktuell ausgeführten Jobs.
 
 Im Bereich Storage wird der primäre und sekundäre Storage, der von Sicherungsaufgaben über einen Zeitraum von 90 Tagen verbraucht wird, grafisch dargestellt und zeigt Verbrauchstrends berechnet. Die Speicherinformationen werden alle 24 Stunden um 12 Uhr aktualisiert
 
-Der Tagesverbrauch, der die Gesamtzahl der in SnapCenter verfügbaren Backups und die durch diese Backups belegte Größe umfasst, wird oben auf dem Display angezeigt. Einem Backup können mehrere Snapshot Kopien zugeordnet sein, und die Anzahl entspricht dem gleichen. Dies gilt sowohl für primäre als auch für sekundäre Snapshot Kopien. Sie haben z. B. 10 Backups erstellt, von denen 2 aufgrund der richtlinienbasierten Backup-Aufbewahrung gelöscht werden und 1 Backup von Ihnen explizit gelöscht wird. Somit wird eine Anzahl von 7 Backups zusammen mit der Größe angezeigt, die von diesen 7 Backups belegt wird.
+Der Tagesverbrauch, der die Gesamtzahl der in SnapCenter verfügbaren Backups und die durch diese Backups belegte Größe umfasst, wird oben auf dem Display angezeigt. Ein Backup könnte mehrere Snapshots zugeordnet haben, und die Anzahl wird die gleiche reflektieren. Dies gilt sowohl für primäre als auch für sekundäre Snapshots. Sie haben z. B. 10 Backups erstellt, von denen 2 aufgrund der richtlinienbasierten Backup-Aufbewahrung gelöscht werden und 1 Backup von Ihnen explizit gelöscht wird. Somit wird eine Anzahl von 7 Backups zusammen mit der Größe angezeigt, die von diesen 7 Backups belegt wird.
 
-Der Storage-Einsparungsfaktor für primären Storage ist das Verhältnis der logischen Kapazität (Klon- und Snapshot-Einsparungen plus verbrauchter Storage) zur physischen Kapazität des primären Storage. Ein Balkendiagramm zeigt die Storage-Einsparungen.
+Der Storage-Einsparungsfaktor für Primär-Storage ist das Verhältnis der logischen Kapazität (Einsparungen durch Klone und Snapshots plus verbrauchter Storage) zur physischen Kapazität des primären Storage. Ein Balkendiagramm zeigt die Storage-Einsparungen.
 
 Das Liniendiagramm stellt den primären und sekundären Speicherverbrauch über einen laufenden Zeitraum von 90 Tagen täglich separat dar. Wenn Sie über die Diagramme fahren, erhalten Sie detaillierte tägliche Ergebnisse.
 

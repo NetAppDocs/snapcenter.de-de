@@ -17,13 +17,13 @@ Wenn eine Ressource noch nicht zu einer Ressourcengruppe gehört, können Sie di
 . Wählen Sie im linken Navigationsbereich *Ressourcen* aus, und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
 . Filtern Sie auf der Seite Ressourcen die Ressourcen aus der Dropdown-Liste *Ansicht* nach Ressourcentyp.
 . Wählen Sie die Ressource aus, die Sie sichern möchten.
-. Wählen Sie auf der Seite „Ressource“ *Benutzerdefiniertes Namensformat für Snapshot-Kopie verwenden* aus, und geben Sie dann ein benutzerdefiniertes Namensformat ein, das Sie für den Namen der Snapshot-Kopie verwenden möchten.
+. Wählen Sie auf der Seite Ressource *Benutzerdefiniertes Namensformat für Snapshot-Kopie verwenden* aus, und geben Sie dann ein benutzerdefiniertes Namensformat ein, das Sie für den Snapshot-Namen verwenden möchten.
 . Gehen Sie auf der Seite Anwendungseinstellungen wie folgt vor:
 +
 .. Wählen Sie den Pfeil *Backups*, um zusätzliche Backup-Optionen festzulegen.
-.. Wählen Sie den Pfeil von *Scripts* aus, um Pre- und Post-Befehle für Stilllegung-, Snapshot Kopie- und Stilllegung-Vorgänge auszuführen.
+.. Wählen Sie den Pfeil von *Scripts* aus, um Pre- und Post-Befehle für Stilllegung-, Snapshot- und Unquiesce-Vorgänge auszuführen.
 .. Wählen Sie den Pfeil *Custom Configurations* aus, und geben Sie dann die für alle Jobs, die diese Ressource verwenden, erforderlichen benutzerdefinierten Wertpaare ein.
-.. Wählen Sie *Snapshot-Kopie-Tool > SnapCenter ohne Filesystem-Konsistenz* aus, um Snapshot-Kopien zu erstellen.
+.. Wählen Sie *Snapshot-Kopierwerkzeug > SnapCenter ohne Dateisystemkonsistenz*, um Snapshots zu erstellen.
 +
 Die Option *File System Consistency* gilt nur für Anwendungen, die auf Windows-Hosts ausgeführt werden.
 

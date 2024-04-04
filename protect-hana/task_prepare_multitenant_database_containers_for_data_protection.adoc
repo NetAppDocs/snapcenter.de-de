@@ -37,7 +37,7 @@ Wenn die Ressource Teil einer Ressourcengruppe ist, legen Sie die Ressourcengrup
 . Löschen Sie die Ressourcengruppe auf der Seite Topologie.
 . Löschen Sie die alte MDC-Ressource von der Seite Ressourcen.
 +
-Beispiel: Wenn die Aufbewahrungsdauer der primären Snapshot Kopien 7 Tage beträgt und die Aufbewahrung von sekundären Snapshot Kopien 45 Tage beträgt, nach 45 Tagen abgeschlossen sind und nachdem alle Backups gelöscht wurden, müssen Sie die Ressourcengruppe und die alte MDC-Ressource löschen.
+Wenn die primäre Snapshot-Aufbewahrungsfrist beispielsweise 7 Tage beträgt und die Aufbewahrung sekundärer Snapshots 45 Tage beträgt, müssen Sie nach Abschluss von 45 Tagen und nach dem Löschen aller Backups die Ressourcengruppe und die alte MDC-Ressource löschen.
 
 
 

@@ -82,7 +82,7 @@ Host
 +
 Sie sollten den RBAC-Benutzer oder die Gruppe dem Cluster oder der DAG neu zuweisen, um den neuen Node auch dem RBAC-Benutzer oder der Gruppe einzuschließen. Sie verfügen beispielsweise über ein Cluster mit zwei Nodes und haben dem Cluster einen RBAC-Benutzer oder eine Gruppe zugewiesen. Wenn Sie dem Cluster einen weiteren Node hinzufügen, sollten Sie den RBAC-Benutzer oder die Gruppe dem Cluster neu zuweisen, um den neuen Node für den Benutzer oder die Gruppe der RBAC einzubeziehen.
 
-* Wenn Sie Snapshot Kopien replizieren möchten, müssen Sie dem Benutzer, der den Vorgang durchführt, die Storage-Verbindung für das Quell- und Ziel-Volume zuweisen.
+* Wenn Sie planen, Snapshots zu replizieren, müssen Sie dem Benutzer, der den Vorgang durchführt, die Speicherverbindung für das Quell- und das Ziel-Volume zuweisen.
 +
 Sie sollten Assets hinzufügen, bevor Sie den Benutzern Zugriff zuweisen.
 

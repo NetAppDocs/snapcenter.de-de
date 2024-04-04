@@ -47,6 +47,6 @@ Wird das HANA-Quellsystem automatisch erkannt und das Clone-Ziel-Host-Plug-in au
 . Überwachen Sie den Fortschritt des Vorgangs, indem Sie auf *Monitor* > *Jobs* klicken.
 +
 
-NOTE: Clone Split ist für ANF Klone deaktiviert, da ANF-Klon bereits ein unabhängiges Volume ist, das von der ausgewählten Snapshot Kopie erstellt wird.
+NOTE: Clone Split ist für ANF-Klone deaktiviert, da ANF-Klon bereits ein unabhängiges Volume ist, das aus dem ausgewählten Snapshot erstellt wird.
 
 

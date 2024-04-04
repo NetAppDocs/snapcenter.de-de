@@ -87,7 +87,7 @@ Stilllegen
  a| 
 Ja.
  a| 
-Muss die Applikation stilllegen. In den meisten Fällen bedeutet dies, die Applikation in einen Zustand zu versetzen, in dem der SnapCenter Server ein Backup erstellen kann (z. B. eine Snapshot Kopie).
+Muss die Applikation stilllegen. In den meisten Fällen bedeutet dies, dass die Applikation in einen Zustand versetzt wird, in dem der SnapCenter-Server ein Backup erstellen kann (z. B. einen Snapshot).
  a| 
 Bevor der SnapCenter-Server eine Snapshot(s)-Kopie erstellt oder ein Backup im Allgemeinen durchführt.
 
@@ -100,7 +100,8 @@ Ja.
  a| 
 Muss die Applikation stilllegen. In den meisten Fällen bedeutet dies, dass die Applikation wieder in einen normalen Betriebszustand zurückversetzt wird.
  a| 
-Nachdem der SnapCenter Server eine Snapshot Kopie erstellt hat oder ein Backup im Allgemeinen ausgeführt hat.
+Nachdem der SnapCenter-Server einen Snapshot oder erstellt hat
+Backup im Allgemeinen durchgeführt.
 
 
 

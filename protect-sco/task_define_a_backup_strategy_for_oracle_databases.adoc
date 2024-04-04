@@ -257,9 +257,9 @@ Backup-Zeitpläne (genau, wann Backups durchgeführt werden sollen) sind Teil de
 
 == Konventionen bei Backup-Namen
 
-Sie können entweder die standardmäßige Namenskonvention für Snapshot Kopien verwenden oder eine individuelle Namenskonvention verwenden. Die standardmäßige Backup-Namenskonvention fügt einen Zeitstempel zu den Namen von Snapshot Kopien hinzu, der Ihnen hilft, zu identifizieren, wann die Kopien erstellt wurden.
+Sie können entweder die standardmäßige Snapshot-Namenskonvention verwenden oder eine benutzerdefinierte Namenskonvention verwenden. Die standardmäßige Backup-Namenskonvention fügt Snapshot Namen einen Zeitstempel hinzu, der Ihnen dabei hilft, zu ermitteln, wann die Kopien erstellt wurden.
 
-Die Snapshot Kopie verwendet die folgende standardmäßige Namenskonvention:
+Für den Snapshot wird die folgende Standard-Namenskonvention verwendet:
 
 `resourcegroupname_hostname_timestamp`
 
@@ -276,7 +276,7 @@ In diesem Beispiel haben die Syntaxelemente folgende Bedeutungen:
 * _03-12-2015_23.17.26_ ist das Datum und der Zeitstempel.
 
 
-Alternativ können Sie das Namensformat für die Snapshot-Kopie angeben und Ressourcen oder Ressourcengruppen schützen, indem Sie *Verwenden Sie benutzerdefiniertes Namensformat für die Snapshot-Kopie* wählen. Beispiel: Custtext_resourcegruppe_Policy_hostname oder resourcegruppe_hostname. Standardmäßig wird dem Namen der Snapshot Kopie das Suffix mit dem Zeitstempel hinzugefügt.
+Alternativ können Sie das Snapshot-Namensformat beim Schutz von Ressourcen oder Ressourcengruppen angeben, indem Sie *Benutzerdefiniertes Namensformat für Snapshot-Kopie verwenden* auswählen. Beispiel: Custtext_resourcegruppe_Policy_hostname oder resourcegruppe_hostname. Standardmäßig wird dem Snapshot-Namen das Suffix mit dem Zeitstempel hinzugefügt.
 
 
 
@@ -299,6 +299,6 @@ NOTE: Für die langfristige Aufbewahrung von Backup-Kopien sollten Sie SnapVault
 
 Sie können Backup-Kopien auf dem primären Storage Volume oder auf dem sekundären SnapMirror oder SnapVault Storage Volume überprüfen. Bei der Überprüfung und Verwendung eines sekundären Storage-Volumes wird die Last für das primäre Storage Volume verringert.
 
-Wenn Sie ein Backup auf dem primären oder sekundären Storage Volume überprüfen, werden alle primären und sekundären Snapshot Kopien als überprüft markiert.
+Wenn Sie ein Backup überprüfen, das sich entweder auf dem primären oder sekundären Storage-Volume befindet, werden alle primären und sekundären Snapshots als verifiziert markiert.
 
 Zur Überprüfung von Backup-Kopien auf dem sekundären SnapVault Storage Volume ist eine SnapRestore Lizenz erforderlich.

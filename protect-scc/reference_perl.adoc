@@ -164,7 +164,7 @@ Stilllegen
  a| 
 Erforderlich
  a| 
-Diese Stub ist für das Ausführen eines Quiesce zuständig, das bedeutet, die Applikation in einen Zustand zu legen, in dem Sie eine Snapshot Kopie erstellen können. Dies wird vor dem Vorgang der Snapshot Kopie aufgerufen. Die zu behaltenden Metadaten der Applikation sollten im Rahmen der Antwort festgelegt werden, die bei einem nachfolgenden Klon oder bei Wiederherstellungen auf der entsprechenden Storage Snapshot Kopie in Form von Konfigurationsparametern zurückgegeben werden müssen.
+Dieser Stub ist für die Durchführung eines Stillstands verantwortlich, d. h., die Applikation wird in den Status versetzt, in dem Sie einen Snapshot erstellen können. Diese Funktion wird vor dem Snapshot-Vorgang aufgerufen. Die Metadaten der zu aufbewahrenden Applikation sollten im Rahmen einer Antwort festgelegt werden, die bei nachfolgenden Klon- oder Restore-Vorgängen auf dem entsprechenden Storage Snapshot in Form von Konfigurationsparametern zurückgegeben werden.
 
 
 
@@ -173,7 +173,7 @@ Nicht Stilllegen
  a| 
 Erforderlich
  a| 
-Diese Stub ist verantwortlich für die Durchführung eines Unquiesce, das bedeutet, Anwendung in einen normalen Zustand. Dies wird aufgerufen, nachdem Sie eine Snapshot Kopie erstellt haben.
+Diese Stub ist verantwortlich für die Durchführung eines Unquiesce, das bedeutet, Anwendung in einen normalen Zustand. Dieser wird aufgerufen, nachdem Sie einen Snapshot erstellt haben.
 
 
 

@@ -17,7 +17,7 @@ Bevor Sie SnapCenter zum Backup von Oracle-Datenbankressourcen verwenden, müsse
 
 * Sie müssen Ihre Backup-Strategie definiert haben.
 * Sie müssen auf die Datensicherung vorbereitet sein, indem Sie Aufgaben wie das Installieren von SnapCenter, das Hinzufügen von Hosts, das Erkennen von Datenbanken und das Erstellen von Speichersystemverbindungen ausführen.
-* Wenn Sie Snapshot Kopien in einen gespiegelten oder sekundären Vault-Storage replizieren, muss der SnapCenter Administrator Ihnen die SVMs sowohl für die Quell- als auch die Ziel-Volumes zugewiesen haben.
+* Wenn Sie Snapshots auf einen sekundären gespiegelten oder Vault-Storage replizieren, muss Ihnen der SnapCenter Administrator die SVMs sowohl für die Quell- als auch für die Ziel-Volumes zugewiesen haben.
 * Wenn Sie das Plug-in als nicht-root-Benutzer installiert haben, sollten Sie die Ausführungsberechtigungen manuell den Verzeichnissen Prescript und Postscript zuweisen.
 * Voraussetzungen und Einschränkungen für SnapMirror Business Continuity (SM-BC) finden Sie unter https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["Objektbeschränkungen für SnapMirror Business Continuity"].
 
@@ -27,10 +27,10 @@ Bevor Sie SnapCenter zum Backup von Oracle-Datenbankressourcen verwenden, müsse
 +
 ** Wenn die Option „Backup-Kopien für eine bestimmte Anzahl von Tagen aufbewahren“ ausgewählt ist, muss die SnapLock Aufbewahrungsfrist kleiner oder gleich den genannten Aufbewahrungstagen sein.
 +
-Durch Angabe einer Sperrfrist für Snapshot-Kopien wird das Löschen der Snapshot-Kopien bis zum Ablauf der Aufbewahrungsfrist verhindert. Dies könnte dazu führen, dass eine größere Anzahl an Snapshot Kopien aufbewahrt wird als in der Richtlinie angegeben.
+Wenn Sie eine Snapshot-Sperrfrist festlegen, wird das Löschen der Snapshots bis zum Ablauf der Aufbewahrungsfrist verhindert. Dies kann dazu führen, dass eine größere Anzahl von Snapshots beibehalten wird als in der Richtlinie angegeben.
 
 +
-Bei ONTAP 9.12.1 und niedriger Version übernehmen die im Rahmen der Wiederherstellung erstellten Klone der SnapLock Vault Snapshots die Verfallszeit von SnapLock Vault. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
+Bei ONTAP Version 9.12.1 und niedriger übernehmen die im Rahmen der Wiederherstellung aus den SnapLock Vault Snapshots erstellten Klone die Verfallszeit von SnapLock Vault. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
 
 +
 
@@ -140,29 +140,29 @@ image:../media/sco_backuppolicy_prunning.gif[""]
 
 
  a| 
-Aufbewahrung einer bestimmten Anzahl von Snapshot Kopien
+Behalten Sie eine bestimmte Anzahl von Snapshots bei
  a| 
-Wählen Sie *Gesamtanzahl der zu behenden Snapshot-Kopien* aus, und geben Sie dann die Anzahl der Snapshot-Kopien an, die beibehalten werden sollen.
+Wählen Sie *Total Snapshot Copies to keep* aus, und geben Sie dann die Anzahl der Snapshots an, die Sie behalten möchten.
 
-Wenn die Anzahl der Snapshot Kopien die angegebene Anzahl überschreitet, werden die Snapshot Kopien mit den ältesten Kopien gelöscht, die zuerst gelöscht wurden.
+Wenn die Anzahl der Snapshots die angegebene Zahl überschreitet, werden die Snapshots mit den ältesten zuerst gelöschten Kopien gelöscht.
 
 
 NOTE: Der maximale Aufbewahrungswert ist 1018 für Ressourcen auf ONTAP 9.4 oder höher und 254 für Ressourcen unter ONTAP 9.3 oder einer früheren Version. Backups schlagen fehl, wenn die Aufbewahrung auf einen Wert festgelegt ist, der höher ist, als die zugrunde liegende ONTAP Version unterstützt.
 
 
-IMPORTANT: Sie müssen die Aufbewahrungsanzahl auf 2 oder höher einstellen, wenn Sie die SnapVault-Replikation aktivieren möchten. Wenn Sie die Aufbewahrungsanzahl auf 1 festlegen, kann der Aufbewahrungsvorgang möglicherweise fehlschlagen, da die erste Snapshot Kopie die Referenzkopie für die SnapVault-Beziehung ist, bis eine neuere Snapshot Kopie auf das Ziel repliziert wird.
+IMPORTANT: Sie müssen die Aufbewahrungsanzahl auf 2 oder höher einstellen, wenn Sie die SnapVault-Replikation aktivieren möchten. Wenn Sie den Aufbewahrungszeitraum auf 1 festlegen, kann der Aufbewahrungsvorgang fehlschlagen, weil der erste Snapshot der ReferenzSnapshot für die SnapVault-Beziehung ist, bis ein neuerer Snapshot auf das Ziel repliziert wird.
 
 
 
  a| 
-Behalten Sie die Snapshot Kopien für eine bestimmte Anzahl von Tagen bei
+Bewahren Sie die Snapshots für eine bestimmte Anzahl von Tagen auf
  a| 
-Wählen Sie *Snapshot Kopien behalten für* aus, und geben Sie dann die Anzahl der Tage an, für die Sie die Snapshot Kopien behalten möchten, bevor Sie sie löschen.
+Wählen Sie *Snapshot-Kopien behalten für*, und geben Sie dann die Anzahl der Tage an, für die Sie die Snapshots vor dem Löschen behalten möchten.
 
 
 
  a| 
-Sperrfrist von Snapshot-Kopien
+Sperrfrist von Snapshots
  a| 
 Wählen Sie die Sperrfrist für Snapshot Kopien aus und wählen Sie Tage, Monate oder Jahre aus.
 
@@ -180,7 +180,7 @@ NOTE: Sie können Archiv-Protokoll-Backups nur dann aufbewahren, wenn Sie die Ar
 
 
  a| 
-Aktualisieren Sie SnapMirror nach dem Erstellen einer lokalen Snapshot Kopie
+Aktualisieren Sie SnapMirror nach dem Erstellen eines lokalen Snapshots
  a| 
 Wählen Sie dieses Feld aus, um Spiegelkopien der Backup-Sätze auf einem anderen Volume zu erstellen (SnapMirror Replikation).
 
@@ -193,7 +193,7 @@ Durch Klicken auf die Schaltfläche * Aktualisieren* auf der Seite Topologie wir
 
 
  a| 
-Aktualisieren Sie SnapVault nach dem Erstellen einer lokalen Snapshot Kopie
+Aktualisieren Sie SnapVault nach dem Erstellen eines lokalen Snapshots
  a| 
 Wählen Sie diese Option aus, um Disk-to-Disk-Backup-Replikation (SnapVault-Backups) durchzuführen.
 
@@ -210,7 +210,7 @@ Sekundäres Policy-Label
  a| 
 Wählen Sie eine Snapshot-Bezeichnung aus.
 
-Abhängig von dem ausgewählten Etikett der Snapshot Kopie wendet ONTAP die Aufbewahrungsrichtlinie für sekundäre Snapshot Kopien an, die mit dem Etikett übereinstimmt.
+Je nach der ausgewählten Snapshot-Beschriftung wendet ONTAP die sekundäre Snapshot-Aufbewahrungsrichtlinie an, die der Markierung entspricht.
 
 
 NOTE: Wenn Sie *Update SnapMirror nach dem Erstellen einer lokalen Snapshot Kopie* ausgewählt haben, können Sie optional das Label für die sekundäre Richtlinie angeben. Wenn Sie jedoch *Update SnapVault nach dem Erstellen einer lokalen Snapshot Kopie* ausgewählt haben, sollten Sie das sekundäre Policy Label angeben.
@@ -225,7 +225,7 @@ Geben Sie die maximale Anzahl von Replikationsversuchen ein, die zulässig sind,
 |===
 +
 
-NOTE: Sie sollten die SnapMirror Aufbewahrungsrichtlinie in ONTAP für den sekundären Storage konfigurieren, um zu vermeiden, dass die maximale Anzahl an Snapshot Kopien auf dem sekundären Storage erreicht wird.
+NOTE: Sie sollten die SnapMirror Aufbewahrungsrichtlinie in ONTAP für den sekundären Storage konfigurieren, um die maximale Grenze von Snapshots auf dem sekundären Storage zu vermeiden.
 
 . Geben Sie auf der Seite Skript den Pfad und die Argumente des Prescript oder Postscript ein, das Sie vor oder nach dem Backup ausführen möchten.
 +

@@ -26,9 +26,9 @@ Die Seite Datenbankschutz wird angezeigt.
 
 . Auf der Seite „Ressourcen“ können Sie die folgenden Schritte ausführen:
 +
-.. Aktivieren Sie das Kontrollkästchen, und geben Sie ein benutzerdefiniertes Namensformat ein, das Sie für den Namen der Snapshot Kopie verwenden möchten.
+.. Aktivieren Sie das Kontrollkästchen, und geben Sie ein benutzerdefiniertes Namensformat ein, das für den Snapshot-Namen verwendet werden soll.
 +
-Beispiel: `customtext_policy_hostname` Oder `resource_hostname`. Standardmäßig wird an den Namen der Snapshot Kopie ein Zeitstempel angehängt.
+Beispiel: `customtext_policy_hostname` Oder `resource_hostname`. Standardmäßig wird ein Zeitstempel an den Snapshot Namen angehängt.
 
 .. Geben Sie die Ziele der Archivprotokolldateien an, die Sie nicht sichern möchten.
 

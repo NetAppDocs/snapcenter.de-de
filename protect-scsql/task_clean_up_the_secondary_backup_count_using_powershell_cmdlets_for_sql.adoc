@@ -2,7 +2,7 @@
 permalink: protect-scsql/task_clean_up_the_secondary_backup_count_using_powershell_cmdlets_for_sql.html 
 sidebar: sidebar 
 keywords: backups 
-summary: 'Sie können das Cmdlet "Remove-SmBackup" verwenden, um die Anzahl der Backups für sekundäre Backups zu bereinigen, die keine Snapshot-Kopien haben. Sie möchten dieses Cmdlet nutzen, wenn die gesamten Snapshot Kopien, die in der Topologie zum Managen von Kopien angezeigt werden, nicht mit der Einstellung zum Speichern von sekundären Storage Snapshot Kopien übereinstimmen.' 
+summary: 'Sie können das Cmdlet "Remove-SmBackup" verwenden, um die Anzahl der Backups für sekundäre Backups, die keine Snapshots haben, zu bereinigen. Verwenden Sie dieses Cmdlet möglicherweise, wenn die in der Topologie zum Verwalten von Kopien angezeigten Snapshots insgesamt nicht mit der Einstellung für die Aufbewahrung von sekundären SpeicherSnapshot übereinstimmen.' 
 ---
 = Reinigen Sie die Anzahl der sekundären Backups mit PowerShell cmdlets
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Sie können das Cmdlet "Remove-SmBackup" verwenden, um die Anzahl der 
 
 
 [role="lead"]
-Sie können das Cmdlet "Remove-SmBackup" verwenden, um die Anzahl der Backups für sekundäre Backups zu bereinigen, die keine Snapshot-Kopien haben. Sie möchten dieses Cmdlet vielleicht verwenden, wenn die gesamten Snapshot Kopien, die in der Topologie zum Managen von Kopien angezeigt werden, nicht mit der Einstellung zum Speichern von sekundären Storage Snapshot Kopien übereinstimmen.
+Sie können das Cmdlet "Remove-SmBackup" verwenden, um die Anzahl der Backups für sekundäre Backups zu bereinigen, die keinen Snapshot haben. Sie können dieses Cmdlet verwenden, wenn die in der Topologie zum Verwalten von Kopien angezeigten Snapshots insgesamt nicht mit der Einstellung für die Aufbewahrung von sekundären SpeicherSnapshot übereinstimmen.
 
 Sie müssen die PowerShell Umgebung vorbereitet haben, um die PowerShell Cmdlets auszuführen.
 
@@ -26,7 +26,7 @@ Open-SmConnection  -SMSbaseurl  https:\\snapctr.demo.netapp.com:8146/
 ----
 . Bereinigen Sie die Anzahl der sekundären Backups mit dem Parameter -CleanupSecondaryBackups.
 +
-Dieses Beispiel bereinigt die Anzahl der Backups für sekundäre Backups ohne Snapshot-Kopien:
+In diesem Beispiel wird die Anzahl der Backups für sekundäre Backups ohne Snapshots bereinigt:
 
 +
 [listing]

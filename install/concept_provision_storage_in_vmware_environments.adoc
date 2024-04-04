@@ -11,7 +11,7 @@ summary: Mit dem SnapCenter Plug-in für Microsoft Windows in VMware Umgebungen 
 
 
 [role="lead"]
-Mit dem SnapCenter Plug-in für Microsoft Windows in VMware Umgebungen können LUNs erstellt und gemanagt und Snapshot Kopien gemanagt werden.
+Sie können das SnapCenter-Plug-in für Microsoft Windows in VMware-Umgebungen verwenden, um LUNs zu erstellen und zu verwalten und Snapshots zu verwalten.
 
 
 

@@ -23,7 +23,7 @@ Bevor Sie SnapCenter zum Sichern von SAP HANA-Datenbankressourcen verwenden, mü
 .. Wählen Sie den Sicherungstyp aus.
 +
 ... Wählen Sie *File-based Backup* aus, wenn Sie eine Integritätsprüfung der Datenbank durchführen möchten.
-... Wählen Sie *Snapshot Based* aus, wenn Sie ein Backup mit Snapshot Kopiertechnologie erstellen möchten.
+... Wählen Sie *Snapshot-basiert*, wenn Sie ein Backup mit Snapshot-Technologie erstellen möchten.
 
 
 .. Geben Sie den Zeitplantyp an.

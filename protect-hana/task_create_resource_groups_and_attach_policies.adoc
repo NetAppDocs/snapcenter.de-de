@@ -15,7 +15,7 @@ Eine Ressourcengruppe ist der Container, dem Sie Ressourcen hinzufügen müssen,
 
 .Über diese Aufgabe
 * Zur Erstellung von SAP HANA System-Replikations-Backups wird empfohlen, alle Ressourcen des SAP HANA-Systems zu einer Ressourcengruppe hinzuzufügen. So wird für ein nahtloses Backup im Takeover-Failback-Modus gesorgt.
-* Bei ONTAP 9.12.1 und niedriger Version übernehmen die im Rahmen der Wiederherstellung erstellten Klone der SnapLock Vault Snapshots die Verfallszeit von SnapLock Vault. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
+* Bei ONTAP Version 9.12.1 und niedriger übernehmen die im Rahmen der Wiederherstellung aus den SnapLock Vault Snapshots erstellten Klone die Verfallszeit von SnapLock Vault. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
 
 
 .Schritte
@@ -49,9 +49,9 @@ Wenn Sie beispielsweise HR als Tag zu mehreren Ressourcengruppen hinzufügen, k�
  a| 
 Verwenden Sie für Snapshot-Kopie das benutzerdefinierte Namensformat
  a| 
-Aktivieren Sie dieses Kontrollkästchen, und geben Sie ein benutzerdefiniertes Namensformat ein, das Sie für den Namen der Snapshot Kopie verwenden möchten.
+Aktivieren Sie dieses Kontrollkästchen, und geben Sie ein benutzerdefiniertes Namensformat ein, das für den Snapshot-Namen verwendet werden soll.
 
-Beispiel: Custtext_Resource Group_Policy_hostname oder Resource Group_hostname. Standardmäßig wird ein Zeitstempel an den Namen der Snapshot Kopie angehängt.
+Beispiel: Custtext_Resource Group_Policy_hostname oder Resource Group_hostname. Standardmäßig wird an den Snapshot Namen ein Zeitstempel angehängt.
 
 |===
 . Wählen Sie auf der Seite Ressourcen einen Hostnamen aus der Dropdown-Liste *Host* und Ressourcentyp aus der Dropdown-Liste *Ressourcentyp* aus.
@@ -73,7 +73,7 @@ Aktivieren Sie das Backup von Konsistenzgruppen und führen Sie die folgenden Au
  a| 
 Es dauert nicht lange, bis der Snapshot-Vorgang der Konsistenzgruppe abgeschlossen ist
  a| 
-Wählen Sie *dringendst*, *Medium* oder *relaxed* aus, um die Wartezeit zum Abschluss des Snapshot-Kopiervorgangs anzugeben.
+Wählen Sie *dringend*, *Mittel* oder *entspannt* aus, um die Wartezeit für den Snapshot-Vorgang anzugeben.
 
 Dringend = 5 Sekunden, Mittel = 7 Sekunden und entspannt = 20 Sekunden.
 
@@ -88,7 +88,7 @@ Wählen Sie diese Option aus, um zu vermeiden, einen WAFL Konsistenzpunkt zu erz
 +
 image:../media/application_settings.gif[""]
 
-.. Klicken Sie auf den Pfeil *Scripts* und geben Sie die vor- und Post-Befehle für quiesce, Snapshot copy und unquiesce Operations ein. Sie können auch die vor dem Beenden auszuführenden Vorbefehle im Falle eines Fehlers eingeben.
+.. Klicken Sie auf den Pfeil *Scripts* und geben Sie die Pre- und Post-Befehle für Stilllegung, Snapshot und Stilllegung ein. Sie können auch die vor dem Beenden auszuführenden Vorbefehle im Falle eines Fehlers eingeben.
 .. Klicken Sie auf den Pfeil *Benutzerdefinierte Konfigurationen* und geben Sie die für alle Datenschutzvorgänge erforderlichen benutzerdefinierten Schlüsselwert-Paare mit dieser Ressource ein.
 +
 |===
@@ -149,14 +149,14 @@ Sie sollten diesen Parameter verwenden, wenn sich die Archivprotokolle unter Unt
 
 NOTE: Die benutzerdefinierten Schlüsselwerterpaare werden für SAP HANA Linux-Plug-in-Systeme unterstützt und nicht für SAP HANA-Datenbanken unterstützt, die als zentrales Windows-Plug-in registriert sind.
 
-.. Klicken Sie auf den Pfeil *Snapshot-Kopie-Tool*, um das Tool zum Erstellen von Snapshot-Kopien auszuwählen:
+.. Klicken Sie auf den Pfeil *Snapshot Copy Tool*, um das Tool zum Erstellen von Snapshots auszuwählen:
 +
 |===
 | Ihre Situation | Dann... 
 
 
  a| 
-SnapCenter, um das Plug-in für Windows zu nutzen und das Filesystem in einen konsistenten Zustand zu versetzen, bevor eine Snapshot Kopie erstellt wird. Für Linux-Ressourcen ist diese Option nicht anwendbar.
+SnapCenter, um das Plug-in für Windows zu verwenden und das Filesystem vor dem Erstellen eines Snapshots in einen konsistenten Zustand zu versetzen. Für Linux-Ressourcen ist diese Option nicht anwendbar.
  a| 
 Wählen Sie *SnapCenter mit Dateisystemkonsistenz* aus.
 
@@ -165,7 +165,7 @@ Diese Option ist für das SnapCenter-Plug-in für SAP HANA Database nicht verfü
 
 
  a| 
-SnapCenter zum Erstellen einer Snapshot Kopie auf Storage-Ebene
+SnapCenter zum Erstellen eines Snapshots auf Storage-Ebene
  a| 
 Wählen Sie *SnapCenter ohne Dateisystemkonsistenz* aus.
 
@@ -174,7 +174,7 @@ Wählen Sie *SnapCenter ohne Dateisystemkonsistenz* aus.
  a| 
 Geben Sie den Befehl ein, der auf dem Host ausgeführt werden soll, um Snapshot Kopien zu erstellen.
  a| 
-Wählen Sie *other* aus, und geben Sie dann den Befehl ein, der auf dem Host ausgeführt werden soll, um eine Snapshot Kopie zu erstellen.
+Wählen Sie *other* aus, und geben Sie dann den Befehl ein, der auf dem Host ausgeführt werden soll, um einen Snapshot zu erstellen.
 
 |===
 

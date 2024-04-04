@@ -55,7 +55,8 @@ Stilllegen
  a| 
 Erforderlich
  a| 
-Diese Stub ist für die Durchführung eines Stilllegeses verantwortlich. Dadurch wird die Applikation in einen Zustand versetzt, in dem wir eine Snapshot Kopie erstellen können. Dies wird vor dem Vorgang der Snapshot-Kopie des Storage aufgerufen.
+Diese Stub ist für die Durchführung eines Stilllegeses verantwortlich. Es platziert die
+Applikation in einen Zustand versetzt, in dem wir einen Snapshot erstellen können. Dies wird vor dem Storage Snapshot-Vorgang aufgerufen.
 
 
 
@@ -64,7 +65,9 @@ Unquiesce
  a| 
 Erforderlich
  a| 
-Diese Stub ist für die Durchführung eines Unstillzulegen verantwortlich. Die Anwendung wird in den normalen Zustand versetzt. Dies wird nach dem Vorgang der Snapshot Kopie des Storage aufgerufen.
+Diese Stub ist für die Durchführung eines Unstillzulegen verantwortlich. Es platziert
+Die Anwendung befindet sich in einem normalen Zustand. Dies wird nach dem Speichern aufgerufen
+Snapshot-Vorgang.
 
 
 

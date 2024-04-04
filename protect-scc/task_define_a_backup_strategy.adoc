@@ -20,8 +20,8 @@ Ein SLA definiert das erwartete Service-Level und behandelt viele Service-bezoge
 . Bestimmen Sie, wann die Ressourcen gesichert werden sollen.
 . Legen Sie fest, wie viele Backup-Jobs Sie benötigen.
 . Geben Sie an, wie Sie Ihre Backups benennen.
-. Entscheiden Sie, ob Snapshot Kopien der Konsistenzgruppe vorhanden sein sollen, und entscheiden Sie sich für geeignete Optionen zum Löschen von Snapshot Kopien der Konsistenzgruppe.
+. Legen Sie fest, ob Sie Snapshots von Konsistenzgruppen erstellen möchten, und entscheiden Sie sich für die entsprechenden Optionen zum Löschen von Snapshots von Konsistenzgruppen.
 . Entscheiden Sie, ob Sie NetApp SnapMirror Technologie zur Replizierung oder NetApp SnapVault Technologie zur langfristigen Aufbewahrung verwenden möchten.
-. Legen Sie die Aufbewahrungsdauer für die Snapshot Kopien auf dem Quell-Storage-System und dem SnapMirror Ziel fest.
+. Bestimmen Sie den Aufbewahrungszeitraum für die Snapshots auf dem Quell-Storage-System und dem SnapMirror Ziel.
 . Bestimmen Sie, ob Sie vor oder nach dem Backup Befehle ausführen möchten, und geben Sie ein Prescript oder ein Postscript an.
 

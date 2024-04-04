@@ -30,18 +30,18 @@ Außerdem können Sie PowerShell Cmdlets manuell oder in Skripten verwenden, um 
 
 == Wie SnapCenter Datenbanken sichert
 
-SnapCenter nutzt Snapshot-Kopiertechnologie für das Backup der SQL Server Datenbanken, die sich auf LUNs oder VMDKs befinden. SnapCenter erstellt das Backup, indem Snapshot Kopien der Datenbanken erstellt werden.
+SnapCenter verwendet Snapshot Technologie, um die SQL Server Datenbanken auf LUNs oder VMDKs zu sichern. SnapCenter erstellt das Backup durch Erstellen von Snapshots der Datenbanken.
 
 Wenn Sie auf der Seite Ressourcen eine Datenbank für ein vollständiges Datenbank-Backup auswählen, wählt SnapCenter automatisch alle anderen Datenbanken aus, die sich auf demselben Storage Volume befinden. Wenn die LUN oder VMDK nur eine einzige Datenbank speichert, können Sie die Datenbank einzeln löschen oder erneut auswählen. Wenn die LUN oder VMDK mehrere Datenbanken enthält, müssen Sie die Datenbanken als Gruppe löschen oder neu auswählen.
 
-Alle Datenbanken, die sich auf einem einzelnen Volume befinden, werden mithilfe von Snapshot-Kopien gleichzeitig gesichert. Wenn die maximale Anzahl gleichzeitiger Backup-Datenbanken 35 beträgt und mehr als 35 Datenbanken in einem Storage Volume residieren, entspricht die Gesamtzahl der erstellten Snapshot-Kopien der Anzahl der Datenbanken, die durch 35 geteilt werden.
+Alle Datenbanken, die sich auf einem einzelnen Volume befinden, werden gleichzeitig mithilfe von Snapshots gesichert. Wenn die maximale Anzahl gleichzeitiger Backup-Datenbanken 35 ist und sich mehr als 35 Datenbanken auf einem Speicher-Volume befinden, dann entspricht die Gesamtzahl der erstellten Snapshots der Anzahl der Datenbanken geteilt durch 35.
 
 
-NOTE: Sie können die maximale Anzahl von Datenbanken für jede Snapshot-Kopie in der Backup-Richtlinie konfigurieren.
+NOTE: Sie können die maximale Anzahl an Datenbanken für jeden Snapshot in der Backup-Richtlinie konfigurieren.
 
-Wenn SnapCenter eine Snapshot Kopie erstellt, wird das gesamte Storage-System-Volume in der Snapshot Kopie erfasst. Das Backup ist jedoch nur für den SQL-Hostserver gültig, für den das Backup erstellt wurde.
+Wenn SnapCenter einen Snapshot erstellt, wird im Snapshot das gesamte Storage-System-Volume erfasst. Das Backup ist jedoch nur für den SQL-Hostserver gültig, für den das Backup erstellt wurde.
 
-Wenn sich Daten von anderen SQL Host Servern auf demselben Volume befinden, können diese Daten nicht aus der Snapshot Kopie wiederhergestellt werden.
+Wenn sich Daten von anderen SQL Host-Servern auf demselben Volume befinden, können diese Daten vom Snapshot nicht wiederhergestellt werden.
 
 *Weitere Informationen*
 

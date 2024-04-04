@@ -16,7 +16,7 @@ Wenn eine Ressource noch nicht zu einer Ressourcengruppe gehört, können Sie di
 .Bevor Sie beginnen
 * Sie müssen eine Sicherungsrichtlinie erstellt haben.
 * Wenn Sie eine Ressource mit einer SnapMirror Beziehung mit einem sekundären Storage sichern möchten, sollte die dem Storage-Benutzer zugewiesene ONTAP-Rolle die Berechtigung „`snapmirror all`“ enthalten. Wenn Sie jedoch die Rolle „`vsadmin`“ verwenden, ist die Berechtigung „`snapmirror all`“ nicht erforderlich.
-* Stellen Sie beim Backup-Vorgang auf Basis von Snapshot Kopien sicher, dass alle Mandantendatenbanken gültig und aktiv sind.
+* Stellen Sie für einen Backup-Vorgang mit Snapshot Kopie sicher, dass alle Mandantendatenbanken gültig und aktiv sind.
 * Zur Erstellung von SAP HANA System-Replikations-Backups wird empfohlen, alle Ressourcen des SAP HANA-Systems zu einer Ressourcengruppe hinzuzufügen. So wird für ein nahtloses Backup im Takeover-Failback-Modus gesorgt.
 +
 link:task_create_resource_groups_and_attach_policies.html["Erstellen von Ressourcengruppen und Anhängen von Richtlinien"].
@@ -28,7 +28,7 @@ link:task_back_up_resource_groups_sap_hana.html["Sichern von Ressourcengruppen"]
 +
 Die Informationen zu den Parametern, die mit dem Cmdlet verwendet werden können, und deren Beschreibungen können durch Ausführen von Get-Help _Command_Name_ abgerufen werden. Alternativ können Sie auch auf die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["SnapCenter Software Cmdlet Referenzhandbuch"]
 
-* Um Befehle vor und nach quiesce, Snapshot Kopie und unquiesce Vorgängen auszuführen, sollten Sie überprüfen, ob die Befehle in der Befehlsliste vorhanden sind, die auf dem Plug-in Host verfügbar ist, aus den folgenden Pfaden:
+* Für Pre- und Post-Befehle für Stilllegung-, Snapshot- und Stilllegung-Vorgänge sollten Sie überprüfen, ob die Befehle in der Befehlsliste vorhanden sind, die auf dem Plug-in-Host über die folgenden Pfade verfügbar sind:
 +
 Für Windows: _C:\Programmdateien\NetApp\SnapCenter\SnapCenter Plug-in Creator\etc\allowed_befiehlt_list.txt_
 
@@ -47,9 +47,9 @@ NOTE: Wenn die Befehle in der Befehlsliste nicht vorhanden sind, schlägt der Vo
 Wählen Sie *image:../media/filter_icon.png[""]*, und wählen Sie dann den Host-Namen und den Ressourcentyp, um die Ressourcen zu filtern. Sie können dann auswählen image:../media/filter_icon.png[""] Um den Filterbereich zu schließen.
 
 . Wählen Sie die Ressource aus, die Sie sichern möchten.
-. Wählen Sie auf der Seite „Ressource“ *Benutzerdefiniertes Namensformat für Snapshot-Kopie verwenden* aus, und geben Sie dann ein benutzerdefiniertes Namensformat ein, das Sie für den Namen der Snapshot-Kopie verwenden möchten.
+. Wählen Sie auf der Seite Ressource *Benutzerdefiniertes Namensformat für Snapshot-Kopie verwenden* aus, und geben Sie dann ein benutzerdefiniertes Namensformat ein, das Sie für den Snapshot-Namen verwenden möchten.
 +
-Beispiel: _Custext_Policy_hostname_ oder _Resource_hostname_. Standardmäßig wird ein Zeitstempel an den Namen der Snapshot Kopie angehängt.
+Beispiel: _Custext_Policy_hostname_ oder _Resource_hostname_. Standardmäßig wird an den Snapshot Namen ein Zeitstempel angehängt.
 
 . Gehen Sie auf der Seite Anwendungseinstellungen wie folgt vor:
 +
@@ -65,7 +65,7 @@ Aktivieren Sie bei Bedarf das Backup der Konsistenzgruppe, und führen Sie die f
  a| 
 Es dauert nicht lange, bis der „Consistency Group Snapshot“-Vorgang abgeschlossen ist
  a| 
-Wählen Sie *dringendst*, oder *Medium*, oder *relaxed* aus, um die Wartezeit bis zum Abschluss der Snapshot-Kopie anzugeben. Dringend = 5 Sekunden, Mittel = 7 Sekunden und entspannt = 20 Sekunden.
+Wählen Sie *dringend*, oder *Mittel* oder *entspannt*, um die Wartezeit für den Snapshot-Vorgang anzugeben. Dringend = 5 Sekunden, Mittel = 7 Sekunden und entspannt = 20 Sekunden.
 
 
 
@@ -75,35 +75,35 @@ Deaktivieren Sie WAFL Sync
 Wählen Sie diese Option aus, um zu vermeiden, einen WAFL Konsistenzpunkt zu erzwingen.
 
 |===
-** Wählen Sie den Pfeil von *Scripts* aus, um Pre- und Post-Befehle für Stilllegung-, Snapshot Kopie- und Stilllegung-Vorgänge auszuführen.
+** Wählen Sie den Pfeil von *Scripts* aus, um Pre- und Post-Befehle für Stilllegung-, Snapshot- und Unquiesce-Vorgänge auszuführen.
 +
 Sie können auch vor dem Beenden des Sicherungsvorgangs Vorbefehle ausführen. Prescripts und Postscripts werden auf dem SnapCenter Server ausgeführt.
 
 ** Wählen Sie den Pfeil **Custom Configurations**, und geben Sie dann die für alle Jobs, die diese Ressource verwenden, erforderlichen benutzerdefinierten Wertpaare ein.
-** Wählen Sie den Pfeil *Snapshot Copy Tool* aus, um das Tool zum Erstellen von Snapshot Kopien auszuwählen:
+** Wählen Sie den Pfeil *Snapshot Copy Tool* aus, um das Werkzeug zum Erstellen von Snapshots auszuwählen:
 +
 |===
 | Ihre Situation | Dann... 
 
 
  a| 
-SnapCenter zum Erstellen einer Snapshot Kopie auf Storage-Ebene
+SnapCenter zum Erstellen eines Snapshots auf Storage-Ebene
  a| 
 Wählen Sie *SnapCenter ohne Dateisystemkonsistenz* aus.
 
 
 
  a| 
-SnapCenter verwendet das Plug-in für Windows, um das Filesystem in einen konsistenten Zustand zu versetzen und anschließend eine Snapshot Kopie zu erstellen
+SnapCenter zum Verwenden des Plug-in für Windows, um das Filesystem in einen konsistenten Zustand zu versetzen und dann einen Snapshot zu erstellen
  a| 
 Wählen Sie *SnapCenter mit Dateisystemkonsistenz* aus.
 
 
 
  a| 
-Geben Sie den Befehl ein, um eine Snapshot Kopie zu erstellen
+Um den Befehl zum Erstellen eines Snapshots einzugeben
  a| 
-Wählen Sie *other* aus, und geben Sie dann den Befehl ein, um eine Snapshot Kopie zu erstellen.
+Wählen Sie *other* aus, und geben Sie dann den Befehl ein, um einen Snapshot zu erstellen.
 
 |===
 +

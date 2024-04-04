@@ -23,4 +23,4 @@ Dateibasierte Backups bestätigen die Integrität der Datenbank. Sie können den
 
 == Backup auf Basis von Snapshot Kopien
 
-Auf Snapshot Kopien basierende Backups nutzen NetApp Snapshot Kopiertechnologie, um schreibgeschützte Online-Kopien der Volumes zu erstellen, auf denen sich die SAP HANA Datenbanken befinden.
+Auf Snapshot Kopien basierende Backups nutzen die NetApp Snapshot Technologie, um Online-schreibgeschützte Kopien der Volumes zu erstellen, auf denen sich die SAP HANA Datenbanken befinden.

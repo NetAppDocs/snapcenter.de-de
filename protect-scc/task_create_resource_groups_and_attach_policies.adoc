@@ -42,9 +42,9 @@ Wenn Sie beispielsweise HR als Tag zu mehreren Ressourcengruppen hinzufügen, fi
  a| 
 Verwenden Sie für Snapshot-Kopie das benutzerdefinierte Namensformat
  a| 
-Aktivieren Sie dieses Kontrollkästchen, und geben Sie ein benutzerdefiniertes Namensformat ein, das Sie für den Namen der Snapshot Kopie verwenden möchten.
+Aktivieren Sie dieses Kontrollkästchen, und geben Sie ein benutzerdefiniertes Namensformat ein, das für den Snapshot-Namen verwendet werden soll.
 
-Beispiel: _Custext_Resource Group_Policy_hostname oder Resource Group_hostname_. Standardmäßig wird ein Zeitstempel an den Namen der Snapshot Kopie angehängt.
+Beispiel: _Custext_Resource Group_Policy_hostname oder Resource Group_hostname_. Standardmäßig wird an den Snapshot Namen ein Zeitstempel angehängt.
 
 |===
 . Optional: Wählen Sie auf der Seite Ressourcen einen Hostnamen aus der Dropdown-Liste *Host* und den Ressourcentyp aus der Dropdown-Liste *Ressourcentyp* aus.
@@ -66,7 +66,7 @@ Aktivieren Sie das Backup von Konsistenzgruppen und führen Sie die folgenden Au
  a| 
 Es dauert nicht lange, bis der Snapshot-Vorgang der Konsistenzgruppe abgeschlossen ist
  a| 
-Wählen Sie „dringend“, „Mittel“ oder „entspannt“, um die Wartezeit zum Abschluss des Snapshot-Kopiervorgangs anzugeben.
+Wählen Sie dringend, Mittel oder entspannt aus, um die Wartezeit für den Snapshot-Vorgang anzugeben.
 
 Dringend = 5 Sekunden, Mittel = 7 Sekunden und entspannt = 20 Sekunden.
 
@@ -81,7 +81,7 @@ Wählen Sie diese Option aus, um zu vermeiden, einen WAFL Konsistenzpunkt zu erz
 +
 image:../media/application_settings.gif["Ein Screenshot der Optionen für das Konsistenzgruppenbackup: Dringend, mittel oder entspannt"]
 
-.. Wählen Sie den Pfeil für Skripte aus und geben Sie die Befehle vor und nach für Stilllegung, Snapshot Kopie und Stilllegung ein. Sie können auch die vor dem Beenden auszuführenden Vorbefehle im Falle eines Fehlers eingeben.
+.. Wählen Sie den Pfeil für Skripte aus und geben Sie die Befehle vor und nach für Stilllegung, Snapshots und Stilllegung ein. Sie können auch die vor dem Beenden auszuführenden Vorbefehle im Falle eines Fehlers eingeben.
 .. Wählen Sie den Pfeil „Benutzerdefinierte Konfigurationen“ aus, und geben Sie die für alle Datenschutzvorgänge, die diese Ressource verwenden, erforderlichen benutzerdefinierten Schlüssel-Wert-Paare ein.
 +
 |===
@@ -138,32 +138,32 @@ Ermöglicht das Management von Archivprotokollen innerhalb von Unterverzeichniss
 Sie sollten diesen Parameter verwenden, wenn sich die Archivprotokolle unter Unterverzeichnissen befinden.
 
 |===
-.. Wählen Sie den Pfeil *Snapshot Copy Tool* aus, um das Tool zum Erstellen von Snapshot Kopien auszuwählen:
+.. Wählen Sie den Pfeil *Snapshot Copy Tool* aus, um das Werkzeug zum Erstellen von Snapshots auszuwählen:
 +
 |===
 | Ihre Situation | Dann... 
 
 
  a| 
-SnapCenter, um das Plug-in für Windows zu nutzen und das Filesystem in einen konsistenten Zustand zu versetzen, bevor eine Snapshot Kopie erstellt wird. Für Linux-Ressourcen ist diese Option nicht anwendbar.
+SnapCenter, um das Plug-in für Windows zu verwenden und das Filesystem vor dem Erstellen eines Snapshots in einen konsistenten Zustand zu versetzen. Für Linux-Ressourcen ist diese Option nicht anwendbar.
  a| 
-Wählen Sie SnapCenter mit Filesystem-Konsistenz aus.
+Wählen Sie *SnapCenter mit Dateisystemkonsistenz* aus.
 
 Diese Option ist für das SnapCenter-Plug-in für SAP HANA Database nicht verfügbar.
 
 
 
  a| 
-SnapCenter zum Erstellen einer Snapshot Kopie auf Storage-Ebene
+SnapCenter zum Erstellen eines Snapshots auf Storage-Ebene
  a| 
-Wählen Sie SnapCenter ohne File System Consistency aus.
+Wählen Sie *SnapCenter ohne Dateisystemkonsistenz* aus.
 
 
 
  a| 
-Geben Sie den Befehl ein, der auf dem Host ausgeführt werden soll, um Snapshot Kopien zu erstellen.
+Um den Befehl zum Erstellen von Snapshots auf dem Host einzugeben, der ausgeführt werden soll.
  a| 
-Wählen Sie „Sonstige“ aus, und geben Sie dann den Befehl ein, der auf dem Host ausgeführt werden soll, um eine Snapshot Kopie zu erstellen.
+Wählen Sie *other* aus, und geben Sie dann den Befehl ein, der auf dem Host ausgeführt werden soll, um einen Snapshot zu erstellen.
 
 |===
 

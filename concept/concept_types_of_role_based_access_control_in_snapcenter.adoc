@@ -57,7 +57,7 @@ Benutzer müssen bei der Anmeldung über die grafische Benutzeroberfläche (GUI)
 
 SnapCenter verwendet die Zugangsdaten, um sicherzustellen, dass autorisierte SnapCenter Benutzer auch über Berechtigungen auf Applikationsebene verfügen.
 
-Wenn Sie beispielsweise Snapshot Kopien und Datensicherungsvorgänge in einer SQL Server-Umgebung ausführen möchten, müssen Sie die Anmeldedaten mit den richtigen Windows- oder SQL-Anmeldedaten festlegen. Der SnapCenter-Server authentifiziert die Anmeldeinformationen, die auf beiden Methoden festgelegt sind. Wenn Sie Snapshot Kopien und Datensicherungsvorgänge in einer Windows File-System-Umgebung auf ONTAP Storage durchführen möchten, muss die SnapCenter Administratorrolle über Administratorrechte auf dem Windows Host verfügen.
+Wenn Sie beispielsweise Snapshot- und Datensicherungsvorgänge in einer SQL Server-Umgebung durchführen möchten, müssen Sie Anmeldedaten mit den richtigen Windows- oder SQL-Anmeldedaten festlegen. Der SnapCenter-Server authentifiziert die Anmeldeinformationen, die auf beiden Methoden festgelegt sind. Wenn Sie Snapshot- und Datensicherungsvorgänge in einer Windows-Dateisystemumgebung auf ONTAP-Speicher ausführen möchten, muss die SnapCenter-Administratorrolle über Administratorrechte auf dem Windows-Host verfügen.
 
 Wenn Sie Datensicherungsvorgänge in einer Oracle-Datenbank durchführen möchten und wenn die Betriebssystemauthentifizierung im Datenbank-Host deaktiviert ist, müssen Sie die Anmeldedaten mit der Oracle-Datenbank oder den Oracle-ASM-Anmeldeinformationen festlegen. Der SnapCenter-Server authentifiziert die Anmeldeinformationen, die mit einer dieser Methoden festgelegt wurden, je nach Operation.
 

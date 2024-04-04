@@ -24,7 +24,7 @@ Der Wert des Schlüssels kann von Swagger über die API angezeigt werden: API /4
 +
 Sie können die GET API verwenden, um den Wert der Taste anzuzeigen. SET-API wird nicht unterstützt.
 
-* Bei ONTAP 9.12.1 und niedriger Version übernehmen die im Rahmen der Wiederherstellung erstellten Klone der SnapLock Vault Snapshots die Verfallszeit von SnapLock Vault. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
+* Bei ONTAP Version 9.12.1 und niedriger übernehmen die im Rahmen der Wiederherstellung aus den SnapLock Vault Snapshots erstellten Klone die Verfallszeit von SnapLock Vault. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
 
 
 .Schritte
@@ -63,9 +63,9 @@ Wenn Sie beispielsweise HR als Tag zu mehreren Ressourcengruppen hinzufügen, k�
  a| 
 Verwenden Sie für Snapshot-Kopie das benutzerdefinierte Namensformat
  a| 
-Optional: Geben Sie einen Namen und ein Format für die benutzerdefinierte Snapshot Kopie ein.
+Optional: Geben Sie einen benutzerdefinierten Snapshot-Namen und ein benutzerdefiniertes Format ein.
 
-Beispiel: _Custext_resourcegruppe_Policy_hostname_ oder _resourcegruppe_hostname_. Standardmäßig wird ein Zeitstempel an den Namen der Snapshot Kopie angehängt.
+Beispiel: _Custext_resourcegruppe_Policy_hostname_ oder _resourcegruppe_hostname_. Standardmäßig wird an den Snapshot Namen ein Zeitstempel angehängt.
 
 |===
 . Führen Sie auf der Seite Ressourcen die folgenden Schritte aus:
@@ -87,7 +87,7 @@ In den Abschnitten Verfügbare Ressourcen und ausgewählte Ressourcen wird der D
 *** Wählen Sie *Automatische Auswahl aller Ressourcen auf demselben Speichervolumen*, um alle Ressourcen auf demselben Volume in den Abschnitt „Ausgewählte Ressourcen“ zu verschieben.
 *** Wählen Sie im Abschnitt „Verfügbare Ressourcen“ die Ressourcen aus, und klicken Sie dann auf den Pfeil nach rechts, um sie in den Abschnitt „Ausgewählte Ressourcen“ zu verschieben.
 +
-Ressourcengruppen von SnapCenter für Microsoft Exchange Server können nicht mehr als 30 Datenbanken pro Snapshot-Kopie nutzen. Wenn mehr als 30 Datenbanken in einer Ressourcengruppe vorhanden sind, wird für die zusätzlichen Datenbanken eine zweite Snapshot Kopie erstellt. Deshalb werden 2 Unterjobs unter dem Hauptsicherungsjob erzeugt. Für Backups mit sekundärer Replikation, während SnapMirror oder SnapVault Update läuft, kann es Szenarien geben, in denen sich das Update für die beiden Unterjobs überlappen. Der wichtigste Backup-Job läuft dauerhaft, auch wenn die Protokolle darauf hindeuten, dass der Job abgeschlossen ist.
+Ressourcengruppen von SnapCenter für Microsoft Exchange Server dürfen nicht mehr als 30 Datenbanken pro Snapshot enthalten. Wenn mehr als 30 Datenbanken in einer Ressourcengruppe vorhanden sind, wird ein zweiter Snapshot für die zusätzlichen Datenbanken erstellt. Deshalb werden 2 Unterjobs unter dem Hauptsicherungsjob erzeugt. Für Backups mit sekundärer Replikation, während SnapMirror oder SnapVault Update läuft, kann es Szenarien geben, in denen sich das Update für die beiden Unterjobs überlappen. Der wichtigste Backup-Job läuft dauerhaft, auch wenn die Protokolle darauf hindeuten, dass der Job abgeschlossen ist.
 
 
 

@@ -27,9 +27,9 @@ NOTE: Der Name der Ressourcengruppe darf 250 Zeichen nicht überschreiten.
 +
 Wenn Sie beispielsweise HR als Tag zu mehreren Ressourcengruppen hinzufügen, können Sie später alle Ressourcengruppen finden, die mit dem HR-Tag verknüpft sind.
 
-.. Aktivieren Sie das Kontrollkästchen, und geben Sie ein benutzerdefiniertes Namensformat ein, das Sie für den Namen der Snapshot Kopie verwenden möchten.
+.. Aktivieren Sie das Kontrollkästchen, und geben Sie ein benutzerdefiniertes Namensformat ein, das für den Snapshot-Namen verwendet werden soll.
 +
-Beispiel: Custtext_Resource Group_Policy_hostname oder Resource Group_hostname. Standardmäßig wird ein Zeitstempel an den Namen der Snapshot Kopie angehängt.
+Beispiel: Custtext_Resource Group_Policy_hostname oder Resource Group_hostname. Standardmäßig wird an den Snapshot Namen ein Zeitstempel angehängt.
 
 
 
@@ -41,7 +41,7 @@ NOTE: Die Ressourcen werden im Abschnitt Verfügbare Ressourcen nur dann aufgeli
 . Wählen Sie im Abschnitt Verfügbare Ressourcen die Ressourcen aus, und verschieben Sie sie in den Abschnitt Ausgewählte Ressourcen.
 . Führen Sie auf der Seite Anwendungseinstellungen die folgenden Schritte aus:
 +
-** Wählen Sie den Pfeil für Skripte aus und geben Sie die Befehle vor und nach für Stilllegung, Snapshot Kopie und Stilllegung ein. Sie können auch die vor dem Beenden auszuführenden Vorbefehle im Falle eines Fehlers eingeben.
+** Wählen Sie den Pfeil für Skripte aus und geben Sie die Befehle vor und nach für Stilllegung, Snapshots und Stilllegung ein. Sie können auch die vor dem Beenden auszuführenden Vorbefehle im Falle eines Fehlers eingeben.
 ** Wählen Sie eine der Backup-Konsistenzoptionen aus:
 +
 *** Wählen Sie *File System consistent* aus, wenn Sie sicherstellen möchten, dass die zwischengespeicherten Daten der Dateisysteme vor der Erstellung der Sicherung gelöscht werden und keine ein- oder Ausgabevorgänge im Dateisystem während der Erstellung der Sicherung erlaubt sind.

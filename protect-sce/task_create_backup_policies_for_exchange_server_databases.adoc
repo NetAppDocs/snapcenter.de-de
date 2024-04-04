@@ -20,7 +20,7 @@ Weitere Informationen finden Sie in den Informationen zur Definition einer Daten
 
 * Sie müssen auf die Datensicherung vorbereitet sein, indem Sie Aufgaben wie das Installieren von SnapCenter, das Hinzufügen von Hosts, die Identifizierung von Ressourcen und das Erstellen von Verbindungen zum Storage-System abschließen.
 * Sie müssen die Exchange Server-Ressourcen aktualisiert (erkannt) haben.
-* Wenn Sie Snapshot Kopien in eine Spiegelung oder einen Vault replizieren, muss der SnapCenter Administrator Ihnen die Storage Virtual Machines (SVMs) sowohl für die Quell-Volumes als auch die Ziel-Volumes zugewiesen haben.
+* Wenn Sie Snapshots auf eine Spiegelung oder einen Vault replizieren, muss der SnapCenter Administrator Ihnen die Storage Virtual Machines (SVMs) sowohl für die Quell-Volumes als auch für die Ziel-Volumes zugewiesen haben.
 * Wenn Sie die PowerShell Skripte in Prescripts und Postscripts ausführen möchten, sollten Sie den Wert der Datei einstellen `usePowershellProcessforScripts` Parameter auf „true“ im anzeigen `web.config` Datei:
 +
 Der Standardwert ist false
@@ -45,16 +45,16 @@ Sie können die GET API verwenden, um den Wert der Taste anzuzeigen. SET-API wir
 |===
 
 
-| *Best Practice:* Es ist am besten, dass Sie die sekundäre Aufbewahrungsrichtlinie auf der Grundlage der Anzahl der vollständigen und Log-Backups insgesamt konfigurieren, die Sie behalten möchten. Wenn Sie sekundäre Aufbewahrungsrichtlinien konfigurieren, sollten Sie bedenken, dass bei Datenbanken und Protokollen, die in verschiedenen Volumes vorhanden sind, jedes Backup drei Snapshot Kopien haben kann. Wenn sich Datenbanken und Protokolle in demselben Volume befinden, kann jedes Backup zwei Snapshot Kopien haben. 
+| *Best Practice:* Es ist am besten, dass Sie die sekundäre Aufbewahrungsrichtlinie auf der Grundlage der Anzahl der vollständigen und Log-Backups insgesamt konfigurieren, die Sie behalten möchten. Wenn Sie sekundäre Aufbewahrungsrichtlinien konfigurieren, beachten Sie, dass bei Datenbanken und Protokollen, die sich auf verschiedenen Volumes befinden, jedes Backup drei Snapshots haben kann. Wenn sich Datenbanken und Protokolle auf demselben Volume befinden, kann jedes Backup zwei Snapshots haben. 
 |===
 * SnapLock
 +
 ** Wenn die Option „Backup-Kopien für eine bestimmte Anzahl von Tagen aufbewahren“ ausgewählt ist, muss die SnapLock Aufbewahrungsfrist kleiner oder gleich den genannten Aufbewahrungstagen sein.
 +
-Durch Angabe einer Sperrfrist für Snapshot-Kopien wird das Löschen der Snapshot-Kopien bis zum Ablauf der Aufbewahrungsfrist verhindert.  Dies könnte dazu führen, dass eine größere Anzahl an Snapshot Kopien aufbewahrt wird als in der Richtlinie angegeben.
+Wenn Sie eine Snapshot-Sperrfrist festlegen, wird das Löschen der Snapshots bis zum Ablauf der Aufbewahrungsfrist verhindert.  Dies kann dazu führen, dass eine größere Anzahl von Snapshots beibehalten wird als in der Richtlinie angegeben.
 
 +
-Bei ONTAP 9.12.1 und älteren Versionen übernehmen die aus den SnapLock Vault Snapshot Kopien erstellten Klone die Verfallszeit von SnapLock Vault. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
+Bei ONTAP 9.12.1 und älteren Versionen übernehmen die über die SnapLock Vault Snapshots erstellten Klone die Verfallszeit von SnapLock Vault. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
 
 +
 
@@ -175,7 +175,7 @@ NOTE: Der maximale Aufbewahrungswert ist 1018 für Ressourcen auf ONTAP 9.4 oder
 
 +
 
-IMPORTANT: Sie müssen die Aufbewahrungsanzahl auf 2 oder höher einstellen, wenn Sie die SnapVault-Replikation aktivieren möchten. Wenn Sie die Aufbewahrungsanzahl auf 1 festlegen, kann der Aufbewahrungsvorgang möglicherweise fehlschlagen, da die erste Snapshot Kopie die Referenzkopie für die SnapVault-Beziehung ist, bis eine neuere Snapshot Kopie auf das Ziel repliziert wird.
+IMPORTANT: Sie müssen die Aufbewahrungsanzahl auf 2 oder höher einstellen, wenn Sie die SnapVault-Replikation aktivieren möchten. Wenn Sie den Aufbewahrungszeitraum auf 1 festlegen, kann der Aufbewahrungsvorgang fehlschlagen, weil der erste Snapshot der ReferenzSnapshot für die SnapVault-Beziehung ist, bis ein neuerer Snapshot auf das Ziel repliziert wird.
 
 +
 .. Wählen Sie im Abschnitt Einstellungen für die Aufbewahrung von Protokollsicherungen eine der folgenden Optionen aus:
@@ -195,7 +195,7 @@ Die im Rahmen der vollständigen und der Log-Backups erstellten Protokollordner 
 
 Sie können den UTM-Aufbewahrungswert auf 0 einstellen, wenn Sie keine minutengenaue Wiederherstellung durchführen möchten. Dies ermöglicht den Point-in-Time Restore-Vorgang.
 
-*Best Practice:* Es ist am besten, dass die Einstellung der Einstellung für Total Snapshot Kopien (vollständige Backups) im Abschnitt Einstellungen für vollständige Backup-Aufbewahrung entspricht. Dadurch wird sichergestellt, dass Protokolldateien für jedes vollständige Backup aufbewahrt werden.
+*Best Practice:* Es ist am besten, dass die Einstellung gleich der Einstellung für Total Snapshots (Full Backups) im Abschnitt Full Backup Retention Settings sein muss. Dadurch wird sichergestellt, dass Protokolldateien für jedes vollständige Backup aufbewahrt werden.
 
 
 
@@ -209,7 +209,7 @@ Aufbewahrung der Log-Backups bis zur Anzahl von Tagen voller Backups.
 
 
  a| 
-Sperrfrist von Snapshot-Kopien
+Sperrfrist von Snapshots
  a| 
 Wählen Sie *Sperrfrist der Snapshot-Kopie* aus und wählen Sie Tage, Monate oder Jahre aus.
 
@@ -226,9 +226,9 @@ Wenn Sie als Backup-Typ *Log Backup* ausgewählt haben, werden Log-Backups als T
 
 
  a| 
-Aufbewahrung von nur einer bestimmten Anzahl von Snapshot Kopien
+Bewahren Sie nur eine bestimmte Anzahl von Snapshots auf
  a| 
-Wenn Sie die Anzahl der zu behaltenden vollständigen Backups angeben möchten, wählen Sie die Option *Gesamtanzahl der zu behaltenden Snapshot-Kopien* aus und geben Sie die Anzahl der beizubehaltenden Snapshot-Kopien (vollständige Backups) an.
+Wenn Sie die Anzahl der vollständigen Backups angeben möchten, die beibehalten werden sollen, wählen Sie die Option *Total Snapshot Copies to keep* aus, und geben Sie die Anzahl der Snapshots (Full Backups) an, die beibehalten werden sollen.
 
 Wenn die Anzahl der vollständigen Backups die angegebene Anzahl überschreitet, werden die vollständigen Backups, die die angegebene Anzahl überschreiten, gelöscht, wobei die ältesten Kopien zuerst gelöscht werden.
 
@@ -237,12 +237,12 @@ Wenn die Anzahl der vollständigen Backups die angegebene Anzahl überschreitet,
  a| 
 Bewahren Sie vollständige Backups für eine bestimmte Anzahl an Tagen auf
  a| 
-Wählen Sie die Option *Snapshot Kopien für* beibehalten und geben Sie die Anzahl der Tage an, um Snapshot Kopien zu behalten (vollständige Backups).
+Wählen Sie die Option *Snapshot Kopien behalten für* und geben Sie die Anzahl der Tage an, die Snapshots behalten werden sollen (vollständige Backups).
 
 
 
  a| 
-Sperrfrist von Snapshot-Kopien
+Sperrfrist von Snapshots
  a| 
 Wählen Sie *Sperrfrist der Snapshot-Kopie* aus und wählen Sie Tage, Monate oder Jahre aus.
 
@@ -272,7 +272,7 @@ Im Beispiel bedeutet der Wert 10, dass Sie bis zu 10 Log-Backups auf dem Host au
 
 
  a| 
-Aktualisieren Sie SnapMirror nach dem Erstellen einer lokalen Snapshot Kopie
+Aktualisieren Sie SnapMirror nach dem Erstellen eines lokalen Snapshots
 
 Während der sekundären Replizierung wird mit der SnapLock-Ablaufzeit die primäre SnapLock-Ablaufzeit geladen.
 
@@ -285,7 +285,7 @@ Wählen Sie diese Option aus, um Spiegelkopien von Backup-Sets auf einem anderen
 
 
  a| 
-Aktualisieren Sie SnapVault nach dem Erstellen einer lokalen Snapshot Kopie
+Aktualisieren Sie SnapVault nach dem Erstellen eines lokalen Snapshots
  a| 
 Wählen Sie diese Option aus, um die Disk-to-Disk-Backup-Replikation durchzuführen.
 
@@ -296,7 +296,7 @@ Sekundäres Policy-Label
  a| 
 Wählen Sie eine Snapshot-Bezeichnung aus.
 
-Abhängig von dem ausgewählten Etikett der Snapshot Kopie wendet ONTAP die Aufbewahrungsrichtlinie für sekundäre Snapshot Kopien an, die mit dem Etikett übereinstimmt.
+Je nach der ausgewählten Snapshot-Beschriftung wendet ONTAP die sekundäre Snapshot-Aufbewahrungsrichtlinie an, die der Markierung entspricht.
 
 
 NOTE: Wenn Sie *Update SnapMirror nach dem Erstellen einer lokalen Snapshot Kopie* ausgewählt haben, können Sie optional das Label für die sekundäre Richtlinie angeben. Wenn Sie jedoch *Update SnapVault nach dem Erstellen einer lokalen Snapshot Kopie* ausgewählt haben, sollten Sie das sekundäre Policy Label angeben.
@@ -311,7 +311,7 @@ Geben Sie die Anzahl der Replikationsversuche ein, die vor dem Anhalten des Proz
 |===
 +
 
-NOTE: Sie sollten die SnapMirror Aufbewahrungsrichtlinie in ONTAP für den sekundären Storage konfigurieren, um zu vermeiden, dass die maximale Anzahl an Snapshot Kopien auf dem sekundären Storage erreicht wird.
+NOTE: Sie sollten die SnapMirror Aufbewahrungsrichtlinie in ONTAP für den sekundären Storage konfigurieren, um die maximale Grenze von Snapshots auf dem sekundären Storage zu vermeiden.
 
 . Geben Sie auf der Seite Skript den Pfad und die Argumente des Vorskripts bzw. des Postskripts ein, die vor bzw. nach dem Backup ausgeführt werden sollen.
 +

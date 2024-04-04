@@ -17,7 +17,7 @@ Sie müssen als SnapCenter-Administrator oder -Auftragseigentümer angemeldet se
 
 *Über diese Aufgabe*
 
-Wenn Sie einen Backup-Vorgang abbrechen, stoppt der SnapCenter-Server den Vorgang und entfernt alle Snapshot-Kopien aus dem Storage, falls das erstellte Backup nicht beim SnapCenter Server registriert ist. Wenn das Backup bereits beim SnapCenter Server registriert ist, wird die bereits erstellte Snapshot-Kopie nicht wieder zurückgeführt, auch wenn der Vorgang ausgelöst wird.
+Wenn Sie einen Sicherungsvorgang abbrechen, stoppt der SnapCenter-Server den Vorgang und entfernt alle Snapshots aus dem Speicher, wenn das erstellte Backup nicht beim SnapCenter-Server registriert ist. Wenn das Backup bereits beim SnapCenter-Server registriert ist, wird ein Rollback des bereits erstellten Snapshots selbst dann nicht durchgeführt, wenn der Abbruch ausgelöst wurde.
 
 * Sie können nur den Protokoll- oder Vollbackup-Vorgang abbrechen, der in die Warteschlange oder in Betrieb ist.
 * Sie können den Vorgang nicht abbrechen, nachdem die Überprüfung gestartet wurde.

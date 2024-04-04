@@ -13,10 +13,10 @@ summary: 'Sie können eine gesicherte Exchange Server Datenbank aus dem sekundä
 [role="lead"]
 Sie können eine gesicherte Exchange Server Datenbank aus dem sekundären Storage (Spiegel oder Vault) wiederherstellen.
 
-Sie müssen die Snapshot Kopien vom primären Storage in einen sekundären Storage replizieren.
+Sie müssen die Snapshots vom primären Speicher auf einen sekundären Speicher repliziert haben.
 
 .Über diese Aufgabe
-* Bei ONTAP 9.12.1 und niedriger Version übernehmen die im Rahmen der Wiederherstellung erstellten Klone der SnapLock Vault Snapshots die Verfallszeit von SnapLock Vault. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
+* Bei ONTAP Version 9.12.1 und niedriger übernehmen die im Rahmen der Wiederherstellung aus den SnapLock Vault Snapshots erstellten Klone die Verfallszeit von SnapLock Vault. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
 
 
 .Schritte

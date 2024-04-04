@@ -2,7 +2,7 @@
 permalink: protect-scsql/task_cancel_the_snapcenter_plug_in_for_sql_server_operations.html 
 sidebar: sidebar 
 keywords: cancel, backup 
-summary: Sie können laufende, in die Warteschlange eingereihte oder nicht reaktionsfähige Backup-Vorgänge abbrechen. Wenn Sie einen Backup-Vorgang abbrechen, stoppt der SnapCenter-Server den Vorgang und entfernt alle Snapshot-Kopien aus dem Storage, falls das erstellte Backup nicht beim SnapCenter Server registriert ist. Wenn das Backup bereits beim SnapCenter Server registriert ist, wird die bereits erstellte Snapshot-Kopie nicht wieder zurückgeführt, auch wenn der Vorgang ausgelöst wird. 
+summary: Sie können laufende, in die Warteschlange eingereihte oder nicht reaktionsfähige Backup-Vorgänge abbrechen. Wenn Sie einen Sicherungsvorgang abbrechen, stoppt der SnapCenter-Server den Vorgang und entfernt alle Snapshots aus dem Speicher, wenn das erstellte Backup nicht beim SnapCenter-Server registriert ist. Wenn das Backup bereits beim SnapCenter-Server registriert ist, wird ein Rollback des bereits erstellten Snapshots selbst dann nicht durchgeführt, wenn der Abbruch ausgelöst wurde. 
 ---
 = Abbrechen des SnapCenter-Plug-ins für Microsoft SQL Server-Backup-Vorgänge
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Sie können laufende, in die Warteschlange eingereihte oder nicht reakt
 
 
 [role="lead"]
-Sie können laufende, in die Warteschlange eingereihte oder nicht reaktionsfähige Backup-Vorgänge abbrechen. Wenn Sie einen Backup-Vorgang abbrechen, stoppt der SnapCenter-Server den Vorgang und entfernt alle Snapshot-Kopien aus dem Storage, falls das erstellte Backup nicht beim SnapCenter Server registriert ist. Wenn das Backup bereits beim SnapCenter Server registriert ist, wird die bereits erstellte Snapshot-Kopie nicht wieder zurückgeführt, auch wenn der Vorgang ausgelöst wird.
+Sie können laufende, in die Warteschlange eingereihte oder nicht reaktionsfähige Backup-Vorgänge abbrechen. Wenn Sie einen Sicherungsvorgang abbrechen, stoppt der SnapCenter-Server den Vorgang und entfernt alle Snapshots aus dem Speicher, wenn das erstellte Backup nicht beim SnapCenter-Server registriert ist. Wenn das Backup bereits beim SnapCenter-Server registriert ist, wird ein Rollback des bereits erstellten Snapshots selbst dann nicht durchgeführt, wenn der Abbruch ausgelöst wurde.
 
 .Bevor Sie beginnen
 * Sie müssen als SnapCenter-Administrator oder -Auftragseigentümer angemeldet sein, um Wiederherstellungsvorgänge abzubrechen.

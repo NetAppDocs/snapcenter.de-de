@@ -21,9 +21,9 @@ Die SnapCenter-Schnittstelle bietet Standardisierung und Konsistenz über Plug-i
 +
 Sie können Backup- und Klonvorgänge planen, richtlinienbasierte Backup-Aufbewahrung konfigurieren und Restore-Vorgänge durchführen. Zudem lässt sich die Umgebung proaktiv überwachen, indem SnapCenter für das Senden von E-Mail-Warnmeldungen konfiguriert wird.
 
-* Unterbrechungsfreie Technologie zur NetApp Snapshot Kopie
+* Unterbrechungsfreie NetApp Snapshot Technologie
 +
-SnapCenter nutzt die NetApp Snapshot-Kopiertechnologie mit dem Plug-in für Oracle Database und Plug-in für UNIX, um Datenbanken zu sichern. Snapshot Kopien belegen nur minimalen Speicherplatz.
+SnapCenter verwendet NetApp Snapshot Technologie mit dem Plug-in für Oracle Database und dem Plug-in für UNIX, um Datenbanken zu sichern. Snapshots belegen nur minimalen Speicherplatz.
 
 
 
@@ -45,7 +45,7 @@ Auf dem Storage-System, auf dem Sie den Klon erstellen möchten, ist eine FlexCl
 * Unterbrechungsfreie und automatisierte Backup-Verifizierung
 * Fähigkeit, mehrere Backups gleichzeitig über mehrere Datenbank-Hosts auszuführen
 +
-In einem einzigen Vorgang werden Snapshot Kopien konsolidiert, wenn Datenbanken in einem einzelnen Host dasselbe Volume gemeinsam nutzen.
+In einem einzigen Vorgang werden Snapshots konsolidiert, wenn Datenbanken in einem einzelnen Host dasselbe Volume gemeinsam nutzen.
 
 * Unterstützung physischer und virtualisierter Infrastrukturen
 * Unterstützung von NFS, iSCSI, Fibre Channel (FC), RDM, VMDK über NFS und VMFS sowie ASM over NFS, SAN, RDM und VMDK

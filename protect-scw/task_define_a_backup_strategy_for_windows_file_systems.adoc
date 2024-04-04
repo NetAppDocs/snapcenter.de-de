@@ -47,9 +47,9 @@ Faktoren, die die Anzahl der erforderlichen Backups bestimmen, umfassen die Grö
 
 == Backup Namenskonvention für Windows File-Systeme
 
-Backups von Windows Dateisystemen verwenden die standardmäßige Namenskonvention für Snapshot Kopien. Die standardmäßige Backup-Namenskonvention fügt einen Zeitstempel zu den Namen von Snapshot Kopien hinzu, der Ihnen hilft, zu identifizieren, wann die Kopien erstellt wurden.
+Für Windows-Dateisystem-Backups wird die standardmäßige Snapshot-Namenskonvention verwendet. Die standardmäßige Backup-Namenskonvention fügt Snapshot Namen einen Zeitstempel hinzu, der Ihnen dabei hilft, zu ermitteln, wann die Kopien erstellt wurden.
 
-Die Snapshot Kopie verwendet die folgende standardmäßige Namenskonvention: Resourcegrovname_hostname_timestamp
+Der Snapshot verwendet die folgende Standard-Namenskonvention: Resourcegroupname_hostname_timestamp
 
 Sie sollten Ihre Backup-Ressourcengruppen logisch benennen, wie im folgenden Beispiel:
 

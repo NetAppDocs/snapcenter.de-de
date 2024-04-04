@@ -58,7 +58,7 @@ Standardmäßig ausgewählt.
 +
 Die SQL Server-Datenbank verwendet Microsoft SQL Server Database Consistency Checker (DBCC), um die logische und physische Integrität der Objekte in der Datenbank zu überprüfen.
 
-... Wählen Sie *Limit the Checks und erhalten Sie die Sperren anstatt eine interne Datenbank Snapshot Kopie (TABLOCK)* zu verwenden, um die Prüfungen zu begrenzen und Sperren zu erhalten, anstatt eine interne Datenbank Snapshot Kopie zu verwenden.
+... Wählen Sie *Schränken Sie die Prüfungen ein und erhalten Sie die Sperren anstatt eine interne Datenbank Snapshot Kopie (TABLOCK)* zu verwenden, um die Überprüfungen zu begrenzen und Sperren anstelle eines internen Datenbank-Snapshots zu erhalten.
 
 
 .. Wählen Sie im Abschnitt *Protokollsicherung* die Option *Protokollsicherung nach Abschluss bestätigen* aus, um die Protokollsicherung nach Abschluss zu überprüfen.

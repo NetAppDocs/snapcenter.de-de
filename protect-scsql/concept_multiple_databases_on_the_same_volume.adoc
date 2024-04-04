@@ -13,4 +13,4 @@ summary: 'Sie können alle Datenbanken auf demselben Volume platzieren, da die B
 [role="lead"]
 Sie können alle Datenbanken auf demselben Volume ablegen, da die Backup-Richtlinie die Möglichkeit hat, die maximale Datenbank pro Backup festzulegen (Standardwert ist 100).
 
-Wenn Sie beispielsweise 200 Datenbanken auf demselben Volume haben, werden zwei Snapshot Kopien mit je 100 Datenbanken in beiden Snapshot Kopien erstellt.
+Wenn Sie beispielsweise 200 Datenbanken auf demselben Volume haben, werden zwei Snapshots mit 100 Datenbanken in jedem der beiden Snapshots erstellt.

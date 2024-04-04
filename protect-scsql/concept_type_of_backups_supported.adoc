@@ -2,7 +2,7 @@
 permalink: protect-scsql/concept_type_of_backups_supported.html 
 sidebar: sidebar 
 keywords: Type of backups 
-summary: 'Für das Sichern von SQL Server-System und Benutzerdatenbanken mit SnapCenter müssen Sie den Ressourcentyp auswählen, z. B. Datenbanken, SQL Server-Instanzen und Verfügbarkeitsgruppen \(AG\). Mithilfe der Snapshot Kopiertechnologie lassen sich online schreibgeschützte Kopien der Volumes erstellen, auf denen sich die Ressourcen befinden.' 
+summary: 'Für das Sichern von SQL Server-System und Benutzerdatenbanken mit SnapCenter müssen Sie den Ressourcentyp auswählen, z. B. Datenbanken, SQL Server-Instanzen und Verfügbarkeitsgruppen \(AG\). Mithilfe der Snapshot Technologie werden schreibgeschützte Online-Kopien der Volumes erstellt, auf denen sich die Ressourcen befinden.' 
 ---
 = Art der unterstützten Backups
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Für das Sichern von SQL Server-System und Benutzerdatenbanken mit Sna
 
 
 [role="lead"]
-Für das Sichern des SQL Server-Systems und der Benutzerdatenbanken mit SnapCenter müssen Sie den Ressourcentyp auswählen, z. B. Datenbanken, SQL Server-Instanzen und Verfügbarkeitsgruppen (AG). Mithilfe der Snapshot Kopiertechnologie lassen sich online schreibgeschützte Kopien der Volumes erstellen, auf denen sich die Ressourcen befinden.
+Für das Sichern des SQL Server-Systems und der Benutzerdatenbanken mit SnapCenter müssen Sie den Ressourcentyp auswählen, z. B. Datenbanken, SQL Server-Instanzen und Verfügbarkeitsgruppen (AG). Mithilfe der Snapshot Technologie werden schreibgeschützte Online-Kopien der Volumes erstellt, auf denen sich die Ressourcen befinden.
 
 Sie können die Option nur kopieren auswählen, um anzugeben, dass der SQL-Server die Transaktionsprotokolle nicht schneidet. Sie sollten diese Option verwenden, wenn Sie auch SQL Server mit anderen Backup-Anwendungen verwalten. Wenn die Transaktionsprotokolle intakt bleiben, kann jede Backup-Anwendung die Systemdatenbanken wiederherstellen. Backups, bei denen nur Kopien erstellt werden, sind unabhängig von der Sequenz geplanter Backups und haben keine Auswirkungen auf die Backup- und Restore-Vorgänge der Datenbank.
 

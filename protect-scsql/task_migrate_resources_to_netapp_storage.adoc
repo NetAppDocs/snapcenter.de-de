@@ -91,7 +91,7 @@ Die SQL Server-Datenbank verwendet Microsoft SQL Server Database Consistency Che
 
 NOTE: Sie können diese Option auswählen, um die Ausführungszeit zu verkürzen.
 
-** Wählen Sie die Option **TABLOCK**, um die Prüfungen zu begrenzen und Sperren zu erhalten, anstatt eine interne Snapshot-Kopie der Datenbank zu verwenden.
+** Wählen Sie die Option **TABLOCK**, um die Prüfungen zu beschränken und Sperren anstelle eines internen Datenbank-Snapshots zu erhalten.
 
 
 |===

@@ -13,6 +13,6 @@ summary: Sie können Backup-Kopien auf dem primären Storage Volume oder auf dem
 [role="lead"]
 Sie können Backup-Kopien auf dem primären Storage Volume oder auf dem sekundären SnapMirror oder SnapVault Storage Volume überprüfen. Bei der Überprüfung und Verwendung eines sekundären Storage-Volumes wird die Last für das primäre Storage Volume verringert.
 
-Wenn Sie ein Backup auf dem primären oder sekundären Storage Volume überprüfen, werden alle primären und sekundären Snapshot Kopien als überprüft markiert.
+Wenn Sie ein Backup überprüfen, das sich entweder auf dem primären oder sekundären Storage-Volume befindet, werden alle primären und sekundären Snapshots als verifiziert markiert.
 
 Zur Überprüfung von Backup-Kopien auf dem sekundären SnapVault Storage Volume ist eine SnapRestore Lizenz erforderlich.

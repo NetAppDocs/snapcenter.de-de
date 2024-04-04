@@ -16,7 +16,7 @@ Wenn eine Ressource noch nicht zu einer Ressourcengruppe gehört, können Sie di
 .Schritte
 . Wählen Sie im linken Navigationsbereich *Ressourcen* aus, und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
 . Wählen Sie auf der Seite Ressource aus der Dropdown-Liste Ansicht die Option *Datenbank* aus.
-. Wählen Sie auf der Seite „Ressource“ *Benutzerdefiniertes Namensformat für Snapshot-Kopie verwenden* aus, und geben Sie dann ein benutzerdefiniertes Namensformat ein, das Sie für den Namen der Snapshot-Kopie verwenden möchten.
+. Wählen Sie auf der Seite Ressource *Benutzerdefiniertes Namensformat für Snapshot-Kopie verwenden* aus, und geben Sie dann ein benutzerdefiniertes Namensformat ein, das Sie für den Snapshot-Namen verwenden möchten.
 . Führen Sie auf der Seite Richtlinien die folgenden Schritte aus:
 +
 .. Wählen Sie eine oder mehrere Richtlinien aus der Dropdown-Liste aus.

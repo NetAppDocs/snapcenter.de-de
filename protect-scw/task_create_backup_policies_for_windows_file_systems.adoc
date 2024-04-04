@@ -19,7 +19,7 @@ Sie können eine neue Sicherungsrichtlinie für Ressourcen erstellen, bevor Sie 
 +
 Zur Vorbereitung auf die Datensicherung müssen Aufgaben wie das Installieren von SnapCenter, das Hinzufügen von Hosts, die Erkennung von Ressourcen und das Erstellen von SVM-Verbindungen (Storage Virtual Machine) durchgeführt werden.
 
-* Wenn Sie Snapshot Kopien in einen gespiegelten oder sekundären Vault-Storage replizieren, muss der SnapCenter Administrator Ihnen die SVMs sowohl für die Quell- als auch die Ziel-Volumes zugewiesen haben.
+* Wenn Sie Snapshots auf einen sekundären gespiegelten oder Vault-Storage replizieren, muss Ihnen der SnapCenter Administrator die SVMs sowohl für die Quell- als auch für die Ziel-Volumes zugewiesen haben.
 * Wenn Sie die PowerShell-Skripte in Prescripts und Postscripts ausführen möchten, sollten Sie den Wert des Parameters usePowershellProcessforScripts in der Datei Web.config auf true setzen.
 +
 Der Standardwert ist false
@@ -41,8 +41,8 @@ Sie können die GET API verwenden, um den Wert der Taste anzuzeigen. SET-API wir
 * SnapLock
 +
 ** Wenn die Option „Backup-Kopien für eine bestimmte Anzahl von Tagen aufbewahren“ ausgewählt ist, muss die SnapLock Aufbewahrungsfrist kleiner oder gleich den genannten Aufbewahrungstagen sein.
-** Durch Angabe einer Sperrfrist für Snapshot-Kopien wird das Löschen der Snapshot-Kopien bis zum Ablauf der Aufbewahrungsfrist verhindert. Dies könnte dazu führen, dass eine größere Anzahl an Snapshot Kopien aufbewahrt wird als in der Richtlinie angegeben.
-** Bei ONTAP 9.12.1 und niedriger Version übernehmen die im Rahmen der Wiederherstellung erstellten Klone der SnapLock Vault Snapshots die Verfallszeit von SnapLock Vault. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
+** Wenn Sie eine Snapshot-Sperrfrist festlegen, wird das Löschen der Snapshots bis zum Ablauf der Aufbewahrungsfrist verhindert. Dies kann dazu führen, dass eine größere Anzahl von Snapshots beibehalten wird als in der Richtlinie angegeben.
+** Bei ONTAP Version 9.12.1 und niedriger übernehmen die im Rahmen der Wiederherstellung aus den SnapLock Vault Snapshots erstellten Klone die Verfallszeit von SnapLock Vault. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
 
 
 
@@ -105,7 +105,7 @@ NOTE: Wenn Sie für 2:00 Uhr geplant sind, wird der Zeitplan während der Sommer
  a| 
 Gesamtzahl der zu behaltenden Snapshot-Kopien
  a| 
-Wählen Sie diese Option, wenn Sie die Anzahl der Snapshot Kopien SnapCenter-Speicher angeben möchten, bevor Sie sie automatisch löschen.
+Wählen Sie diese Option, wenn Sie die Anzahl der Snapshot-SnapCenter-Speicher angeben möchten, bevor Sie sie automatisch löschen.
 
 
 
@@ -119,7 +119,7 @@ Wählen Sie diese Option, wenn Sie die Anzahl der Tage angeben möchten, die Sna
  a| 
 Sperrfrist von Snapshot-Kopien
  a| 
-Wählen Sie die Sperrfrist für Snapshot Kopien aus und wählen Sie Tage, Monate oder Jahre aus.
+Wählen Sie als Sperrzeitraum für Snapshots Tage, Monate oder Jahre aus.
 
 Die SnapLock-Aufbewahrungsfrist sollte weniger als 100 Jahre betragen.
 
@@ -169,7 +169,7 @@ Sekundäres Policy-Label
  a| 
 Wählen Sie eine Snapshot-Bezeichnung aus.
 
-Abhängig von dem ausgewählten Etikett der Snapshot Kopie wendet ONTAP die Aufbewahrungsrichtlinie für sekundäre Snapshot Kopien an, die mit dem Etikett übereinstimmt.
+Je nach der ausgewählten Snapshot-Beschriftung wendet ONTAP die sekundäre Snapshot-Aufbewahrungsrichtlinie an, die der Markierung entspricht.
 
 
 NOTE: Wenn Sie *Update SnapMirror nach dem Erstellen einer lokalen Snapshot Kopie* ausgewählt haben, können Sie optional das Label für die sekundäre Richtlinie angeben. Wenn Sie jedoch *Update SnapVault nach dem Erstellen einer lokalen Snapshot Kopie* ausgewählt haben, sollten Sie das sekundäre Policy Label angeben.
@@ -184,7 +184,7 @@ Geben Sie die Anzahl der Replikationsversuche ein, die vor dem Anhalten des Proz
 |===
 +
 
-NOTE: Sie sollten die SnapMirror Aufbewahrungsrichtlinie in ONTAP für den sekundären Storage konfigurieren, um zu vermeiden, dass die maximale Anzahl an Snapshot Kopien auf dem sekundären Storage erreicht wird.
+NOTE: Sie sollten die SnapMirror Aufbewahrungsrichtlinie in ONTAP für den sekundären Storage konfigurieren, um die maximale Grenze von Snapshots auf dem sekundären Storage zu vermeiden.
 
 . Geben Sie auf der Seite Skript den Pfad des Prescript oder Postscript ein, den der SnapCenter-Server vor oder nach dem Backup ausführen soll, bzw. ein Zeitlimit, das SnapCenter wartet, bis das Skript ausgeführt wird, bevor das Timing out abgeschlossen wird.
 +

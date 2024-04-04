@@ -295,10 +295,10 @@ Sie können die Größe einer Festplatte bei sich ändernden Anforderungen Ihres
 * Bei LUNs mit Thick Provisioning wird die erweiterbare Größe (verfügbare Größe im Volume) als maximale Größe angezeigt.
 * LUNs mit Partitionen im MBR-Stil haben eine Größenbeschränkung von 2 TB.
 * LUNs mit GPT-Partitionen haben eine Speichersystemgröße von maximal 16 TB.
-* Es ist eine gute Idee, eine Snapshot Kopie zu erstellen, bevor Sie die Größe einer LUN ändern.
-* Wenn Sie eine LUN aus einer Snapshot Kopie wiederherstellen müssen, die vor der Größe der LUN erstellt wurde, wird die LUN automatisch von SnapCenter neu in die Größe der Snapshot Kopie angepasst.
+* Es ist eine gute Idee, einen Snapshot vor der Größenänderung einer LUN zu erstellen.
+* Wenn Sie eine LUN aus einem vor der Größe der LUN erstellten Snapshot wiederherstellen müssen, passt SnapCenter die LUN automatisch an die Größe des Snapshots an.
 +
-Nach dem Wiederherstellungsvorgang müssen die Daten, die der LUN nach der Größe hinzugefügt wurden, aus einer Snapshot Kopie wiederhergestellt werden, die nach der Größe der LUN erstellt wurde.
+Nach dem Restore müssen Daten, die der LUN nach der Größe der Größe hinzugefügt wurden, aus einem Snapshot wiederhergestellt werden, nachdem die Größe geändert wurde.
 
 
 

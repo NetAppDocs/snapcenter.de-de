@@ -14,7 +14,7 @@ summary: Bevor Sie eine Oracle-Datenbank wiederherstellen, sollten Sie sicherste
 Bevor Sie eine Oracle-Datenbank wiederherstellen, sollten Sie sicherstellen, dass die Voraussetzungen abgeschlossen sind.
 
 * Sie sollten Ihre Restore- und Recovery-Strategie definiert haben.
-* Der SnapCenter Administrator sollte Ihnen die Storage Virtual Machines (SVMs) sowohl für die Quell-Volumes als auch die Ziel-Volumes zugewiesen haben, wenn Sie Snapshot Kopien zu einer Spiegelung oder einem Vault replizieren.
+* Der SnapCenter Administrator sollte Ihnen die Storage Virtual Machines (SVMs) sowohl für die Quell-Volumes als auch für Ziel-Volumes zugewiesen haben, wenn Sie Snapshots auf eine Spiegelung oder einen Vault replizieren.
 * Wenn Archivprotokolle im Rahmen der Datensicherung beschnitten werden, sollten Sie die erforderlichen Archiv-Log-Backups manuell gemountet haben.
 * Wenn Sie Oracle Datenbanken wiederherstellen möchten, die sich auf einer Virtual Machine Disk (VMDK) befinden, sollten Sie sicherstellen, dass der Gastrechner die erforderliche Anzahl an freien Steckplätzen für die Zuweisung der geklonten VMDKs bietet.
 * Sie sollten sicherstellen, dass alle Daten-Volumes und Archivprotokollvolumes der Datenbank geschützt sind, wenn für diese Datenbank ein sekundärer Schutz aktiviert ist.

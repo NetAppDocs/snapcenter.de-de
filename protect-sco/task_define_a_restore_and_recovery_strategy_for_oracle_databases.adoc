@@ -54,7 +54,7 @@ Unterscheidet sich das Datenbanklayout von dem Backup, oder gibt es nach dem Bac
 
 *Schritte*
 
-. Das Volume ist aus der Snapshot Kopie geklont und der Filesystem-Stack basiert auf dem Host, der die geklonten LUNs oder Volumes verwendet.
+. Das Volume wird aus dem Snapshot geklont, und der Filesystem-Stack wird auf dem Host unter Verwendung der geklonten LUNs oder Volumes erstellt.
 . Die Dateien werden von den geklonten Dateisystemen in die ursprünglichen Dateisysteme kopiert.
 . Die geklonten Filesysteme werden dann vom Host abgehängt und die geklonten Volumes werden aus den ONTAP gelöscht.
 

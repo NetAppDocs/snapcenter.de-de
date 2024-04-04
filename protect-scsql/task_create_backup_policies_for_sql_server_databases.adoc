@@ -18,7 +18,7 @@ Sie können eine Sicherungsrichtlinie für die Ressource oder die Ressourcengrup
 * Sie müssen auf die Datensicherung vorbereitet sein, indem Sie Aufgaben wie das Installieren von SnapCenter, das Hinzufügen von Hosts, die Identifizierung von Ressourcen und das Erstellen von Verbindungen zum Storage-System abschließen.
 * Sie müssen das Host-Protokollverzeichnis für die Protokollsicherung konfiguriert haben.
 * Sie müssen die SQL Server-Ressourcen aktualisiert (erkannt) haben.
-* Wenn Sie Snapshot Kopien in eine Spiegelung oder einen Vault replizieren, muss der SnapCenter Administrator Ihnen die Storage Virtual Machines (SVMs) sowohl für die Quell-Volumes als auch die Ziel-Volumes zugewiesen haben.
+* Wenn Sie Snapshots auf eine Spiegelung oder einen Vault replizieren, muss der SnapCenter Administrator Ihnen die Storage Virtual Machines (SVMs) sowohl für die Quell-Volumes als auch für die Ziel-Volumes zugewiesen haben.
 +
 Informationen darüber, wie Administratoren Benutzern Ressourcen zuweisen, finden Sie in den SnapCenter Installationsinformationen.
 
@@ -47,10 +47,10 @@ Sie können die GET API verwenden, um den Wert der Taste anzuzeigen. SET-API wir
 +
 ** Wenn die Option „Backup-Kopien für eine bestimmte Anzahl von Tagen aufbewahren“ ausgewählt ist, muss die SnapLock Aufbewahrungsfrist kleiner oder gleich den genannten Aufbewahrungstagen sein.
 +
-Durch Angabe einer Sperrfrist für Snapshot-Kopien wird das Löschen der Snapshot-Kopien bis zum Ablauf der Aufbewahrungsfrist verhindert.  Dies könnte dazu führen, dass eine größere Anzahl an Snapshot Kopien aufbewahrt wird als in der Richtlinie angegeben.
+Wenn Sie eine Snapshot-Sperrfrist festlegen, wird das Löschen der Snapshots bis zum Ablauf der Aufbewahrungsfrist verhindert.  Dies kann dazu führen, dass eine größere Anzahl von Snapshots beibehalten wird als in der Richtlinie angegeben.
 
 +
-Bei ONTAP 9.12.1 und niedriger Version übernehmen die im Rahmen der Wiederherstellung erstellten Klone der SnapLock Vault Snapshots die Verfallszeit von SnapLock Vault. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
+Bei ONTAP Version 9.12.1 und niedriger übernehmen die im Rahmen der Wiederherstellung aus den SnapLock Vault Snapshots erstellten Klone die Verfallszeit von SnapLock Vault. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
 
 +
 
@@ -84,7 +84,7 @@ NOTE: Die primären SnapLock-Einstellungen werden in der SnapCenter Backup Polic
 Sichern Sie die Datenbankdateien und Transaktionsprotokolle und verkürzen Sie die Transaktionsprotokolle.
 
 . Wählen Sie *Vollbackup und Log Backup* aus.
-. Geben Sie die maximale Anzahl an Datenbanken ein, die für jede Snapshot Kopie gesichert werden sollen.
+. Geben Sie die maximale Anzahl an Datenbanken ein, die für jeden Snapshot gesichert werden sollen.
 +
 
 NOTE: Sie müssen diesen Wert erhöhen, wenn Sie mehrere Backup-Vorgänge gleichzeitig ausführen möchten.
@@ -97,7 +97,8 @@ NOTE: Sie müssen diesen Wert erhöhen, wenn Sie mehrere Backup-Vorgänge gleich
 Sichern Sie die Datenbankdateien.
 
 . Wählen Sie * Vollbackup* aus.
-. Geben Sie die maximale Anzahl an Datenbanken ein, die für jede Snapshot Kopie gesichert werden sollen. Der Standardwert ist 100
+. Geben Sie die maximale Anzahl an Datenbanken ein, die für jeden Snapshot gesichert werden sollen.
+Der Standardwert ist 100
 +
 
 NOTE: Sie müssen diesen Wert erhöhen, wenn Sie mehrere Backup-Vorgänge gleichzeitig ausführen möchten.
@@ -175,7 +176,7 @@ Führen Sie auf der Seite Aufbewahrung je nach dem auf der Seite Backup-Typ ausg
 ====
 .Bestimmte Anzahl von Kopien
 --
-Behalten Sie nur eine bestimmte Anzahl von Snapshot Kopien bei.
+Bewahren Sie nur eine bestimmte Anzahl von Snapshots auf.
 
 . Wählen Sie die Option *Protokoll-Backups aufbewahren, die für die letzte <Zahl> Tage* gelten, und geben Sie die Anzahl der zu beheldenden Tage an. Wenn Sie diesem Limit nahe kommen, können Sie ältere Kopien löschen.
 
@@ -192,10 +193,10 @@ Bewahren Sie die Backup-Kopien für eine bestimmte Anzahl von Tagen auf.
 ====
 . Führen Sie im Abschnitt *vollständige Backup-Aufbewahrungs-Einstellungen* für die Einstellungen für On Demand-Aufbewahrung die folgenden Aktionen aus:
 +
-.. Geben Sie die Gesamtzahl der zu bewahrenden Snapshot Kopien an
+.. Geben Sie die Gesamtzahl der zu erbehalt enden Snapshots an
 +
-... Um die Anzahl der zu bewahrenden Snapshot Kopien anzugeben, wählen Sie *Summe der zu bewahrenden Snapshot Kopien* aus.
-... Wenn die Anzahl der Snapshot Kopien die angegebene Anzahl überschreitet, werden die Snapshot Kopien mit den ältesten Kopien gelöscht, die zuerst gelöscht wurden.
+... Um die Anzahl der zu befolgenden Snapshots anzugeben, wählen Sie *Gesamtanzahl der zu befolgenden Snapshot-Kopien* aus.
+... Wenn die Anzahl der Snapshots die angegebene Zahl überschreitet, werden die Snapshots mit den ältesten zuerst gelöschten Kopien gelöscht.
 
 
 
@@ -203,17 +204,17 @@ Bewahren Sie die Backup-Kopien für eine bestimmte Anzahl von Tagen auf.
 
 
 
-IMPORTANT: Standardmäßig ist der Wert der Aufbewahrungsanzahl auf 2 festgelegt. Wenn Sie die Aufbewahrungsanzahl auf 1 festlegen, kann der Aufbewahrungsvorgang möglicherweise fehlschlagen, da die erste Snapshot Kopie die Referenzkopie für die SnapVault-Beziehung ist, bis eine neuere Snapshot Kopie auf das Ziel repliziert wird.
+IMPORTANT: Standardmäßig ist der Wert der Aufbewahrungsanzahl auf 2 festgelegt. Wenn Sie den Aufbewahrungszeitraum auf 1 festlegen, kann der Aufbewahrungsvorgang fehlschlagen, weil der erste Snapshot der ReferenzSnapshot für die SnapVault-Beziehung ist, bis ein neuerer Snapshot auf das Ziel repliziert wird.
 
 
 NOTE: Der maximale Aufbewahrungswert ist 1018 für Ressourcen auf ONTAP 9.4 oder höher und 254 für Ressourcen unter ONTAP 9.3 oder einer früheren Version. Backups schlagen fehl, wenn die Aufbewahrung auf einen Wert festgelegt ist, der höher ist, als die zugrunde liegende ONTAP Version unterstützt.
 
-. Dauer der Aufbewahrung von Snapshot Kopien
+. Dauer der Aufbewahrung von Snapshots
 +
-.. Wenn Sie die Anzahl der Tage angeben möchten, für die Sie die Snapshot Kopien behalten möchten, bevor Sie sie löschen, wählen Sie *Snapshot Kopien für* beibehalten aus.
+.. Wenn Sie die Anzahl der Tage angeben möchten, für die Sie die Snapshots vor dem Löschen behalten möchten, wählen Sie *Snapshot-Kopien beibehalten für*.
 
 
-. Wenn Sie die Sperrfrist für Snapshot Kopien angeben möchten, wählen Sie *Sperrfrist für Snapshot Kopie* und wählen Sie Tage, Monate oder Jahre aus.
+. Wenn Sie die Sperrfrist für Snapshots angeben möchten, wählen Sie *Sperrfrist für Snapshot-Kopie* und wählen Sie Tage, Monate oder Jahre aus.
 +
 Die SnapLock-Aufbewahrungsfrist sollte weniger als 100 Jahre betragen.
 
@@ -221,9 +222,9 @@ Die SnapLock-Aufbewahrungsfrist sollte weniger als 100 Jahre betragen.
 
 . Geben Sie im Abschnitt *vollständige Backup-Aufbewahrungseinstellungen* für die Einstellungen für die stündliche, tägliche, wöchentliche und monatliche Aufbewahrung die Aufbewahrungseinstellungen für den Terminplantyp an, der auf der Seite Backup-Typ ausgewählt wurde.
 +
-.. Geben Sie die Gesamtzahl der zu bewahrenden Snapshot Kopien an
+.. Geben Sie die Gesamtzahl der zu erbehalt enden Snapshots an
 +
-... Um die Anzahl der zu bewahrenden Snapshot Kopien anzugeben, wählen Sie *Summe der zu bewahrenden Snapshot Kopien* aus. Wenn die Anzahl der Snapshot Kopien die angegebene Anzahl überschreitet, werden die Snapshot Kopien mit den ältesten Kopien gelöscht, die zuerst gelöscht wurden.
+... Um die Anzahl der zu befolgenden Snapshots anzugeben, wählen Sie *Gesamtanzahl der zu befolgenden Snapshot-Kopien* aus. Wenn die Anzahl der Snapshots die angegebene Zahl überschreitet, werden die Snapshots mit den ältesten zuerst gelöschten Kopien gelöscht.
 
 
 
@@ -231,23 +232,23 @@ Die SnapLock-Aufbewahrungsfrist sollte weniger als 100 Jahre betragen.
 
 
 
-IMPORTANT: Sie müssen die Aufbewahrungsanzahl auf 2 oder höher einstellen, wenn Sie die SnapVault-Replikation aktivieren möchten. Wenn Sie die Aufbewahrungsanzahl auf 1 festlegen, kann der Aufbewahrungsvorgang möglicherweise fehlschlagen, da die erste Snapshot Kopie die Referenzkopie für die SnapVault-Beziehung ist, bis eine neuere Snapshot Kopie auf das Ziel repliziert wird.
+IMPORTANT: Sie müssen die Aufbewahrungsanzahl auf 2 oder höher einstellen, wenn Sie die SnapVault-Replikation aktivieren möchten. Wenn Sie den Aufbewahrungszeitraum auf 1 festlegen, kann der Aufbewahrungsvorgang fehlschlagen, weil der erste Snapshot der ReferenzSnapshot für die SnapVault-Beziehung ist, bis ein neuerer Snapshot auf das Ziel repliziert wird.
 
-. Dauer der Aufbewahrung von Snapshot Kopien
+. Dauer der Aufbewahrung von Snapshots
 +
-.. Um die Anzahl der Tage anzugeben, für die Sie die Snapshot-Kopien vor dem Löschen behalten möchten, wählen Sie *Snapshot-Kopien behalten für* aus.
+.. Um die Anzahl der Tage anzugeben, für die Sie die Snapshots vor dem Löschen behalten möchten, wählen Sie *Snapshot Kopien beibehalten für*.
 
 
-. Wenn Sie die Sperrfrist für Snapshot Kopien angeben möchten, wählen Sie *Sperrfrist für Snapshot Kopie* und wählen Sie Tage, Monate oder Jahre aus.
+. Wenn Sie die Sperrfrist für Snapshots angeben möchten, wählen Sie *Sperrfrist für Snapshot-Kopie* und wählen Sie Tage, Monate oder Jahre aus.
 +
 Die SnapLock-Aufbewahrungsfrist sollte weniger als 100 Jahre betragen.
 
 +
-Die Aufbewahrung der Snapshot Kopie für dieses Protokoll ist standardmäßig auf 7 Tage festgelegt. Verwenden Sie Set-SmPolicy Cmdlet, um die Aufbewahrung von Snapshot-Protokollkopien zu ändern.
+Die Snapshot-Protokollaufbewahrung ist standardmäßig auf 7 Tage eingestellt. Verwenden Sie das Cmdlet "Set-SmPolicy", um die Snapshot Aufbewahrung des Protokolls zu ändern.
 
 
 
-In diesem Beispiel wird die Aufbewahrung von Snapshot-Kopien für das Protokoll auf 2 festgelegt:
+Dieses Beispiel setzt die Snapshot-Protokollaufbewahrung auf 2:
 
 .Beispiel Anzeigen
 []
@@ -308,7 +309,7 @@ Siehe link:..protect-scsql/task_view_sql_server_backups_and_clones_in_the_topolo
 . Wählen Sie eine Snapshot-Bezeichnung aus.
 
 
-Abhängig von dem ausgewählten Etikett der Snapshot Kopie wendet ONTAP die Aufbewahrungsrichtlinie für sekundäre Snapshot Kopien an, die mit dem Etikett übereinstimmt.
+Je nach der ausgewählten Snapshot-Beschriftung wendet ONTAP die sekundäre Snapshot-Aufbewahrungsrichtlinie an, die der Markierung entspricht.
 
 
 NOTE: Wenn Sie *Update SnapMirror nach dem Erstellen einer lokalen Snapshot Kopie* ausgewählt haben, können Sie optional das Label für die sekundäre Richtlinie angeben. Wenn Sie jedoch *Update SnapVault nach dem Erstellen einer lokalen Snapshot Kopie* ausgewählt haben, sollten Sie das sekundäre Policy Label angeben.
@@ -335,7 +336,7 @@ NOTE: Der Pfad für Prescripts oder Postscripts darf keine Laufwerke oder Shares
 
 +
 
-NOTE: Sie müssen die SnapMirror Aufbewahrungsrichtlinie in ONTAP konfigurieren, damit der sekundäre Storage die maximale Anzahl an Snapshot Kopien nicht erreicht.
+NOTE: Sie müssen die SnapMirror Aufbewahrungsrichtlinie in ONTAP so konfigurieren, dass der sekundäre Storage nicht die maximale Snapshot-Grenze erreicht.
 
 
 
@@ -368,9 +369,9 @@ Führen Sie auf der Seite Überprüfung die folgenden Schritte aus:
 ... Wählen Sie * nicht gruppierte Indizes (NOINDEX)* aus, wenn Sie keine nicht geclusterten Indizes überprüfen möchten. Die SQL Server-Datenbank verwendet Microsoft SQL Server Database Consistency Checker (DBCC), um die logische und physische Integrität der Objekte in der Datenbank zu überprüfen.
 
 
-.. Beschränken Sie die Prüfungen, und erhalten Sie die Sperren anstelle einer internen Snapshot-Kopie der Datenbank (TABLOCK).
+.. Begrenzen Sie die Überprüfungen und erhalten Sie die Sperren anstelle eines internen Datenbank-Snapshot (TABLOCK)
 +
-... Wählen Sie *Limit the Checks und erhalten Sie die Sperren anstatt eine interne Datenbank Snapshot Kopie (TABLOCK)* zu verwenden, um die Prüfungen zu begrenzen und Sperren zu erhalten, anstatt eine interne Datenbank Snapshot Kopie zu verwenden.
+... Wählen Sie *Schränken Sie die Prüfungen ein und erhalten Sie die Sperren anstatt eine interne Datenbank Snapshot Kopie (TABLOCK)* zu verwenden, um die Überprüfungen zu begrenzen und Sperren anstelle eines internen Datenbank-Snapshots zu erhalten.
 
 
 

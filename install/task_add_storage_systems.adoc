@@ -33,7 +33,7 @@ SnapCenter unterstützt nicht mehrere Storage-Systeme mit demselben Namen auf ve
 +
 Wenn Sie diese Funktionen aktivieren, sendet SnapCenter AutoSupport-Informationen an das Storage-System und EMS-Meldungen an das Syslog-System, wenn eine Ressource geschützt ist, eine Wiederherstellung oder ein Klonvorgang erfolgreich abgeschlossen wird oder ein Vorgang ausfällt.
 
-* Falls Sie Snapshot Kopien zu einem SnapMirror Ziel oder einem SnapVault Ziel replizieren möchten, müssen Sie Storage-Systemverbindungen für die Ziel-SVM oder das Ziel-Cluster sowie die Quell-SVM oder das Cluster einrichten.
+* Wenn Sie planen, Snapshots auf ein SnapMirror Ziel oder ein SnapVault Ziel zu replizieren, müssen Sie Storage-Systemverbindungen für die Ziel-SVM oder das Cluster sowie die Quell-SVM oder das Cluster einrichten.
 
 
 

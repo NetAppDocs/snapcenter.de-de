@@ -17,7 +17,7 @@ Sie können Richtlinien von einer Ressource oder Ressourcengruppe trennen, ände
 
 == Richtlinien ändern
 
-Sie können die Replizierungsoptionen, die Aufbewahrungseinstellungen für Snapshot Kopien, die Anzahl der Wiederholversuche oder die Informationen über Skripte ändern, während eine Richtlinie an eine Ressource oder Ressourcengruppe angehängt ist. Sie können den Terminplantyp (Häufigkeit) nur ändern, wenn Sie eine Richtlinie trennen.
+Sie können die Replikationsoptionen, die Snapshot-Aufbewahrungseinstellungen, die Anzahl der Fehlerversuche oder die Skriptinformationen ändern, während eine Richtlinie mit einer Ressource oder Ressourcengruppe verbunden ist. Sie können den Terminplantyp (Häufigkeit) nur ändern, wenn Sie eine Richtlinie trennen.
 
 *Über diese Aufgabe*
 

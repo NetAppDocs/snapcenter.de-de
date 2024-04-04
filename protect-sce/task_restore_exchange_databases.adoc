@@ -16,7 +16,7 @@ Mit SnapCenter können Sie gesicherte Exchange Datenbanken wiederherstellen.
 .Bevor Sie beginnen
 * Sie müssen die Ressourcengruppen, die Datenbank oder die Datenbankverfügbarkeitsgruppen (Database Availability Groups, DAGs) gesichert haben.
 * Wenn die Exchange-Datenbank zu einem anderen Speicherort migriert wird, funktioniert der Wiederherstellungsvorgang nicht für alte Backups.
-* Wenn Sie Snapshot Kopien in eine Spiegelung oder einen Vault replizieren, muss der SnapCenter Administrator Ihnen die SVMs sowohl für die Quell-Volumes als auch die Ziel-Volumes zugewiesen haben.
+* Wenn Sie Snapshots auf eine Spiegelung oder einen Vault replizieren, muss Ihnen der SnapCenter Administrator die SVMs sowohl für die Quell-Volumes als auch für die Ziel-Volumes zugewiesen haben.
 * Wenn sich in einer DAG eine aktive Datenbankkopie auf einem Storage anderer Anbieter befindet und Sie die passive Datenbankkopie eines Backups in einem NetApp Storage wiederherstellen möchten, erstellen Sie in einer DAG die passive Kopie (NetApp Storage) als aktive Kopie, aktualisieren Sie die Ressourcen und führen Sie den Wiederherstellungsvorgang aus.
 +
 Führen Sie die aus `Move-ActiveMailboxDatabase` Befehl, um die passive Datenbankkopie als aktive Datenbankkopie zu erstellen.
@@ -44,7 +44,7 @@ Der Wert des Schlüssels kann von Swagger über die API angezeigt werden: API /4
 +
 Sie können die GET API verwenden, um den Wert der Taste anzuzeigen. SET-API wird nicht unterstützt.
 
-* Bei ONTAP 9.12.1 und niedriger Version übernehmen die im Rahmen der Wiederherstellung erstellten Klone der SnapLock Vault Snapshots die Verfallszeit von SnapLock Vault. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
+* Bei ONTAP Version 9.12.1 und niedriger übernehmen die im Rahmen der Wiederherstellung aus den SnapLock Vault Snapshots erstellten Klone die Verfallszeit von SnapLock Vault. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
 
 
 .Schritte

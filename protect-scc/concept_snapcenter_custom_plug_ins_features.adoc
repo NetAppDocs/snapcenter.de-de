@@ -21,9 +21,9 @@ Die SnapCenter-Schnittstelle bietet Standardisierung und Konsistenz über Plug-i
 +
 Sie können Backup-Vorgänge planen, richtlinienbasierte Backup-Aufbewahrung konfigurieren und Restore-Vorgänge durchführen. Zudem lässt sich die Umgebung proaktiv überwachen, indem SnapCenter für das Senden von E-Mail-Warnmeldungen konfiguriert wird.
 
-* *Unterbrechungsfreie NetApp Snapshot Kopie-Technologie*
+* *Unterbrechungsfreie NetApp Snapshots*
 +
-SnapCenter nutzt die NetApp Snapshot-Kopiertechnologie mit den benutzerdefinierten Plug-ins von SnapCenter, um Ressourcen zu sichern. Snapshot Kopien belegen nur minimalen Speicherplatz.
+SnapCenter nutzt NetApp Snapshot Technologie mit den benutzerdefinierten Plug-ins von SnapCenter, um Ressourcen zu sichern. Snapshots belegen nur minimalen Speicherplatz.
 
 
 
@@ -38,11 +38,11 @@ Sie können die Anmeldeinformationen auch so festlegen, dass die autorisierten S
 +
 Auf dem Storage-System, auf dem Sie den Klon erstellen möchten, ist eine FlexClone Lizenz erforderlich.
 
-* Unterstützung der Snapshot-Kopie der Konsistenzgruppe (CG) von ONTAP im Rahmen der Erstellung von Backups
+* Unterstützung der Snapshot-Funktion von ONTAP für Konsistenzgruppen (CG) beim Erstellen von Backups.
 * Fähigkeit, mehrere Backups gleichzeitig über mehrere Ressourcen-Hosts auszuführen
 +
-In einem einzigen Vorgang werden Snapshot Kopien konsolidiert, wenn Ressourcen eines einzelnen Hosts dasselbe Volume gemeinsam nutzen.
+In einem einzigen Vorgang werden Snapshots konsolidiert, wenn Ressourcen in einem einzelnen Host dasselbe Volume gemeinsam nutzen.
 
-* Funktion zum Erstellen von Snapshot Kopien mithilfe externer Befehle.
-* Funktion zur Erstellung dateisystemkonsistenter Snapshot Kopien in Windows Umgebungen
+* Fähigkeit zum Erstellen von Snapshots mit externen Befehlen.
+* Möglichkeit zur Erstellung Filesystem-konsistenter Snapshots in Windows Umgebungen.
 

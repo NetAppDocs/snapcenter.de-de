@@ -19,7 +19,8 @@ Wenn Sie das Plug-in als nicht-root-Benutzer installiert haben, sollten Sie die 
 
 *Über diese Aufgabe*
 
-* Die Recovery wird anhand der Archivprotokolle durchgeführt, die am konfigurierten Speicherort für das Archivprotokoll verfügbar sind. Wenn die Datenbank im ARCHIVELOG-Modus ausgeführt wird, speichert die Oracle-Datenbank die gefüllten Gruppen von Redo-Log-Dateien an einem oder mehreren Offline-Zielen, die gemeinsam als archiviertes Redo-Protokoll bezeichnet werden. SnapCenter identifiziert und bindet die optimale Anzahl von Protokoll-Backups auf Basis der angegebenen SCN, des ausgewählten Datums und der ausgewählten Uhrzeit oder der Option „Protokolle“. Wenn die für die Recovery erforderlichen Archivprotokolle nicht am konfigurierten Speicherort verfügbar sind, sollten Sie die Snapshot Kopie mit den Protokollen mounten und den Pfad als externe Archivprotokolle angeben.
+* Die Recovery wird anhand der Archivprotokolle durchgeführt, die am konfigurierten Speicherort für das Archivprotokoll verfügbar sind. Wenn die Datenbank im ARCHIVELOG-Modus ausgeführt wird, speichert die Oracle-Datenbank die gefüllten Gruppen von Redo-Log-Dateien an einem oder mehreren Offline-Zielen, die gemeinsam als archiviertes Redo-Protokoll bezeichnet werden. SnapCenter identifiziert und bindet die optimale Anzahl von Protokoll-Backups auf Basis der angegebenen SCN, des ausgewählten Datums und der ausgewählten Uhrzeit oder der Option „Protokolle“.
+Wenn die für die Recovery erforderlichen Archivprotokolle am konfigurierten Speicherort nicht verfügbar sind, sollten Sie den Snapshot mit den Protokollen mounten und den Pfad als externe Archivprotokolle angeben.
 +
 Wenn Sie ASM-Datenbank von ASMLIB zu ASMFD migrieren, können die mit ASMLIB erstellten Backups nicht zur Wiederherstellung der Datenbank verwendet werden. Sie sollten Backups in der ASMFD-Konfiguration erstellen und diese Backups für die Wiederherstellung verwenden. Wenn die ASM-Datenbank von ASMFD zu ASMLIB migriert wird, sollten Sie zur Wiederherstellung auch Backups in der ASMLIB-Konfiguration erstellen.
 
@@ -30,7 +31,7 @@ Wenn Sie eine Datenbank wiederherstellen, wird auf dem Oracle-Datenbank-Host im 
 
 NOTE: Die Wiederherstellung der SPFILE- und Password-Datei wird nicht unterstützt.
 
-* Wenn Sie für Richtlinien mit aktiviertem SnapLock für ONTAP 9.12.1 und ältere Versionen eine Sperrfrist für Snapshot Kopien angeben, übernehmen die Klone, die im Rahmen der Wiederherstellung aus den manipulationssicheren Snapshot Kopien erstellt wurden, die Verfallszeit von SnapLock. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
+* Wenn Sie für Richtlinien mit aktiviertem SnapLock für ONTAP 9.12.1 und ältere Versionen einen Sperrzeitraum für Snapshots festlegen, übernehmen die Klone, die im Rahmen der Wiederherstellung aus den manipulationssicheren Snapshots erstellt wurden, die SnapLock-Auslaufzeit. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
 
 
 *Schritte*

@@ -24,7 +24,7 @@ Das folgende Bild veranschaulicht die Beziehung zwischen Ressourcen, Ressourceng
 +
 image::../media/sco_resourcegroup_policy.gif[sco-Ressourcengruppenrichtlinie]
 
-* Wenn Sie für Richtlinien mit aktiviertem SnapLock für ONTAP 9.12.1 und ältere Versionen eine Sperrfrist für Snapshot Kopien angeben, übernehmen die Klone, die im Rahmen der Wiederherstellung aus den manipulationssicheren Snapshot Kopien erstellt wurden, die Verfallszeit von SnapLock. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
+* Wenn Sie für Richtlinien mit aktiviertem SnapLock für ONTAP 9.12.1 und ältere Versionen einen Sperrzeitraum für Snapshots festlegen, übernehmen die Klone, die im Rahmen der Wiederherstellung aus den manipulationssicheren Snapshots erstellt wurden, die SnapLock-Auslaufzeit. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
 * Das Hinzufügen neuer Datenbanken ohne SM-BC zu einer vorhandenen Ressourcengruppe, die Ressourcen mit SM-BC enthält, wird nicht unterstützt.
 * Das Hinzufügen neuer Datenbanken zu einer vorhandenen Ressourcengruppe im Failover-Modus von SM-BC wird nicht unterstützt. Sie können der Ressourcengruppe nur im regulären oder Failback-Status Ressourcen hinzufügen.
 
@@ -43,9 +43,9 @@ NOTE: Der Name der Ressourcengruppe darf 250 Zeichen nicht überschreiten.
 +
 Wenn Sie beispielsweise HR als Tag zu mehreren Ressourcengruppen hinzufügen, können Sie später alle Ressourcengruppen finden, die mit dem HR-Tag verknüpft sind.
 
-.. Aktivieren Sie dieses Kontrollkästchen, und geben Sie ein benutzerdefiniertes Namensformat ein, das Sie für den Namen der Snapshot Kopie verwenden möchten.
+.. Aktivieren Sie dieses Kontrollkästchen, und geben Sie ein benutzerdefiniertes Namensformat ein, das für den Snapshot-Namen verwendet werden soll.
 +
-Beispiel: Custtext_Resource Group_Policy_hostname oder Resource Group_hostname. Standardmäßig wird ein Zeitstempel an den Namen der Snapshot Kopie angehängt.
+Beispiel: Custtext_Resource Group_Policy_hostname oder Resource Group_hostname. Standardmäßig wird an den Snapshot Namen ein Zeitstempel angehängt.
 
 .. Geben Sie die Ziele der Archivprotokolldateien an, die Sie nicht sichern möchten.
 +

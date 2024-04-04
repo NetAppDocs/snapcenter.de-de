@@ -96,7 +96,7 @@ Mit dem folgenden Cmdlet wird das SnapCenter MySQL Datenbank-Repository aus den 
 C:\PS>Restore-SmRepositoryBackup -BackupName MYSQL_DS_SC_Repository_mva-x3550-s09_09-15-2016_10.32.00.4445
 ----
 +
-Mit dem folgenden Cmdlet wird die SnapCenter MySQL Datenbank wiederhergestellt, wenn Backup-Dateien versehentlich in der iSCSI-LUN gelöscht werden. Bei VMDK wird der Backup manuell aus ONTAP Snapshot Kopien wiederhergestellt.
+Mit dem folgenden Cmdlet wird die SnapCenter MySQL Datenbank wiederhergestellt, wenn Backup-Dateien versehentlich in der iSCSI-LUN gelöscht werden. Für VMDK stellen Sie das Backup manuell aus ONTAP-Snapshots wieder her.
 
 +
 [listing]

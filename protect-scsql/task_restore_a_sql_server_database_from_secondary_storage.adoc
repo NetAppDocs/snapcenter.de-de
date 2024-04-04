@@ -14,13 +14,13 @@ summary: 'Sie können die gesicherten SQL Server Datenbanken aus den physischen 
 Sie können die gesicherten SQL Server Datenbanken von den physischen LUNs (RDM, iSCSI oder FCP) auf einem sekundären Speichersystem wiederherstellen. Die Funktion „Restore“ ist ein mehrphasiger Prozess, bei dem alle Daten und Protokollseiten von einem bestimmten SQL Server Backup im sekundären Storage-System in eine angegebene Datenbank kopiert werden.
 
 .Bevor Sie beginnen
-* Sie müssen die Snapshot Kopien vom primären zum sekundären Storage-System replizieren.
+* Sie müssen die Snapshots vom primären auf das sekundäre Speichersystem repliziert haben.
 * Sie müssen sicherstellen, dass der SnapCenter-Server und der Plug-in-Host eine Verbindung zum sekundären Speichersystem herstellen können.
 * Die meisten Felder auf den Seiten des Assistenten Wiederherstellen werden im grundlegenden Wiederherstellungsprozess erläutert. In den folgenden Informationen werden einige der Felder beschrieben, für die Sie möglicherweise eine Anleitung benötigen.
 
 
 .Über diese Aufgabe
-Wenn Sie für Richtlinien mit aktiviertem SnapLock für ONTAP 9.12.1 und ältere Versionen eine Sperrfrist für Snapshot Kopien angeben, übernehmen die Klone, die im Rahmen der Wiederherstellung aus den manipulationssicheren Snapshot Kopien erstellt wurden, die Verfallszeit von SnapLock. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
+Wenn Sie für Richtlinien mit aktiviertem SnapLock für ONTAP 9.12.1 und ältere Versionen einen Sperrzeitraum für Snapshots festlegen, übernehmen die Klone, die im Rahmen der Wiederherstellung aus den manipulationssicheren Snapshots erstellt wurden, die SnapLock-Auslaufzeit. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
 
 .Schritte
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann *SnapCenter-Plug-in für SQL Server* aus der Liste aus.

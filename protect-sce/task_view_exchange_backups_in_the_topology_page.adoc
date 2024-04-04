@@ -54,7 +54,7 @@ Durch Klicken auf die Schaltfläche *Aktualisieren* wird eine Abfrage des Speich
 Wenn ein SnapLock-fähiges Backup durchgeführt wird, wird durch Klicken auf die Schaltfläche *Aktualisieren* die primäre und sekundäre SnapLock-Ablaufzeit aktualisiert, die von ONTAP abgerufen wird. Ein wöchentlicher Zeitplan aktualisiert auch die primäre und sekundäre SnapLock-Ablaufzeit, die von ONTAP abgerufen wird.
 
 +
-Wenn die Applikationsressource über mehrere Volumes verteilt ist, ist die SnapLock Verfallszeit für das Backup die längste SnapLock Verfallszeit, die für eine Snapshot Kopie in einem Volume festgelegt ist. Die längste SnapLock-Ablaufzeit wird von ONTAP abgerufen.
+Wenn die Applikationsressource über mehrere Volumes verteilt ist, ist die SnapLock-Ablaufzeit für das Backup die längste SnapLock-Ablaufzeit, die für einen Snapshot in einem Volume festgelegt ist. Die längste SnapLock-Ablaufzeit wird von ONTAP abgerufen.
 
 +
 Nach On-Demand-Backup, durch Klicken auf die Schaltfläche * Aktualisieren* aktualisiert die Details der Sicherung oder des Klons.
@@ -66,6 +66,6 @@ Die Details der Backups werden in einem Tabellenformat angezeigt.
 . Wählen Sie das Backup aus der Tabelle aus, und klicken Sie dann auf die Datensicherungssymbole, um Vorgänge zum Wiederherstellen, Umbenennen und Löschen durchzuführen.
 +
 
-NOTE: Sie können Backups, die sich im sekundären Speicher befinden, nicht umbenennen oder löschen. Das Löschen von Snapshot Kopien wird durch die ONTAP Aufbewahrungseinstellungen gehandhabt.
+NOTE: Sie können Backups, die sich im sekundären Speicher befinden, nicht umbenennen oder löschen. Das Löschen von Snapshots wird von den ONTAP-Aufbewahrungseinstellungen übernommen.
 
 

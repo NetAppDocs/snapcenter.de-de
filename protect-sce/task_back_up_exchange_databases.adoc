@@ -49,9 +49,9 @@ Klicken Sie Auf *image:../media/filter_icon.png[""]*, und wählen Sie dann den H
 ** Wenn Sie eine Datenbankverfügbarkeitsgruppe sichern möchten, klicken Sie auf den Namen der Datenbankverfügbarkeitsgruppe.
 
 
-. Wenn Sie einen Namen für eine benutzerdefinierte Snapshot Kopie angeben möchten, aktivieren Sie auf der Seite Ressourcen das Kontrollkästchen *Custom Name Format for Snapshot copy* verwenden und geben Sie dann ein benutzerdefiniertes Namensformat ein, das Sie für den Namen der Snapshot Kopie verwenden möchten.
+. Wenn Sie einen benutzerdefinierten Snapshot-Namen angeben möchten, aktivieren Sie auf der Seite Ressourcen das Kontrollkästchen *Benutzerdefiniertes Namensformat für Snapshot-Kopie verwenden*, und geben Sie dann ein benutzerdefiniertes Namensformat ein, das Sie für den Snapshot-Namen verwenden möchten.
 +
-Beispiel: _Custext_Policy_hostname_ oder _Resource_hostname_. Standardmäßig wird ein Zeitstempel an den Namen der Snapshot Kopie angehängt.
+Beispiel: _Custext_Policy_hostname_ oder _Resource_hostname_. Standardmäßig wird an den Snapshot Namen ein Zeitstempel angehängt.
 
 . Führen Sie auf der Seite Richtlinien die folgenden Schritte aus:
 +

@@ -316,7 +316,7 @@ Für Nutzer von SnapCenter 4.1.1 enthält die Dokumentation zum SnapCenter Plug-
 
 * Ermöglicht die applikationsgerechte Datensicherung für andere Plug-ins, die auf Windows Hosts in Ihrer SnapCenter Umgebung laufen
 * Automatisiert applikationsspezifische Backup-, Restore- und Klonvorgänge für Microsoft Filesysteme in Ihrer SnapCenter Umgebung
-* Unterstützt Storage-Bereitstellung, Snapshot-Kopie-Konsistenz und Speicherplatzrückgewinnung für Windows Hosts
+* Unterstützt Storage-Bereitstellung, Snapshot-Konsistenz und Speicherplatzrückgewinnung für Windows Hosts
 +
 
 NOTE: Das Plug-in für Windows stellt SMB-Freigaben und Windows-Filesysteme auf physischen und RDM-LUNs bereit, unterstützt jedoch keine Backup-Vorgänge für Windows File-Systeme auf SMB-Shares.

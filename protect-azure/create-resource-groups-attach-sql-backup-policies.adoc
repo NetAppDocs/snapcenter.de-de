@@ -41,7 +41,7 @@ Geben Sie eine oder mehrere Bezeichnungen ein, die Ihnen bei der späteren Suche
  a| 
 Verwenden Sie für Snapshot-Kopie das benutzerdefinierte Namensformat
  a| 
-Aktivieren Sie dieses Kontrollkästchen, und geben Sie ein benutzerdefiniertes Namensformat ein, das Sie für den Namen der Snapshot Kopie verwenden möchten.
+Aktivieren Sie dieses Kontrollkästchen, und geben Sie ein benutzerdefiniertes Namensformat ein, das für den Snapshot-Namen verwendet werden soll.
 
 |===
 . Wählen Sie auf der Seite Ressourcen einen Hostnamen aus der Dropdown-Liste *Host* und Ressourcentyp aus der Dropdown-Liste *Ressourcentyp* aus.

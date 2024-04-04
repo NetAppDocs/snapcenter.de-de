@@ -61,13 +61,13 @@ Sie können eine Ressourcengruppe löschen, wenn Sie die Ressourcen in der Resso
 
 *Über diese Aufgabe*
 
-Sie sollten manuell alle Klone löschen, die für eine der Ressourcen der Ressourcengruppe erstellt wurden. Optional können Sie das Löschen aller Backups, Metadaten, Richtlinien und Snapshot Kopien, die der Ressourcengruppe zugeordnet sind, erzwingen.
+Sie sollten manuell alle Klone löschen, die für eine der Ressourcen der Ressourcengruppe erstellt wurden. Sie können optional das Löschen aller Backups, Metadaten, Richtlinien und Snapshots erzwingen, die der Ressourcengruppe zugeordnet sind.
 
 *Schritte*
 
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
 . Wählen Sie auf der Seite Ressourcen in der Liste *Ansicht* die Option *Ressourcengruppe* aus.
 . Wählen Sie die Ressourcengruppe aus, und klicken Sie dann auf *Löschen*.
-. Optional: Aktivieren Sie das Kontrollkästchen *Backups löschen und Richtlinien trennen, die mit dieser Ressourcengruppe* verknüpft sind, um alle Backups, Metadaten, Richtlinien und Snapshot-Kopien zu entfernen, die der Ressourcengruppe zugeordnet sind.
+. Optional: Aktivieren Sie das Kontrollkästchen *Backups löschen und Richtlinien trennen, die dieser Ressourcengruppe zugeordnet sind*, um alle Backups, Metadaten, Richtlinien und Snapshots zu entfernen, die der Ressourcengruppe zugeordnet sind.
 . Klicken Sie auf *OK*.
 

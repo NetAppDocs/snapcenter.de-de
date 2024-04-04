@@ -38,9 +38,9 @@ Die Seite Volume-Protect der Anwendung wird angezeigt.
  a| 
 Verwenden Sie für Snapshot-Kopie das benutzerdefinierte Namensformat
  a| 
-Aktivieren Sie dieses Kontrollkästchen, und geben Sie anschließend ein benutzerdefiniertes Namensformat ein, das Sie für den Namen der Snapshot Kopie verwenden möchten.
+Aktivieren Sie dieses Kontrollkästchen, und geben Sie dann ein benutzerdefiniertes Namensformat ein, das für den Snapshot-Namen verwendet werden soll.
 
-Beispiel: Custtext__Policy_hostname oder Resource_hostname. Standardmäßig wird ein Zeitstempel an den Namen der Snapshot Kopie angehängt.
+Beispiel: Custtext__Policy_hostname oder Resource_hostname. Standardmäßig wird an den Snapshot Namen ein Zeitstempel angehängt.
 
 
 

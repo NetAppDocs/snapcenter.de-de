@@ -33,9 +33,9 @@ In der Topologieansicht lässt sich nicht unterscheiden, ob der Backup-Status, d
 
 
 
-. Aktivieren Sie auf der Seite Ressourcen das Kontrollkästchen *Custom Name Format for Snapshot copy* und geben Sie dann ein benutzerdefiniertes Namensformat ein, das Sie für den Namen der Snapshot Kopie verwenden möchten.
+. Aktivieren Sie auf der Seite „Ressourcen“ das Kontrollkästchen *benutzerdefiniertes Namensformat für Snapshot-Kopie*, und geben Sie dann ein benutzerdefiniertes Namensformat ein, das für den Snapshot-Namen verwendet werden soll.
 +
-Beispiel: Custtext_Policy_hostname oder Resource_hostname. Standardmäßig wird ein Zeitstempel an den Namen der Snapshot Kopie angehängt.
+Beispiel: Custtext_Policy_hostname oder Resource_hostname. Standardmäßig wird an den Snapshot Namen ein Zeitstempel angehängt.
 
 . Führen Sie auf der Seite Richtlinien die folgenden Aufgaben aus:
 +
