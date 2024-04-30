@@ -76,3 +76,20 @@ NOTE: Wenn das letzte verbleibende Backup gelöscht wird, können die zugehörig
 NOTE: Wenn Sie einige veraltete Datenbank-Backups in SnapCenter haben, die keine entsprechenden Backups auf dem Speichersystem haben, müssen Sie den Befehl remove-smbackup verwenden, um diese veralteten Backup-Einträge zu bereinigen. Wenn die veralteten Backups katalogisiert wurden, werden sie von der Datenbank des Recovery-Katalogs entkatalogisiert.
 
 
+
+
+
+== Schutz entfernen
+
+Durch Entfernen des Schutzes werden alle Backups gelöscht und alle Richtlinien entfernt. Bevor Sie den Schutz entfernen, sollten Sie sicherstellen, dass die Backups nicht gemountet werden und dass keine Klone mit dem Backup verknüpft sind.
+
+*Schritte*
+
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Wählen Sie auf der Seite Ressourcen entweder die Ressource oder Ressourcengruppe aus der Dropdown-Liste *Ansicht* aus.
+. Wählen Sie die Ressource oder Ressourcengruppe aus der Liste aus.
++
+Die Seite „Topologie der Ressourcen- oder Ressourcengruppe“ wird angezeigt.
+
+. Wählen Sie die Sicherung aus und klicken Sie auf *Schutz entfernen*.
+

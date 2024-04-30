@@ -8298,14 +8298,6 @@ Die Informationen zu den Parametern, die mit dem Befehl und deren Beschreibungen
   <block id="40b141d81ebc81d0277454ddd95983be" category="paragraph">Nach On-Demand-Backup, durch Klicken auf die Schaltfläche * Aktualisieren* aktualisiert die Details der Sicherung oder des Klons.</block>
   <block id="e3eb3098d9512640ba3691ccfbed50f5" category="paragraph">Außerdem können Sie PowerShell Cmdlets manuell oder in Skripten verwenden, um Backup-, Wiederherstellungs- und Klonvorgänge durchzuführen. Ausführliche Informationen zu PowerShell Cmdlets finden Sie in der Hilfe zu SnapCenter Cmdlet oder in der<block ref="b70cb1971d6e57b9289aed553ef357cb" category="inline-link-rx"></block></block>
   <block id="f1472e722e81a79d38810332425a4e76" category="paragraph">Außerdem können Sie PowerShell Cmdlets manuell oder in Skripten verwenden, um Backup-, Wiederherstellungs- und Klonvorgänge durchzuführen. Informationen zu PowerShell Cmdlets finden Sie in der Hilfe zu SnapCenter Cmdlet oder im<block ref="b70cb1971d6e57b9289aed553ef357cb" category="inline-link-rx"></block>.</block>
-  <block id="5145b2adfb55517e007962efd2a08be6" category="paragraph">Permalink: Protect-scu/task_split_a_clone.html
-Randleiste: Randleiste
-Schlüsselwörter: Split Clone, SnapCenter
-Zusammenfassung: 'Sie können SnapCenter verwenden, um eine geklonte Ressource von der übergeordneten Ressource zu trennen. Der geteilte Klon wird unabhängig von der übergeordneten Ressource.'
-----
-= Einen Klon teilen
-:Icons: Schriftart
-:Imagesdir: ../media/</block>
   <block id="e9b924bbf420ab11fb241e13f75a92c1" category="summary">Nach der Installation des Plug-ins für Unix-Dateisysteme werden die Dateisysteme auf dem Host automatisch erkannt und auf der Seite Ressourcen angezeigt.</block>
   <block id="5f6bb3736007978d5604be7df99325f8" category="doc">Ermitteln Sie die für Backups verfügbaren UNIX-Dateisysteme</block>
   <block id="c94588b5932cbd964b99829c9c53f185" category="paragraph">Nach der Installation des Plug-ins werden alle Dateisysteme auf diesem Host automatisch erkannt und auf der Seite „Ressourcen“ angezeigt. Sie können diese Dateisysteme zu Ressourcengruppen hinzufügen, um Datenschutzvorgänge auszuführen.</block>
@@ -9074,4 +9066,7 @@ Die Aufbewahrung ist beispielsweise für eine Ressourcengruppe mit primärer SAP
   <block id="bf971f3c72b83a1aac6d9fe1cb39850c" category="admonition">Sie können Backups, die sich im sekundären Speicher befinden, nicht umbenennen oder löschen. Das Löschen von Snapshots wird von den ONTAP-Aufbewahrungseinstellungen übernommen.</block>
   <block id="eb71c7e77b1cb5486117cdac9d378fb6" category="list-text">Wenn Sie einen benutzerdefinierten Snapshot-Namen angeben möchten, aktivieren Sie auf der Seite Ressourcen das Kontrollkästchen *Benutzerdefiniertes Namensformat für Snapshot-Kopie verwenden*, und geben Sie dann ein benutzerdefiniertes Namensformat ein, das Sie für den Snapshot-Namen verwenden möchten.</block>
   <block id="2457e427df18c87448fa7fa796d115c7" category="paragraph">Für das Backup von Exchange Mailboxen mit SnapCenter müssen Sie den Ressourcentyp auswählen, beispielsweise Datenbanken und Datenbankverfügbarkeitsgruppen (Database Availability Groups, DAG). Mithilfe der Snapshot Technologie werden schreibgeschützte Online-Kopien der Volumes erstellt, auf denen sich die Ressourcen befinden.</block>
+  <block id="495685c9e0a33087f4a235b8fe0d5e1c" category="section-title">Schutz entfernen</block>
+  <block id="d315d492e2b430b33a4c4cd7b63eda74" category="paragraph">Durch Entfernen des Schutzes werden alle Backups gelöscht und alle Richtlinien entfernt. Bevor Sie den Schutz entfernen, sollten Sie sicherstellen, dass die Backups nicht gemountet werden und dass keine Klone mit dem Backup verknüpft sind.</block>
+  <block id="58184ed57b20efbfac17064f1bc0e4f4" category="list-text">Wählen Sie die Sicherung aus und klicken Sie auf *Schutz entfernen*.</block>
 </blocks>

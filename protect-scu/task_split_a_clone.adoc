@@ -1,16 +1,14 @@
-= 
+---
+permalink: protect-scu/task_split_a_clone.html 
+sidebar: sidebar 
+keywords: split clone, snapcenter 
+summary: Sie können SnapCenter verwenden, um eine geklonte Ressource von der übergeordneten Ressource zu trennen. Der geteilte Klon ist unabhängig von der übergeordneten Ressource. 
+---
+= Teilen Sie einen Klon auf
 :allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
 
-
---
-Permalink: Protect-scu/task_split_a_clone.html
-Randleiste: Randleiste
-Schlüsselwörter: Split Clone, SnapCenter
-Zusammenfassung: 'Sie können SnapCenter verwenden, um eine geklonte Ressource von der übergeordneten Ressource zu trennen. Der geteilte Klon wird unabhängig von der übergeordneten Ressource.'
-----
-= Einen Klon teilen
-:Icons: Schriftart
-:Imagesdir: ../media/
 
 [role="lead"]
 Sie können SnapCenter verwenden, um eine geklonte Ressource von der übergeordneten Ressource zu trennen. Der geteilte Klon ist unabhängig von der übergeordneten Ressource.
@@ -77,5 +75,3 @@ Der Startvorgang für die Klontrennung schlägt fehl, wenn gerade Backup-, Wiede
 
 .Verwandte Informationen
 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_clone_or_verfication_fails_with_aggregate_does_not_exist["Der SnapCenter Klon oder die Überprüfung schlägt fehl, wenn das Aggregat nicht vorhanden ist"]
-
---
