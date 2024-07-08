@@ -197,7 +197,7 @@ NOTE: Das SnapCenter Plug-in für UNIX, das Teil des SnapCenter Plug-ins-Pakets 
  a| 
 Betriebssysteme
  a| 
-AIX 6.1 oder höher
+AIX 7.1 oder höher
 
 
 

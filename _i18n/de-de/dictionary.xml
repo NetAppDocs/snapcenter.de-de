@@ -5906,7 +5906,6 @@
   <block id="6347721d31864738b0e7a03f5553e69b" category="section-title">AIX Host-Anforderungen</block>
   <block id="fed30036a3caffc826b4e66f434f67ea" category="paragraph">Bevor Sie das SnapCenter Plug-ins Package für AIX installieren, sollten Sie sicherstellen, dass der Host die Anforderungen erfüllt.</block>
   <block id="cddfaa01c32e2362546c78364751248b" category="admonition">Das SnapCenter Plug-in für UNIX, das Teil des SnapCenter Plug-ins-Pakets für AIX ist, unterstützt keine gleichzeitigen Volume-Gruppen.</block>
-  <block id="895327977020e495debf0b375c7541d8" category="paragraph">AIX 6.1 oder höher</block>
   <block id="f805f99adc12df0c565005d33166c7bc" category="section-title">Konfigurieren Sie sudo-Berechtigungen für Benutzer, die nicht root sind, für AIX-Host</block>
   <block id="841774125775c871852a88e3823b3b8c" category="list-text">/Home/_AIX_USER_/.sc_netapp/snapcenter_aix_Host_Plugin.bsx</block>
   <block id="c9d390513716fa3f8a5e273f77a61c88" category="list-text">Melden Sie sich beim AIX-Host an, auf dem Sie das SnapCenter Plug-ins-Paket für AIX installieren möchten.</block>
@@ -9069,4 +9068,5 @@ Die Aufbewahrung ist beispielsweise für eine Ressourcengruppe mit primärer SAP
   <block id="495685c9e0a33087f4a235b8fe0d5e1c" category="section-title">Schutz entfernen</block>
   <block id="d315d492e2b430b33a4c4cd7b63eda74" category="paragraph">Durch Entfernen des Schutzes werden alle Backups gelöscht und alle Richtlinien entfernt. Bevor Sie den Schutz entfernen, sollten Sie sicherstellen, dass die Backups nicht gemountet werden und dass keine Klone mit dem Backup verknüpft sind.</block>
   <block id="58184ed57b20efbfac17064f1bc0e4f4" category="list-text">Wählen Sie die Sicherung aus und klicken Sie auf *Schutz entfernen*.</block>
+  <block id="ad569cc1cca820033bb20ffe1d5bc4a5" category="paragraph">AIX 7.1 oder höher</block>
 </blocks>
