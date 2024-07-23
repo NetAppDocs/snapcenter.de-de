@@ -68,7 +68,7 @@ entries:
     url: "/protect-hana/reference_host_requirements_to_install_snapcenter_plug_in_package_for_linux.html"
   - title: Anmeldedaten für das SnapCenter-Plug-in für SAP HANA-Datenbank einrichten
     url: "/protect-hana/task_set_up_credentials_for_snapcenter_plug_in_for_sap_hana_database.html"
-  - title: Konfigurieren Sie gMSA unter Windows Server 2012 oder höher
+  - title: Konfigurieren Sie gMSA unter Windows Server 2016 oder höher
     url: "/protect-hana/task_configure_gMSA_on_windows_server_2012_or_later.html"
   - title: Das SnapCenter-Plug-in für SAP HANA Datenbanken installieren
     entries:

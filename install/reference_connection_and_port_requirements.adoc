@@ -59,9 +59,20 @@ Informationen zum Anpassen des Ports finden Sie unter https://docs.netapp.com/us
 
 
  a| 
+Scheduler-Service-Port
+ a| 
+8154 (HTTPS),
+
+Über diesen Port werden die SnapCenter-Scheduler-Workflows für alle gemanagten Plug-ins im SnapCenter Server Host zentral orchestriert.
+
+Informationen zum Anpassen des Ports finden Sie unter https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["Installieren Sie den SnapCenter-Server mithilfe des Installationsassistenten."]
+
+
+
+ a| 
 MySQL-Anschluss
  a| 
-3306 (HTTPS), bidirektional
+3306 (HTTPS), bidirektional, anpassbar
 
 Der Port wird für die Kommunikation zwischen SnapCenter und der MySQL Repository Datenbank verwendet.
 
@@ -118,7 +129,18 @@ Informationen zum Anpassen des Ports finden Sie unter https://docs.netapp.com/us
 
 
  a| 
-Benutzerdefinierte Plug-ins für SnapCenter
+SnapCenter Plug-in für Exchange Datenbank
+ a| 
+909, anpassbar
+
+Das Standard-NET. Der TCP-Port wird vom Plug-in für Windows für die Verbindung mit Exchange VSS-Rückrufen verwendet.
+
+Informationen zum Anpassen des Ports finden Sie unter link:../protect-sce/task_add_hosts_and_install_plug_in_for_exchange.html["Fügen Sie Hosts hinzu und installieren Sie das Plug-in für Exchange"].
+
+
+
+ a| 
+Von NetApp unterstützte Plug-ins für SnapCenter
  a| 
 9090 (HTTPS), fest
 

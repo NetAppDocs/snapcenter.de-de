@@ -1,0 +1,47 @@
+---
+permalink: protect-nsp/what_you_can_do_with_the_netapp_supported_plugins.html 
+sidebar: sidebar 
+keywords: NetApp supported plug-ins 
+summary: Sie können die von NetApp unterstützten Plug-ins für Datensicherungsvorgänge verwenden. 
+---
+= Was Sie mit den von NetApp unterstützten Plug-ins und dem Storage Plug-in tun können
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können das von NetApp unterstützte Plug-in für Datensicherungsvorgänge verwenden.
+
+*Von NetApp unterstützte Plug-ins*
+
+* Fügen Sie Ressourcen wie Datenbanken, Instanzen, Dokumente oder Tabellen hinzu.
+* Backups erstellen.
+* Restore aus Backups:
+* Backups klonen.
+* Planen von Backup-Vorgängen
+* Monitoring von Backup-, Restore- und Klonvorgängen
+* Berichte für Backup-, Wiederherstellungs- und Klonvorgänge anzeigen
+
+
+*Storage-Plug-in*
+
+Sie können das Storage Plug-in für Datensicherungsvorgänge verwenden.
+
+* Erstellen Sie Konsistenzgruppen-Snapshots der Storage-Volumes über ONTAP-Cluster hinweg.
+* Führen Sie Backups individueller Applikationen mithilfe des integrierten Pre- und Post-Scripting Frameworks durch
++
+Sie können ein Backup für das ONTAP Volume, die LUN oder einen qtree erstellen.
+
+* Aktualisierung von Snapshots, die von Primärdaten auf eine sekundäre ONTAP erstellt wurden, mithilfe der SnapCenter Richtlinie zur Nutzung der bestehenden Replizierungsbeziehung (SnapVault/SnapMirror/einheitliche Replizierung)
++
+Primäre und sekundäre ONTAP können ONTAP FAS, AFF, All-SAN-Array (ASA), Select oder Cloud ONTAP sein.
+
+* Stellen Sie komplette ONTAP Volumes, LUNs oder Dateien wieder her.
++
+Sie sollten den entsprechenden Dateipfad manuell angeben, da die Funktionen zum Durchsuchen oder zur Indizierung nicht im Produkt integriert sind.
+
++
+Die Wiederherstellung von qtree oder Verzeichnissen wird nicht unterstützt, aber Sie können nur den Qtree klonen und exportieren, wenn der Backup-Umfang auf Qtree-Ebene definiert ist.
+
+

@@ -17,6 +17,7 @@ Sie müssen die Snapshots vom primären Speicher auf einen sekundären Speicher 
 
 .Über diese Aufgabe
 * Bei ONTAP Version 9.12.1 und niedriger übernehmen die im Rahmen der Wiederherstellung aus den SnapLock Vault Snapshots erstellten Klone die Verfallszeit von SnapLock Vault. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
+* Für die Wiederherstellung der aktiven Synchronisierung von SnapMirror müssen Sie das Backup vom primären Speicherort auswählen.
 
 
 .Schritte

@@ -1,0 +1,36 @@
+---
+permalink: protect-db2/clone-ibm-db2-resource-backups.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for IBM Db2 
+summary: Der Klon-Workflow umfasst die Durchführung des Klonvorgangs und die Überwachung des Vorgangs. 
+---
+= Klon-Workflow
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Klon-Workflow umfasst die Durchführung des Klonvorgangs und die Überwachung des Vorgangs.
+
+.Über diese Aufgabe
+* Sie können auf dem IBM DB2-Quellserver klonen.
+* Sie können Ressourcen-Backups aus den folgenden Gründen klonen:
++
+** Zum Testen von Funktionen, die während der Applikationsentwicklungszyklen mit der aktuellen Ressourcenstruktur und dem aktuellen Inhalt implementiert werden müssen
+** Zur Datenextraktion und -Manipulation beim Befüllen von Data Warehouses
+** Zum Wiederherstellen von Daten, die versehentlich gelöscht oder geändert wurden
+
+
+
+
+Im folgenden Workflow wird die Sequenz angezeigt, in der Sie den Klonvorgang durchführen müssen:
+
+image::../media/sco_scc_wfs_clone_workflow.png[Klon-Workflow]
+
+Außerdem können Sie PowerShell Cmdlets manuell oder in Skripten verwenden, um Backup-, Wiederherstellungs- und Klonvorgänge durchzuführen. Die SnapCenter Cmdlet Hilfe und die Cmdlet Referenzinformationen enthalten detaillierte Informationen zu PowerShell Cmdlets.
+
+.Nachdem Sie fertig sind
+Nach dem Klonen der automatisch erkannten DB2-Ressourcen wird die geklonte Ressource als manuelle Ressource markiert. Klicken Sie auf *Refresh Resources*, um die geklonte DB2-Ressource wiederherzustellen. Wenn Sie den Klon löschen, werden auch der Speicher und der Host bereinigt.
+
+Wenn Sie die Ressourcen nach dem Klonvorgang nicht aktualisieren und versuchen, den Klon zu löschen, werden der Speicher und der Host nicht bereinigt. Sie müssen die Einträge manuell in fstab löschen.

@@ -16,6 +16,7 @@ Bevor Sie SnapCenter zum Sichern von Unix-Dateisystemen verwenden, müssen Sie e
 .Bevor Sie beginnen
 * Sie müssen sich auf die Datensicherung vorbereitet haben, indem Sie Aufgaben wie das Installieren von SnapCenter, das Hinzufügen von Hosts, das Erkennen der Dateisysteme und das Erstellen von Storage-System-Verbindungen durchführen.
 * Wenn Sie Snapshots auf einen sekundären gespiegelten oder Vault-Storage replizieren, muss Ihnen der SnapCenter Administrator die SVMs sowohl für die Quell- als auch für die Ziel-Volumes zugewiesen haben.
+* Prüfen Sie die spezifischen Voraussetzungen und Einschränkungen von SnapMirror Active Sync. Weitere Informationen finden Sie unter https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["Objektgrenzen für die aktive SnapMirror Synchronisierung"].
 
 
 .Schritte
@@ -68,6 +69,8 @@ NOTE: Sie können Archiv-Protokoll-Backups nur dann aufbewahren, wenn Sie die Ar
 Aktualisieren Sie SnapMirror nach dem Erstellen einer lokalen Snapshot Kopie
  a| 
 Wählen Sie dieses Feld aus, um Spiegelkopien der Backup-Sätze auf einem anderen Volume zu erstellen (SnapMirror Replikation).
+
+Diese Option sollte für SnapMirror Active Sync aktiviert sein.
 
 
 

@@ -1,0 +1,153 @@
+---
+permalink: protect-mysql/back-up-mysql.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for MySQL 
+summary: Wenn eine Ressource noch nicht zu einer Ressourcengruppe gehört, können Sie die Ressource auf der Seite Ressourcen sichern. 
+---
+= Backup von MySQL
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn eine Ressource noch nicht zu einer Ressourcengruppe gehört, können Sie die Ressource auf der Seite Ressourcen sichern.
+
+.Bevor Sie beginnen
+* Sie müssen eine Sicherungsrichtlinie erstellt haben.
+* Wenn Sie eine Ressource mit einer SnapMirror Beziehung mit einem sekundären Storage sichern möchten, sollte die dem Storage-Benutzer zugewiesene ONTAP-Rolle die Berechtigung „`snapmirror all`“ enthalten. Wenn Sie jedoch die Rolle „`vsadmin`“ verwenden, ist die Berechtigung „`snapmirror all`“ nicht erforderlich.
+* Stellen Sie für einen Backup-Vorgang mit Snapshot Kopie sicher, dass alle Mandantendatenbanken gültig und aktiv sind.
+* Für Pre- und Post-Befehle für Stilllegung-, Snapshot- und Stilllegung-Vorgänge sollten Sie überprüfen, ob die Befehle in der Befehlsliste vorhanden sind, die auf dem Plug-in-Host über die folgenden Pfade verfügbar sind:
++
+Für Windows: _C:\Programmdateien\NetApp\SnapCenter\SnapCenter Plug-in Creator\etc\allowed_befiehlt_list.txt_
+
++
+Für Linux: _/var/opt/snapcenter/scc/allowed_befiehlt_list.txt_
+
+
+
+
+NOTE: Wenn die Befehle in der Befehlsliste nicht vorhanden sind, schlägt der Vorgang fehl.
+
+.Schritte
+. Wählen Sie im linken Navigationsbereich *Ressourcen* aus, und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Filtern Sie auf der Seite Ressourcen die Ressourcen aus der Dropdown-Liste *Ansicht* nach Ressourcentyp.
++
+Wählen Sie *image:../media/filter_icon.png[""]*, und wählen Sie dann den Host-Namen und den Ressourcentyp, um die Ressourcen zu filtern. Sie können dann auswählen image:../media/filter_icon.png[""] Um den Filterbereich zu schließen.
+
+. Wählen Sie die Ressource aus, die Sie sichern möchten.
+. Wählen Sie auf der Seite Ressource *Benutzerdefiniertes Namensformat für Snapshot-Kopie verwenden* aus, und geben Sie dann ein benutzerdefiniertes Namensformat ein, das Sie für den Snapshot-Namen verwenden möchten.
++
+Beispiel: _Custext_Policy_hostname_ oder _Resource_hostname_. Standardmäßig wird an den Snapshot Namen ein Zeitstempel angehängt.
+
+. Gehen Sie auf der Seite Anwendungseinstellungen wie folgt vor:
++
+** Wählen Sie den Pfeil *Backups*, um zusätzliche Backup-Optionen festzulegen:
++
+Aktivieren Sie bei Bedarf das Backup der Konsistenzgruppe, und führen Sie die folgenden Aufgaben aus:
+
++
+|===
+| Für dieses Feld... | Tun Sie das... 
+
+
+ a| 
+Es dauert nicht lange, bis der „Consistency Group Snapshot“-Vorgang abgeschlossen ist
+ a| 
+Wählen Sie *dringend*, oder *Mittel* oder *entspannt*, um die Wartezeit für den Snapshot-Vorgang anzugeben. Dringend = 5 Sekunden, Mittel = 7 Sekunden und entspannt = 20 Sekunden.
+
+
+
+ a| 
+Deaktivieren Sie WAFL Sync
+ a| 
+Wählen Sie diese Option aus, um zu vermeiden, einen WAFL Konsistenzpunkt zu erzwingen.
+
+|===
+** Wählen Sie den Pfeil von *Scripts* aus, um Pre- und Post-Befehle für Stilllegung-, Snapshot- und Unquiesce-Vorgänge auszuführen.
++
+Sie können auch vor dem Beenden des Sicherungsvorgangs Vorbefehle ausführen. Prescripts und Postscripts werden auf dem SnapCenter Server ausgeführt.
+
+** Wählen Sie den Pfeil **Custom Configurations**, und geben Sie dann die für alle Jobs, die diese Ressource verwenden, erforderlichen benutzerdefinierten Wertpaare ein.
+** Wählen Sie den Pfeil *Snapshot Copy Tool* aus, um das Werkzeug zum Erstellen von Snapshots auszuwählen:
++
+|===
+| Ihre Situation | Dann... 
+
+
+ a| 
+SnapCenter zum Erstellen eines Snapshots auf Storage-Ebene
+ a| 
+Wählen Sie *SnapCenter ohne Dateisystemkonsistenz* aus.
+
+
+
+ a| 
+SnapCenter zum Verwenden des Plug-in für Windows, um das Filesystem in einen konsistenten Zustand zu versetzen und dann einen Snapshot zu erstellen
+ a| 
+Wählen Sie *SnapCenter mit Dateisystemkonsistenz* aus.
+
+
+
+ a| 
+Um den Befehl zum Erstellen eines Snapshots einzugeben
+ a| 
+Wählen Sie *other* aus, und geben Sie dann den Befehl ein, um einen Snapshot zu erstellen.
+
+|===
++
+image:../media/application_settings.gif[""]
+
+
+
+. Führen Sie auf der Seite Richtlinien die folgenden Schritte aus:
++
+.. Wählen Sie eine oder mehrere Richtlinien aus der Dropdown-Liste aus.
++
+
+NOTE: Sie können eine Richtlinie auch erstellen, indem Sie auf * klickenimage:../media/add_policy_from_resourcegroup.gif[""]*.
+
++
+Im Abschnitt „Zeitpläne für ausgewählte Richtlinien konfigurieren“ werden die ausgewählten Richtlinien aufgelistet.
+
+.. Wählen Sie *image:../media/add_policy_from_resourcegroup.gif[""]* In der Spalte Zeitplan konfigurieren für die Richtlinie, für die Sie einen Zeitplan konfigurieren möchten.
+.. Konfigurieren Sie im Dialogfeld Add Schedules for Policy _Policy_Name_ den Zeitplan, und wählen Sie dann *OK* aus.
++
+_Policy_Name_ ist der Name der von Ihnen ausgewählten Richtlinie.
+
++
+Die konfigurierten Zeitpläne sind in der Spalte angewendete Zeitpläne aufgeführt.
+
+
+
+. Wählen Sie auf der Benachrichtigungsseite aus der Dropdown-Liste *E-Mail-Präferenz* die Szenarien aus, in denen Sie die E-Mails versenden möchten.
++
+Außerdem müssen Sie die E-Mail-Adressen für Absender und Empfänger sowie den Betreff der E-Mail angeben. SMTP muss auch unter *Einstellungen* > *Globale Einstellungen* konfiguriert werden.
+
+. Überprüfen Sie die Zusammenfassung, und wählen Sie dann *Fertig stellen*.
++
+Die Seite „Ressourcen-Topologie“ wird angezeigt.
+
+. Wählen Sie *Jetzt sichern*.
+. Führen Sie auf der Seite Backup die folgenden Schritte aus:
++
+.. Wenn Sie mehrere Richtlinien auf die Ressource angewendet haben, wählen Sie aus der Dropdown-Liste *Richtlinie* die Richtlinie aus, die Sie für das Backup verwenden möchten.
++
+Wenn die für das On-Demand-Backup ausgewählte Richtlinie einem Backup-Zeitplan zugeordnet ist, werden die On-Demand-Backups auf Basis der für den Zeitplantyp festgelegten Aufbewahrungseinstellungen beibehalten.
+
+.. Wählen Sie *Backup*.
+
+
+. Überwachen Sie den Fortschritt des Vorgangs, indem Sie auf *Monitor* > *Jobs* klicken.
++
+** In MetroCluster-Konfigurationen kann SnapCenter nach einem Failover möglicherweise keine Sicherungsbeziehung erkennen.
++
+Weitere Informationen finden Sie unter: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["SnapMirror oder SnapVault-Beziehung kann nach MetroCluster Failover nicht erkannt werden"^]
+
+** Wenn Sie Anwendungsdaten auf VMDKs sichern und die Java Heap-Größe für das SnapCenter-Plug-in für VMware vSphere nicht groß genug ist, kann die Sicherung fehlschlagen.
++
+Um die Java-Heap-Größe zu erhöhen, suchen Sie nach der Skriptdatei _/opt/netapp/init_scripts/scvservice_. In diesem Skript startet der Befehl _do_Start method_ den SnapCenter VMware Plug-in-Dienst. Aktualisieren Sie diesen Befehl auf Folgendes: _Java -jar -Xmx8192M -Xms4096M_
+
+
+
+

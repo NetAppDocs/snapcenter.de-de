@@ -1,0 +1,22 @@
+---
+permalink: protect-db2/snapcenter-plug-in-for-ibm-db2-overview.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for IBM Db2 
+summary: Das SnapCenter Plug-in für IBM DB2 ist eine Host-seitige Komponente der NetApp SnapCenter Software, die ein applikationsspezifisches Datensicherungsmanagement von IBM DB2 Datenbanken ermöglicht. Das Plug-in für IBM DB2 Database automatisiert das Backup, die Wiederherstellung und das Klonen von IBM DB2-Datenbanken in einer SnapCenter-Umgebung. 
+---
+= Übersicht über das SnapCenter Plug-in für IBM DB2
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das SnapCenter Plug-in für IBM DB2 Database ist eine Host-seitige Komponente der NetApp SnapCenter Software, die ein applikationsspezifisches Datensicherungsmanagement von IBM DB2 Datenbanken ermöglicht. Das Plug-in für IBM DB2 Database automatisiert das Backup, die Wiederherstellung und das Klonen von IBM DB2-Datenbanken in einer SnapCenter-Umgebung.
+
+SnapCenter unterstützt DB2-Setups mit einer und mehreren Instanzen. Sie können das Plug-in für IBM DB2 Database sowohl in Linux- als auch in Windows-Umgebungen verwenden. In Windows-Umgebungen wird DB2 als manuelle Ressource unterstützt.
+
+Bei der Installation des Plug-in für IBM DB2 Database können Sie SnapCenter mit NetApp SnapMirror Technologie verwenden, um Spiegelkopien von Backup-Sets auf einem anderen Volume zu erstellen. Mithilfe des Plug-ins in mit NetApp SnapVault Technologie lässt sich darüber hinaus eine Disk-to-Disk-Backup-Replizierung zur Einhaltung von Standards durchführen.
+
+Das SnapCenter Plug-in für DB2 unterstützt NFS und SAN unter File-Storage-Layouts von ONTAP und Azure NetApp.
+
+VMDK oder virtuelles Storage Layout wird nicht unterstützt.

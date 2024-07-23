@@ -1,20 +1,19 @@
 ---
 permalink: install/task_configure_two_way_ssl.html 
 sidebar: sidebar 
-keywords: security,two-way ssl,configure two-way ssl 
-summary: Sie sollten die bidirektionale SSL-Kommunikation so konfigurieren, dass die gegenseitige Kommunikation zwischen dem SnapCenter-Server und den Plug-ins gesichert ist.   
+keywords: security,two-way ssl,configure two-way ssl, windows host 
+summary: Sie sollten die bidirektionale SSL-Kommunikation so konfigurieren, dass die gegenseitige Kommunikation zwischen SnapCenter-Server auf Windows-Host und den Plug-ins gesichert ist. 
 ---
-= Konfigurieren Sie die bidirektionale SSL-Kommunikation
+= Konfigurieren Sie die bidirektionale SSL-Kommunikation auf dem Windows-Host
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Sie sollten die bidirektionale SSL-Kommunikation so konfigurieren, dass die gegenseitige Kommunikation zwischen dem SnapCenter-Server und den Plug-ins gesichert ist.
+Sie sollten die bidirektionale SSL-Kommunikation so konfigurieren, dass die gegenseitige Kommunikation zwischen SnapCenter-Server auf Windows-Host und den Plug-ins gesichert ist.
 
-*Bevor Sie beginnen*
-
+.Bevor Sie beginnen
 * Sie sollten die CSR-Datei des CA-Zertifikats mit der unterstützten Mindestschlüssellänge von 3072 erstellt haben.
 * Das CA-Zertifikat sollte die Serverauthentifizierung und die Clientauthentifizierung unterstützen.
 * Sie sollten über ein CA-Zertifikat mit privatem Schlüssel und Fingerabdruck-Details verfügen.
@@ -28,8 +27,7 @@ Umgebungen mit einigen Hosts oder Servern, die für die bidirektionale SSL-Kommu
 
 
 
-*Schritte*
-
+.Schritte
 . Um den Port zu binden, führen Sie die folgenden Schritte auf dem SnapCenter-Server-Host für SnapCenter IIS-Webserver-Port 8146 (Standard) und erneut für SMCore-Port 8145 (Standard) mit PowerShell-Befehlen durch.
 +
 .. Entfernen Sie die vorhandene selbstsignierte SnapCenter-Zertifikatport-Bindung mit dem folgenden PowerShell Befehl.
@@ -119,12 +117,10 @@ Im Windows-Registrierungs-Editor, Traverse auf den unten genannten Pfad,
 
 Sie sollten das SnapCenter-Windows-Plug-in für die bidirektionale SSL-Kommunikation mithilfe von PowerShell Befehlen konfigurieren.
 
-*Bevor Sie beginnen*
-
+.Bevor Sie beginnen
 Stellen Sie sicher, dass der Fingerabdruck des CA-Zertifikats verfügbar ist.
 
-*Schritte*
-
+.Schritte
 . Um den Port zu binden, führen Sie die folgenden Aktionen auf dem Windows-Plug-in-Host für SMCore-Port 8145 aus (Standard).
 +
 .. Entfernen Sie die vorhandene selbstsignierte SnapCenter-Zertifikatport-Bindung mit dem folgenden PowerShell Befehl.

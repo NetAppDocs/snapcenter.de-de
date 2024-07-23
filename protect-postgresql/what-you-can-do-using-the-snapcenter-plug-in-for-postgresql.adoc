@@ -1,0 +1,23 @@
+---
+permalink: protect-postgresql/what-you-can-do-using-the-snapcenter-plug-in-for-postgresql.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for postgresql 
+summary: Wenn Sie das Plug-in für PostgreSQL in Ihrer Umgebung installieren, können Sie SnapCenter verwenden, um PostgreSQL und deren Ressourcen zu sichern, wiederherzustellen und zu klonen. Sie können auch Aufgaben zur Unterstützung dieser Operationen ausführen. 
+---
+= Was Sie mit dem SnapCenter Plug-in für PostgreSQL tun können
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie das Plug-in für PostgreSQL-Cluster in Ihrer Umgebung installieren, können Sie mit SnapCenter PostgreSQL-Cluster und deren Ressourcen sichern, wiederherstellen und klonen. Sie können auch Aufgaben zur Unterstützung dieser Operationen ausführen.
+
+* Cluster hinzufügen.
+* Backups erstellen.
+* Restore aus Backups:
+* Backups klonen.
+* Planen von Backup-Vorgängen
+* Monitoring von Backup-, Restore- und Klonvorgängen
+* Berichte für Backup-, Wiederherstellungs- und Klonvorgänge anzeigen
+

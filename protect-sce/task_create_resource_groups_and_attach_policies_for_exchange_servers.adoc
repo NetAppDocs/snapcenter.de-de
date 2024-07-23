@@ -25,6 +25,8 @@ Der Wert des Schlüssels kann von Swagger über die API angezeigt werden: API /4
 Sie können die GET API verwenden, um den Wert der Taste anzuzeigen. SET-API wird nicht unterstützt.
 
 * Bei ONTAP Version 9.12.1 und niedriger übernehmen die im Rahmen der Wiederherstellung aus den SnapLock Vault Snapshots erstellten Klone die Verfallszeit von SnapLock Vault. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
+* Das Hinzufügen neuer Datenbanken ohne SnapMirror Active Sync zu einer vorhandenen Ressourcengruppe, die Ressourcen mit SnapMirror Active Sync enthält, wird nicht unterstützt.
+* Das Hinzufügen neuer Datenbanken zu einer vorhandenen Ressourcengruppe im Failover-Modus von SnapMirror Active Sync wird nicht unterstützt. Sie können der Ressourcengruppe nur im regulären oder Failback-Status Ressourcen hinzufügen.
 
 
 .Schritte
@@ -125,7 +127,7 @@ Außerdem müssen Sie die E-Mail-Adressen für Absender und Empfänger sowie den
 Für eine E-Mail-Benachrichtigung müssen Sie die SMTP-Serverdetails entweder mithilfe des GUI- oder PowerShell-Befehls angegeben haben `Set-SmSmtpServer`.
 
 +
-Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ können Sie auch auf die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["SnapCenter Software Cmdlet Referenzhandbuch"^].
+Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ finden Sie auch Informationen im https://docs.netapp.com/us-en/snapcenter-cmdlets/index.htmlnapCenter[] Software Cmdlet Reference Guide^].
 
 . Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
 

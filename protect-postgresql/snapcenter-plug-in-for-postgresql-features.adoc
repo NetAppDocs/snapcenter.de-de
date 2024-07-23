@@ -1,0 +1,48 @@
+---
+permalink: protect-postgresql/snapcenter-plug-in-for-postgresql-features.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for postgresql 
+summary: SnapCenter lässt sich in die Plug-in-Applikation und mit NetApp Technologien auf dem Storage-System integrieren. Um mit dem Plug-in für postgresql-Cluster zu arbeiten, verwenden Sie die grafische Benutzeroberfläche von SnapCenter. 
+---
+= Funktionen des SnapCenter Plug-in für PostgreSQL
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter lässt sich in die Plug-in-Applikation und mit NetApp Technologien auf dem Storage-System integrieren. Um mit dem Plug-in für PostgreSQL-Cluster zu arbeiten, verwenden Sie die grafische Benutzeroberfläche von SnapCenter.
+
+* *Einheitliche grafische Benutzeroberfläche*
++
+Die SnapCenter-Schnittstelle bietet Standardisierung und Konsistenz über Plug-ins und Umgebungen hinweg. Die SnapCenter Schnittstelle ermöglicht konsistente Backup-, Restore- und Klonvorgänge über alle Plug-ins hinweg, die zentralisierte Berichterstellung, die Schnellübersicht über Dashboard-Ansichten, die Einrichtung rollenbasierter Zugriffssteuerung (Role Based Access Control, RBAC) und das Monitoring von Jobs in allen Plug-ins.
+
+* *Automatisierte zentrale Verwaltung*
++
+Sie können Backup-Vorgänge planen, richtlinienbasierte Backup-Aufbewahrung konfigurieren und Restore-Vorgänge durchführen. Zudem lässt sich die Umgebung proaktiv überwachen, indem SnapCenter für das Senden von E-Mail-Warnmeldungen konfiguriert wird.
+
+* *Technologie für unterbrechungsfreie NetApp Snapshot Kopien*
++
+SnapCenter verwendet NetApp Snapshot-Technologie mit dem Plug-in für PostgreSQL-Cluster, um Ressourcen zu sichern.
+
+
+
+Der Einsatz des Plug-in für PostgreSQL bietet zudem folgende Vorteile:
+
+* Unterstützung für Backup-, Restore- und Klon-Workflows
+* RBAC-unterstützte Sicherheit und zentralisierte Rollendelegation
++
+Sie können die Anmeldeinformationen auch so festlegen, dass die autorisierten SnapCenter-Benutzer über Berechtigungen auf Anwendungsebene verfügen.
+
+* Erstellung platzsparender und zeitpunktgenauer Kopien von Ressourcen für Tests oder Datenextraktion mit der NetApp FlexClone Technologie
++
+Auf dem Storage-System, auf dem Sie den Klon erstellen möchten, ist eine FlexClone Lizenz erforderlich.
+
+* Unterstützung der Snapshot-Funktion von ONTAP für Konsistenzgruppe (CG) beim Erstellen von Backups.
+* Fähigkeit, mehrere Backups gleichzeitig über mehrere Ressourcen-Hosts auszuführen
++
+In einem einzigen Vorgang werden Snapshots konsolidiert, wenn Ressourcen in einem einzelnen Host dasselbe Volume gemeinsam nutzen.
+
+* Fähigkeit, Snapshots mit externen Befehlen zu erstellen.
+* Unterstützung für Linux LVM auf XFS-Dateisystem.
+

@@ -1,0 +1,92 @@
+---
+permalink: protect-mysql/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-mysql.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for MySQL 
+summary: 'Sie müssen eine Storage Virtual Machine (SVM)-Verbindung und Zugangsdaten erstellen, bevor Sie PowerShell Cmdlets zum Backup, zur Wiederherstellung oder zum Klonen von MySQL-Datenbanken verwenden.' 
+---
+= Erstellen Sie eine Storage-Systemverbindung und Zugangsdaten mit PowerShell Cmdlets für MySQL
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen eine Storage Virtual Machine (SVM)-Verbindung und Zugangsdaten erstellen, bevor Sie PowerShell Cmdlets zum Backup, zur Wiederherstellung oder zum Klonen von MySQL-Datenbanken verwenden.
+
+.Bevor Sie beginnen
+* Sie sollten die PowerShell Umgebung auf die Ausführung der PowerShell Commandlets vorbereitet haben.
+* Sie sollten die erforderlichen Berechtigungen in der Rolle „Infrastrukturadministrator“ besitzen, um Speicherverbindungen zu erstellen.
+* Sie sollten sicherstellen, dass die Plug-in-Installationen nicht ausgeführt werden.
++
+Die Host-Plug-in-Installationen dürfen beim Hinzufügen einer Speichersystemverbindung nicht ausgeführt werden, da der Host-Cache möglicherweise nicht aktualisiert wird und der Datenbank-Status in der SnapCenter GUI unter „`not available for Backup`“ oder „`not on NetApp Storage`“ angezeigt werden kann.
+
+* Speichersystemnamen sollten eindeutig sein.
++
+SnapCenter unterstützt nicht mehrere Storage-Systeme mit demselben Namen auf verschiedenen Clustern. Jedes von SnapCenter unterstützte Storage-System sollte über einen eindeutigen Namen und eine eindeutige LIF-IP-Adresse für Daten verfügen.
+
+
+
+.Schritte
+. Starten Sie eine PowerShell Core-Verbindungssitzung mit dem Cmdlet "Open-SmConnection".
++
+[listing]
+----
+PS C:\> Open-SmConnection
+----
+. Erstellen Sie mit dem Cmdlet "Add-SmStorageConnection" eine neue Verbindung zum Storage-System.
++
+[listing]
+----
+PS C:\> Add-SmStorageConnection -Storage test_vs1 -Protocol Https
+-Timeout 60
+----
+. Erstellen Sie mit dem Cmdlet "Add-SmCredential" eine neue Anmeldeinformation.
++
+In diesem Beispiel wird das Erstellen einer neuen Anmeldeinformationen namens FinanceAdmin mit Windows-Anmeldeinformationen angezeigt:
+
++
+[listing]
+----
+PS C:> Add-SmCredential -Name FinanceAdmin -AuthMode Windows
+-Credential sddev\administrator
+----
+. Fügen Sie den MySQL-Kommunikationshost zum SnapCenter-Server hinzu.
++
+[listing]
+----
+PS C:> Add-SmHost -HostName 10.232.204.61 -OSType Windows -RunAsName FinanceAdmin -PluginCode mysql
+----
+. Installieren Sie das Paket und das SnapCenter-Plug-in für MySQL auf dem Host.
++
+Für Linux:
+
++
+[listing]
+----
+PS C:> Install-SmHostPackage -HostNames 10.232.204.61 -ApplicationCode mysql
+----
++
+Für Windows:
+
++
+[listing]
+----
+Install-SmHostPackage -HostNames 10.232.204.61 -ApplicationCode mysql -FilesystemCode scw -RunAsName FinanceAdmin
+----
+. Pfad auf SQLLIB festlegen.
++
+Für Windows verwendet das MySQL-Plugin den Standardpfad für den SQLLIB-Ordner: „C:\Programme\IBM\SQLLIB\BIN“
+
++
+Wenn Sie den Standardpfad überschreiben möchten, verwenden Sie den folgenden Befehl.
+
++
+[listing]
+----
+PS C:> Set-SmConfigSettings -Plugin -HostName 10.232.204.61 -PluginCode
+MySQL -configSettings @{“MySQL_SQLLIB_CMD” = “<custom_path>\IBM\SQLLIB\BIN”}
+
+----
+
+
+Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ können Sie auch auf die https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter Software Cmdlet Referenzhandbuch"^].

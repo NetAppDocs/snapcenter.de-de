@@ -1,0 +1,14 @@
+---
+permalink: protect-db2/auto-discovery-of-resources-on-linux-host.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for IBM DB2 
+summary: Ressourcen sind IBM DB2-Datenbanken und Instanzen auf dem Linux-Host, die von SnapCenter gemanagt werden. Nach der Installation des SnapCenter-Plug-ins für IBM DB2 werden die IBM DB2-Datenbanken auf diesem Linux-Host automatisch erkannt und auf der Seite „Ressourcen“ angezeigt. 
+---
+= Automatische Ermittlung von Ressourcen auf Linux-Host
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ressourcen sind IBM DB2-Datenbanken und Instanzen auf dem Linux-Host, die von SnapCenter gemanagt werden. Nach der Installation des SnapCenter-Plug-ins für IBM DB2 werden die IBM DB2-Datenbanken aller Instanzen auf diesem Linux-Host automatisch erkannt und auf der Seite Ressourcen angezeigt.

@@ -1,0 +1,80 @@
+---
+permalink: protect-mysql/add-resources-manually-to-the-plug-in-host.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for MySQL 
+summary: Die automatische Erkennung wird für bestimmte MySQL Instanzen nicht unterstützt. Sie müssen diese Ressourcen manuell hinzufügen. 
+---
+= Fügen Sie dem Plug-in-Host manuell Ressourcen hinzu
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die automatische Erkennung wird auf dem Windows-Host nicht unterstützt. Sie müssen MySQL-Instanzen und Datenbankressourcen manuell hinzufügen.
+
+.Bevor Sie beginnen
+* Sie müssen Aufgaben wie die Installation des SnapCenter-Servers, das Hinzufügen von Hosts und das Einrichten von Speichersystemverbindungen abgeschlossen haben.
+
+
+.Schritte
+. Wählen Sie im linken Navigationsbereich das SnapCenter-Plugin für MySQL aus der Dropdown-Liste aus und klicken Sie dann auf *Ressourcen*.
+. Klicken Sie auf der Seite Ressourcen auf *MySQL-Ressourcen hinzufügen*.
+. Führen Sie auf der Seite „Ressourcendetails bereitstellen“ die folgenden Aktionen durch:
++
+|===
+| Für dieses Feld... | Tun Sie das... 
+
+
+ a| 
+Name
+ a| 
+Geben Sie den Datenbanknamen an.
+
+
+
+ a| 
+Host-Name
+ a| 
+Geben Sie den Hostnamen ein.
+
+
+
+ a| 
+Typ
+ a| 
+Wählen Sie eine Instanz aus.
+
+
+
+ a| 
+Instanz
+ a| 
+Keine Angabe.
+
+
+
+ a| 
+Anmeldedaten
+ a| 
+Wählen Sie die Anmeldeinformationen aus, oder fügen Sie Informationen zu den Anmeldeinformationen hinzu.
+
+Dies ist optional.
+
+|===
+. Wählen Sie auf der Seite „Storage Footprint bereitstellen“ einen Speichertyp aus und wählen Sie ein oder mehrere Volumes, LUNs und qtrees aus, und klicken Sie dann auf *Save*.
++
+Optional: Klicken Sie auf das Symbol *image:../media/add_policy_from_resourcegroup.gif[""]* Symbol, um weitere Volumes, LUNs und qtrees von anderen Speichersystemen hinzuzufügen.
+
+. Optional: Geben Sie auf der Seite „Ressourceneinstellungen“ benutzerdefinierte Schlüssel-Wert-Paare für das MySQL-Plug-in ein.
+. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
++
+Die Datenbanken werden zusammen mit Informationen wie dem Hostnamen, zugehörigen Ressourcengruppen und Richtlinien sowie dem Gesamtstatus angezeigt
+
+
+
+Wenn Sie Benutzern Zugriff auf Ressourcen gewähren möchten, müssen Sie den Benutzern die Ressourcen zuweisen. Auf diese Weise können Benutzer die Aktionen ausführen, für die sie über Berechtigungen für die ihnen zugewiesenen Assets verfügen.
+
+link:https://docs.netapp.com/us-en/snapcenter/install/task_add_a_user_or_group_and_assign_role_and_assets.html["Fügen Sie einen Benutzer oder eine Gruppe hinzu und weisen Sie Rollen und Assets zu"]
+
+Nach dem Hinzufügen der Datenbanken können Sie die MySQL-Datenbankdetails ändern.

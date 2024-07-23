@@ -34,6 +34,9 @@ Umgebungen Beschrieben Sind
  a| 
 * Physischer Server
 * Virtueller Server
++
+VVol Datastores auf NFS und SAN. VVol Datastore kann nur mit ONTAP Tools für VMware vSphere bereitgestellt werden.
+
 
 
 
@@ -90,6 +93,5 @@ Sie können jedoch manuell Wiederherstellungen auf Dateiebene durchführen, inde
 
 * Kombination aus auf VMDKs verteilten Filesystemen, die sowohl von NFS- als auch von VMFS-Datastore stammen, wird nicht unterstützt.
 * NVMe wird nicht unterstützt.
-* SnapMirror Business Continuity (SM-BC) wird nicht unterstützt.
 * Bereitstellung wird nicht unterstützt.
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: install, snapcenter software, install wizard 
 summary: Sie können die ausführbare Datei für das SnapCenter-Server-Installationsprogramm ausführen, um den SnapCenter-Server zu installieren. 
 ---
-= Installieren Sie den SnapCenter-Server
+= Installieren Sie den SnapCenter-Server auf dem Windows-Host
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -63,4 +63,23 @@ Wenn Sie jedoch *Abbrechen* klicken, wenn die Vorgänge „Neustart des SnapCent
 +
 Protokolldateien werden immer im Ordner %temp% des Admin-Benutzers aufgeführt (älteste zuerst). Wenn Sie die Protokollstandorte umleiten möchten, initiieren Sie die Installation des SnapCenter-Servers über die Eingabeaufforderung, indem Sie Folgendes ausführen:``C:\installer_location\installer_name.exe /log"C:\"``
 
+
+
+
+
+== Registrieren Sie das Produkt, um den Support zu aktivieren
+
+Wenn Sie neue NetApp Produkte nutzen und noch kein NetApp Konto haben, sollten Sie das Produkt registrieren, um den Support zu aktivieren.
+
+.Schritte
+. Navigieren Sie nach der Installation von SnapCenter zu *Hilfe > Info*.
+. Notieren Sie sich im Dialogfeld _Info zu SnapCenter_ die SnapCenter-Instanz, eine 20-stellige Zahl, die mit 971 beginnt.
+. Klicken Sie Auf https://register.netapp.com[].
+. Klicken Sie auf *Ich bin kein registrierter NetApp-Kunde*.
+. Geben Sie Ihre Daten an, um sich zu registrieren.
+. Lassen Sie das Feld NetApp Referenz SN leer.
+. Wählen Sie in der Dropdown-Liste Produktreihe *SnapCenter* aus.
+. Wählen Sie den Abrechnungsanbieter aus.
+. Geben Sie die 20-stellige SnapCenter-Instanz-ID ein.
+. Klicken Sie Auf *Absenden*.
 

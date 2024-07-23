@@ -13,6 +13,22 @@ summary: Eine Ressourcengruppe ist ein Container, in dem Sie Ressourcen hinzufü
 [role="lead"]
 Eine Ressourcengruppe ist ein Container, in dem Sie Ressourcen hinzufügen, die Sie sichern und schützen möchten. Mit einer Ressourcengruppe können Sie alle Daten sichern, die mit den Dateisystemen verknüpft sind.
 
+.Über diese Aufgabe
+* Eine Datenbank mit Dateien in ASM-Datenträgergruppen muss sich im „MOUNT“- oder „OPEN“-Zustand befinden, um ihre Backups mit dem Dienstprogramm Oracle DBVERIFY zu überprüfen.
++
+Fügen Sie der Ressourcengruppe eine oder mehrere Richtlinien hinzu, um den Typ des Datenschutzauftrags zu definieren, den Sie ausführen möchten.
+
++
+Das folgende Bild veranschaulicht die Beziehung zwischen Ressourcen, Ressourcengruppen und Richtlinien für Datenbanken:
+
++
+image::../media/sco_resourcegroup_policy.gif[sco-Ressourcengruppenrichtlinie]
+
+* Wenn Sie für Richtlinien mit aktiviertem SnapLock für ONTAP 9.12.1 und ältere Versionen einen Sperrzeitraum für Snapshots festlegen, übernehmen die Klone, die im Rahmen der Wiederherstellung aus den manipulationssicheren Snapshots erstellt wurden, die SnapLock-Auslaufzeit. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
+* Das Hinzufügen neuer Dateisysteme ohne SnapMirror Active Sync zu einer vorhandenen Ressourcengruppe, die Ressourcen mit SnapMirror Active Sync enthält, wird nicht unterstützt.
+* Das Hinzufügen neuer Dateisysteme zu einer vorhandenen Ressourcengruppe im Failover-Modus von SnapMirror Active Sync wird nicht unterstützt. Sie können der Ressourcengruppe nur im regulären oder Failback-Status Ressourcen hinzufügen.
+
+
 .Schritte
 . Wählen Sie im linken Navigationsbereich *Ressourcen* und das entsprechende Plug-in aus der Liste aus.
 . Klicken Sie auf der Seite Ressourcen auf *Neue Ressourcengruppe*.

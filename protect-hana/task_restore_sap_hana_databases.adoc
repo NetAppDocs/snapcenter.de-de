@@ -19,4 +19,4 @@ image::../media/restore_workflow.gif[Wiederherstellung des Workflows]
 
 Außerdem können Sie PowerShell Cmdlets manuell oder in Skripten verwenden, um Backup-, Wiederherstellungs- und Klonvorgänge durchzuführen. Die SnapCenter Cmdlet Hilfe und die Cmdlet Referenzinformationen enthalten detaillierte Informationen zu PowerShell Cmdlets.
 
-https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["SnapCenter Software Cmdlet Referenzhandbuch"^].
+https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter Software Cmdlet Referenzhandbuch"^].

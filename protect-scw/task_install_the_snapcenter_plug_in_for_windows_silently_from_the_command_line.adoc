@@ -15,7 +15,7 @@ Sie können das SnapCenter-Plug-in für Microsoft Windows lokal auf einem Window
 
 .Bevor Sie beginnen
 * Sie müssen Microsoft .Net 4.7.2 oder höher installiert haben.
-* Sie müssen PowerShell 4.0 oder höher installiert haben.
+* Sie müssen PowerShell 7.4.2 oder höher installiert haben.
 * Sie müssen die Windows-Nachrichtenwarteschlange aktiviert haben.
 * Sie müssen ein lokaler Administrator auf dem Host sein.
 

@@ -1,0 +1,30 @@
+---
+permalink: protect-postgresql/types-of-restore-performed-for-auto-discovered-postgresql.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for postgresql 
+summary: 'SnapCenter unterstützt Volume-basierte SnapRestore \(VBSR\)-, Single File SnapRestore- und Connect-and-Copy-Wiederherstellungsarten für automatisch erkannte PostgreSQL-Cluster.' 
+---
+= Arten von Wiederherstellungsvorgängen für automatisch erkannte PostgreSQL
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das SnapCenter Plug-in für PostgreSQL unterstützt Single File SnapRestore und stellt Wiederherstellungsarten für automatisch erkannte PostgreSQL-Cluster her.
+
+
+
+== Single File SnapRestore wird in NFS-Umgebungen für die folgenden Szenarien durchgeführt:
+
+* Wenn nur die Option *Complete Resource* ausgewählt ist
+* Wenn der ausgewählte Backup von einem sekundären Standort SnapMirror oder SnapVault stammt und die Option *Complete Resource* ausgewählt ist
+
+
+
+
+== Single File SnapRestore wird in SAN-Umgebungen für die folgenden Szenarien durchgeführt:
+
+* Wenn nur die Option *Complete Resource* ausgewählt ist
+* Wenn das Backup von einem sekundären Standort SnapMirror oder SnapVault ausgewählt wird und die Option *Complete Resource* ausgewählt ist
+

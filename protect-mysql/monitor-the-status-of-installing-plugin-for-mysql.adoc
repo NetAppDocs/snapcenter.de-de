@@ -1,0 +1,40 @@
+---
+permalink: protect-mysql/monitor-the-status-of-installing-plugin-for-mysql.html 
+sidebar: sidebar 
+keywords: monitor, install, snapCenter plug-in for mysql 
+summary: Sie können den Fortschritt der Installation des SnapCenter-Plug-in-Pakets über die Seite Jobs überwachen. Möglicherweise möchten Sie den Installationsfortschritt prüfen, um festzustellen, wann die Installation abgeschlossen ist oder ob ein Problem vorliegt. 
+---
+= Überwachen Sie den Status der Installation von Plug-in für MySQL
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können den Fortschritt der Installation des SnapCenter-Plug-in-Pakets über die Seite Jobs überwachen. Möglicherweise möchten Sie den Installationsfortschritt prüfen, um festzustellen, wann die Installation abgeschlossen ist oder ob ein Problem vorliegt.
+
+.Über diese Aufgabe
+Die folgenden Symbole werden auf der Seite Aufträge angezeigt und geben den Status der Operation an:
+
+* image:../media/progress_icon.gif["Symbol „in Bearbeitung“"] In Bearbeitung
+* image:../media/success_icon.gif["Symbol „Abgeschlossen“"] Erfolgreich abgeschlossen
+* image:../media/failed_icon.gif["Fehlersymbol"] Fehlgeschlagen
+* image:../media/warning_icon.gif["Abgeschlossen mit Warnsymbol"] Abgeschlossen mit Warnungen oder konnte aufgrund von Warnungen nicht gestartet werden
+* image:../media/verification_job_in_queue.gif["Überprüfungsjob wird in die Warteschlange gestellt"] Warteschlange
+
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Monitor*.
+. Klicken Sie auf der Seite *Monitor* auf *Jobs*.
+. Um die Liste auf der Seite *Jobs* so zu filtern, dass nur Plug-in-Installationsvorgänge aufgelistet werden, gehen Sie wie folgt vor:
++
+.. Klicken Sie Auf *Filter*.
+.. Optional: Geben Sie das Start- und Enddatum an.
+.. Wählen Sie im Dropdown-Menü Typ die Option *Plug-in Installation*.
+.. Wählen Sie im Dropdown-Menü Status den Installationsstatus aus.
+.. Klicken Sie Auf *Anwenden*.
+
+
+. Wählen Sie den Installationsauftrag aus und klicken Sie auf *Details*, um die Jobdetails anzuzeigen.
+. Klicken Sie auf der Seite *Job Details* auf *Protokolle anzeigen*.
+

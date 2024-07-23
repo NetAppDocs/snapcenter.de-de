@@ -63,9 +63,9 @@ NOTE: Sie sollten genügend Festplattenspeicher zuweisen und den Speicherverbrau
  a| 
 Erforderliche Softwarepakete
  a| 
-* Microsoft .NET Framework 4.7.2 oder höher
-* Windows Management Framework (WMF) 4.0 oder höher
-* PowerShell 4.0 oder höher
+* . NET-Core 8.0.5
+* PowerShell Core 7.4.2
+* Java 11 Oracle Java und OpenJDK
 
 
 Aktuelle Informationen zu unterstützten Versionen finden Sie im https://imt.netapp.com/matrix/imt.jsp?components=117007;&solution=1258&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"^].
@@ -144,13 +144,13 @@ Nachdem Sie die Einrichtung von Anmeldeinformationen abgeschlossen haben, möcht
 
 
 
-== Konfigurieren Sie gMSA unter Windows Server 2012 oder höher
+== Konfigurieren Sie gMSA unter Windows Server 2016 oder höher
 
-Mit Windows Server 2012 oder höher können Sie ein Group Managed Service Account (gMSA) erstellen, das über ein verwaltetes Domain-Konto eine automatisierte Verwaltung von Service-Konten ermöglicht.
+Mit Windows Server 2016 oder höher können Sie ein Group Managed Service Account (gMSA) erstellen, das über ein verwaltetes Domain-Konto eine automatisierte Verwaltung von Service-Konten ermöglicht.
 
 .Bevor Sie beginnen
-* Sie sollten einen Windows Server 2012 oder höher Domänencontroller haben.
-* Sie sollten einen Windows Server 2012 oder höher-Host haben, der Mitglied der Domain ist.
+* Sie sollten einen Windows Server 2016 oder höher Domänencontroller haben.
+* Sie sollten einen Windows Server 2016 oder höher-Host haben, der Mitglied der Domain ist.
 
 
 .Schritte

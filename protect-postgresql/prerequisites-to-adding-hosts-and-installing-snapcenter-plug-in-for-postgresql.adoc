@@ -1,0 +1,177 @@
+---
+permalink: protect-postgresql/prerequisites-to-adding-hosts-and-installing-snapcenter-plug-in-for-postgresql.html 
+sidebar: sidebar 
+keywords: credentials 
+summary: Bevor Sie einen Host hinzufügen und die Plug-in-Pakete installieren, müssen Sie alle Anforderungen erfüllen. Das SnapCenter Plug-in für PostgreSQL ist sowohl in Windows- als auch in Linux-Umgebungen verfügbar. 
+---
+= Voraussetzungen, um Hosts hinzuzufügen und das SnapCenter-Plug-in für PostgreSQL zu installieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bevor Sie einen Host hinzufügen und die Plug-in-Pakete installieren, müssen Sie alle Anforderungen erfüllen. Das SnapCenter Plug-in für PostgreSQL ist sowohl in Windows- als auch in Linux-Umgebungen verfügbar.
+
+* Sie müssen Java 11 auf Ihrem Host installiert haben.
++
+
+NOTE: IBM Java wird nicht unterstützt.
+
+* Für Windows sollte der Plug-in Creator Service mit dem Windows-Benutzer „`LocalSystem`“ ausgeführt werden. Dies ist das Standardverhalten, wenn Plug-in for PostgreSQL als Domänenadministrator installiert wird.
+* Wenn Sie ein Plug-in auf einem Windows-Host installieren, müssen Sie UAC auf dem Host deaktivieren, wenn Sie keine Anmeldedaten angeben, die nicht integriert sind, oder wenn der Benutzer zu einem lokalen Workgroup-Benutzer gehört. Das SnapCenter-Plug-in für Microsoft Windows wird standardmäßig mit dem PostgreSQL-Plug-in auf Windows-Hosts implementiert.
+* SnapCenter Server sollte Zugriff auf den 8145 oder benutzerdefinierten Port des Plug-in für PostgreSQL-Hosts haben.
+
+
+
+
+== Windows Hosts
+
+* Sie müssen über einen Domänenbenutzer mit lokalen Administratorrechten mit lokalen Anmeldeberechtigungen auf dem Remote-Host verfügen.
+* Während der Installation von Plug-in für PostgreSQL auf einem Windows-Host wird das SnapCenter-Plug-in für Microsoft Windows automatisch installiert.
+* Sie müssen die passwortbasierte SSH-Verbindung für den Root- oder nicht-Root-Benutzer aktiviert haben.
+* Sie müssen Java 11 auf Ihrem Windows-Host installiert haben.
++
+http://www.java.com/en/download/manual.jsp["Java-Downloads für alle Betriebssysteme"]
+
++
+https://imt.netapp.com/matrix/imt.jsp?components=117015;&solution=1259&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"]
+
+
+
+
+
+== Linux-Hosts
+
+* Sie müssen die passwortbasierte SSH-Verbindung für den Root- oder nicht-Root-Benutzer aktiviert haben.
+* Sie müssen Java 11 auf Ihrem Linux-Host installiert haben.
++
+http://www.java.com/en/download/manual.jsp["Java-Downloads für alle Betriebssysteme"]
+
++
+https://imt.netapp.com/matrix/imt.jsp?components=117015;&solution=1259&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"]
+
+* Bei PostgreSQL-Clustern, die auf einem Linux-Host ausgeführt werden, wird das SnapCenter-Plug-in für UNIX automatisch installiert.
+* Sie sollten *bash* als Standard-Shell für die Plug-in-Installation haben.
+
+
+
+
+== Zusätzliche Befehle
+
+Um einen zusätzlichen Befehl auf dem SnapCenter-Plug-in für PostgreSQL auszuführen, müssen Sie ihn in die Datei aufnehmen `allowed_commands.config` .
+
+`allowed_commands.config` Datei befindet sich im Unterverzeichnis "etc" des SnapCenter Plug-in for PostgreSQL Verzeichnisses.
+
+.Windows Hosts
+Standard: `C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands.config`
+
+Benutzerdefinierter Pfad: `<Custom_Directory>\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands.config`
+
+.Linux-Hosts
+Standard: `/opt/NetApp/snapcenter/scc/etc/allowed_commands.config`
+
+Benutzerdefinierter Pfad: `<Custom_Directory>allowed_commands.config`
+
+Öffnen Sie, um zusätzliche Befehle auf dem Plug-in-Host zuzulassen `allowed_commands.config` Datei in einem Editor. Geben Sie jeden Befehl in einer eigenen Zeile ein. Die Groß-/Kleinschreibung wird nicht beachtet.
+Beispiel:
+
+Befehl: Montieren
+
+Befehl: Umount
+
+Stellen Sie sicher, dass Sie den vollständigen Pfadnamen angeben. Schließen Sie den Pfadnamen in Anführungszeichen (") ein, wenn er Leerzeichen enthält.
+Beispiel:
+
+Befehl: „C:\Program Files\NetApp\SnapCreator commands\sdcli.exe“
+
+Befehl: myscript.bat
+
+Wenn der `allowed_commands.config` Datei ist nicht vorhanden, die Befehle oder die Skriptausführung werden blockiert und der Workflow schlägt mit folgendem Fehler fehl:
+
+„[/mnt/Mount -a] Ausführung nicht zulässig. Autorisieren Sie, indem Sie den Befehl in der Datei %s auf dem Plugin-Host hinzufügen.“
+
+Wenn der Befehl oder das Skript nicht im vorhanden ist `allowed_commands.config`, Die Ausführung des Befehls oder Skripts wird blockiert und der Workflow wird mit folgendem Fehler fehlschlagen:
+
+„[/mnt/Mount -a] Ausführung nicht zulässig. Autorisieren Sie, indem Sie den Befehl in der Datei %s auf dem Plugin-Host hinzufügen.“
+
+
+NOTE: Sie sollten keinen Platzhaltereintrag (*) verwenden, um alle Befehle zuzulassen.
+
+
+
+== Konfigurieren von Sudo-Berechtigungen für Benutzer ohne Root-Zugriff auf Linux-Hosts
+
+Mit SnapCenter 2.0 und höheren Versionen kann ein nicht-Root-Benutzer das SnapCenter Plug-ins-Paket für Linux installieren und das Plug-in-Verfahren starten. Die Plug-in-Prozesse werden als effektiver nicht-Root-Benutzer ausgeführt. Sie sollten sudo-Berechtigungen für den nicht-Root-Benutzer konfigurieren, um Zugriff auf mehrere Pfade zu ermöglichen.
+
+*Was Sie brauchen*
+
+* Sudo Version 1.8.7 oder höher.
+* Stellen Sie für den Benutzer, der nicht root ist, sicher, dass der Name des Benutzers, der nicht root ist, und die Gruppe des Benutzers identisch sein sollten.
+* Bearbeiten Sie die Datei _/etc/ssh/sshd_config_, um die Algorithmen für den Authentifizierungscode Macs hmac-sha2-256 und MACs hmac-sha2-512 zu konfigurieren.
++
+Starten Sie den sshd-Dienst nach dem Aktualisieren der Konfigurationsdatei neu.
+
++
+Beispiel:
+
++
+[listing]
+----
+#Port 22
+#AddressFamily any
+#ListenAddress 0.0.0.0
+#ListenAddress ::
+#Legacy changes
+#KexAlgorithms diffie-hellman-group1-sha1
+#Ciphers aes128-cbc
+#The default requires explicit activation of protocol
+Protocol 2
+HostKey/etc/ssh/ssh_host_rsa_key
+MACs hmac-sha2-256
+----
+
+
+*Über diese Aufgabe*
+
+Sie sollten sudo-Berechtigungen für den nicht-Root-Benutzer konfigurieren, um Zugriff auf die folgenden Pfade zu ermöglichen:
+
+* /Home/_LINUX_USER_/.sc_netapp/snapcenter_linux_host_plugin.bin
+* /Custom_Location/NetApp/snapcenter/spl/Installation/Plugins/Deinstallation
+* /Custom_location/NetApp/snapcenter/spl/bin/spl
+
+
+*Schritte*
+
+. Melden Sie sich beim Linux-Host an, auf dem Sie das SnapCenter-Plug-ins-Paket für Linux installieren möchten.
+. Fügen Sie die folgenden Zeilen zur Datei /etc/sudoers mit dem Dienstprogramm visudo Linux hinzu.
++
+[listing, subs="+quotes"]
+----
+Cmnd_Alias HPPLCMD = sha224:checksum_value== /home/_LINUX_USER_/.sc_netapp/snapcenter_linux_host_plugin.bin, /opt/NetApp/snapcenter/spl/installation/plugins/uninstall, /opt/NetApp/snapcenter/spl/bin/spl, /opt/NetApp/snapcenter/scc/bin/scc
+Cmnd_Alias PRECHECKCMD = sha224:checksum_value== /home/_LINUX_USER_/.sc_netapp/Linux_Prechecks.sh
+Cmnd_Alias CONFIGCHECKCMD = sha224:checksum_value== /opt/NetApp/snapcenter/spl/plugins/scu/scucore/configurationcheck/Config_Check.sh
+Cmnd_Alias SCCMD = sha224:checksum_value== /opt/NetApp/snapcenter/spl/bin/sc_command_executor
+Cmnd_Alias SCCCMDEXECUTOR =checksum_value== /opt/NetApp/snapcenter/scc/bin/sccCommandExecutor
+_LINUX_USER_ ALL=(ALL) NOPASSWD:SETENV: HPPLCMD, PRECHECKCMD, CONFIGCHECKCMD, SCCCMDEXECUTOR, SCCMD
+Defaults: _LINUX_USER_ !visiblepw
+Defaults: _LINUX_USER_ !requiretty
+----
++
+
+NOTE: Wenn Sie über ein RAC Setup verfügen, und die anderen zulässigen Befehle, sollten Sie die Datei /etc/sudoers: '/<crs_home>/bin/olsnodes' hinzufügen.
+
+
+
+Sie können den Wert von _crs_Home_ aus der Datei _/etc/oracle/olr.loc_ erhalten.
+
+_LINUX_USER_ ist der Name des nicht-root-Benutzers, den Sie erstellt haben.
+
+Sie können die Datei _Checksumme_value_ aus der Datei *sc_unix_Plugins_Checksumme.txt* abrufen, die sich unter folgender Adresse befindet:
+
+* _C:\ProgramData\NetApp\SnapCenter\Paket-Repository\sc_unix_plugins_checksum.txt _ wenn SnapCenter-Server auf dem Windows-Host installiert ist.
+* _/opt/NetApp/snapcenter/SnapManagerWeb/Repository/sc_unix_plugins_checksum.txt _ wenn SnapCenter-Server auf Linux-Host installiert ist.
+
+
+
+IMPORTANT: Das Beispiel sollte nur als Referenz zur Erstellung eigener Daten verwendet werden.

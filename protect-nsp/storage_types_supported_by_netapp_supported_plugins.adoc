@@ -1,0 +1,48 @@
+---
+permalink: protect-nsp/storage_types_supported_by_netapp_supported_plugins.html 
+sidebar: sidebar 
+keywords: NetApp supported plug-ins 
+summary: SnapCenter unterstützt zahlreiche Storage-Typen sowohl auf physischen als auch auf Virtual Machines. Sie müssen die Unterstützung für Ihren Speichertyp überprüfen, bevor Sie von NetApp unterstützte Plug-ins installieren. 
+---
+= Von von NetApp unterstützte Plug-ins unterstützte Storage-Typen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter unterstützt zahlreiche Storage-Typen sowohl auf physischen als auch auf Virtual Machines. Sie müssen die Unterstützung für Ihren Speichertyp überprüfen, bevor Sie von NetApp unterstützte Plug-ins installieren.
+
+|===
+| Maschine | Storage-Typ 
+
+
+ a| 
+Physische und NFS-direkte Mounts auf den VM Hosts (VMDKs und RDM LUNs werden nicht unterstützt.)
+ a| 
+FC-verbundene LUNs
+
+
+
+ a| 
+Physische und NFS-direkte Mounts auf den VM Hosts (VMDKs und RDM LUNs werden nicht unterstützt.)
+ a| 
+ISCSI-verbundene LUNs
+
+
+
+ a| 
+Physische und NFS-direkte Mounts auf den VM Hosts (VMDKs und RDM LUNs werden nicht unterstützt.)
+ a| 
+Volumes mit NFS-Anbindung
+
+
+
+ a| 
+VMware ESXi
+ a| 
+VVol Datastores auf NFS und SAN
+
+VVol Datastore kann nur mit ONTAP Tools für VMware vSphere bereitgestellt werden.
+
+|===

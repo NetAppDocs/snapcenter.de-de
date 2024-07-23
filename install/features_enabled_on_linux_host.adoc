@@ -1,0 +1,22 @@
+---
+permalink: install/features_enabled_on_linux_host.html 
+sidebar: sidebar 
+keywords: install, snapcenter, linux host, features 
+summary: Das SnapCenter-Server-Installationsprogramm aktiviert die Linux-Funktionen und -Rollen auf Ihrem Linux-Host während der Installation. Diese sind möglicherweise für die Fehlerbehebung und die Wartung des Host-Systems interessant. 
+---
+= Funktionen, die während der Installation auf dem Linux-Host aktiviert wurden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der SnapCenter-Server installiert die unten aufgeführten Softwarepakete. Diese können für die Fehlerbehebung und die Wartung des Host-Systems interessant sein.
+
+* Rabbitmq
+* Nginx
+* Erlang
+* .NET Framework 8.0.5
+* PAM-Entwicklung
+* PowerShell
+

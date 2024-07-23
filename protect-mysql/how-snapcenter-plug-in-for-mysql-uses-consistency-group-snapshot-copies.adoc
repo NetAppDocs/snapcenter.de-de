@@ -1,0 +1,16 @@
+---
+permalink: protect-mysql/how-snapcenter-plug-in-for-mysql-uses-consistency-group-snapshot-copies.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for MySQL 
+summary: Sie können das Plug-in verwenden, um Snapshots von Konsistenzgruppen für Ressourcengruppen zu erstellen. Eine Konsistenzgruppe ist ein Container, der mehrere Volumes beherbergen kann, sodass Sie sie als eine Einheit verwalten können. Eine Konsistenzgruppe ist simultane Snapshots mehrerer Volumes und stellt konsistente Kopien einer Gruppe von Volumes bereit. 
+---
+= Wie das SnapCenter Plug-in für MySQL Snapshots von Konsistenzgruppen verwendet
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können das Plug-in verwenden, um Snapshots von Konsistenzgruppen für Ressourcengruppen zu erstellen. Eine Konsistenzgruppe ist ein Container, der mehrere Volumes beherbergen kann, sodass Sie sie als eine Einheit verwalten können. Eine Konsistenzgruppe ist simultane Snapshots mehrerer Volumes und stellt konsistente Kopien einer Gruppe von Volumes bereit.
+
+Sie können auch die Wartezeit für den Speicher-Controller angeben, um Snapshots konsistent zu gruppieren. Die verfügbaren Optionen für Wartezeiten sind *dringend*, *Medium* und *entspannt*. Sie können auch die WAFL-Synchronisierung (Write Anywhere File Layout) während eines konsistenten Gruppen-Snapshots aktivieren oder deaktivieren. WAFL Sync verbessert die Performance eines Consistency Group Snapshots.

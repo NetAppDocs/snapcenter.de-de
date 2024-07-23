@@ -88,6 +88,16 @@ SnapCenter kann kein Backup von Daten und Freigaben über das SMB-Protokoll verw
 
 
  a| 
+VMware VM
+ a| 
+VVol Datastores auf NFS und SAN
+ a| 
+ONTAP Tools für VMware vSphere
+ a| 
+
+
+
+ a| 
 Hyper-V VM
  a| 
 Virtuelle FC-LUNs (VFC), die über einen virtuellen Fibre Channel Switch verbunden sind

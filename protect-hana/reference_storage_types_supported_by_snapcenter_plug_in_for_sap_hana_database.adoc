@@ -18,13 +18,6 @@ SnapCenter unterstützt eine Vielzahl von Storage-Typen sowohl auf physischen Co
 
 
  a| 
-Physische und virtuelle Server
- a| 
-FC-verbundene LUNs
-
-
-
- a| 
 Physischer Server
  a| 
 ISCSI-verbundene LUNs
@@ -34,6 +27,17 @@ ISCSI-verbundene LUNs
  a| 
 Physische und virtuelle Server
  a| 
-Volumes mit NFS-Anbindung
+* FC-verbundene LUNs
+* Volumes mit NFS-Anbindung
+
+
+
+
+ a| 
+VMware ESXi
+ a| 
+VVol Datastores auf NFS und SAN
+
+VVol Datastore kann nur mit ONTAP Tools für VMware vSphere bereitgestellt werden.
 
 |===

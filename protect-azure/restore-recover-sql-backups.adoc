@@ -13,6 +13,13 @@ summary: Mit SnapCenter können Daten von einem oder mehreren Backups wiederherg
 [role="lead"]
 Sie können SnapCenter verwenden, um gesicherte SQL Server-Datenbanken wiederherzustellen. Die Datenbankwiederherstellung ist ein mehrstufiger Prozess, der alle Daten und Protokollseiten aus einem angegebenen SQL Server-Backup in eine angegebene Datenbank kopiert.
 
+.Über diese Aufgabe
+Sie sollten sicherstellen, dass die Zielinstanz für die Wiederherstellung mit einem Active Directory-Benutzer konfiguriert ist, der zur SMB ADActive Directory-Domäne gehört und über die Berechtigungen verfügt, die Dateiberechtigungen entsprechend festzulegen. Sie sollten die Anmeldeinformationen in SnapCenter auf Instanzebene konfigurieren.
+
+Die SQL-Authentifizierung für die Zielinstanz wird für SMB-Konfigurationen nicht unterstützt. Die Zielinstanz sollte in SnapCenter konfiguriert werden, wobei der Active Directory-Benutzer über die erforderlichen Berechtigungen verfügt.
+
+Wenn das Dienstkonto für die SnapCenter-Plug-in-Dienste kein Active Directory-Benutzer ist, ist bei der Wiederherstellung auf einem alternativen Host der Benutzer erforderlich, der die volle Kontrolle über die Quell-Volumes hat, damit er imitiert werden kann und den erforderlichen Vorgang ausführen kann.
+
 .Schritte
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
 . Wählen Sie auf der Seite Ressourcen entweder *Datenbank* oder *Ressourcengruppe* aus der Liste Ansicht aus.

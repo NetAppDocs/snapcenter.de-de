@@ -64,6 +64,7 @@ Die erforderlichen Mindestberechtigungen für ONTAP variieren je nach SnapCenter
 ** Erstellen von Volume-Snapshots
 ** Volume Snapshot löschen
 ** Ändern des Volume-Snapshots
+** Volume Snapshot modify-snaplock-expiry-time
 ** Umbenennung von Volume-Snapshots
 ** Wiederherstellung von Volume Snapshots
 ** Restore-Datei für Volume Snapshots

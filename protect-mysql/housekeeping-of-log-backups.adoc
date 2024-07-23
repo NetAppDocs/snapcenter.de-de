@@ -1,0 +1,14 @@
+---
+permalink: protect-mysql/housekeeping-of-log-backups.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for MySQL 
+summary: SnapCenter managt die Durchführung von Protokoll- und Daten-Backups auf Storage-System- und File-System-Ebene sowie im MySQL Backup-Katalog. 
+---
+= So managt SnapCenter die allgemeine Ordnung und Sauberkeit von Protokoll-Backups
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter managt die Durchführung von Daten-Backups auf der Storage-System- und File-System-Ebene.

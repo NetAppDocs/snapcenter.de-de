@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Microsoft SQL Server 
 summary: SnapCenter unterstützt eine Vielzahl von Storage-Typen sowohl auf physischen Computern als auch auf Virtual Machines. Sie müssen überprüfen, ob Ihr Speichertyp unterstützt wird, bevor Sie das Paket für Ihren Host installieren. 
 ---
-= Storage-Typen, die von SnapCenter Plug-ins für Microsoft Windows und Microsoft SQL Server unterstützt werden
+= Vom SnapCenter-Plug-in für Microsoft SQL Server unterstützte Speichertypen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -93,6 +93,16 @@ SnapCenter GUI oder PowerShell Commandlets
 Support nur für die Bereitstellung.
 
 SnapCenter kann kein Backup von Daten und Freigaben über das SMB-Protokoll verwenden.
+
+
+
+ a| 
+VMware VM
+ a| 
+VVol Datastores auf NFS und SAN
+ a| 
+ONTAP Tools für VMware vSphere
+ a| 
 
 
 

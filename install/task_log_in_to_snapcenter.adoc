@@ -16,6 +16,7 @@ SnapCenter unterstützt die rollenbasierte Zugriffssteuerung (Role Based Access 
 .Bevor Sie beginnen
 * Sie sollten den Windows Process Activation Service (WAR) in Windows Server Manager aktivieren.
 * Wenn Sie Internet Explorer als Browser verwenden möchten, um sich beim SnapCenter-Server anzumelden, sollten Sie sicherstellen, dass der geschützte Modus in Internet Explorer deaktiviert ist.
+* Wenn SnapCenter-Server auf Linux-Host installiert ist, sollten Sie sich mit dem Benutzerkonto anmelden, das zur Installation des SnapCenter-Servers verwendet wurde.
 
 
 *Über diese Aufgabe*
@@ -34,7 +35,7 @@ Die Standard-GUI-URL ist eine sichere Verbindung zum Standardport 8146 auf dem S
 
 Für die Implementierung von Hochverfügbarkeit (High Availability, HA) müssen Sie über die virtuelle Cluster-IP _\https://Virtual_Cluster_IP_or_FQDN:8146_ auf SnapCenter zugreifen können. Wenn Sie die SnapCenter-Benutzeroberfläche nicht sehen, wenn Sie im Internet Explorer (IE) zu _\https://Virtual_Cluster_IP_or_FQDN:8146_ navigieren, müssen Sie die IP-Adresse des virtuellen Clusters oder den FQDN als vertrauenswürdige Site in IE auf jedem Plug-in-Host hinzufügen, oder Sie müssen die erweiterte Sicherheit des IE auf jedem Plug-in-Host deaktivieren. Weitere Informationen finden Sie unter https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_access_cluster_IP_address_from_outside_network["Der Zugriff auf die Cluster-IP-Adresse kann nicht vom externen Netzwerk aus erfolgen"^].
 
-Über die SnapCenter GUI hinaus können Sie mit PowerShell Cmdlets Skripte erstellen, um Konfigurations-, Backup- und Restore-Vorgänge durchzuführen. Einige Cmdlets haben sich möglicherweise bei jeder SnapCenter Version geändert. Der https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["SnapCenter Software Cmdlet Referenzhandbuch"^] Enthält die Details.
+Über die SnapCenter GUI hinaus können Sie mit PowerShell Cmdlets Skripte erstellen, um Konfigurations-, Backup- und Restore-Vorgänge durchzuführen. Einige Cmdlets haben sich möglicherweise bei jeder SnapCenter Version geändert. Das https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter Software Cmdlet Referenzhandbuch"^] hat die Details.
 
 
 NOTE: Wenn Sie sich zum ersten Mal bei SnapCenter anmelden, müssen Sie sich mit den Anmeldeinformationen anmelden, die Sie während des Installationsvorgangs angegeben haben.
@@ -83,7 +84,11 @@ Wenn die Protokollierung fehlschlägt und der Fehler aufgetreten ist, dass die S
 
 Nachdem Sie sich zum ersten Mal bei SnapCenter Server als RBAC-Benutzer angemeldet haben, aktualisieren Sie die Ressourcenliste.
 
-Wenn Sie nicht vertrauenswürdige Active Directory-Domänen haben, die von SnapCenter unterstützt werden sollen, müssen Sie diese Domänen bei SnapCenter registrieren, bevor Sie die Rollen für die Benutzer in nicht vertrauenswürdigen Domänen konfigurieren. link:../install/task_register_untrusted_active_directory_domains.html["Weitere Informationen ."^]
+Wenn Sie nicht vertrauenswürdige Active Directory-Domänen haben, die von SnapCenter unterstützt werden sollen, müssen Sie diese Domänen bei SnapCenter registrieren, bevor Sie die Rollen für die Benutzer in nicht vertrauenswürdigen Domänen konfigurieren. link:../install/task_register_untrusted_active_directory_domains.html["Weitere Informationen ."^].
+
+Wenn Sie den Plug-in-Host in SnapCenter unter Linux Host hinzufügen möchten, sollten Sie die Prüfsummendatei vom Speicherort abrufen: _/opt/NetApp/snapManagerWeb/Repository_.
+
+Ab Version 6.0 wird eine Verknüpfung für SnapCenter PowerShell auf dem Desktop erstellt. Sie können direkt auf die SnapCenter PowerShell-Cmdlets zugreifen, indem Sie die Verknüpfung verwenden.
 
 
 
@@ -92,11 +97,7 @@ Wenn Sie nicht vertrauenswürdige Active Directory-Domänen haben, die von SnapC
 SnapCenter Server unterstützt MFA für Domain-Konto, das Teil des Active Directory ist.
 
 .Bevor Sie beginnen
-* Sie sollten MFA aktiviert haben.
-+
-Informationen zum Aktivieren von MFA finden Sie unter link:../install/enable_multifactor_authentication.html["Multi-Faktor-Authentifizierung aktivieren"]
-
-
+Sie sollten MFA aktiviert haben. Informationen zum Aktivieren von MFA finden Sie unter link:../install/enable_multifactor_authentication.html["Multi-Faktor-Authentifizierung aktivieren"]
 
 *Über diese Aufgabe*
 

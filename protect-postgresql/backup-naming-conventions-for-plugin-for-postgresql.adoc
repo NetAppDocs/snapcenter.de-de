@@ -1,0 +1,33 @@
+---
+permalink: protect-postgresql/backup-naming-conventions-for-plugin-for-postgresql.html 
+sidebar: sidebar 
+keywords: Backup naming conventions 
+summary: Sie können entweder die standardmäßige Namenskonvention für Snapshots verwenden oder eine benutzerdefinierte Namenskonvention verwenden. Die standardmäßige Backup-Namenskonvention fügt einem Snapshot Namen einen Zeitstempel hinzu, der Ihnen dabei hilft, zu ermitteln, wann die Kopien erstellt wurden. 
+---
+= Backup-Namenskonventionen für Plug-in für PostgreSQL-Cluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können entweder die standardmäßige Snapshot-Namenskonvention verwenden oder eine benutzerdefinierte Namenskonvention verwenden. Die standardmäßige Backup-Namenskonvention fügt Snapshot Namen einen Zeitstempel hinzu, der Ihnen dabei hilft, zu ermitteln, wann die Kopien erstellt wurden.
+
+Für den Snapshot wird die folgende Standard-Namenskonvention verwendet:
+
+`resourcegroupname_hostname_timestamp`
+
+Sie sollten Ihre Backup-Ressourcengruppen logisch benennen, wie im folgenden Beispiel:
+
+[listing]
+----
+dts1_mach1x88_03-12-2015_23.17.26
+----
+In diesem Beispiel haben die Syntaxelemente folgende Bedeutungen:
+
+* _Dts1_ ist der Name der Ressourcengruppe.
+* _Mach1x88_ ist der Hostname.
+* _03-12-2015_23.17.26_ ist das Datum und der Zeitstempel.
+
+
+Alternativ können Sie das Snapshot-Namensformat beim Schutz von Ressourcen oder Ressourcengruppen angeben, indem Sie *Benutzerdefiniertes Namensformat für Snapshot-Kopie verwenden* auswählen. Beispiel: Custtext_resourcegruppe_Policy_hostname oder resourcegruppe_hostname. Standardmäßig wird dem Snapshot-Namen das Suffix mit dem Zeitstempel hinzugefügt.

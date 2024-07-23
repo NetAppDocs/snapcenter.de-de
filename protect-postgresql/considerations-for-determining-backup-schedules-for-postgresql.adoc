@@ -1,0 +1,26 @@
+---
+permalink: protect-postgresql/considerations-for-determining-backup-schedules-for-postgresql.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for PostgreSQL 
+summary: 'Der wichtigste Faktor beim Bestimmen eines Backup-Zeitplans ist die Änderungsrate für die Ressource. Sie können eine stark genutzte Ressource unter Umständen jede Stunde sichern, während Sie selten genutzte Ressourcen einmal am Tag sichern können. Weitere Faktoren sind die Bedeutung der Ressource für Ihr Unternehmen, Ihre Service Level Agreement \(SLA\) und Ihr Recovery Point Objective \ (RPO\).' 
+---
+= Überlegungen zur Festlegung von Backup-Zeitplänen für PostgreSQL
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der wichtigste Faktor beim Bestimmen eines Backup-Zeitplans ist die Änderungsrate für die Ressource. Sie können eine stark genutzte Ressource unter Umständen jede Stunde sichern, während Sie selten genutzte Ressourcen einmal am Tag sichern können. Weitere Faktoren sind die Bedeutung der Ressource für Ihr Unternehmen, die Service Level Agreement (SLA) und den Recovery Point Objective (RPO).
+
+Backup-Zeitpläne haben zwei Teile:
+
+* Backup-Häufigkeit (Häufigkeit der Durchführung von Backups)
++
+Die Backup-Häufigkeit, die auch als Zeitplantyp für einige Plug-ins bezeichnet wird, ist Teil einer Richtlinienkonfiguration. Sie können z. B. die Backup-Häufigkeit als stündlich, täglich, wöchentlich oder monatlich konfigurieren.
+
+* Backup-Zeitpläne (genau dann, wenn Backups durchgeführt werden)
++
+Backup-Zeitpläne sind Teil einer Ressourcen- oder Ressourcengruppenkonfiguration. Wenn Sie beispielsweise eine Ressourcengruppe haben, die eine Richtlinie für wöchentliche Backups konfiguriert hat, können Sie den Zeitplan so konfigurieren, dass er jeden Donnerstag um 10:00 Uhr gesichert wird
+
+

@@ -24,6 +24,10 @@ Sie sollten das CA-Zertifikat mit der SnapCenter-Site auf einem Windows-Host kon
 . Klicken Sie Auf *Bearbeiten*.
 . Wählen Sie aus der Dropdown-Liste SSL-Zertifikat das kürzlich importierte SSL-Zertifikat aus.
 . Klicken Sie auf *OK*.
++
+
+NOTE: Die SnapCenter-Scheduler-Site (Standardport: 8154, HTTPS) ist mit einem selbstsignierten Zertifikat konfiguriert. Dieser Port kommuniziert innerhalb des SnapCenter-Serverhosts, und es ist nicht zwingend erforderlich, mit einem CA-Zertifikat zu konfigurieren. Wenn Sie in Ihrer Umgebung jedoch die Verwendung eines CA-Zertifikats vorschreibt, wiederholen Sie die Schritte 5 bis 9 mithilfe des SnapCenter-Planerstandorts.
+
 
 
 

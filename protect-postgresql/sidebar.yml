@@ -1,0 +1,167 @@
+---
+section: protect-postgresql
+title: Schützen Sie PostgreSQL
+entries:
+- title: SnapCenter Plug-in für PostgreSQL
+  entries:
+  - title: Übersicht über das SnapCenter Plug-in für PostgreSQL
+    url: "/protect-postgresql/snapcenter-plug-in-for-postgresql-overview.html"
+  - title: Was Sie mit dem SnapCenter Plug-in für PostgreSQL tun können
+    url: "/protect-postgresql/what-you-can-do-using-the-snapcenter-plug-in-for-postgresql.html"
+  - title: Funktionen des SnapCenter Plug-in für PostgreSQL
+    url: "/protect-postgresql/snapcenter-plug-in-for-postgresql-features.html"
+  - title: Von SnapCenter Plug-in für PostgreSQL unterstützte Speichertypen
+    url: "/protect-postgresql/storage-types-supported-by-snapcenter-plug-in-for-postgresql.html"
+  - title: Mindestberechtigungen für ONTAP erforderlich
+    url: "/protect-postgresql/minimum-privileges-required-for-postgresql.html"
+  - title: Storage-Systeme für SnapMirror und SnapVault Replizierung vorbereiten
+    url: "/protect-postgresql/prepare-storage-systems-for-snapmirror-and-snapvault-replication-for-plugin-for-postgresql.html"
+  - title: Backup-Strategie für PostgreSQL
+    entries:
+    - title: Backup-Strategie für PostgreSQL definieren
+      url: "/protect-postgresql/define-a-backup-strategy-for-postgresql.html"
+    - title: Automatische Ermittlung von Ressourcen auf Linux-Host
+      url: "/protect-postgresql/auto-discovery-of-resources-on-linux-host.html"
+    - title: Art der unterstützten Backups
+      url: "/protect-postgresql/type-of-backups-supported.html"
+    - title: Wie SnapCenter Plug-in für PostgreSQL Snapshot Kopien von Konsistenzgruppen
+        verwendet
+      url: "/protect-postgresql/how-snapcenter-plug-in-for-postgresql-uses-consistency-group-snapshot-copies.html"
+    - title: So managt SnapCenter die allgemeine Ordnung und Sauberkeit von Protokoll-Backups
+      url: "/protect-postgresql/housekeeping-of-log-backups.html"
+    - title: Überlegungen zur Festlegung von Backup-Zeitplänen für PostgreSQL
+      url: "/protect-postgresql/considerations-for-determining-backup-schedules-for-postgresql.html"
+    - title: Anzahl der für PostgreSQL erforderlichen Backup-Jobs
+      url: "/protect-postgresql/number-of-backup-jobs-needed-for-postgresql.html"
+    - title: Konventionen bei Backup-Namen
+      url: "/protect-postgresql/backup-naming-conventions-for-plugin-for-postgresql.html"
+  - title: Restore- und Recovery-Strategie für PostgreSQL
+    entries:
+    - title: Definieren Sie eine Wiederherstellungs- und Wiederherstellungsstrategie
+        für PostgreSQL-Ressourcen
+      url: "/protect-postgresql/define-a-restore-and-recovery-strategy-for-postgresql-resources.html"
+    - title: Arten von Wiederherstellungsstrategien, die für manuell hinzugefügte
+        PostgreSQL-Ressourcen unterstützt werden
+      url: "/protect-postgresql/types-of-restore-strategies-supported-for-manually-added-postgresql.html"
+    - title: Arten von Wiederherstellungsstrategien, die für automatisch erkannte
+        PostgreSQL unterstützt werden
+      url: "/protect-postgresql/types-of-restore-strategies-supported-for-auto-discovered-postgresql.html"
+    - title: Arten von Wiederherstellungsvorgängen für automatisch erkannte PostgreSQL
+      url: "/protect-postgresql/types-of-restore-performed-for-auto-discovered-postgresql.html"
+    - title: Unterstützte Arten von Wiederherstellungsvorgängen für PostgreSQL
+      url: "/protect-postgresql/types_of_recovery_operations_supported_for_postgresql.html"
+- title: Bereiten Sie die Installation des SnapCenter-Plug-ins für PostgreSQL vor
+  entries:
+  - title: Installationsworkflow des SnapCenter Plug-in für PostgreSQL
+    url: "/protect-postgresql/install-snapcenter-plug-in-for-postgresql.html"
+  - title: Voraussetzungen für das Hinzufügen von Hosts und die Installation des SnapCenter
+      Plug-ins für PostgreSQL
+    url: "/protect-postgresql/prerequisites-to-adding-hosts-and-installing-snapcenter-plug-in-for-postgresql.html"
+  - title: Hostanforderungen für die Installation des SnapCenter Plug-ins Pakets für
+      Windows
+    url: "/protect-postgresql/host-requirements-to-install-snapcenter-plug-in-package-for-windows-postgresql.html"
+  - title: Host-Anforderungen für die Installation des SnapCenter Plug-ins Pakets
+      für Linux
+    url: "/protect-postgresql/host-requirements-to-install-snapcenter-plug-in-package-for-linux.html"
+  - title: Anmeldedaten für das SnapCenter-Plug-in für PostgreSQL einrichten
+    url: "/protect-postgresql/set-up-credentials-for-snapcenter-plug-in-for-postgresql.html"
+  - title: Konfigurieren Sie gMSA unter Windows Server 2016 oder höher
+    url: "/protect-postgresql/configure-gMSA-on-windows-server-2012-or-later.html"
+  - title: Installieren Sie das SnapCenter-Plug-in für PostgreSQL
+    entries:
+    - title: Fügen Sie Hosts hinzu und installieren Sie Plug-in-Pakete auf Remote-Hosts
+      url: "/protect-postgresql/add-hosts-and-install-plug-in-packages-on-remote-hosts-postgresql.html"
+    - title: Installieren Sie SnapCenter Plug-in-Pakete für Linux oder Windows auf
+        mehreren Remote Hosts mithilfe von Cmdlets
+      url: "/protect-postgresql/install-snapcenter-plug-in-packages-for-linux-or-windows-on-multiple-remote-hosts-using-cmdlets-postgresql.html"
+    - title: Installieren Sie das SnapCenter-Plug-in für PostgreSQL auf Linux-Hosts
+        über die Befehlszeilenschnittstelle
+      url: "/protect-postgresql/install-the-snapcenter-plug-in-for-postgresql-on-linux-hosts-using-the-command-line-interface.html"
+    - title: Überwachen Sie den Installationsstatus des SnapCenter Plug-in-Pakets
+      url: "/protect-postgresql/monitor-the-status-of-installing-plugin-for-postgresql.html"
+  - title: Konfigurieren Sie das CA-Zertifikat
+    entries:
+    - title: ZertifikatCSR-Datei erstellen
+      url: "/protect-postgresql/generate-CA-certificate-CSR-file.html"
+    - title: Importieren von CA-Zertifikaten
+      url: "/protect-postgresql/import-CA-certificates.html"
+    - title: Abrufen des Daumenabdrucks für das CA-Zertifikat
+      url: "/protect-postgresql/get-the-CA-certificate-thumbprint.html"
+    - title: Konfigurieren Sie das CA-Zertifikat mit den Windows-Host-Plug-in-Diensten
+      url: "/protect-postgresql/configure-CA-certificate-with-Windows-host-plug-in-services.html"
+    - title: Konfigurieren Sie das CA-Zertifikat für den SnapCenter-PostgreSQL-Plug-ins-Dienst
+        auf dem Linux-Host
+      url: "/protect-postgresql/configure-CA-certificate-for-postgresql-on-Linux-host.html"
+    - title: Konfigurieren Sie das CA-Zertifikat für den SnapCenter-PostgreSQL-Plug-ins-Dienst
+        auf dem Windows-Host
+      url: "/protect-postgresql/configure-CA-certificate-for-postgresql-on-windows-host.html"
+    - title: Aktivieren Sie CA-Zertifikate für Plug-ins
+      url: "/protect-postgresql/enable-ca-certificates-for-plug-ins.html"
+- title: Bereiten Sie sich auf die Datensicherung vor
+  entries:
+  - title: Voraussetzungen für die Verwendung des SnapCenter Plug-ins für PostgreSQL
+    url: "/protect-postgresql/prerequisites-for-using-snapcenter-plug-in-for-postgresql.html"
+  - title: Wie Ressourcen, Ressourcengruppen und Richtlinien zum Schutz von PostgreSQL
+      verwendet werden
+    url: "/protect-postgresql/how-resources-resource-groups-and-policies-are-used-for-protecting-postgresql.html"
+- title: Sichern Sie PostgreSQL-Ressourcen
+  entries:
+  - title: Workflow sichern
+    url: "/protect-postgresql/back-up-postgresql-resources.html"
+  - title: Automatische Erkennung der Cluster
+    url: "/protect-postgresql/discover-the-clusters-automatically.html"
+  - title: Fügen Sie dem Plug-in-Host manuell Ressourcen hinzu
+    url: "/protect-postgresql/add-resources-manually-to-the-plug-in-host.html"
+  - title: Erstellen Sie Backup-Richtlinien für PostgreSQL
+    url: "/protect-postgresql/create-backup-policies-for-postgresql.html"
+  - title: Erstellen von Ressourcengruppen und Anhängen von Richtlinien
+    url: "/protect-postgresql/create-resource-groups-and-attach-policies.html"
+  - title: Sichern Sie PostgreSQL
+    url: "/protect-postgresql/back-up-postgresql.html"
+  - title: Sichern von Ressourcengruppen
+    url: "/protect-postgresql/back-up-resource-groups-postgresql.html"
+  - title: Erstellen Sie mit PowerShell Cmdlets für PostgreSQL eine Verbindung zum
+      Speichersystem und Zugangsdaten
+    url: "/protect-postgresql/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-postgresql.html"
+  - title: Backup von Clustern mit PowerShell Cmdlets
+    url: "/protect-postgresql/back-up-clusters-using-powershell-cmdlets-postgresql.html"
+  - title: Monitoring von Backup-Vorgängen
+    entries:
+    - title: Überwachen Sie Backup-Vorgänge auf der Seite SnapCenter-Jobs
+      url: "/protect-postgresql/monitor-postgresql-backup-operations.html"
+    - title: Überwachen Sie die Vorgänge im Teilfenster „Aktivität“
+      url: "/protect-postgresql/monitor-dataprotection-operations-on-postgresql-in-the-activity-pane.html"
+  - title: Abbrechen der Backup-Vorgänge
+    url: "/protect-postgresql/cancel-backup-operations-for-postgresql.html"
+  - title: Zeigen Sie PostgreSQL-Cluster-Backups und -Klone auf der Seite Topologie
+      an
+    url: "/protect-postgresql/view-postgresql-cluster-backups-and-clones-in-the-topology-page.html"
+- title: PostgreSQL wiederherstellen
+  entries:
+  - title: Wiederherstellung des Workflows
+    url: "/protect-postgresql/restore-postgresql.html"
+  - title: Wiederherstellen eines manuell hinzugefügten Ressourcen-Backups
+    url: "/protect-postgresql/restore-and-recover-a-manually-added-resource-backup.html"
+  - title: Wiederherstellung und Wiederherstellung einer automatisch erkannten Cluster-Sicherung
+    url: "/protect-postgresql/restore-and-recover-an-auto-discovered-cluster-backup.html"
+  - title: Stellen Sie PostgreSQL mithilfe von PowerShell Cmdlets wieder her
+    url: "/protect-postgresql/restore-postgresql-using-powershell-cmdlets.html"
+  - title: Stellen Sie Ressourcen mithilfe von PowerShell Cmdlets wieder her
+    url: "/protect-postgresql/restore-and-recover-resources-using-powershell-cmdlets-postgresql.html"
+  - title: Überwachen von Restore-Vorgängen
+    url: "/protect-postgresql/monitor-postgresql-restore-operations.html"
+- title: Klonen von PostgreSQL-Ressourcen-Backups
+  entries:
+  - title: Klon-Workflow
+    url: "/protect-postgresql/clone-postgresql-resource-backups.html"
+  - title: Klonen eines PostgreSQL-Cluster-Backups
+    url: "/protect-postgresql/clone-postgresql-backup.html"
+  - title: Klonen Sie PostgreSQL Cluster Backups mit PowerShell Cmdlets
+    url: "/protect-postgresql/clone-postgresql-backups-using-powershell-cmdlets.html"
+  - title: Überwachen Sie Klonvorgänge in SnapCenter
+    url: "/protect-postgresql/monitor-postgresql-clone-operations.html"
+  - title: Teilen Sie einen Klon auf
+    url: "/protect-postgresql/split-a-clone-for-postgresql.html"
+  - title: Löschen oder teilen Sie PostgreSQL Cluster Clones nach dem Upgrade von
+      SnapCenter
+    url: "/protect-postgresql/delete-or-split-postgresql-clones-after-upgrading-snapcenter.html"

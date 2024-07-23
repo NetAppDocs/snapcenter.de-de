@@ -1,0 +1,27 @@
+---
+permalink: protect-db2/define-a-backup-strategy-for-ibm-db2.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for IBM Db2 
+summary: 'Wenn Sie eine Backup-Strategie definieren, bevor Sie Ihre Backup-Jobs erstellen, erhalten Sie die Backups, die Sie benötigen, um Ihre Ressourcen erfolgreich wiederherzustellen oder zu klonen. Ihr Service Level Agreement \ (SLA\), die Recovery-Zeitvorgabe \ (RTO\) und der Recovery-Zeitpunkt \ (RPO\) bestimmen weitgehend Ihre Backup-Strategie.' 
+---
+= Definieren Sie eine Backup-Strategie für IBM DB2
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie eine Backup-Strategie definieren, bevor Sie Ihre Backup-Jobs erstellen, erhalten Sie die Backups, die Sie benötigen, um Ihre Ressourcen erfolgreich wiederherzustellen oder zu klonen. Ihr Service Level Agreement (SLA), Recovery Time Objective (RTO) und Recovery Point Objective (RPO) bestimmen Ihre Backup-Strategie weitestgehend.
+
+.Über diese Aufgabe
+Ein SLA definiert das erwartete Service-Level und behandelt viele Service-bezogene Probleme, einschließlich Verfügbarkeit und Performance des Service. Bei der RTO handelt es sich um die Zeit, die ein Geschäftsprozess nach einer Serviceunterbrechung wiederhergestellt werden muss. Der Recovery-Zeitpunkt definiert die Strategie für das Alter der Dateien, die aus dem Backup-Storage wiederhergestellt werden müssen, damit regelmäßige Betriebsabläufe nach einem Ausfall fortgesetzt werden können. SLA, RTO und RPO tragen zur Datensicherungsstrategie bei.
+
+.Schritte
+. Bestimmen Sie, wann die Ressourcen gesichert werden sollen.
+. Legen Sie fest, wie viele Backup-Jobs Sie benötigen.
+. Geben Sie an, wie Sie Ihre Backups benennen.
+. Entscheiden Sie, ob Sie eine Richtlinie für auf Snapshot Kopien basierende erstellen möchten, um applikationskonsistente Snapshots der Datenbank zu sichern.
+. Entscheiden Sie, ob Sie NetApp SnapMirror Technologie zur Replizierung oder NetApp SnapVault Technologie zur langfristigen Aufbewahrung verwenden möchten.
+. Legen Sie den Aufbewahrungszeitraum für die Snapshots auf dem Quell-Storage-System und dem SnapMirror Ziel fest.
+. Bestimmen Sie, ob Sie vor oder nach dem Backup Befehle ausführen möchten, und geben Sie ein Prescript oder ein Postscript an.
+

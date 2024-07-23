@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/task_add_hosts_and_install_plug_in_for_exchange.html 
 sidebar: sidebar 
-keywords: SnapCenter Plug-in for Microsoft Exchange Server 
+keywords: SnapCenter Plug-in for Microsoft Exchange Server, NET TCP 
 summary: Sie können die Seite SnapCenterAdd Host verwenden, um Windows-Hosts hinzuzufügen. Das Plug-in für Exchange wird automatisch auf dem angegebenen Host installiert. Dies ist die empfohlene Methode zum Installieren von Plug-ins. Sie können einen Host hinzufügen und ein Plug-in entweder für einen einzelnen Host oder ein Cluster installieren. 
 ---
 = Fügen Sie Hosts hinzu und installieren Sie das Plug-in für Exchange
@@ -14,10 +14,16 @@ summary: Sie können die Seite SnapCenterAdd Host verwenden, um Windows-Hosts hi
 Sie können die Seite SnapCenter Add Host verwenden, um Windows Hosts hinzuzufügen. Das Plug-in für Exchange wird automatisch auf dem angegebenen Host installiert. Dies ist die empfohlene Methode zum Installieren von Plug-ins. Sie können einen Host hinzufügen und ein Plug-in entweder für einen einzelnen Host oder ein Cluster installieren.
 
 .Bevor Sie beginnen
+* Wenn das Betriebssystem des SnapCenter-Server-Hosts Windows 2019 und das Betriebssystem des Plug-in-Hosts Windows 2022 ist, sollten Sie Folgendes durchführen:
++
+** Führen Sie ein Upgrade auf Windows Server 2019 (OS Build 17763.5936) oder höher durch
+** Führen Sie ein Upgrade auf Windows Server 2022 (OS Build 20348.2402) oder höher durch
+
+
 * Sie müssen ein Benutzer sein, der einer Rolle zugewiesen ist, die über die Plug-in-Installations- und Deinstallationsberechtigungen verfügt, wie z. B. die SnapCenter-Admin
 * Wenn Sie ein Plug-in auf einem Windows-Host installieren, wenn Sie keine Anmeldedaten angeben oder der Benutzer zu einem lokalen Workgroup-Benutzer gehört, müssen Sie UAC auf dem Host deaktivieren.
 * Der Nachrichtenwarteschlange-Service muss ausgeführt werden.
-* Wenn Sie Group Managed Service Account (gMSA) verwenden, sollten Sie gMSA mit Administratorrechten konfigurieren. Weitere Informationen finden Sie unterlink:task_configure_gMSA_on_windows_server_2012_or_later.html["Konfigurieren Sie das Gruppenkonto für Managed Services unter Windows Server 2012 oder höher für Microsoft Exchange Server"^].
+* Wenn Sie Group Managed Service Account (gMSA) verwenden, sollten Sie gMSA mit Administratorrechten konfigurieren. Weitere Informationen finden Sie unter link:task_configure_gMSA_on_windows_server_2012_or_later.html["Konfigurieren Sie das Gruppenkonto für Managed Services unter Windows Server 2016 oder höher für Microsoft Exchange Server"^].
 
 
 .Über diese Aufgabe
@@ -184,4 +190,28 @@ Wenn der Fehler mit dem Festplattenspeicher oder RAM zusammenhängt, können Sie
 NOTE: Wenn Sie in einem HA-Setup die Datei „Web.config“ aktualisieren, müssen Sie die Datei auf beiden Knoten aktualisieren.
 
 . Überwachen Sie den Installationsfortschritt.
+
+
+
+
+== Konfigurieren Sie den benutzerdefinierten Port für die NET TCP-Kommunikation
+
+Standardmäßig verwendet das SnapCenter-Plug-in für Windows ab SnapCenter 6.0 den Port 909 für die NET-TCP-Kommunikation. Wenn der Port 909 verwendet wird, können Sie einen anderen Port für die NET TCP-Kommunikation konfigurieren.
+
+.Schritte
+. Ändern Sie den Wert des Schlüssels _NetTCPPort_ unter _C:\Program Files\NetApp\SnapCenter\SnapCenter Plug-in für Microsoft Windows\vssprovidern\navsssprv.exe.config_ auf die erforderliche Portnummer.
+`<add key="NetTCPPort" value="new_port_number" />`
+. Ändern Sie den Wert des Schlüssels _NetTCPPort_ unter _C:\Program Files\NetApp\SnapCenter\SnapCenter Plug-in für Microsoft Windows\SnapDriveService.dll.config_ auf die erforderliche Port-Nummer.
+`<add key="NetTCPPort" value="new_port_number" />`
+. Heben Sie die Registrierung des Services _Data ONTAP VSS Hardware Provider_ auf, indem Sie den folgenden Befehl ausführen:
+`"C:\Program Files\NetApp\SnapCenter\SnapCenter Plug-in for Microsoft Windows\navssprv.exe" -r service -u`
++
+Vergewissern Sie sich, dass der Dienst nicht in der Liste der Dienste in _Services.msc_ angezeigt wird.
+
+. Registrieren Sie den Service _Data ONTAP VSS Hardware Provider_, indem Sie den folgenden Befehl ausführen:
+`"C:\Program Files\NetApp\SnapCenter\SnapCenter Plug-in for Microsoft Windows\vssproviders\navssprv.exe" -r service -a ".\LocalSystem"``
++
+Überprüfen Sie, ob der Dienst jetzt in der Liste der Dienste in _Services.msc_ angezeigt wird.
+
+. Starten Sie den _Plug-in für Windows_-Dienst neu.
 

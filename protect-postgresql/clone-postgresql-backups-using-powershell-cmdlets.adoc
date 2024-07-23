@@ -1,0 +1,85 @@
+---
+permalink: protect-postgresql/clone-postgresql-backups-using-powershell-cmdlets.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for PostgreSQL 
+summary: Der Klon-Workflow umfasst die Planung, die Durchführung des Klonvorgangs und die Überwachung des Vorgangs. 
+---
+= Klonen Sie PostgreSQL Cluster Backups mit PowerShell Cmdlets
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Klon-Workflow umfasst die Planung, die Durchführung des Klonvorgangs und die Überwachung des Vorgangs.
+
+Sie müssen die PowerShell Umgebung vorbereitet haben, um die PowerShell Cmdlets auszuführen.
+
+Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ können Sie auch auf die https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter Software Cmdlet Referenzhandbuch"^].
+
+.Schritte
+. Starten Sie eine Verbindungssitzung mit dem SnapCenter-Server für einen bestimmten Benutzer, indem Sie das Cmdlet "Open-SmConnection" verwenden.
++
+[listing]
+----
+PS C:\> Open-SmConnection
+----
+. Rufen Sie die Backups für den Klonvorgang mit dem Cmdlet Get-SmBackup ab.
++
+Dieses Beispiel zeigt, dass zwei Backups zum Klonen verfügbar sind:
+
++
+[listing]
+----
+ C:\PS> Get-SmBackup
+
+        BackupId                      BackupName                    BackupTime                    BackupType
+        --------                      ----------                    ----------                    ----------
+         1                     Payroll Dataset_vise-f6_08... 8/4/2015 11:02:32 AM          Full Backup
+         2                     Payroll Dataset_vise-f6_08... 8/4/2015 11:23:17 AM
+----
+. Initiieren Sie einen Klonvorgang aus einem vorhandenen Backup und geben Sie die NFS-Export-IP-Adressen an, auf die die geklonten Volumes exportiert werden.
++
+Dieses Beispiel zeigt, dass das zu klonende Backup über eine NFSExportIPs-Adresse 10.32.212.14 verfügt:
+
++
+Für PostgreSQL-Cluster:
+
++
+[listing]
+----
+PS C:\> New-SmClone -AppPluginCode PostgreSQL -BackupName " scpostgresql01_ openenglab_netapp_com_PostgreSQL_postgres_5432_06-26-2024_00_33_41_1570" -Resources @{"Host"=" 10.32.212.13";"Uid"="postgres_5432"} -port 2345 -CloneToHost 10.32.212.14
+----
++
+
+NOTE: Wenn NFSExportIPs nicht angegeben sind, wird der Standardwert auf den Klon-Zielhost exportiert.
+
+. Überprüfen Sie, ob die Backups erfolgreich geklont wurden, indem Sie das Cmdlet "Get-SmCloneReport" verwenden, um die Details zu den Klonjobs anzuzeigen.
++
+Sie können Details wie Klon-ID, Startdatum und -Zeit, Enddatum und -Zeit anzeigen.
+
++
+[listing]
+----
+PS C:\> Get-SmCloneReport -JobId 186
+
+    SmCloneId           : 1
+    SmJobId             : 186
+    StartDateTime       : 8/3/2015 2:43:02 PM
+    EndDateTime         : 8/3/2015 2:44:08 PM
+    Duration            : 00:01:06.6760000
+    Status              : Completed
+    ProtectionGroupName : Draper
+    SmProtectionGroupId : 4
+    PolicyName          : OnDemand_Clone
+    SmPolicyId          : 4
+    BackupPolicyName    : OnDemand_Full_Log
+    SmBackupPolicyId    : 1
+    CloneHostName       : SCSPR0054212005.mycompany.com
+    CloneHostId         : 4
+    CloneName           : Draper__clone__08-03-2015_14.43.53
+    SourceResources     : {Don, Betty, Bobby, Sally}
+    ClonedResources     : {Don_DRAPER, Betty_DRAPER, Bobby_DRAPER, Sally_DRAPER}
+    SmJobError          :
+----
+

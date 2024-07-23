@@ -30,15 +30,6 @@ NOTE: SnapCenter ist auch als Teil des Datensicherungs-Bundles verfügbar. Wenn 
 
 
  a| 
-Kapazitätsbasierte SnapCenter Lösung
- a| 
-Erforderlich für ONTAP Select und Cloud Volumes ONTAP
-
-Als Cloud Volumes ONTAP- oder ONTAP Select-Kunde müssen Sie eine kapazitätsbasierte Lizenz pro TB erwerben, die auf den von SnapCenter gemanagten Daten basiert. Standardmäßig liefert SnapCenter eine integrierte kapazitätsbasierte SnapCenter-Testlizenz mit 90 TB und 100 Tagen im Umfang von TB aus. Weitere Informationen erhalten Sie von dem Vertriebsmitarbeiter.
-
-
-
- a| 
 SnapMirror oder SnapVault
  a| 
 ONTAP
@@ -96,9 +87,9 @@ NOTE: Es wird empfohlen, aber nicht erforderlich, dass Sie SnapCenter Standard-L
 
 |===
 
-NOTE: Lizenzen für SnapCenter Advanced- und SnapCenter-NAS-Fileservices sind veraltet und sind nicht mehr verfügbar.
+NOTE: Lizenzen für SnapCenter Advanced- und SnapCenter-NAS-Fileservices sind veraltet und sind nicht mehr verfügbar. Für Amazon FSX for NetApp ONTAP und Cloud Volumes ONTAP ist die kapazitätsbasierte Lizenz nicht mehr erforderlich.
 
-Sie sollten eine oder mehrere SnapCenter Lizenzen installieren. Informationen zum Hinzufügen von Lizenzen finden Sie unter link:../install/concept_snapcenter_standard_controller_based_licenses.html["Controller-basierte SnapCenter Standard-Lizenzen hinzufügen"] Oder link:../install/concept_snapcenter_standard_capacity_based_licenses.html["Hinzufügen von kapazitätsbasierten SnapCenter Standard-Lizenzen"].
+Sie sollten eine oder mehrere SnapCenter Lizenzen installieren. Informationen zum Hinzufügen von Lizenzen finden Sie unter link:../install/concept_snapcenter_standard_controller_based_licenses.html["Controller-basierte SnapCenter Standard-Lizenzen hinzufügen"].
 
 
 

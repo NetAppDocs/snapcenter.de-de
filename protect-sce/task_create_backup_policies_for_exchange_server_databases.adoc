@@ -23,8 +23,9 @@ Weitere Informationen finden Sie in den Informationen zur Definition einer Daten
 * Wenn Sie Snapshots auf eine Spiegelung oder einen Vault replizieren, muss der SnapCenter Administrator Ihnen die Storage Virtual Machines (SVMs) sowohl für die Quell-Volumes als auch für die Ziel-Volumes zugewiesen haben.
 * Wenn Sie die PowerShell Skripte in Prescripts und Postscripts ausführen möchten, sollten Sie den Wert der Datei einstellen `usePowershellProcessforScripts` Parameter auf „true“ im anzeigen `web.config` Datei:
 +
-Der Standardwert ist false
+Der Standardwert ist false.
 
+* Prüfen Sie die spezifischen Voraussetzungen und Einschränkungen von SnapMirror Active Sync. Weitere Informationen finden Sie unter https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["Objektgrenzen für die aktive SnapMirror Synchronisierung"].
 
 
 .Über diese Aufgabe
@@ -250,8 +251,7 @@ Die SnapLock-Aufbewahrungsfrist sollte weniger als 100 Jahre betragen.
 
 |===
 +
-
-NOTE: Wenn Sie eine Datenbank mit nur Protokollsicherungen und keinen vollständigen Backups auf einem Host in einer DAG-Konfiguration haben, werden die Protokoll-Backups auf folgende Weise beibehalten:
+Wenn Sie eine Datenbank mit nur Protokollsicherungen und keinen vollständigen Backups auf einem Host in einer DAG-Konfiguration haben, werden die Protokoll-Backups auf folgende Weise beibehalten:
 
 +
 *** Standardmäßig findet SnapCenter auf allen anderen Hosts in der DAG das älteste volle Backup dieser Datenbank und löscht alle Log-Backups auf diesem Host, die vor dem vollständigen Backup erstellt wurden.
@@ -273,14 +273,19 @@ Im Beispiel bedeutet der Wert 10, dass Sie bis zu 10 Log-Backups auf dem Host au
 
  a| 
 Aktualisieren Sie SnapMirror nach dem Erstellen eines lokalen Snapshots
+ a| 
+Wählen Sie diese Option aus, um Spiegelkopien von Backup-Sets auf einem anderen Volume (SnapMirror) zu behalten.
 
 Während der sekundären Replizierung wird mit der SnapLock-Ablaufzeit die primäre SnapLock-Ablaufzeit geladen.
+
+Diese Option sollte für SnapMirror Active Sync aktiviert sein.
+
+
+IMPORTANT: Die nur-Primärrichtlinie kann nicht verwendet werden, wenn SnapMirror Active Sync für Exchange ONTAP Volumes eingerichtet ist. SnapCenter lässt dies nicht zu. Sie sollten die Option „Spiegeln“ aktivieren.
 
 Durch Klicken auf die Schaltfläche * Aktualisieren* auf der Seite Topologie wird die sekundäre und primäre SnapLock-Ablaufzeit aktualisiert, die von ONTAP abgerufen werden.
 
 Siehe link:..protect-sce/task_view_exchange_backups_in_the_topology_page.html["Zeigen Sie Exchange-Backups auf der Seite Topologie an"].
- a| 
-Wählen Sie diese Option aus, um Spiegelkopien von Backup-Sets auf einem anderen Volume (SnapMirror) zu behalten.
 
 
 

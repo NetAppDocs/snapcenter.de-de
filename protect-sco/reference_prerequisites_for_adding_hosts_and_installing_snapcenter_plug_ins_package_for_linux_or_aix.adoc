@@ -23,7 +23,7 @@ Das SnapCenter Plug-in für Oracle Database kann von einem Benutzer ohne Root in
 Das SnapCenter Plug-ins Paket für AIX löst automatisch den symbolischen Link auf Dateiebene, nicht aber die symbolischen Links auf Verzeichnisebene, um den ABSOLUTEN Pfad JAVA_HOME zu erhalten.
 
 * Erstellen Sie Anmeldeinformationen mit dem Authentifizierungsmodus als Linux oder AIX für den Installationsbenutzer.
-* Sie müssen Java 1.8.x oder Java 11, 64-bit auf Ihrem Linux oder AIX Host installiert haben.
+* Sie müssen Java 11 auf Ihrem Linux- oder AIX-Host installiert haben.
 +
 
 NOTE: Stellen Sie sicher, dass Sie nur die zertifizierte Version VON JAVA 11 auf dem Linux-Host installiert haben.
@@ -94,9 +94,7 @@ NOTE: Sie sollten genügend Festplattenspeicher zuweisen und den Speicherverbrau
  a| 
 Erforderliche Softwarepakete
  a| 
-* Java 1.8.x (64 Bit) Oracle Java und OpenJDK
-* Java 11 (64 Bit) Oracle Java und OpenJDK
-
+Java 11 Oracle Java und OpenJDK
 
 
 NOTE: Stellen Sie sicher, dass Sie nur die zertifizierte Version VON JAVA 11 auf dem Linux-Host installiert haben.
@@ -115,6 +113,7 @@ Mit SnapCenter 2.0 und höheren Versionen kann ein nicht-Root-Benutzer das SnapC
 *Was Sie brauchen*
 
 * Sudo Version 1.8.7 oder höher.
+* Stellen Sie für den Benutzer, der nicht root ist, sicher, dass der Name des Benutzers, der nicht root ist, und die Gruppe des Benutzers identisch sein sollten.
 * Bearbeiten Sie die Datei _/etc/ssh/sshd_config_, um die Algorithmen für den Authentifizierungscode Macs hmac-sha2-256 und MACs hmac-sha2-512 zu konfigurieren.
 +
 Starten Sie den sshd-Dienst nach dem Aktualisieren der Konfigurationsdatei neu.
@@ -174,9 +173,11 @@ Sie können den Wert von _crs_Home_ aus der Datei _/etc/oracle/olr.loc_ erhalten
 
 _LINUX_USER_ ist der Name des nicht-root-Benutzers, den Sie erstellt haben.
 
-Sie erhalten den _checksum_value_ aus der Datei *oracle_checksum.txt*, die sich unter _C:\ProgramData\NetApp\SnapCenter\Package Repository_ befindet.
+Sie können die Datei _Checksumme_value_ aus der Datei *sc_unix_Plugins_Checksumme.txt* abrufen, die sich unter folgender Adresse befindet:
 
-Wenn Sie einen benutzerdefinierten Speicherort angegeben haben, befindet sich der Speicherort _Custom_Path\NetApp\SnapCenter\Package Repository_.
+* _C:\ProgramData\NetApp\SnapCenter\Paket-Repository\sc_unix_Plugins_Checksumme.txt_ wenn SnapCenter-Server auf Windows-Host installiert ist.
+* _/opt/NetApp/snapcenter/SnapManagerWeb/Repository/sc_unix_Plugins_checksum.txt_ wenn SnapCenter-Server auf Linux-Host installiert ist.
+
 
 
 IMPORTANT: Das Beispiel sollte nur als Referenz zur Erstellung eigener Daten verwendet werden.
@@ -221,9 +222,7 @@ NOTE: Sie sollten genügend Festplattenspeicher zuweisen und den Speicherverbrau
  a| 
 Erforderliche Softwarepakete
  a| 
-* Java 1.8.x (64-Bit) IBM Java
-* Java 11 (64-Bit) IBM Java
-
+Java 11 IBM Java
 
 Wenn SIE JAVA auf die neueste Version aktualisiert haben, müssen Sie sicherstellen, dass die JAVA_HOME-Option unter /var/opt/snapcenter/spl/etc/spl.properties auf die richtige JAVA-Version und den richtigen Pfad eingestellt ist.
 
@@ -298,9 +297,11 @@ Sie können den Wert von _crs_Home_ aus der Datei _/etc/oracle/olr.loc_ erhalten
 
 _AIX_USER_ ist der Name des nicht-root-Benutzers, den Sie erstellt haben.
 
-Sie erhalten den _checksum_value_ aus der Datei *oracle_checksum.txt*, die sich unter _C:\ProgramData\NetApp\SnapCenter\Package Repository_ befindet.
+Sie können die Datei _Checksumme_value_ aus der Datei *sc_unix_Plugins_Checksumme.txt* abrufen, die sich unter folgender Adresse befindet:
 
-Wenn Sie einen benutzerdefinierten Speicherort angegeben haben, befindet sich der Speicherort _Custom_Path\NetApp\SnapCenter\Package Repository_.
+* _C:\ProgramData\NetApp\SnapCenter\Paket-Repository\sc_unix_Plugins_Checksumme.txt_ wenn SnapCenter-Server auf Windows-Host installiert ist.
+* _/opt/NetApp/snapcenter/SnapManagerWeb/Repository/sc_unix_Plugins_checksum.txt_ wenn SnapCenter-Server auf Linux-Host installiert ist.
+
 
 
 IMPORTANT: Das Beispiel sollte nur als Referenz zur Erstellung eigener Daten verwendet werden.

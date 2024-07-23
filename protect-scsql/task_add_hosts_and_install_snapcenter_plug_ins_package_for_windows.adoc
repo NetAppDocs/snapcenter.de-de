@@ -14,12 +14,18 @@ summary: Sie müssen die SnapCenterAdd Host-Seite verwenden, um Hosts hinzuzufü
 Sie müssen die Seite SnapCenter *Add Host* verwenden, um Hosts hinzuzufügen und das Plug-ins-Paket zu installieren. Die Plug-ins werden automatisch auf den Remote-Hosts installiert.
 
 .Bevor Sie beginnen
+* Wenn das Betriebssystem des SnapCenter-Server-Hosts Windows 2019 und das Betriebssystem des Plug-in-Hosts Windows 2022 ist, sollten Sie Folgendes durchführen:
++
+** Führen Sie ein Upgrade auf Windows Server 2019 (OS Build 17763.5936) oder höher durch
+** Führen Sie ein Upgrade auf Windows Server 2022 (OS Build 20348.2402) oder höher durch
+
+
 * Sie müssen ein Benutzer sein, der einer Rolle zugewiesen ist, die über die Berechtigungen für die Plug-in-Installation und -Deinstallation verfügt, wie z. B. die Rolle „SnapCenter-Administrator“.
 * Wenn Sie ein Plug-in auf einem Windows-Host installieren, sollten Sie UAC auf dem Host deaktivieren, wenn Sie keine integrierten Anmeldeinformationen angeben.
 * Stellen Sie sicher, dass der Nachrichtenwarteschlange in Betrieb ist.
 * Wenn Sie Group Managed Service Account (gMSA) verwenden, sollten Sie gMSA mit Administratorrechten konfigurieren.
 +
-link:task_configure_gMSA_on_windows_server_2012_or_later.html["Konfigurieren Sie das Gruppenkonto für Managed Services unter Windows Server 2012 oder höher für SQL"^]
+link:task_configure_gMSA_on_windows_server_2012_or_later.html["Konfigurieren Sie das Gruppenkonto für Managed Services unter Windows Server 2016 oder höher für SQL"^]
 
 
 

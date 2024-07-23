@@ -13,6 +13,9 @@ summary: Sichern Sie die Ressource auf der Seite „Ressourcen“.
 [role="lead"]
 Wenn eine Ressource noch nicht zu einer Ressourcengruppe gehört, können Sie die Ressource auf der Seite Ressourcen sichern.
 
+.Bevor Sie beginnen
+Sie sollten einen Load Balancer erstellen, wenn dem Azure Windows-Failover-Cluster keine Cluster-IP zugewiesen ist oder wenn er nicht über SnapCenter erreichbar ist. Die IP des Load Balancer sollte konfiguriert und vom SnapCenter-Server aus erreichbar sein.
+
 .Schritte
 . Wählen Sie im linken Navigationsbereich *Ressourcen* aus, und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
 . Wählen Sie auf der Seite Ressource aus der Dropdown-Liste Ansicht die Option *Datenbank*, *Instanz* oder *Verfügbarkeitsgruppe* aus.

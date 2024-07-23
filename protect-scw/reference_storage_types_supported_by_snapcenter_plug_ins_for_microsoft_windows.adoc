@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Storage types 
 summary: SnapCenter unterstützt eine Vielzahl von Storage-Typen sowohl auf physischen Computern als auch auf Virtual Machines. Sie müssen überprüfen, ob Ihr Speichertyp unterstützt wird, bevor Sie das Paket für Ihren Host installieren. 
 ---
-= Storage-Typen unterstützt von SnapCenter Plug-ins für Microsoft Windows
+= Vom SnapCenter-Plug-in für Microsoft Windows unterstützte Storage-Typen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -93,6 +93,16 @@ SnapCenter GUI oder PowerShell Commandlets
 Support nur für die Bereitstellung.
 
 SnapCenter kann kein Backup von Daten und Freigaben über das SMB-Protokoll verwenden.
+
+
+
+ a| 
+VMware VM
+ a| 
+VVol Datastores auf NFS und SAN
+ a| 
+ONTAP Tools für VMware vSphere
+ a| 
 
 
 

@@ -117,4 +117,4 @@ NOTE: Sie können die API oder das Cmdlet mehrmals auf demselben Host ausführen
 .Verwandte Informationen
 Für Informationen zu den APIs, müssen Sie auf die Seite Swagger zugreifen. Siehe link:https://docs.netapp.com/us-en/snapcenter/sc-automation/task_how%20to_access_rest_apis_using_the_swagger_api_web_page.html["Zugriff auf REST-APIs über die Swagger-API-Webseite"].
 
-Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ können Sie auch die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["SnapCenter Software Cmdlet Referenzhandbuch"^].
+Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ können Sie auch die https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter Software Cmdlet Referenzhandbuch"^].

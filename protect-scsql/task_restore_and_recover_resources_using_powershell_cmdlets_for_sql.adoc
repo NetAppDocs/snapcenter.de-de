@@ -20,7 +20,7 @@ Sie müssen die PowerShell Umgebung vorbereitet haben, um die PowerShell Cmdlets
 +
 [listing]
 ----
-Open-smconnection  -SMSbaseurl  https:\\snapctr.demo.netapp.com:8146/
+PS C:\> Open-Smconnection
 ----
 . Rufen Sie die Informationen zu einem oder mehreren Backups ab, die Sie wiederherstellen möchten, indem Sie die Cmdlets Get-SmBackup und Get-SmBackupReport verwenden.
 +
@@ -29,7 +29,7 @@ In diesem Beispiel werden Informationen zu allen verfügbaren Backups angezeigt:
 +
 [listing]
 ----
- C:\PS>PS C:\> Get-SmBackup
+PS C:\> Get-SmBackup
 
 BackupId                      BackupName                    BackupTime                    BackupType
 --------                      ----------                    ----------                    ----------
@@ -104,4 +104,4 @@ PluginName          :
 ----
 
 
-Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ können Sie auch auf die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["SnapCenter Software Cmdlet Referenzhandbuch"^].
+Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ können Sie auch auf die https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter Software Cmdlet Referenzhandbuch"^].

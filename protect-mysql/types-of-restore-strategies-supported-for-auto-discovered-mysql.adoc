@@ -1,0 +1,16 @@
+---
+permalink: protect-mysql/types-of-restore-strategies-supported-for-auto-discovered-mysql.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for mysql 
+summary: Sie müssen eine Strategie definieren, bevor Sie die Restore-Vorgänge mit SnapCenter erfolgreich durchführen können. Es gibt zwei Arten von Wiederherstellungsstrategien für automatisch erkannte MySQL-Datenbanken. 
+---
+= Typ der Wiederherstellungsstrategie, die für automatisch ermitteltes MySQL unterstützt wird
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen eine Strategie definieren, bevor Sie die Restore-Vorgänge mit SnapCenter erfolgreich durchführen können.
+
+Eine vollständige Wiederherstellung der Ressourcen ist die Wiederherstellungsstrategie, die für automatisch erkannte MySQL-Datenbanken unterstützt wird. Dadurch werden alle Volumes, qtrees und LUNs einer Ressource wiederhergestellt.

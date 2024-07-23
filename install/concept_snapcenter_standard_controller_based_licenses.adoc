@@ -223,7 +223,7 @@ Dieser Befehl ist auf der Administrator-Berechtigungsebene verfügbar.
 Wenn Sie eine Controller-basierte SnapCenter Standard-Lizenz verwenden und die kapazitätsbasierte Testlizenz entfernen müssen (Seriennummer mit „`50`“ endet), sollten Sie MySQL-Befehle verwenden, um die Testlizenz manuell zu entfernen. Die Testlizenz kann nicht über die SnapCenter-Benutzeroberfläche gelöscht werden.
 
 
-NOTE: Das manuelle Entfernen einer Testlizenz ist nur erforderlich, wenn Sie eine Controller-basierte SnapCenter Standard-Lizenz verwenden. Wenn Sie eine kapazitätsbasierte SnapCenter-Standardlizenz erworben und in die SnapCenter-Benutzeroberfläche hinzugefügt haben, wird die Testlizenz automatisch überschrieben.
+NOTE: Das manuelle Entfernen einer Testlizenz ist nur erforderlich, wenn Sie eine Controller-basierte SnapCenter Standard-Lizenz verwenden.
 
 .Schritte
 . Öffnen Sie auf dem SnapCenter-Server ein PowerShell-Fenster, um das MySQL-Passwort zurückzusetzen.
@@ -231,7 +231,7 @@ NOTE: Das manuelle Entfernen einer Testlizenz ist nur erforderlich, wenn Sie ein
 .. Führen Sie das Cmdlet "Open-SmConnection" aus, um eine Verbindungssitzung mit dem SnapCenter-Server für ein SnapCenterAdmin-Konto zu initiieren.
 .. Führen Sie das Set-RepositRepositRepositSmoryPassword aus, um das MySQL-Passwort zurückzusetzen.
 +
-Informationen zu den Cmdlets finden Sie unter https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["SnapCenter Software Cmdlet Referenzhandbuch"^].
+Informationen zu den Cmdlets finden Sie unter https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["SnapCenter Software Cmdlet Referenzhandbuch"^].
 
 
 

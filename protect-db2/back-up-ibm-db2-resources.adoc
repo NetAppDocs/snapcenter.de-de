@@ -1,0 +1,20 @@
+---
+permalink: protect-db2/back-up-ibm-db2-resources.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for IBM Db2 
+summary: 'Sie können entweder ein Backup einer Ressource \(Datenbank\) oder einer Ressourcengruppe erstellen. Der Backup-Workflow umfasst die Planung, Identifizierung der Backup-Datenbanken, das Management von Backup-Richtlinien, das Erstellen von Ressourcengruppen und das Anhängen von Richtlinien, das Erstellen von Backups und das Monitoring der Betriebsprozesse.' 
+---
+= Backup von IBM DB2-Ressourcen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können entweder ein Backup einer Ressource (Datenbank) oder einer Ressourcengruppe erstellen. Der Backup-Workflow umfasst die Planung, Identifizierung der Backup-Datenbanken, das Management von Backup-Richtlinien, das Erstellen von Ressourcengruppen und das Anhängen von Richtlinien, das Erstellen von Backups und das Monitoring der Betriebsprozesse.
+
+Der folgende Workflow zeigt die Reihenfolge, in der Sie den Sicherungsvorgang durchführen müssen:
+
+image::../media/db2_backup_workflow.png[DB2 Backup-Workflow]
+
+Außerdem können Sie PowerShell Cmdlets manuell oder in Skripten verwenden, um Backup-, Wiederherstellungs- und Klonvorgänge durchzuführen. Die SnapCenter Cmdlet Hilfe und die Cmdlet Referenzinformationen enthalten weitere Informationen zu PowerShell Cmdlets. https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter Software Cmdlet Referenzhandbuch"^].

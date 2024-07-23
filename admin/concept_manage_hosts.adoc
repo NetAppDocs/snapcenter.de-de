@@ -14,11 +14,17 @@ summary: Sie können Hosts hinzufügen und SnapCenter-Plug-in-Pakete installiere
 Sie können Hosts hinzufügen und SnapCenter-Plug-in-Pakete installieren, einen Verifizierungsserver hinzufügen, Hosts entfernen, Backup-Jobs migrieren und den Host aktualisieren, um Plug-in-Pakete zu aktualisieren oder neue Plug-in-Pakete hinzuzufügen. Abhängig vom verwendeten Plug-in können Sie auch Festplatten bereitstellen, SMB-Freigaben managen, Initiatorgruppen managen, iSCSI-Sessions managen und Daten migrieren.
 
 |===
-| Sie können diese Aufgaben ausführen... | Für Microsoft Exchange Server | Für Microsoft SQL Server | Für Microsoft Windows | Für Oracle Database | Für SAP HANA Database | Für benutzerdefinierte Plug-ins 
+| Sie können diese Aufgaben ausführen... | Für Microsoft Exchange Server | Für Microsoft SQL Server | Für Microsoft Windows | Für Oracle Database | Für SAP HANA Database | Für von NetApp unterstützte Plug-ins | Für Db2 | Für PostgreSQL | Für MySQL 
 
 
  a| 
 Fügen Sie Hosts hinzu und installieren Sie das Plug-in-Paket
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
  a| 
 Ja.
  a| 
@@ -48,11 +54,23 @@ Nein
 Nein
  a| 
 Nein
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
 
 
 
  a| 
 Unterbrechen Sie die Zeitpläne und versetzen Sie Hosts in den Wartungsmodus
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
  a| 
 Ja.
  a| 
@@ -82,11 +100,23 @@ Ja.
 Ja.
  a| 
 Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
 
 
 
  a| 
 Entfernen Sie Hosts aus SnapCenter
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
  a| 
 Ja.
  a| 
@@ -116,6 +146,12 @@ Ja.
 Ja.
  a| 
 Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
 
 
 
@@ -127,6 +163,12 @@ Nein
 Nein
  a| 
 Ja.
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
  a| 
 Nein
  a| 
@@ -150,6 +192,12 @@ Nein
 Nein
  a| 
 Nein
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
 
 
 
@@ -161,6 +209,12 @@ Nein
 Nein
  a| 
 Ja.
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
  a| 
 Nein
  a| 
@@ -183,6 +237,13 @@ Nein
  a| 
 Nein
  a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
 
 |===
 

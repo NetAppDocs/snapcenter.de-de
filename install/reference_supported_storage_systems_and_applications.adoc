@@ -13,10 +13,13 @@ summary: Sie sollten das unterstützte Storage-System, die Applikationen und Dat
 [role="lead"]
 Sie sollten die unterstützten Storage-Systeme, Applikationen und Datenbanken kennen.
 
-* SnapCenter unterstützt ONTAP 8.3.0 und neuere Versionen für den Schutz Ihrer Daten.
+* SnapCenter unterstützt ONTAP 9.12.1 und neuere Versionen für den Schutz Ihrer Daten.
 * SnapCenter unterstützt Amazon FSX für NetApp ONTAP, um Ihre Daten vor der SnapCenter Software 4.5 P1-Patch-Veröffentlichung zu schützen.
 +
 Wenn Sie Amazon FSX für NetApp ONTAP verwenden, stellen Sie sicher, dass die SnapCenter Server Host-Plug-ins auf 4.5 P1 oder höher aktualisiert werden, um Datensicherungsprozesse zu auszuführen.
+
++
+Unterstützt Non-Volatile Memory Express (NVMe) über Transport Control Protocol (TCP).
 
 +
 Informationen zu Amazon FSX für NetApp ONTAP finden Sie unter https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["Dokumentation zu Amazon FSX für NetApp ONTAP"^].

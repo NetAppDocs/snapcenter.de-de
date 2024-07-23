@@ -14,7 +14,9 @@ summary: Laden Sie SnapCenter auf der Azure Virtual Machine herunter und install
 Sie können die SnapCenter-Software von der NetApp-Support-Website herunterladen und die Software auf der virtuellen Azure-Maschine installieren.
 
 .Bevor Sie beginnen
-Vergewissern Sie sich, dass die virtuelle Azure Windows-Maschine die Anforderungen für die Installation des SnapCenter-Servers erfüllt. Weitere Informationen finden Sie unter link:../install/reference_domain_and_workgroup_requirements.html["Bereiten Sie sich auf die Installation des SnapCenter-Servers vor"].
+* Vergewissern Sie sich, dass die virtuelle Azure Windows-Maschine die Anforderungen für die Installation des SnapCenter-Servers erfüllt. Weitere Informationen finden Sie unter link:../install/reference_domain_and_workgroup_requirements.html["Bereiten Sie sich auf die Installation des SnapCenter-Servers vor"].
+* Wenn Sie neu bei Azure NetApp Files sind und noch kein NetApp-Konto besitzen, stellen Sie sicher, dass Sie sich registriert haben, damit Sie auf die SnapCenter-Software zugreifen können.
+
 
 .Schritte
 . Laden Sie das Installationspaket für den SnapCenter Server von herunter https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab["NetApp Support Website"].
@@ -41,4 +43,23 @@ NOTE: Wenn Sie auf die Schaltfläche *Abbrechen* klicken, wird der ausgeführte 
 +
 Wenn Sie jedoch *Abbrechen* klicken, wenn die Vorgänge „Neustart des SnapCenter-Servers“ oder „Warten auf Start des SnapCenter-Servers“ ausgeführt werden, wird die Installation ohne Abbrechen des Vorgangs fortgesetzt.
 
+
+
+
+
+== Registrieren Sie das Produkt, um den Support zu aktivieren
+
+Wenn Sie zum ersten mal bei NetApp sind und noch kein NetApp Konto haben, sollten Sie das Produkt registrieren, um den Support zu aktivieren.
+
+.Schritte
+. Navigieren Sie nach der Installation von SnapCenter zu *Hilfe > Info*.
+. Notieren Sie sich im Dialogfeld _Info zu SnapCenter_ die SnapCenter-Instanz, eine 20-stellige Zahl, die mit 971 beginnt.
+. Klicken Sie Auf https://register.netapp.com[].
+. Klicken Sie auf *Ich bin kein registrierter NetApp-Kunde*.
+. Geben Sie Ihre Daten an, um sich zu registrieren.
+. Lassen Sie das Feld NetApp Referenz SN leer.
+. Wählen Sie in der Dropdown-Liste Produktreihe *SnapCenter* aus.
+. Wählen Sie den Abrechnungsanbieter aus.
+. Geben Sie die 20-stellige SnapCenter-Instanz-ID ein.
+. Klicken Sie Auf *Absenden*.
 

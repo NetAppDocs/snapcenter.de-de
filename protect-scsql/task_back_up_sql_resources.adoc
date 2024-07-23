@@ -17,7 +17,13 @@ Wenn eine Ressource noch nicht zu einer Ressourcengruppe gehört, können Sie di
 * Für die Authentifizierung von Windows-Anmeldeinformationen müssen Sie die Anmeldeinformationen einrichten, bevor Sie die Plug-ins installieren.
 * Für die Authentifizierung der SQL Server-Instanz müssen Sie die Anmeldeinformationen nach der Installation der Plug-ins hinzufügen.
 * Für die gMSA-Authentifizierung müssen Sie gMSA beim Registrieren des Hosts mit SnapCenter auf der Seite *Add Host* oder *Modify Host* einrichten, um den gMSA zu aktivieren und zu verwenden.
-* Wenn der Host mit gMSA hinzugefügt wird und der gMSA über Login- und System Admin-Berechtigungen verfügt, wird das gMSA verwendet, um eine Verbindung zur SQL-Instanz herzustellen.
+* Wenn der Host mit gMSA hinzugefügt wird und das gMSA über Login- und Systemadministratorrechte verfügt, darf gMSA eine Verbindung zur SQL-Instanz herstellen.
++
+** SnapCenter überprüft, ob die Authentifizierung für SQL-Instanzen konfiguriert ist. Wenn die Authentifizierung konfiguriert ist, wird über diese Anmeldeinformationen auf die SQL-Instanz zugegriffen.
+** Wenn die Authentifizierung nicht konfiguriert ist, verwenden Sie gMSA, um zu prüfen, ob das SQL-Plug-in derzeit funktioniert. Wenn das Plug-in funktioniert, wird es verwendet, um eine Verbindung zur SQL-Instanz herzustellen.
+** Der Zugriff auf die SQL-Instanz erfolgt über die Windows-Anmeldeinformationen-Authentifizierung, wenn die Authentifizierung für SQL-Instanzen nicht konfiguriert ist und das Plug-in nicht betriebsbereit ist.
+
+
 
 
 .Schritte

@@ -1,0 +1,16 @@
+---
+permalink: protect-postgresql/types-of-restore-strategies-supported-for-auto-discovered-postgresql.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for postgresql 
+summary: Sie müssen eine Strategie definieren, bevor Sie die Restore-Vorgänge mit SnapCenter erfolgreich durchführen können. Es gibt zwei Arten von Wiederherstellungsstrategien für automatisch erkannte PostgreSQL-Cluster. 
+---
+= Art der Wiederherstellungsstrategie, die für automatisch erkannte PostgreSQL unterstützt wird
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen eine Strategie definieren, bevor Sie die Restore-Vorgänge mit SnapCenter erfolgreich durchführen können.
+
+Vollständige Ressourcenwiederherstellung ist die Wiederherstellungsstrategie, die für automatisch erkannte PostgreSQL-Cluster unterstützt wird. Dadurch werden alle Volumes, qtrees und LUNs einer Ressource wiederhergestellt.

@@ -23,6 +23,7 @@ Weitere Informationen zur Definition einer Datensicherungsstrategie für SAP HAN
 +
 Außerdem können Sie in der Richtlinie Replizierungs-, Skript- und Applikationseinstellungen festlegen. Diese Optionen sparen Zeit, wenn Sie die Richtlinie für eine andere Ressourcengruppe wiederverwenden möchten.
 
+* Prüfen Sie die spezifischen Voraussetzungen und Einschränkungen von SnapMirror Active Sync. Weitere Informationen finden Sie unter https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["Objektgrenzen für die aktive SnapMirror Synchronisierung"].
 
 
 .Über diese Aufgabe
@@ -147,6 +148,8 @@ Die SnapLock-Aufbewahrungsfrist sollte weniger als 100 Jahre betragen.
 *Aktualisieren Sie SnapMirror nach dem Erstellen einer lokalen Snapshot Kopie*
  a| 
 Wählen Sie dieses Feld aus, um Spiegelkopien der Backup-Sätze auf einem anderen Volume zu erstellen (SnapMirror Replikation).
+
+Diese Option sollte für SnapMirror Active Sync aktiviert sein.
 
 Wenn die Sicherungsbeziehung in ONTAP vom Typ „Mirror and Vault“ ist und Sie nur diese Option auswählen, wird der auf dem primären Volume erstellte Snapshot nicht an das Zielsystem übertragen, sondern im Zielsystem aufgelistet. Wenn dieser Snapshot vom Ziel ausgewählt ist, um einen Wiederherstellungsvorgang durchzuführen, wird die Fehlermeldung „sekundärer Speicherort“ für die ausgewählte vaulted/mirrored Backup nicht verfügbar angezeigt.
 

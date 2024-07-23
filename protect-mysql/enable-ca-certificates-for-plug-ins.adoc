@@ -1,0 +1,42 @@
+---
+permalink: protect-mysql/enable-ca-certificates-for-plug-ins.html 
+sidebar: sidebar 
+keywords: SnapCenter 
+summary: Sie sollten die CA-Zertifikate konfigurieren und die CA-Zertifikate im SnapCenter-Server und den entsprechenden Plug-in-Hosts bereitstellen. 
+---
+= Aktivieren Sie CA-Zertifikate für Plug-ins
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie sollten die CA-Zertifikate konfigurieren und die CA-Zertifikate im SnapCenter-Server und den entsprechenden Plug-in-Hosts bereitstellen. Sie sollten die CA-Zertifikatsvalidierung für die Plug-ins aktivieren.
+
+.Bevor Sie beginnen
+* Sie können die CA-Zertifikate mit dem Cmdlet "Run_set-SmCertificateSettings_" aktivieren oder deaktivieren.
+* Sie können den Zertifikatsstatus für die Plug-ins mithilfe der _get-SmCertificateSettings_ anzeigen.
+
+
+Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ können Sie auch auf die https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter Software Cmdlet Referenzhandbuch"^].
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Hosts*.
+. Klicken Sie auf der Host-Seite auf *verwaltete Hosts*.
+. Wählen Sie ein- oder mehrere Plug-in-Hosts aus.
+. Klicken Sie auf *Weitere Optionen*.
+. Wählen Sie *Zertifikatvalidierung Aktivieren*.
+
+
+.Nachdem Sie fertig sind
+Auf dem Reiter Managed Hosts wird ein Schloss angezeigt, und die Farbe des Vorhängeschlosses zeigt den Status der Verbindung zwischen SnapCenter Server und dem Plug-in-Host an.
+
+* *image:../media/enable_ca_issues_icon.png["Das CA-Zertifikat ist weder aktiviert noch dem Plug-in-Host-Symbol zugewiesen"]* Zeigt an, dass das CA-Zertifikat weder aktiviert noch dem Plug-in-Host zugewiesen ist.
+* *image:../media/enable_ca_good_icon.png["Symbol für die erfolgreiche Validierung des CA-Zertifikats"]* Zeigt an, dass das CA-Zertifikat erfolgreich validiert wurde.
+* *image:../media/enable_ca_failed_icon.png["Das Symbol für das CA-Zertifikat konnte nicht validiert werden"]* Zeigt an, dass das CA-Zertifikat nicht validiert werden konnte.
+* *image:../media/enable_ca_undefined_icon.png["Das Symbol für die Verbindungsinformationen konnte nicht abgerufen werden"]* Zeigt an, dass die Verbindungsinformationen nicht abgerufen werden konnten.
++
+
+NOTE: Wenn der Status gelb oder grün lautet, werden die Datensicherungsvorgänge erfolgreich abgeschlossen.
+
+

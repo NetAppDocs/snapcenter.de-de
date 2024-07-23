@@ -26,14 +26,21 @@ Mithilfe des folgenden Symbols in der Ansicht Kopien verwalten können Sie besti
 +
 Wenn Sie beispielsweise 6 Backups mit einer Richtlinie für die Aufbewahrung von nur 4 Backups erstellt haben, wird die Anzahl der angezeigten Backups 6 angezeigt.
 
-
-
 +
 |===
 
 
 | *Best Practice:* um sicherzustellen, dass die korrekte Anzahl replizierter Backups angezeigt wird, empfehlen wir, die Topologie zu aktualisieren. 
 |===
+
+
+
+
+Wenn Sie eine sekundäre Beziehung als SnapMirror Active Sync haben (ursprünglich als SnapMirror Business Continuity [SM-BC] veröffentlicht), werden die folgenden zusätzlichen Symbole angezeigt:
+
+* image:../media/topology_replica_site_up.png["Replikatstandort oben"] Impliziert, dass der Replikatstandort hochgefahren ist.
+* image:../media/topology_replica_site_down.png["Replikatstandort nicht verfügbar"]  Bedeutet, dass der Replikatstandort ausgefallen ist.
+* image:../media/topology_reestablished.png["Beziehung wird wiederhergestellt"] Impliziert, dass die sekundäre Spiegel- oder Vault-Beziehung nicht wiederhergestellt wurde.
 
 
 .Schritte
@@ -57,7 +64,12 @@ Wenn ein SnapLock-fähiges Backup durchgeführt wird, wird durch Klicken auf die
 Wenn die Applikationsressource über mehrere Volumes verteilt ist, ist die SnapLock-Ablaufzeit für das Backup die längste SnapLock-Ablaufzeit, die für einen Snapshot in einem Volume festgelegt ist. Die längste SnapLock-Ablaufzeit wird von ONTAP abgerufen.
 
 +
-Nach On-Demand-Backup, durch Klicken auf die Schaltfläche * Aktualisieren* aktualisiert die Details der Sicherung oder des Klons.
+Bei aktiver SnapMirror-Synchronisierung wird durch Klicken auf die Schaltfläche * Aktualisieren* das SnapCenter-Backup-Inventar aktualisiert, indem ONTAP sowohl für primäre als auch für Replikatstandorte abgefragt wird. Ein wöchentlicher Zeitplan führt diese Aktivität auch für alle Datenbanken durch, die die aktive SnapMirror Synchronisierung enthalten.
+
++
+** Bei aktiver SnapMirror Synchronisierung und nur für ONTAP 9.14.1 sollten die Beziehungen zwischen Async Mirror und Async MirrorVault zum neuen primären Ziel nach dem Failover manuell konfiguriert werden. Ab ONTAP 9.15.1 wird Async Mirror oder Async MirrorVault automatisch auf das neue primäre Ziel konfiguriert.nach dem Failover.
+** Nach dem Failover sollte ein Backup erstellt werden, damit SnapCenter den Failover erkennt. Sie können erst dann auf *Refresh* klicken, wenn ein Backup erstellt wurde.
+
 
 . Klicken Sie in der Ansicht Kopien verwalten auf *Backups* auf dem primären oder sekundären Speicher, um Details zu einem Backup anzuzeigen.
 +

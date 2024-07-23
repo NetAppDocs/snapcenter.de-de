@@ -26,7 +26,7 @@ Informationen darüber, wie Administratoren Benutzern Ressourcen zuweisen, finde
 +
 Der Standardwert ist false.
 
-* Weitere Informationen zu Voraussetzungen und Einschränkungen finden Sie unter SnapMirror Business Continuity (SM-BC) https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["Objektbeschränkungen für SnapMirror Business Continuity"].
+* Prüfen Sie die spezifischen Voraussetzungen und Einschränkungen von SnapMirror Active Sync. Weitere Informationen finden Sie unter https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["Objektgrenzen für die aktive SnapMirror Synchronisierung"].
 
 
 .Über diese Aufgabe
@@ -273,7 +273,7 @@ Aktualisieren Sie SnapMirror nach dem Erstellen einer lokalen Snapshot Kopie.
 
 . Wählen Sie diese Option aus, um Spiegelkopien von Backup-Sets auf einem anderen Volume (SnapMirror) zu erstellen.
 +
-Diese Option sollte für SnapMirror Business Continuity (SM-BC) oder für SnapMirror Sync (SM-S) aktiviert sein.
+Diese Option sollte für SnapMirror Active Sync aktiviert sein.
 
 +
 Während der sekundären Replizierung wird mit der SnapLock-Ablaufzeit die primäre SnapLock-Ablaufzeit geladen. Durch Klicken auf die Schaltfläche * Aktualisieren* auf der Seite Topologie wird die sekundäre und primäre SnapLock-Ablaufzeit aktualisiert, die von ONTAP abgerufen werden.

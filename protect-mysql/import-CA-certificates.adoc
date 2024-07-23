@@ -1,0 +1,60 @@
+---
+permalink: protect-mysql/import-CA-certificates.html 
+sidebar: sidebar 
+keywords: SnapCenter 
+summary: Importieren Sie die CA-Zertifikate des SnapCenter-Servers und der Windows-Host-Plug-ins 
+---
+= Importieren von CA-Zertifikaten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen die CA-Zertifikate mithilfe der Microsoft-Verwaltungskonsole (MMC) auf den SnapCenter-Server und die Windows-Host-Plug-ins importieren.
+
+.Schritte
+. Gehen Sie zur Microsoft Management Console (MMC) und klicken Sie dann auf *Datei* > *Snapin hinzufügen/entfernen*.
+. Wählen Sie im Fenster Snap-ins hinzufügen oder entfernen die Option *Zertifikate* und klicken Sie dann auf *Hinzufügen*.
+. Wählen Sie im Snap-in-Fenster Zertifikate die Option *Computerkonto* aus und klicken Sie dann auf *Fertig stellen*.
+. Klicken Sie Auf *Konsolenwurzel* > *Zertifikate – Lokaler Computer* > *Vertrauenswürdige Stammzertifizierungsbehörden* > *Zertifikate*.
+. Klicken Sie mit der rechten Maustaste auf den Ordner „Vertrauenswürdige Stammzertifizierungsstellen“ und wählen Sie dann *Alle Aufgaben* > *Import*, um den Importassistenten zu starten.
+. Füllen Sie den Assistenten wie folgt aus:
++
+|===
+| In diesem Fenster des Assistenten... | Gehen Sie wie folgt vor... 
+
+
+ a| 
+Privaten Schlüssel Importieren
+ a| 
+Wählen Sie die Option *Ja*, importieren Sie den privaten Schlüssel und klicken Sie dann auf *Weiter*.
+
+
+
+ a| 
+Dateiformat Importieren
+ a| 
+Keine Änderungen vornehmen; klicken Sie auf *Weiter*.
+
+
+
+ a| 
+Sicherheit
+ a| 
+Geben Sie das neue Passwort an, das für das exportierte Zertifikat verwendet werden soll, und klicken Sie dann auf *Weiter*.
+
+
+
+ a| 
+Abschließen des Assistenten zum Importieren von Zertifikaten
+ a| 
+Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*, um den Import zu starten.
+
+|===
++
+
+NOTE: Der Import des Zertifikats sollte mit dem privaten Schlüssel gebündelt werden (unterstützte Formate sind: *.pfx, *.p12 und *.p7b).
+
+. Wiederholen Sie Schritt 5 für den Ordner „persönlich“.
+

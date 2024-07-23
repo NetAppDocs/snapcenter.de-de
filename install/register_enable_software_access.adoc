@@ -1,0 +1,41 @@
+---
+permalink: install/register_enable_software_access.html 
+sidebar: sidebar 
+keywords: install, snapcenter software, install, register, new customer, NetApp account, enable 
+summary: Wenn Sie noch kein NetApp-Konto haben, führen Sie die folgenden Schritte aus, um sich für den Zugriff auf Software zu registrieren. 
+---
+= Registrieren Sie sich, um auf die SnapCenter Software zuzugreifen
+:allow-uri-read: 
+
+
+[role="lead"]
+Sie können auf die SnapCenter-Software zugreifen, wenn Sie noch kein NetApp-Konto besitzen und noch kein Amazon FSX for NetApp ONTAP oder Azure NetApp Files-Konto besitzen.
+
+.Bevor Sie beginnen
+* Sie sollten Zugriff auf die Unternehmens-E-Mail-ID haben.
+* Wenn Sie Azure NetApp Files verwenden, sollten Sie über die Azure-Abonnement-ID verfügen.
+* Wenn Sie Amazon FSX für NetApp ONTAP verwenden, sollten Sie die Dateisystem-ID Ihres FSX für ONTAP-Dateisystems haben.
+
+
+.Über diese Aufgabe
+Ihre Registrierung unterliegt der Informationsvalidierung und kann bis zu einem Tag dauern, bis ein neues Konto auf der NetApp Support Website (NSS) bestätigt und ein Upgrade durchgeführt wird, damit Sie über den „Gastzugriff“ vollen Zugriff erhalten.
+
+.Schritte
+. Klicken Sie hier, https://mysupport.netapp.com/site/user/registration[] um sich zu registrieren.
+. Geben Sie Ihre Firmen-E-Mail-ID ein, füllen Sie das Captcha aus und akzeptieren Sie die Datenschutzerklärung von NetApp und klicken Sie auf *Senden*.
+. Authentifizieren Sie die Registrierung, indem Sie das an Ihre E-Mail-ID gesendete OTP eingeben und auf *Weiter* klicken.
+. Geben Sie auf der Seite zum Abschluss der Registrierung die folgenden Details ein, um die Registrierung abzuschließen.
++
+.. Wählen Sie *NetApp-Kunde/Endbenutzer* aus.
+.. Geben Sie im Feld SERIENNUMMER eine der folgenden Werte ein:
++
+*** Azure-Abonnement-ID, wenn Sie Azure NetApp Files verwenden.
+*** Dateisystem-ID, wenn Sie Amazon FSX für NetApp ONTAP verwenden.
+
+
+
+
+
+
+
+NOTE: Sie können ein Ticket https://mysupport.netapp.com/site/help[] erstellen, wenn Sie während der Registrierung Probleme haben oder den Status kennen.

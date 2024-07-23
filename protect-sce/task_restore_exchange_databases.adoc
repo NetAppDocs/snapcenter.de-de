@@ -45,6 +45,7 @@ Der Wert des Schlüssels kann von Swagger über die API angezeigt werden: API /4
 Sie können die GET API verwenden, um den Wert der Taste anzuzeigen. SET-API wird nicht unterstützt.
 
 * Bei ONTAP Version 9.12.1 und niedriger übernehmen die im Rahmen der Wiederherstellung aus den SnapLock Vault Snapshots erstellten Klone die Verfallszeit von SnapLock Vault. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
+* Für die Wiederherstellung der aktiven Synchronisierung von SnapMirror müssen Sie das Backup vom primären Speicherort auswählen.
 
 
 .Schritte

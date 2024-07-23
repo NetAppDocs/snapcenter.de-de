@@ -1,0 +1,161 @@
+---
+section: protect-mysql
+title: MySQL schützen
+entries:
+- title: SnapCenter Plug-in für MySQL
+  entries:
+  - title: Übersicht über das SnapCenter Plug-in für MySQL
+    url: "/protect-mysql/snapcenter-plug-in-for-mysql-overview.html"
+  - title: Was Sie mit dem SnapCenter-Plug-in für MySQL tun können
+    url: "/protect-mysql/what-you-can-do-using-the-snapcenter-plug-in-for-mysql.html"
+  - title: SnapCenter Plug-in für MySQL Funktionen
+    url: "/protect-mysql/snapcenter-plug-in-for-mysql-features.html"
+  - title: Vom SnapCenter-Plug-in für MySQL unterstützte Storage-Typen
+    url: "/protect-mysql/storage-types-supported-by-snapcenter-plug-in-for-mysql.html"
+  - title: Mindestberechtigungen für ONTAP erforderlich
+    url: "/protect-mysql/minimum-privileges-required-for-mysql.html"
+  - title: Storage-Systeme für SnapMirror und SnapVault Replizierung vorbereiten
+    url: "/protect-mysql/prepare-storage-systems-for-snapmirror-and-snapvault-replication-for-plugin-for-mysql.html"
+  - title: Backup-Strategie für MySQL
+    entries:
+    - title: Backup-Strategie für MySQL definieren
+      url: "/protect-mysql/define-a-backup-strategy-for-mysql.html"
+    - title: Automatische Ermittlung von Ressourcen auf Linux-Host
+      url: "/protect-mysql/auto-discovery-of-resources-on-linux-host.html"
+    - title: Art der unterstützten Backups
+      url: "/protect-mysql/type-of-backups-supported.html"
+    - title: Wie das SnapCenter Plug-in für MySQL Snapshot Kopien von Konsistenzgruppen
+        verwendet
+      url: "/protect-mysql/how-snapcenter-plug-in-for-mysql-uses-consistency-group-snapshot-copies.html"
+    - title: So managt SnapCenter die Organisation von Daten-Backups
+      url: "/protect-mysql/housekeeping-of-log-backups.html"
+    - title: Überlegungen zur Festlegung von Backup-Zeitplänen für MySQL
+      url: "/protect-mysql/considerations-for-determining-backup-schedules-for-mysql.html"
+    - title: Anzahl der Backup-Jobs, die für MySQL benötigt werden
+      url: "/protect-mysql/number-of-backup-jobs-needed-for-mysql.html"
+    - title: Konventionen bei Backup-Namen
+      url: "/protect-mysql/backup-naming-conventions-for-plugin-for-mysql.html"
+  - title: Restore- und Recovery-Strategie für MySQL
+    entries:
+    - title: Definieren Sie eine Restore- und Recovery-Strategie für MySQL-Ressourcen
+      url: "/protect-mysql/define-a-restore-and-recovery-strategy-for-mysql-resources.html"
+    - title: Typen von Wiederherstellungsstrategien, die für manuell hinzugefügte
+        MySQL-Ressourcen unterstützt werden
+      url: "/protect-mysql/types-of-restore-strategies-supported-for-manually-added-mysql.html"
+    - title: Typen von Wiederherstellungsstrategien, die für automatisch erkannte
+        MySQL unterstützt werden
+      url: "/protect-mysql/types-of-restore-strategies-supported-for-auto-discovered-mysql.html"
+    - title: Arten von Wiederherstellungsvorgängen für automatisch ermitteltes MySQL
+      url: "/protect-mysql/types-of-restore-performed-for-auto-discovered-mysql.html"
+- title: Bereiten Sie die Installation des SnapCenter-Plug-ins für MySQL vor
+  entries:
+  - title: Installationsworkflow des SnapCenter Plug-ins für MySQL
+    url: "/protect-mysql/install-snapcenter-plug-in-for-mysql.html"
+  - title: Voraussetzungen für das Hinzufügen von Hosts und die Installation des SnapCenter
+      Plug-ins für MySQL
+    url: "/protect-mysql/prerequisites-to-adding-hosts-and-installing-snapcenter-plug-in-for-mysql.html"
+  - title: Hostanforderungen für die Installation des SnapCenter Plug-ins Pakets für
+      Windows
+    url: "/protect-mysql/host-requirements-to-install-snapcenter-plug-in-package-for-windows-mysql.html"
+  - title: Host-Anforderungen für die Installation des SnapCenter Plug-ins Pakets
+      für Linux
+    url: "/protect-mysql/host-requirements-to-install-snapcenter-plug-in-package-for-linux.html"
+  - title: Anmeldedaten für das SnapCenter-Plug-in für MySQL einrichten
+    url: "/protect-mysql/set-up-credentials-for-snapcenter-plug-in-for-mysql.html"
+  - title: Installieren Sie das SnapCenter-Plug-in für MySQL
+    entries:
+    - title: Fügen Sie Hosts hinzu und installieren Sie Plug-in-Pakete auf Remote-Hosts
+      url: "/protect-mysql/add-hosts-and-install-plug-in-packages-on-remote-hosts-mysql.html"
+    - title: Installieren Sie SnapCenter Plug-in-Pakete für Linux oder Windows auf
+        mehreren Remote Hosts mithilfe von Cmdlets
+      url: "/protect-mysql/install-snapcenter-plug-in-packages-for-linux-or-windows-on-multiple-remote-hosts-using-cmdlets-mysql.html"
+    - title: Installieren Sie das SnapCenter-Plug-in für MySQL auf Linux-Hosts über
+        die Befehlszeilenschnittstelle
+      url: "/protect-mysql/install-the-snapcenter-plug-in-for-mysql-on-linux-hosts-using-the-command-line-interface.html"
+    - title: Überwachen Sie den Installationsstatus des SnapCenter Plug-in-Pakets
+      url: "/protect-mysql/monitor-the-status-of-installing-plugin-for-mysql.html"
+  - title: Konfigurieren Sie das CA-Zertifikat
+    entries:
+    - title: ZertifikatCSR-Datei erstellen
+      url: "/protect-mysql/generate-CA-certificate-CSR-file.html"
+    - title: Importieren von CA-Zertifikaten
+      url: "/protect-mysql/import-CA-certificates.html"
+    - title: Abrufen des Daumenabdrucks für das CA-Zertifikat
+      url: "/protect-mysql/get-the-CA-certificate-thumbprint.html"
+    - title: Konfigurieren Sie das CA-Zertifikat mit den Windows-Host-Plug-in-Diensten
+      url: "/protect-mysql/configure-CA-certificate-with-Windows-host-plug-in-services.html"
+    - title: Konfigurieren Sie das CA-Zertifikat für den SnapCenter-MySQL-Plug-ins-Dienst
+        auf dem Linux-Host
+      url: "/protect-mysql/configure-CA-certificate-for-mysql-on-Linux-host.html"
+    - title: Konfigurieren Sie das CA-Zertifikat für den SnapCenter-MySQL-Plug-ins-Dienst
+        auf dem Windows-Host
+      url: "/protect-mysql/configure-CA-certificate-for-mysql-on-windows-host.html"
+    - title: Aktivieren Sie CA-Zertifikate für Plug-ins
+      url: "/protect-mysql/enable-ca-certificates-for-plug-ins.html"
+- title: Bereiten Sie sich auf die Datensicherung vor
+  entries:
+  - title: Voraussetzungen für die Verwendung des SnapCenter-Plug-ins für MySQL
+    url: "/protect-mysql/prerequisites-for-using-snapcenter-plug-in-for-mysql.html"
+  - title: Wie Ressourcen, Ressourcengruppen und Richtlinien zum Schutz von MySQL
+      verwendet werden
+    url: "/protect-mysql/how-resources-resource-groups-and-policies-are-used-for-protecting-mysql.html"
+- title: Backup von MySQL Ressourcen
+  entries:
+  - title: Workflow sichern
+    url: "/protect-mysql/back-up-mysql-resources.html"
+  - title: Automatische Erkennung von Datenbanken
+    url: "/protect-mysql/discover-the-databases-automatically.html"
+  - title: Fügen Sie dem Plug-in-Host manuell Ressourcen hinzu
+    url: "/protect-mysql/add-resources-manually-to-the-plug-in-host.html"
+  - title: Backup-Richtlinien für MySQL erstellen
+    url: "/protect-mysql/create-backup-policies-for-mysql.html"
+  - title: Erstellen von Ressourcengruppen und Anhängen von Richtlinien
+    url: "/protect-mysql/create-resource-groups-and-attach-policies.html"
+  - title: Backup von MySQL
+    url: "/protect-mysql/back-up-mysql.html"
+  - title: Sichern von Ressourcengruppen
+    url: "/protect-mysql/back-up-resource-groups-mysql.html"
+  - title: Erstellen Sie eine Storage-Systemverbindung und Zugangsdaten mit PowerShell
+      Cmdlets für MySQL
+    url: "/protect-mysql/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-mysql.html"
+  - title: Sichern Sie Datenbanken mit PowerShell Cmdlets
+    url: "/protect-mysql/back-up-databases-using-powershell-cmdlets-mysql.html"
+  - title: Monitoring von Backup-Vorgängen
+    entries:
+    - title: Überwachen Sie Backup-Vorgänge auf der Seite SnapCenter-Jobs
+      url: "/protect-mysql/monitor-mysql-backup-operations.html"
+    - title: Überwachen Sie die Vorgänge im Teilfenster „Aktivität“
+      url: "/protect-mysql/monitor-dataprotection-operations-on-mysql-in-the-activity-pane.html"
+  - title: Abbrechen der Backup-Vorgänge
+    url: "/protect-mysql/cancel-backup-operations-for-mysql.html"
+  - title: Zeigen Sie auf der Seite Topologie Backups und Klone der MySQL-Datenbank
+      an
+    url: "/protect-mysql/view-mysql-database-backups-and-clones-in-the-topology-page.html"
+- title: Stellen Sie MySQL wieder her
+  entries:
+  - title: Wiederherstellung des Workflows
+    url: "/protect-mysql/restore-mysql.html"
+  - title: Wiederherstellen eines manuell hinzugefügten Ressourcen-Backups
+    url: "/protect-mysql/restore-and-recover-a-manually-added-resource-backup.html"
+  - title: Stellen Sie ein automatisch ermittelte Datenbank-Backup wieder her
+    url: "/protect-mysql/restore-and-recover-an-auto-discovered-database-backup.html"
+  - title: Stellen Sie MySQL mit PowerShell Cmdlets wieder her
+    url: "/protect-mysql/restore-mysql-using-powershell-cmdlets.html"
+  - title: Stellen Sie Ressourcen mithilfe von PowerShell Cmdlets wieder her
+    url: "/protect-mysql/restore-and-recover-resources-using-powershell-cmdlets-mysql.html"
+  - title: Überwachen von Restore-Vorgängen
+    url: "/protect-mysql/monitor-mysql-restore-operations.html"
+- title: Klonen von MySQL-Ressourcen-Backups
+  entries:
+  - title: Klon-Workflow
+    url: "/protect-mysql/clone-mysql-resource-backups.html"
+  - title: Klonen eines MySQL-Datenbank-Backups
+    url: "/protect-mysql/clone-mysql-backup.html"
+  - title: Klonen Sie MySQL-Datenbank-Backups mit PowerShell Cmdlets
+    url: "/protect-mysql/clone-mysql-backups-using-powershell-cmdlets.html"
+  - title: Überwachen Sie Klonvorgänge in SnapCenter
+    url: "/protect-mysql/monitor-mysql-clone-operations.html"
+  - title: Teilen Sie einen Klon auf
+    url: "/protect-mysql/split-a-clone-for-mysql.html"
+  - title: Löschen oder teilen Sie MySQL-Datenbankklone nach dem Upgrade von SnapCenter
+    url: "/protect-mysql/delete-or-split-mysql-clones-after-upgrading-snapcenter.html"

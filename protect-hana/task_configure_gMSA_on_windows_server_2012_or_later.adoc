@@ -2,20 +2,20 @@
 permalink: protect-hana/task_configure_gMSA_on_windows_server_2012_or_later.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Mit Windows Server 2012 oder höher können Sie ein Group Managed Service Account \(gMSA\) erstellen, das über ein verwaltetes Domain-Konto eine automatisierte Verwaltung von Service-Konten ermöglicht.' 
+summary: 'Mit Windows Server 2016 oder höher können Sie ein Group Managed Service Account \(gMSA\) erstellen, das über ein verwaltetes Domain-Konto eine automatisierte Verwaltung von Service-Konten ermöglicht.' 
 ---
-= Konfigurieren Sie gMSA unter Windows Server 2012 oder höher
+= Konfigurieren Sie gMSA unter Windows Server 2016 oder höher
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Mit Windows Server 2012 oder höher können Sie ein Group Managed Service Account (gMSA) erstellen, das über ein verwaltetes Domain-Konto eine automatisierte Verwaltung von Service-Konten ermöglicht.
+Mit Windows Server 2016 oder höher können Sie ein Group Managed Service Account (gMSA) erstellen, das über ein verwaltetes Domain-Konto eine automatisierte Verwaltung von Service-Konten ermöglicht.
 
 .Bevor Sie beginnen
-* Sie sollten einen Windows Server 2012 oder höher Domänencontroller haben.
-* Sie sollten einen Windows Server 2012 oder höher-Host haben, der Mitglied der Domain ist.
+* Sie sollten einen Windows Server 2016 oder höher Domänencontroller haben.
+* Sie sollten einen Windows Server 2016 oder höher-Host haben, der Mitglied der Domain ist.
 
 
 .Schritte

@@ -1,0 +1,95 @@
+---
+permalink: protect-postgresql/add-resources-manually-to-the-plug-in-host.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for Postgresql 
+summary: Die automatische Erkennung wird für bestimmte PostgreSQL-Instanzen nicht unterstützt. Sie müssen diese Ressourcen manuell hinzufügen. 
+---
+= Fügen Sie dem Plug-in-Host manuell Ressourcen hinzu
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die automatische Erkennung wird auf dem Windows-Host nicht unterstützt. Sie müssen PostgreSQL-Cluster-Ressourcen manuell hinzufügen.
+
+.Bevor Sie beginnen
+* Sie müssen Aufgaben wie die Installation des SnapCenter-Servers, das Hinzufügen von Hosts und das Einrichten von Speichersystemverbindungen abgeschlossen haben.
+
+
+.Über diese Aufgabe
+Die automatische Erkennung wird für die folgenden Konfigurationen nicht unterstützt:
+
+* RDM- und VMDK-Layouts
+
+
+.Schritte
+. Wählen Sie im linken Navigationsbereich das SnapCenter-Plug-in für PostgreSQL aus der Dropdown-Liste aus, und klicken Sie dann auf *Ressourcen*.
+. Klicken Sie auf der Seite Ressourcen auf *PostgreSQL-Ressourcen hinzufügen*.
+. Führen Sie auf der Seite „Ressourcendetails bereitstellen“ die folgenden Aktionen durch:
++
+|===
+| Für dieses Feld... | Tun Sie das... 
+
+
+ a| 
+Name
+ a| 
+Geben Sie den Cluster-Namen an.
+
+
+
+ a| 
+Host-Name
+ a| 
+Geben Sie den Hostnamen ein.
+
+
+
+ a| 
+Typ
+ a| 
+Wählen Sie Cluster aus.
+
+
+
+ a| 
+Instanz
+ a| 
+Geben Sie den Namen der Instanz an, die das übergeordnete Objekt des Clusters ist.
+
+
+
+ a| 
+Anmeldedaten
+ a| 
+Wählen Sie die Anmeldeinformationen aus, oder fügen Sie Informationen zu den Anmeldeinformationen hinzu.
+
+Dies ist optional.
+
+|===
+. Wählen Sie auf der Seite „Storage Footprint bereitstellen“ einen Speichertyp aus und wählen Sie ein oder mehrere Volumes, LUNs und qtrees aus, und klicken Sie dann auf *Save*.
++
+Optional: Klicken Sie auf das Symbol *image:../media/add_policy_from_resourcegroup.gif[""]* Symbol, um weitere Volumes, LUNs und qtrees von anderen Speichersystemen hinzuzufügen.
+
+. Optional: Geben Sie auf der Seite Resource Settings für Ressourcen auf dem Windows-Host benutzerdefinierte Schlüssel-Wert-Paare für PostgreSQL-Plug-in ein
+. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
++
+Die Cluster werden zusammen mit Informationen wie dem Hostnamen, zugehörigen Ressourcengruppen und Richtlinien sowie dem Gesamtstatus angezeigt
+
+
+
+Wenn Sie Benutzern Zugriff auf Ressourcen gewähren möchten, müssen Sie den Benutzern die Ressourcen zuweisen. Auf diese Weise können Benutzer die Aktionen ausführen, für die sie über Berechtigungen für die ihnen zugewiesenen Assets verfügen.
+
+link:https://docs.netapp.com/us-en/snapcenter/install/task_add_a_user_or_group_and_assign_role_and_assets.html["Fügen Sie einen Benutzer oder eine Gruppe hinzu und weisen Sie Rollen und Assets zu"]
+
+.Nachdem Sie fertig sind
+* Nachdem Sie die Cluster hinzugefügt haben, können Sie die Details zum PostgreSQL-Cluster ändern.
+* Die migrierten Ressourcen (Tablespace und Cluster) von SnapCenter 5.0 werden in SnapCenter 6.0 als PostgreSQL-Cluster-Typ gekennzeichnet.
+* Wenn Sie die manuell hinzugefügten Ressourcen ändern, die von SnapCenter 5.0 oder darunter migriert werden, gehen Sie auf der Seite *Ressourceneinstellungen* für benutzerdefinierte Schlüsselwertpaare folgendermaßen vor:
++
+** Geben Sie den Begriff "PORT" im Feld *Name* an.
+** Geben Sie die Portnummer im Feld *Wert* an.
+
+
+

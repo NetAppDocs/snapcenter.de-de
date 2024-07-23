@@ -1,0 +1,97 @@
+---
+permalink: protect-postgresql/back-up-clusters-using-powershell-cmdlets-postgresql.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for PostgreSQL 
+summary: Bei der Sicherung eines Clusters müssen Sie eine Verbindung mit dem SnapCenter-Server herstellen, Ressourcen hinzufügen, eine Richtlinie hinzufügen, eine Backup-Ressourcengruppe erstellen und ein Backup erstellen. 
+---
+= Backup von Clustern mit PowerShell Cmdlets
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bei der Sicherung eines Clusters müssen Sie eine Verbindung mit dem SnapCenter-Server herstellen, Ressourcen hinzufügen, eine Richtlinie hinzufügen, eine Backup-Ressourcengruppe erstellen und ein Backup erstellen.
+
+.Bevor Sie beginnen
+* Sie müssen die PowerShell Umgebung vorbereitet haben, um die PowerShell Cmdlets auszuführen.
+* Sie müssen die Speichersystemverbindung hinzugefügt und Anmeldedaten erstellt haben.
+
+
+.Schritte
+. Starten Sie eine Verbindungssitzung mit dem SnapCenter-Server für einen bestimmten Benutzer, indem Sie das Cmdlet "Open-SmConnection" verwenden.
++
+[listing]
+----
+PS C:\> Open-SmConnection
+----
++
+Die Eingabeaufforderung für Benutzername und Passwort wird angezeigt.
+
+. Fügen Sie manuelle Ressourcen mit dem Cmdlet "Add-SmResources" hinzu.
++
+Dieses Beispiel zeigt, wie eine PostgreSQL-Instanz hinzugefügt wird:
+
++
+[listing]
+----
+PS C:\> Add-SmResource -HostName 10.32.212.13 -PluginCode PostgreSQL -ResourceType Instance -ResourceName postgresqlinst1 -StorageFootPrint (@{"VolumeName"="winpostgresql01_data01";"LUNName"="winpostgresql01_data01";"StorageSystem"="scsnfssvm"}) -MountPoints "D:\"
+----
+. Erstellen Sie mithilfe des Cmdlet "Add-SmPolicy" eine Backup-Richtlinie.
+. Schützen Sie die Ressource oder fügen Sie eine neue Ressourcengruppe zu SnapCenter mit dem Cmdlet "Add-SmResourceGroup" hinzu.
+. Initiieren Sie einen neuen Sicherungsauftrag mit dem Cmdlet "New-SmBackup".
++
+Dieses Beispiel zeigt, wie eine Ressourcengruppe gesichert werden kann:
+
++
+[listing]
+----
+C:\PS> New-SMBackup -ResourceGroupName 'ResourceGroup_wback-up-clusters-using-powershell-cmdlets-postgresql.adocith_Resources'  -Policy postgresql_policy1
+----
++
+Dieses Beispiel sichert eine geschützte Ressource:
+
++
+[listing]
+----
+C:\PS> New-SMBackup -Resources @{"Host"="10.232.204.42";"Uid"="MDC\SID";"PluginName"="postgresql"} -Policy postgresql_policy2
+----
+. Überwachen Sie den Job-Status (ausgeführt, abgeschlossen oder fehlgeschlagen) mit dem Cmdlet "Get-smJobSummaryReport".
++
+[listing]
+----
+PS C:\> Get-smJobSummaryReport -JobID 123
+----
+. Überwachen Sie die Details zu Backup-Jobs wie Backup-ID, Backup-Name zum Wiederherstellen oder Klonen mit dem Cmdlet "Get-SmBackupReport".
++
+[listing]
+----
+PS C:\> Get-SmBackupReport -JobId 351
+Output:
+BackedUpObjects           : {DB1}
+FailedObjects             : {}
+IsScheduled               : False
+HasMetadata               : False
+SmBackupId                : 269
+SmJobId                   : 2361
+StartDateTime             : 10/4/2016 11:20:45 PM
+EndDateTime               : 10/4/2016 11:21:32 PM
+Duration                  : 00:00:46.2536470
+CreatedDateTime           : 10/4/2016 11:21:09 PM
+Status                    : Completed
+ProtectionGroupName       : Verify_ASUP_Message_windows
+SmProtectionGroupId       : 211
+PolicyName                : test2
+SmPolicyId                : 20
+BackupName                : Verify_ASUP_Message_windows_scc54_10-04-2016_23.20.46.2758
+VerificationStatus        : NotVerified
+VerificationStatuses      :
+SmJobError                :
+BackupType                : SCC_BACKUP
+CatalogingStatus          : NotApplicable
+CatalogingStatuses        :
+ReportDataCreatedDateTime :
+----
+
+
+Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ können Sie auch auf die https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter Software Cmdlet Referenzhandbuch"^].

@@ -1,0 +1,23 @@
+---
+permalink: protect-postgresql/define-a-restore-and-recovery-strategy-for-postgresql-resources.html 
+sidebar: sidebar 
+keywords: restore and recovery strategy, postgresql resources, snapcenter 
+summary: Sie müssen vor dem Wiederherstellen und Wiederherstellen des Clusters eine Strategie definieren, damit Sie Wiederherstellungs- und Wiederherstellungsvorgänge erfolgreich durchführen können. 
+---
+= Definieren Sie eine Wiederherstellungs- und Wiederherstellungsstrategie für PostgreSQL-Ressourcen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen vor dem Wiederherstellen und Wiederherstellen des Clusters eine Strategie definieren, damit Sie Wiederherstellungs- und Wiederherstellungsvorgänge erfolgreich durchführen können.
+
+
+NOTE: Es wird nur die manuelle Wiederherstellung des Clusters unterstützt.
+
+.Schritte
+. Ermitteln Sie die Wiederherstellungsstrategien, die für manuell hinzugefügte PostgreSQL-Ressourcen unterstützt werden
+. Ermitteln Sie die für automatisch erkannte PostgreSQL-Cluster unterstützten Wiederherstellungsstrategien
+. Geben Sie die Art der Recovery-Vorgänge an, die Sie ausführen möchten.
+

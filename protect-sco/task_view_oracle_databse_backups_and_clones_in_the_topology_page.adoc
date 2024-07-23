@@ -30,7 +30,7 @@ Die Anzahl der angezeigten Backups umfasst die Backups, die aus dem sekundären 
 
 NOTE: Klone eines Backups einer versionsflexiblen Spiegelung auf einem Volume vom Typ Mirror werden in der Topologieansicht angezeigt, aber die Anzahl der gespiegelten Backups in der Topologieansicht umfasst nicht das versionsflexible Backup.
 
-Wenn Sie eine sekundäre Beziehung als SnapMirror Business Continuity (SM-BC) haben, werden die folgenden zusätzlichen Symbole angezeigt:
+Wenn Sie eine sekundäre Beziehung als SnapMirror Active Sync haben (ursprünglich als SnapMirror Business Continuity [SM-BC] veröffentlicht), werden die folgenden zusätzlichen Symbole angezeigt:
 
 * image:../media/topology_replica_site_up.png["Replikatstandort oben"] Impliziert, dass der Replikatstandort hochgefahren ist.
 * image:../media/topology_replica_site_down.png["Replikatstandort nicht verfügbar"]  Bedeutet, dass der Replikatstandort ausgefallen ist.
@@ -59,10 +59,10 @@ Wenn ein SnapLock-fähiges Backup durchgeführt wird, wird durch Klicken auf die
 Wenn die Applikationsressource über mehrere Volumes verteilt ist, ist die SnapLock-Ablaufzeit für das Backup die längste SnapLock-Ablaufzeit, die für einen Snapshot in einem Volume festgelegt ist. Die längste SnapLock-Ablaufzeit wird von ONTAP abgerufen.
 
 +
-Wenn Sie für SnapMirror Business Continuity (SM-BC) auf die Schaltfläche * Aktualisieren* klicken, wird das SnapCenter-Backup-Inventar aktualisiert, indem Sie ONTAP sowohl für primäre als auch für Replikatstandorte abfragen. Ein wöchentlicher Zeitplan führt diese Aktivität auch für alle Datenbanken durch, die eine SM-BC-Beziehung enthalten.
+Bei aktiver SnapMirror-Synchronisierung wird durch Klicken auf die Schaltfläche * Aktualisieren* das SnapCenter-Backup-Inventar aktualisiert, indem ONTAP sowohl für primäre als auch für Replikatstandorte abgefragt wird. Ein wöchentlicher Zeitplan führt diese Aktivität auch für alle Datenbanken durch, die die aktive SnapMirror Synchronisierung enthalten.
 
 +
-** Bei SM-BC sollten die Beziehungen zwischen Async Mirror, Vault und MirrorVault zum neuen primären Ziel nach dem Failover manuell konfiguriert werden.
+** Bei aktiver SnapMirror Synchronisierung und nur für ONTAP 9.14.1 sollten die Beziehungen zwischen Async Mirror und Async MirrorVault zum neuen primären Ziel nach dem Failover manuell konfiguriert werden. Ab ONTAP 9.15.1 wird Async Mirror oder Async MirrorVault automatisch auf das neue primäre Ziel konfiguriert.
 ** Nach dem Failover sollte ein Backup erstellt werden, damit SnapCenter den Failover erkennt. Sie können erst dann auf *Refresh* klicken, wenn ein Backup erstellt wurde.
 
 
@@ -87,4 +87,4 @@ Wenn der für SnapmirrorStatusUpdateWaitTime zugewiesene Wert kleiner ist, werde
 
 Die Informationen zu den Parametern, die mit dem Befehl und deren Beschreibungen verwendet werden können, können durch Ausführen von get-Help _Command_Name_ abgerufen werden.
 
-Alternativ können Sie auch auf die verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP2886896["SnapCenter Software Command Reference Guide"^] Oder https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["SnapCenter Software Cmdlet Referenzhandbuch"^].
+Alternativ können Sie auch auf oder verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP3323470["SnapCenter Software Command Reference Guide"^] https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter Software Cmdlet Referenzhandbuch"^].

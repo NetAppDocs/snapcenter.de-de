@@ -16,7 +16,7 @@ Bevor Sie das SnapCenter-Plug-in für die SAP HANA-Datenbank verwenden, muss der
 * Installation und Konfiguration von SnapCenter Server
 * Melden Sie sich beim SnapCenter-Server an.
 * Konfigurieren Sie die SnapCenter Umgebung, indem Sie Storage-Systemverbindungen hinzufügen und ggf. Anmeldedaten erstellen.
-* Installieren Sie Java 1.7 oder Java 1.8 auf Ihrem Linux- oder Windows-Host.
+* Installieren Sie Java 11 auf Ihrem Linux- oder Windows-Host.
 +
 Sie müssen den Java-Pfad in der Umgebungspfadvariable des Host-Rechners festlegen.
 

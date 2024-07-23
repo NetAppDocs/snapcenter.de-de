@@ -13,6 +13,15 @@ summary: Im Falle eines Datenverlusts können Sie SnapCenter verwenden, um Daten
 [role="lead"]
 Im Falle eines Datenverlustes können Sie SnapCenter verwenden, um Unix-Dateisysteme wiederherzustellen.
 
+*Über diese Aufgabe*
+
+* Sie sollten die folgenden Befehle ausführen, um die Verbindung zum SnapCenter-Server herzustellen, die Backups aufzulisten, seine Informationen abzurufen und die Sicherung wiederherzustellen.
++
+Die Informationen zu den Parametern, die mit dem Befehl und deren Beschreibungen verwendet werden können, können durch Ausführen von get-Help _Command_Name_ abgerufen werden. Alternativ können Sie auch auf die https://library.netapp.com/ecm/ecm_download_file/ECMLP3323470["SnapCenter Software Command Reference Guide"^].
+
+* Für die Wiederherstellung der aktiven Synchronisierung von SnapMirror müssen Sie das Backup vom primären Speicherort auswählen.
+
+
 .Schritte
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
 . Wählen Sie auf der Seite Ressourcen entweder *Pfad* oder *Ressourcengruppe* aus der Liste *Ansicht* aus.

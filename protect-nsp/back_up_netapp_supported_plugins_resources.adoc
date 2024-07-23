@@ -1,0 +1,20 @@
+---
+permalink: protect-nsp/back_up_netapp_supported_plugins_resources.html 
+sidebar: sidebar 
+keywords: backup 
+summary: Der Backup-Workflow umfasst die Planung, die Ermittlung der Backup-Ressourcen, das Management von Backup-Richtlinien, das Erstellen von Ressourcengruppen und das Anhängen von Richtlinien, das Erstellen von Backups und das Monitoring der Betriebsprozesse. 
+---
+= Backup von von NetApp unterstützten Plug-ins-Ressourcen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Backup-Workflow umfasst die Planung, die Ermittlung der Backup-Ressourcen, das Management von Backup-Richtlinien, das Erstellen von Ressourcengruppen und das Anhängen von Richtlinien, das Erstellen von Backups und das Monitoring der Betriebsprozesse.
+
+Der folgende Workflow zeigt die Reihenfolge, in der Sie den Sicherungsvorgang durchführen müssen:
+
+image::../media/scc_backup_workflow.png[Backup-Workflow]
+
+Außerdem können Sie PowerShell Cmdlets manuell oder in Skripten verwenden, um Backup-, Wiederherstellungs- und Klonvorgänge durchzuführen. Detaillierte Informationen zu PowerShell Cmdlets finden Sie in der SnapCenter Cmdlet-Hilfe oder im https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter Software Cmdlet Referenzhandbuch"]

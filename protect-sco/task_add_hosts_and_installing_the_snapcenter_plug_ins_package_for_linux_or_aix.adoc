@@ -17,6 +17,9 @@ Auf der Seite „Host hinzufügen“ können Sie Hosts hinzufügen, und dann das
 
 Sie können einen Host hinzufügen und Plug-in-Pakete für einen einzelnen Host oder für ein Cluster installieren. Wenn Sie das Plug-in auf einem Cluster installieren (Oracle RAC), wird das Plug-in auf allen Knoten des Clusters installiert. Für Oracle RAC One Node sollten Sie das Plug-in sowohl auf aktiven als auch auf passiven Knoten installieren.
 
+
+NOTE: Nur passwortbasierte Authentifizierung wird unterstützt, wenn Sie das Plug-in auf einem Oracle RAC installieren. Die auf SSH-Schlüssel basierende Authentifizierung wird nicht unterstützt.
+
 Sie sollten einer Rolle zugewiesen werden, die über die Berechtigungen zum Installieren und Deinstallieren des Plug-ins verfügt, z. B. über die Rolle „SnapCenter Admin“.
 
 

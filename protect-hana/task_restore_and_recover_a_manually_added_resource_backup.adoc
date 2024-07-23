@@ -33,6 +33,7 @@ NOTE: Wenn die Befehle in der Befehlsliste nicht vorhanden sind, schlägt der Vo
 * Dateibasierte Backup-Kopien können nicht aus SnapCenter wiederhergestellt werden.
 * Nach einem Upgrade auf SnapCenter 4.3 können die in SnapCenter 4.2 erstellten Backups wiederhergestellt werden, können aber nicht wiederhergestellt werden. Zur Wiederherstellung der in SnapCenter 4.2 erstellten Backups muss HANA Studio oder HANA-Recovery-Skripte außerhalb von SnapCenter verwendet werden.
 * Bei ONTAP Version 9.12.1 und niedriger übernehmen die im Rahmen der Wiederherstellung aus den SnapLock Vault Snapshots erstellten Klone die Verfallszeit von SnapLock Vault. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
+* Für die Wiederherstellung der aktiven Synchronisierung von SnapMirror müssen Sie das Backup vom primären Speicherort auswählen.
 
 
 .Schritte

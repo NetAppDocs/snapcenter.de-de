@@ -63,22 +63,7 @@ Verwenden Sie für ein integriertes lokales Format für den Admin-Benutzernamen 
 
 
 
-== Schritt 4: Fügen Sie eine kapazitätsbasierte SnapCenter Lizenz hinzu
-
-. Klicken Sie im linken Fensterbereich der SnapCenter-Benutzeroberfläche auf *Einstellungen > Software*, und klicken Sie dann im Abschnitt Lizenz auf *+*.
-. Wählen Sie eine von zwei Methoden für den Erwerb der Lizenz aus:
-+
-** Geben Sie Ihre Anmeldedaten für die NetApp Support Site ein, um Lizenzen zu importieren.
-** Navigieren Sie zum Speicherort der NetApp Lizenzdatei und klicken Sie auf *Öffnen*.
-
-
-. Verwenden Sie auf der Seite Benachrichtigungen des Assistenten den standardmäßigen Kapazitätsschwellenwert von 90 Prozent.
-. Klicken Sie Auf *Fertig Stellen*.
-
-
-
-
-== Schritt 5: Einrichten von Verbindungen zum Storage-System
+== Schritt 4: Einrichten von Verbindungen zum Storage-System
 
 . Klicken Sie im linken Fensterbereich auf *Speichersysteme > Neu*.
 . Führen Sie auf der Seite Add Storage System folgende Schritte aus:

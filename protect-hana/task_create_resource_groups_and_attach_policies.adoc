@@ -16,6 +16,8 @@ Eine Ressourcengruppe ist der Container, dem Sie Ressourcen hinzufügen müssen,
 .Über diese Aufgabe
 * Zur Erstellung von SAP HANA System-Replikations-Backups wird empfohlen, alle Ressourcen des SAP HANA-Systems zu einer Ressourcengruppe hinzuzufügen. So wird für ein nahtloses Backup im Takeover-Failback-Modus gesorgt.
 * Bei ONTAP Version 9.12.1 und niedriger übernehmen die im Rahmen der Wiederherstellung aus den SnapLock Vault Snapshots erstellten Klone die Verfallszeit von SnapLock Vault. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
+* Das Hinzufügen neuer Datenbanken ohne SnapMirror Active Sync zu einer vorhandenen Ressourcengruppe, die Ressourcen mit SnapMirror Active Sync enthält, wird nicht unterstützt.
+* Das Hinzufügen neuer Datenbanken zu einer vorhandenen Ressourcengruppe im Failover-Modus von SnapMirror Active Sync wird nicht unterstützt. Sie können der Ressourcengruppe nur im regulären oder Failback-Status Ressourcen hinzufügen.
 
 
 .Schritte

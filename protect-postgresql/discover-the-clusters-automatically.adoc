@@ -1,0 +1,47 @@
+---
+permalink: protect-postgresql/discover-the-clusters-automatically.html 
+sidebar: sidebar 
+keywords: credentials 
+summary: Ressourcen sind PostgreSQL-Cluster auf dem Linux-Host, die von SnapCenter verwaltet werden. Sie können diese Ressourcen zu Ressourcengruppen hinzufügen, um Datensicherungsvorgänge auszuführen, nachdem Sie die verfügbaren PostgreSQL-Cluster erkannt haben. 
+---
+= Automatische Erkennung der Cluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ressourcen sind PostgreSQL-Cluster auf dem Linux-Host, die von SnapCenter verwaltet werden. Sie können die Ressourcen zu Ressourcengruppen hinzufügen, um Datensicherungsvorgänge auszuführen, nachdem Sie die verfügbaren PostgreSQL-Cluster erkannt haben.
+
+.Bevor Sie beginnen
+* Sie müssen bereits Aufgaben wie die Installation des SnapCenter-Servers, das Hinzufügen von Hosts und das Einrichten der Verbindungen des Speichersystems ausgeführt haben.
+* Das SnapCenter Plug-in für PostgreSQL unterstützt keine automatische Erkennung der Ressourcen in virtuellen RDM/VMDK-Umgebungen.
+
+
+.Über diese Aufgabe
+* Nach der Installation des Plug-ins werden alle Cluster auf diesem Linux-Host automatisch erkannt und auf der Seite „Ressourcen“ angezeigt.
+* Nur Cluster werden automatisch erkannt.
+
+
+Die automatisch ermittelten Ressourcen können nicht geändert oder gelöscht werden.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das Plug-in für PostgreSQL aus der Liste aus.
+. Wählen Sie auf der Seite Ressourcen den Ressourcentyp aus der Liste Ansicht aus.
+. (Optional) Klicken Sie Auf *image:../media/filter_icon.png["Filtersymbol"]*, und wählen Sie dann den Hostnamen aus.
++
+Sie können dann auf * klickenimage:../media/filter_icon.png["Filtersymbol"]* Zum Schließen des Filterfensters.
+
+. Klicken Sie auf *Ressourcen aktualisieren*, um die auf dem Host verfügbaren Ressourcen zu ermitteln.
++
+Die Ressourcen werden zusammen mit Informationen wie Ressourcentyp, Hostname, zugeordnete Ressourcengruppen, Backup-Typ, Richtlinien und Gesamtstatus angezeigt.
+
++
+** Wenn sich das Cluster auf einem NetApp-Speicher befindet und nicht geschützt ist, wird in der Spalte Gesamtstatus nicht geschützt angezeigt.
+** Wenn sich das Cluster auf einem NetApp-Speichersystem befindet und geschützt ist und kein Backup durchgeführt wird, wird in der Spalte Gesamtstatus die Meldung Sicherung nicht ausgeführt angezeigt. Der Status ändert sich ansonsten auf „Sicherung fehlgeschlagen“ oder „Sicherung erfolgreich“, basierend auf dem letzten Backup-Status.
+
+
+
+
+
+IMPORTANT: Sie müssen die Ressourcen aktualisieren, wenn die Cluster außerhalb von SnapCenter umbenannt werden.

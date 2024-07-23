@@ -13,10 +13,7 @@ summary: SnapCenter-Software kann auf mehreren Browsern verwendet werden.
 [role="lead"]
 SnapCenter-Software kann auf mehreren Browsern verwendet werden.
 
-* Chrom
-+
-Wenn sie v66 verwenden, kann das SnapCenter GUI möglicherweise nicht gestartet werden.
-
+* Chrome-Version 125 und höher
 * Internet Explorer
 +
 Die SnapCenter UI wird nicht richtig geladen, wenn Sie IE 10 oder frühere Versionen verwenden. Sie sollten ein Upgrade auf IE 11 durchführen.

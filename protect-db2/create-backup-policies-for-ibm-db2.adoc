@@ -1,0 +1,87 @@
+---
+permalink: protect-db2/create-backup-policies-for-ibm-db2.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for IBM Db2 
+summary: Bevor Sie IBM DB2-Datenbankressourcen mit SnapCenter sichern, müssen Sie eine Sicherungsrichtlinie für die Ressource oder Ressourcengruppe erstellen, die Sie sichern möchten. Eine Backup-Richtlinie ist eine Reihe von Regeln, die das Managen, Planen und Aufbewahren von Backups regeln. 
+---
+= Backup-Richtlinien für IBM DB2 erstellen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bevor Sie IBM DB2-Ressourcen mit SnapCenter sichern, müssen Sie eine Sicherungsrichtlinie für die Ressource oder Ressourcengruppe erstellen, die Sie sichern möchten. Eine Backup-Richtlinie ist eine Reihe von Regeln, die das Managen, Planen und Aufbewahren von Backups regeln.
+
+.Bevor Sie beginnen
+* Sie müssen Ihre Backup-Strategie definiert haben.
++
+Weitere Informationen finden Sie in den Informationen zur Definition einer Datensicherungsstrategie für IBM DB2-Datenbanken.
+
+* Sie müssen auf die Datensicherung vorbereitet sein, indem Sie Aufgaben wie das Installieren von SnapCenter, das Hinzufügen von Hosts, das Einrichten von Verbindungen zu Storage-Systemen und das Hinzufügen von Ressourcen ausführen.
+* Der SnapCenter Administrator muss Ihnen die SVMs sowohl für die Quell- als auch für Ziel-Volumes zugewiesen haben, wenn Sie Snapshots zu einem Spiegel oder Vault replizieren.
++
+Außerdem können Sie in der Richtlinie Replizierungs-, Skript- und Applikationseinstellungen festlegen. Diese Optionen sparen Zeit, wenn Sie die Richtlinie für eine andere Ressourcengruppe wiederverwenden möchten.
+
+
+
+.Über diese Aufgabe
+* SnapLock
++
+** Wenn die Option „Backup-Kopien für eine bestimmte Anzahl von Tagen aufbewahren“ ausgewählt ist, muss die SnapLock Aufbewahrungsfrist kleiner oder gleich den genannten Aufbewahrungstagen sein.
+** Durch die Angabe einer Snapshot-Sperrfrist wird das Löschen der Snapshots bis zum Ablauf der Aufbewahrungsfrist verhindert. Dies kann dazu führen, dass eine größere Anzahl von Snapshots beibehalten wird als in der Richtlinie angegeben.
+** Bei ONTAP Version 9.12.1 und niedriger übernehmen die im Rahmen der Wiederherstellung aus den SnapLock Vault Snapshots erstellten Klone die Verfallszeit von SnapLock Vault. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
+
+
+
+
+
+NOTE: Die primären SnapLock-Einstellungen werden in der SnapCenter Backup Policy gemanagt, und die sekundären SnapLock-Einstellungen werden von ONTAP gemanagt.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Einstellungen*.
+. Klicken Sie auf der Seite Einstellungen auf *Richtlinien*.
+. Klicken Sie Auf *Neu*.
+. Geben Sie auf der Seite Name den Namen und die Beschreibung der Richtlinie ein.
+. Führen Sie auf der Seite Richtlinientyp folgende Schritte aus:
++
+.. Wählen Sie den Speichertyp aus.
+.. Geben Sie im Abschnitt *Benutzerdefinierte Backup-Einstellungen* alle spezifischen Backup-Einstellungen an, die an das Plug-in Key-Value-Format übergeben werden müssen.
++
+Sie können mehrere wichtige Werte angeben, die an das Plug-in übergeben werden.
+
+
+
+. Geben Sie auf der Snapshot-Seite den Zeitplantyp an, indem Sie *On Demand*, *hourly*, *Daily*, *Weekly* oder *Monthly* auswählen.
++
+
+NOTE: Sie können den Zeitplan (Startdatum, Enddatum und Häufigkeit) für den Backup-Vorgang beim Erstellen einer Ressourcengruppe angeben. So können Sie Ressourcengruppen erstellen, die dieselben Richtlinien und Backup-Häufigkeit verwenden, aber auch die Möglichkeit haben, den einzelnen Richtlinien unterschiedliche Backup-Zeitpläne zuzuweisen.
+
++
+image::../media/backup_settings.gif[Backup-Einstellungen]
+
++
+
+NOTE: Wenn Sie für 2:00 Uhr geplant sind, wird der Zeitplan während der Sommerzeit (DST) nicht ausgelöst.
+
+. Geben Sie im Abschnitt Snapshot-Einstellungen die Anzahl der Snapshots an, die Sie behalten möchten.
++
+|===
+| Ihr Ziel ist | Dann... 
+
+
+ a| 
+Behalten Sie eine bestimmte Anzahl von Snapshots bei
+ a| 
+Wählen Sie *Kopien zu behalten* und geben Sie dann die Anzahl der Snapshots an, die Sie behalten möchten.
+
+Wenn die Anzahl der Snapshots die angegebene Zahl überschreitet, werden die Snapshots gelöscht, wobei die ältesten Kopien zuerst gelöscht werden.
+
+|===
++
+
+IMPORTANT: Wenn Sie Snapshot Backups auf Basis von Kopien aktivieren SnapVault möchten, müssen Sie die Aufbewahrungsanzahl auf 2 oder höher festlegen. Wenn Sie die Aufbewahrungszahl auf 1 setzen, kann der Aufbewahrungsvorgang fehlschlagen, da der erste Snapshot der ReferenzSnapshot für die SnapVault-Beziehung ist, bis ein neuerer Snapshot auf das Ziel repliziert wird.
+
+. Geben Sie auf der Seite Aufbewahrung und Sicherung die Aufbewahrungseinstellungen für den Sicherungstyp und den auf der Seite Sicherungstyp ausgewählten Zeitplantyp an:
+. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
+
