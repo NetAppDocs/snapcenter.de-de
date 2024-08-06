@@ -54,7 +54,7 @@ In der Spalte „Controller License“ wird der folgende Status angezeigt:
 +
 ** image:../media/controller_licensed_icon.gif["Ein Häkchen"] Zeigt an, dass eine SnapManager Suite-Lizenz auf einem primären Speichersystem von FAS, AFF oder ASA installiert ist.
 ** image:../media/controller_not_licensed_icon.gif["Ein Abbrechen-Symbol"] Zeigt an, dass keine SnapManager Suite-Lizenz auf einem primären Speichersystem von FAS, AFF oder ASA installiert ist.
-** Nicht zutreffend. Dies zeigt an, dass keine Lizenz für die SnapManager Suite gilt, da der Speicher-Controller auf Cloud Volumes ONTAP-, ONTAP Select- oder sekundären Speicherplattformen ausgeführt wird.
+** Nicht zutreffend bedeutet, dass eine SnapManager Suite-Lizenz nicht anwendbar ist, da sich der Storage Controller auf Amazon FSX für NetApp ONTAP, Cloud Volumes ONTAP, ONTAP Select oder sekundären Speicherplattformen befindet.
 
 
 

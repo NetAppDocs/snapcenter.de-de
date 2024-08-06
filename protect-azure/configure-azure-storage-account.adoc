@@ -15,6 +15,9 @@ Sie sollten das Azure Storage-Konto in SnapCenter konfigurieren.
 
 Das Azure Storage-Konto enthält Details zu Abonnement-ID, Azure Zugangsdaten und Azure NetApp Konto.
 
+
+NOTE: Für Azure NetApp Files sind keine Standardlizenzen und kapazitätsbasierte Lizenz erforderlich.
+
 .Schritte
 . Klicken Sie im linken Navigationsbereich auf *Speichersysteme*.
 . Wählen Sie auf der Seite Speichersysteme *Azure NetApp Files* aus und klicken Sie auf *Neu*.
