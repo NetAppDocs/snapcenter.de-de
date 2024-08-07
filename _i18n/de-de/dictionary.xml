@@ -5460,8 +5460,6 @@
   <block id="f99510060ae91e89fdabd39c0e222578" category="paragraph">Wenn Sie weiterhin den Speicherort der externen Archivprotokolldateien angeben möchten, wählen Sie *Externe Archivprotokolle angeben*.</block>
   <block id="5207ebbbc32a1a4bd295b43498ad0913" category="paragraph">Wenn Archivprotokolle im Rahmen der Sicherung beschnitten werden und Sie die erforderlichen Archiv-Log-Backups manuell gemountet haben, müssen Sie den gemounteten Backup-Pfad als externen Archiv-Log-Speicherort für die Wiederherstellung angeben.</block>
   <block id="07a2a06d39605aa9ff4e7d9c550b1f32" category="admonition">Sie sollten den Pfad und den Inhalt des Mount-Pfads überprüfen, bevor Sie ihn als externen Speicherort des Protokolls auflisten.</block>
-  <block id="58fa648380c73e758318652a30ff424d" category="inline-link">Technischer Bericht 4591 zu Datenbanksicherheit, Recovery, Replizierung und DR</block>
-  <block id="5e8af025f634ab1bdb43a04eac96f1c3" category="list-text"><block ref="5e8af025f634ab1bdb43a04eac96f1c3" category="inline-link-rx"></block></block>
   <block id="d4242c48bd0d5641374fbc107c7d9f14" category="inline-link">Der Vorgang schlägt mit ORA-00308-Fehler fehl</block>
   <block id="79ca58af823b457a1798d606cfd6d6ae" category="list-text"><block ref="79ca58af823b457a1798d606cfd6d6ae" category="inline-link-rx"></block></block>
   <block id="73ee3801ba5f54ed62d44865741a046d" category="paragraph">Eine Wiederherstellung mit einer Recovery von sekundären Backups ist nicht möglich, wenn Archiv-Protokoll-Volumes nicht geschützt sind, aber Daten-Volumes gesichert sind. Sie können nur wiederherstellen, indem Sie *Keine Wiederherstellung*.</block>
@@ -9876,4 +9874,6 @@ Die Aufbewahrung ist beispielsweise für eine Ressourcengruppe mit primärer SAP
   <block id="eba5bfa2c0dc8d9f24998cf70fa891a6" category="list-text">Nicht zutreffend bedeutet, dass eine SnapManager Suite-Lizenz nicht anwendbar ist, da sich der Storage Controller auf Amazon FSX für NetApp ONTAP, Cloud Volumes ONTAP, ONTAP Select oder sekundären Speicherplattformen befindet.</block>
   <block id="4e07c38c016a099592ed905ac7e037f7" category="list-text">Führen Sie den Befehl aus:<block ref="1031a5113d1c9ac03f4fa3db4c69d3a4" prefix=" " category="inline-code"></block>.</block>
   <block id="a2706d1c365c79f6f2378228b67eb95a" category="admonition">Für Azure NetApp Files sind keine Standardlizenzen und kapazitätsbasierte Lizenz erforderlich.</block>
+  <block id="9e19caeb431a5e29a1a63e3cee4b36c9" category="inline-link">Oracle Datensicherung mit ONTAP</block>
+  <block id="d118010bb2b3542007c6749bfd237123" category="list-text"><block ref="d118010bb2b3542007c6749bfd237123" category="inline-link-rx"></block></block>
 </blocks>
