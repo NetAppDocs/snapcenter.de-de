@@ -39,6 +39,9 @@ NOTE: Sie sollten diesen Befehl für jede Berechtigung wiederholen.
 
 Es gibt verschiedene ONTAP CLI Befehle, die Sie ausführen sollten, um Cluster-Rollen zu erstellen und Berechtigungen zuzuweisen.
 
+
+NOTE: Ab SnapCenter 5.0 werden Cluster-Admin-Benutzer nur über REST-APIs unterstützt. Wenn Sie Rollen erstellen möchten, die nicht Cluster Admin verwenden, sollten Sie ZAPI verwenden.
+
 * `security login role create -vserver Cluster_name or cluster_name -role Role_Name -cmddirname "metrocluster show" -access readonly`
 * `security login role create -vserver Cluster_name or cluster_name -role Role_Name -cmddirname "cluster identity modify" -access all`
 * `security login role create -vserver Cluster_name -role Role_Name -cmddirname "cluster identity show" -access all`

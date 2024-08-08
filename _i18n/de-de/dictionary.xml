@@ -9876,4 +9876,6 @@ Die Aufbewahrung ist beispielsweise für eine Ressourcengruppe mit primärer SAP
   <block id="a2706d1c365c79f6f2378228b67eb95a" category="admonition">Für Azure NetApp Files sind keine Standardlizenzen und kapazitätsbasierte Lizenz erforderlich.</block>
   <block id="9e19caeb431a5e29a1a63e3cee4b36c9" category="inline-link">Oracle Datensicherung mit ONTAP</block>
   <block id="d118010bb2b3542007c6749bfd237123" category="list-text"><block ref="d118010bb2b3542007c6749bfd237123" category="inline-link-rx"></block></block>
+  <block id="26d0f7d5ea2b87e82f98d6e622ecf6a0" category="admonition">Ab 5.0 werden vServer Admin-Benutzer nur noch mit REST-APIs unterstützt. Wenn Sie Rollen erstellen möchten, die nicht vserver admin verwenden, sollten Sie ZAPI verwenden.</block>
+  <block id="3955db71dd681bf23ceee85c567a0129" category="admonition">Ab SnapCenter 5.0 werden Cluster-Admin-Benutzer nur über REST-APIs unterstützt. Wenn Sie Rollen erstellen möchten, die nicht Cluster Admin verwenden, sollten Sie ZAPI verwenden.</block>
 </blocks>
