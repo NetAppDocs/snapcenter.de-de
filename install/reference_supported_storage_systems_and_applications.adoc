@@ -26,7 +26,7 @@ Informationen zu Amazon FSX für NetApp ONTAP finden Sie unter https://docs.aws.
 
 * SnapCenter unterstützt den Schutz verschiedener Applikationen und Datenbanken.
 +
-Ausführliche Informationen zu den unterstützten Anwendungen und Datenbanken finden Sie unter https://imt.netapp.com/matrix/imt.jsp?components=116859;&solution=1257&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"^].
+Ausführliche Informationen zu den unterstützten Anwendungen und Datenbanken finden Sie unter https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"^].
 
 * SnapCenter 4.9 P1 und höher unterstützt den Schutz von Oracle- und Microsoft-SQL-Workloads in VMware Cloud auf AWS-Umgebungen (Software-Defined Data Center) von Amazon Web Services.
 +
