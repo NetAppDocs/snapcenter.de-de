@@ -91,7 +91,7 @@ Weitere Informationen finden Sie unter:
 
 . Fügen Sie den neuen Host zu SnapCenter hinzu.
 . Überprüfen Sie, ob alle Ressourcen erkannt wurden.
-. Führen Sie die Host-Aktualisierungs-API aus: `/5.0/techrefresh/host` Oder das Cmdlet: _Invoke-SmTechRefreshHost_.
+. Führen Sie die Host Refresh API: `/<snapcenter_version>/techrefresh/host` Oder das Cmdlet: _Invoke-SmTechRefreshHost_ aus.
 +
 
 NOTE: Der Probelauf ist standardmäßig aktiviert, und die entsprechenden Ressourcen werden identifiziert, die neu verknüpft werden sollen. Sie können die Ressourcen überprüfen, indem Sie entweder die API '/Jobs/{jobid}' oder das Cmdlet _get-SmJobSummaryReport_ ausführen.

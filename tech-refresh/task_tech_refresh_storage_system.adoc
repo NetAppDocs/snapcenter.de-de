@@ -77,7 +77,7 @@ Stellen Sie sicher, dass ein eindeutiger SVM-Name über Cluster in SnapCenter hi
 
 NOTE: Sobald eine neue LUN mit dem Host verbunden ist, wird sie über eine neue Seriennummer verfügen. Während der Ermittlung des Windows-Dateisystems behandelt SnapCenter jede eindeutige Seriennummer als neue Ressource. Während der Aktualisierung der Storage-Technologie, wenn die LUN aus dem neuen Storage mit dem Host mit demselben Laufwerksbuchstaben oder Pfad verbunden ist, die Ermittlung des Windows-Dateisystems in SnapCenter markiert die vorhandene Ressource als gelöscht, selbst wenn sie mit demselben Laufwerksbuchstaben oder Pfad gemountet ist, und zeigt die neue LUN als neue Ressource an. Wenn die Ressource als gelöscht gekennzeichnet ist, wird sie in SnapCenter nicht für eine Aktualisierung der Storage-Technologie in Betracht gezogen. Außerdem gehen alle Backups der alten Ressource verloren. Wenn immer eine Speicheraktualisierung stattfindet, sollte für Windows-Dateisystemressourcen die Ressourcenerkennung nicht vor der Ausführung der Speicheraktualisierungs-API oder des Cmdlet ausgeführt werden.
 
-. Führen Sie entweder die Storage Refresh API aus: `/5.0/techrefresh/primarystorage` Oder das Cmdlet: _Invoke-SmTechRefreshPrimaryStorage_.
+. Führen Sie entweder die Speicher-Refresh-API aus: `/<snapcenter_version>/techrefresh/primarystorage` Oder das Cmdlet: _Invoke-SmTechRefreshPrimaryStorage_.
 +
 
 NOTE: Wenn die Ressource mit einer Richtlinie für die aktivierte Replikation konfiguriert ist, sollte das letzte Backup nach der Speicheraktualisierung Details zum sekundären Speicher enthalten.
@@ -87,11 +87,11 @@ NOTE: Wenn die Ressource mit einer Richtlinie für die aktivierte Replikation ko
 .. Wenn Sie SQL Availability Group (AG)-Setup verwenden, werden die Backups auf Node-Ebene beibehalten. Sie sollten den Node-Namen als Eingabe für die Aktualisierung der Storage-Technologie angeben.
 .. Wenn Sie Oracle Real Application Clusters (RAC)-Setup verwenden, können Sie die Speichertechnologie auf einem beliebigen Knoten aktualisieren.
 +
-Das _IsDryRun_-Attribut ist standardmäßig auf true gesetzt. Er identifiziert die Ressourcen, für die der Speicher aktualisiert wird. Sie können die Ressource und die geänderten Speicherdetails anzeigen, indem Sie entweder die API '5.0/Jobs/{jobid}' oder das Cmdlet _get-SmJobSummaryReport_ ausführen.
+Das _IsDryRun_-Attribut ist standardmäßig auf true gesetzt. Er identifiziert die Ressourcen, für die der Speicher aktualisiert wird. Sie können die Ressource und die geänderten Speicherdetails anzeigen, indem Sie entweder die API '<SnapCenter_Version>/Jobs/{jobid}' oder das Cmdlet _get-SmJobSummaryReport_ ausführen.
 
 
 
-. Nachdem Sie die Speicherdetails überprüft haben, setzen Sie das Attribut _IsDryRun_ auf False und führen Sie die Speicher-Update-API aus: `/5.0/techrefresh/primarystorage` Oder das Cmdlet: _Invoke-SmTechRefreshPrimaryStorage_.
+. Nachdem Sie die Speicherdetails überprüft haben, setzen Sie das Attribut _IsDryRun_ auf False und führen Sie die Speicheraktualisierung-API: `/<snapcenter_version>/techrefresh/primarystorage` Oder das Cmdlet: _Invoke-SmTechRefreshPrimaryStorage_ aus.
 +
 Dadurch werden die Speicherdetails in den älteren Backups aktualisiert.
 
@@ -102,7 +102,7 @@ Sie können die API oder das Cmdlet mehrmals auf demselben Host ausführen. Es a
 
 NOTE: Die Klonhierarchie kann nicht in ONTAP migriert werden. Verfügt der zu migrierende Storage über geklonte Metadaten in SnapCenter, wird die geklonte Ressource als unabhängige Ressource markiert. Clones von Clone-Metadaten werden rekursiv entfernt.
 
-. (Optional) Wenn nicht alle Snapshots vom alten primären Speicher in den neuen primären Speicher verschoben werden, führen Sie die folgende API aus: `/5.0/hosts/primarybackupsexistencecheck` Oder mit dem Cmdlet _Invoke-SmPrimaryBackupsExistenceCheck_.
+. (Optional) Wenn nicht alle Snapshots aus dem alten primären Speicher in den neuen primären Speicher verschoben werden, führen Sie die folgende API aus: `/<snapcenter_version>/hosts/primarybackupsexistencecheck` Oder das Cmdlet _Invoke-SmPrimaryBackupsExistenceCheck_.
 +
 Dadurch wird die Snapshot-Existenzprüfung auf dem neuen primären Speicher durchgeführt und die entsprechenden Backups sind für keinen Vorgang in SnapCenter verfügbar.
 
@@ -138,7 +138,7 @@ SnapCenter benötigt ein neues Backup, um den aktuellen Storage-Platzbedarf zu e
 
 IMPORTANT: Warten Sie, bis dieser Vorgang abgeschlossen ist. Wenn Sie mit dem nächsten Schritt vor Abschluss fortfahren, verliert SnapCenter die alten sekundären Snapshot Metadaten vollständig.
 
-. Nachdem alle Ressourcen in einem Host gesichert wurden, führen Sie entweder die API für die Aktualisierung des sekundären Speichers aus: `/5.0/techrefresh/secondarystorage` Oder das Cmdlet: _Invoke-SmTechRefreshSecondaryStorage_.
+. Nachdem alle Ressourcen in einem Host gesichert wurden, führen Sie entweder die sekundäre Speicher-Refresh-API aus: Oder das Cmdlet: `/<snapcenter_version>/techrefresh/secondarystorage` _Invoke-SmTechRefreshSecondaryStorage_.
 +
 Dadurch werden die Details des sekundären Speichers der älteren Backups auf dem angegebenen Host aktualisiert.
 
