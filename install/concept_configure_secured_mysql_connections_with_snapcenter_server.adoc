@@ -95,16 +95,16 @@ ssl-key="C:/ProgramData/NetApp/SnapCenter/MySQL Data/Data/client-key.pem"
 ----
 . Beenden Sie die Webanwendung des SnapCenter-Servers im Internetinformationsserver (IIS).
 . Starten Sie den MySQL-Dienst neu.
-. Aktualisieren Sie den Wert des MySQLProtocol-Schlüssels in der Datei Web.config.
+. Aktualisieren Sie den Wert des Schlüssels MySQLProtocol in der Datei SnapManager.Web.UI.dll.config.
 +
-Das folgende Beispiel zeigt den Wert des in der Datei Web.config aktualisierten MySQLProtocol-Schlüssels.
+Das folgende Beispiel zeigt den Wert des Schlüssels MySQLProtocol, der in der Datei SnapManager.Web.UI.dll.config aktualisiert wurde.
 
 +
 [listing]
 ----
 <add key="MySQLProtocol" value="SSL" />
 ----
-. Aktualisieren Sie die Datei Web.config mit den Pfaden, die im Abschnitt [Client] der Datei my.ini bereitgestellt wurden.
+. Aktualisieren Sie die Datei SnapManager.Web.UI.dll.config mit den Pfaden, die im Abschnitt [Client] der Datei my.ini bereitgestellt wurden.
 +
 Das folgende Beispiel zeigt die im Abschnitt [Client] der Datei my.ini aktualisierten Pfade.
 
@@ -279,16 +279,16 @@ ssl-key="C:/ProgramData/NetApp/SnapCenter/MySQL Data/Data/server-key.pem"
 
 . Beenden Sie die Webanwendung des SnapCenter-Servers im Internet Information Server (IIS) auf beiden HA-Knoten.
 . Starten Sie den MySQL Service auf beiden HA-Nodes neu.
-. Den Wert des MySQLProtocol-Schlüssels in der Datei Web.config für beide HA-Knoten aktualisieren.
+. Aktualisieren Sie den Wert des Schlüssels MySQLProtocol in der Datei SnapManager.Web.UI.dll.config für beide HA-Knoten.
 +
-Das folgende Beispiel zeigt den Wert des in der Datei Web.config aktualisierten MySQLProtocol-Schlüssels.
+Das folgende Beispiel zeigt den Wert des Schlüssels MySQLProtocol, der in der Datei SnapManager.Web.UI.dll.config aktualisiert wurde.
 
 +
 [listing]
 ----
 <add key="MySQLProtocol" value="SSL" />
 ----
-. Aktualisieren Sie die Datei Web.config mit den Pfaden, die Sie im Abschnitt [Client] der Datei my.ini für beide HA-Knoten angegeben haben.
+. Aktualisieren Sie die Datei SnapManager.Web.UI.dll.config mit den Pfaden, die Sie im Abschnitt [Client] der Datei my.ini für beide HA-Nodes angegeben haben.
 +
 Das folgende Beispiel zeigt die im Abschnitt [Client] der my.ini Dateien aktualisierten Pfade.
 
