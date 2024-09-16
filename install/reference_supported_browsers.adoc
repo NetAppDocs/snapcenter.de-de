@@ -14,19 +14,7 @@ summary: SnapCenter-Software kann auf mehreren Browsern verwendet werden.
 SnapCenter-Software kann auf mehreren Browsern verwendet werden.
 
 * Chrome-Version 125 und höher
-* Internet Explorer
-+
-Die SnapCenter UI wird nicht richtig geladen, wenn Sie IE 10 oder frühere Versionen verwenden. Sie sollten ein Upgrade auf IE 11 durchführen.
-
-+
-** Es wird nur die Standardsicherheit unterstützt.
-+
-Wenn Sie Änderungen an den Sicherheitseinstellungen von Internet Explorer vornehmen, treten erhebliche Probleme bei der Anzeige des Browsers auf.
-
-** Die Kompatibilitätsansicht für Internet Explorer muss deaktiviert sein.
-
-
-* Microsoft Edge
+* Microsoft Edge 110.0.1587.17 und höher
 
 
 Aktuelle Informationen zu unterstützten Versionen finden Sie unter : https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"^].

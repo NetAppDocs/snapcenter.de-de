@@ -2126,12 +2126,6 @@
   <block id="35cd5a8c25ff69e6886fc098109317e7" category="paragraph">SnapCenter löscht die Festplatte.</block>
   <block id="14c90652b0a2e523d6e8630706107e75" category="summary">SnapCenter-Software kann auf mehreren Browsern verwendet werden.</block>
   <block id="6d84e3718084e0db779da4ff8791a2f2" category="doc">Unterstützte Browser</block>
-  <block id="ebe4f447bd3316e4f81ab2a6d2f26810" category="list-text">Internet Explorer</block>
-  <block id="74e84f9442fdb7717385ee092400869a" category="paragraph">Die SnapCenter UI wird nicht richtig geladen, wenn Sie IE 10 oder frühere Versionen verwenden. Sie sollten ein Upgrade auf IE 11 durchführen.</block>
-  <block id="8b45fc0c82a493bebd2ae705881299e0" category="list-text">Es wird nur die Standardsicherheit unterstützt.</block>
-  <block id="8c39fdaac8e8c7ec5824fd1acda14c9a" category="paragraph">Wenn Sie Änderungen an den Sicherheitseinstellungen von Internet Explorer vornehmen, treten erhebliche Probleme bei der Anzeige des Browsers auf.</block>
-  <block id="c5c74f2a0046f37ca93f6d8e3c775364" category="list-text">Die Kompatibilitätsansicht für Internet Explorer muss deaktiviert sein.</block>
-  <block id="a5c41f715c1b8a880253846c025624e9" category="list-text">Microsoft Edge</block>
   <block id="cf3152e36e70eecd5ed2d294f623eb90" category="summary">Wenn Ihr SnapCenter Host Teil einer FC-/iSCSI-Umgebung ist, müssen Sie möglicherweise zusätzliche Software auf dem System installieren, um den Zugriff auf ONTAP Storage zu ermöglichen.</block>
   <block id="8e9816159074c93c5490453d542c7149" category="doc">SAN-Host-Anforderungen</block>
   <block id="f3409d8331123dc5c92af0a575ad2b93" category="paragraph">SnapCenter umfasst keine Host Utilities oder DSM. Wenn Ihr SnapCenter Host Teil einer SAN-Umgebung ist, müssen Sie eventuell die folgende Software installieren und konfigurieren:</block>
@@ -7459,7 +7453,6 @@
   <block id="46d55a8aefdec15a8ce44087c8123826" category="inline-link">Der Vorgang schlägt fehl, da der Fehler nicht in der Lage ist, das Gerät für die LUN zu ermitteln</block>
   <block id="24642a08e354f43168ca4f1178850f84" category="list-text">Sie sollten sicherstellen, dass die LUN nicht dem AIX-Host mit iGroup zugeordnet ist, die aus gemischten Protokollen iSCSI und FC besteht. Weitere Informationen finden Sie unter<block ref="94f247529a6b6f563b3a8d4772877431" category="inline-link-rx"></block>.</block>
   <block id="4fb437564892944d73f87c822342e2bb" category="cell">4.8</block>
-  <block id="028a3c414b2f36abce9baa1df750ef89" category="admonition">CA Certificate RSA-Schlüssel sollten mindestens 3072 Bit lang sein.</block>
   <block id="36fecb1daf18c8eeaacbcc8cdc70f4a6" category="paragraph">Primäre und sekundäre ONTAP können ONTAP FAS, AFF, All-SAN-Array (ASA), Select oder Cloud ONTAP sein.</block>
   <block id="d21fbb2a5ce79a2a4ef0780b73023b2e" category="paragraph">Physische und NFS-direkte Mounts auf den VM Hosts (VMDKs und RDM LUNs werden nicht unterstützt.)</block>
   <block id="f2688d5a483bee7fcbd80a4e666fc088" category="inline-link">Dokumentation zu Host Utilities</block>
@@ -8924,7 +8917,6 @@ Die Aufbewahrung ist beispielsweise für eine Ressourcengruppe mit primärer SAP
   <block id="cf46417d06a0356fc053eba2626759a2" category="list-text">Wählen Sie den Abrechnungsanbieter aus.</block>
   <block id="98d7dda5167a79acadd993f0ad819512" category="list-text">Geben Sie die 20-stellige SnapCenter-Instanz-ID ein.</block>
   <block id="a22e3c4898555ed30acf91192f3c301a" category="paragraph">Scheduler-Service-Port</block>
-  <block id="f494773247b901f17fbe90691d43594a" category="paragraph">8154 (HTTPS),</block>
   <block id="0703d446ecd330b75f76dab17472df37" category="paragraph">Über diesen Port werden die SnapCenter-Scheduler-Workflows für alle gemanagten Plug-ins im SnapCenter Server Host zentral orchestriert.</block>
   <block id="e029a63ec5a2d5331a40bbf8a483cc16" category="paragraph">3306 (HTTPS), bidirektional, anpassbar</block>
   <block id="10dbf6dc6b3b30fd58efded1253516d8" category="paragraph">SnapCenter Plug-in für Exchange Datenbank</block>
@@ -9883,4 +9875,10 @@ Die Aufbewahrung ist beispielsweise für eine Ressourcengruppe mit primärer SAP
   <block id="0512eab1623a615d3740da31907b5d7c" category="list-text">Aktualisieren Sie den Wert des Schlüssels MySQLProtocol in der Datei SnapManager.Web.UI.dll.config für beide HA-Knoten.</block>
   <block id="e20a4407f4a132523f0ff53a11de8ea9" category="paragraph">Das folgende Beispiel zeigt den Wert des Schlüssels MySQLProtocol, der in der Datei SnapManager.Web.UI.dll.config aktualisiert wurde.</block>
   <block id="282f609628cc0aa1febc1031254fda4e" category="list-text">Aktualisieren Sie die Datei SnapManager.Web.UI.dll.config mit den Pfaden, die Sie im Abschnitt [Client] der Datei my.ini für beide HA-Nodes angegeben haben.</block>
+  <block id="be9f9eca92a7b91f5cf9f485b92f2f33" category="admonition">DIE Länge des RSA-Schlüssels des CA-Zertifikats muss mindestens 3072 Bit betragen.</block>
+  <block id="76f30afe00c2fd9de2c57b507789aa7c" category="paragraph">8154 (HTTPS)</block>
+  <block id="064270f4c1b637c782011391ccc057cb" category="paragraph">RabbitMQ-Anschluss</block>
+  <block id="310b8da14055c2cf4702264e02854d3d" category="paragraph">5672 (tcp)</block>
+  <block id="c55a170d16570920e099a9e43d38db67" category="paragraph">Dies ist der Standardport, den RabbitMQ abhört und der für die Kommunikation zwischen dem Scheduler-Dienst und dem SnapCenter zwischen dem Publisher-Subscriber-Modell verwendet wird.</block>
+  <block id="f5a551e6a3161ca6d9ee33d926d734d5" category="list-text">Microsoft Edge 110.0.1587.17 und höher</block>
 </blocks>

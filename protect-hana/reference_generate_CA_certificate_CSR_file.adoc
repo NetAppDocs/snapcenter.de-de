@@ -16,7 +16,7 @@ Sie können eine Zertifikatsignierungsanforderung (CSR) generieren und das Zerti
 CSR ist ein Block von codiertem Text, der einem autorisierten Zertifikatanbieter zur Beschaffung des signierten CA-Zertifikats übergeben wird.
 
 
-NOTE: CA Certificate RSA-Schlüssel sollten mindestens 3072 Bit lang sein.
+NOTE: DIE Länge des RSA-Schlüssels des CA-Zertifikats muss mindestens 3072 Bit betragen.
 
 Informationen zum Generieren einer CSR finden Sie unter https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_generate_CA_Certificate_CSR_file["So generieren Sie eine CSR-Datei für das CA-Zertifikat"^].
 
