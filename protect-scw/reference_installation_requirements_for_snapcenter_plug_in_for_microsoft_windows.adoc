@@ -65,7 +65,6 @@ Erforderliche Softwarepakete
  a| 
 * . NET-Core 8.0.5
 * PowerShell Core 7.4.2
-* Java 11 Oracle Java und OpenJDK
 
 
 Die neuesten Informationen zu unterstützten Versionen finden Sie im https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"^].

@@ -136,8 +136,6 @@ entries:
   - title: Erstellen einer Storage-Systemverbindung und einer Zertifizierung mit PowerShell
       cmdlets für SAP HANA Datenbank
     url: "/protect-hana/task_create_a_storage_system_connection_and_a_run_as_account_using_powershell_cmdlets_for_sap_hana_database.html"
-  - title: Sichern Sie Datenbanken mit PowerShell Cmdlets
-    url: "/protect-hana/task_back_up_databases_using_powershell_cmdlets_sap_hana.html"
   - title: Monitoring von Backup-Vorgängen
     entries:
     - title: Überwachen Sie Backup-Vorgänge auf der Seite SnapCenter-Jobs
@@ -157,8 +155,6 @@ entries:
     url: "/protect-hana/task_restore_and_recover_a_manually_added_resource_backup.html"
   - title: Stellen Sie ein automatisch ermittelte Datenbank-Backup wieder her
     url: "/protect-hana/task_restore_and_recover_an_auto_discovered_database_backup.html"
-  - title: Wiederherstellung von SAP HANA Datenbanken mit PowerShell cmdlets
-    url: "/protect-hana/task_restore_sap_hana_database_using_powershell_cmdlets.html"
   - title: Stellen Sie Ressourcen mithilfe von PowerShell Cmdlets wieder her
     url: "/protect-hana/task_restore_and_recover_resources_using_powershell_cmdlets_hana.html"
   - title: Überwachen von Restore-Vorgängen
@@ -169,8 +165,6 @@ entries:
     url: "/protect-hana/task_clone_sap_hana_resource_backups.html"
   - title: Klonen eines Backups einer SAP HANA Datenbank
     url: "/protect-hana/task_clone_a_sap_hana_database_backup.html"
-  - title: Klonen von Backups von SAP HANA Datenbanken mit PowerShell Cmdlets
-    url: "/protect-hana/task_clone_sap_hana_database_backups_using_powershell_cmdlets.html"
   - title: Überwachen Sie Klonvorgänge in SnapCenter
     url: "/protect-hana/task_monitor_hana_database_clone_operations.html"
   - title: Teilen Sie einen Klon auf

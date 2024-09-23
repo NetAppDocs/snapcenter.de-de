@@ -48,6 +48,10 @@ Sie können die GET API verwenden, um den Wert der Taste anzuzeigen. SET-API wir
 * Für die Wiederherstellung der aktiven Synchronisierung von SnapMirror müssen Sie das Backup vom primären Speicherort auswählen.
 
 
+[role="tabbed-block"]
+====
+.UI von SnapCenter
+--
 .Schritte
 . Klicken Sie im linken Navigationsbereich oben links auf der Seite Ressource auf *Ressourcen*.
 . Wählen Sie das Exchange Server-Plug-in aus der Dropdown-Liste aus.
@@ -132,3 +136,68 @@ Sie sollten den Wiederherstellungsprozess mithilfe der Seite *Monitor* > *Jobs* 
 Wenn Sie eine aktive Datenbank aus einem Backup wiederherstellen, weist die passive Datenbank möglicherweise einen Status „ausgesetzt“ oder „ausgefallen“ auf, wenn eine Verzögerung zwischen dem Replikat und der aktiven Datenbank vorhanden ist.
 
 Die Statusänderung kann auftreten, wenn die Protokollkette der aktiven Datenbank sich gabelt und einen neuen Zweig startet, der die Replikation unterbrochen. Exchange Server versucht, das Replikat zu reparieren. Wenn es jedoch nicht möglich ist, sollten Sie nach der Wiederherstellung ein neues Backup erstellen und dann das Replikat erneut übertragen.
+
+--
+.PowerShell Commandlets
+--
+.Schritte
+. Starten Sie eine Verbindungssitzung mit dem SnapCenter-Server für einen bestimmten Benutzer, indem Sie den verwenden `Open-SmConnection` Cmdlet:
++
+[listing]
+----
+Open-smconnection  -SMSbaseurl  https://snapctr.demo.netapp.com:8146/
+----
+. Rufen Sie die Informationen zu einem oder mehreren Backups ab, die Sie mit dem wiederherstellen möchten `Get-SmBackup` Cmdlet:
++
+In diesem Beispiel werden Informationen zu allen verfügbaren Backups angezeigt:
+
++
+[listing]
+----
+PS C:\> Get-SmBackup
+
+BackupId                      BackupName                    BackupTime                    BackupType
+--------                      ----------                    ----------                    ----------
+341                           ResourceGroup_36304978_UTM... 12/8/2017 4:13:24 PM          Full Backup
+342                           ResourceGroup_36304978_UTM... 12/8/2017 4:16:23 PM          Full Backup
+355                           ResourceGroup_06140588_UTM... 12/8/2017 6:32:36 PM          Log Backup
+356                           ResourceGroup_06140588_UTM... 12/8/2017 6:36:20 PM          Full Backup
+----
+. Stellen Sie mit dem Daten aus dem Backup wieder her `Restore-SmBackup` Cmdlet:
++
+In diesem Beispiel wird ein minutengenaue Backup wiederhergestellt:
+
++
+[listing]
+----
+C:\PS> Restore-SmBackup -PluginCode SCE -AppObjectId 'sce-w2k12-exch.sceqa.com\sce-w2k12-exch_DB_2' -BackupId 341 -IsRecoverMount:$true
+----
++
+In diesem Beispiel wird ein zeitpunktgenaues Backup wiederhergestellt:
+
++
+[listing]
+----
+C:\ PS> Restore-SmBackup -PluginCode SCE -AppObjectId 'sce-w2k12-exch.sceqa.com\sce-w2k12-exch_DB_2' -BackupId 341 -IsRecoverMount:$true -LogRestoreType ByTransactionLogs -LogCount 2
+----
++
+In diesem Beispiel wird ein Backup auf sekundärem Storage auf einen primären Erfahrungsbericht wiederhergestellt:
+
++
+[listing]
+----
+C:\ PS> Restore-SmBackup -PluginCode 'SCE' -AppObjectId 'DB2' -BackupId 81 -IsRecoverMount:$true -Confirm:$false
+-archive @{Primary="paw_vs:vol1";Secondary="paw_vs:vol1_mirror"} -logrestoretype All
+----
++
+Der `-archive` Mit dem Parameter können Sie die primären und sekundären Volumes angeben, die Sie für die Wiederherstellung verwenden möchten.
+
++
+Der `-IsRecoverMount:$true` Mit Parameter können Sie die Datenbank nach der Wiederherstellung mounten.
+
+
+
+Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ können Sie auch auf die https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter Software Cmdlet Referenzhandbuch"^].
+
+--
+====

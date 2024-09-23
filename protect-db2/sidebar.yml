@@ -114,15 +114,13 @@ entries:
     url: "/protect-db2/create-backup-policies-for-ibm-db2.html"
   - title: Erstellen von Ressourcengruppen und Anhängen von Richtlinien
     url: "/protect-db2/create-resource-groups-and-attach-policies.html"
-  - title: Backup von IBM DB2
-    url: "/protect-db2/back-up-ibm-db2.html"
+  - title: Backup von db2-Datenbanken
+    url: "/protect-db2/back-up-db2-databases.html"
   - title: Sichern von Ressourcengruppen
     url: "/protect-db2/back-up-resource-groups-ibm-db2.html"
   - title: Erstellen Sie mit PowerShell-Cmdlets für IBM DB2 eine Verbindung zum Speichersystem
       und Zugangsdaten
     url: "/protect-db2/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-ibm-db2.html"
-  - title: Sichern Sie Datenbanken mit PowerShell Cmdlets
-    url: "/protect-db2/back-up-databases-using-powershell-cmdlets-ibm-db2.html"
   - title: Monitoring von Backup-Vorgängen
     entries:
     - title: Überwachen Sie Backup-Vorgänge auf der Seite SnapCenter-Jobs
@@ -142,8 +140,6 @@ entries:
     url: "/protect-db2/restore-manually-added-resource-backup.html"
   - title: Stellen Sie ein automatisch ermitteltes Datenbank-Backup wieder her
     url: "/protect-db2/restore-auto-discovered-database-backup.html"
-  - title: Stellen Sie IBM DB2 mithilfe von PowerShell Cmdlets wieder her
-    url: "/protect-db2/restore-ibm-db2-database-using-powershell-cmdlets.html"
   - title: Überwachen von Restore-Vorgängen
     url: "/protect-db2/monitor-db2-restore-operations.html"
 - title: Klonen Sie IBM DB2-Ressourcen-Backups
@@ -152,8 +148,6 @@ entries:
     url: "/protect-db2/clone-ibm-db2-resource-backups.html"
   - title: Klonen eines IBM DB2 Datenbank-Backups
     url: "/protect-db2/clone-ibm-db2-backup.html"
-  - title: Klonen Sie IBM DB2 Datenbank-Backups mit PowerShell Cmdlets
-    url: "/protect-db2/clone-ibm-db2-backups-using-powershell-cmdlets.html"
   - title: Überwachen Sie Klonvorgänge in SnapCenter
     url: "/protect-db2/monitor-db2-clone-operations.html"
   - title: Teilen Sie einen Klon auf
