@@ -114,19 +114,15 @@ entries:
     url: "/protect-db2/create-backup-policies-for-ibm-db2.html"
   - title: Erstellen von Ressourcengruppen und Anhängen von Richtlinien
     url: "/protect-db2/create-resource-groups-and-attach-policies.html"
+  - title: Erstellen Sie mit PowerShell-Cmdlets für IBM DB2 eine Verbindung zum Speichersystem
+      und Zugangsdaten
+    url: "/protect-db2/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-ibm-db2.html"
   - title: Backup von db2-Datenbanken
     url: "/protect-db2/back-up-db2-databases.html"
   - title: Sichern von Ressourcengruppen
     url: "/protect-db2/back-up-resource-groups-ibm-db2.html"
-  - title: Erstellen Sie mit PowerShell-Cmdlets für IBM DB2 eine Verbindung zum Speichersystem
-      und Zugangsdaten
-    url: "/protect-db2/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-ibm-db2.html"
-  - title: Monitoring von Backup-Vorgängen
-    entries:
-    - title: Überwachen Sie Backup-Vorgänge auf der Seite SnapCenter-Jobs
-      url: "/protect-db2/monitor-db2-backup-operations.html"
-    - title: Überwachen Sie die Vorgänge im Teilfenster „Aktivität“
-      url: "/protect-db2/monitor-dataprotection-operations-on-db2-in-the-activity-pane.html"
+  - title: Überwachen Sie Backup-Vorgänge auf der Seite SnapCenter-Jobs
+    url: "/protect-db2/monitor-db2-backup-operations.html"
   - title: Abbrechen der Backup-Vorgänge
     url: "/protect-db2/cancel-backup-operations-for-ibm-db2.html"
   - title: Zeigen Sie IBM DB2-Datenbank-Backups und -Klone auf der Topology-Seite

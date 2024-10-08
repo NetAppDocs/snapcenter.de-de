@@ -111,19 +111,15 @@ entries:
     url: "/protect-mysql/create-backup-policies-for-mysql.html"
   - title: Erstellen von Ressourcengruppen und Anhängen von Richtlinien
     url: "/protect-mysql/create-resource-groups-and-attach-policies.html"
+  - title: Erstellen Sie eine Storage-Systemverbindung und Zugangsdaten mit PowerShell
+      Cmdlets für MySQL
+    url: "/protect-mysql/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-mysql.html"
   - title: Backup von MySQL
     url: "/protect-mysql/back-up-mysql.html"
   - title: Sichern von Ressourcengruppen
     url: "/protect-mysql/back-up-resource-groups-mysql.html"
-  - title: Erstellen Sie eine Storage-Systemverbindung und Zugangsdaten mit PowerShell
-      Cmdlets für MySQL
-    url: "/protect-mysql/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-mysql.html"
-  - title: Monitoring von Backup-Vorgängen
-    entries:
-    - title: Überwachen Sie Backup-Vorgänge auf der Seite SnapCenter-Jobs
-      url: "/protect-mysql/monitor-mysql-backup-operations.html"
-    - title: Überwachen Sie die Vorgänge im Teilfenster „Aktivität“
-      url: "/protect-mysql/monitor-dataprotection-operations-on-mysql-in-the-activity-pane.html"
+  - title: Überwachen Sie Backup-Vorgänge auf der Seite SnapCenter-Jobs
+    url: "/protect-mysql/monitor-mysql-backup-operations.html"
   - title: Abbrechen der Backup-Vorgänge
     url: "/protect-mysql/cancel-backup-operations-for-mysql.html"
   - title: Zeigen Sie auf der Seite Topologie Backups und Klone der MySQL-Datenbank

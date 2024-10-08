@@ -46,3 +46,19 @@ NOTE: Der Status des Backupjobs wird zwar angezeigtimage:../media/success_icon.g
 Die Schaltfläche *Protokolle anzeigen* zeigt die detaillierten Protokolle für den ausgewählten Vorgang an.
 
 
+
+
+
+== Überwachen Sie Datenschutzvorgänge in IBM DB2-Datenbanken im Aktivitätsbereich
+
+Im Aktivitätsbereich werden die fünf zuletzt durchgeführten Operationen angezeigt. Der Bereich „Aktivität“ wird auch angezeigt, wenn der Vorgang initiiert wurde und der Status des Vorgangs.
+
+Im Fensterbereich Aktivität werden Informationen zu Backup-, Wiederherstellungs-, Klon- und geplanten Backup-Vorgängen angezeigt.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Klicken Sie Auf image:../media/activity_pane_icon.gif[""] Im Aktivitätsbereich werden die fünf letzten Vorgänge angezeigt.
++
+Wenn Sie auf einen der Vorgänge klicken, werden die Vorgangsdetails auf der Seite *Job-Details* aufgeführt.
+
+
