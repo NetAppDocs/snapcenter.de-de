@@ -108,7 +108,9 @@ NOTE: Sie müssen diesen Wert erhöhen, wenn Sie mehrere Backup-Vorgänge gleich
 --
 .Backup Protokollieren
 --
-Sichern Sie die Transaktionsprotokolle. . Wählen Sie *Backup protokollieren*.
+. Sichern Sie die Transaktionsprotokolle.
+. Wählen Sie *Backup protokollieren*.
+
 
 --
 .Backup Nur Kopieren
@@ -151,7 +153,7 @@ NOTE: Bei Cluster-Konfigurationen werden die Backups entsprechend den in der Ric
 Sie können nur einen Plantyp für eine Richtlinie auswählen.
 
 +
-image::../media/backup_settings.gif[Bildschirm „Backup-Einstellungen“.]
+image:../media/backup_settings.gif["Bildschirm „Backup-Einstellungen“."]
 
 +
 
@@ -279,7 +281,7 @@ Diese Option sollte für SnapMirror Active Sync aktiviert sein.
 Während der sekundären Replizierung wird mit der SnapLock-Ablaufzeit die primäre SnapLock-Ablaufzeit geladen. Durch Klicken auf die Schaltfläche * Aktualisieren* auf der Seite Topologie wird die sekundäre und primäre SnapLock-Ablaufzeit aktualisiert, die von ONTAP abgerufen werden.
 
 +
-Siehe link:..protect-scsql/task_view_sql_server_backups_and_clones_in_the_topology_page.html["Sehen Sie sich SQL Server Backups und Klone auf der Seite Topologie an"].
+Siehe link:task_view_sql_server_backups_and_clones_in_the_topology_page.html["Sehen Sie sich SQL Server Backups und Klone auf der Seite Topologie an"].
 
 
 
@@ -299,7 +301,7 @@ Wenn SnapLock nur auf dem sekundären aus ONTAP, dem sogenannten SnapLock-Vault,
 Weitere Informationen zu SnapLock Vault finden Sie unter https://docs.netapp.com/us-en/ontap/snaplock/commit-snapshot-copies-worm-concept.html["Speichern von Snapshot-Kopien in WORM-KOPIEN auf einem Vault-Ziel"]
 
 +
-Siehe link:..protect-scsql/task_view_sql_server_backups_and_clones_in_the_topology_page.html["Sehen Sie sich SQL Server Backups und Klone auf der Seite Topologie an"].
+Siehe link:task_view_sql_server_backups_and_clones_in_the_topology_page.html["Sehen Sie sich SQL Server Backups und Klone auf der Seite Topologie an"].
 
 
 

@@ -7,7 +7,7 @@ summary: Sie können den Fortschritt der verschiedenen Backup-Vorgänge überwac
 = Überwachen Sie die Backup-Vorgänge für SQL-Ressourcen auf der Seite SnapCenter-Jobs
 :allow-uri-read: 
 :icons: font
-:imagesdir: ../media/ ///
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -39,7 +39,7 @@ Die folgenden Symbole werden auf der Seite Jobs angezeigt und zeigen den entspre
 . Wählen Sie einen Sicherungsauftrag aus, und klicken Sie dann auf *Details*, um die Jobdetails anzuzeigen.
 +
 
-NOTE: Der Status des Backupjobs wird zwar angezeigtimage:../media/success_icon.gif["Symbol „Abgeschlossen“"]Wenn Sie auf die Jobdetails klicken, wird möglicherweise angezeigt, dass einige der untergeordneten Aufgaben des Backup-Vorgangs noch ausgeführt oder mit Warnzeichen markiert sind.
+NOTE: Obwohl der Status des Sicherungsauftrags angezeigt wirdimage:../media/success_icon.gif["Symbol „Abgeschlossen“"], wird beim Klicken auf Jobdetails möglicherweise angezeigt, dass einige der untergeordneten Aufgaben des Sicherungsvorgangs noch ausgeführt oder mit Warnzeichen markiert sind.
 
 . Klicken Sie auf der Seite Jobdetails auf *Protokolle anzeigen*.
 +
