@@ -60,39 +60,23 @@ https://imt.netapp.com/matrix/imt.jsp?components=121071;&solution=1259&isHWU&src
 
 == Zusätzliche Befehle
 
-Um einen zusätzlichen Befehl für das SnapCenter-Plug-in für MySQL auszuführen, müssen Sie ihn in die Datei aufnehmen `allowed_commands.config` .
+Um einen zusätzlichen Befehl auf dem SnapCenter-Plugin für MySQL auszuführen, müssen Sie ihn in die Datei _allowed_commands.config_ einfügen.
 
-`allowed_commands.config` Die Datei befindet sich im Unterverzeichnis "etc" des SnapCenter Plug-in for MySQL Verzeichnisses.
+* Standardspeicherort auf dem Windows-Host: _C:\Programme\NetApp\SnapCenter\SnapCenter Plug-in Creator\etc\allowed_commands.config_
+* Standardspeicherort auf dem Linux-Host: _/opt/NetApp/SnapCenter/scc/etc/allowed_commands.config_
 
-.Windows Hosts
-Standard: `C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands.config`
 
-Benutzerdefinierter Pfad: `<Custom_Directory>\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands.config`
+Um zusätzliche Befehle auf dem Plug-in-Host zuzulassen, öffnen Sie die Datei _allowed_commands.config_ in einem Editor. Geben Sie jeden Befehl in eine separate Zeile ein, und bei den Befehlen wird die Groß-/Kleinschreibung nicht beachtet. Stellen Sie sicher, dass Sie den vollständig qualifizierten Pfadnamen angeben und den Pfadnamen in Anführungszeichen („) einschließen, wenn er Leerzeichen enthält.
 
-.Linux-Hosts
-Standard: `/opt/NetApp/snapcenter/scc/etc/allowed_commands.config`
-
-Benutzerdefinierter Pfad: `<Custom_Directory>allowed_commands.config`
-
-Öffnen Sie, um zusätzliche Befehle auf dem Plug-in-Host zuzulassen `allowed_commands.config` Datei in einem Editor. Geben Sie jeden Befehl in einer eigenen Zeile ein. Die Groß-/Kleinschreibung wird nicht beachtet.
 Beispiel:
 
-Befehl: Montieren
+Befehl: Mount Befehl: Umount Befehl: "C:\Programme\NetApp\SnapCreator commands\sdcli.exe" Befehl: myscript.bat
 
-Befehl: Umount
-
-Stellen Sie sicher, dass Sie den vollständigen Pfadnamen angeben. Schließen Sie den Pfadnamen in Anführungszeichen (") ein, wenn er Leerzeichen enthält.
-Beispiel:
-
-Befehl: „C:\Program Files\NetApp\SnapCreator commands\sdcli.exe“
-
-Befehl: myscript.bat
-
-Wenn der `allowed_commands.config` Datei ist nicht vorhanden, die Befehle oder die Skriptausführung werden blockiert und der Workflow schlägt mit folgendem Fehler fehl:
+Wenn die Datei _allowed_commands.config_ nicht vorhanden ist, werden die Befehle oder die Ausführung des Skripts blockiert, und der Workflow schlägt mit dem folgenden Fehler fehl:
 
 „[/mnt/Mount -a] Ausführung nicht zulässig. Autorisieren Sie, indem Sie den Befehl in der Datei %s auf dem Plugin-Host hinzufügen.“
 
-Wenn der Befehl oder das Skript nicht im vorhanden ist `allowed_commands.config`, Die Ausführung des Befehls oder Skripts wird blockiert und der Workflow wird mit folgendem Fehler fehlschlagen:
+Wenn der Befehl oder das Skript nicht in _allowed_commands.config_ vorhanden ist, wird die Ausführung des Befehls oder Skripts blockiert und der Workflow schlägt mit folgendem Fehler fehl:
 
 „[/mnt/Mount -a] Ausführung nicht zulässig. Autorisieren Sie, indem Sie den Befehl in der Datei %s auf dem Plugin-Host hinzufügen.“
 
@@ -108,6 +92,7 @@ Mit SnapCenter 2.0 und höheren Versionen kann ein nicht-Root-Benutzer das SnapC
 *Was Sie brauchen*
 
 * Sudo Version 1.8.7 oder höher.
+* Wenn umask 0027 ist, stellen Sie sicher, dass der java-Ordner und alle darin enthaltenen Dateien die Berechtigung 555 haben sollten. Andernfalls kann die Installation des Plug-ins fehlschlagen.
 * Stellen Sie für den Benutzer, der nicht root ist, sicher, dass der Name des Benutzers, der nicht root ist, und die Gruppe des Benutzers identisch sein sollten.
 * Bearbeiten Sie die Datei _/etc/ssh/sshd_config_, um die Algorithmen für den Authentifizierungscode Macs hmac-sha2-256 und MACs hmac-sha2-512 zu konfigurieren.
 +

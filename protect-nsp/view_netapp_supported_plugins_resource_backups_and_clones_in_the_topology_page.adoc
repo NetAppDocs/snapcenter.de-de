@@ -68,5 +68,5 @@ NOTE: Sie können Backups, die sich auf dem sekundären Speichersystem befinden,
 
 NOTE: Sie können die Backups, die sich auf dem primären Speichersystem befinden, nicht umbenennen.
 
-. Wenn Sie einen Klon löschen möchten, wählen Sie den Klon aus der Tabelle aus, und klicken Sie auf image:../media/delete_icon.gif[""] Um den Klon zu löschen.
+. Wenn Sie einen Klon löschen möchten, wählen Sie den Klon aus der Tabelle aus, und klicken Sie auf image:../media/delete_icon.gif["Symbol Löschen"] Um den Klon zu löschen.
 

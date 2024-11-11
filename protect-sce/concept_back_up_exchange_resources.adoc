@@ -17,4 +17,4 @@ Sie können mehrere Backups so planen, dass sie gleichzeitig über mehrere Serve
 
 Der folgende Workflow zeigt die Reihenfolge, in der Sie den Sicherungsvorgang durchführen müssen:
 
-image:../media/sce_backup_workflow.gif[""]
+image:../media/sce_backup_workflow.gif["Backup-Workflow für Exchange Datenbank"]

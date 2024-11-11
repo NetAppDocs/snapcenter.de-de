@@ -1,17 +1,17 @@
 ---
 permalink: protect-db2/prerequisites-to-adding-hosts-and-installing-snapcenter-plug-in-for-ibm-db2.html 
 sidebar: sidebar 
-keywords: credentials 
-summary: Bevor Sie einen Host hinzufügen und die Plug-in-Pakete installieren, müssen Sie alle Anforderungen erfüllen. Das SnapCenter Plug-in für IBM DB2 ist sowohl in Windows- als auch in Linux-Umgebungen verfügbar. 
+keywords: credentials, Windows, Linux, AIX 
+summary: Bevor Sie einen Host hinzufügen und die Plug-in-Pakete installieren, müssen Sie alle Anforderungen erfüllen. Das SnapCenter Plug-in für IBM DB2 wird auf Windows-, Linux- und AIX-Umgebungen unterstützt. 
 ---
-= Voraussetzungen für das Hinzufügen von Hosts und die Installation des SnapCenter-Plug-ins für IBM DB2
+= Voraussetzungen für das Hinzufügen von Hosts und das Installieren des Plug-ins-Pakets für Windows, Linux oder AIX
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Bevor Sie einen Host hinzufügen und die Plug-in-Pakete installieren, müssen Sie alle Anforderungen erfüllen. Das SnapCenter Plug-in für IBM DB2 ist sowohl in Windows- als auch in Linux-Umgebungen verfügbar.
+Bevor Sie einen Host hinzufügen und die Plug-in-Pakete installieren, müssen Sie alle Anforderungen erfüllen. Das SnapCenter Plug-in für IBM DB2 wird auf Windows-, Linux- und AIX-Umgebungen unterstützt.
 
 * Sie müssen Java 11 auf Ihrem Host installiert haben.
 +
@@ -41,10 +41,9 @@ https://imt.netapp.com/matrix/imt.jsp?components=121066;&solution=1259&isHWU&src
 
 
 
-== Linux-Hosts
+== Linux- und AIX-Hosts
 
 * Sie müssen die passwortbasierte SSH-Verbindung für den Root- oder nicht-Root-Benutzer aktiviert haben.
-* Sie müssen die *mksh*-Bibliothek auf Ihrem Linux-Host installiert haben.
 * Sie müssen Java 11 auf Ihrem Linux-Host installiert haben.
 +
 http://www.java.com/en/download/manual.jsp["Java-Downloads für alle Betriebssysteme"]
@@ -60,39 +59,29 @@ https://imt.netapp.com/matrix/imt.jsp?components=121066;&solution=1259&isHWU&src
 
 == Zusätzliche Befehle
 
-Um einen zusätzlichen Befehl auf dem SnapCenter-Plug-in für IBM DB2 auszuführen, müssen Sie ihn in die Datei aufnehmen `allowed_commands.config` .
+Um einen zusätzlichen Befehl auf dem SnapCenter Plug-in für IBM DB2 auszuführen, müssen Sie ihn in die Datei _allowed_commands.config_ aufnehmen.
 
-`allowed_commands.config` Die Datei befindet sich im Unterverzeichnis "etc" des SnapCenter Plug-in für IBM DB2 Verzeichnisses.
+* Standardspeicherort auf dem Windows-Host: _C:\Programme\NetApp\SnapCenter\SnapCenter Plug-in Creator\etc\allowed_commands.config_
+* Standardspeicherort auf dem Linux-Host: _/opt/NetApp/SnapCenter/scc/etc/allowed_commands.config_
 
-.Windows Hosts
-Standard: `C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands.config`
 
-Benutzerdefinierter Pfad: `<Custom_Directory>\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands.config`
+Um zusätzliche Befehle auf dem Plug-in-Host zuzulassen, öffnen Sie die Datei _allowed_commands.config_ in einem Editor. Geben Sie jeden Befehl in eine separate Zeile ein, und bei den Befehlen wird die Groß-/Kleinschreibung nicht beachtet. Stellen Sie sicher, dass Sie den vollständig qualifizierten Pfadnamen angeben und den Pfadnamen in Anführungszeichen („) einschließen, wenn er Leerzeichen enthält.
 
-.Linux-Hosts
-Standard: `/opt/NetApp/snapcenter/scc/etc/allowed_commands.config`
-
-Benutzerdefinierter Pfad: `<custom_Directory>/NetApp/snapcenter/scc/etc/allowed_commands.config`
-
-Öffnen Sie, um zusätzliche Befehle auf dem Plug-in-Host zuzulassen `allowed_commands.config` Datei in einem Editor. Geben Sie jeden Befehl in einer eigenen Zeile ein. Die Groß-/Kleinschreibung wird nicht beachtet.
 Beispiel:
 
 Befehl: Montieren
 
 Befehl: Umount
 
-Stellen Sie sicher, dass Sie den vollständigen Pfadnamen angeben. Schließen Sie den Pfadnamen in Anführungszeichen (") ein, wenn er Leerzeichen enthält.
-Beispiel:
-
 Befehl: „C:\Program Files\NetApp\SnapCreator commands\sdcli.exe“
 
 Befehl: myscript.bat
 
-Wenn der `allowed_commands.config` Datei ist nicht vorhanden, die Befehle oder die Skriptausführung werden blockiert und der Workflow schlägt mit folgendem Fehler fehl:
+Wenn die Datei _allowed_commands.config_ nicht vorhanden ist, werden die Befehle oder die Ausführung des Skripts blockiert, und der Workflow schlägt mit dem folgenden Fehler fehl:
 
 „[/mnt/Mount -a] Ausführung nicht zulässig. Autorisieren Sie, indem Sie den Befehl in der Datei %s auf dem Plugin-Host hinzufügen.“
 
-Wenn der Befehl oder das Skript nicht im vorhanden ist `allowed_commands.config`, Die Ausführung des Befehls oder Skripts wird blockiert und der Workflow wird mit folgendem Fehler fehlschlagen:
+Wenn der Befehl oder das Skript nicht in _allowed_commands.config_ vorhanden ist, wird die Ausführung des Befehls oder Skripts blockiert und der Workflow schlägt mit folgendem Fehler fehl:
 
 „[/mnt/Mount -a] Ausführung nicht zulässig. Autorisieren Sie, indem Sie den Befehl in der Datei %s auf dem Plugin-Host hinzufügen.“
 
@@ -103,11 +92,12 @@ NOTE: Sie sollten keinen Platzhaltereintrag (*) verwenden, um alle Befehle zuzul
 
 == Konfigurieren von Sudo-Berechtigungen für Benutzer ohne Root-Zugriff auf Linux-Hosts
 
-Mit SnapCenter 2.0 und höheren Versionen kann ein nicht-Root-Benutzer das SnapCenter Plug-ins-Paket für Linux installieren und das Plug-in-Verfahren starten. Die Plug-in-Prozesse werden als effektiver nicht-Root-Benutzer ausgeführt. Sie sollten sudo-Berechtigungen für den nicht-Root-Benutzer konfigurieren, um Zugriff auf mehrere Pfade zu ermöglichen.
+Mit SnapCenter kann ein Benutzer, der kein Root-Benutzer ist, das SnapCenter-Plug-in-Paket für Linux installieren und den Plug-in-Prozess starten. Die Plug-in-Prozesse werden als effektiver nicht-Root-Benutzer ausgeführt. Sie sollten sudo-Berechtigungen für den nicht-Root-Benutzer konfigurieren, um Zugriff auf mehrere Pfade zu ermöglichen.
 
 *Was Sie brauchen*
 
 * Sudo Version 1.8.7 oder höher.
+* Wenn umask 0027 ist, stellen Sie sicher, dass der java-Ordner und alle darin enthaltenen Dateien die Berechtigung 555 haben sollten. Andernfalls kann die Installation des Plug-ins fehlschlagen.
 * Stellen Sie für den Benutzer, der nicht root ist, sicher, dass der Name des Benutzers, der nicht root ist, und die Gruppe des Benutzers identisch sein sollten.
 * Bearbeiten Sie die Datei _/etc/ssh/sshd_config_, um die Algorithmen für den Authentifizierungscode Macs hmac-sha2-256 und MACs hmac-sha2-512 zu konfigurieren.
 +
@@ -167,6 +157,84 @@ NOTE: Wenn Sie über ein RAC Setup verfügen, und die anderen zulässigen Befehl
 Sie können den Wert von _crs_Home_ aus der Datei _/etc/oracle/olr.loc_ erhalten.
 
 _LINUX_USER_ ist der Name des nicht-root-Benutzers, den Sie erstellt haben.
+
+Sie können die Datei _Checksumme_value_ aus der Datei *sc_unix_Plugins_Checksumme.txt* abrufen, die sich unter folgender Adresse befindet:
+
+* _C:\ProgramData\NetApp\SnapCenter\Paket-Repository\sc_unix_Plugins_Checksumme.txt_ wenn SnapCenter-Server auf Windows-Host installiert ist.
+* _/opt/NetApp/snapcenter/SnapManagerWeb/Repository/sc_unix_Plugins_checksum.txt_ wenn SnapCenter-Server auf Linux-Host installiert ist.
+
+
+
+IMPORTANT: Das Beispiel sollte nur als Referenz zur Erstellung eigener Daten verwendet werden.
+
+
+
+== Konfigurieren Sie sudo-Berechtigungen für Benutzer, die nicht root sind, für AIX-Host
+
+SnapCenter 4.4 und höher ermöglicht es einem nicht-Root-Benutzer, das SnapCenter Plug-ins Paket für AIX zu installieren und den Plug-in-Prozess zu starten. Die Plug-in-Prozesse werden als effektiver nicht-Root-Benutzer ausgeführt. Sie sollten sudo-Berechtigungen für den nicht-Root-Benutzer konfigurieren, um Zugriff auf mehrere Pfade zu ermöglichen.
+
+*Was Sie brauchen*
+
+* Sudo Version 1.8.7 oder höher.
+* Wenn umask 0027 ist, stellen Sie sicher, dass der java-Ordner und alle darin enthaltenen Dateien die Berechtigung 555 haben sollten. Andernfalls kann die Installation des Plug-ins fehlschlagen.
+* Bearbeiten Sie die Datei _/etc/ssh/sshd_config_, um die Algorithmen für den Authentifizierungscode Macs hmac-sha2-256 und MACs hmac-sha2-512 zu konfigurieren.
++
+Starten Sie den sshd-Dienst nach dem Aktualisieren der Konfigurationsdatei neu.
+
++
+Beispiel:
+
++
+[listing]
+----
+#Port 22
+#AddressFamily any
+#ListenAddress 0.0.0.0
+#ListenAddress ::
+#Legacy changes
+#KexAlgorithms diffie-hellman-group1-sha1
+#Ciphers aes128-cbc
+#The default requires explicit activation of protocol
+Protocol 2
+HostKey/etc/ssh/ssh_host_rsa_key
+MACs hmac-sha2-256
+----
+
+
+*Über diese Aufgabe*
+
+Sie sollten sudo-Berechtigungen für den nicht-Root-Benutzer konfigurieren, um Zugriff auf die folgenden Pfade zu ermöglichen:
+
+* /Home/_AIX_USER_/.sc_netapp/snapcenter_aix_Host_Plugin.bsx
+* /Custom_Location/NetApp/snapcenter/spl/Installation/Plugins/Deinstallation
+* /Custom_location/NetApp/snapcenter/spl/bin/spl
+
+
+*Schritte*
+
+. Melden Sie sich beim AIX-Host an, auf dem Sie das SnapCenter Plug-ins-Paket für AIX installieren möchten.
+. Fügen Sie die folgenden Zeilen zur Datei /etc/sudoers mit dem Dienstprogramm visudo Linux hinzu.
++
+[listing, subs="+quotes"]
+----
+Cmnd_Alias HPPACMD = sha224:checksum_value== /home/_AIX_USER_/.sc_netapp/snapcenter_aix_host_plugin.bsx,
+/opt/NetApp/snapcenter/spl/installation/plugins/uninstall, /opt/NetApp/snapcenter/spl/bin/spl
+Cmnd_Alias PRECHECKCMD = sha224:checksum_value== /home/_AIX_USER_/.sc_netapp/AIX_Prechecks.sh
+Cmnd_Alias CONFIGCHECKCMD = sha224:checksum_value== /opt/NetApp/snapcenter/spl/plugins/scu/scucore/configurationcheck/Config_Check.sh
+Cmnd_Alias SCCMD = sha224:checksum_value== /opt/NetApp/snapcenter/spl/bin/sc_command_executor
+_AIX_USER_ ALL=(ALL) NOPASSWD:SETENV: HPPACMD, PRECHECKCMD, CONFIGCHECKCMD, SCCMD
+Defaults: _AIX_USER_ !visiblepw
+Defaults: _AIX_USER_ !requiretty
+----
++
+
+NOTE: Wenn Sie über ein RAC Setup verfügen, und die anderen zulässigen Befehle, sollten Sie die Datei /etc/sudoers: '/<crs_home>/bin/olsnodes' hinzufügen.
+
+
+
+Sie können den Wert von _crs_Home_ aus der Datei _/etc/oracle/olr.loc_ erhalten.
+
+_AIX_USER_ ist der Name des nicht-root-Benutzers, den Sie erstellt haben.
 
 Sie können die Datei _Checksumme_value_ aus der Datei *sc_unix_Plugins_Checksumme.txt* abrufen, die sich unter folgender Adresse befindet:
 

@@ -16,12 +16,12 @@ Sie können SnapCenter zum Klonen einer Backup verwenden. Sie können von primä
 .Bevor Sie beginnen
 * Sie sollten die Ressourcen oder Ressourcengruppe gesichert haben.
 * Sie sollten sicherstellen, dass die Aggregate, die die Volumes hosten, sich in der Liste der zugewiesenen Aggregate der Storage Virtual Machine (SVM) befinden.
+* Beim Erstellen eines Klons für DB2 auf einem alternativen Host müssen Sie eine n-1-Verzeichnisstruktur für den Mount-Pfad des Klons erstellen, die dem ursprünglichen Mount-Pfad auf dem anderen Host entspricht. Der Mount-Pfad sollte über die Ausführungsberechtigung _755_ verfügen.
 * Wenn Sie Befehle vor dem Klonen oder nach dem Klonen ausführen, sollten Sie überprüfen, ob die Befehle in der Befehlsliste auf dem Plug-in-Host über folgende Pfade vorhanden sind:
 +
-Für Windows: _C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands.config_
+** Standardspeicherort auf dem Windows-Host: _C:\Programme\NetApp\SnapCenter\SnapCenter Plug-in Creator\etc\allowed_commands.config_
+** Standardspeicherort auf dem Linux-Host: _/opt/NetApp/SnapCenter/scc/etc/allowed_commands.config_
 
-+
-Für Linux: _/opt/NetApp/snapcenter/scc/etc/allowed_commands.config_
 
 
 
@@ -115,13 +115,7 @@ NOTE: Die Skripte werden auf dem Plug-in-Host ausgeführt.
 Mount-Befehl für ein Volume oder qtree auf einem Linux-Rechner:
 
 +
-Beispiel für NFS:
-
-+
- mount VSERVER_DATA_IP:%VOLUME_NAME_Clone /mnt
-+
-
-NOTE: Für Pre- und Post-Befehle für Quiesce-, Snapshot- und Unquiesce-Vorgänge sollten Sie überprüfen, ob die Befehle in der Befehlsliste vorhanden sind, die auf dem Plug-in-Host über den _/opt/snapcenter/snapenter/scc/allowed_commands.config_-Pfad für Linux und _C:\Programme\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands.config_ für Windows verfügbar ist.
+Beispiel für NFS: `mount VSERVER_DATA_IP:%VOLUME_NAME_Clone /mnt`
 
 
 

@@ -33,4 +33,4 @@ Wenn Sie beispielsweise alle Datenbanken eines Hosts sichern, können Sie eine R
 
 Das folgende Bild veranschaulicht die Beziehung zwischen Ressourcen, Ressourcengruppen und Richtlinien für Datenbanken:
 
-image::../media/sco_resourcegroup_policy.gif[sco-Ressourcengruppenrichtlinie]
+image::../media/sco_resourcegroup_policy.gif[Richtlinie für Ressourcengruppen]

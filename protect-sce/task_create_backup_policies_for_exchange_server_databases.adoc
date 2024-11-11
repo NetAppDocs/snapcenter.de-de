@@ -285,7 +285,7 @@ IMPORTANT: Die nur-Primärrichtlinie kann nicht verwendet werden, wenn SnapMirro
 
 Durch Klicken auf die Schaltfläche * Aktualisieren* auf der Seite Topologie wird die sekundäre und primäre SnapLock-Ablaufzeit aktualisiert, die von ONTAP abgerufen werden.
 
-Siehe link:..protect-sce/task_view_exchange_backups_in_the_topology_page.html["Zeigen Sie Exchange-Backups auf der Seite Topologie an"].
+Siehe link:../protect-sce/task_view_exchange_backups_in_the_topology_page.html["Zeigen Sie Exchange-Backups auf der Seite Topologie an"].
 
 
 

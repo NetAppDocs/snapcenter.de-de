@@ -20,10 +20,9 @@ Sie können SnapCenter zum Klonen einer Backup verwenden. Sie können von primä
 * Der Ziel-Klon-Server sollte dieselbe SAP HANA-Instanz-SID haben, die im Feld Ziel-Klon-SID bereitgestellt wird.
 * Wenn Sie Befehle vor dem Klonen oder nach dem Klonen ausführen, sollten Sie überprüfen, ob die Befehle in der Befehlsliste auf dem Plug-in-Host über folgende Pfade vorhanden sind:
 +
-Für Windows: _C:\Programmdateien\NetApp\SnapCenter\SnapCenter Plug-in Creator\etc\allowed_befiehlt_list.txt_
+** Für Windows: _C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands.config_
+** Für Linux: _/opt/NetApp/snapcenter/scc/etc/allowed_commands.config_
 
-+
-Für Linux: _/var/opt/snapcenter/scc/allowed_befiehlt_list.txt_
 
 
 
@@ -32,7 +31,7 @@ NOTE: Wenn die Befehle in der Befehlsliste nicht vorhanden sind, schlägt der Vo
 
 .Über diese Aufgabe
 * Informationen zu Einschränkungen für den Klon-Split-Vorgang finden Sie unter http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["ONTAP 9 Leitfaden für das Management von logischem Storage"^].
-* Bei ONTAP Version 9.12.1 und niedriger übernehmen die im Rahmen der Wiederherstellung aus den SnapLock Vault Snapshots erstellten Klone die Verfallszeit von SnapLock Vault. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
+* Bei ONTAP 9.12.1 und älteren Versionen übernehmen die aus den SnapLock Vault Snapshots im Rahmen der Wiederherstellung erstellten Klone die Verfallszeit von SnapLock Vault. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
 
 
 [role="tabbed-block"]
@@ -118,13 +117,7 @@ NOTE: Die Skripte werden auf dem Plug-in-Host ausgeführt.
 Mount-Befehl für ein Volume oder qtree auf einem Linux-Rechner:
 
 +
-Beispiel für NFS:
-
-+
- mount VSERVER_DATA_IP:%VOLUME_NAME_Clone /mnt
-+
-
-NOTE: Für Pre- und Post-Befehle für Quiesce-, Snapshot- und Unquiesce-Vorgänge sollten Sie überprüfen, ob die Befehle in der Befehlsliste vorhanden sind, die auf dem Plug-in-Host über den _/opt/snapcenter/snapenter/scc/allowed_commands.config_ Pfad für Linux und _C:\Programme\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands_list.txt_ für Windows verfügbar ist.
+Beispiel für NFS: `mount VSERVER_DATA_IP:%VOLUME_NAME_Clone /mnt`
 
 
 

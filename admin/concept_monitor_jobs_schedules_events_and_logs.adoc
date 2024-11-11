@@ -33,6 +33,37 @@ Sie können die folgenden Aufgaben im Zusammenhang mit Überwachungsaufgaben aus
 
 
 
+=== Managen geplanter Backup-Jobs
+
+Ab Version SnapCenter 6.0.1 wurde ein neuer Parameter *JobConcurrencyThreshold* eingeführt, der einen Schwellenwert für die Anzahl der geplanten Jobs festlegt, die zu einem bestimmten Zeitpunkt ausgeführt werden können. So können Sie die Anzahl der Backups steuern, die basierend auf der Hardwarekonfiguration des Systems ausgeführt werden sollen.
+
+Der Standardwert für *JobConcurrencyThreshold* ist 0 und ist deaktiviert. Wenn Sie während des geplanten Backup-Fensters einen Performance-Abfall beobachten, kann die Aktivierung durch Zuweisen eines Werts aktiviert werden.
+
+
+NOTE: Wenn Sie *JobConcurrencyThreshold* aktivieren, um gleichzeitige Jobs zu verwalten, erlaubt SnapCenter Ihnen nicht, die Reihenfolge der Backups zu steuern und die Backups werden möglicherweise nicht gleichzeitig ausgelöst, wie im Zeitplan angegeben.
+
+.Schritte
+. Legen Sie den Wert des Parameters _JobConcurrencyThreshold_ unter _C:\Programme\NetApp\SnapCenter WebApp\SnapManager.Web.UI.dll.config_ fest.
+. Führen Sie das Recycling des SnapCenter-Anwendungspools durch, indem Sie auf IIS > Anwendungspools > SnapCenter > Neu starten klicken.
+. Starten Sie den SnapCenter-Webdienst neu, indem Sie auf IIS > Sites > SnapCenter > Neu starten klicken.
+
+
+
+
+=== Veraltete Jobs verwalten
+
+Veraltete Jobs werden durch Unterbrechungen in SnapCenter oder durch unsachgemäße Job-Updates erstellt. Ab Version SnapCenter 6.0.1 wird ein vordefinierter Zeitplan eingeführt, um diese veralteten Jobs, die mehr als 72 Stunden im System stecken bleiben, zu bereinigen. Sie können die Zeitplanhäufigkeit ändern, indem Sie den konfigurierbaren Parameter *CleanUpStaleJobsIntervalHours* bearbeiten.
+
+Sie können die Bereinigung bei Bedarf auslösen, indem Sie den Zeitplan unter *Monitor* > *Zeitpläne* > *SnapCenter_StaleJobCleanUp* ausführen.
+
+.Schritte
+. Legen Sie den Wert des Parameters _CleanUpStaleJobsIntervalHours_ unter _C:\Programme\NetApp\SnapCenter WebApp\SnapManager.Web.UI.dll.config_ fest.
+. Führen Sie das Recycling des SnapCenter-Anwendungspools durch, indem Sie auf IIS > Anwendungspools > SnapCenter > Neu starten klicken.
+. Starten Sie den SnapCenter-Webdienst neu, indem Sie auf IIS > Sites > SnapCenter > Neu starten klicken.
+
+
+
+
 == Überwachung von Zeitplänen
 
 Sie möchten möglicherweise aktuelle Zeitpläne anzeigen, um zu bestimmen, wann der Vorgang gestartet wird, wann er zuletzt ausgeführt wurde und wann er als Nächstes ausgeführt wird. Sie können auch den Host bestimmen, auf dem der Vorgang ausgeführt wird, sowie die Ressourcengruppe und die Richtlinieninformationen des Vorgangs.

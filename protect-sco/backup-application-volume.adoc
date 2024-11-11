@@ -21,9 +21,9 @@ Standardmäßig werden Backups von Konsistenzgruppen (CG) erstellt. Wenn Sie Vol
 
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das Oracle Datenbank-Plug-in aus der Liste aus.
 . Wählen Sie auf der Seite Ressourcen in der Liste *Ansicht* die Option *Anwendungsvolumen* aus.
-. Klicken Sie Auf *image:../media/filter_icon.png[""]*, und wählen Sie dann den Host-Namen und den Datenbanktyp, um die Ressourcen zu filtern.
+. Klicken Sie auf image:../media/filter_icon.png["Filtersymbol"], und wählen Sie dann den Hostnamen und den Datenbanktyp aus, um die Ressourcen zu filtern.
 +
-Sie können dann auf * klickenimage:../media/filter_icon.png[""]* Zum Schließen des Filterfensters.
+Sie können dann klicken image:../media/filter_icon.png["Filtersymbol"] , um den Filterbereich zu schließen.
 
 . Wählen Sie das Anwendungsvolumen aus, das Sie sichern möchten.
 +
@@ -55,7 +55,7 @@ Geben Sie die Ziele der Archivprotokolldateien an, die Sie nicht sichern möchte
 .. Wählen Sie eine oder mehrere Richtlinien aus der Dropdown-Liste aus.
 +
 
-NOTE: Sie können eine Richtlinie auch erstellen, indem Sie auf * klickenimage:../media/add_policy_from_resourcegroup.gif[""]*.
+NOTE: Sie können eine Richtlinie auch erstellen, indem Sie auf klicken image:../media/add_policy_from_resourcegroup.gif["Richtlinie hinzufügen"].
 
 
 
@@ -63,7 +63,7 @@ NOTE: Sie können eine Richtlinie auch erstellen, indem Sie auf * klickenimage:.
 Im Abschnitt „Zeitpläne für ausgewählte Richtlinien konfigurieren“ werden die ausgewählten Richtlinien aufgelistet.
 
 +
-.. Klicken Sie Auf image:../media/add_policy_from_resourcegroup.gif[""] In der Spalte Zeitplan konfigurieren für die Richtlinie konfigurieren, für die Sie einen Zeitplan konfigurieren möchten.
+.. Klicken Sie in der Spalte Zeitpläne konfigurieren auf image:../media/add_policy_from_resourcegroup.gif["Richtlinie hinzufügen"] die Richtlinie, für die Sie einen Zeitplan konfigurieren möchten.
 .. Konfigurieren Sie im Fenster Add Schedules for Policy_Name_ den Zeitplan, und klicken Sie dann auf *OK*.
 +
 _Policy_Name_ ist der Name der von Ihnen ausgewählten Richtlinie.

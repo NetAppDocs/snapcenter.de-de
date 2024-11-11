@@ -44,7 +44,7 @@ Die neuen Dateien, die nach der Sicherung erstellt wurden, sind nach der Wiederh
 . Geben Sie auf der PostOps-Seite Post-Restore-Befehle ein, die nach der Durchführung eines Wiederherstellungsjobs ausgeführt werden sollen.
 +
 
-NOTE: Sie sollten überprüfen, ob die Befehle in der Befehlsliste vorhanden sind, die auf dem Plug-in-Host verfügbar ist, und zwar über den Pfad _/opt/NetApp/snapcenter/scc/etc/allowed_commands.config_.
+NOTE: Sie sollten überprüfen, ob die Befehle in der Befehlsliste vorhanden sind, die auf dem Plug-in-Host unter der Adresse _/opt/NetApp/SnapCenter/scc/etc/allowed_commands.config_ Pfad verfügbar ist.
 
 . Wählen Sie auf der Seite Benachrichtigung aus der Dropdown-Liste *E-Mail-Präferenz* die Szenarien aus, in denen Sie die E-Mail-Benachrichtigungen senden möchten.
 +

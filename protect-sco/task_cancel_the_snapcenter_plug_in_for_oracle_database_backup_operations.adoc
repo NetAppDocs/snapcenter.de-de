@@ -51,7 +51,7 @@ Monitor-Seite
  a| 
 Aktivitätsbereich
  a| 
-. Klicken Sie nach dem Starten des Backup-Jobs auf image:../media/activity_pane_icon.gif[""] Im Aktivitätsbereich werden die fünf letzten Vorgänge angezeigt.
+. Klicken Sie nach dem Initiieren des Backupjobs auf image:../media/activity_pane_icon.gif["Symbol im Aktivitätsbereich"] das Aktivitätsfenster, um die fünf letzten Vorgänge anzuzeigen.
 . Wählen Sie den Vorgang aus.
 . Klicken Sie auf der Seite Jobdetails auf *Job abbrechen*.
 

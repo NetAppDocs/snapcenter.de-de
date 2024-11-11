@@ -25,15 +25,12 @@ Das SnapCenter Plug-ins Paket für AIX löst automatisch den symbolischen Link a
 * Erstellen Sie Anmeldeinformationen mit dem Authentifizierungsmodus als Linux oder AIX für den Installationsbenutzer.
 * Sie müssen Java 11 auf Ihrem Linux- oder AIX-Host installiert haben.
 +
+** Java von Oracle und OpenJDK wird für Linux unterstützt
+** IBM Java für AIX. Sie können von herunterladen https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?version=11&os=AIX["IBM Semeru Runtimes Downloads"]
++
 
 NOTE: Stellen Sie sicher, dass Sie nur die zertifizierte Version VON JAVA 11 auf dem Linux-Host installiert haben.
 
-+
-Informationen zum Herunterladen VON JAVA finden Sie unter:
-
-+
-** http://www.java.com/en/download/manual.jsp["Java-Downloads für alle Betriebssysteme"^]
-** https://www.ibm.com/support/pages/java-sdk-aix["IBM Java für AIX"^]
 
 
 * Für Oracle Datenbanken, die auf einem Linux oder AIX Host laufen, sollten Sie sowohl das SnapCenter Plug-in für Oracle Database als auch das SnapCenter Plug-in für UNIX installieren.
@@ -94,7 +91,7 @@ NOTE: Sie sollten genügend Festplattenspeicher zuweisen und den Speicherverbrau
  a| 
 Erforderliche Softwarepakete
  a| 
-Java 11 Oracle Java und OpenJDK
+Java 11 Oracle und OpenJDK
 
 
 NOTE: Stellen Sie sicher, dass Sie nur die zertifizierte Version VON JAVA 11 auf dem Linux-Host installiert haben.
@@ -113,6 +110,7 @@ Mit SnapCenter 2.0 und höheren Versionen kann ein nicht-Root-Benutzer das SnapC
 *Was Sie brauchen*
 
 * Sudo Version 1.8.7 oder höher.
+* Wenn umask 0027 ist, stellen Sie sicher, dass der java-Ordner und alle darin enthaltenen Dateien die Berechtigung 555 haben sollten. Andernfalls kann die Installation des Plug-ins fehlschlagen.
 * Stellen Sie für den Benutzer, der nicht root ist, sicher, dass der Name des Benutzers, der nicht root ist, und die Gruppe des Benutzers identisch sein sollten.
 * Bearbeiten Sie die Datei _/etc/ssh/sshd_config_, um die Algorithmen für den Authentifizierungscode Macs hmac-sha2-256 und MACs hmac-sha2-512 zu konfigurieren.
 +
@@ -238,6 +236,7 @@ SnapCenter 4.4 und höher ermöglicht es einem nicht-Root-Benutzer, das SnapCent
 *Was Sie brauchen*
 
 * Sudo Version 1.8.7 oder höher.
+* Wenn umask 0027 ist, stellen Sie sicher, dass der java-Ordner und alle darin enthaltenen Dateien die Berechtigung 555 haben sollten. Andernfalls kann die Installation des Plug-ins fehlschlagen.
 * Bearbeiten Sie die Datei _/etc/ssh/sshd_config_, um die Algorithmen für den Authentifizierungscode Macs hmac-sha2-256 und MACs hmac-sha2-512 zu konfigurieren.
 +
 Starten Sie den sshd-Dienst nach dem Aktualisieren der Konfigurationsdatei neu.
@@ -404,9 +403,9 @@ NOTE: Wenn Sie beim Erstellen einer Anmeldedaten falsche Details angeben, wird e
 
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
 . Wählen Sie auf der Seite Ressourcen in der Liste *Ansicht* die Option *Datenbank* aus.
-. Klicken Sie Auf image:../media/filter_icon.png[""]Und wählen Sie dann den Hostnamen und den Datenbanktyp aus, um die Ressourcen zu filtern.
+. Klicken Sie auf image:../media/filter_icon.png["Filtersymbol"], und wählen Sie dann den Hostnamen und den Datenbanktyp aus, um die Ressourcen zu filtern.
 +
-Sie können dann auf klicken image:../media/filter_icon.png[""] Um den Filterbereich zu schließen.
+Sie können dann klicken image:../media/filter_icon.png["Filtersymbol"] , um den Filterbereich zu schließen.
 
 . Wählen Sie die Datenbank aus, und klicken Sie dann auf *Datenbankeinstellungen* > *Datenbank konfigurieren*.
 . Wählen Sie im Abschnitt Datenbankeinstellungen konfigurieren in der Dropdown-Liste *vorhandene Anmeldedaten verwenden* die Anmeldeinformationen aus, die zum Ausführen von Datensicherungsjobs in der Oracle-Datenbank verwendet werden sollen.

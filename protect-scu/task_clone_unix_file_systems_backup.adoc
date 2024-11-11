@@ -57,7 +57,7 @@ Geben Sie den Pfad an, auf den das Dateisystem gemountet werden soll.
 .. Geben Sie die Befehle für den vor- oder Nachklon ein, die vor oder nach dem Klonvorgang ausgeführt werden sollen.
 +
 
-NOTE: Sie sollten überprüfen, ob die Befehle in der Befehlsliste vorhanden sind, die auf dem Plug-in-Host verfügbar ist, und zwar über den Pfad _/opt/NetApp/snapcenter/scc/allowed_commands.config_.
+NOTE: Sie sollten überprüfen, ob die Befehle in der Befehlsliste vorhanden sind, die auf dem Plug-in-Host verfügbar ist, und zwar über den Pfad _/opt/NetApp/snapcenter/scc/etc/allowed_commands.config_.
 
 
 

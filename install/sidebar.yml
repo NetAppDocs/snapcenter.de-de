@@ -87,6 +87,8 @@ entries:
       url: "/install/task_configure_root_or_intermediate_certificates_to_trust_store.html"
   - title: Aktivieren Sie die zertifikatbasierte Authentifizierung
     url: "/install/task_enable_certificate_based_authentication.html"
+  - title: Exportieren von SnapCenter-Zertifikaten
+    url: "/install/task_export_snapcenter_certificates.html"
 - title: Konfiguration von Active Directory, LDAP und LDAPS
   entries:
   - title: Registrieren Sie nicht vertrauenswürdige Active Directory-Domänen
@@ -95,16 +97,10 @@ entries:
     url: "/install/task_configure_CA_client_certificate_for_LDAPS.html"
 - title: Konfiguration Der Hochverfügbarkeit
   entries:
-  - title: Konfiguration von SnapCenter-Servern für Hochverfügbarkeit mit F5
+  - title: Konfigurieren Sie SnapCenter-Server für Hochverfügbarkeit
     url: "/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html"
-  - title: Konfigurieren Sie den Microsoft Network Load Balancer manuell
-    url: "/install/concept_network_load_balanacing_and_application_request_routing_requirements.html"
-  - title: Für hohe Verfügbarkeit von NLB auf F5 umschalten
-    url: "/install/task_switch_from_nlb_to_f5_for_high_availability.html"
   - title: Hochverfügbarkeit für das SnapCenter MySQL Repository
     url: "/install/concept_high_availability_for_snapcenter_mysql_repository.html"
-  - title: Exportieren von SnapCenter-Zertifikaten
-    url: "/install/task_export_snapcenter_certificates.html"
 - title: Konfigurieren der rollenbasierten Zugriffssteuerung (Role Based Access Control,
     RBAC)
   entries:

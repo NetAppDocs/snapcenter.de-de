@@ -22,7 +22,7 @@ Fügen Sie der Ressourcengruppe eine oder mehrere Richtlinien hinzu, um den Typ 
 Das folgende Bild veranschaulicht die Beziehung zwischen Ressourcen, Ressourcengruppen und Richtlinien für Datenbanken:
 
 +
-image::../media/sco_resourcegroup_policy.gif[sco-Ressourcengruppenrichtlinie]
+image::../media/sco_resourcegroup_policy.gif[Richtlinie für Ressourcengruppen]
 
 * Wenn Sie für Richtlinien mit aktiviertem SnapLock für ONTAP 9.12.1 und ältere Versionen einen Sperrzeitraum für Snapshots festlegen, übernehmen die Klone, die im Rahmen der Wiederherstellung aus den manipulationssicheren Snapshots erstellt wurden, die SnapLock-Auslaufzeit. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
 * Das Hinzufügen neuer Datenbanken ohne SnapMirror Active Sync zu einer vorhandenen Ressourcengruppe, die Ressourcen mit SnapMirror Active Sync enthält, wird nicht unterstützt.

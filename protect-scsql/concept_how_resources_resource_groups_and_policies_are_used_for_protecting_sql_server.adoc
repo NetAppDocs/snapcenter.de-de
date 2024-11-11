@@ -31,4 +31,4 @@ Denken Sie an eine Ressourcengruppe, die definiert _was_ Sie schützen möchten 
 
 Das folgende Bild veranschaulicht die Beziehung zwischen Ressourcen, Ressourcengruppen und Richtlinien für Datenbanken:
 
-image::../media/scsql_resourcegroup_policy.gif[Scsql-Ressourcengruppenrichtlinie]
+image::../media/scsql_resourcegroup_policy.gif[Richtlinie für Ressourcengruppen]

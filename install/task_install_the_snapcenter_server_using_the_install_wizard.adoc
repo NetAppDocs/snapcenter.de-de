@@ -13,7 +13,7 @@ summary: Sie können die ausführbare Datei für das SnapCenter-Server-Installat
 [role="lead"]
 Sie können die ausführbare Datei für das SnapCenter-Server-Installationsprogramm ausführen, um den SnapCenter-Server zu installieren.
 
-Optional können Sie mithilfe von PowerShell Cmdlets mehrere Installations- und Konfigurationsverfahren durchführen.
+Optional können Sie mithilfe von PowerShell Cmdlets mehrere Installations- und Konfigurationsverfahren durchführen. Sie sollten PowerShell 7.4.2 oder höher verwenden.
 
 
 NOTE: Die automatische Installation des SnapCenter-Servers über die Befehlszeile wird nicht unterstützt.

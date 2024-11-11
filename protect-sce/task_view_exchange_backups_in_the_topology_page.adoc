@@ -38,9 +38,9 @@ Wenn Sie beispielsweise 6 Backups mit einer Richtlinie für die Aufbewahrung von
 
 Wenn Sie eine sekundäre Beziehung als SnapMirror Active Sync haben (ursprünglich als SnapMirror Business Continuity [SM-BC] veröffentlicht), werden die folgenden zusätzlichen Symbole angezeigt:
 
-* image:../media/topology_replica_site_up.png["Replikatstandort oben"] Impliziert, dass der Replikatstandort hochgefahren ist.
-* image:../media/topology_replica_site_down.png["Replikatstandort nicht verfügbar"]  Bedeutet, dass der Replikatstandort ausgefallen ist.
-* image:../media/topology_reestablished.png["Beziehung wird wiederhergestellt"] Impliziert, dass die sekundäre Spiegel- oder Vault-Beziehung nicht wiederhergestellt wurde.
+* image:../media/topology_replica_site_up.png["Replikatstandort oben"] Der Replikatstandort ist hochgefahren.
+* image:../media/topology_replica_site_down.png["Replikatstandort nicht verfügbar"] Der Replikatstandort ist ausgefallen.
+* image:../media/topology_reestablished.png["Beziehung wird wiederhergestellt"] Die sekundäre Spiegel- oder Vault-Beziehung wurde nicht wiederhergestellt.
 
 
 .Schritte

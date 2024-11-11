@@ -19,10 +19,9 @@ Wenn eine Ressource noch nicht zu einer Ressourcengruppe gehört, können Sie di
 * Stellen Sie für einen Backup-Vorgang mit Snapshot Kopie sicher, dass alle Mandantendatenbanken gültig und aktiv sind.
 * Für Pre- und Post-Befehle für Stilllegung-, Snapshot- und Stilllegung-Vorgänge sollten Sie überprüfen, ob die Befehle in der Befehlsliste vorhanden sind, die auf dem Plug-in-Host über die folgenden Pfade verfügbar sind:
 +
-Für Windows: _C:\Programmdateien\NetApp\SnapCenter\SnapCenter Plug-in Creator\etc\allowed_befiehlt_list.txt_
+** Standardspeicherort auf dem Windows-Host: _C:\Programme\NetApp\SnapCenter\SnapCenter Plug-in Creator\etc\allowed_commands.config_
+** Standardspeicherort auf dem Linux-Host: _/opt/NetApp/SnapCenter/scc/etc/allowed_commands.config_
 
-+
-Für Linux: _/var/opt/snapcenter/scc/allowed_befiehlt_list.txt_
 
 
 
@@ -37,7 +36,7 @@ NOTE: Wenn die Befehle in der Befehlsliste nicht vorhanden sind, schlägt der Vo
 . Wählen Sie im linken Navigationsbereich *Ressourcen* aus, und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
 . Filtern Sie auf der Seite Ressourcen die Ressourcen aus der Dropdown-Liste *Ansicht* nach Ressourcentyp.
 +
-Wählen Sie *image:../media/filter_icon.png[""]*, und wählen Sie dann den Host-Namen und den Ressourcentyp, um die Ressourcen zu filtern. Sie können dann auswählen image:../media/filter_icon.png[""] Um den Filterbereich zu schließen.
+Wählen Sie image:../media/filter_icon.png["Filtersymbol"], und wählen Sie dann den Hostnamen und den Ressourcentyp aus, um die Ressourcen zu filtern. Sie können dann auswählen image:../media/filter_icon.png["Filtersymbol"] , um das Filterfenster zu schließen.
 
 . Wählen Sie die Ressource aus, die Sie sichern möchten.
 . Wählen Sie auf der Seite Ressource *Benutzerdefiniertes Namensformat für Snapshot-Kopie verwenden* aus, und geben Sie dann ein benutzerdefiniertes Namensformat ein, das Sie für den Snapshot-Namen verwenden möchten.
@@ -100,7 +99,7 @@ Wählen Sie *other* aus, und geben Sie dann den Befehl ein, um einen Snapshot zu
 
 |===
 +
-image:../media/application_settings.gif[""]
+image:../media/application_settings.gif["Anwendungseinstellungen"]
 
 
 

@@ -23,7 +23,7 @@ Sie sollten sich als „SnapCenterAdmin“-Rolle angemeldet haben.
 . Geben Sie auf der Seite Rolle hinzufügen einen Namen und eine Beschreibung für die neue Rolle an.
 +
 
-NOTE: Ab SnapCenter 4.5 können Sie nur die folgenden Sonderzeichen in Benutzernamen und Gruppennamen enthalten: Leerzeichen ( ), Bindestrich (-), Unterstrich (_) und Doppelpunkt (:). Wenn Sie eine Rolle verwenden möchten, die Sie in einer früheren Version von SnapCenter mit diesen Sonderzeichen erstellt haben, können Sie die Validierung des Rollennamens deaktivieren, indem Sie in der Datei Web.config, in der die SnapCenter WebApp installiert ist, den Wert des Parameters 'ableSQLInjectionValidation' auf true ändern. Nachdem Sie den Wert geändert haben, müssen Sie den Dienst nicht neu starten.
+NOTE: In Benutzernamen und Gruppennamen können nur die folgenden Sonderzeichen eingefügt werden: Leerzeichen ( ), Bindestrich (-), Unterstrich (_) und Doppelpunkt (:).
 
 . Wählen Sie *Alle Mitglieder dieser Rolle können Objekte anderer Mitglieder* sehen, damit andere Mitglieder der Rolle nach der Aktualisierung der Ressourcenliste Ressourcen wie Volumes und Hosts sehen können.
 +

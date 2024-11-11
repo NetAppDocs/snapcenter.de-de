@@ -7,7 +7,7 @@ summary: Der Zugriff auf die API bietet eine gewisse Perspektive, bevor Sie mit 
 = Legen Sie los mit DER REST API
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

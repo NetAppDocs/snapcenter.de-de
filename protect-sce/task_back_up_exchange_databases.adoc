@@ -34,7 +34,7 @@ Wenn eine Datenbank nicht Teil einer Ressourcengruppe ist, können Sie die Daten
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das *Microsoft Exchange Server Plug-in* aus der Liste aus.
 . Wählen Sie auf der Seite Ressourcen entweder *Datenbank* oder *Datenbank-Verfügbarkeitsgruppe* aus der Liste *Ansicht* aus.
 +
-Auf der Seite „Ressourcen“ werden die angezeigt image:../media/not_supported_icon.png[""] Das Symbol gibt an, dass sich die Datenbank auf Storage anderer Anbieter befindet.
+Auf der Seite „Ressourcen“ gibt das image:../media/not_supported_icon.png["Nicht unterstützter Speicher"] Symbol an, dass sich die Datenbank auf Storage anderer Anbieter befindet.
 
 +
 
@@ -217,7 +217,7 @@ C:\PS> Get-SmJobSummaryReport -JobId 168
 ----
 
 
-Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ dazu finden Sie auch das https://docs.netapp.com/us-en/snapcenter-cmdlets/index.htmlnapCenter[] Software Cmdlet Reference Guide^].
+Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ siehe https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter Software Cmdlet Referenzhandbuch"^].
 
 --
 ====

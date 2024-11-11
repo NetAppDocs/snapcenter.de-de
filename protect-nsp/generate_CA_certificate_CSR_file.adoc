@@ -6,6 +6,8 @@ summary: 'Sie können eine Zertifikatsignierungsanforderung (CSR) generieren und
 ---
 = ZertifikatCSR-Datei erstellen
 :allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
 
 
 [role="lead"]

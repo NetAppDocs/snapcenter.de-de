@@ -50,7 +50,7 @@ NOTE: SnapCenter kann nur die primäre Datenbank sichern, wenn Sie eine Verfügb
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
 . Wählen Sie auf der Seite Ressourcen in der Dropdown-Liste *Ansicht* * oder *Instanz* oder *Verfügbarkeitsgruppe* aus.
 +
-Klicken Sie Auf image:../media/filter_icon.png[""] Und wählen Sie den Hostnamen und die SQL Server-Instanz aus, um die Ressourcen zu filtern. Sie können dann auf klicken image:../media/filter_icon.png[""] Um den Filterbereich zu schließen.
+Klicken Sie auf image:../media/filter_icon.png["Filtersymbol"] , und wählen Sie den Hostnamen und die SQL Server-Instanz aus, um die Ressourcen zu filtern. Sie können dann klicken image:../media/filter_icon.png["Filtersymbol"] , um den Filterbereich zu schließen.
 
 . Klicken Sie Auf *Ressourcen Aktualisieren*.
 +

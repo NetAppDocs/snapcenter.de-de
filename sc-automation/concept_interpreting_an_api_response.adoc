@@ -7,7 +7,7 @@ summary: Jede API-Anfrage generiert eine Antwort an den Client. Sie sollten die 
 = Interpretation einer API-Antwort
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

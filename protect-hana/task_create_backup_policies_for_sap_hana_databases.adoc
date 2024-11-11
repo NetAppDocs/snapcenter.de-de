@@ -157,7 +157,7 @@ W채hrend der sekund채ren Replizierung wird mit der SnapLock-Ablaufzeit die prim�
 
 Durch Klicken auf die Schaltfl채che * Aktualisieren* auf der Seite Topologie wird die sekund채re und prim채re SnapLock-Ablaufzeit aktualisiert, die von ONTAP abgerufen werden.
 
-Siehe link:..protect-hana/task_view_sap_hana_database_backups_and_clones_in_the_topology_page_sap_hana.html["Sehen Sie sich SAP HANA Datenbank-Backups und -Klone auf der Seite Topologie an"].
+Siehe link:../protect-hana/task_view_sap_hana_database_backups_and_clones_in_the_topology_page_sap_hana.html["Sehen Sie sich SAP HANA Datenbank-Backups und -Klone auf der Seite Topologie an"].
 
 
 
@@ -172,7 +172,7 @@ Wenn SnapLock nur auf dem sekund채ren aus ONTAP, dem sogenannten SnapLock-Vault,
 
 Weitere Informationen zu SnapLock Vault finden Sie unter https://docs.netapp.com/us-en/ontap/snaplock/commit-snapshot-copies-worm-concept.html["Speichern von Snapshot-Kopien in WORM-KOPIEN auf einem Vault-Ziel"]
 
-Siehe link:..protect-hana/task_view_sap_hana_database_backups_and_clones_in_the_topology_page_sap_hana.html["Sehen Sie sich SAP HANA Datenbank-Backups und -Klone auf der Seite Topologie an"].
+Siehe link:task_view_sap_hana_database_backups_and_clones_in_the_topology_page_sap_hana.html["Sehen Sie sich SAP HANA Datenbank-Backups und -Klone auf der Seite Topologie an"].
 
 
 

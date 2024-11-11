@@ -7,7 +7,7 @@ summary: Sie können steuern, wie ein API-Aufruf über Parameter und Variablen v
 = Eingabevariablen, die eine API-Anforderung steuern
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

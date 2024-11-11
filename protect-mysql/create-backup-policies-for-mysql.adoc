@@ -58,7 +58,7 @@ Sie können mehrere wichtige Werte angeben, die an das Plug-in übergeben werden
 NOTE: Sie können den Zeitplan (Startdatum, Enddatum und Häufigkeit) für den Backup-Vorgang beim Erstellen einer Ressourcengruppe angeben. So können Sie Ressourcengruppen erstellen, die dieselben Richtlinien und Backup-Häufigkeit verwenden, aber auch die Möglichkeit haben, den einzelnen Richtlinien unterschiedliche Backup-Zeitpläne zuzuweisen.
 
 +
-image::../media/backup_settings.gif[Backup-Einstellungen]
+image::../media/backup_settings.gif[Backup-Seting]
 
 +
 

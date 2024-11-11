@@ -89,4 +89,4 @@ PostgreSQL -configSettings @{“PostgreSQL_SQLLIB_CMD” = “<custom_path>\IBM\
 ----
 
 
-Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ finden Sie auch Informationen im https://docs.netapp.com/us-en/snapcenter-cmdlets/index.htmlnapCenter[] Software Cmdlet Reference Guide^].
+Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ können Sie auch auf die https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter Software Cmdlet Referenzhandbuch"^].

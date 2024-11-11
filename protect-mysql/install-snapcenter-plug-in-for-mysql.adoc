@@ -13,4 +13,4 @@ summary: Sie sollten das SnapCenter-Plugin für MySQL installieren und einrichte
 [role="lead"]
 Sie sollten das SnapCenter-Plugin für MySQL installieren und einrichten, wenn Sie MySQL-Datenbanken schützen möchten.
 
-image::../media/sap_hana_install_configure_workflow.gif[Workflow installieren und konfigurieren]
+image::../media/sap_hana_install_configure_workflow.png[Workflow installieren und konfigurieren]

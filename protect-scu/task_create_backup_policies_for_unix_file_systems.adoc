@@ -106,7 +106,7 @@ NOTE: Sie sollten die SnapMirror Aufbewahrungsrichtlinie in ONTAP für den sekun
 . Geben Sie auf der Seite Skript den Pfad und die Argumente des Prescript oder Postscript ein, das Sie vor oder nach dem Backup ausführen möchten.
 +
 
-NOTE: Sie sollten überprüfen, ob die Befehle in der Befehlsliste vorhanden sind, die auf dem Plug-in-Host verfügbar ist, und zwar über den Pfad _/opt/NetApp/snapcenter/scc/etc/allowed_commands.config_.
+NOTE: Sie sollten überprüfen, ob die Befehle in der Befehlsliste vorhanden sind, die auf dem Plug-in-Host verfügbar ist, über den Pfad _ /opt/NetApp/SnapCenter/scc/etc/allowed_commands.config_.
 
 +
 Sie können auch den Wert für das Skript-Timeout angeben. Der Standardwert ist 60 Sekunden.

@@ -7,7 +7,7 @@ summary: IM RUHEZUSTAND werden einheitliche Technologien und Best Practices erst
 = Grundlegende betriebliche Eigenschaften
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

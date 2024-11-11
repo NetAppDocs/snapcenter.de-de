@@ -13,7 +13,7 @@ summary: Die Plug-in-Pakete werden im Rahmen des SnapCenter Upgrades verteilt.
 [role="lead"]
 Die Plug-in-Pakete werden im Rahmen des SnapCenter Upgrades verteilt.
 
-Durch das Upgrade-Verfahren wird Ihr Windows-, Linux- oder AIX-Host in den Modus `maintBuße` versetzt, sodass der Host keine geplanten Jobs ausführen kann.
+Sie müssen nicht jeden Plug-in-Host, den Sie aktualisieren möchten, manuell in den Wartungsmodus versetzen, da das Upgrade Ihre Windows-, Linux- oder AIX-Plug-in-Hosts in den Wartungsmodus versetzt. Der Wartungsmodus verhindert, dass während des Upgrades geplante Jobs auf dem Plug-in-Host ausgeführt werden.
 
 .Bevor Sie beginnen
 * Wenn Sie nicht-Root-Benutzer mit Zugriff auf die Linux-Maschinen sind, sollten Sie die Datei _/etc/sudoers_ vor der Durchführung des Upgrade-Vorgangs mit den neuesten Prüfsummenwerten aktualisieren.
@@ -28,7 +28,6 @@ Beispiele für SnapCenter-Konfigurationsdateien: SnapDriveService.exe.config, SM
 
 
 .Über diese Aufgabe
-* Durch das Upgrade-Verfahren wird Ihr Windows-, Linux- oder AIX-Host in den Modus `maintBuße` versetzt, sodass der Host keine geplanten Jobs ausführen kann.
 * Für das SnapCenter-Plug-in für Microsoft SQL Server, das SnapCenter-Plug-in für Microsoft Exchange Server und das SnapCenter Plug-in für Microsoft Windows wird empfohlen, sowohl den Server als auch die Plug-in-Hosts auf die neueste Version für DIE Ausführung VON SCRIPTS_PATH zu aktualisieren.
 +
 Für die bestehenden Backup- und Verifizierungspläne mit aktivierten in der Richtlinie aktivierten Prescripts und Postscripts funktionieren die Backup-Vorgänge nach dem Upgrade weiterhin.
@@ -42,14 +41,14 @@ Auf der Seite *Job Details* empfiehlt eine Warnmeldung, dass der Kunde die Skrip
 . Klicken Sie im linken Navigationsbereich auf *Hosts* > *verwaltete Hosts*.
 . Aktualisieren Sie die Hosts, indem Sie eine der folgenden Aufgaben ausführen:
 +
-** Wenn in der Spalte Gesamtstatus „`Upgrade Available`“ für einen der Hosts angezeigt wird, klicken Sie auf den Hostnamen und führen Sie Folgendes aus:
+** Wenn in der Spalte Gesamtstatus für einen der Plug-inhosts „Upgrade verfügbar“ angezeigt wird, klicken Sie auf den Plug-in-Hostnamen, und führen Sie die folgenden Schritte aus:
 +
 ... Klicken Sie Auf *Weitere Optionen*.
-... Wählen Sie *Vorabprüfungen überspringen*, wenn Sie nicht validieren möchten, ob der Host die Anforderungen für ein Upgrade des Plug-ins erfüllt.
+... Wählen Sie *Vorabprüfungen überspringen* aus, wenn Sie nicht überprüfen möchten, ob der Plug-in-Host die Anforderungen für ein Upgrade des Plug-ins erfüllt.
 ... Klicken Sie Auf *Upgrade*.
 
 
-** Wenn Sie mehrere Hosts aktualisieren möchten, wählen Sie alle Hosts aus, und klicken Sie auf image:../media/more_icon.gif[""], Und klicken Sie dann auf *Upgrade* > *OK*.
+** Wenn Sie mehrere Plug-in-Hosts aktualisieren möchten, wählen Sie alle Hosts aus, klicken Sie auf image:../media/more_icon.gif[""], und klicken Sie dann auf *Upgrade* > *OK*.
 +
 Alle zugehörigen Dienste werden während des Plug-in-Upgrades neu gestartet.
 
@@ -58,7 +57,7 @@ Alle zugehörigen Dienste werden während des Plug-in-Upgrades neu gestartet.
 NOTE: Alle Plug-ins im Paket werden ausgewählt, aber nur die Plug-ins, die mit der früheren SnapCenter-Version installiert wurden, werden aktualisiert, und die übrigen Plug-ins sind nicht installiert. Sie müssen die Option *Add Plug-ins* verwenden, um ein neues Plug-in zu installieren.
 
 +
-Wenn Sie das Kontrollkästchen *Vorabprüfungen* nicht aktiviert haben, wird der Host validiert, um zu sehen, ob er die Anforderungen für die Installation des Plug-ins erfüllt. Wenn die Mindestanforderungen nicht erfüllt werden, werden entsprechende Fehler- oder Warnmeldungen angezeigt. Klicken Sie nach Behebung des Problems auf *Upgrade*.
+Wenn Sie das Kontrollkästchen *Vorabprüfungen überspringen* nicht aktiviert haben, wird der Plug-in-Host überprüft, ob er die Anforderungen für die Installation des Plug-ins erfüllt. Wenn die Mindestanforderungen nicht erfüllt sind, werden entsprechende Fehler- oder Warnmeldungen angezeigt. Klicken Sie nach Behebung des Problems auf *Upgrade*.
 
 +
 

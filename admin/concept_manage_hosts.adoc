@@ -322,7 +322,7 @@ Sie sollten sicherstellen, dass beim Neustart der Dienste keine Jobs ausgeführt
 . Klicken Sie im linken Navigationsbereich auf *Hosts*.
 . Klicken Sie auf der Host-Seite auf *verwaltete Hosts*.
 . Wählen Sie auf der Seite verwaltete Hosts den Host aus, den Sie starten möchten.
-. Klicken Sie Auf image:../media/more_icon.gif[""] Klicken Sie auf *Start Service* oder *Neustart Service*.
+. Klicken Sie auf image:../media/more_icon.gif["Weitere Symbole"]*Dienst starten* oder *Dienst neu starten*.
 +
 Sie können den Service mehrerer Hosts gleichzeitig starten oder neu starten.
 
@@ -342,7 +342,7 @@ NOTE: Sie können die Zeitpläne auf einem Host nicht unterbrechen, der ausgefal
 . Klicken Sie im linken Navigationsbereich auf *Hosts*.
 . Klicken Sie auf der Host-Seite auf *verwaltete Hosts*.
 . Wählen Sie auf der Seite verwaltete Hosts den Host aus, den Sie aussetzen möchten.
-. Klicken Sie auf das image:../media/more_icon.gif[""] Und klicken Sie dann auf *Zeitplan anhalten*, um den Host für dieses Plug-in in in den Wartungsmodus zu versetzen.
+. Klicken Sie auf image:../media/more_icon.gif["Weitere Symbole"], und klicken Sie dann auf *Zeitplan unterbrechen*, um den Host für dieses Plug-in in den Wartungsmodus zu versetzen.
 +
 Sie können den Zeitplan mehrerer Hosts gleichzeitig unterbrechen.
 

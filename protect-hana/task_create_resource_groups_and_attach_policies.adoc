@@ -88,7 +88,7 @@ Wählen Sie diese Option aus, um zu vermeiden, einen WAFL Konsistenzpunkt zu erz
 
 |===
 +
-image:../media/application_settings.gif[""]
+image:../media/application_settings.gif["Anwendungseinstellungen"]
 
 .. Klicken Sie auf den Pfeil *Scripts* und geben Sie die Pre- und Post-Befehle für Stilllegung, Snapshot und Stilllegung ein. Sie können auch die vor dem Beenden auszuführenden Vorbefehle im Falle eines Fehlers eingeben.
 .. Klicken Sie auf den Pfeil *Benutzerdefinierte Konfigurationen* und geben Sie die für alle Datenschutzvorgänge erforderlichen benutzerdefinierten Schlüsselwert-Paare mit dieser Ressource ein.

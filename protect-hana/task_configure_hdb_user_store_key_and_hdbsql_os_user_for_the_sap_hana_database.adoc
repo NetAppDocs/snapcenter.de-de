@@ -22,9 +22,9 @@ Sie müssen den HDB-Benutzerspeicherschlüssel und den HDBSQL OS-Benutzer konfig
 .Schritte
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann SnapCenter-Plug-in für SAP HANA-Datenbank aus der Liste aus.
 . Wählen Sie auf der Seite Ressourcen den Ressourcentyp aus der Liste *Ansicht* aus.
-. (Optional) Klicken Sie Auf image:../media/filter_icon.png[""] Und wählen Sie den Hostnamen aus.
+. (Optional) Klicken Sie auf image:../media/filter_icon.png["Filtersymbol"] , und wählen Sie den Hostnamen aus.
 +
-Sie können dann auf klicken image:../media/filter_icon.png[""] Um den Filterbereich zu schließen.
+Sie können dann klicken image:../media/filter_icon.png["Filtersymbol"] , um den Filterbereich zu schließen.
 
 . Wählen Sie die Datenbank aus, und klicken Sie dann auf *Datenbank konfigurieren*.
 . Geben Sie im Abschnitt Datenbankeinstellungen konfigurieren den HDB-Schlüssel für sicheren Benutzerspeicher ein.

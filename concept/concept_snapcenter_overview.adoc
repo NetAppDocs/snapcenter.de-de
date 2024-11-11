@@ -56,7 +56,7 @@ Datensicherung wird für Microsoft Exchange Server, Microsoft SQL Server, Oracle
 Datensicherung wird auch für andere standardmäßige oder benutzerdefinierte Applikationen und Datenbanken unterstützt, indem ein Framework für die Erstellung benutzerdefinierter SnapCenter Plug-ins bereitgestellt wird. Dadurch wird die Datensicherung für andere Applikationen und Datenbanken über dieselbe zentrale Konsole ermöglicht. Unter Nutzung dieses Framework hat NetApp SnapCenter Plug-ins für MongoDB, MySQL, PostgreSQL, Storage, MaxDB, Sybase ASE, ORASCPM, MongoDB und DPGlue. Darüber hinaus können Sie Ihr eigenes Plug-in mit Hilfe des Entwicklerleitfadens erstellen.
 
 +
-link:concept_develop_a_plug_in_for_your_application.html["Entwickeln Sie ein Plug-in für Ihre Applikation"]
+link:../protect-nsp/develop_a_plug_in_for_your_application.html["Entwickeln Sie ein Plug-in für Ihre Applikation"]
 
 * Richtlinienbasierte Backups
 +

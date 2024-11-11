@@ -7,7 +7,7 @@ summary: REST ist ein Stil für die Erstellung verteilter Web-Anwendungen. Bei d
 = REST-Web-Services-Grundlage
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

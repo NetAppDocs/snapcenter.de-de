@@ -13,4 +13,4 @@ summary: Sie sollten das SnapCenter-Plug-in für PostgreSQL installieren und ein
 [role="lead"]
 Sie sollten das SnapCenter-Plug-in für PostgreSQL installieren und einrichten, wenn Sie PostgreSQL-Cluster schützen möchten.
 
-image::../media/sap_hana_install_configure_workflow.gif[Workflow installieren und konfigurieren]
+image::../media/sap_hana_install_configure_workflow.png[Workflow installieren und konfigurieren]

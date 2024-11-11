@@ -19,16 +19,22 @@ Bevor Sie SnapCenter zum Backup von Oracle-Datenbankressourcen verwenden, müsse
 . Wählen Sie Oracle Database aus der Dropdown-Liste aus.
 . Klicken Sie Auf *Neu*.
 . Geben Sie auf der Seite Name den Namen und die Beschreibung der Richtlinie ein.
-. Führen Sie auf der Seite Sicherungstyp die folgenden Schritte durch:
+. Führen Sie auf der Seite Richtlinientyp die folgenden Schritte durch:
 +
+.. Wählen Sie *Azure NetApp Files* als Speichertyp aus.
 .. Wählen Sie den Sicherungstyp als Online- oder Offline-Backup aus.
-.. Legen Sie die Zeitplanhäufigkeit fest.
 .. Wenn Sie das Backup mit Oracle Recovery Manager (RMAN) katalogisieren möchten, wählen Sie *Katalog-Backup mit Oracle Recovery Manager (RMAN)* aus.
 .. Wenn Sie Archivprotokolle nach Backup beschneiden möchten, wählen Sie *Prune Archivprotokolle nach Backup* aus.
 .. Geben Sie die Einstellungen für das Archivprotokoll zum Löschen an.
 
 
-. Geben Sie auf der Seite Aufbewahrung die Aufbewahrungseinstellungen an.
+. Führen Sie auf der Seite Snapshot und Backup die folgenden Schritte durch:
++
+.. Wählen Sie die Häufigkeit der geplanten Sicherung aus.
+.. Legen Sie die Aufbewahrungseinstellungen fest.
+.. Wenn Sie die Azure NetApp Files-Sicherung aktivieren möchten, wählen Sie *Sicherung aktivieren* und geben Sie die Aufbewahrungseinstellungen an.
+
+
 . Geben Sie auf der Seite Skript den Pfad und die Argumente des Prescript oder Postscript ein, das Sie vor oder nach dem Backup ausführen möchten.
 . Wählen Sie auf der Seite Verifizierung den Backup-Zeitplan aus, für den Sie den Überprüfungsvorgang durchführen möchten, und geben Sie den Pfad und die Argumente des Prescript- oder Postscript ein, das Sie vor bzw. nach dem Überprüfungsvorgang ausführen möchten.
 . Überprüfen Sie die Zusammenfassung und klicken Sie auf *Fertig stellen*.

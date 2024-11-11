@@ -15,6 +15,6 @@ Sie können entweder ein Backup einer Ressource (eines Clusters) oder einer Ress
 
 Der folgende Workflow zeigt die Reihenfolge, in der Sie den Sicherungsvorgang durchführen müssen:
 
-image::../media/db2_backup_workflow.gif[PostgreSQL Backup-Workflow]
+image::../media/db2_backup_workflow.png[PostgreSQL Backup-Workflow]
 
 Außerdem können Sie PowerShell Cmdlets manuell oder in Skripten verwenden, um Backup-, Wiederherstellungs- und Klonvorgänge durchzuführen. Die SnapCenter Cmdlet Hilfe und die Cmdlet Referenzinformationen enthalten weitere Informationen zu PowerShell Cmdlets. https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter Software Cmdlet Referenzhandbuch"^].

@@ -64,7 +64,7 @@ NOTE: Aus Konsistenzgründen bezieht sich die SnapCenter-Dokumentation auf die R
 NOTE: Sie müssen diesen Befehl für jede Berechtigung wiederholen. Beachten Sie, dass vor schreibgeschützten Befehlen All-Access-Befehle aufgelistet werden müssen.
 
 +
-Informationen zur Liste der Berechtigungen finden Sie unter link:../install/task_create_an_ontap_cluster_role_with_minimum_privileges.html#ontap-cli-commands-for-creating-roles-and-assigning-permissions["ONTAP CLI-Befehle zum Erstellen von Rollen und Zuweisen von Berechtigungen"^].
+Informationen zur Liste der Berechtigungen finden Sie unter link:task_create_an_ontap_cluster_role_with_minimum_privileges.html#ontap-cli-commands-for-creating-cluster-roles-and-assigning-permissions["ONTAP CLI-Befehle zum Erstellen von Rollen und Zuweisen von Berechtigungen"^].
 
 
 

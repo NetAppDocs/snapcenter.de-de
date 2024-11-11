@@ -18,19 +18,17 @@ Mit SnapCenter können Daten von einem oder mehreren Backups wiederhergestellt w
 * Sie müssen einen Backup-Vorgang abgebrochen haben, der derzeit für die Ressource oder Ressourcengruppe ausgeführt wird, die Sie wiederherstellen möchten.
 * Für Befehle vor der Wiederherstellung, nach der Wiederherstellung, nach dem Einhängen und vor dem unmounten sollten Sie überprüfen, ob die Befehle in der Befehlsliste auf dem Plug-in-Host aus den folgenden Pfaden vorhanden sind:
 +
-Für Windows: _C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands.config_
+** Standardspeicherort auf dem Windows-Host: _C:\Programme\NetApp\SnapCenter\SnapCenter Plug-in Creator\etc\allowed_commands.config_
+** Standardspeicherort auf dem Linux-Host: _/opt/NetApp/SnapCenter/scc/etc/allowed_commands.config_
 
-+
-Für Linux: _/var/opt/snapcenter/scc/allowed_commands.config_
 
-+
+
+
 
 NOTE: Wenn die Befehle in der Befehlsliste nicht vorhanden sind, schlägt der Vorgang fehl.
 
-
-
 .Über diese Aufgabe
-* Bei ONTAP Version 9.12.1 und niedriger übernehmen die im Rahmen der Wiederherstellung aus den SnapLock Vault Snapshots erstellten Klone die Verfallszeit von SnapLock Vault. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
+* Bei ONTAP 9.12.1 und älteren Versionen übernehmen die aus den SnapLock Vault Snapshots im Rahmen der Wiederherstellung erstellten Klone die Verfallszeit von SnapLock Vault. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
 
 
 [role="tabbed-block"]
@@ -81,10 +79,6 @@ Unmount-Befehle sind für automatisch erkannte Ressourcen nicht verfügbar.
 . Geben Sie auf der Seite Post OPS Mount- und Post-Restore-Befehle ein, die ausgeführt werden sollen, nachdem eine Wiederherstellung durchgeführt wurde.
 +
 Mount-Befehle sind für automatisch erkannte Ressourcen nicht verfügbar.
-
-+
-
-NOTE: Für Pre- und Post-Befehle für Quiesce-, Snapshot- und Unquiesce-Vorgänge sollten Sie überprüfen, ob die Befehle in der Befehlsliste vorhanden sind, die auf dem Plug-in-Host über den _/opt/snapcenter/snapenter/scc/allowed_commands.config_-Pfad für Linux und _C:\Programme\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands.config_ für Windows verfügbar ist.
 
 . Wählen Sie auf der Benachrichtigungsseite aus der Dropdown-Liste *E-Mail-Präferenz* die Szenarien aus, in denen Sie die E-Mails versenden möchten.
 +

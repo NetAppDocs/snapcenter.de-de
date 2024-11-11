@@ -22,7 +22,9 @@ SnapCenter Standard Controller-basiert
  a| 
 Erforderlich für FAS, AFF, All-SAN-Array (ASA)
 
-Bei der SnapCenter Standard Lizenz handelt es sich um eine Controller-basierte Lizenz und ist im Rahmen des Premium Bundle enthalten. Wenn Sie die Lizenz für die SnapManager Suite besitzen, erhalten Sie auch die Standardlizenz von SnapCenter. Wenn Sie SnapCenter Testversionen mit FAS, AFF oder ASA Storage installieren möchten, erhalten Sie eine Evaluierungslizenz für Premium-Pakete. Wenden Sie sich hierzu an den Vertriebsmitarbeiter.
+Bei der SnapCenter Standardlizenz handelt es sich um eine Controller-basierte Lizenz, die als Teil von ONTAP One enthalten ist. Wenn Sie die Lizenz für die SnapManager Suite besitzen, erhalten Sie auch die Standardlizenz von SnapCenter. Wenn Sie SnapCenter als Testlizenz mit FAS, AFF oder ASA Storage installieren möchten, erhalten Sie bei Ihrem Vertriebsmitarbeiter eine Evaluierungslizenz für ONTAP One.
+
+Informationen zu Lizenzen, die in ONTAP One enthalten sind, finden Sie unter https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html#licenses-included-with-ontap-one["In ONTAP One enthaltene Lizenzen"].
 
 
 NOTE: SnapCenter ist auch als Teil des Datensicherungs-Bundles verfügbar. Wenn Sie A400 oder höher erworben haben, sollten Sie ein Datensicherungs-Bundle erwerben.
@@ -87,7 +89,7 @@ NOTE: Es wird empfohlen, aber nicht erforderlich, dass Sie SnapCenter Standard-L
 
 |===
 
-NOTE: Lizenzen für SnapCenter Advanced- und SnapCenter-NAS-Fileservices sind veraltet und sind nicht mehr verfügbar. Für Amazon FSX for NetApp ONTAP und Cloud Volumes ONTAP ist die kapazitätsbasierte Lizenz nicht mehr erforderlich. Für Azure NetApp Files sind keine Standardlizenzen und kapazitätsbasierte Lizenz erforderlich.
+NOTE: Lizenzen für SnapCenter Advanced- und SnapCenter-NAS-Fileservices sind veraltet und sind nicht mehr verfügbar. Für Amazon FSX for NetApp ONTAP, ONTAP Select, Cloud Volumes ONTAP und Azure NetApp Files sind die Standardlizenz und die kapazitätsbasierte Lizenz nicht mehr erforderlich.
 
 Sie sollten eine oder mehrere SnapCenter Lizenzen installieren. Informationen zum Hinzufügen von Lizenzen finden Sie unter link:../install/concept_snapcenter_standard_controller_based_licenses.html["Controller-basierte SnapCenter Standard-Lizenzen hinzufügen"].
 

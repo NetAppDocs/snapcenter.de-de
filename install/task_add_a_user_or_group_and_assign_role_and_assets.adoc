@@ -18,7 +18,7 @@ Um die rollenbasierte Zugriffssteuerung für SnapCenter-Benutzer zu konfiguriere
 * Sie müssen die Benutzer- oder Gruppenkonten in Active Directory im Betriebssystem oder in der Datenbank erstellt haben. Sie können SnapCenter nicht zum Erstellen dieser Konten verwenden.
 +
 
-NOTE: Ab SnapCenter 4.5 können Sie nur die folgenden Sonderzeichen in Benutzernamen und Gruppennamen enthalten: Leerzeichen ( ), Bindestrich (-), Unterstrich (_) und Doppelpunkt (:). Wenn Sie eine Rolle verwenden möchten, die Sie in einer früheren Version von SnapCenter mit diesen Sonderzeichen erstellt haben, können Sie die Validierung des Rollennamens deaktivieren, indem Sie in der Datei Web.config, in der die SnapCenter WebApp installiert ist, den Wert des Parameters 'ableSQLInjectionValidation' auf true ändern. Nachdem Sie den Wert geändert haben, müssen Sie den Dienst nicht neu starten.
+NOTE: In Benutzernamen und Gruppennamen können nur die folgenden Sonderzeichen eingefügt werden: Leerzeichen ( ), Bindestrich (-), Unterstrich (_) und Doppelpunkt (:).
 
 * SnapCenter umfasst mehrere vordefinierte Rollen.
 +

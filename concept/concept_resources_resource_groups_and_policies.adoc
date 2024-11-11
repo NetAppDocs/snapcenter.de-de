@@ -47,4 +47,4 @@ image::../media/datasets_and_policies.gif[Datensatz und Richtliniendiagramm]
 
 Die folgende Abbildung veranschaulicht die Beziehung zwischen Ressourcen, Ressourcengruppen und Richtlinien für Windows File-Systeme:
 
-image::../media/resources_and_policies_for_wfs.gif[Ressourcen und Richtlinien für wfs]
+image::../media/resources_and_policies_for_wfs.gif[Ressourcen und Richtlinien]

@@ -78,7 +78,7 @@ Wenn Sie eine Oracle-Datenbank auf dem Host gelöscht haben, ist SnapCenter-Serv
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
 . Wählen Sie auf der Seite Ressourcen in der Liste *Ansicht* die Option *Datenbank* aus.
 +
-Klicken Sie Auf image:../media/filter_icon.png[""]Und wählen Sie dann den Hostnamen und den Datenbanktyp aus, um die Ressourcen zu filtern. Anschließend können Sie auf die klicken image:../media/filter_icon.png[""] Symbol zum Schließen des Filterfensters.
+Klicken Sie auf image:../media/filter_icon.png["Filtersymbol"], und wählen Sie dann den Hostnamen und den Datenbanktyp aus, um die Ressourcen zu filtern. Sie können dann auf das Symbol klicken image:../media/filter_icon.png["Filtersymbol"] , um das Filterfenster zu schließen.
 
 . Klicken Sie Auf *Ressourcen Aktualisieren*.
 +
