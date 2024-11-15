@@ -40,7 +40,6 @@
   <block id="4960663d88bb5e09eca4e1af717a14d8" category="paragraph">Die Standardanschlussnummer ist 8145. Wenn der SnapCenter-Server auf einem benutzerdefinierten Port installiert wurde, wird diese Portnummer als Standardport angezeigt.</block>
   <block id="715f053db5d8f4a2009a86dc1edc360a" category="admonition">Wenn Sie die Plug-ins manuell installiert und einen benutzerdefinierten Port angegeben haben, müssen Sie denselben Port angeben. Andernfalls schlägt der Vorgang fehl.</block>
   <block id="5dc1b0641298a4446796a3eaf96c13d9" category="paragraph">Installationspfad</block>
-  <block id="3032ffc63deef50a539e9e2dc62d92c1" category="paragraph">Die benutzerdefinierten Plug-ins können entweder auf einem Windows-System oder auf einem Linux-System installiert werden.</block>
   <block id="379d6944e6fc810a2d3e6719a4897b18" category="list-text">Der Standardpfad für das SnapCenter Plug-ins-Paket für Windows ist C:\Programme\NetApp\SnapCenter.</block>
   <block id="d71af843d2746ce96eb5d7b9a854feec" category="paragraph">Optional können Sie den Pfad anpassen.</block>
   <block id="dbd5f1a081ee2b60f9256f0d615c8572" category="list-text">Für die benutzerdefinierten SnapCenter Plug-ins:</block>
@@ -768,8 +767,6 @@
   <block id="44c8eaf80f0322d31922b637d3f206f4" category="list-text">Planen von Backup-Vorgängen</block>
   <block id="4f749cf56361e248661706aa3c29ab1c" category="list-text">Monitoring von Backup-, Restore- und Klonvorgängen</block>
   <block id="04a26f096e312ade5bd651748180efd4" category="list-text">Berichte für Backup-, Wiederherstellungs- und Klonvorgänge anzeigen</block>
-  <block id="08762ef2fe73d944789541451485f737" category="paragraph">*Storage-Plug-in*</block>
-  <block id="22f14629dccbccb3ea736a953a3743c7" category="paragraph">Sie können das Storage Plug-in für Datensicherungsvorgänge verwenden.</block>
   <block id="c2230088d27abaa2d470e15431fe93b5" category="list-text">Führen Sie Backups individueller Applikationen mithilfe des integrierten Pre- und Post-Scripting Frameworks durch</block>
   <block id="b7ef57ec0d80db01d4596e446c5f7c1f" category="paragraph">Sie können ein Backup für das ONTAP Volume, die LUN oder einen qtree erstellen.</block>
   <block id="0930cbd774389ffda4b953dfada42944" category="list-text">Stellen Sie komplette ONTAP Volumes, LUNs oder Dateien wieder her.</block>
@@ -8497,8 +8494,6 @@ Die Aufbewahrung ist beispielsweise für eine Ressourcengruppe mit primärer SAP
   <block id="d63a7945f954d7f0cb122f664ce1a434" category="cell">Für Db2</block>
   <block id="32b2fa1d8696fe76a40e6bfcf9eb68ca" category="cell">Für PostgreSQL</block>
   <block id="ace42b2fef2ae1fe557e5b65063ba5a0" category="cell">Für MySQL</block>
-  <block id="7e696b73307c35d33f22e93f357502ae" category="paragraph">Datensicherung wird für Microsoft Exchange Server, Microsoft SQL Server, Oracle Datenbanken auf Linux oder AIX, SAP HANA Datenbanken, IBM DB2 und Windows Host Dateisysteme auf ONTAP Systemen unterstützt.</block>
-  <block id="105319d494017b38d930283a957371b2" category="paragraph">Datensicherung wird auch für andere standardmäßige oder benutzerdefinierte Applikationen und Datenbanken unterstützt, indem ein Framework für die Erstellung benutzerdefinierter SnapCenter Plug-ins bereitgestellt wird. Dadurch wird die Datensicherung für andere Applikationen und Datenbanken über dieselbe zentrale Konsole ermöglicht. Unter Nutzung dieses Framework hat NetApp SnapCenter Plug-ins für MongoDB, MySQL, PostgreSQL, Storage, MaxDB, Sybase ASE, ORASCPM, MongoDB und DPGlue. Darüber hinaus können Sie Ihr eigenes Plug-in mit Hilfe des Entwicklerleitfadens erstellen.</block>
   <block id="c4c043cf140b5a7134a11a4a9825d3a1" category="paragraph">Weitere Informationen zu Windows-Cmdlets finden Sie unter<block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block>.</block>
   <block id="6626df1bb0990520c9816604ec788dbd" category="paragraph">Weitere Informationen zu UNIX-Befehlen finden Sie unter<block ref="1be7dd030b7b4d460912ef60d82c1252" category="inline-link-rx"></block>.</block>
   <block id="09e67fdf7831d393b41ce0d8f15d404a" category="list-text">SnapMirror Active Sync (zunächst veröffentlicht als SnapMirror Business Continuity [SM-BC])</block>
@@ -8514,7 +8509,6 @@ Die Aufbewahrung ist beispielsweise für eine Ressourcengruppe mit primärer SAP
   <block id="03720547c7eaf5a2184cb04e804c96dc" category="list-text">SnapCenter Plug-in für IBM DB2</block>
   <block id="3245d8514a844d08673af1fb25bec2f4" category="list-text">SnapCenter Plug-in für PostgreSQL</block>
   <block id="aa96d0986aa898ff8efdb0e691f15a6c" category="list-text">SnapCenter Plug-in für MySQL</block>
-  <block id="411354ef95b9378a1c795d3ab431dc1b" category="list-text">Von SnapCenter NetApp unterstützte Plug-ins</block>
   <block id="a46edffb8a36d10263fe5881dfb121f5" category="paragraph">SnapCenter Server unterstützt sowohl Microsoft Windows als auch Linux (RHEL 8.x, RHEL 9.x, SLES 15 SP5)</block>
   <block id="94b7d8402eae2cedafc0012930db7112" category="paragraph">Wenn Sie das SnapCenter-Plug-ins-Paket für Linux oder das SnapCenter-Plug-ins-Paket für AIX verwenden, werden Zeitpläne zentral mit dem Quartz Scheduler ausgeführt.</block>
   <block id="e9f0ead185217526014d410774e0c02d" category="paragraph">Sie sollten die folgenden Befehle ausführen, um den Status der SnapCenter-Komponenten zu erfahren, die auf dem Linux-Host ausgeführt werden:</block>
@@ -8532,8 +8526,6 @@ Die Aufbewahrung ist beispielsweise für eine Ressourcengruppe mit primärer SAP
   <block id="1ade112f397a6c37ee3b78569cf208fe" category="paragraph">Automatisiert applikationsspezifische Backups, Restores und das Klonen von SAP HANA Datenbanken in der SnapCenter-Umgebung.</block>
   <block id="b0e07179f36c91a15e47f4d7a80a4360" category="section-title">Von NetApp unterstützte Plug-ins-Funktionen</block>
   <block id="649904e9a32ebd4b1593438f64d1745b" category="list-text">Unterstützung anderer Plug-ins zum Management von Applikationen oder Datenbanken, die von anderen SnapCenter-Plug-ins nicht unterstützt werden Von NetApp unterstützte Plug-ins werden nicht als Teil der SnapCenter Installation bereitgestellt.</block>
-  <block id="c4c8512c2acfb63d2aa9d918f8686ea0" category="paragraph">NetApp unterstützt die Erstellung und Verwendung der unterstützten Plug-ins. Die von Ihnen erstellten Plug-ins werden jedoch nicht von NetApp unterstützt.</block>
-  <block id="cbff97d11cc046bce11fc74b670383ea" category="paragraph">Weitere Informationen finden Sie unter <block ref="5b4d4e6767fabff6697c56232130561b" category="inline-link-macro-rx"></block></block>
   <block id="e1694ebeb85fe94bccea1c7ce60bcf95" category="paragraph">Automatisiert applikationsspezifische Backups, Restores und das Klonen von IBM DB2 Datenbanken in der SnapCenter-Umgebung.</block>
   <block id="14a02484b22cd41372b79139584ea8df" category="paragraph">Automatisiert applikationsspezifische Backups, Restores und das Klonen von PostgreSQL Instanzen in der SnapCenter Umgebung.</block>
   <block id="af671f4e28804df81a33c5ddbbc096d9" category="paragraph">Automatisiert applikationsspezifische Backups, Restores und das Klonen von MySQL Instanzen in der SnapCenter Umgebung.</block>
@@ -9132,12 +9124,10 @@ Die Aufbewahrung ist beispielsweise für eine Ressourcengruppe mit primärer SAP
   <block id="fb8cbfb09269d05de2cde0403c3fb8d5" category="list-text">Fügen Sie Instanzen hinzu.</block>
   <block id="97a676bff5c6f6964f17a9e945591bb4" category="inline-link-macro">Konfigurieren Sie das Gruppenkonto für Managed Services unter Windows Server 2016 oder höher für benutzerdefinierte Anwendungen</block>
   <block id="2020ef05a364af8330a7eb0e2f7b41ba" category="paragraph"><block ref="2020ef05a364af8330a7eb0e2f7b41ba" category="inline-link-macro-rx"></block></block>
-  <block id="39dc341d0aacca81299928400f8040ff" category="admonition">Von NetApp unterstützte Plug-ins können sowohl in Windows- als auch in Linux-Umgebungen verwendet werden.</block>
   <block id="b93827c0ed47f7107260b8849105dfab" category="paragraph">Sie können die folgenden Plug-ins aus der Liste installieren:</block>
   <block id="206e3718af092fd1d12f80cae771ccac" category="list-text">MongoDB</block>
   <block id="b20d129960fe49b7633884a489f7be76" category="list-text">ORASCPM (angezeigt als Oracle Applications)</block>
   <block id="cdee3d093954e7eef1d1def2838f1f3a" category="list-text">SAP ASE</block>
-  <block id="0b61c14db730a17ea712108f132be517" category="list-text">ORASCPM</block>
   <block id="70c702908f3d7b1a5e1c952c1cddbde7" category="list-text">SAP MaxDB</block>
   <block id="f10287c6f08b8cd9f2eb337e2b486270" category="list-text">(Optional) Wählen Sie *Weitere Optionen*, um die anderen Plug-ins zu installieren.</block>
   <block id="fdadbc4689c75884565947c7d9c98734" category="doc">Hinzufügen von Ressourcen zu von NetApp unterstützten Plug-ins</block>
@@ -9173,7 +9163,6 @@ Die Aufbewahrung ist beispielsweise für eine Ressourcengruppe mit primärer SAP
   <block id="eebb4c734f3f1079fd5d41eea32a2d1e" category="paragraph">Die Vorlage muss vorhanden sein und eine externe Art von Backup-Vorlage sein. Um die Snapshot-Integration für MaxDB 7.8 und höher zu ermöglichen, müssen Sie über die Funktionalität des MaxDB Hintergrundservers verfügen und die MaxDB Backup-Vorlage des EXTERNEN Typs bereits konfiguriert haben.</block>
   <block id="9477337b7878a4f25ccde00ea9416b9b" category="list-text">MAXDB_BG_SERVER_PREFIX: Gibt das Präfix für den Namen des Hintergrundservers an.</block>
   <block id="16bfac97af8708431c25ec2291a1e479" category="paragraph">Wenn der Parameter MAXDB_BACKUP_TEMPLATES festgelegt ist, müssen Sie auch DEN PARAMETER MAXDB_BG_SERVER_PREFIX festlegen. Wenn Sie das Präfix nicht festlegen, wird der Standardwert na_bg_ verwendet.</block>
-  <block id="00776d7e76d2ff924005283f8a850e22" category="section-title">Plug-in für Sybase ASE</block>
   <block id="341a000d7d6fb3a7fffdc617dffab5d1" category="list-text">SYBASE_SERVER (Data_Server_Name) gibt den Namen des Sybase-Datenservers an (-S Option auf isql-Befehl). Beispiel: P_Test.</block>
   <block id="b86cb3989b481da0c083baf1da18da20" category="list-text">SYBASE_DATABASES_EXCLUDE (db_Name) ermöglicht es, Datenbanken auszuschließen, wenn das Konstrukt „ALL“ verwendet wird.</block>
   <block id="940b268cac3ed1330e0f7e0319d1e859" category="paragraph">Sie können mehrere Datenbanken mithilfe einer durch Semikolon getrennten Liste angeben. Beispiel: Pubs2;Test_db1.</block>
@@ -9212,7 +9201,6 @@ Die Aufbewahrung ist beispielsweise für eine Ressourcengruppe mit primärer SAP
   <block id="3d409e4955bb3de9bcf0382e6ed02f3c" category="doc">Wie Ressourcen, Ressourcengruppen und Richtlinien zum Schutz von von NetApp unterstützten Plug-in-Ressourcen verwendet werden</block>
   <block id="041c2bc239865621fefddc8c25a37009" category="summary">Sie sollten von SnapCenter NetApp unterstützte Plug-ins installieren und einrichten, wenn Sie die von NetApp unterstützten Plug-in-Ressourcen schützen möchten.</block>
   <block id="51810f5f2de2f019cb898ee5bb825600" category="doc">Installations-Workflow von von SnapCenter NetApp unterstützten Plug-ins</block>
-  <block id="d2b3fcd21580309bc53248671abf5edb" category="image-alt">Workflow von von SnapCenter NetApp unterstützten Plug-ins</block>
   <block id="935a5e63802feb7c41be8f11c154dcc4" category="paragraph"><block ref="935a5e63802feb7c41be8f11c154dcc4" category="inline-link-macro-rx"></block></block>
   <block id="d3b3bbe44f365266410ca923ecee56a6" category="summary">Sie sollten die von SnapCenter NetApp unterstützten Plug-ins über die SnapCenter-Benutzeroberfläche (UI) installieren. Wenn Ihre Umgebung die Remote-Installation des Plug-ins über die SnapCenter-Benutzeroberfläche nicht zulässt, können Sie das von NetApp unterstützte Plug-in entweder im Konsolenmodus oder im unbeaufsichtigten Modus über die Befehlszeilenschnittstelle (CLI) installieren.</block>
   <block id="d2c5b20234fc44c2f17c36b2966fd013" category="doc">Installieren Sie die von NetApp unterstützten Plug-ins auf Linux Hosts über die Befehlszeilenschnittstelle</block>
@@ -9227,15 +9215,11 @@ Die Aufbewahrung ist beispielsweise für eine Ressourcengruppe mit primärer SAP
   <block id="551510ad784e6da2c3f884b2632f3d7f" category="doc">Überwachen Sie den Status der Installation von NetApp-unterstützten Plug-ins</block>
   <block id="e4891e855778eb8bfa7326df11fb3b8a" category="summary">SnapCenter lässt sich in die Plug-in-Applikation und mit NetApp Technologien auf dem Storage-System integrieren. Um mit von NetApp unterstützten Plug-ins zu arbeiten, verwenden Sie die grafische Benutzeroberfläche von SnapCenter.</block>
   <block id="b3fd2be40a1a8297516a32e7a0d29b47" category="paragraph">SnapCenter nutzt NetApp Snapshot Technologie mit von NetApp unterstützten Plug-ins, um Ressourcen zu sichern. Snapshots belegen nur minimalen Speicherplatz.</block>
-  <block id="51131ea2ea7c5e5d4f4289dc92c63642" category="paragraph">Durch Verwendung der von NetApp unterstützten Plug-ins bieten sich darüber hinaus folgende Vorteile:</block>
   <block id="0c405394f36ec393b5157ee9b65e6c96" category="summary">Sie können von NetApp unterstützte Plug-ins für Applikationen entwickeln und diese dann mit SnapCenter sichern, wiederherstellen oder klonen. Wie andere SnapCenter Plug-ins fungieren die von NetApp unterstützten Plug-ins als Host-Komponenten der NetApp SnapCenter Software und ermöglichen so applikationsorientierte Datensicherung und Ressourcenmanagement.</block>
   <block id="6f340d12d1d89a06a86c347f946aadae" category="doc">Übersicht über die unterstützten Plug-ins von NetApp</block>
-  <block id="3d10d535e62683cb492127539a79bfa7" category="paragraph">Sie können entweder die von NetApp unterstützten Plug-ins verwenden oder benutzerdefinierte Plug-ins für Applikationen entwickeln, die Sie verwenden. Diese Applikationen können dann mit SnapCenter gesichert, wiederhergestellt oder geklont werden. Ihre von NetApp unterstützten Plug-ins fungieren als Host-seitige Komponenten der NetApp SnapCenter Software und ermöglichen so applikationsgerechte Datensicherung und das Management von Ressourcen.</block>
   <block id="0ef428737d69052be8c7b16e117c7af7" category="paragraph">Bei der Installation von NetApp unterstützten Plug-ins können SnapCenter mit NetApp SnapMirror Technologie genutzt werden, um Spiegelkopien von Backup Sets auf einem anderen Volume zu erstellen, und mithilfe der NetApp SnapVault Technologie Disk-to-Disk Backup-Replizierung durchzuführen. Von NetApp unterstützte Plug-ins können sowohl in Windows- als auch in Linux-Umgebungen verwendet werden.</block>
   <block id="051fcccc818f247e161e5bd9fe65741b" category="admonition">SnapCenterCLI unterstützt keine von NetApp unterstützten Plug-ins-Befehle.</block>
-  <block id="0ebde499c9409e2f7dfc27dfc03b3151" category="paragraph">Sie können die von NetApp unterstützten Plug-ins, das benutzerdefinierte Plug-in und das Storage Plug-in auf der Seite Host hinzufügen installieren.</block>
   <block id="5c02c38860d64c515a98f74285c5e9af" category="paragraph"><block ref="5c02c38860d64c515a98f74285c5e9af" category="inline-link-macro-rx"></block></block>
-  <block id="2deb9d91af2a78b8ded94544bfbf8879" category="paragraph">NetApp bietet auch MongoDB, MySQL, PostgreSQL, Storage, MaxDB Sybase ASE, ORASCPM, MongoDB und DPGlue Plug-ins.</block>
   <block id="858560511f7cf57cf79818f39ae5e7e5" category="paragraph">Sie können Ihre eigenen benutzerdefinierten Plug-ins mithilfe des Leitfadens erstellen <block ref="07744b4146eed8737957be4236ad4ea6" category="inline-link-macro-rx"></block> .</block>
   <block id="031130cc740dce019fe31437829d3261" category="doc">Vorbereiten der Storage-Systeme für die SnapMirror und SnapVault Replizierung für von NetApp unterstützte Plug-ins</block>
   <block id="b5d24747e2254cd74a278959e55db769" category="summary">Bevor Sie von SnapCenter NetApp unterstützte Plug-ins verwenden, muss der SnapCenter-Administrator den SnapCenter-Server installieren und konfigurieren und die erforderlichen Aufgaben ausführen.</block>
@@ -9243,13 +9227,8 @@ Die Aufbewahrung ist beispielsweise für eine Ressourcengruppe mit primärer SAP
   <block id="b64964f7c6cb3e2d0ad50647f28415f4" category="list-text">Installieren Sie gegebenenfalls Java 11 auf dem Plug-in-Host.</block>
   <block id="de748d4f218eb82701a830c41d04af9f" category="list-text">Wenn in SVMs mehrere Datenpfade (LIFs) vorhanden sind, wählt SnapCenter den entsprechenden Datenpfad (LIF) zur Mounten des geklonten NFS-Volumes. Wenn Sie jedoch einen bestimmten Datenpfad (LIF) angeben möchten, müssen Sie die CLI Set-SvmPreferredDataPath ausführen. Die Informationen zu den Parametern, die mit dem Befehl und deren Beschreibungen verwendet werden können, können durch Ausführen von _get-Help Command_Name_ abgerufen werden. Alternativ können Sie auch auf die<block ref="1be7dd030b7b4d460912ef60d82c1252" category="inline-link-rx"></block>.</block>
   <block id="70470fa292d95a8fc9a82053e4e3efc0" category="paragraph">Port 9090 muss zusätzlich zu den anderen von SnapCenter benötigten Ports für die Verwendung durch von NetApp unterstützte Plug-ins reserviert werden.</block>
-  <block id="bf141cdebf5daef18e4981545288f2a4" category="summary">Bevor Sie einen Host hinzufügen und die Plug-ins-Pakete installieren, müssen Sie alle Anforderungen erfüllen. Von NetApp unterstützte Plug-ins können sowohl in Windows- als auch in Linux-Umgebungen verwendet werden.</block>
   <block id="db39871b690a95f007f3b71acd6533d2" category="doc">Voraussetzungen für das Hinzufügen von Hosts und die Installation von von von NetApp unterstützten Plug-ins</block>
   <block id="896f53a1228bbdd8ed2cd52ad89184a3" category="list-text">Sie müssen Java 11 auf Ihrem Linux- oder Windows-Host installiert haben.</block>
-  <block id="47ca16829f36965b6a8f742d83988318" category="list-text">Die von NetApp unterstützten Plug-ins müssen auf dem Client-Host verfügbar sein, von dem aus der Vorgang zum Hinzufügen des Hosts ausgeführt wird.</block>
-  <block id="f76395bec51952170480338f3e52b5b5" category="list-text">Für von NetApp unterstützte Plug-ins sollten Sie sicherstellen, dass Sie den SHA512-Hash der von NetApp unterstützten Plug-in-Datei zur Datei _Custom_Plugin_Checksumme_list_ hinzugefügt haben.</block>
-  <block id="f0dfe7239e8a77a9af63c70290df922b" category="paragraph">Die Custom_Plugin_Checksumme_list ist Teil der von NetApp unterstützten Plug-in-Installation auf dem Host durch SnapCenter.</block>
-  <block id="1e05dd04f8ec23e47584027ef040654b" category="list-text">Für von NetApp unterstützte Plug-ins, die für Ihre Applikation erstellt wurden, sollten Sie folgende Schritte durchgeführt haben:</block>
   <block id="1bd7b03e9e6f0b21298c8109c8f483ce" category="paragraph">Wenn Sie Windows Server 2019 oder Windows Server 2016 für den SnapCenter Server-Host verwenden, müssen Sie Java 11 installieren. Das Interoperabilitäts-Matrix-Tool (IMT) enthält aktuelle Informationen zu Anforderungen.</block>
   <block id="06489e5a01873cf102f78c0da703ea59" category="list-text">Der Standardwiederherstellungsvorgang stellt nur Storage-Objekte wieder her. Wiederherstellungen auf Applikationsebene können nur durchgeführt werden, wenn das von NetApp unterstützte Plug-in diese Funktion bietet.</block>
   <block id="67d899b4318f9296298e7c4bb8999573" category="doc">Stellen Sie von NetApp unterstützte Plug-in-Ressourcen wieder her</block>
@@ -9264,9 +9243,6 @@ Die Aufbewahrung ist beispielsweise für eine Ressourcengruppe mit primärer SAP
   <block id="a0aca7ac2b59ce8155344a6f8d8606d1" category="admonition">Sie können manuell hinzugefügte, von NetApp unterstützte Plug-in-Ressourcen nicht wiederherstellen.</block>
   <block id="50787980c9356103ab7c58a3f9f7570f" category="doc">Zeigen Sie auf der Seite „Topologie“ ressourcenbezogene Backups und Klone von NetApp-unterstützten Plug-ins an</block>
   <block id="d8ba70b334989d2002d48ab5721908ea" category="summary">Sie können die von NetApp unterstützten Plug-ins für Datensicherungsvorgänge verwenden.</block>
-  <block id="58a0d06df2214b110774fbcd2f7e7b41" category="doc">Was Sie mit den von NetApp unterstützten Plug-ins und dem Storage Plug-in tun können</block>
-  <block id="62c7b5d64f39e4e815d9a33b635765c3" category="paragraph">Sie können das von NetApp unterstützte Plug-in für Datensicherungsvorgänge verwenden.</block>
-  <block id="639362ed59cd972e832132a5bd6eeb39" category="paragraph">*Von NetApp unterstützte Plug-ins*</block>
   <block id="3f1eb07fb9288e9a6c05da32d838f4b8" category="inline-link-macro">Konfigurieren Sie das Group Managed Service-Konto unter Windows Server 2016 oder höher für PostgreSQL</block>
   <block id="e85fd1efe28ded34e4f29fbd336c7bbd" category="admonition">Das Plug-in für PostgreSQL wird auf dem PostgreSQL-Client-Host installiert, und dieser Host kann entweder auf einem Windows-System oder auf einem Linux-System ausgeführt werden.</block>
   <block id="e3df741a94b6d36005faa0f2075e2f23" category="paragraph">Wenn Sie das Plug-in für PostgreSQL mit der REST-API installieren, müssen Sie die Version als 3.0 übergeben. Beispiel: PostgreSQL:3.0</block>
@@ -9540,7 +9516,6 @@ Die Aufbewahrung ist beispielsweise für eine Ressourcengruppe mit primärer SAP
   <block id="2d9eb22f67056d86366a15efb099883a" category="sidebar">Backup-Strategie für von NetApp unterstützte Plug-ins</block>
   <block id="d8af169199bfc163fc18d9c1ac586c27" category="sidebar">Backup-Pläne von von NetApp unterstützten Plug-ins-Ressourcen</block>
   <block id="bda453cd5a6724b496252c260674fa69" category="sidebar">Typen von Wiederherstellungsstrategien, die für manuell hinzugefügte NetApp-unterstützte Plug-ins-Ressourcen unterstützt werden</block>
-  <block id="f68d31617b8573d721bea1d57f377612" category="sidebar">Benutzerdefinierte Plug-ins in SnapCenter</block>
   <block id="792464ae681ba52772c64594e159d7f2" category="sidebar">Bereiten Sie die Installation von NetApp-unterstützten Plug-ins vor</block>
   <block id="e65dc40ee96b13cf83d05151b71aaa6f" category="sidebar">Installations-Workflow von von NetApp unterstützten Plug-ins</block>
   <block id="19bd9625214c87b1c38eac929848e1ba" category="sidebar">Installieren Sie die von NetApp unterstützten Plug-ins</block>
@@ -9644,7 +9619,6 @@ Die Aufbewahrung ist beispielsweise für eine Ressourcengruppe mit primärer SAP
   <block id="503fe1d0e01220df2c700af08ab0d45a" category="paragraph">Sie können die Bereinigung bei Bedarf auslösen, indem Sie den Zeitplan unter *Monitor* &gt; *Zeitpläne* &gt; *SnapCenter_StaleJobCleanUp* ausführen.</block>
   <block id="4bc64b43c586cee88983f327d8a04770" category="list-text">Legen Sie den Wert des Parameters _CleanUpStaleJobsIntervalHours_ unter _C:\Programme\NetApp\SnapCenter WebApp\SnapManager.Web.UI.dll.config_ fest.</block>
   <block id="f89f0ec412a77c24f996a08f409d1820" category="image-alt">Ressourcen und Richtlinien</block>
-  <block id="5b4d4e6767fabff6697c56232130561b" category="paragraph"><block ref="5b4d4e6767fabff6697c56232130561b" category="inline-link-macro-rx"></block></block>
   <block id="34d41de6bbbd59c588068d1c2b2e073d" category="paragraph">Sie können auch ein CA-Zertifikat für SnapCenter-Plug-in für VMware vSphere implementieren. Weitere Informationen finden Sie unter<block ref="bdfc8d677279c2d2dc7a5041c41cc2d9" category="inline-link-rx"></block>.</block>
   <block id="23162359b252c2000ad518a55793125e" category="summary">Konfigurieren Sie Hochverfügbarkeit in SnapCenter mit F5, Network Load Balancing oder Amazon Web Services</block>
   <block id="83e606e7229254f977fc3348f76ce3d4" category="doc">Konfigurieren Sie SnapCenter-Server für Hochverfügbarkeit</block>
@@ -9843,4 +9817,131 @@ Die Aufbewahrung ist beispielsweise für eine Ressourcengruppe mit primärer SAP
   <block id="22cbf6497132aefc41cc34f24b8abc93" category="admonition">Wenn Sie beispielsweise SnapCenter Version 4.9 verwenden und auf 6.0 aktualisieren möchten, sollten Sie zuerst ein Upgrade auf 5.0 durchführen und dann ein Rolling Upgrade auf 6.0 durchführen.</block>
   <block id="ef32bf0484293958fd8b49026606bf5e" category="sidebar">SnapCenter Software ist eine einfache, zentralisierte und skalierbare Plattform, die applikationskonsistenten Datenschutz für Applikationen, Datenbanken, Host-Filesysteme und VMs bietet, die auf ONTAP Systemen in der Hybrid Cloud ausgeführt werden. Diese Dokumentationsbibliothek enthält Informationen zu Version 6.0 und 6.0.1.</block>
   <block id="db1c2c3cb6f2d1f2978caf1a4dce483c" category="sidebar">Schützen Sie Applikationen mit von NetApp unterstützten Plug-ins</block>
+  <block id="e66b727df529163e059dccac755199b5" category="paragraph">Datensicherung wird für Microsoft Exchange Server, Microsoft SQL Server, Oracle Datenbanken auf Linux oder AIX, SAP HANA Datenbanken, IBM DB2, PostgreSQL, MySQL und Windows Host Dateisysteme auf ONTAP Systemen unterstützt.</block>
+  <block id="4dee8d3c72d98ca6077f2c8d5e31691e" category="paragraph">Datensicherung wird auch für andere standardmäßige oder benutzerdefinierte Applikationen und Datenbanken unterstützt, indem ein Framework für die Erstellung benutzerdefinierter SnapCenter Plug-ins bereitgestellt wird. Dadurch wird die Datensicherung für andere Applikationen und Datenbanken über dieselbe zentrale Konsole ermöglicht. Mithilfe dieses Frameworks hat NetApp SnapCenter Plug-ins für MongoDB, Storage, MaxDB, Sybase ASE und ORASCPM veröffentlicht. Darüber hinaus können Sie Ihr eigenes Plug-in mit Hilfe des Entwicklerleitfadens erstellen.</block>
+  <block id="93115fb35bbdfcd0d89a15e51ee29360" category="paragraph"><block ref="93115fb35bbdfcd0d89a15e51ee29360" category="inline-link-macro-rx"></block></block>
+  <block id="54e1870bb16fcbd1f89a2a9cb158c564" category="list-text">SnapCenter Plug-in für MongoDB</block>
+  <block id="f17c3f092b22f18a18513007253feb63" category="list-text">SnapCenter Plug-in für ORASCPM (Oracle Applikationen)</block>
+  <block id="25eb4bcdd1e7dc86b1ab79cf6353b8c4" category="list-text">SnapCenter Plug-in für SAP ASE</block>
+  <block id="50abee4601abc8a9eaf9eda45fc890fe" category="list-text">SnapCenter Plug-in für SAP MaxDB</block>
+  <block id="8ef14040961bb0da029f3fc304b6207a" category="list-text">SnapCenter Plug-in für Storage Plug-in</block>
+  <block id="309dab896f56b3d37ea98a7bf810fbfa" category="paragraph">MongoDB Host</block>
+  <block id="d0dd1e46f3d2a9df5db113f5d4887fe1" category="paragraph">Plug-in für ORASCPM (Oracle Applikationen)</block>
+  <block id="5cee7b6aa7ee8f8137a525779101e458" category="paragraph">Plug-in für SAP ASE</block>
+  <block id="a1ed78eb846876547dbbead9faf94c49" category="paragraph">SAP-Host</block>
+  <block id="5ecca3be7057bb09f73af5a604bacae8" category="paragraph">Plug-in für SAP MaxDB</block>
+  <block id="5ebe126580d21ed8a7871727539c34a5" category="paragraph">SAP MaxDB-Host</block>
+  <block id="c0a20598d510707e9ac421eb3a2e8d21" category="paragraph">Plug-in für Storage Plug-in</block>
+  <block id="b2e15324e17e46f57b49f3c8abfda8fe" category="paragraph">Storage Host</block>
+  <block id="146084b70da6db6727813aa08668f9ab" category="paragraph">Von NetApp unterstützte Plug-ins sind MongoDB, ORASCPM (Oracle Applications), SAP ASE, SAP MaxDB und Storage Plug-in.</block>
+  <block id="42eb8a85bcf7b15c7630f27394ab2de4" category="paragraph">Sie müssen die Seite SnapCenter Host hinzufügen verwenden, um Hosts hinzuzufügen, und dann die Plug-in-Pakete installieren. Die Plug-ins werden automatisch auf den Remote-Hosts installiert. Sie können einen Host hinzufügen und die Plug-in-Pakete entweder für einen einzelnen Host oder für einen Cluster installieren.</block>
+  <block id="d8c34ac95ee06b7ff704879a39ce5962" category="list-text">Für Windows-Host müssen Sie sicherstellen, dass Sie SnapCenter-Plug-in für Windows auswählen.</block>
+  <block id="7e6bb0931a72759d39514aa924b420bc" category="list-text">AIX</block>
+  <block id="9b704c4c9b36125c4198983397aac38f" category="admonition">Die von NetApp unterstützten Plug-ins können in Windows-, Linux- und AIX-Umgebungen verwendet werden.</block>
+  <block id="da88e81dd023c697c2742e5a13b15675" category="admonition">Storage und Oracle Applikationen werden auf AIX unterstützt.</block>
+  <block id="1de83b57e1abf49ed0abc0257c25adce" category="paragraph">Die von NetApp unterstützten Plug-ins können entweder auf einem Windows-System oder auf einem Linux-System installiert werden.</block>
+  <block id="a9744f4497381c8e55a308fa6c9814c6" category="list-text">Für SnapCenter Plug-ins Paket für Linux und SnapCenter Plug-ins Paket für AIX ist der Standardpfad<block ref="ad6569b575c0a3830082f4336038186a" prefix=" " category="inline-code"></block> .</block>
+  <block id="684d03676aad8f0afdac19ef9d8e146b" category="paragraph">Wenn der Fehler mit dem Speicherplatz oder RAM zusammenhängt, können Sie die Datei Web.config unter aktualisieren<block ref="bbf206564dadd00dca5180cc2949c1ee" prefix=" " category="inline-code"></block>, um die Standardwerte zu ändern. Wenn der Fehler mit anderen Parametern zusammenhängt, müssen Sie das Problem beheben.</block>
+  <block id="fd6a9d0fa065de8e047432e33188b6b1" category="admonition">Wenn Sie in einem HA-Setup SnapManager.Web.UI.dll.config aktualisieren, müssen Sie die Datei auf beiden Knoten aktualisieren und den SnapCenter-App-Pool neu starten.</block>
+  <block id="0f569c4c057166810a0263561cc03eb8" category="paragraph">Der Windows-Standardpfad lautet<block ref="75385c52c9f14e0941e2ff3204140056" prefix=" " category="inline-code"></block></block>
+  <block id="a828e35048c20e82de816a6786560bfe" category="paragraph">Der Standardpfad für Linux lautet<block ref="a64d770b5f8b2257daf194a8f30a5882" prefix=" " category="inline-code"></block></block>
+  <block id="33e8bd0cb41cde44deff796a222fa9cf" category="doc">Host-Anforderungen für die Installation des SnapCenter-Plug-ins-Pakets für Linux und AIX</block>
+  <block id="fc25ac2856df14fba18477a9cf699e7a" category="paragraph">Stellen Sie sicher, dass der Host die Anforderungen erfüllt, bevor Sie das SnapCenter-Plug-ins-Paket für Linux oder AIX installieren.</block>
+  <block id="a0d05ac13a4562be381d9152320c4194" category="image-alt">][Workflow von SnapCenter NetApp-unterstützten Plug-ins</block>
+  <block id="48ed8f3ff553bb06e5db886bd2c6e619" category="doc">Installieren Sie mithilfe von Cmdlets SnapCenter-Plug-in-Pakete für Linux, Windows oder AIX auf mehreren Remote-Hosts</block>
+  <block id="442903fceb71220ba92d6bc08fba383f" category="paragraph">Sie können die SnapCenter-Plug-in-Pakete für Linux, Windows oder AIX gleichzeitig auf mehreren Hosts installieren, indem Sie das Cmdlet "Install-SmHostPackage PowerShell" verwenden.</block>
+  <block id="b281607668dced6feda7018d01ede377" category="list-text">_DINSTALL_LOG_NAME gibt den Namen der Protokolldatei an.</block>
+  <block id="da103d0dc9ba0a7bdc05e47cb6ceddc0" category="paragraph">SnapCenter lässt sich in die Plug-in-Applikation und mit NetApp Technologien auf dem Storage-System integrieren. Für den Einsatz mit von NetApp unterstützten Plug-ins wie MongoDB, ORASCPM (Oracle Applications), SAP ASE, SAP MaxDB und Storage Plug-in nutzen Sie die grafische Benutzeroberfläche von SnapCenter.</block>
+  <block id="e00e8f9be649322d8c66d05810c7d449" category="paragraph">Die von NetApp unterstützten Plug-ins bieten darüber hinaus folgende Vorteile:</block>
+  <block id="ed889c4749ceddfb9bbb34d736c331cb" category="paragraph">Für Applikationen, die Sie nutzen und dann SnapCenter zum Backup, zur Wiederherstellung oder Klonen dieser Applikationen verwenden, können Sie die von NetApp unterstützten Plug-ins wie MongoDB, ORASCPM (Oracle Applications), SAP ASE, SAP MaxDB und Storage Plug-in verwenden. Ihre von NetApp unterstützten Plug-ins fungieren als Host-seitige Komponenten der NetApp SnapCenter Software und ermöglichen so applikationsgerechte Datensicherung und das Management von Ressourcen.</block>
+  <block id="c8df28b406eabc43243b92181d68f712" category="paragraph">Sie können die von NetApp unterstützten Plug-ins auf der Seite Host hinzufügen installieren.</block>
+  <block id="cb15647de6f65c6f817e3b480a54f7db" category="summary">Bevor Sie einen Host hinzufügen und die Plug-ins-Pakete installieren, müssen Sie alle Anforderungen erfüllen. Die von NetApp unterstützten Plug-ins können sowohl in Windows-, Linux- oder AIX-Umgebungen verwendet werden.</block>
+  <block id="01b37fc83542f28040f13cc0ca72a787" category="paragraph">Bevor Sie einen Host hinzufügen und die Plug-ins-Pakete installieren, müssen Sie alle Anforderungen erfüllen. Von NetApp unterstützte Plug-ins werden auf Windows-, Linux- und AIX-Umgebungen unterstützt.</block>
+  <block id="a12fcc2714160353d9eaad3f6b1236bc" category="list-text">Sie müssen Java 11 auf Ihrem Linux-, Windows- oder AIX-Host installiert haben.</block>
+  <block id="4baf1f02e89e733c2e9e86eb70c5a37b" category="list-text">Die von NetApp unterstützten Plug-ins wie MongoDB, ORASCPM, Oracle Applications, SAP ASE, SAP MaxDB und Storage Plug-in müssen auf dem Client-Host zur Verfügung stehen, von dem aus der Host-Zusatzvorgang ausgeführt wird.</block>
+  <block id="0612f5c4c0ebcf5d100decba8d34d5a2" category="list-text">Sie müssen manuell das SnapCenter-Plug-in für Microsoft Windows auswählen.</block>
+  <block id="97f324a8c5553ff0e590a7f1d7426c7b" category="list-text">Linux- oder AIX-Hosts</block>
+  <block id="f5f6a1811692e6a86da538aa5c811bf1" category="paragraph">Sie müssen Anmeldeinformationen für die Installation von Plug-ins auf Linux- oder AIX-Hosts einrichten.</block>
+  <block id="7327f5f0e2968d1fa35822d7d6f788aa" category="paragraph">Wählen Sie den Authentifizierungstyp aus, den Sie verwenden möchten.</block>
+  <block id="43cc85c69233f4440d07f2e3061c15a5" category="admonition">Gilt nur für Linux- und AIX-Benutzer.</block>
+  <block id="d2359afa8132d4e27ade60817ab1a816" category="paragraph">Sie können die von NetApp unterstützten Plug-ins wie MongoDB, ORASCPM, Oracle Applications, SAP ASE, SAP MaxDB und Storage Plug-in für Datensicherungsvorgänge verwenden.</block>
+  <block id="14aee625cd152256e849c1aa7031d871" category="admonition">Die benutzerdefinierten Plug-ins können sowohl in Windows als auch in Linux Umgebungen verwendet werden.</block>
+  <block id="e535346a3db70ff385fc97189dce883d" category="paragraph">Die benutzerdefinierten SnapCenter-Plug-ins können entweder auf einem Windows-System oder auf einem Linux-System installiert werden.</block>
+  <block id="5acceba2cee4fe40d121e90d997fa439" category="doc">Benutzerdefinierte SnapCenter Plug-ins mit Ressourcen ergänzen</block>
+  <block id="1f3ce8cb4c6bb4bf02aa0b3d1e189ae7" category="paragraph">Nachdem Sie die Ressourcen hinzugefügt haben, können Sie die Ressourcendetails ändern.</block>
+  <block id="a426ad547c71e321ba843cef964120d7" category="doc">Backup von Ressourcen für benutzerdefinierte SnapCenter-Plug-ins</block>
+  <block id="9378c23d00fd78b8947bd7e11f09030a" category="summary">Wenn eine einzelne Ressource für benutzerdefinierte SnapCenter-Plug-ins nicht zu einer Ressourcengruppe gehört, können Sie die Ressource auf der Seite „Ressourcen“ sichern. Sie können die Ressource nach Bedarf sichern, oder wenn die Ressource über eine Richtlinie und einen konfigurierten Zeitplan verfügt, werden die Backups automatisch gemäß dem Zeitplan durchgeführt.</block>
+  <block id="08b954c361c2ce7b23e572ce828859aa" category="doc">Backup einzelner SnapCenter Custom Plug-ins-Ressourcen</block>
+  <block id="a37b4d82e3dae7c24db9d5162f48fd96" category="paragraph">Wenn eine einzelne benutzerdefinierte Plug-ins-Ressource nicht zu einer Ressourcengruppe gehört, können Sie die Ressource auf der Seite „Ressourcen“ sichern. Sie können die Ressource nach Bedarf sichern, oder wenn die Ressource über eine Richtlinie und einen konfigurierten Zeitplan verfügt, werden die Backups automatisch gemäß dem Zeitplan durchgeführt.</block>
+  <block id="2b88427244b62aacd4debde72476dcb0" category="paragraph">Klicken Sie auf <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>, und wählen Sie dann den Hostnamen und den Ressourcentyp aus, um die Ressourcen zu filtern. Sie können dann klicken <block ref="2df6cc2e237d722aa6244879c70fd2d2" category="inline-image-macro-rx" type="image"></block> , um den Filterbereich zu schließen.</block>
+  <block id="665e27cacd5b140b3ca5a518bbd41724" category="doc">Sichern Sie Ressourcengruppen benutzerdefinierter Plug-in-Ressourcen</block>
+  <block id="e4e0cadac57fe2f7fc1d76c019a73967" category="doc">Backup-Pläne für benutzerdefinierte Plug-in-Ressourcen</block>
+  <block id="79db142fcc9311cc0f07d756c08b4ca0" category="doc">Abbrechen von Sicherungsvorgängen für benutzerdefinierte SnapCenter-Plug-ins</block>
+  <block id="f574c5c8b76c4ae3d8e59b1478323386" category="doc">Klonen Sie Ressourcen-Backups von benutzerdefinierten SnapCenter Plug-ins</block>
+  <block id="89f4fce6715ddef3315f9c412063572c" category="list-text">Bei dem Standardklonvorgang werden nur Storage-Objekte geklont. Klonvorgänge auf Applikationsebene können nur durchgeführt werden, wenn das benutzerdefinierte Plug-in diese Funktion bietet.</block>
+  <block id="15af88bae18a779b0123b601ed1f33b1" category="summary">Bevor Sie mit SnapCenter benutzerdefinierte Plug-in-spezifische Ressourcen sichern, müssen Sie eine Backup-Richtlinie für die Ressource oder Ressourcengruppe erstellen, die Sie sichern möchten.</block>
+  <block id="45ff3f433bdb1ede8743b649a4ecb7c3" category="doc">Erstellen von Richtlinien für benutzerdefinierte Plug-in-Ressourcen</block>
+  <block id="90de5bc1543ef2c832e0acbf4e27cc39" category="paragraph">Weitere Informationen finden Sie in den Informationen zur Definition einer Datensicherungsstrategie für benutzerdefinierte Plug-ins.</block>
+  <block id="75b3f5ccaa0a432666656554ea274cd8" category="inline-link-macro">Sehen Sie sich auf der Seite Topologie benutzerdefinierte Backups und Klone zu den Plug-in-Ressourcen an</block>
+  <block id="f14c7af4999f47dba1e2a191fea8c11f" category="paragraph">Siehe <block ref="0bc29e24db2bfeb522f90f83680fcdb4" category="inline-link-macro-rx"></block>.</block>
+  <block id="6ad653f84eed0c76647686ab11205da7" category="doc">Wie Ressourcen, Ressourcengruppen und Richtlinien zum Schutz benutzerdefinierter Plug-in-Ressourcen verwendet werden</block>
+  <block id="2fc5c212a0ba7f3f442fe029d893a845" category="summary">Wenn Sie benutzerdefinierte Plug-ins schützen möchten, sollten Sie benutzerdefinierte SnapCenter Plug-ins installieren und einrichten.</block>
+  <block id="d9ac41630ae6a20177466403e2d328d8" category="doc">Installationsworkflow von benutzerdefinierten SnapCenter Plug-ins</block>
+  <block id="caef6d3f9e7cdd9ed1d3eaabe29db549" category="paragraph">Sie sollten benutzerdefinierte SnapCenter-Plug-ins installieren und einrichten, wenn Sie benutzerdefinierte Plug-in-Ressourcen schützen möchten.</block>
+  <block id="8f328255df3c97c90d7cfcc63b284018" category="image-alt">Workflow von benutzerdefinierten SnapCenter-Plug-ins</block>
+  <block id="0d137907411e77ba81a3c7f3193d7c4a" category="summary">Sie sollten die benutzerdefinierten SnapCenter-Plug-ins über die SnapCenter-Benutzeroberfläche (UI) installieren. Wenn Ihre Umgebung die Remote-Installation des Plug-ins über die SnapCenter-Benutzeroberfläche nicht zulässt, können Sie das benutzerdefinierte Plug-in entweder im Konsolenmodus oder im unbeaufsichtigten Modus über die Befehlszeilenschnittstelle (CLI) installieren.</block>
+  <block id="b5c24629ead5c583e2208216205af10a" category="doc">Installieren Sie die benutzerdefinierten SnapCenter-Plug-ins auf Linux-Hosts über die Befehlszeilenschnittstelle</block>
+  <block id="0f18e8aaa7478aae88b697e6b89d15f0" category="paragraph">Sie sollten die benutzerdefinierten SnapCenter-Plug-ins über die SnapCenter-Benutzeroberfläche (UI) installieren. Wenn Ihre Umgebung die Remote-Installation des Plug-ins über die SnapCenter-Benutzeroberfläche nicht zulässt, können Sie die benutzerdefinierten Plug-ins entweder im Konsolenmodus oder im Ruhemodus mithilfe der Befehlszeilenschnittstelle (CLI) installieren.</block>
+  <block id="ef5b54514d2bc2cec099dbe31b43d400" category="list-text">Kopieren Sie das SnapCenter Plug-ins Paket für die Linux Installationsdatei (snapcenter_linux_Host_Plugin.bin) von C:\ProgramData\NetApp\SnapCenter\Paket-Repository auf den Host, auf dem Sie die benutzerdefinierten Plug-ins installieren möchten.</block>
+  <block id="f96e2a1e803fa28017557015321ddb3a" category="list-text">Melden Sie sich bei SnapCenter an und laden Sie das benutzerdefinierte Plug-in über die UI oder mithilfe von PowerShell Cmdlets hoch.</block>
+  <block id="bdc72ebb02dfcda19f5dd85c44715b14" category="paragraph">Sie können das benutzerdefinierte Plug-in über die Benutzeroberfläche hochladen, indem Sie auf Abschnitt verweisen <block ref="f72fab5b6c914bbb8d5e6637ea3f5a3f" category="inline-link-macro-rx"></block> .</block>
+  <block id="301724bd950c161b79552d6f655df446" category="doc">Minimale ONTAP-Berechtigungen, die für benutzerdefiniertes Plug-in erforderlich sind</block>
+  <block id="322752ebdea85a56b4a5d899f24c4325" category="doc">Überwachung benutzerdefinierter Plug-in-Klonvorgänge</block>
+  <block id="ea74c30d0b14b0ca9fd30f2713505fb0" category="doc">Überwachen Sie benutzerdefinierte Backup-Vorgänge für Plug-in-Ressourcen</block>
+  <block id="78d6b4b75546fc8aa5983130521da2da" category="doc">Überwachen Sie benutzerdefinierte Restore-Vorgänge für Plug-in-Ressourcen</block>
+  <block id="36c1f2ec62294c41aad60383fd84873d" category="doc">Überwachen Sie den Status der Installation benutzerdefinierter Plug-ins</block>
+  <block id="6af1ebe4d54e4d359cfda12fdfc23a05" category="doc">Bereiten Sie die Storage-Systeme für SnapMirror und SnapVault Replizierung auf benutzerdefinierte Plug-ins vor</block>
+  <block id="c338295edd6028b8881fc2e030e0af4c" category="summary">Bevor Sie benutzerdefinierte SnapCenter-Plug-ins verwenden, muss der SnapCenter-Administrator den SnapCenter-Server installieren und konfigurieren und die erforderlichen Aufgaben ausführen.</block>
+  <block id="2f2b7315a3ee2bd24ebcb2968f2d7471" category="doc">Voraussetzungen für die Verwendung der benutzerdefinierten SnapCenter-Plug-ins</block>
+  <block id="563eeaf2ba85a493983bca82e8f08302" category="paragraph">Port 9090 muss für die Verwendung durch benutzerdefinierte Plug-ins zusätzlich zu den anderen von SnapCenter benötigten Ports reserviert sein.</block>
+  <block id="cfc5bf454b40740731ed76f94a8f970c" category="summary">Bevor Sie einen Host hinzufügen und die Plug-ins-Pakete installieren, müssen Sie alle Anforderungen erfüllen. Die benutzerdefinierten Plug-ins können sowohl in Windows als auch in Linux Umgebungen verwendet werden.</block>
+  <block id="d4a7ff82c08a07473e6db99d099607ac" category="doc">Voraussetzungen für das Hinzufügen von Hosts und die Installation benutzerdefinierter SnapCenter Plug-ins</block>
+  <block id="af0b5aed7941c6f843b87c68b201035e" category="paragraph">Bevor Sie einen Host hinzufügen und die Plug-ins-Pakete installieren, müssen Sie alle Anforderungen erfüllen. Die benutzerdefinierten Plug-ins können sowohl in Windows- als auch in Linux-Umgebungen verwendet werden.</block>
+  <block id="f6435544e19487a5d349a72241d6531d" category="list-text">Die benutzerdefinierten Plug-ins müssen auf dem Client-Host verfügbar sein, von dem aus der Add-Host-Vorgang ausgeführt wird.</block>
+  <block id="d0304f4e107917a8451ca9cbb3d3b342" category="list-text">Für benutzerdefinierte Plug-ins sollten Sie sicherstellen, dass Sie den SHA512-Hash der benutzerdefinierten Plug-in-Datei zur Datei _Custom_Plugin_Checksumme_list_ hinzugefügt haben.</block>
+  <block id="a05404237ea51ddb4ea1e7c6debd0079" category="paragraph">Die Custom_Plugin_Prüfsummenliste ist Teil der benutzerdefinierten Plug-in-Installation auf dem Host von SnapCenter.</block>
+  <block id="8af2774827e3e07de108382c962be1a0" category="list-text">Für benutzerdefinierte Plug-ins, die für Ihre Anwendung erstellt wurden, sollten Sie die folgenden Schritte ausführen:</block>
+  <block id="2124f96b55bd8bcfe23c27d4d7c30129" category="list-text">Der Standardwiederherstellungsvorgang stellt nur Storage-Objekte wieder her. Restore-Vorgänge auf Applikationsebene können nur durchgeführt werden, wenn das benutzerdefinierte Plug-in diese Funktion bietet.</block>
+  <block id="d586cfbb655ff9a83e5820c52931584f" category="doc">Stellen Sie benutzerdefinierte Plug-in-Ressourcen wieder her</block>
+  <block id="08bd15b8d89877f65879f0e9486f22f7" category="doc">Richten Sie Anmeldedaten für benutzerdefinierte SnapCenter-Plug-ins ein</block>
+  <block id="4f0a79bbbb1c2f86716f750b2620d7ca" category="list-text">Benutzerdefinierte Plug-ins-Applikationen</block>
+  <block id="eaa33d42e6fa75d8b2d8dabc59d645aa" category="summary">SnapCenter lässt sich in die Plug-in-Applikation und mit NetApp Technologien auf dem Storage-System integrieren. Zum Arbeiten mit benutzerdefinierten Plug-ins verwenden Sie die grafische Benutzeroberfläche von SnapCenter.</block>
+  <block id="7e2dbe0ceba88df5406b9c6925b9b55b" category="doc">Benutzerdefinierte SnapCenter Plug-ins-Funktionen</block>
+  <block id="be729a6539659c901e8d8721dbd4263d" category="paragraph">SnapCenter nutzt NetApp Snapshot Technologie mit den benutzerdefinierten Plug-ins für das Backup von Ressourcen. Snapshots belegen nur minimalen Speicherplatz.</block>
+  <block id="15b52e4150617b0308c95562aaf68617" category="paragraph">Die Verwendung benutzerdefinierter Plug-ins bietet darüber hinaus folgende Vorteile:</block>
+  <block id="f5f43eea7e5881f7c06831585bdf5df3" category="summary">Sie können benutzerdefinierte Plug-ins für Applikationen entwickeln, die Sie verwenden. Anschließend können Sie diese Applikationen mit SnapCenter sichern, wiederherstellen oder klonen. Wie andere SnapCenter Plug-ins fungieren auch Ihre individuellen Plug-ins als Host-seitige Komponenten der NetApp SnapCenter Software und ermöglichen so die applikationsorientierte Datensicherung und das Management von Ressourcen.</block>
+  <block id="d30c90ed422af36347bce4755fe70260" category="doc">Überblick über benutzerdefinierte SnapCenter Plug-ins</block>
+  <block id="caa41de91fb5b317c8ea619089e3c365" category="paragraph">Sie können benutzerdefinierte Plug-ins für Applikationen entwickeln, die Sie verwenden. Anschließend können Sie diese Applikationen mit SnapCenter sichern, wiederherstellen oder klonen. Ihre individuellen Plug-ins fungieren als Host-seitige Komponenten der NetApp SnapCenter Software und ermöglichen so applikationsorientierte Datensicherung und Ressourcenmanagement.</block>
+  <block id="cb5170fba0d79e8f77791b01b65474cb" category="paragraph">Bei der Installation benutzerdefinierter Plug-ins können SnapCenter mit NetApp SnapMirror Technologie genutzt werden, um Spiegelkopien von Backup-Sets auf einem anderen Volume zu erstellen, und mithilfe der NetApp SnapVault Technologie Disk-to-Disk Backup-Replizierung durchführen. Die benutzerdefinierten Plug-ins können sowohl in Windows als auch in Linux Umgebungen verwendet werden.</block>
+  <block id="612ec908f9242be88271aff279afcb8c" category="admonition">SnapCenterCLI unterstützt keine benutzerdefinierten Plug-ins-Befehle.</block>
+  <block id="ac1853e1b8c52dcd72090686ddcea0a4" category="paragraph">Sie können das benutzerdefinierte Plug-in auf der Seite Host hinzufügen installieren.</block>
+  <block id="83aeb7b594481ad598eb0b519836777b" category="summary">SnapCenter unterstützt zahlreiche Storage-Typen sowohl auf physischen als auch auf Virtual Machines. Sie müssen die Unterstützung Ihres Speichertyps überprüfen, bevor Sie benutzerdefinierte SnapCenter-Plug-ins installieren.</block>
+  <block id="c48a2f5430d3aff55420b834363bcc46" category="doc">Von benutzerdefinierten SnapCenter Plug-ins unterstützte Storage-Typen</block>
+  <block id="c646559470c5e7c2ce007b2f588217ce" category="summary">Sie müssen eine Strategie definieren, bevor Sie die Restore-Vorgänge mit SnapCenter erfolgreich durchführen können. Es gibt zwei Arten von Wiederherstellungsstrategien für manuell hinzugefügte benutzerdefinierte Plug-in-Ressourcen. Sie können keine manuell hinzugefügten benutzerdefinierten Plug-in-Ressourcen wiederherstellen.</block>
+  <block id="74f3688654489538321178bb35e0308a" category="doc">Arten von Wiederherstellungsstrategien werden für manuell hinzugefügte benutzerdefinierte Plug-in-Ressourcen unterstützt</block>
+  <block id="d09f169f58ca3636a49dbb1d90c5ccb2" category="paragraph">Sie müssen eine Strategie definieren, bevor Sie die Restore-Vorgänge mit SnapCenter erfolgreich durchführen können. Es gibt zwei Arten von Wiederherstellungsstrategien für manuell hinzugefügte benutzerdefinierte Plug-in-Ressourcen.</block>
+  <block id="10b4ebc3af3b43078bbe14cbd2f856b5" category="admonition">Sie können keine manuell hinzugefügten benutzerdefinierten Plug-in-Ressourcen wiederherstellen.</block>
+  <block id="068e66f9f630e931ca9256c9d49a4894" category="doc">Zeigen Sie auf der Seite „Topologie“ benutzerdefinierte Plug-ins für ressourcenbezogene Backups und Klone an</block>
+  <block id="ffcbfe2535c5e409d12457d03945597a" category="summary">Sie können die benutzerdefinierten Plug-ins für Datensicherungsvorgänge verwenden.</block>
+  <block id="91ed5f58b9ed12fe9c0ba6ac5fbaa1b7" category="doc">Funktionen benutzerdefinierter SnapCenter-Plug-ins</block>
+  <block id="5bb2f9bf573dcbada2bc999d2acc3d80" category="paragraph">Sie können das benutzerdefinierte Plug-in für Datensicherungsvorgänge verwenden.</block>
+  <block id="f130b1c1614c0136264ae62249141b2f" category="sidebar">Schützen Sie benutzerdefinierte Anwendungen</block>
+  <block id="ad41f7a9e85843a998743e132424a395" category="sidebar">Benutzerdefinierte SnapCenter Plug-ins</block>
+  <block id="27a900f1a63545d14b71e4b2d44fc8a9" category="sidebar">Was Sie mit den benutzerdefinierten SnapCenter-Plug-ins tun können</block>
+  <block id="3d8a9e359cdf4b956d6850836e03a25e" category="sidebar">Backup-Strategie für benutzerdefinierte Plug-ins</block>
+  <block id="08759ac851b4d644eddfd819f2b366e9" category="sidebar">Bereiten Sie die Installation von benutzerdefinierten SnapCenter-Plug-ins vor</block>
+  <block id="834849dd07442651b1ce8092c92186f0" category="sidebar">Installieren Sie die benutzerdefinierten SnapCenter-Plug-ins</block>
+  <block id="33e8da2f20646df222fc0acf35201fe4" category="sidebar">Sichern Sie benutzerdefinierte Plug-in-Ressourcen</block>
+  <block id="8ffa4ba0dd2df5995fd397c72a149679" category="sidebar">Sicherung individueller Plug-in-Ressourcen</block>
+  <block id="e734e6e2e702d38ebab6ed3c050a5e72" category="sidebar">Klonen benutzerdefinierter Plug-in-Ressourcen-Backups</block>
 </blocks>

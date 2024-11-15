@@ -1,17 +1,17 @@
 ---
-permalink: protect-nsp/netapp_supported_plugins_features.html 
+permalink: protect-scc/snapcenter_custom_plug_ins_features.html 
 sidebar: sidebar 
-keywords: NetApp supported plug-ins features, MongoDB, ORASCPM, Oracle Applications, SAP ASE, SAP MaxDB, Storage plug-in 
-summary: SnapCenter lässt sich in die Plug-in-Applikation und mit NetApp Technologien auf dem Storage-System integrieren. Um mit von NetApp unterstützten Plug-ins zu arbeiten, verwenden Sie die grafische Benutzeroberfläche von SnapCenter. 
+keywords: custom plug-ins features 
+summary: SnapCenter lässt sich in die Plug-in-Applikation und mit NetApp Technologien auf dem Storage-System integrieren. Zum Arbeiten mit benutzerdefinierten Plug-ins verwenden Sie die grafische Benutzeroberfläche von SnapCenter. 
 ---
-= Von NetApp unterstützte Plug-ins-Funktionen
+= Benutzerdefinierte SnapCenter Plug-ins-Funktionen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter lässt sich in die Plug-in-Applikation und mit NetApp Technologien auf dem Storage-System integrieren. Für den Einsatz mit von NetApp unterstützten Plug-ins wie MongoDB, ORASCPM (Oracle Applications), SAP ASE, SAP MaxDB und Storage Plug-in nutzen Sie die grafische Benutzeroberfläche von SnapCenter.
+SnapCenter lässt sich in die Plug-in-Applikation und mit NetApp Technologien auf dem Storage-System integrieren. Zum Arbeiten mit benutzerdefinierten Plug-ins verwenden Sie die grafische Benutzeroberfläche von SnapCenter.
 
 * *Einheitliche grafische Benutzeroberfläche*
 +
@@ -23,11 +23,11 @@ Sie können Backup-Vorgänge planen, richtlinienbasierte Backup-Aufbewahrung kon
 
 * *Unterbrechungsfreie NetApp Snapshots*
 +
-SnapCenter nutzt NetApp Snapshot Technologie mit von NetApp unterstützten Plug-ins, um Ressourcen zu sichern. Snapshots belegen nur minimalen Speicherplatz.
+SnapCenter nutzt NetApp Snapshot Technologie mit den benutzerdefinierten Plug-ins für das Backup von Ressourcen. Snapshots belegen nur minimalen Speicherplatz.
 
 
 
-Die von NetApp unterstützten Plug-ins bieten darüber hinaus folgende Vorteile:
+Die Verwendung benutzerdefinierter Plug-ins bietet darüber hinaus folgende Vorteile:
 
 * Unterstützung für Backup-, Restore- und Klon-Workflows
 * RBAC-unterstützte Sicherheit und zentralisierte Rollendelegation

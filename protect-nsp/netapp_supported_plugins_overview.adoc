@@ -1,7 +1,7 @@
 ---
 permalink: protect-nsp/netapp_supported_plugins_overview.html 
 sidebar: sidebar 
-keywords: NetApp supported plug-ins 
+keywords: NetApp supported plug-ins, MongoDB, ORASCPM, Oracle Applications, SAP ASE, SAP MaxDB, Storage plug-in 
 summary: Sie können von NetApp unterstützte Plug-ins für Applikationen entwickeln und diese dann mit SnapCenter sichern, wiederherstellen oder klonen. Wie andere SnapCenter Plug-ins fungieren die von NetApp unterstützten Plug-ins als Host-Komponenten der NetApp SnapCenter Software und ermöglichen so applikationsorientierte Datensicherung und Ressourcenmanagement. 
 ---
 = Übersicht über die unterstützten Plug-ins von NetApp
@@ -11,7 +11,7 @@ summary: Sie können von NetApp unterstützte Plug-ins für Applikationen entwic
 
 
 [role="lead"]
-Sie können entweder die von NetApp unterstützten Plug-ins verwenden oder benutzerdefinierte Plug-ins für Applikationen entwickeln, die Sie verwenden. Diese Applikationen können dann mit SnapCenter gesichert, wiederhergestellt oder geklont werden. Ihre von NetApp unterstützten Plug-ins fungieren als Host-seitige Komponenten der NetApp SnapCenter Software und ermöglichen so applikationsgerechte Datensicherung und das Management von Ressourcen.
+Für Applikationen, die Sie nutzen und dann SnapCenter zum Backup, zur Wiederherstellung oder Klonen dieser Applikationen verwenden, können Sie die von NetApp unterstützten Plug-ins wie MongoDB, ORASCPM (Oracle Applications), SAP ASE, SAP MaxDB und Storage Plug-in verwenden. Ihre von NetApp unterstützten Plug-ins fungieren als Host-seitige Komponenten der NetApp SnapCenter Software und ermöglichen so applikationsgerechte Datensicherung und das Management von Ressourcen.
 
 Bei der Installation von NetApp unterstützten Plug-ins können SnapCenter mit NetApp SnapMirror Technologie genutzt werden, um Spiegelkopien von Backup Sets auf einem anderen Volume zu erstellen, und mithilfe der NetApp SnapVault Technologie Disk-to-Disk Backup-Replizierung durchzuführen. Von NetApp unterstützte Plug-ins können sowohl in Windows- als auch in Linux-Umgebungen verwendet werden.
 
@@ -20,13 +20,9 @@ NOTE: SnapCenterCLI unterstützt keine von NetApp unterstützten Plug-ins-Befehl
 
 NetApp stellt das Storage Plug-in zur Verfügung, um mithilfe des individuellen Plug-in Frameworks von SnapCenter Datensicherungsvorgänge des Daten-Volumes auf dem ONTAP Storage durchzuführen.
 
-Sie können die von NetApp unterstützten Plug-ins, das benutzerdefinierte Plug-in und das Storage Plug-in auf der Seite Host hinzufügen installieren.
+Sie können die von NetApp unterstützten Plug-ins auf der Seite Host hinzufügen installieren.
 
 link:add_hosts_and_install_plug_in_packages_on_remote_hosts.html["Fügen Sie Hosts hinzu und installieren Sie Plug-in-Pakete auf Remote-Hosts."^]
 
-NetApp bietet auch MongoDB, MySQL, PostgreSQL, Storage, MaxDB Sybase ASE, ORASCPM, MongoDB und DPGlue Plug-ins.
-
 
 NOTE: Die SnapCenter Support-Richtlinie unterstützt das individuelle SnapCenter Plug-in Framework, die Core Engine und die zugehörigen APIs. Der Plug-in-Quellcode und die zugehörigen Skripte, die auf dem benutzerdefinierten Plug-in-Framework basieren, werden nicht unterstützt.
-
-Sie können Ihre eigenen benutzerdefinierten Plug-ins mithilfe des Leitfadens erstellen link:develop_a_plug_in_for_your_application.html["Entwickeln Sie ein Plug-in für Ihre Applikation"^] .

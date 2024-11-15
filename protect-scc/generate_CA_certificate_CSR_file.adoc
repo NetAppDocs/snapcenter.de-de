@@ -1,0 +1,26 @@
+---
+permalink: protect-scc/generate_CA_certificate_CSR_file.html 
+sidebar: sidebar 
+keywords: SnapCenter 
+summary: 'Sie können eine Zertifikatsignierungsanforderung (CSR) generieren und das Zertifikat importieren.' 
+---
+= ZertifikatCSR-Datei erstellen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Zertifikatsignierungsanforderung (CSR) generieren und das Zertifikat importieren, das von einer Zertifizierungsstelle (CA) mit dem generierten CSR abgerufen werden kann. Dem Zertifikat ist ein privater Schlüssel zugeordnet.
+
+CSR ist ein Block von codiertem Text, der einem autorisierten Zertifikatanbieter zur Beschaffung des signierten CA-Zertifikats übergeben wird.
+
+
+NOTE: DIE Länge des RSA-Schlüssels des CA-Zertifikats muss mindestens 3072 Bit betragen.
+
+Informationen zum Generieren einer CSR finden Sie unter https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_generate_CA_Certificate_CSR_file["So generieren Sie eine CSR-Datei für das CA-Zertifikat"^].
+
+
+NOTE: Wenn Sie das CA-Zertifikat für Ihre Domain (*.domain.company.com) oder Ihr System (machine1.domain.company.com) besitzen, können Sie die Erstellung der CA-Zertifikat-CSR-Datei überspringen. Sie können das vorhandene CA-Zertifikat mit SnapCenter bereitstellen.
+
+Bei Clusterkonfigurationen sollten der Clustername (virtueller Cluster-FQDN) und die entsprechenden Hostnamen im CA-Zertifikat aufgeführt werden. Das Zertifikat kann aktualisiert werden, indem Sie das Feld Alternative Name (SAN) des Studienteilnehmers ausfüllen, bevor Sie das Zertifikat beschaffen. Bei einem Platzhalter-Zertifikat (*.domain.company.com) enthält das Zertifikat implizit alle Hostnamen der Domäne.

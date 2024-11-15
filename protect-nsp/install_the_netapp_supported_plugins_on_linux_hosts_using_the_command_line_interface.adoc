@@ -25,7 +25,7 @@ Sie können von dem Host, auf dem der SnapCenter-Server installiert ist, auf die
 ** -DSERVER_IP gibt die IP-Adresse des SnapCenter-Servers an.
 ** -DSERVER_HTTPS_PORT gibt den HTTPS-Port des SnapCenter-Servers an.
 ** -DUSER_INSTALL_dir gibt das Verzeichnis an, in dem das SnapCenter-Plug-ins-Paket für Linux installiert werden soll.
-** DINSTALL_LOG_NAME gibt den Namen der Protokolldatei an.
+** _DINSTALL_LOG_NAME gibt den Namen der Protokolldatei an.
 
 
 +

@@ -13,6 +13,4 @@ summary: Sie sollten von SnapCenter NetApp unterstützte Plug-ins installieren u
 [role="lead"]
 Sie sollten von SnapCenter NetApp unterstützte Plug-ins installieren und einrichten, wenn Sie die von NetApp unterstützten Plug-in-Ressourcen schützen möchten.
 
-image::../media/scc_install_configure_workflow.png[Workflow von von SnapCenter NetApp unterstützten Plug-ins]
-
-link:develop_a_plug_in_for_your_application.html["Entwickeln Sie ein Plug-in für Ihre Applikation"]
+image::../media/sap_hana_install_configure_workflow.png[][Workflow von SnapCenter NetApp-unterstützten Plug-ins]

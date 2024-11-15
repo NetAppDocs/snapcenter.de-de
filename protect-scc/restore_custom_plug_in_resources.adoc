@@ -1,10 +1,10 @@
 ---
-permalink: protect-nsp/restore_netapp_supported_plugins_resources.html 
+permalink: protect-scc/restore_custom_plug_in_resources.html 
 sidebar: sidebar 
 keywords:  
 summary: Der Restore- und Recovery-Workflow umfasst Planung, Durchführung von Restore-Vorgängen und Monitoring von Vorgängen. 
 ---
-= Stellen Sie von NetApp unterstützte Plug-in-Ressourcen wieder her
+= Stellen Sie benutzerdefinierte Plug-in-Ressourcen wieder her
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
