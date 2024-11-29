@@ -155,4 +155,4 @@ NOTE: Eine Fingerabdruck-Verifizierung ist erforderlich, auch wenn zuvor derselb
 
 
 .Nachdem Sie fertig sind
-Wenn Sie auf SnapCenter 6.0 aktualisieren möchten, wird das vorhandene PERL-basierte Plug-in für DB2 vom Remote-Plug-in-Server deinstalliert.
+Wenn Sie auf SnapCenter 6.0 oder höher aktualisieren möchten, wird das vorhandene PERL-basierte Plug-in für DB2 vom Remote-Plug-in-Server deinstalliert.

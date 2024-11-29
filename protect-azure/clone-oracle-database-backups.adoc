@@ -11,7 +11,7 @@ summary: Sie können SnapCenter zum Klonen einer Backup verwenden.
 
 
 [role="lead"]
-Sie können SnapCenter verwenden, um eine Oracle Datenbank mithilfe des Backups der Datenbank zu klonen.
+Sie können SnapCenter verwenden, um eine Oracle Datenbank mithilfe des Backups der Datenbank zu klonen. Die erstellten Klone sind Thick Clones und werden im übergeordneten Kapazitätspool erstellt.
 
 .Schritte
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
@@ -89,33 +89,4 @@ Deaktivieren Sie das Kontrollkästchen, wenn Sie der geklonten Datenbank die DBI
 . Wählen Sie auf der Benachrichtigungsseite aus der Dropdown-Liste *E-Mail-Präferenz* die Szenarien aus, in denen Sie die E-Mails versenden möchten.
 . Überprüfen Sie die Zusammenfassung, und wählen Sie dann *Fertig stellen*.
 . Überwachen Sie den Vorgangsfortschritt, indem Sie *Monitor* > *Jobs* auswählen.
-
-
-
-
-== Teilen Sie einen Oracle-Datenbankklon auf
-
-Sie können SnapCenter verwenden, um eine geklonte Ressource von der übergeordneten Ressource zu trennen. Der geteilte Klon ist unabhängig von der übergeordneten Ressource.
-
-.Schritte
-. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
-. Wählen Sie auf der Seite Ressourcen in der Liste Ansicht die Option *Datenbank* aus.
-. Wählen Sie die geklonte Ressource (z. B. Datenbank oder LUN) aus und klicken Sie dann auf *image:../media/clone_icon.gif["Klon-Symbol"]*.
-. Überprüfen Sie die geschätzte Größe des zu teilenden Klons und den benötigten Speicherplatz auf dem Aggregat, und klicken Sie dann auf *Start*.
-. Überwachen Sie den Fortschritt des Vorgangs, indem Sie auf *Monitor* > *Jobs* klicken.
-
-
-
-
-== Split-Klon einer steckbaren Datenbank
-
-Sie können eine geklonte Plug-in-Datenbank (PDB) mit SnapCenter teilen.
-
-.Schritte
-. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
-. Wählen Sie die Quellcontainer-Datenbank (CDB) aus der Ressourcen- oder Ressourcengruppenansicht aus.
-. Wählen Sie in der Ansicht Kopien verwalten die Option *Clones* aus den primären Speichersystemen aus.
-. Wählen Sie den PDB-Klon (targetCDB:PDBClone) aus, und klicken Sie dann auf *image:../media/clone_icon.gif["Klon-Symbol"]*.
-. Überprüfen Sie die geschätzte Größe des zu teilenden Klons und den benötigten Speicherplatz auf dem Aggregat, und klicken Sie dann auf *Start*.
-. Überwachen Sie den Fortschritt des Vorgangs, indem Sie auf *Monitor* > *Jobs* klicken.
 

@@ -46,7 +46,7 @@ NOTE: Sie sollten genügend Festplattenspeicher zuweisen und den Speicherverbrau
  a| 
 Erforderliche Softwarepakete
  a| 
-* DOTNET Core 8.0.5
+* DOTNET Core beginnt mit Version 8.0.5 und enthält alle nachfolgenden .NET 8-Patches
 * PowerShell Core 7.4.2
 
 

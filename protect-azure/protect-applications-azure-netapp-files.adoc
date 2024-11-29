@@ -25,4 +25,5 @@ Wenn eine Richtlinie mit Azure NetApp Files Backup aktiviert ist und einer Resso
 * Mount- und Katalog-Workflows für Oracle und SAP HANA werden nicht unterstützt.
 * Backup-Überprüfung auf Basis von Objekt-Storage, Unterstützung für REST-API, Lifecycle Management für Klone aus Objekt-Storage und Berichterstellungsfunktionen für Objekt-Storage-Backups werden nicht unterstützt.
 * Die Wiederherstellung aus Backups auf Azure Blob Storage in Azure NetApp Files wird nicht unterstützt. Sie können alternativ die Option Klonen verwenden.
+* Die Klonaufteilung wird nicht unterstützt.
 

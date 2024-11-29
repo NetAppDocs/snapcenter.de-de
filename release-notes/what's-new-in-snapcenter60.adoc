@@ -1,0 +1,55 @@
+---
+permalink: 'release-notes/what"s-new-in-snapcenter60.html' 
+sidebar: sidebar 
+keywords: what is new, features, enhancements, 6.0 
+summary: Die Version 6.0 der SnapCenter Software enthält mehrere neue Funktionen und Verbesserungen. 
+---
+= Neuerungen bei SnapCenter 6.0
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Version 6.0 der SnapCenter Software enthält mehrere neue Funktionen und Verbesserungen.
+
+|===
+| Aktualisierung | Beschreibung 
+
+
+| link:https://docs.netapp.com/us-en/snapcenter/concept/concept_snapcenter_overview.html#snapcenter-plug-ins["Support für Enterprise-Workloads Plug-in mit NetApp Support"]  a| 
+SnapCenter bietet Plug-ins für das Management von Workloads wie PostgreSQL, MySQL und IBM DB2. Sie können die Workloads automatisch ermitteln, sichern, wiederherstellen, mounten und klonen.
+
+SnapCenter bietet auch Plug-ins für das Management von Workloads wie SAP ASE, SAP MaxDB, MongoDB, Oracle Applikationen und ONTAP Storage. Sie können die Workloads sichern, wiederherstellen und klonen.
+
+
+
+| link:https://docs.netapp.com/us-en/snapcenter/install/install_snapcenter_server_linux.html["Unterstützung für die Linux-Version von SnapCenter sowohl für Cloud- als auch für On-Premises-Workloads"]  a| 
+* Unterstützt Azure NetApp Files, Amazon FSX für NetApp ONTAP, Cloud Volumes ONTAP und ONTAP Storage.
+* Separate Binärdateien für Linux-Versionen wie Red hat Enterprise Linux (RHEL), Oracle Linux und SUSE Linux Enterprise Server (SLES).
+* Unterstützung klassischer Datenbanken wie SAP HANA, Oracle, IBM DB2, SAP ASE, SAP MaxDB.
+* Sie unterstützt moderne Workloads wie PostgreSQL, MySQL und MongoDB.
+* Unterstützt Plug-ins für ONTAP Volumes und Linux-Filesysteme zum Schutz von nicht unterstützten und selbst entwickelten Applikationen.
+
+
+
+
+| link:https://docs.netapp.com/us-en/snapcenter/concept/concept_snapcenter_overview.html["Unterstützung von SnapMirror Active Sync"]  a| 
+Fähigkeit zur nahtlosen Sicherung, Wiederherstellung und Klonen von SAN-Workloads (Datenbanken und VMware VMs), konfiguriert für transparenten Applikations-Failover und Business Continuity.
+
+
+
+| link:https://docs.netapp.com/us-en/snapcenter/install/concept_create_and_manage_smb_shares.html["Unterstützung von Microsoft SQL Server über SMB3"]  a| 
+Die Microsoft SQL Server Datenbanken, die mit dem SMB3-Protokoll in ONTAP, Azure NetApp Files, Amazon FSX for NetApp ONTAP und ONTAP Cloud Volumes bereitgestellt werden, können jetzt mit SnapCenter gesichert werden.
+
+
+
+| link:https://docs.netapp.com/us-en/snapcenter/protect-sco/reference_storage_types_supported_by_snapcenter_plug_in_for_oracle_database.html#storage-types-supported-on-linux["Unterstützung von NVMe/TCP"]  a| 
+Wenn Sie kritische Workloads zugunsten einer besseren Performance in NVMe/TCP migrieren, können Sie mit SnapCenter Applikationen und Filesysteme sichern und wiederherstellen.
+
+
+
+| Unterstützung für VMware VVols  a| 
+Wenn Sie Ihre Datenbanken und Filesysteme auf VMware VVols implementiert haben, können Sie diese mit SnapCenter sichern.
+
+|===

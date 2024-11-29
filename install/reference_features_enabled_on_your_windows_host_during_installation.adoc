@@ -63,7 +63,7 @@ Web-Server
 +
 ** .NET Extensibility 4.5
 ** Initialisierung Der Applikation
-** ASP: NET Core Hosting Bundle (8.0.5 oder höher)
+** ASP.NET Core Hosting Bundle ab Version 8.0.5 mit allen nachfolgenden .NET 8 Patches
 ** Server-Seitige Umfasst
 ** WebSocket-Protokoll
 
@@ -89,8 +89,8 @@ IIS-Verwaltungsskripte und -Tools
  a| 
 +.NET Framework 8.0.5 Features+
  a| 
-* .NET Framework 8.0.5
-* ASP.NET 8.0.5
+* .NET Framework ab Version 8.0.5 und einschließlich aller nachfolgenden .NET 8-Patches
+* ASP.NET ab Version 8.0.5 und einschließlich aller nachfolgenden .NET 8-Patches
 * Windows Communication Foundation (WCF) HTTP Activation45
 +
 ** TCP-Aktivierung
