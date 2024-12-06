@@ -17,22 +17,22 @@ Die Version 6.0.1 der SnapCenter Software enthält mehrere neue Funktionen und V
 | Aktualisierung | Beschreibung 
 
 
-| link:https://review.docs.netapp.com/us-en/snapcenter_sc601_oct2024_releasebranch/protect-azure/protect-applications-azure-netapp-files.html["Unterstützung von Azure NetApp Files-Backups"]  a| 
+| link:https://docs.netapp.com/us-en/snapcenter/protect-azure/protect-applications-azure-netapp-files.html["Unterstützung von Azure NetApp Files-Backups"]  a| 
 SnapCenter unterstützt die Backup-Funktion Azure NetApp Files, die die Datensicherungsfunktionen von Azure NetApp Files durch die Bereitstellung einer vollständig gemanagten Backup-Lösung für langfristiges Recovery, Archivierung und Compliance erweitert.
 
 
 
-| link:hhttps://docs.netapp.com/us-en/snapcenter/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html["Unterstützung für Hochverfügbarkeit von SnapCenter unter Linux"]  a| 
+| link:https://docs.netapp.com/us-en/snapcenter/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html["Unterstützung für Hochverfügbarkeit von SnapCenter unter Linux"]  a| 
 Konfigurieren Sie die Hochverfügbarkeit in SnapCenter unter Windows oder Linux entweder mit dem F5 Load Balancer, dem Microsoft Network Load Balancing (NLB), dem Amazon Web Services (AWS) Elastic Load Balancing (ELB) oder dem Azure Load Balancer.
 
 
 
-| link:https://review.docs.netapp.com/us-en/snapcenter_sc601_oct2024_releasebranch/admin/concept_monitor_jobs_schedules_events_and_logs.html#manage-scheduled-backup-jobs["Unterstützung für das Management geplanter Backup-Jobs"]  a| 
+| link:https://docs.netapp.com/us-en/snapcenter/admin/concept_monitor_jobs_schedules_events_and_logs.html#manage-scheduled-backup-jobs["Unterstützung für das Management geplanter Backup-Jobs"]  a| 
 Ermöglicht das Festlegen eines Schwellenwerts für die Anzahl der geplanten Jobs, die zu einem bestimmten Zeitpunkt ausgeführt werden können. So können Sie die Anzahl der Backups steuern, die basierend auf der Hardwarekonfiguration des Systems ausgeführt werden sollen.
 
 
 
-| link:https://review.docs.netapp.com/us-en/snapcenter_sc601_oct2024_releasebranch/admin/concept_monitor_jobs_schedules_events_and_logs.html#manage-stale-jobs["Unterstützung für das Management veralteter Jobs"]  a| 
+| link:https://docs.netapp.com/us-en/snapcenter/admin/concept_monitor_jobs_schedules_events_and_logs.html#manage-stale-jobs["Unterstützung für das Management veralteter Jobs"]  a| 
 Ermöglicht die Bereinigung veralteter Jobs, die länger als 72 Stunden nicht mehr gespeichert sind.
 
 
