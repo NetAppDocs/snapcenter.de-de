@@ -131,6 +131,9 @@ entries:
     url: "/protect-scsql/task_create_backup_policies_for_sql_server_databases.html"
   - title: Erstellen von Ressourcengruppen und Anhängen von Richtlinien für SQL Server
     url: "/protect-scsql/task_create_resource_groups_and_attach_policies_for_sql_server.html"
+  - title: Erstellen von Ressourcengruppen und Aktivieren des sekundären Schutzes
+      für Microsoft SQL Server-Ressourcen auf ASA r2-Systemen
+    url: "/protect-scsql/create-resource-groups-secondary-protection-for-asa-r2-mssql-resources.html"
   - title: Anforderungen für das Backup von SQL Ressourcen
     url: "/protect-scsql/concept_requirements_for_backing_up_sql_resources.html"
   - title: Erstellen Sie eine Storage-Systemverbindung und eine Zugangsdaten mit PowerShell

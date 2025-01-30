@@ -49,7 +49,7 @@ Aktivieren Sie dieses Kontrollkästchen, und geben Sie ein benutzerdefiniertes N
 . Führen Sie auf der Seite Richtlinien die folgenden Schritte aus:
 +
 .. Wählen Sie eine oder mehrere Richtlinien aus der Dropdown-Liste aus.
-.. Klicken Sie in der Spalte Zeitplan konfigurieren auf *image:../media/add_policy_from_resourcegroup.gif[""]* Für die Richtlinie, die Sie konfigurieren möchten.
+.. Klicken Sie in der Spalte Zeitpläne konfigurieren auf * *image:../media/add_policy_from_resourcegroup.gif["Ressourcengruppe für Richtlinienformular hinzufügen"]für die Richtlinie, die Sie konfigurieren möchten.
 .. Konfigurieren Sie im Dialogfeld Add Schedules for Policy_Policy_Name_ den Zeitplan, und klicken Sie dann auf *OK*.
 
 

@@ -41,7 +41,7 @@ Monitor-Seite
  a| 
 Aktivitätsbereich
  a| 
-. Klicken Sie nach dem Starten des Klonvorgangs auf image:../media/activity_pane_icon.gif["Symbole im Aktivitätsbereich"] das Teilfenster „Aktivität“, um die fünf letzten Vorgänge anzuzeigen.
+. Klicken Sie nach dem Starten des Klonvorgangs auf image:../media/activity_pane_icon.gif["Symbol im Aktivitätsbereich"] das Teilfenster „Aktivität“, um die fünf letzten Vorgänge anzuzeigen.
 . Wählen Sie den Vorgang aus.
 . Klicken Sie auf der Seite *Job Details* auf *Job abbrechen*.
 

@@ -116,6 +116,9 @@ entries:
     url: "/protect-postgresql/create-backup-policies-for-postgresql.html"
   - title: Erstellen von Ressourcengruppen und Anhängen von Richtlinien
     url: "/protect-postgresql/create-resource-groups-and-attach-policies.html"
+  - title: Erstellen Sie Ressourcengruppen und aktivieren Sie sekundären Schutz für
+      PostgreSQL-Ressourcen auf ASA r2-Systemen
+    url: "/protect-postgresql/create-resource-groups-secondary-protection-for-asa-r2-postgresql-resources.html"
   - title: Erstellen Sie mit PowerShell Cmdlets für PostgreSQL eine Verbindung zum
       Speichersystem und Zugangsdaten
     url: "/protect-postgresql/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-postgresql.html"

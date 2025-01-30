@@ -26,7 +26,7 @@ Wenn eine einzelne von NetApp unterstützte Plug-ins-Ressource nicht zu einer Re
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
 . Filtern Sie auf der Seite Ressourcen die Ressourcen aus der Dropdown-Liste *Ansicht* nach Ressourcentyp.
 +
-Klicken Sie auf image:../media/filter_icon.png["Filtersymbol"], und wählen Sie dann den Hostnamen und den Ressourcentyp aus, um die Ressourcen zu filtern. Sie können dann klicken image:../media/filter_icon.png["Filtersymbol"] , um den Filterbereich zu schließen.
+Klicken Sie auf image:../media/filter_icon.gif["Filtersymbol"], und wählen Sie dann den Hostnamen und den Ressourcentyp aus, um die Ressourcen zu filtern. Sie können dann klicken image:../media/filter_icon.gif["Filtersymbol"] , um den Filterbereich zu schließen.
 
 . Klicken Sie auf die Ressource, die Sie sichern möchten.
 . Wenn Sie auf der Seite Ressource einen benutzerdefinierten Namen verwenden möchten, aktivieren Sie das Kontrollkästchen *Benutzerdefiniertes Namensformat für Snapshot-Kopie verwenden* und geben dann ein benutzerdefiniertes Namensformat für den Snapshot-Namen ein.

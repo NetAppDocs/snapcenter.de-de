@@ -35,14 +35,11 @@ Außerdem können Sie in der Richtlinie Replizierungs-, Skript- und Applikations
 
 
 
-
-NOTE: Die primären SnapLock-Einstellungen werden in der SnapCenter Backup Policy gemanagt, und die sekundären SnapLock-Einstellungen werden von ONTAP gemanagt.
-
 .Schritte
 . Klicken Sie im linken Navigationsbereich auf *Einstellungen*.
 . Klicken Sie auf der Seite Einstellungen auf *Richtlinien*.
 . Klicken Sie Auf *Neu*.
-. Geben Sie auf der Seite Name den Namen und die Beschreibung der Richtlinie ein.
+. Geben Sie auf der Seite Name den Richtliniennamen und Details ein.
 . Führen Sie auf der Seite Richtlinientyp folgende Schritte aus:
 +
 .. Wählen Sie den Speichertyp aus.
@@ -52,19 +49,18 @@ Sie können mehrere wichtige Werte angeben, die an das Plug-in übergeben werden
 
 
 
-. Geben Sie auf der Snapshot-Seite den Zeitplantyp an, indem Sie *On Demand*, *hourly*, *Daily*, *Weekly* oder *Monthly* auswählen.
+. Führen Sie auf der Seite Snapshot und Replikation die folgenden Aktionen durch.
++
+.. Geben Sie die Zeitplanhäufigkeit an, indem Sie *on Demand*, *hourly*, *Daily*, *Weekly* oder *Monthly* auswählen.
 +
 
 NOTE: Sie können den Zeitplan (Startdatum, Enddatum und Häufigkeit) für den Backup-Vorgang beim Erstellen einer Ressourcengruppe angeben. So können Sie Ressourcengruppen erstellen, die dieselben Richtlinien und Backup-Häufigkeit verwenden, aber auch die Möglichkeit haben, den einzelnen Richtlinien unterschiedliche Backup-Zeitpläne zuzuweisen.
 
 +
-image::../media/backup_settings.gif[Backup-Einstellungen]
-
-+
 
 NOTE: Wenn Sie für 2:00 Uhr geplant sind, wird der Zeitplan während der Sommerzeit (DST) nicht ausgelöst.
 
-. Geben Sie im Abschnitt Snapshot-Einstellungen die Anzahl der Snapshots an, die Sie behalten möchten.
+.. Führen Sie im Abschnitt Snapshot-Einstellungen die folgenden Aktionen durch:
 +
 |===
 | Ihr Ziel ist | Dann... 
@@ -77,11 +73,96 @@ Wählen Sie *Kopien zu behalten* und geben Sie dann die Anzahl der Snapshots an,
 
 Wenn die Anzahl der Snapshots die angegebene Zahl überschreitet, werden die Snapshots gelöscht, wobei die ältesten Kopien zuerst gelöscht werden.
 
+
+
+ a| 
+Bewahren Sie die Snapshots für eine bestimmte Anzahl von Tagen auf
+ a| 
+Wählen Sie *Kopien behalten für*, und geben Sie dann die Anzahl der Tage an, für die Sie die Snapshots vor dem Löschen aufbewahren möchten.
+
+
+
+ a| 
+Sperrfrist der primären Snapshot-Kopie
+ a| 
+Wenn Sie die Sperrfrist für den primären Snapshot angeben möchten, wählen Sie Sperrfrist für Snapshot Kopie aus und wählen Sie Tage, Monate oder Jahre aus.
+
+Die SnapLock-Aufbewahrungsfrist sollte weniger als 100 Jahre betragen.
+
+
+
+ a| 
+Sperrfrist für sekundäre Snapshots
+ a| 
+Wählen Sie *Secondary Snapshot copy Sperrfrist* und wählen Sie Tage, Monate oder Jahre.
+
+Damit diese Option wirksam ist, müssen Sie die folgenden Aufgaben ausführen:
+
+*** Wählen Sie die Sperrfrist der *Primary Snapshot copy* aus.
+*** Wählen Sie eine oder beide Optionen für die sekundäre Replikation aus.
+
+
 |===
 +
 
 IMPORTANT: Wenn Sie Snapshot Backups auf Basis von Kopien aktivieren SnapVault möchten, müssen Sie die Aufbewahrungsanzahl auf 2 oder höher festlegen. Wenn Sie die Aufbewahrungszahl auf 1 setzen, kann der Aufbewahrungsvorgang fehlschlagen, da der erste Snapshot der ReferenzSnapshot für die SnapVault-Beziehung ist, bis ein neuerer Snapshot auf das Ziel repliziert wird.
 
-. Geben Sie auf der Seite Aufbewahrung und Sicherung die Aufbewahrungseinstellungen für den Sicherungstyp und den auf der Seite Sicherungstyp ausgewählten Zeitplantyp an:
+.. Wählen Sie eine Snapshot-Bezeichnung aus.
++
+Je nach der ausgewählten Snapshot-Beschriftung wendet ONTAP die sekundäre Snapshot-Aufbewahrungsrichtlinie an, die der Markierung entspricht.
+
++
+
+NOTE: Wenn Sie *Update SnapMirror nach dem Erstellen einer lokalen Snapshot Kopie* ausgewählt haben, können Sie optional das Label für die sekundäre Richtlinie angeben. Wenn Sie jedoch *Update SnapVault nach dem Erstellen einer lokalen Snapshot Kopie* ausgewählt haben, sollten Sie das sekundäre Policy Label angeben.
+
+
+
+. Wählen Sie im Abschnitt sekundäre Replikationsoptionen auswählen eine oder beide der folgenden sekundären Replikationsoptionen aus:
++
+
+NOTE: Sie müssen die sekundären Replikationsoptionen für *Sperrfrist der sekundären Snapshot-Kopie* auswählen, um wirksam zu sein.
+
++
+|===
+| Für dieses Feld... | Tun Sie das... 
+
+
+ a| 
+Aktualisieren Sie SnapMirror nach dem Erstellen einer lokalen Snapshot Kopie
+ a| 
+Wählen Sie dieses Feld aus, um Spiegelkopien der Backup-Sätze auf einem anderen Volume zu erstellen (SnapMirror Replikation).
+
+Diese Option sollte für SnapMirror Active Sync aktiviert sein.
+
+
+
+ a| 
+Aktualisieren Sie SnapVault nach dem Erstellen einer lokalen Snapshot Kopie
+ a| 
+Wählen Sie diese Option aus, um Disk-to-Disk-Backup-Replikation (SnapVault-Backups) durchzuführen.
+
+
+
+ a| 
+Sekundäres Policy-Label
+ a| 
+Wählen Sie eine Snapshot-Bezeichnung aus.
+
++ abhängig von dem ausgewählten Snapshot-Label wendet ONTAP die sekundäre Snapshot- Aufbewahrungs-Policy an, die dem Label entspricht.
+
++ HINWEIS: Wenn Sie nach dem Erstellen einer lokalen-Kopie * *Update SnapMirror ausgewählt haben, können Sie optional das sekundäre Policy-Label angeben. Wenn Sie jedoch *Update SnapVault nach dem Erstellen einer lokalen Snapshot Kopie* ausgewählt haben, sollten Sie das sekundäre Policy Label angeben.
+
+
+
+ a| 
+Fehler bei Wiederholungszählung
+ a| 
+Geben Sie die maximale Anzahl von Replikationsversuchen ein, die zulässig sind, bevor der Vorgang beendet wird.
+
+|===
++
+
+NOTE: Sie sollten die SnapMirror Aufbewahrungsrichtlinie in ONTAP für den sekundären Storage konfigurieren, um die maximale Grenze von Snapshots auf dem sekundären Storage zu vermeiden.
+
 . Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
 

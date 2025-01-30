@@ -56,14 +56,14 @@ Geben Sie die Ziele der Archivprotokolldateien an.
 . Führen Sie auf der Seite Richtlinien die folgenden Schritte aus:
 +
 .. Wählen Sie eine oder mehrere Richtlinien aus der Dropdown-Liste aus.
-.. Klicken Sie in der Spalte Zeitplan konfigurieren auf *image:../media/add_policy_from_resourcegroup.gif[""]* Für die Richtlinie, die Sie konfigurieren möchten.
+.. Klicken Sie in der Spalte Zeitpläne konfigurieren auf * *image:../media/add_policy_from_resourcegroup.gif["Ressourcengruppe für Richtlinienformular hinzufügen"]für die Richtlinie, die Sie konfigurieren möchten.
 .. Konfigurieren Sie im Dialogfeld Add Schedules for Policy_Policy_Name_ den Zeitplan, und klicken Sie dann auf *OK*.
 
 
 . Führen Sie auf der Seite Überprüfung die folgenden Schritte aus:
 +
 .. Wählen Sie den Überprüfungsserver aus.
-.. Wählen Sie die Richtlinie aus, für die Sie Ihren Verifizierungszeitplan konfigurieren möchten, und klicken Sie dann auf *image:../media/add_policy_from_resourcegroup.gif[""].
+.. Wählen Sie die Richtlinie aus, für die Sie Ihren Überprüfungsplan konfigurieren möchten, und klicken Sie dann auf *image:../media/add_policy_from_resourcegroup.gif["Ressourcengruppe für Richtlinienformular hinzufügen"].
 .. Wählen Sie entweder *Verifizierung nach Backup ausführen* oder *geplante Verifizierung ausführen*.
 .. Klicken Sie auf *OK*.
 

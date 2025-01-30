@@ -32,11 +32,6 @@ Wenn Sie eine Snapshot-Sperrfrist festlegen, wird das Löschen der Snapshots bis
 +
 Bei ONTAP Version 9.12.1 und niedriger übernehmen die im Rahmen der Wiederherstellung aus den SnapLock Vault Snapshots erstellten Klone die Verfallszeit von SnapLock Vault. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
 
-+
-
-NOTE: Die primären SnapLock-Einstellungen werden in der SnapCenter-Backup-Richtlinie und auf dem sekundären gemanagt
-SnapLock-Einstellungen werden von ONTAP gemanagt.
-
 
 
 
@@ -47,32 +42,28 @@ SnapLock-Einstellungen werden von ONTAP gemanagt.
 . Klicken Sie auf der Seite Einstellungen auf *Richtlinien*.
 . Wählen Sie in der Dropdown-Liste * Oracle Database* aus.
 . Klicken Sie Auf *Neu*.
-. Geben Sie auf der Seite Name den Namen und die Beschreibung der Richtlinie ein.
-. Führen Sie auf der Seite Sicherungstyp die folgenden Schritte durch:
+. Geben Sie auf der Seite Name den Richtliniennamen und Details ein.
+. Führen Sie auf der Seite Richtlinientyp die folgenden Schritte durch:
 +
-** Wenn Sie *ein Online-Backup erstellen* möchten, wählen Sie *Online-Backup*.
+.. Wählen Sie Ihren Speichertyp aus.
+.. Richtlinienumfang auswählen:
++
+*** Wenn Sie *ein Online-Backup erstellen* möchten, wählen Sie *Online-Backup*.
 +
 Sie müssen angeben, ob Sie alle Datendateien, Kontrolldateien und Archivprotokolldateien, nur Datendateien und Kontrolldateien oder nur Archivprotokolldateien sichern möchten.
 
-** Wenn Sie *ein Offline-Backup* erstellen möchten, wählen Sie *Offline-Backup* aus, und wählen Sie dann eine der folgenden Optionen aus:
+*** Wenn Sie *ein Offline-Backup* erstellen möchten, wählen Sie *Offline-Backup* aus, und wählen Sie dann eine der folgenden Optionen aus:
 +
-*** Wenn Sie eine Offline-Sicherung erstellen möchten, wenn sich die Datenbank im Bereitstellungszustand befindet, wählen Sie *Mount*.
-*** Wenn Sie eine Offline-Shutdown-Sicherung erstellen möchten, indem Sie die Datenbank in den Shutdown-Status ändern, wählen Sie *Shutdown* aus.
+**** Wenn Sie eine Offline-Sicherung erstellen möchten, wenn sich die Datenbank im Bereitstellungszustand befindet, wählen Sie *Mount*.
+**** Wenn Sie eine Offline-Shutdown-Sicherung erstellen möchten, indem Sie die Datenbank in den Shutdown-Status ändern, wählen Sie *Shutdown* aus.
 +
 Wenn Sie über steckbare Datenbanken (PDBs), und möchten den Zustand der PDBs vor der Erstellung des Backups speichern, müssen Sie *Save State of PDBs* wählen. Dies ermöglicht Ihnen, die PDBs in den ursprünglichen Zustand zu bringen, nachdem das Backup erstellt wurde.
 
 
 
-** Geben Sie die Zeitplanhäufigkeit an, indem Sie *on Demand*, *hourly*, *Daily*, *Weekly* oder *Monthly* auswählen.
-+
 
-NOTE: Sie können den Zeitplan (Startdatum und Enddatum) für den Backup-Vorgang festlegen, während Sie eine Ressourcengruppe erstellen. So können Sie Ressourcengruppen erstellen, die dieselben Richtlinien- und Backup-Häufigkeit verwenden, aber Sie können jeder Richtlinie verschiedene Backup-Zeitpläne zuweisen.
 
-+
-
-NOTE: Wenn Sie für 2:00 Uhr geplant sind, wird der Zeitplan während der Sommerzeit (DST) nicht ausgelöst.
-
-** Wenn Sie das Backup mit Oracle Recovery Manager (RMAN) katalogisieren möchten, wählen Sie *Katalog-Backup mit Oracle Recovery Manager (RMAN)* aus.
+.. Wenn Sie das Backup mit Oracle Recovery Manager (RMAN) katalogisieren möchten, wählen Sie *Katalog-Backup mit Oracle Recovery Manager (RMAN)* aus.
 +
 Sie können die Katalogisierung für ein Backup auf einmal entweder über die Benutzeroberfläche oder über den SnapCenter-CLI-Befehl Catalog-SmBackupWithOracleRMAN aufgeschobenen.
 
@@ -80,7 +71,7 @@ Sie können die Katalogisierung für ein Backup auf einmal entweder über die Be
 
 NOTE: Wenn Sie Backups einer RAC-Datenbank katalogisieren möchten, stellen Sie sicher, dass für diese Datenbank kein anderer Job ausgeführt wird. Wenn ein anderer Job ausgeführt wird, schlägt der Katalogisierung fehl, anstatt sich in die Warteschlange zu stellen.
 
-** Wenn Sie Archivprotokolle nach Backup beschneiden möchten, wählen Sie *Prune Archivprotokolle nach Backup* aus.
+.. Wenn Sie Archivprotokolle nach Backup beschneiden möchten, wählen Sie *Prune Archivprotokolle nach Backup* aus.
 +
 
 NOTE: Das Beschneiden von Archivprotokollen aus dem Archiv-Protokollziel, das in der Datenbank nicht konfiguriert ist, wird übersprungen.
@@ -89,7 +80,8 @@ NOTE: Das Beschneiden von Archivprotokollen aus dem Archiv-Protokollziel, das in
 
 IMPORTANT: Wenn Sie Oracle Standard Edition verwenden, können Sie WÄHREND der Sicherung des Archivprotokolls DIE Parameter LOG_ARCHIVE_DEST und LOG_ARCHIVE_DUPLEX_DEST verwenden.
 
-** Sie können Archivprotokolle nur löschen, wenn Sie die Archivprotokolldateien als Teil Ihrer Sicherung ausgewählt haben.
++
+*** Sie können Archivprotokolle nur löschen, wenn Sie die Archivprotokolldateien als Teil Ihrer Sicherung ausgewählt haben.
 +
 
 NOTE: Sie müssen sicherstellen, dass alle Knoten in einer RAC-Umgebung auf alle Archivprotokolle zugreifen können, damit der Löschvorgang erfolgreich ist.
@@ -127,11 +119,24 @@ Wählen Sie *Archivprotokolle aus den Zielen löschen, die Teil der Datensicheru
 
 |===
 +
-image:../media/sco_backuppolicy_prunning.gif["Backup-Richtlinie"]
+image:../media/sco_backuppolicy_prunning.gif["Beschneidungspolitik"]
 
 
 
-. Geben Sie auf der Seite Aufbewahrung die Aufbewahrungseinstellungen für den Sicherungstyp und den auf der Seite Sicherungstyp ausgewählten Terminplantyp an:
+
+
+. Führen Sie auf der Seite Snapshot und Replikation die folgenden Schritte durch:
++
+.. Geben Sie die Zeitplanhäufigkeit an, indem Sie *on Demand*, *hourly*, *Daily*, *Weekly* oder *Monthly* auswählen.
++
+
+NOTE: Sie können den Zeitplan (Startdatum und Enddatum) für den Backup-Vorgang festlegen, während Sie eine Ressourcengruppe erstellen. So können Sie Ressourcengruppen erstellen, die dieselben Richtlinien- und Backup-Häufigkeit verwenden, aber Sie können jeder Richtlinie verschiedene Backup-Zeitpläne zuweisen.
+
++
+
+NOTE: Wenn Sie für 2:00 Uhr geplant sind, wird der Zeitplan während der Sommerzeit (DST) nicht ausgelöst.
+
+.. Geben Sie im Abschnitt Aufbewahrungseinstellungen für Daten-Snapshots die Aufbewahrungseinstellungen für den Sicherungstyp und den auf der Seite Sicherungstyp ausgewählten Zeitplantyp an:
 +
 |===
 
@@ -142,7 +147,7 @@ image:../media/sco_backuppolicy_prunning.gif["Backup-Richtlinie"]
  a| 
 Behalten Sie eine bestimmte Anzahl von Snapshots bei
  a| 
-Wählen Sie *Total Snapshot Copies to keep* aus, und geben Sie dann die Anzahl der Snapshots an, die Sie behalten möchten.
+Wählen Sie *Kopien, die behalten werden sollen*, und geben Sie dann die Anzahl der Snapshots an, die Sie behalten möchten.
 
 Wenn die Anzahl der Snapshots die angegebene Zahl überschreitet, werden die Snapshots mit den ältesten zuerst gelöschten Kopien gelöscht.
 
@@ -157,23 +162,105 @@ IMPORTANT: Sie müssen die Aufbewahrungsanzahl auf 2 oder höher einstellen, wen
  a| 
 Bewahren Sie die Snapshots für eine bestimmte Anzahl von Tagen auf
  a| 
-Wählen Sie *Snapshot-Kopien behalten für*, und geben Sie dann die Anzahl der Tage an, für die Sie die Snapshots vor dem Löschen behalten möchten.
+Wählen Sie *Kopien behalten für*, und geben Sie dann die Anzahl der Tage an, für die Sie die Snapshots vor dem Löschen aufbewahren möchten.
 
 
 
  a| 
-Sperrfrist von Snapshots
+Sperrfrist der primären Snapshot-Kopie
  a| 
-Wählen Sie die Sperrfrist für Snapshot Kopien aus und wählen Sie Tage, Monate oder Jahre aus.
+Wenn Sie die Sperrfrist der primären Snapshot-Kopie angeben möchten, wählen Sie *primäre Snapshot-Kopie Sperrfrist* und wählen Sie Tage, Monate oder Jahre.
 
 Die SnapLock-Aufbewahrungsfrist sollte weniger als 100 Jahre betragen.
+
+
+
+ a| 
+Sperrfrist für sekundäre Snapshot-Kopien
+ a| 
+Wenn Sie die Sperrfrist der sekundären Snapshot-Kopie angeben möchten, wählen Sie *sekundäre Snapshot-Kopie Sperrfrist* und wählen Sie Tage, Monate oder Jahre.
+
+Damit diese Option wirksam ist, müssen Sie die folgenden Aufgaben ausführen:
+
+*** Wählen Sie die Sperrfrist der *Primary Snapshot copy* aus.
+*** Wählen Sie eine oder beide Optionen für die sekundäre Replikation aus.
+
 
 |===
 +
 
 NOTE: Sie können Archiv-Protokoll-Backups nur dann aufbewahren, wenn Sie die Archiv-Log-Dateien als Teil Ihrer Sicherung ausgewählt haben.
 
-. Geben Sie auf der Seite Replikation die Replikationseinstellungen an:
+.. Geben Sie im Abschnitt Einstellungen für die Aufbewahrung von Archivierungsprotokollen-Snapshots die Aufbewahrungseinstellungen für den Sicherungstyp und den auf der Seite Sicherungstyp ausgewählten Zeitplantyp an:
++
+|===
+
+
+| Ihr Ziel ist | Dann... 
+
+
+ a| 
+Behalten Sie eine bestimmte Anzahl von Snapshots bei
+ a| 
+Wählen Sie *Kopien, die behalten werden sollen*, und geben Sie dann die Anzahl der Snapshots an, die Sie behalten möchten.
+
+Wenn die Anzahl der Snapshots die angegebene Zahl überschreitet, werden die Snapshots mit den ältesten zuerst gelöschten Kopien gelöscht.
+
+
+NOTE: Der maximale Aufbewahrungswert ist 1018 für Ressourcen auf ONTAP 9.4 oder höher und 254 für Ressourcen unter ONTAP 9.3 oder einer früheren Version. Backups schlagen fehl, wenn die Aufbewahrung auf einen Wert festgelegt ist, der höher ist, als die zugrunde liegende ONTAP Version unterstützt.
+
+
+IMPORTANT: Sie müssen die Aufbewahrungsanzahl auf 2 oder höher einstellen, wenn Sie die SnapVault-Replikation aktivieren möchten. Wenn Sie den Aufbewahrungszeitraum auf 1 festlegen, kann der Aufbewahrungsvorgang fehlschlagen, weil der erste Snapshot der ReferenzSnapshot für die SnapVault-Beziehung ist, bis ein neuerer Snapshot auf das Ziel repliziert wird.
+
+
+
+ a| 
+Bewahren Sie die Snapshots für eine bestimmte Anzahl von Tagen auf
+ a| 
+Wählen Sie *Kopien behalten für*, und geben Sie dann die Anzahl der Tage an, für die Sie die Snapshots vor dem Löschen aufbewahren möchten.
+
+
+
+ a| 
+Sperrfrist der primären Snapshot-Kopie
+ a| 
+Wenn Sie die Sperrfrist der primären Snapshot-Kopie angeben möchten, wählen Sie *primäre Snapshot-Kopie Sperrfrist* und wählen Sie Tage, Monate oder Jahre.
+
+Die SnapLock-Aufbewahrungsfrist sollte weniger als 100 Jahre betragen.
+
+
+
+ a| 
+Sperrfrist für sekundäre Snapshot-Kopien
+ a| 
+Wenn Sie die Sperrfrist der sekundären Snapshot-Kopie angeben möchten, wählen Sie *sekundäre Snapshot-Kopie Sperrfrist* und wählen Sie Tage, Monate oder Jahre.
+
+Damit diese Option wirksam ist, müssen Sie die folgenden Aufgaben ausführen:
+
+*** Wählen Sie die Sperrfrist der *Primary Snapshot copy* aus.
+*** Wählen Sie eine oder beide Optionen für die sekundäre Replikation aus.
+
+
+|===
++
+
+NOTE: Sie können Archiv-Protokoll-Backups nur dann aufbewahren, wenn Sie die Archiv-Log-Dateien als Teil Ihrer Sicherung ausgewählt haben.
+
+.. Wählen Sie die Bezeichnung der Richtlinie aus.
++
+Je nach der ausgewählten Snapshot-Beschriftung wendet ONTAP die sekundäre Snapshot-Aufbewahrungsrichtlinie an, die der Markierung entspricht.
+
++
+
+NOTE: Wenn Sie *Update SnapMirror nach dem Erstellen einer lokalen Snapshot Kopie* ausgewählt haben, können Sie optional das Label für die sekundäre Richtlinie angeben. Wenn Sie jedoch *Update SnapVault nach dem Erstellen einer lokalen Snapshot Kopie* ausgewählt haben, sollten Sie das sekundäre Policy Label angeben.
+
+
+
+. Wählen Sie im Abschnitt sekundäre Replikationsoptionen auswählen eine oder beide der folgenden sekundären Replikationsoptionen aus:
++
+
+NOTE: Sie müssen die sekundären Replikationsoptionen für *Sperrfrist der sekundären Snapshot-Kopie* auswählen, um wirksam zu sein.
+
 +
 |===
 | Für dieses Feld... | Tun Sie das... 
@@ -202,18 +289,6 @@ Wenn SnapLock nur auf dem sekundären aus ONTAP, dem sogenannten SnapLock-Vault,
 Weitere Informationen zu SnapLock Vault finden Sie unter https://docs.netapp.com/us-en/ontap/snaplock/commit-snapshot-copies-worm-concept.html["Speichern von Snapshot-Kopien in WORM-KOPIEN auf einem Vault-Ziel"]
 
 Siehe link:../protect-sco/task_view_oracle_databse_backups_and_clones_in_the_topology_page.html["Sehen Sie sich Backups und Klone von Oracle Datenbanken auf der Seite Topologie an"].
-
-
-
- a| 
-Sekundäres Policy-Label
- a| 
-Wählen Sie eine Snapshot-Bezeichnung aus.
-
-Je nach der ausgewählten Snapshot-Beschriftung wendet ONTAP die sekundäre Snapshot-Aufbewahrungsrichtlinie an, die der Markierung entspricht.
-
-
-NOTE: Wenn Sie *Update SnapMirror nach dem Erstellen einer lokalen Snapshot Kopie* ausgewählt haben, können Sie optional das Label für die sekundäre Richtlinie angeben. Wenn Sie jedoch *Update SnapVault nach dem Erstellen einer lokalen Snapshot Kopie* ausgewählt haben, sollten Sie das sekundäre Policy Label angeben.
 
 
 

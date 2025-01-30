@@ -25,7 +25,7 @@ NOTE: Die PDB-Klone werden in der Ansicht „Inventar“ oder „Ressourcen“ n
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
 . Wählen Sie die Quellcontainer-Datenbank (CDB) aus der Ressourcen- oder Ressourcengruppenansicht aus.
 . Wählen Sie in der Ansicht Kopien managen die Option *Klone* aus den primären oder sekundären (gespiegelten oder replizierten) Storage-Systemen aus.
-. Wählen Sie den PDB-Klon (targetCDB:PDBClone) aus, und klicken Sie dann auf image:../media/split_cone.gif[""].
+. Wählen Sie den PDB-Klon (targetCDB:PDBClone) aus und klicken Sie dann auf image:../media/split_clone.gif["Klon teilen"].
 . Überprüfen Sie die geschätzte Größe des zu teilenden Klons und den benötigten Speicherplatz auf dem Aggregat, und klicken Sie dann auf *Start*.
 . Überwachen Sie den Fortschritt des Vorgangs, indem Sie auf *Monitor* > *Jobs* klicken.
 

@@ -16,7 +16,7 @@ Wenn eine Ressource nicht zu einer Ressourcengruppe gehört, können Sie die Res
 .Schritte
 . Wählen Sie im linken Navigationsbereich *Ressourcen* und das entsprechende Plug-in aus der Liste aus.
 . Wählen Sie auf der Seite Ressourcen in der Liste Ansicht die Option *Pfad* aus.
-. Klicken Sie Auf image:../media/filter_icon.png["Filtersymbol"], Und wählen Sie dann den Hostnamen und die Unix-Dateisysteme aus, um die Ressourcen zu filtern.
+. Klicken Sie auf image:../media/filter_icon.gif["Filtersymbol"], und wählen Sie dann den Hostnamen und die Unix-Dateisysteme aus, um die Ressourcen zu filtern.
 . Wählen Sie das Dateisystem aus, das Sie sichern möchten.
 . Auf der Seite „Ressourcen“ können Sie die folgenden Schritte ausführen:
 +

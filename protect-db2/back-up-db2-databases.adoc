@@ -36,7 +36,7 @@ NOTE: Wenn die Befehle in der Befehlsliste nicht vorhanden sind, schlägt der Vo
 . Wählen Sie im linken Navigationsbereich *Ressourcen* aus, und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
 . Filtern Sie auf der Seite Ressourcen die Ressourcen aus der Dropdown-Liste *Ansicht* nach Ressourcentyp.
 +
-Wählen Sie image:../media/filter_icon.png["Filtersymbol"], und wählen Sie dann den Hostnamen und den Ressourcentyp aus, um die Ressourcen zu filtern. Sie können dann auswählen image:../media/filter_icon.png["Filtersymbol"] , um das Filterfenster zu schließen.
+Wählen Sie image:../media/filter_icon.gif["Filtersymbol"], und wählen Sie dann den Hostnamen und den Ressourcentyp aus, um die Ressourcen zu filtern. Sie können dann auswählen image:../media/filter_icon.gif["Filtersymbol"] , um das Filterfenster zu schließen.
 
 . Wählen Sie die Ressource aus, die Sie sichern möchten.
 . Wählen Sie auf der Seite Ressource *Benutzerdefiniertes Namensformat für Snapshot-Kopie verwenden* aus, und geben Sie dann ein benutzerdefiniertes Namensformat ein, das Sie für den Snapshot-Namen verwenden möchten.

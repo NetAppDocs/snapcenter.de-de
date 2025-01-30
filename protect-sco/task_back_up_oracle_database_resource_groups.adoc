@@ -18,9 +18,9 @@ Auf der Seite „Ressourcen“ können Sie ein Backup einer Ressourcengruppe nac
 .Schritte
 . Wählen Sie im linken Navigationsbereich *Ressourcen* und das entsprechende Plug-in aus der Liste aus.
 . Wählen Sie auf der Seite Ressourcen in der Liste *Ansicht* die Option *Ressourcengruppe* aus.
-. Geben Sie den Namen der Ressourcengruppe in das Suchfeld ein, oder klicken Sie auf image:../media/filter_icon.png["Filtersymbol"], Und wählen Sie das Tag aus.
+. Geben Sie den Namen der Ressourcengruppe in das Suchfeld ein, oder klicken Sie auf image:../media/filter_icon.gif["Filtersymbol"], und wählen Sie das Tag aus.
 +
-Klicken Sie Auf image:../media/filter_icon.png["Filtersymbol"] Um den Filterbereich zu schließen.
+Klicken Sie auf image:../media/filter_icon.gif["Filtersymbol"] , um das Filterfenster zu schließen.
 
 . Wählen Sie auf der Seite Ressourcengruppe die Ressourcengruppe aus, die gesichert werden soll.
 +

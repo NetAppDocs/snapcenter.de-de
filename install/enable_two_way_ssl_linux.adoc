@@ -19,7 +19,7 @@ Sie können bidirektionale SSL-Kommunikation aktivieren, um die gegenseitige Kom
 .. Melden Sie sich bei der SnapCenter GUI an.
 .. Klicken Sie auf *Einstellungen* > *Globale Einstellungen* und wählen Sie *Zertifikatvalidierung auf dem SnapCenter-Server aktivieren*.
 .. Klicken Sie auf *Hosts* > *verwaltete Hosts* und wählen Sie den Plug-in-Host aus, für den Sie One-Way-SSL aktivieren möchten.
-.. Klicken Sie auf image:../media/more_icon.gif["Weitere Symbole"], und klicken Sie dann auf *Zertifikatvalidierung aktivieren*.
+.. Klicken Sie auf das image:../media/more_icon.gif["Weitere Symbole"] Symbol, und klicken Sie dann auf *Zertifikatvalidierung aktivieren*.
 
 
 . Aktivieren Sie die bidirektionale SSL-Kommunikation vom SnapCenter-Server-Linux-Host.

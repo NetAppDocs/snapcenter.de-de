@@ -28,7 +28,7 @@ Wenn die Produktionsdatenbank beispielsweise db1 ist, wird Datenbank-Klon1 aus B
 Die Seite „Ressource“ oder „Topologie der Ressourcengruppe“ wird angezeigt.
 
 . Wählen Sie in der Ansicht Kopien managen die Option *Klone* aus den primären oder sekundären (gespiegelten oder replizierten) Storage-Systemen aus.
-. Wählen Sie den Klon aus, und klicken Sie dann auf image:../media/delete_icon.gif[""].
+. Wählen Sie den Klon aus, und klicken Sie dann auf image:../media/delete_icon.gif["Symbol Löschen"].
 +
 Wenn Sie SAP HANA-Datenbankklone löschen, führen Sie auf der Seite Klonen löschen die folgenden Aktionen aus:
 

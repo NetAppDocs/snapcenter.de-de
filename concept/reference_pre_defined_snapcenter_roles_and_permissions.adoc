@@ -281,6 +281,21 @@ Keine Angabe
 
 
  a| 
+Zweitschutz
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+
+
+
+ a| 
 Job-Überwachung
  a| 
 Ja.
@@ -545,6 +560,21 @@ Keine Angabe
 
 
  a| 
+Zweitschutz
+ a| 
+Nein
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+
+
+
+ a| 
 Job-Überwachung
  a| 
 Ja.
@@ -795,6 +825,21 @@ Keine Angabe
 
  a| 
 Vollständige Volume-Wiederherstellung
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+ a| 
+Keine Angabe
+
+
+
+ a| 
+Zweitschutz
  a| 
 Nein
  a| 

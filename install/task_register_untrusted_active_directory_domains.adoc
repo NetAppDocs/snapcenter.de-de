@@ -48,7 +48,7 @@ link:task_configure_CA_client_certificate_for_LDAPS.html["Konfigurieren Sie das 
 . Klicken Sie im linken Navigationsbereich auf *Einstellungen*.
 . Klicken Sie auf der Seite Einstellungen auf *Globale Einstellungen*...
 . Klicken Sie auf der Seite Globale Einstellungen auf *Domäneneinstellungen*.
-. Klicken Sie hier image:../media/add_policy_from_resourcegroup.gif["Richtlinie hinzufügen"] , um eine neue Domain zu registrieren.
+. Klicken Sie hier image:../media/add_policy_from_resourcegroup.gif["Ressourcengruppe für Richtlinienformular hinzufügen"] , um eine neue Domain zu registrieren.
 . Wählen Sie auf der Seite Neue Domäne registrieren entweder *LDAP* oder *LDAPS* aus.
 +
 .. Wenn Sie *LDAP* auswählen, geben Sie die Informationen an, die zur Registrierung der nicht vertrauenswürdigen Domäne für LDAP erforderlich sind:

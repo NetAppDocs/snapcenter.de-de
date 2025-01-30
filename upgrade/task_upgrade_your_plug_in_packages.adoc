@@ -48,7 +48,7 @@ Auf der Seite *Job Details* empfiehlt eine Warnmeldung, dass der Kunde die Skrip
 ... Klicken Sie Auf *Upgrade*.
 
 
-** Wenn Sie mehrere Plug-in-Hosts aktualisieren möchten, wählen Sie alle Hosts aus, klicken Sie auf image:../media/more_icon.gif[""], und klicken Sie dann auf *Upgrade* > *OK*.
+** Wenn Sie mehrere Hosts aktualisieren möchten, wählen Sie alle Hosts aus, klicken Sie auf image:../media/more_icon.gif["Weitere Symbole"], und klicken Sie dann auf *Upgrade* > *OK*.
 +
 Alle zugehörigen Dienste werden während des Plug-in-Upgrades neu gestartet.
 

@@ -78,12 +78,12 @@ NOTE: Wenn Sie vor Kurzem Ressourcen hinzugefügt haben, werden diese erst nach 
 .. Wählen Sie eine oder mehrere Richtlinien aus der Dropdown-Liste aus.
 +
 
-NOTE: Sie können eine Richtlinie auch erstellen, indem Sie auf * klickenimage:../media/add_policy_from_resourcegroup.gif[""]*.
+NOTE: Sie können eine Richtlinie auch erstellen, indem Sie auf * * klickenimage:../media/add_policy_from_resourcegroup.gif["Ressourcengruppe für Richtlinienformular hinzufügen"].
 
 +
 Im Abschnitt „Zeitpläne für ausgewählte Richtlinien konfigurieren“ werden die ausgewählten Richtlinien aufgelistet.
 
-.. Klicken Sie im Abschnitt Zeitpläne für ausgewählte Richtlinien konfigurieren auf *image:../media/add_policy_from_resourcegroup.gif[""]* In der Spalte Zeitplan konfigurieren für die Richtlinie, für die Sie den Zeitplan konfigurieren möchten.
+.. Klicken Sie im Abschnitt Configure Schedules for Selected Policies auf * *image:../media/add_policy_from_resourcegroup.gif["Ressourcengruppe für Richtlinienformular hinzufügen"]in der Spalte Configure Schedules für die Richtlinie, für die Sie den Zeitplan konfigurieren möchten.
 .. Konfigurieren Sie den Zeitplan im Dialogfeld Add Schedules for Policy_Name_, indem Sie das Startdatum, das Ablaufdatum und die Häufigkeit angeben und dann auf *OK* klicken.
 +
 Sie müssen dies für jede in der Richtlinie angegebene Frequenz tun. Die konfigurierten Zeitpläne werden in der Spalte angewendete Zeitpläne im Abschnitt *Zeitpläne für ausgewählte Richtlinien konfigurieren* aufgelistet.
@@ -111,7 +111,7 @@ Die Liste enthält alle SQL Server, die in SnapCenter hinzugefügt wurden. Sie k
 NOTE: Die Version des Verifizierungsservers sollte mit der Version und Edition des SQL-Servers übereinstimmen, der die primäre Datenbank hostet.
 
 .. Klicken Sie auf *Lokatoren laden*, um die SnapMirror und SnapVault Volumes zu laden, um eine Überprüfung auf dem sekundären Speicher durchzuführen.
-.. Wählen Sie die Richtlinie aus, für die Sie Ihren Verifizierungszeitplan konfigurieren möchten, und klicken Sie dann auf *image:../media/add_policy_from_resourcegroup.gif[""]*.
+.. Wählen Sie die Richtlinie aus, für die Sie Ihren Überprüfungsplan konfigurieren möchten, und klicken Sie dann auf * *image:../media/add_policy_from_resourcegroup.gif["Ressourcengruppe für Richtlinienformular hinzufügen"].
 .. Führen Sie im Dialogfeld Add Verification Schedules Policy_Name die folgenden Aktionen durch:
 +
 |===

@@ -64,6 +64,7 @@ NOTE: Die Ressourcen werden im Abschnitt Verfügbare Ressourcen nur dann aufgeli
 
 NOTE: Sie können Datenbanken von Linux- und AIX-Hosts in einer einzigen Ressourcengruppe hinzufügen.
 
+. Wählen Sie auf der Seite Anwendungseinstellungen die Sicherungsoption aus.
 . Führen Sie auf der Seite Richtlinien die folgenden Schritte aus:
 +
 .. Wählen Sie eine oder mehrere Richtlinien aus der Dropdown-Liste aus.

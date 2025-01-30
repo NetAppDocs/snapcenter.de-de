@@ -229,7 +229,7 @@ Nachdem Sie den Wert des Parameters geändert haben, starten Sie den SnapCenter-
 
 `/opt/NetApp/snapcenter/spl/bin/spl restart`
 
-Die Informationen zu den Parametern, die mit dem Befehl und deren Beschreibungen verwendet werden können, können durch Ausführen von get-Help Command_Name abgerufen werden. Alternativ können Sie auch auf die https://library.netapp.com/ecm/ecm_download_file/ECMLP3323470["SnapCenter Software Command Reference Guide"^].
+Die Informationen zu den Parametern, die mit dem Befehl und deren Beschreibungen verwendet werden können, können durch Ausführen von get-Help Command_Name abgerufen werden. Alternativ können Sie auch auf die https://library.netapp.com/ecm/ecm_download_file/ECMLP3337666["SnapCenter Software Command Reference Guide"^].
 
 
 

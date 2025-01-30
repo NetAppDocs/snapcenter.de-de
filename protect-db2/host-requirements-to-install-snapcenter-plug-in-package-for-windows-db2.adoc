@@ -46,7 +46,7 @@ NOTE: Sie sollten genügend Festplattenspeicher zuweisen und den Speicherverbrau
  a| 
 Erforderliche Softwarepakete
  a| 
-* .NET Core beginnt mit Version 8.0.5 und enthält alle nachfolgenden .NET 8-Patches
+* ASP.NET Core Runtime 8.0.12 (und alle nachfolgenden 8.0.x-Patches) Hosting Bundle
 * PowerShell Core 7.4.2
 * Java 11 Oracle Java und OpenJDK
 

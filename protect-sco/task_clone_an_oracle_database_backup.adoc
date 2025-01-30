@@ -40,8 +40,7 @@ NOTE: In einem Flex ASM-Setup können Sie keinen Klonvorgang auf Leaf-Knoten aus
 * Wenn Sie für Richtlinien mit aktiviertem SnapLock für ONTAP 9.12.1 und ältere Versionen einen Sperrzeitraum für Snapshots festlegen, übernehmen die Klone, die im Rahmen der Wiederherstellung aus den manipulationssicheren Snapshots erstellt wurden, die SnapLock-Auslaufzeit. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
 
 
-*Schritte*
-
+.Schritte
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
 . Wählen Sie auf der Seite Ressourcen die Option *Datenbank* oder *Ressourcengruppe* aus der Liste *Ansicht* aus.
 . Wählen Sie die Datenbank entweder in der Datenbank-Detailansicht oder in der Ansicht Ressourcengruppen-Details aus.
@@ -207,7 +206,7 @@ Mit SnapCenter können Sie die vordefinierten Umgebungsvariablen verwenden, wenn
 
 .. Ändern Sie im Abschnitt Datenbankparameter-Einstellungen die Werte vorausgefüllter Datenbankparameter, die zum Initialisieren der Datenbank verwendet werden.
 +
-Sie können weitere Parameter hinzufügen, indem Sie auf * klickenimage:../media/add_policy_from_resourcegroup.gif[""]*.
+Sie können weitere Parameter hinzufügen, indem Sie auf * * klickenimage:../media/add_policy_from_resourcegroup.gif["Ressourcengruppe für Richtlinienformular hinzufügen"].
 
 +
 Wenn Sie Oracle Standard Edition verwenden und die Datenbank im Archiv-Log-Modus ausgeführt wird oder Sie eine Datenbank aus dem Wiederherstellungsprotokoll wiederherstellen möchten, fügen Sie die Parameter hinzu und geben den Pfad an.
@@ -355,4 +354,30 @@ Das Sperren oder Umbenennen von Geräten hat keine Auswirkungen auf den Löschvo
 * https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/ORA-00308%3A_cannot_open_archived_log_ORA_LOG_arch1_123_456789012.arc["Die Wiederherstellung oder das Klonen schlägt mit der ORA-00308-Fehlermeldung fehl"^]
 * https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Failed_to_recover_a_cloned_database["Fehler beim Wiederherstellen einer geklonten Datenbank"^]
 * https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/What_are_the_customizable_parameters_for_backup_restore_and_clone_operations_on_AIX_systems["Anpassbare Parameter für Backup-, Wiederherstellungs- und Klonvorgänge auf AIX-Systemen"^]
+
+
+
+
+== Aktualisieren Sie die bevorzugte IP auf dem Host
+
+Nachdem der Klonvorgang abgeschlossen ist, wird der Pfad, der von der Speicherzugriffsebene (SAL) zum Klon bereitgestellt wird, im Format _<nfs_lif_IP>:<JunctionPath>_ angezeigt. Um die bevorzugte IP-Adresse bereitzustellen, müssen Sie sie mithilfe der SCCLI-Befehle auf dem Host konfigurieren.
+
+.Schritte
+. Melden Sie sich beim Datenbankhost an.
+. Initiieren Sie eine PowerShell-Verbindungssitzung mit SnapCenter für einen angegebenen Benutzer.
++
+Open-SmConnection
+
+. Erstellen Sie eine leere Datei.
++
+Berühren Sie /var/opt/SnapCenter/scu/etc/storagepreference.properties
+
+. Konfigurieren der bevorzugten Daten-LIF für die SVM
++
+Add-SvmPreferredDataPath -SVM <SVM Name> -datapath <IP-Adresse oder FQDN>
+
+. Überprüfen Sie den bevorzugten Pfad.
++
+Get-SvmPreferredDataPath
+
 

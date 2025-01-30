@@ -23,6 +23,6 @@ NOTE: Die PDB-Klone werden in der Ansicht „Inventar“ oder „Ressourcen“ n
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
 . Wählen Sie die Quellcontainer-Datenbank (CDB) aus der Ressourcen- oder Ressourcengruppenansicht aus.
 . Wählen Sie in der Ansicht Kopien managen die Option *Klone* aus den primären oder sekundären (gespiegelten oder replizierten) Storage-Systemen aus.
-. Wählen Sie den PDB-Klon (targetCDB:PDBClone) aus, und klicken Sie dann auf image:../media/delete_icon.gif[""].
+. Wählen Sie den PDB-Klon (targetCDB:PDBClone) aus und klicken Sie dann auf image:../media/delete_icon.gif["Symbol Löschen"].
 . Klicken Sie auf *OK*.
 

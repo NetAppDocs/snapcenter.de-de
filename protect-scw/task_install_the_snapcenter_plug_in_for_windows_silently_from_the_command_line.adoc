@@ -14,7 +14,7 @@ summary: Sie können das SnapCenter-Plug-in für Microsoft Windows lokal auf ein
 Sie können das SnapCenter-Plug-in für Microsoft Windows lokal auf einem Windows-Host installieren, wenn Sie das Plug-in nicht Remote über die SnapCenter-Benutzeroberfläche installieren können. Sie können das SnapCenter-Plug-in für Microsoft Windows-Installationsprogramm unbeaufsichtigt, im Silent-Modus, über die Windows-Befehlszeile ausführen.
 
 .Bevor Sie beginnen
-* Sie müssen Microsoft .Net 4.7.2 oder höher installiert haben.
+* Sie müssen ASP.NET Core Runtime 8.0.12 (und alle nachfolgenden 8.0.x-Patches) Hosting Bundle installiert haben.
 * Sie müssen PowerShell 7.4.2 oder höher installiert haben.
 * Sie müssen die Windows-Nachrichtenwarteschlange aktiviert haben.
 * Sie müssen ein lokaler Administrator auf dem Host sein.

@@ -70,7 +70,7 @@ Sie können SnapCenter verwenden, um eine geklonte Ressource von der übergeordn
 
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das Oracle Datenbank-Plug-in aus der Liste aus.
 . Wählen Sie auf der Seite Ressourcen in der Liste *Ansicht* die Option *Anwendungsvolumen* aus.
-. Wählen Sie die geklonte Ressource aus, und klicken Sie auf image:../media/split_cone.gif[""].
+. Wählen Sie die geklonte Ressource aus und klicken Sie auf image:../media/split_clone.gif["Klon teilen"].
 . Überprüfen Sie die geschätzte Größe des zu teilenden Klons und den benötigten Speicherplatz auf dem Aggregat, und klicken Sie dann auf *Start*.
 . Überwachen Sie den Fortschritt des Vorgangs, indem Sie auf *Monitor* > *Jobs* klicken.
 
@@ -90,7 +90,7 @@ Klone können gelöscht werden, wenn Sie sie nicht mehr benötigen. Klone, die s
 Die Seite „Ressource“ oder „Topologie der Ressourcengruppe“ wird angezeigt.
 
 . Wählen Sie in der Ansicht Kopien managen die Option *Klone* aus den primären oder sekundären (gespiegelten oder replizierten) Storage-Systemen aus.
-. Wählen Sie den Klon aus, und klicken Sie dann auf image:../media/delete_icon.gif[""].
+. Wählen Sie den Klon aus, und klicken Sie dann auf image:../media/delete_icon.gif["Symbol Löschen"].
 . Führen Sie auf der Seite Klonen löschen die folgenden Aktionen durch:
 +
 .. Geben Sie im Feld *Pre Clone delete* die Namen der zu ausführenden Skripte ein, bevor Sie den Klon löschen.

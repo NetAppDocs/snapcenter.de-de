@@ -14,6 +14,7 @@ summary: Wenn eine Ressource noch nicht zu einer Ressourcengruppe gehört, könn
 Wenn eine Ressource noch nicht zu einer Ressourcengruppe gehört, können Sie die Ressource auf der Seite Ressourcen sichern.
 
 .Über diese Aufgabe
+* Um den Sicherungsvorgang zu optimieren, sollten Sie einen Reverse-Lookup-Datensatz mit Windows-Clusternamen und IP-Adressen auf dem DNS-Server erstellen.
 * Für die Authentifizierung von Windows-Anmeldeinformationen müssen Sie die Anmeldeinformationen einrichten, bevor Sie die Plug-ins installieren.
 * Für die Authentifizierung der SQL Server-Instanz müssen Sie die Anmeldeinformationen nach der Installation der Plug-ins hinzufügen.
 * Für die gMSA-Authentifizierung müssen Sie gMSA beim Registrieren des Hosts mit SnapCenter auf der Seite *Add Host* oder *Modify Host* einrichten, um den gMSA zu aktivieren und zu verwenden.
@@ -51,12 +52,12 @@ Beispiel: Custtext_Policy_hostname oder Resource_hostname. Standardmäßig wird 
 +
 .. Wählen Sie im Abschnitt Richtlinien eine oder mehrere Richtlinien aus der Dropdown-Liste aus.
 +
-Sie können eine Richtlinie erstellen, indem Sie * auswählenimage:../media/add_policy_from_resourcegroup.gif[""]* Um den Policy Wizard zu starten.
+Sie können eine Richtlinie erstellen, indem Sie * * auswählenimage:../media/add_policy_from_resourcegroup.gif["Ressourcengruppe für Richtlinienformular hinzufügen"], um den Richtlinien-Assistenten zu starten.
 
 +
 Im Abschnitt * Zeitpläne für ausgewählte Richtlinien konfigurieren* werden die ausgewählten Richtlinien aufgelistet.
 
-.. Wählen Sie *image:../media/add_policy_from_resourcegroup.gif[""]* In der Spalte Zeitplan konfigurieren für die Richtlinie, für die Sie einen Zeitplan konfigurieren möchten.
+.. Wählen Sie * *image:../media/add_policy_from_resourcegroup.gif["Ressourcengruppe für Richtlinienformular hinzufügen"]in der Spalte Configure Schedules für die Richtlinie aus, für die Sie einen Zeitplan konfigurieren möchten.
 .. In der Option * Pläne für Police hinzufügen* `policy_name` Konfigurieren Sie den Zeitplan, und wählen Sie dann *OK*.
 +
 Hier `policy_name` Ist der Name der Richtlinie, die Sie ausgewählt haben.
@@ -78,7 +79,7 @@ Sie können mehrere Verifizierungsserver auswählen (lokaler Host oder Remote-Ho
 NOTE: Die Version des Verifizierungsservers sollte gleich oder höher sein als die Version der Edition des SQL-Servers, der die primäre Datenbank hostet.
 
 .. Wählen Sie *sekundäre Lokatoren laden, um Backups auf dem sekundären Speichersystem zu überprüfen*, um Ihre Backups auf dem sekundären Speichersystem zu überprüfen.
-.. Wählen Sie die Richtlinie aus, für die Sie Ihren Überprüfungsplan konfigurieren möchten, und wählen Sie dann * ausimage:../media/add_policy_from_resourcegroup.gif[""]*.
+.. Wählen Sie die Richtlinie aus, für die Sie Ihren Überprüfungsplan konfigurieren möchten, und wählen Sie dann * *image:../media/add_policy_from_resourcegroup.gif["Ressourcengruppe für Richtlinienformular hinzufügen"]aus.
 .. Führen Sie im Dialogfeld Add Verification Schedules_Policy_Name_ die folgenden Aktionen durch:
 +
 |===

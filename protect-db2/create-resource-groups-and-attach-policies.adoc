@@ -181,12 +181,12 @@ Wählen Sie *other* aus, und geben Sie dann den Befehl ein, der auf dem Host aus
 .. Wählen Sie eine oder mehrere Richtlinien aus der Dropdown-Liste aus.
 +
 
-NOTE: Sie können eine Richtlinie auch erstellen, indem Sie auf * klickenimage:../media/add_policy_from_resourcegroup.gif[""]*.
+NOTE: Sie können eine Richtlinie auch erstellen, indem Sie auf * * klickenimage:../media/add_policy_from_resourcegroup.gif["Ressourcengruppe für Richtlinienformular hinzufügen"].
 
 +
 Die Richtlinien sind im Abschnitt „Zeitpläne für ausgewählte Richtlinien konfigurieren“ aufgeführt.
 
-.. Klicken Sie in der Spalte Zeitplan konfigurieren auf *image:../media/add_policy_from_resourcegroup.gif[""]* Für die Richtlinie, die Sie konfigurieren möchten.
+.. Klicken Sie in der Spalte Zeitpläne konfigurieren auf * *image:../media/add_policy_from_resourcegroup.gif["Ressourcengruppe für Richtlinienformular hinzufügen"]für die Richtlinie, die Sie konfigurieren möchten.
 .. Konfigurieren Sie im Dialogfeld Add Schedules for Policy_Policy_Name_ den Zeitplan, und klicken Sie dann auf *OK*.
 +
 Hier ist Policy_Name der Name der von Ihnen ausgewählten Richtlinie.

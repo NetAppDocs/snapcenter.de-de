@@ -13,4 +13,4 @@ summary: Das Workflow-Image zeigt die Schritte zum Installieren und Konfiguriere
 [role="lead"]
 Der Workflow zeigt die verschiedenen Aufgaben, die für die Installation und Konfiguration des SnapCenter-Servers erforderlich sind.
 
-image::../media/install_snapcenter_server.png[Installieren Sie den SnapCenter-Server]
+image::../media/install_snapcenter_server.gif[Installieren Sie den SnapCenter-Server]

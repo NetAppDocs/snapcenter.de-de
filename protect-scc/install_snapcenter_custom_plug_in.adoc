@@ -13,6 +13,6 @@ summary: Wenn Sie benutzerdefinierte Plug-ins schützen möchten, sollten Sie be
 [role="lead"]
 Sie sollten benutzerdefinierte SnapCenter-Plug-ins installieren und einrichten, wenn Sie benutzerdefinierte Plug-in-Ressourcen schützen möchten.
 
-image::../media/scc_install_configure_workflow.png[Workflow von benutzerdefinierten SnapCenter-Plug-ins]
+image::../media/scc_install_configure_workflow.gif[Workflow von benutzerdefinierten SnapCenter-Plug-ins]
 
 link:develop_a_plug_in_for_your_application.html["Entwickeln Sie ein Plug-in für Ihre Applikation"]

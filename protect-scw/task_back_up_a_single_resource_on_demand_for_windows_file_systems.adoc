@@ -44,12 +44,12 @@ Beispiel: Custtext_resourcegruppe_Policy_hostname oder resourcegruppe_hostname. 
 Sie können eine beliebige vorhandene Richtlinie auswählen und dann auf *Details* klicken, um zu bestimmen, ob Sie diese Richtlinie verwenden können.
 
 +
-Wenn keine vorhandene Richtlinie Ihren Anforderungen entspricht, können Sie eine vorhandene Richtlinie kopieren und ändern oder Sie können eine neue Richtlinie erstellen, indem Sie auf klicken image:../media/add_policy_from_resourcegroup.gif["Ressourcengruppe für Richtlinienformular hinzufügen"] , um den Richtlinienassistenten zu starten.
+Wenn keine vorhandene Richtlinie Ihren Anforderungen entspricht, können Sie eine vorhandene Richtlinie kopieren und ändern oder Sie können eine neue Richtlinie erstellen, indem Sie auf klicken image:../media/add_policy_from_resourcegroup.gif["Ressourcengruppe für Richtlinienformular hinzufügen"] , um den Richtlinienassistenten zu starten. Wenn keine vorhandene Richtlinie Ihren Anforderungen entspricht, können Sie eine vorhandene Richtlinie kopieren und ändern oder Sie können eine neue Richtlinie erstellen, indem Sie auf klicken image:../media/add_policy_from_resourcegroup.gif["Ressourcengruppe für Richtlinienformular hinzufügen"] , um den Richtlinienassistenten zu starten.
 
 +
 Die ausgewählten Richtlinien werden in der Spalte Richtlinie im Abschnitt „Zeitpläne für ausgewählte Richtlinien konfigurieren“ aufgeführt.
 
-.. Klicken Sie im Abschnitt Configure Schedules for Selected Policies in der Spalte Configure Schedules für die Richtlinie, für die Sie den Zeitplan konfigurieren möchten, auf image:../media/add_policy_from_resourcegroup.gif["Richtlinie aus Ressourcengruppe hinzufügen"] .
+.. Klicken Sie im Abschnitt Configure Schedules for Selected Policies in der Spalte Configure Schedules für die Richtlinie, für die Sie den Zeitplan konfigurieren möchten, auf image:../media/add_policy_from_resourcegroup.gif["Ressourcengruppe für Richtlinienformular hinzufügen"] .
 .. Konfigurieren Sie den Zeitplan im Dialogfeld Add Schedules for Policy_Name_, indem Sie das Startdatum, das Ablaufdatum und die Häufigkeit angeben und dann auf *Finish* klicken.
 +
 Die konfigurierten Zeitpläne werden in der Spalte „angewendete Zeitpläne“ im Abschnitt „Zeitpläne für ausgewählte Richtlinien konfigurieren“ aufgeführt.

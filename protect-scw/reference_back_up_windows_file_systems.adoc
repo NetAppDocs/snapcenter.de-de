@@ -17,6 +17,8 @@ Sie können mehrere Backups so planen, dass sie gleichzeitig über mehrere Serve
 
 Der folgende Workflow zeigt die Reihenfolge, in der Sie die Backup-Vorgänge durchführen müssen:
 
+image::../media/sce_backup_workflow.gif[Backup-Workflow]
+
 image::../media/sce_backup_workflow.gif[Backup-Workflow der Exchange Datenbank]
 
 Außerdem können Sie PowerShell Cmdlets manuell oder in Skripten verwenden, um Backup-, Wiederherstellungs- und Klonvorgänge durchzuführen. Die SnapCenter Cmdlet-Hilfe oder das https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter Software Cmdlet Referenzhandbuch"^] enthält detaillierte Informationen zu PowerShell Cmdlets.

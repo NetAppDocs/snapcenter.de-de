@@ -52,10 +52,6 @@ Wenn Sie eine Snapshot-Sperrfrist festlegen, wird das Löschen der Snapshots bis
 +
 Bei ONTAP Version 9.12.1 und niedriger übernehmen die im Rahmen der Wiederherstellung aus den SnapLock Vault Snapshots erstellten Klone die Verfallszeit von SnapLock Vault. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
 
-+
-
-NOTE: Die primären SnapLock-Einstellungen werden in der SnapCenter Backup Policy gemanagt, und die sekundären SnapLock-Einstellungen werden von ONTAP gemanagt.
-
 
 
 
@@ -67,24 +63,26 @@ NOTE: Die primären SnapLock-Einstellungen werden in der SnapCenter Backup Polic
 . Wählen Sie im linken Navigationsbereich *Einstellungen*.
 . Wählen Sie auf der Seite Einstellungen die Option *Richtlinien* aus.
 . Wählen Sie *Neu*.
-. Geben Sie auf der Seite *Name* den Namen und die Beschreibung der Richtlinie ein.
+. Geben Sie auf der Seite *Name* den Namen und die Details der Richtlinie ein.
 
 
 
 
-== Schritt 2: Konfigurieren von Backup-Optionen
+== Schritt 2: Konfigurieren von Richtlinienoptionen
 
-. Wählen Sie Ihren Sicherungstyp aus
-
-
+. Führen Sie auf der Seite Richtlinientyp die folgenden Schritte durch:
++
+.. Wählen Sie Ihren Speichertyp aus.
+.. Wählen Sie Ihren Richtlinienumfang aus.
++
 [role="tabbed-block"]
 ====
 .Vollständige Sicherung und Protokollsicherung
 --
 Sichern Sie die Datenbankdateien und Transaktionsprotokolle und verkürzen Sie die Transaktionsprotokolle.
 
-. Wählen Sie *Vollbackup und Log Backup* aus.
-. Geben Sie die maximale Anzahl an Datenbanken ein, die für jeden Snapshot gesichert werden sollen.
+... Wählen Sie *Vollbackup und Log Backup* aus.
+... Geben Sie die maximale Anzahl an Datenbanken ein, die für jeden Snapshot gesichert werden sollen.
 +
 
 NOTE: Sie müssen diesen Wert erhöhen, wenn Sie mehrere Backup-Vorgänge gleichzeitig ausführen möchten.
@@ -96,8 +94,8 @@ NOTE: Sie müssen diesen Wert erhöhen, wenn Sie mehrere Backup-Vorgänge gleich
 --
 Sichern Sie die Datenbankdateien.
 
-. Wählen Sie * Vollbackup* aus.
-. Geben Sie die maximale Anzahl an Datenbanken ein, die für jeden Snapshot gesichert werden sollen.
+... Wählen Sie * Vollbackup* aus.
+... Geben Sie die maximale Anzahl an Datenbanken ein, die für jeden Snapshot gesichert werden sollen.
 Der Standardwert ist 100
 +
 
@@ -108,14 +106,14 @@ NOTE: Sie müssen diesen Wert erhöhen, wenn Sie mehrere Backup-Vorgänge gleich
 --
 .Backup Protokollieren
 --
-. Sichern Sie die Transaktionsprotokolle.
-. Wählen Sie *Backup protokollieren*.
+... Sichern Sie die Transaktionsprotokolle.
+... Wählen Sie *Backup protokollieren*.
 
 
 --
 .Backup Nur Kopieren
 --
-. Wenn Sie Ihre Ressourcen mithilfe einer anderen Backup-Anwendung sichern, wählen Sie *nur Backup kopieren*.
+... Wenn Sie Ihre Ressourcen mithilfe einer anderen Backup-Anwendung sichern, wählen Sie *nur Backup kopieren*.
 
 
 Wenn die Transaktionsprotokolle intakt bleiben, kann jede Backup-Anwendung die Datenbanken wiederherstellen. In der Regel sollten Sie die Option nur kopieren unter anderen Umständen nicht verwenden.
@@ -125,6 +123,14 @@ NOTE: Microsoft SQL unterstützt nicht die Option *nur kopieren Backup* zusammen
 
 --
 ====
+
+
+
+
+
+
+== Schritt 3: Konfigurieren der Einstellungen für Verfügbarkeitsgruppen
+
 . Führen Sie im Abschnitt Einstellungen für Verfügbarkeitsgruppen die folgenden Aktionen durch:
 +
 .. Nur Backup auf bevorzugtem Backup-Replikat.
@@ -148,12 +154,17 @@ Standardmäßig ist die Mindestpriorität 1 und die maximale Priorität 100.
 
 NOTE: Bei Cluster-Konfigurationen werden die Backups entsprechend den in der Richtlinie festgelegten Aufbewahrungseinstellungen auf jedem Node des Clusters aufbewahrt. Wenn sich der Owner-Knoten der AG ändert, werden die Backups gemäß den Aufbewahrungseinstellungen erstellt und die Backups des vorherigen Owner-Knotens beibehalten. Die Aufbewahrung für AG ist nur auf Node-Ebene anwendbar.
 
-. Planen Sie die Backup-Häufigkeit für diese Richtlinie. Geben Sie den Zeitplantyp an, indem Sie entweder *On Demand*, *hourly*, *Daily*, *Weekly* oder *Monthly* auswählen.
+
+
+
+
+== Schritt 4: Konfigurieren von Snapshot- und Replikationseinstellungen
+
+. Führen Sie auf der Seite Snapshot und Replikation die folgenden Schritte durch:
++
+.. Geben Sie den Terminplantyp an, indem Sie *on Demand*, *hourly*, *Daily*, *Weekly* oder *Monthly* auswählen.
 +
 Sie können nur einen Plantyp für eine Richtlinie auswählen.
-
-+
-image:../media/backup_settings.gif["Bildschirm „Backup-Einstellungen“."]
 
 +
 
@@ -167,11 +178,11 @@ NOTE: Wenn Sie für 2:00 Uhr geplant sind, wird der Zeitplan während der Sommer
 
 
 
-== Schritt 3: Konfigurieren der Aufbewahrungseinstellungen
 
-Führen Sie auf der Seite Aufbewahrung je nach dem auf der Seite Backup-Typ ausgewählten Backup-Typ eine oder mehrere der folgenden Aktionen durch:
 
-. Führen Sie in den Aufbewahrungseinstellungen für den Abschnitt „minutengenaue Wiederherstellung“ eine der folgenden Aktionen aus:
+== Schritt 5: Konfigurieren Sie die aktuellen Einstellungen für die Aufbewahrung
+
+. Führen Sie im Abschnitt Einstellungen für die Aufbewahrung bis zur Minute je nach dem auf der Seite für den Sicherungstyp ausgewählten Sicherungstyp eine oder mehrere der folgenden Aktionen durch:
 
 
 [role="tabbed-block"]
@@ -193,12 +204,16 @@ Bewahren Sie die Backup-Kopien für eine bestimmte Anzahl von Tagen auf.
 
 --
 ====
-. Führen Sie im Abschnitt *vollständige Backup-Aufbewahrungs-Einstellungen* für die Einstellungen für On Demand-Aufbewahrung die folgenden Aktionen aus:
+
+
+== Schritt 6: Snapshot-Einstellungen konfigurieren
+
+. Führen Sie für die Einstellungen für die vollständige Backup-Aufbewahrung die folgenden Aktionen durch:
 +
-.. Geben Sie die Gesamtzahl der zu erbehalt enden Snapshots an
+.. Geben Sie die Gesamtzahl der zu behalt enden Snapshots an
 +
-... Um die Anzahl der zu befolgenden Snapshots anzugeben, wählen Sie *Gesamtanzahl der zu befolgenden Snapshot-Kopien* aus.
-... Wenn die Anzahl der Snapshots die angegebene Zahl überschreitet, werden die Snapshots mit den ältesten zuerst gelöschten Kopien gelöscht.
+... Um die Anzahl der zu befolgenden Snapshots festzulegen, wählen Sie *zu bebewahrende Kopien* aus.
+... Wenn die Anzahl der Snapshots die angegebene Zahl überschreitet, werden die Snapshots gelöscht, wobei die ältesten Kopien zuerst gelöscht werden.
 
 
 
@@ -206,65 +221,61 @@ Bewahren Sie die Backup-Kopien für eine bestimmte Anzahl von Tagen auf.
 
 
 
-IMPORTANT: Standardmäßig ist der Wert der Aufbewahrungsanzahl auf 2 festgelegt. Wenn Sie den Aufbewahrungszeitraum auf 1 festlegen, kann der Aufbewahrungsvorgang fehlschlagen, weil der erste Snapshot der ReferenzSnapshot für die SnapVault-Beziehung ist, bis ein neuerer Snapshot auf das Ziel repliziert wird.
+IMPORTANT: Standardmäßig ist der Wert der Aufbewahrungsanzahl auf 2 festgelegt. Wenn Sie die Aufbewahrungszahl auf 1 setzen, kann der Aufbewahrungsvorgang fehlschlagen, da der erste Snapshot der ReferenzSnapshot für die SnapVault-Beziehung ist, bis ein neuerer Snapshot auf das Ziel repliziert wird.
 
 
 NOTE: Der maximale Aufbewahrungswert ist 1018 für Ressourcen auf ONTAP 9.4 oder höher und 254 für Ressourcen unter ONTAP 9.3 oder einer früheren Version. Backups schlagen fehl, wenn die Aufbewahrung auf einen Wert festgelegt ist, der höher ist, als die zugrunde liegende ONTAP Version unterstützt.
 
 . Dauer der Aufbewahrung von Snapshots
 +
-.. Wenn Sie die Anzahl der Tage angeben möchten, für die Sie die Snapshots vor dem Löschen behalten möchten, wählen Sie *Snapshot-Kopien beibehalten für*.
+.. Wenn Sie die Anzahl der Tage angeben möchten, für die Sie die Snapshots vor dem Löschen behalten möchten, wählen Sie *bewahre Kopien für*.
 
 
-. Wenn Sie die Sperrfrist für Snapshots angeben möchten, wählen Sie *Sperrfrist für Snapshot-Kopie* und wählen Sie Tage, Monate oder Jahre aus.
+. Wenn Sie die Sperrfrist der primären Snapshot-Kopie angeben möchten, wählen Sie *primäre Snapshot-Kopie Sperrfrist* und wählen Sie Tage, Monate oder Jahre.
 +
 Die SnapLock-Aufbewahrungsfrist sollte weniger als 100 Jahre betragen.
 
-
-
-. Geben Sie im Abschnitt *vollständige Backup-Aufbewahrungseinstellungen* für die Einstellungen für die stündliche, tägliche, wöchentliche und monatliche Aufbewahrung die Aufbewahrungseinstellungen für den Terminplantyp an, der auf der Seite Backup-Typ ausgewählt wurde.
+. Wenn Sie die Sperrfrist der sekundären Snapshot-Kopie angeben möchten, wählen Sie *sekundäre Snapshot-Kopie Sperrfrist* und wählen Sie Tage, Monate oder Jahre.
 +
-.. Geben Sie die Gesamtzahl der zu erbehalt enden Snapshots an
-+
-... Um die Anzahl der zu befolgenden Snapshots anzugeben, wählen Sie *Gesamtanzahl der zu befolgenden Snapshot-Kopien* aus. Wenn die Anzahl der Snapshots die angegebene Zahl überschreitet, werden die Snapshots mit den ältesten zuerst gelöschten Kopien gelöscht.
-
-
-
-
-
-
-
-IMPORTANT: Sie müssen die Aufbewahrungsanzahl auf 2 oder höher einstellen, wenn Sie die SnapVault-Replikation aktivieren möchten. Wenn Sie den Aufbewahrungszeitraum auf 1 festlegen, kann der Aufbewahrungsvorgang fehlschlagen, weil der erste Snapshot der ReferenzSnapshot für die SnapVault-Beziehung ist, bis ein neuerer Snapshot auf das Ziel repliziert wird.
-
-. Dauer der Aufbewahrung von Snapshots
-+
-.. Um die Anzahl der Tage anzugeben, für die Sie die Snapshots vor dem Löschen behalten möchten, wählen Sie *Snapshot Kopien beibehalten für*.
-
-
-. Wenn Sie die Sperrfrist für Snapshots angeben möchten, wählen Sie *Sperrfrist für Snapshot-Kopie* und wählen Sie Tage, Monate oder Jahre aus.
-+
-Die SnapLock-Aufbewahrungsfrist sollte weniger als 100 Jahre betragen.
+Damit diese Option wirksam ist, müssen Sie die folgenden Aufgaben ausführen:
 
 +
-Die Snapshot-Protokollaufbewahrung ist standardmäßig auf 7 Tage eingestellt. Verwenden Sie das Cmdlet "Set-SmPolicy", um die Snapshot Aufbewahrung des Protokolls zu ändern.
-
-
-
+** Wählen Sie die Sperrfrist der *Primary Snapshot copy* aus.
+** Wählen Sie eine oder beide Optionen für die sekundäre Replikation aus.
++
 Dieses Beispiel setzt die Snapshot-Protokollaufbewahrung auf 2:
 
++
 .Beispiel Anzeigen
 []
 ====
 Set-SmPolicy -PolicyName 'newpol' -PolicyTyp 'Backup' -PluginPolicyTyp 'SCSQL' -sqlbackuptyp 'FullBackupAndLogBackup' -RetentionSettings @{BackupType='DATA';ScheduleType='hourly';RetentionCount=2},@{2}@{2} BackupType='LOG';ScheduleType='hourly'
 
 ====
++
 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_retains_Snapshot_copies_of_the_database["SnapCenter behält Snapshot Kopien der Datenbank bei"]
 
 
 
-== Schritt 4: Konfigurieren der Replikationseinstellungen
+. Wählen Sie eine Snapshot-Beschriftung aus
++
+Je nach der ausgewählten Snapshot-Beschriftung wendet ONTAP die sekundäre Snapshot-Aufbewahrungsrichtlinie an, die der Markierung entspricht.
 
-. Geben Sie auf der Seite „Replikation“ die Replikation auf das sekundäre Speichersystem an:
++
+
+NOTE: Wenn Sie *Update SnapMirror nach dem Erstellen einer lokalen Snapshot Kopie* ausgewählt haben, können Sie optional das Label für die sekundäre Richtlinie angeben. Wenn Sie jedoch *Update SnapVault nach dem Erstellen einer lokalen Snapshot Kopie* ausgewählt haben, sollten Sie das sekundäre Policy Label angeben.
+
+
+
+
+
+== Schritt 7: Konfigurieren Sie Optionen für die sekundäre Replikation
+
+. Wählen Sie im Abschnitt sekundäre Replikationsoptionen auswählen eine oder beide der folgenden sekundären Replikationsoptionen aus:
++
+
+NOTE: Sie müssen die sekundären Replikationsoptionen für *Sperrfrist der sekundären Snapshot-Kopie* auswählen, um wirksam zu sein.
+
 
 
 [role="tabbed-block"]
@@ -281,7 +292,7 @@ Diese Option sollte für SnapMirror Active Sync aktiviert sein.
 Während der sekundären Replizierung wird mit der SnapLock-Ablaufzeit die primäre SnapLock-Ablaufzeit geladen. Durch Klicken auf die Schaltfläche * Aktualisieren* auf der Seite Topologie wird die sekundäre und primäre SnapLock-Ablaufzeit aktualisiert, die von ONTAP abgerufen werden.
 
 +
-Siehe link:task_view_sql_server_backups_and_clones_in_the_topology_page.html["Sehen Sie sich SQL Server Backups und Klone auf der Seite Topologie an"].
+Siehe link:../protect-scsql/task_view_sql_server_backups_and_clones_in_the_topology_page.html["Sehen Sie sich SQL Server Backups und Klone auf der Seite Topologie an"].
 
 
 
@@ -301,20 +312,9 @@ Wenn SnapLock nur auf dem sekundären aus ONTAP, dem sogenannten SnapLock-Vault,
 Weitere Informationen zu SnapLock Vault finden Sie unter https://docs.netapp.com/us-en/ontap/snaplock/commit-snapshot-copies-worm-concept.html["Speichern von Snapshot-Kopien in WORM-KOPIEN auf einem Vault-Ziel"]
 
 +
-Siehe link:task_view_sql_server_backups_and_clones_in_the_topology_page.html["Sehen Sie sich SQL Server Backups und Klone auf der Seite Topologie an"].
+Siehe link:../protect-scsql/task_view_sql_server_backups_and_clones_in_the_topology_page.html["Sehen Sie sich SQL Server Backups und Klone auf der Seite Topologie an"].
 
 
-
---
-.Sekundäre Richtlinienbezeichnung
---
-. Wählen Sie eine Snapshot-Bezeichnung aus.
-
-
-Je nach der ausgewählten Snapshot-Beschriftung wendet ONTAP die sekundäre Snapshot-Aufbewahrungsrichtlinie an, die der Markierung entspricht.
-
-
-NOTE: Wenn Sie *Update SnapMirror nach dem Erstellen einer lokalen Snapshot Kopie* ausgewählt haben, können Sie optional das Label für die sekundäre Richtlinie angeben. Wenn Sie jedoch *Update SnapVault nach dem Erstellen einer lokalen Snapshot Kopie* ausgewählt haben, sollten Sie das sekundäre Policy Label angeben.
 
 --
 .Fehler Anzahl Der Wiederholungen
@@ -326,7 +326,7 @@ NOTE: Wenn Sie *Update SnapMirror nach dem Erstellen einer lokalen Snapshot Kopi
 ====
 
 
-== Schritt 5: Konfigurieren der Skripteinstellungen
+== Schritt 8: Konfigurieren der Skripteinstellungen
 
 . Geben Sie auf der Seite Skript den Pfad und die Argumente des Vorskripts bzw. des Postskripts ein, die vor bzw. nach dem Backup ausgeführt werden sollen.
 +
@@ -344,7 +344,7 @@ NOTE: Sie müssen die SnapMirror Aufbewahrungsrichtlinie in ONTAP so konfigurier
 
 
 
-== Schritt 6: Konfigurieren Sie die Überprüfungseinstellungen
+== Schritt 9: Konfigurieren Sie die Überprüfungseinstellungen
 
 Führen Sie auf der Seite Überprüfung die folgenden Schritte aus:
 
@@ -388,7 +388,7 @@ NOTE: Der Pfad für Prescripts oder Postscripts darf keine Laufwerke oder Shares
 
 
 
-== Schritt 7: Zusammenfassung überprüfen
+== Schritt 10: Zusammenfassung überprüfen
 
 . Überprüfen Sie die Zusammenfassung, und wählen Sie dann *Fertig stellen*.
 

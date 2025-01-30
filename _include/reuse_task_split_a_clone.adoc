@@ -42,7 +42,7 @@ Wählen Sie in der Liste Ansicht *Pfad* aus.
 +
 Die Seite „Ressourcentopologie“ wird angezeigt.
 
-. Wählen Sie in der Ansicht *Manage Copies* die geklonte Ressource aus (z. B. die Datenbank oder LUN), und klicken Sie dann auf *image:../media/split_cone.gif["Symbol „Clone teilen“"]*.
+. Wählen Sie in der Ansicht *Manage Copies* die geklonte Ressource aus (z. B. die Datenbank oder LUN), und klicken Sie dann auf *image:../media/split_clone.gif["Symbol „Clone teilen“"].
 . Überprüfen Sie die geschätzte Größe des zu teilenden Klons und den benötigten Speicherplatz auf dem Aggregat, und klicken Sie dann auf *Start*.
 . Überwachen Sie den Fortschritt des Vorgangs, indem Sie auf *Monitor* > *Jobs* klicken.
 +

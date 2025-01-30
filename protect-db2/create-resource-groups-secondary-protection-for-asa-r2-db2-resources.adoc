@@ -1,0 +1,141 @@
+---
+permalink: protect-db2/create-resource-groups-secondary-protection-for-asa-r2-db2-resources.html 
+sidebar: sidebar 
+keywords: asa r2, secondary protection, consistency group, primary consistency group, secondary consistency group 
+summary: Eine Ressourcengruppe ist ein Container, in dem Sie Ressourcen hinzufügen, die Sie sichern und schützen möchten. Mit einer Ressourcengruppe können Sie alle Daten, die einer bestimmten Anwendung zugeordnet sind, gleichzeitig sichern. 
+---
+= Erstellen von Ressourcengruppen und Aktivieren des sekundären Schutzes für IBM DB2-Ressourcen auf ASA r2-Systemen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie sollten die Ressourcengruppe erstellen, um die Ressourcen hinzuzufügen, die sich auf ASA r2-Systemen befinden. Sie können auch den sekundären Schutz bereitstellen, während Sie die Ressourcengruppe erstellen.
+
+.Bevor Sie beginnen
+* Sie sollten sicherstellen, dass Sie nicht sowohl ONTAP 9.x-Ressourcen als auch ASA r2-Ressourcen zur gleichen Ressourcengruppe hinzufügen.
+* Sie sollten sicherstellen, dass keine Datenbank mit ONTAP 9.x-Ressourcen und ASA r2-Ressourcen vorhanden ist.
+
+
+.Über diese Aufgabe
+* Der sekundäre Schutz ist nur verfügbar, wenn der angemeldete Benutzer der Rolle zugewiesen ist, die die Funktion *SecondaryProtection* aktiviert hat.
+* Wenn Sie den sekundären Schutz aktiviert haben, wird die Ressourcengruppe beim Erstellen der primären und sekundären Konsistenzgruppen in den Wartungsmodus versetzt. Nach dem Erstellen der primären und sekundären Konsistenzgruppen wird die Ressourcengruppe aus dem Wartungsmodus versetzt.
+* SnapCenter unterstützt keinen sekundären Schutz für eine Klonressource.
+
+
+.Schritte
+. Wählen Sie im linken Navigationsbereich *Ressourcen* und das entsprechende Plug-in aus der Liste aus.
+. Klicken Sie auf der Seite Ressourcen auf *Neue Ressourcengruppe*.
+. Führen Sie auf der Seite Name die folgenden Aktionen durch:
++
+.. Geben Sie im Feld Name einen Namen für die Ressourcengruppe ein.
++
+
+NOTE: Der Name der Ressourcengruppe darf 250 Zeichen nicht überschreiten.
+
+.. Geben Sie eine oder mehrere Beschriftungen in das Feld Tag ein, um später nach der Ressourcengruppe zu suchen.
++
+Wenn Sie beispielsweise HR als Tag zu mehreren Ressourcengruppen hinzufügen, können Sie später alle Ressourcengruppen finden, die mit dem HR-Tag verknüpft sind.
+
+.. Aktivieren Sie dieses Kontrollkästchen, und geben Sie ein benutzerdefiniertes Namensformat ein, das für den Snapshot-Namen verwendet werden soll.
++
+Beispiel: Custtext_Resource Group_Policy_hostname oder Resource Group_hostname. Standardmäßig wird an den Snapshot Namen ein Zeitstempel angehängt.
+
+.. Geben Sie die Ziele der Archivprotokolldateien an, die Sie nicht sichern möchten.
++
+
+NOTE: Sie sollten bei Bedarf genau das gleiche Ziel verwenden, wie es in der Anwendung einschließlich Präfix festgelegt wurde.
+
+
+
+. Wählen Sie auf der Seite Ressourcen den Hostnamen der Datenbank aus der Dropdown-Liste *Host* aus.
++
+
+NOTE: Die Ressourcen werden im Abschnitt Verfügbare Ressourcen nur dann aufgelistet, wenn die Ressource erfolgreich ermittelt wurde. Wenn Sie vor Kurzem Ressourcen hinzugefügt haben, werden diese erst nach einer Aktualisierung der Ressourcenliste in der Liste der verfügbaren Ressourcen angezeigt.
+
+. Wählen Sie die ASA r2-Ressourcen im Abschnitt „Verfügbare Ressourcen“ aus, und verschieben Sie sie in den Abschnitt „Ausgewählte Ressourcen“.
+. Wählen Sie auf der Seite Anwendungseinstellungen die Sicherungsoption aus.
+. Führen Sie auf der Seite Richtlinien die folgenden Schritte aus:
++
+.. Wählen Sie eine oder mehrere Richtlinien aus der Dropdown-Liste aus.
++
+
+NOTE: Sie können eine Richtlinie auch erstellen, indem Sie auf klicken image:../media/add_policy_from_resourcegroup.gif["Symbol hinzufügen"].
+
++
+Im Abschnitt „Zeitpläne für ausgewählte Richtlinien konfigurieren“ werden die ausgewählten Richtlinien aufgelistet.
+
+.. Klicken Sie Auf image:../media/add_policy_from_resourcegroup.gif["Symbol hinzufügen"] In der Spalte Zeitplan konfigurieren für die Richtlinie konfigurieren, für die Sie einen Zeitplan konfigurieren möchten.
+.. Konfigurieren Sie im Fenster Add Schedules for Policy_Name_ den Zeitplan, und klicken Sie dann auf *OK*.
++
+Dabei ist _Policy_Name_ der Name der von Ihnen ausgewählten Richtlinie.
+
++
+Die konfigurierten Zeitpläne sind in der Spalte angewendete Zeitpläne aufgeführt.
+
+
+
++
+Backup-Zeitpläne von Drittanbietern werden nicht unterstützt, wenn sie sich mit SnapCenter Backup-Zeitplänen überschneiden.
+
+. Wenn der sekundäre Schutz für die ausgewählte Richtlinie aktiviert ist, wird die Seite sekundärer Schutz angezeigt, und Sie müssen die folgenden Schritte ausführen:
++
+.. Wählen Sie den Typ der Replikationsrichtlinie aus.
++
+
+NOTE: Die Richtlinie für die synchrone Replizierung wird nicht unterstützt.
+
+.. Geben Sie das Suffix für die Konsistenzgruppe an, das Sie verwenden möchten.
+.. Wählen Sie in den Drop-Downs Ziel-Cluster und Ziel-SVM den zu verwendenden Peering-Cluster und die SVM aus.
++
+
+NOTE: Cluster und SVM-Peering werden von SnapCenter nicht unterstützt. Sie sollten System Manager oder ONTAP CLIs verwenden, um Cluster- und SVM-Peering durchzuführen.
+
+
+
+
+
+
+NOTE: Wenn die Ressourcen bereits außerhalb von SnapCenter geschützt sind, werden diese Ressourcen im Abschnitt sekundäre geschützte Ressourcen angezeigt.
+
+. Führen Sie auf der Seite Überprüfung die folgenden Schritte aus:
++
+.. Klicken Sie auf *Lokatoren laden*, um die SnapMirror oder SnapVault Volumes zu laden, um eine Überprüfung auf dem sekundären Speicher durchzuführen.
+.. Klicken Sie Auf image:../media/add_policy_from_resourcegroup.gif["Symbol hinzufügen"] In der Spalte Configure Schedules (Zeitpläne konfigurieren), um den Überprüfungsplan für alle Zeitplantypen der Richtlinie zu konfigurieren.
+.. Führen Sie im Dialogfeld Add Verification Schedules Policy_Name die folgenden Aktionen durch:
++
+|===
+| Ihr Ziel ist | Tun Sie das... 
+
+
+ a| 
+Führen Sie die Verifizierung nach dem Backup durch
+ a| 
+Wählen Sie *Überprüfung nach Sicherung ausführen*.
+
+
+
+ a| 
+Planung einer Verifizierung
+ a| 
+Wählen Sie *geplante Überprüfung ausführen* und wählen Sie dann den Terminplantyp aus der Dropdown-Liste aus.
+
+|===
+.. Wählen Sie *am sekundären Standort überprüfen*, um Ihre Backups auf dem sekundären Speichersystem zu überprüfen.
+.. Klicken Sie auf *OK*.
++
+Die konfigurierten Überprüfungszeitpläne sind in der Spalte „angewendete Zeitpläne“ aufgeführt.
+
+
+
+. Wählen Sie auf der Benachrichtigungsseite aus der Dropdown-Liste *E-Mail-Präferenz* die Szenarien aus, in denen Sie die E-Mails versenden möchten.
++
+Außerdem müssen Sie die E-Mail-Adressen für Absender und Empfänger sowie den Betreff der E-Mail angeben. Wenn Sie den Bericht des Vorgangs anhängen möchten, der in der Ressourcengruppe ausgeführt wird, wählen Sie *Job-Bericht anhängen*.
+
++
+
+NOTE: Für eine E-Mail-Benachrichtigung müssen Sie die SMTP-Serverdetails entweder mit der GUI oder mit dem PowerShell-Befehlssatz Set-SmtpServer angegeben haben.
+
+. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
+

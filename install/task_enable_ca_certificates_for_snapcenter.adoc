@@ -31,10 +31,10 @@ Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen
 
 Auf dem Reiter Managed Hosts wird ein Schloss angezeigt, und die Farbe des Vorhängeschlosses zeigt den Status der Verbindung zwischen SnapCenter Server und dem Plug-in-Host an.
 
-* *image:../media/enable_ca_issues_icon.png[""]* Zeigt an, dass kein CA-Zertifikat aktiviert oder dem Plug-in-Host zugewiesen ist.
-* *image:../media/enable_ca_good_icon.png[""]* Zeigt an, dass das CA-Zertifikat erfolgreich validiert wurde.
-* *image:../media/enable_ca_failed_icon.png[""]* Zeigt an, dass das CA-Zertifikat nicht validiert werden konnte.
-* *image:../media/enable_ca_undefined_icon.png[""]* Zeigt an, dass die Verbindungsinformationen nicht abgerufen werden konnten.
+* *image:../media/enable_ca_issues_icon.png["Problem-Symbol"]* Gibt an, dass kein CA-Zertifikat aktiviert oder dem Plug-in-Host zugewiesen ist.
+* *image:../media/enable_ca_good_icon.png["Gute Ikone"]* Zeigt an, dass das CA-Zertifikat erfolgreich validiert wurde.
+* *image:../media/enable_ca_failed_icon.png["Symbol „Fehler“"]* Zeigt an, dass das CA-Zertifikat nicht validiert werden konnte.
+* *image:../media/enable_ca_undefined_icon.png["Nicht definiertes Symbol"]* Zeigt an, dass die Verbindungsinformationen nicht abgerufen werden konnten.
 
 
 

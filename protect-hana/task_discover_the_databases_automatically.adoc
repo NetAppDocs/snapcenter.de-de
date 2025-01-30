@@ -31,9 +31,9 @@ Die automatisch ermittelten Ressourcen können nicht geändert oder gelöscht we
 .Schritte
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das Plug-in für SAP HANA aus der Liste aus.
 . Wählen Sie auf der Seite Ressourcen den Ressourcentyp aus der Liste Ansicht aus.
-. (Optional) Klicken Sie Auf *image:../media/filter_icon.png["Filtersymbol"]*, und wählen Sie dann den Hostnamen aus.
+. (Optional) Klicken Sie auf * *image:../media/filter_icon.gif["Filtersymbol"], und wählen Sie dann den Hostnamen aus.
 +
-Sie können dann auf * klickenimage:../media/filter_icon.png["Filtersymbol"]* Zum Schließen des Filterfensters.
+Sie können dann auf * * klickenimage:../media/filter_icon.gif["Filtersymbol"], um den Filterbereich zu schließen.
 
 . Klicken Sie auf *Ressourcen aktualisieren*, um die auf dem Host verfügbaren Ressourcen zu ermitteln.
 +

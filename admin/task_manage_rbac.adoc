@@ -30,7 +30,6 @@ NOTE: Sie können die Berechtigungen für die SnapCenterAdmin-Rolle nicht änder
 . Klicken Sie im linken Navigationsbereich auf *Einstellungen*.
 . Klicken Sie auf der Seite Einstellungen auf *Rollen*.
 . Klicken Sie im Feld Rollenname auf die Rolle, die Sie ändern möchten.
-. Ändern Sie auf der Seite Rollendetails die Berechtigungen, oder heben Sie die Zuweisung der Mitglieder nach Bedarf ab.
 . Wählen Sie *Alle Mitglieder dieser Rolle können Objekte anderer Mitglieder* sehen, damit andere Mitglieder der Rolle nach der Aktualisierung der Ressourcenliste Ressourcen wie Volumes und Hosts sehen können.
 +
 Deaktivieren Sie diese Option, wenn Mitglieder dieser Rolle keine Objekte anzeigen möchten, denen andere Mitglieder zugewiesen sind.
@@ -39,6 +38,7 @@ Deaktivieren Sie diese Option, wenn Mitglieder dieser Rolle keine Objekte anzeig
 
 NOTE: Wenn diese Option aktiviert ist, ist es nicht erforderlich, Benutzern Zugriff auf Objekte oder Ressourcen zuzuweisen, wenn Benutzer derselben Rolle angehören wie der Benutzer, der die Objekte oder Ressourcen erstellt hat.
 
+. Ändern Sie auf der Seite Rollendetails die Berechtigungen, oder heben Sie die Zuweisung der Mitglieder nach Bedarf ab.
 . Klicken Sie Auf *Absenden*.
 
 

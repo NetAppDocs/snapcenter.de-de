@@ -81,5 +81,5 @@ Die Details zu Backups und Klonen werden in einem Tabellenformat angezeigt.
 NOTE: Sie können Backups, die sich im sekundären Speicher befinden, nicht umbenennen oder löschen.
 
 . Wählen Sie einen Klon aus der Tabelle aus und klicken Sie auf *Clone Split*.
-. Wenn Sie einen Klon löschen möchten, wählen Sie den Klon aus der Tabelle aus, und klicken Sie anschließend auf image:../media/delete_icon.gif[""].
+. Wenn Sie einen Klon löschen möchten, wählen Sie den Klon aus der Tabelle aus, und klicken Sie dann auf image:../media/delete_icon.gif["Symbol Löschen"].
 

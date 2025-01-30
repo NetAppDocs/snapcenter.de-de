@@ -62,7 +62,7 @@ Die Seite „Topologie der Ressourcen- oder Ressourcengruppe“ wird angezeigt.
 +
 Sie können die Backups, die sich auf dem sekundären Speichersystem befinden, nicht löschen.
 
-. Wählen Sie das Backup aus, und klicken Sie dann auf image:../media/delete_icon.gif[""].
+. Wählen Sie die Sicherung aus, und klicken Sie dann auf image:../media/delete_icon.gif["Symbol Löschen"].
 +
 Wenn Sie ein SAP HANA-Datenbankbackup löschen, werden auch die zugehörigen SAP HANA-Kataloge des Backups gelöscht.
 

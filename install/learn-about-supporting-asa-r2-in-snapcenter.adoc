@@ -1,0 +1,62 @@
+---
+permalink: install/learn-about-supporting-asa-r2-in-snapcenter.html 
+sidebar: sidebar 
+keywords: ASA r2 systems 
+summary: SnapCenter 6.1 unterstützt ASA r2 Systeme, die eine vereinfachte Erfahrung speziell für die Anforderungen von reinen SAN-Kunden bieten. 
+---
+= Erfahren Sie mehr über die Unterstützung von ASA r2-Systemen in SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter 6.1 unterstützt ASA r2 Systeme, die eine vereinfachte Erfahrung speziell für die Anforderungen von reinen SAN-Kunden bieten.
+
+ASA r2 Systeme unterstützen alle SAN-Protokolle (iSCSI, FC und NVMe over TCP/IP) in einer einzigen HA-Paar-Implementierung. SCSI-Protokolle (iSCSI und FC) verwenden für Multipathing eine symmetrische aktiv/aktiv-Architektur, sodass alle Pfade zwischen Hosts und Storage aktiv/optimiert sind. Die iSCSI- und NVMe/TCP-Protokolle unterstützen direkte Pfade zwischen den Hosts und dem Storage.
+
+
+NOTE: SnapCenter unterstützt nur VMware Virtual Machine File System (VMFS) auf ASA r2 Systemen.
+
+Bei ASA r2-Systemen werden Storage-Einheiten mit Konsistenzgruppen eingesetzt:
+
+* Eine Speichereinheit stellt den SAN-Hosts Speicherplatz für Datenvorgänge zur Verfügung. Eine Storage-Einheit bezieht sich auf eine LUN für SCSI-Hosts oder einen NVMe-Namespace für NVMe-Hosts.
+* Eine Konsistenzgruppe ist eine Sammlung von Speichereinheiten, die als eine Einheit gemanagt werden.
+
+
+ASA r2 Systeme verwenden Storage-Einheiten und Konsistenzgruppen, um das Storage-Management und die Datensicherung zu vereinfachen. Angenommen, Sie haben eine Datenbank, die aus 10 Speichereinheiten in einer Konsistenzgruppe besteht, und Sie müssen die gesamte Datenbank sichern. Anstatt jede Storage-Einheit einzeln zu sichern, können Sie die gesamte Datenbank schützen, indem Sie die Konsistenzgruppe sichern.
+
+https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["Erfahren Sie mehr über ASA r2-Systeme"].
+
+
+
+== Was wird in SnapCenter 6.1 für ASA r2-Systeme unterstützt
+
+Mit SnapCenter können Sie für alle Applikationen, die von SnapCenter unterstützt werden, die folgenden Vorgänge ausführen, wenn Sie ASA r2 Storage-Systeme verwenden:
+
+* Erstellung primärer Backups von Anwendungen über VMDK
+* Übertragen von Snapshots von Konsistenzgruppen auf das sekundäre Speichersystem
+* Wiederherstellen der Backups und Wiederherstellung von einem anderen Speicherort
++
+** In-Place-Wiederherstellung von primärem und sekundärem Storage mit VMware vMotion
+** Verbinden und Kopieren von Daten aus primärem und sekundärem Storage
+
+
+* Das Klonen der Backups und das Klonen an einem alternativen Speicherort
+
+
+
+
+== Was in SnapCenter 6.1 für ASA r2-Systeme nicht unterstützt wird
+
+* Raw Device Mapping (RDM)
+* Application Volumes für Oracle
+* SAP HANA NDV
+* LockVault
+* Manipulationssicherer Schnappschuss
+* Flex Group
+* Hierarchische Konsistenzgruppe
+* Migration von ONTAP 9.x auf ASA r2-Systeme
+* Umbenennen von Snapshots
+* Die sekundäre Bereitstellung des Protokollverzeichnisses des SQL Plug-in-Hosts wird von SnapCenter nicht unterstützt. Sie sollten die Konfiguration manuell entweder mit der ONTAP CLI oder mit System Manager durchführen.
+

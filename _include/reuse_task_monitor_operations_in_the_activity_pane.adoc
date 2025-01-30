@@ -8,7 +8,7 @@ Im Fensterbereich Aktivität werden Informationen zu Backup-, Wiederherstellungs
 
 .Schritte
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
-. Klicken Sie image:../media/activity_pane_icon.gif["Aktivitätsbereich"] auf den Bereich „Aktivität“, um die fünf letzten Vorgänge anzuzeigen.
+. Klicken Sie image:../media/activity_pane_icon.gif["Symbol im Aktivitätsbereich"] auf den Bereich „Aktivität“, um die fünf letzten Vorgänge anzuzeigen.
 +
 Wenn Sie auf einen der Vorgänge klicken, werden die Vorgangsdetails auf der Seite *Job-Details* aufgeführt.
 

@@ -29,6 +29,7 @@ Es gibt folgende Möglichkeiten für die Implementierung von SnapCenter:
 ** Daten auf primären ONTAP FAS-, AFF- oder All-SAN-Array- (ASA) Systemen, die auf sekundäre ONTAP FAS-, AFF- oder ASA-Systeme repliziert werden
 ** Daten auf primären ONTAP Select Systemen
 ** Daten auf primären und sekundären ONTAP FAS, AFF oder ASA Systemen, die auf lokalem StorageGRID Objekt-Storage gesichert sind
+** Daten auf primären und sekundären ONTAP ASA r2-Systemen
 
 
 * Lokal in einer Hybrid Cloud zur Sicherung folgender Komponenten:
@@ -89,7 +90,7 @@ Weitere Informationen zu REST-APIs finden Sie unter https://docs.netapp.com/us-e
 Weitere Informationen zu Windows-Cmdlets finden Sie unter https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter Software Cmdlet Referenzhandbuch"^].
 
 +
-Weitere Informationen zu UNIX-Befehlen finden Sie unter https://library.netapp.com/ecm/ecm_download_file/ECMLP3323470["SnapCenter Software Command Reference Guide"^].
+Weitere Informationen zu UNIX-Befehlen finden Sie unter https://library.netapp.com/ecm/ecm_download_file/ECMLP3337666["SnapCenter Software Command Reference Guide"^].
 
 * Zentrale Datensicherungs-Konsole und Berichterstellung
 * Rollenbasierte Zugriffssteuerung (Role Based Access Control, RBAC) für Sicherheit und Delegierung.
@@ -111,10 +112,10 @@ Bei einem Ausfall wie z. B. einer Ressourcenbeschädigung oder einem Server-Abst
 
 * SnapLock
 +
-SnapLock ist eine hochperformante Compliance-Lösung für Unternehmen, die mit WORM-Storage (Write Once, Read Many) Dateien aus gesetzlichen und Governance-Gründen in unveränderter Form aufbewahren.
+SnapLock ist eine hochperformante Compliance-Lösung für Unternehmen, die mit WORM-Storage (Write Once, Read Many) Dateien aus gesetzlichen und Governance-Gründen in unveränderter Form aufbewahren. Weitere Informationen zu SnapLock finden Sie unter https://docs.netapp.com/us-en/ontap/snaplock/["Was ist SnapLock"].
 
 +
-Weitere Informationen zu SnapLock finden Sie unter https://docs.netapp.com/us-en/ontap/snaplock/["Was ist SnapLock"]
+Das Sperren von Snapshots stellt sicher, dass sie nicht versehentlich oder böswillig gelöscht werden können. Mit SnapCenter können Sie die Sperrfrist sowohl für primäre als auch für sekundäre Snapshots festlegen.
 
 * SnapMirror Active Sync (zunächst veröffentlicht als SnapMirror Business Continuity [SM-BC])
 +

@@ -13,4 +13,4 @@ summary: Sie müssen SnapCenter-Plug-in für Microsoft Windows installieren und 
 [role="lead"]
 Sie müssen SnapCenter-Plug-in für Microsoft Windows installieren und einrichten, wenn Sie Windows-Dateien, die keine Datenbankdateien sind, schützen möchten.
 
-image::../media/scw_workflow_for_installing.png[Installationsworkflow]
+image::../media/scw_workflow_for_installing.gif[Installationsworkflow]

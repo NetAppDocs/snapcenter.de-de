@@ -22,4 +22,4 @@ Sie können Datenbanken aus den folgenden Gründen klonen:
 
 Im folgenden Workflow wird die Sequenz angezeigt, in der Sie den Klonvorgang durchführen müssen:
 
-image::../media/sco_scc_wfs_clone_workflow.png[Klon-Workflow]
+image::../media/sco_scc_wfs_clone_workflow.gif[Klon-Workflow]

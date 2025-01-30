@@ -42,7 +42,7 @@ Monitor-Seite
  a| 
 Aktivitätsbereich
  a| 
-. Nachdem Sie den Wiederherstellungsvorgang gestartet haben, klicken Sie auf image:../media/activity_pane_icon.gif["Symbole im Aktivitätsbereich"] das Aktivitätsfenster, um die fünf letzten Vorgänge anzuzeigen.
+. Nachdem Sie den Wiederherstellungsvorgang gestartet haben, klicken Sie auf image:../media/activity_pane_icon.gif["Symbol im Aktivitätsbereich"] das Aktivitätsfenster, um die fünf letzten Vorgänge anzuzeigen.
 . Wählen Sie den Vorgang aus.
 . Klicken Sie auf der Seite Jobdetails auf *Job abbrechen*.
 

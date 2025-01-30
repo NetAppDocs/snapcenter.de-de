@@ -34,14 +34,14 @@ Wenn eine Datenbank nicht Teil einer Ressourcengruppe ist, können Sie die Daten
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das *Microsoft Exchange Server Plug-in* aus der Liste aus.
 . Wählen Sie auf der Seite Ressourcen entweder *Datenbank* oder *Datenbank-Verfügbarkeitsgruppe* aus der Liste *Ansicht* aus.
 +
-Auf der Seite „Ressourcen“ gibt das image:../media/not_supported_icon.png["Nicht unterstützter Speicher"] Symbol an, dass sich die Datenbank auf Storage anderer Anbieter befindet.
+Auf der Seite „Ressourcen“ gibt das image:../media/not_supported_icon.gif["Symbol nicht unterstützt"] Symbol an, dass sich die Datenbank auf Storage anderer Anbieter befindet.
 
 +
 
 NOTE: Wenn sich in einer DAG eine aktive Datenbankkopie auf einem Storage anderer Anbieter befindet und mindestens eine passive Datenbankkopie auf einem NetApp Storage gespeichert ist, können Sie die Datenbank schützen.
 
 +
-Klicken Sie Auf *image:../media/filter_icon.png[""]*, und wählen Sie dann den Host-Namen und den Datenbanktyp, um die Ressourcen zu filtern. Sie können dann auf * klickenimage:../media/filter_icon.png[""]* Zum Schließen des Filterfensters.
+Klicken Sie auf * *image:../media/filter_icon.gif["Filtersymbol"], und wählen Sie dann den Hostnamen und den Datenbanktyp aus, um die Ressourcen zu filtern. Sie können dann auf * * klickenimage:../media/filter_icon.gif["Filtersymbol"], um den Filterbereich zu schließen.
 
 +
 ** Wenn Sie eine Datenbank sichern möchten, klicken Sie auf den Datenbanknamen.
@@ -62,7 +62,7 @@ Beispiel: _Custext_Policy_hostname_ oder _Resource_hostname_. Standardmäßig wi
 .. Wählen Sie eine oder mehrere Richtlinien aus der Dropdown-Liste aus.
 +
 
-NOTE: Sie können eine Richtlinie auch erstellen, indem Sie auf * klickenimage:../media/add_policy_from_resourcegroup.gif[""]*.
+NOTE: Sie können eine Richtlinie auch erstellen, indem Sie auf * * klickenimage:../media/add_policy_from_resourcegroup.gif["Ressourcengruppe für Richtlinienformular hinzufügen"].
 
 +
 
@@ -74,7 +74,7 @@ NOTE: Wenn eine Richtlinie die Option *Sicherungskopien auf Servern enthält, di
 Im Abschnitt „Zeitpläne für ausgewählte Richtlinien konfigurieren“ werden die ausgewählten Richtlinien aufgelistet.
 
 +
-.. Klicken Sie Auf *image:../media/add_policy_from_resourcegroup.gif[""]* In der Spalte Zeitplan konfigurieren für die Richtlinie, für die Sie einen Zeitplan konfigurieren möchten.
+.. Klicken Sie in der Spalte Zeitpläne konfigurieren auf * *image:../media/add_policy_from_resourcegroup.gif["Ressourcengruppe für Richtlinienformular hinzufügen"]für die Richtlinie, für die Sie einen Zeitplan konfigurieren möchten.
 .. Konfigurieren Sie im Fenster Add Schedules for Policy_Name_ den Zeitplan, und klicken Sie dann auf *OK*.
 +
 Dabei ist _Policy_Name_ der Name der von Ihnen ausgewählten Richtlinie.

@@ -80,11 +80,11 @@ NOTE: Sie können Backups, die sich im sekundären Speicher befinden, nicht umbe
 ** Wenn Sie das Backup mit dem Oracle Recovery Manager (RMAN) katalogisiert haben, können Sie diese katalogisierten Backups nicht umbenennen.
 
 
-. Wenn Sie einen Klon löschen möchten, wählen Sie den Klon aus der Tabelle aus, und klicken Sie anschließend auf image:../media/delete_icon.gif[""].
+. Wenn Sie einen Klon löschen möchten, wählen Sie den Klon aus der Tabelle aus, und klicken Sie dann auf image:../media/delete_icon.gif["Symbol Löschen"].
 
 
 Wenn der für SnapmirrorStatusUpdateWaitTime zugewiesene Wert kleiner ist, werden die Backup-Kopien von Mirror und Vault nicht auf der Topologieseite aufgeführt, auch wenn Daten- und Protokoll-Volumes erfolgreich geschützt sind. Sie sollten den Wert erhöhen, der SnapmirrorStatusUpdateWaitTime mit dem Cmdlet _Set-SmConfigSettings_ PowerShell zugewiesen wurde.
 
 Die Informationen zu den Parametern, die mit dem Befehl und deren Beschreibungen verwendet werden können, können durch Ausführen von get-Help _Command_Name_ abgerufen werden.
 
-Alternativ können Sie auch auf oder verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP3323470["SnapCenter Software Command Reference Guide"^] https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter Software Cmdlet Referenzhandbuch"^].
+Alternativ können Sie auch auf oder verweisen https://library.netapp.com/ecm/ecm_download_file/ECMLP3337666["SnapCenter Software Command Reference Guide"^] https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter Software Cmdlet Referenzhandbuch"^].

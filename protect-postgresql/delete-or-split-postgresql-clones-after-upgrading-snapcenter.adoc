@@ -25,6 +25,6 @@ Um den Platzbedarf für die versteckten Klone zu ermitteln, führen Sie den folg
 Die Seite „Ressourcentopologie“ wird angezeigt.
 
 . Wählen Sie in der Ansicht Kopien managen die Klone entweder auf den primären oder sekundären (gespiegelten oder replizierten) Storage-Systemen aus.
-. Wählen Sie die Klone aus, und klicken Sie dann auf image:../media/delete_icon.gif["Symbol Löschen"] , um Klone zu löschen, oder klicken Sie auf image:../media/split_cone.gif["Symbol „Teilen“"] , um die Klone zu teilen.
+. Wählen Sie die Klone aus, und klicken Sie dann auf image:../media/delete_icon.gif["Symbol Löschen"] , um Klone zu löschen, oder klicken Sie auf image:../media/split_clone.gif["Klon teilen"] , um die Klone zu teilen.
 . Klicken Sie auf *OK*.
 

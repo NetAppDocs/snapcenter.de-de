@@ -15,7 +15,7 @@ Sie können entweder ein Backup einer Ressource (Datenbank) oder einer Ressource
 
 Der folgende Workflow zeigt die Reihenfolge, in der Sie den Sicherungsvorgang durchführen müssen:
 
-image::../media/sco_backup_workflow.png[Backup-Workflow für Oracle]
+image::../media/sco_backup_workflow.gif[Backup-Workflow für Oracle]
 
 Während der Erstellung eines Backups für Oracle-Datenbanken wird auf dem Oracle-Datenbank-Host im Verzeichnis _/var/opt/snapcenter/sco/lock_ eine operative Sperrdatei (_.sm_Lock_dbsid_) erstellt, um zu vermeiden, dass mehrere Operationen auf der Datenbank ausgeführt werden. Nach dem Sichern der Datenbank wird die operative Sperrdatei automatisch entfernt.
 

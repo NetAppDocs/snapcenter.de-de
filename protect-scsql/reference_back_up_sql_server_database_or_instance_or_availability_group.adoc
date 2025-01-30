@@ -19,7 +19,7 @@ Backup- und Restore-Vorgänge können nicht gleichzeitig auf derselben Ressource
 
 Der folgende Workflow zeigt die Reihenfolge, in der Sie die Backup-Vorgänge durchführen müssen:
 
-image::../media/scsql_backup_workflow.png[SCSQL-Backup-Workflow]
+image::../media/scsql_backup_workflow.gif[SCSQL-Backup-Workflow]
 
 
 NOTE: Die Optionen „Jetzt sichern“, „Wiederherstellen“, „Backups verwalten“ und „Klonen“ auf der Seite „Ressourcen“ werden deaktiviert, wenn Sie eine nicht von NetApp stammende LUN, eine beschädigte Datenbank oder eine wiederhergestellte Datenbank auswählen.

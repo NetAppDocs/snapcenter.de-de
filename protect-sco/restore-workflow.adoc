@@ -15,4 +15,4 @@ Der Restore-Workflow umfasst Planung, Durchführung von Restore-Vorgängen und M
 
 Der folgende Workflow zeigt die Reihenfolge, in der Sie den Wiederherstellungsvorgang durchführen müssen:
 
-image::../media/all_plug_ins_restore_workflow.png[All_Plug-ins_Restore_Workflow]
+image::../media/all_plug_ins_restore_workflow.gif[All_Plug-ins_Restore_Workflow]

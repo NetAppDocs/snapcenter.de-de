@@ -403,9 +403,9 @@ NOTE: Wenn Sie beim Erstellen einer Anmeldedaten falsche Details angeben, wird e
 
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
 . Wählen Sie auf der Seite Ressourcen in der Liste *Ansicht* die Option *Datenbank* aus.
-. Klicken Sie auf image:../media/filter_icon.png["Filtersymbol"], und wählen Sie dann den Hostnamen und den Datenbanktyp aus, um die Ressourcen zu filtern.
+. Klicken Sie auf image:../media/filter_icon.gif["Filtersymbol"], und wählen Sie dann den Hostnamen und den Datenbanktyp aus, um die Ressourcen zu filtern.
 +
-Sie können dann klicken image:../media/filter_icon.png["Filtersymbol"] , um den Filterbereich zu schließen.
+Sie können dann klicken image:../media/filter_icon.gif["Filtersymbol"] , um den Filterbereich zu schließen.
 
 . Wählen Sie die Datenbank aus, und klicken Sie dann auf *Datenbankeinstellungen* > *Datenbank konfigurieren*.
 . Wählen Sie im Abschnitt Datenbankeinstellungen konfigurieren in der Dropdown-Liste *vorhandene Anmeldedaten verwenden* die Anmeldeinformationen aus, die zum Ausführen von Datensicherungsjobs in der Oracle-Datenbank verwendet werden sollen.

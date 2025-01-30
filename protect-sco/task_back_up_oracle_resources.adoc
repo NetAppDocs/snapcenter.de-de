@@ -16,9 +16,9 @@ Wenn eine Ressource nicht zu einer Ressourcengruppe gehört, können Sie die Res
 .Schritte
 . Wählen Sie im linken Navigationsbereich *Ressourcen* und das entsprechende Plug-in aus der Liste aus.
 . Wählen Sie auf der Seite Ressourcen in der Liste Ansicht die Option *Datenbank* aus.
-. Klicken Sie Auf image:../media/filter_icon.png["Filtersymbol"]Und wählen Sie dann den Hostnamen und den Datenbanktyp aus, um die Ressourcen zu filtern.
+. Klicken Sie auf image:../media/filter_icon.gif["Filtersymbol"], und wählen Sie dann den Hostnamen und den Datenbanktyp aus, um die Ressourcen zu filtern.
 +
-Sie können dann auf klicken image:../media/filter_icon.png["Filtersymbol"] Um den Filterbereich zu schließen.
+Sie können dann klicken image:../media/filter_icon.gif["Filtersymbol"] , um den Filterbereich zu schließen.
 
 . Wählen Sie die Datenbank aus, die Sie sichern möchten.
 +

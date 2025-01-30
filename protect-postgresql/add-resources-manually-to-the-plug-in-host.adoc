@@ -70,7 +70,7 @@ Dies ist optional.
 |===
 . Wählen Sie auf der Seite „Storage Footprint bereitstellen“ einen Speichertyp aus und wählen Sie ein oder mehrere Volumes, LUNs und qtrees aus, und klicken Sie dann auf *Save*.
 +
-Optional: Klicken Sie auf das Symbol *image:../media/add_policy_from_resourcegroup.gif[""]* Symbol, um weitere Volumes, LUNs und qtrees von anderen Speichersystemen hinzuzufügen.
+Optional: Sie können auf das * -Symbol klickenimage:../media/add_policy_from_resourcegroup.gif["Ressourcengruppe für Richtlinienformular hinzufügen"], um weitere Volumes, LUNs und qtrees von anderen Storage-Systemen hinzuzufügen.
 
 . Optional: Geben Sie auf der Seite Resource Settings für Ressourcen auf dem Windows-Host benutzerdefinierte Schlüssel-Wert-Paare für PostgreSQL-Plug-in ein
 . Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.

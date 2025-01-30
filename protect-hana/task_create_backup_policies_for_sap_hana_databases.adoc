@@ -48,16 +48,14 @@ Sie können kein Backup für SAP HANA Daten-Volume erstellen, aber SnapCenter sc
 
 
 
-
-NOTE: Die primären SnapLock-Einstellungen werden in der SnapCenter Backup Policy gemanagt, und die sekundären SnapLock-Einstellungen werden von ONTAP gemanagt.
-
 .Schritte
 . Klicken Sie im linken Navigationsbereich auf *Einstellungen*.
 . Klicken Sie auf der Seite Einstellungen auf *Richtlinien*.
 . Klicken Sie Auf *Neu*.
-. Geben Sie auf der Seite Name den Namen und die Beschreibung der Richtlinie ein.
-. Führen Sie auf der Seite Einstellungen die folgenden Schritte aus:
+. Geben Sie auf der Seite Name den Richtliniennamen und Details ein.
+. Führen Sie auf der Seite Richtlinientyp die folgenden Schritte durch:
 +
+** Wählen Sie den Storage-Typ aus
 ** Wählen Sie den Sicherungstyp:
 +
 |===
@@ -65,37 +63,34 @@ NOTE: Die primären SnapLock-Einstellungen werden in der SnapCenter Backup Polic
 
 
  a| 
-Führen Sie eine Integritätsprüfung der Datenbank durch
- a| 
-Wählen Sie * File-Based Backup* Aus. Es werden nur aktive Mandanten gesichert.
-
-
-
- a| 
 Erstellen Sie ein Backup mit Snapshot Technologie
  a| 
 Wählen Sie *Snapshot-Basiert* Aus.
 
+
+
+ a| 
+Führen Sie eine Integritätsprüfung der Datenbank durch
+ a| 
+Wählen Sie * File-Based Backup* Aus. Es werden nur aktive Mandanten gesichert.
+
 |===
+
+
+. Führen Sie auf der Seite Snapshot und Replikation die folgenden Schritte durch:
++
 ** Geben Sie den Terminplantyp an, indem Sie *on Demand*, *hourly*, *Daily*, *Weekly* oder *Monthly* auswählen.
 +
 
 NOTE: Sie können den Zeitplan (Startdatum, Enddatum und Häufigkeit) für den Backup-Vorgang beim Erstellen einer Ressourcengruppe angeben. So können Sie Ressourcengruppen erstellen, die dieselben Richtlinien und Backup-Häufigkeit verwenden, aber auch die Möglichkeit haben, den einzelnen Richtlinien unterschiedliche Backup-Zeitpläne zuzuweisen.
 
 +
-image::../media/backup_settings.gif[Backup-Einstellungen]
-
-+
 
 NOTE: Wenn Sie für 2:00 Uhr geplant sind, wird der Zeitplan während der Sommerzeit (DST) nicht ausgelöst.
 
-** Geben Sie im Abschnitt *Benutzerdefinierte Backup-Einstellungen* alle spezifischen Backup-Einstellungen an, die an das Plug-in Key-Value-Format übergeben werden müssen.
-+
-Sie können mehrere wichtige Werte angeben, die an das Plug-in übergeben werden.
 
 
-
-. Geben Sie auf der Seite Aufbewahrung die Aufbewahrungseinstellungen für den Sicherungstyp und den auf der Seite Sicherungstyp ausgewählten Terminplantyp an:
+. Geben Sie auf der Seite Snapshot und Replikation die Aufbewahrungseinstellungen für den Sicherungstyp und den auf der Seite Sicherungstyp ausgewählten Zeitplantyp an:
 +
 |===
 | Ihr Ziel ist | Dann... 
@@ -104,7 +99,7 @@ Sie können mehrere wichtige Werte angeben, die an das Plug-in übergeben werden
  a| 
 Behalten Sie eine bestimmte Anzahl von Snapshots bei
  a| 
-Wählen Sie *Total Snapshot Copies to keep* aus, und geben Sie dann die Anzahl der Snapshots an, die Sie behalten möchten.
+Wählen Sie *Kopien, die behalten werden sollen*, und geben Sie dann die Anzahl der Snapshots an, die Sie behalten möchten.
 
 Wenn die Anzahl der Snapshots die angegebene Zahl überschreitet, werden die Snapshots mit den ältesten zuerst gelöschten Kopien gelöscht.
 
@@ -126,19 +121,44 @@ Die Aufbewahrung ist beispielsweise für eine Ressourcengruppe mit primärer SAP
  a| 
 Bewahren Sie die Snapshots für eine bestimmte Anzahl von Tagen auf
  a| 
-Wählen Sie *Snapshot-Kopien behalten für*, und geben Sie dann die Anzahl der Tage an, für die Sie die Snapshots vor dem Löschen behalten möchten.
+Wählen Sie *Kopien behalten für*, und geben Sie dann die Anzahl der Tage an, für die Sie die Snapshots vor dem Löschen aufbewahren möchten.
 
 
 
  a| 
-Sperrfrist von Snapshot-Kopien
+Sperrfrist der primären Snapshot-Kopie
  a| 
 Wählen Sie die Sperrfrist für Snapshot Kopien aus und wählen Sie Tage, Monate oder Jahre aus.
 
 Die SnapLock-Aufbewahrungsfrist sollte weniger als 100 Jahre betragen.
 
+
+
+ a| 
+Sperrfrist für sekundäre Snapshot-Kopien
+ a| 
+Wählen Sie *Secondary Snapshot copy Sperrfrist* und wählen Sie Tage, Monate oder Jahre.
+
+Damit diese Option wirksam ist, müssen Sie die folgenden Aufgaben ausführen:
+
+** Wählen Sie die Sperrfrist der *Primary Snapshot copy* aus.
+** Wählen Sie eine oder beide Optionen für die sekundäre Replikation aus.
+
+
 |===
-. Geben Sie für Snapshot-Copy-basierte Backups die Replikationseinstellungen auf der Seite Replikation an:
+. Wählen Sie eine Snapshot-Bezeichnung aus.
++
+Je nach der ausgewählten Snapshot-Beschriftung wendet ONTAP die sekundäre Snapshot-Aufbewahrungsrichtlinie an, die der Markierung entspricht.
+
++
+
+NOTE: Wenn Sie *Update SnapMirror nach dem Erstellen einer lokalen Snapshot Kopie* ausgewählt haben, können Sie optional das Label für die sekundäre Richtlinie angeben. Wenn Sie jedoch *Update SnapVault nach dem Erstellen einer lokalen Snapshot Kopie* ausgewählt haben, sollten Sie das sekundäre Policy Label angeben.
+
+. Wählen Sie für auf Snapshot Kopien basierende Backups im Abschnitt sekundäre Replizierungsoptionen auswählen eine oder beide der folgenden sekundären Replizierungsoptionen aus:
++
+
+NOTE: Sie müssen die sekundären Replikationsoptionen für *Sperrfrist der sekundären Snapshot-Kopie* auswählen, um wirksam zu sein.
+
 +
 |===
 | Für dieses Feld... | Tun Sie das... 
@@ -172,19 +192,7 @@ Wenn SnapLock nur auf dem sekundären aus ONTAP, dem sogenannten SnapLock-Vault,
 
 Weitere Informationen zu SnapLock Vault finden Sie unter https://docs.netapp.com/us-en/ontap/snaplock/commit-snapshot-copies-worm-concept.html["Speichern von Snapshot-Kopien in WORM-KOPIEN auf einem Vault-Ziel"]
 
-Siehe link:task_view_sap_hana_database_backups_and_clones_in_the_topology_page_sap_hana.html["Sehen Sie sich SAP HANA Datenbank-Backups und -Klone auf der Seite Topologie an"].
-
-
-
- a| 
-*Sekundäres Policy-Label*
- a| 
-Wählen Sie eine Snapshot-Bezeichnung aus.
-
-Je nach der ausgewählten Snapshot-Beschriftung wendet ONTAP die sekundäre Snapshot-Aufbewahrungsrichtlinie an, die der Markierung entspricht.
-
-
-NOTE: Wenn Sie *Update SnapMirror nach dem Erstellen einer lokalen Snapshot Kopie* ausgewählt haben, können Sie optional das Label für die sekundäre Richtlinie angeben. Wenn Sie jedoch *Update SnapVault nach dem Erstellen einer lokalen Snapshot Kopie* ausgewählt haben, sollten Sie das sekundäre Policy Label angeben.
+Siehe link:../protect-hana/task_view_sap_hana_database_backups_and_clones_in_the_topology_page_sap_hana.html["Sehen Sie sich SAP HANA Datenbank-Backups und -Klone auf der Seite Topologie an"].
 
 
 

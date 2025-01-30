@@ -37,9 +37,12 @@ NOTE: Sie sollten genügend Festplattenspeicher zuweisen und den Speicherverbrau
  a| 
 Erforderliche Softwarepakete
  a| 
-* .NET Core beginnt mit Version 8.0.5 und enthält alle nachfolgenden .NET 8-Patches
+* ASP.NET Core Runtime 8.0.12 (und alle nachfolgenden 8.0.x-Patches) Hosting Bundle
 * PowerShell Core 7.4.2
 * Java 11 Oracle Java und OpenJDK
++
+Java 11 Oracle Java und OpenJDK sind nur für SAP HANA, IBM DB2, PostgreSQL, MySQL, NetApp-unterstützte Plug-ins und andere benutzerdefinierte Anwendungen erforderlich, die auf Windows-Host installiert werden können.
+
 
 
 Die neuesten Informationen zu unterstützten Versionen finden Sie im https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"^].
