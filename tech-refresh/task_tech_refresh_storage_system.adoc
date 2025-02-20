@@ -31,12 +31,6 @@ Die Aktualisierung der Storage-Technologie wird unterstützt, um den primären S
 * Aktualisierung des sekundären Storage
 
 
-Die anderen unterstützten Szenarien sind:
-
-* Änderung des SVM-Namens
-* Änderung des Volume-Namens
-
-
 
 
 == Aktualisieren Sie die Backups des primären Speichers

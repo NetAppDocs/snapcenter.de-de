@@ -143,8 +143,8 @@ Sie sollten die SnapCenter MFA-Metadaten in AD FS immer dann aktualisieren, wenn
 .Schritte
 . Öffnen Sie im AD FS-Host den AD FS-Managementassistenten, und führen Sie die folgenden Schritte aus:
 +
-.. Klicken Sie Auf *Treuhand-Party-Trusts*.
-.. Klicken Sie mit der rechten Maustaste auf das Vertrauen der Vertrauensgesellschaft, das für SnapCenter erstellt wurde, und klicken Sie auf *Löschen*.
+.. Wählen Sie *Treuhandfonds Der Vertrauenlichen Partei* Aus.
+.. Klicken Sie mit der rechten Maustaste auf die Vertrauensstellung, die für SnapCenter erstellt wurde, und wählen Sie *Löschen* aus.
 +
 Der benutzerdefinierte Name des Vertrauensverhältnisses wird angezeigt.
 
