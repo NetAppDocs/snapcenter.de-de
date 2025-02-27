@@ -14,9 +14,9 @@ summary: Sie sollten das unterstützte Storage-System, die Applikationen und Dat
 Sie sollten die unterstützten Storage-Systeme, Applikationen und Datenbanken kennen.
 
 * SnapCenter unterstützt ONTAP 9.12.1 und neuere Versionen für den Schutz Ihrer Daten.
-* SnapCenter 6.1 unterstützt NetApp ASA r2-Systeme (ASA A1K, ASA A70 und ASA A90) mit ONTAP 9.16.1.
+* SnapCenter 6.1 unterstützt NetApp ASA r2-Systeme mit ONTAP 9.16.1.
 +
-ASA r2 Systeme bieten eine einheitliche Hardware- und Softwarelösung für reine SAN-Umgebungen, die auf All-Flash-Plattformen basieren. ASA r2 Systeme unterscheiden sich bei der Implementierung ihrer Storage-Ebene, unterstützter Protokolle und ONTAP Persönlichkeit von anderen ONTAP Systemen (ASA, AFF und FAS).
+ASA r2 Systeme bieten eine einheitliche Hardware- und Softwarelösung für reine SAN-Umgebungen, die auf All-Flash-Plattformen basieren.
 
 +
 Informationen zu ASA r2-Systemen finden Sie unter https://docs.netapp.com/us-en/asa-r2/index.html["ASA r2 Dokumentation"^].
