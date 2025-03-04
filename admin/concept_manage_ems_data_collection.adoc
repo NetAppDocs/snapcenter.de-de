@@ -22,8 +22,7 @@ NOTE: Die CPU-Auslastung des Systems ist hoch, wenn gerade die Datenerfassung l�
 
 Die EMS-Datenerfassung ist standardmäßig aktiviert und wird alle sieben Tage nach dem Installationsdatum ausgeführt. Sie können die Datenerfassung jederzeit mit dem PowerShell Cmdlet _Disable-SmDataCollectionEMS_ deaktivieren.
 
-*Schritte*
-
+.Schritte
 . Erstellen Sie in einer PowerShell-Befehlszeile eine Sitzung mit SnapCenter, indem Sie _Open-SmConnection_ eingeben.
 . Deaktivieren Sie die EMS-Datensammlung, indem Sie _Disable-SmDataCollectionEms_ eingeben.
 
@@ -34,10 +33,9 @@ Die EMS-Datenerfassung ist standardmäßig aktiviert und wird alle sieben Tage n
 
 Die EMS-Datenerfassung ist standardmäßig aktiviert und wird voraussichtlich alle sieben Tage ab dem Installationsdatum ausgeführt. Wenn Sie die EMS-Datensammlung deaktiviert haben, können Sie die EMS-Datensammlung erneut mit dem Cmdlet _enable-SmDataCollectionEMS_ starten.
 
-Die Berechtigung zum Generieren des Data ONTAP-Events „Generate-AutoSupport-log“ wurde dem SVM-Benutzer (Storage Virtual Machine) zugewiesen.
+Der Benutzer der Storage Virtual Machine (SVM) hat die Berechtigung zum Generieren des NetApp ONTAP-Ereignisses AutoSupport-Log erhalten.
 
-*Schritte*
-
+.Schritte
 . Erstellen Sie in einer PowerShell-Befehlszeile eine Sitzung mit SnapCenter, indem Sie _Open-SmConnection_ eingeben.
 . Aktivieren Sie die EMS-Datensammlung, indem Sie _enable-SmDataCollectionEMS_ eingeben.
 
@@ -48,8 +46,7 @@ Die Berechtigung zum Generieren des Data ONTAP-Events „Generate-AutoSupport-lo
 
 Mit PowerShell cmdlets können Sie den EMS-Zeitplan zur Datenerfassung oder die Ziel-Storage Virtual Machine (SVM) ändern.
 
-*Schritte*
-
+.Schritte
 . Geben Sie in einer PowerShell-Befehlszeile zum Erstellen einer Sitzung mit SnapCenter das Cmdlet _Open-SmConnection_ ein.
 . Um das EMS-Datenerfassungsziel zu ändern, geben Sie das Cmdlet _set-SmDataCollectionEmsTarget_ ein.
 . Um den EMS-Datenerfassungsplan zu ändern, geben Sie das Cmdlet _set-SmDataCollectionEmsSchedule_ ein.
@@ -61,8 +58,7 @@ Mit PowerShell cmdlets können Sie den EMS-Zeitplan zur Datenerfassung oder die 
 
 Sie können den Status Ihrer EMS-Datensammlung mithilfe mehrerer PowerShell Commandlets überwachen. Sie erhalten Informationen zum Zeitplan, zum Storage Virtual Machine-Ziel (SVM) und zum Status.
 
-*Schritte*
-
+.Schritte
 . Erstellen Sie in einer PowerShell-Befehlszeile eine Sitzung mit SnapCenter, indem Sie _Open-SmConnection_ eingeben.
 . Rufen Sie Informationen zum EMS-Datenerfassungsplan ab, indem Sie _get-SmDataCollectionEmsSchedule_ eingeben.
 . Rufen Sie Informationen zum EMS-Datenerfassungsstatus ab, indem Sie _get-SmDataCollectionEmsStatus_ eingeben.

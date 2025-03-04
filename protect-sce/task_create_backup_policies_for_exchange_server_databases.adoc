@@ -221,7 +221,7 @@ Die angezeigten Optionen hängen vom Backup-Typ und vom Frequenztyp ab, den Sie 
 
 +
 
-NOTE: Der maximale Aufbewahrungswert ist 1018 für Ressourcen auf ONTAP 9.4 oder höher und 254 für Ressourcen unter ONTAP 9.3 oder einer früheren Version. Backups schlagen fehl, wenn die Aufbewahrung auf einen Wert festgelegt ist, der höher ist, als die zugrunde liegende ONTAP Version unterstützt.
+NOTE: Der maximale Aufbewahrungswert ist 1018. Backups schlagen fehl, wenn die Aufbewahrung auf einen Wert festgelegt ist, der höher ist, als die zugrunde liegende ONTAP Version unterstützt.
 
 +
 
@@ -304,12 +304,6 @@ Die SnapLock-Aufbewahrungsfrist sollte weniger als 100 Jahre betragen.
 Sperrfrist für sekundäre Snapshots
  a| 
 Wählen Sie *Secondary Snapshot copy Sperrfrist* und wählen Sie Tage, Monate oder Jahre.
-
-Damit diese Option wirksam ist, müssen Sie die folgenden Aufgaben ausführen:
-
-*** Wählen Sie die Sperrfrist der *Primary Snapshot copy* aus.
-*** Wählen Sie eine oder beide Optionen für die sekundäre Replikation aus.
-
 
 |===
 +

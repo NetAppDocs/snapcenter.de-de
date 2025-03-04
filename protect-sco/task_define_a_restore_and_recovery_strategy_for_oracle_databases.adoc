@@ -64,7 +64,7 @@ NOTE: Bei einem Flex ASM-Setup (bei dem die Kardinalität kleiner ist als die An
 
 Auch wenn Sie die Wiederherstellung vor Ort mit Nachdruck aktiviert haben, führt SnapCenter die Wiederherstellung von Connect und Copy in den folgenden Szenarien durch:
 
-* Wiederherstellung aus einem sekundären Storage-System und bei Data ONTAP vor 8.3
+* Wiederherstellung aus sekundärem Storage-System
 * Wiederherstellen von ASM-Laufwerksgruppen auf Knoten eines Oracle RAC-Setups, auf denen die Datenbankinstanz nicht konfiguriert ist
 * Wenn in Oracle RAC-Setup auf einem der Peer-Nodes nicht die ASM-Instanz oder die Cluster-Instanz ausgeführt wird oder wenn der Peer-Node nicht verfügbar ist
 * Restore von Kontrolldateien
@@ -81,7 +81,7 @@ Auch wenn Sie die Wiederherstellung vor Ort mit Nachdruck aktiviert haben, führ
 Wenn das Datenbank-Layout dem Backup ähnelt und keine Konfigurationsänderungen am Storage- und Datenbank-Stack durchgeführt wurden, erfolgt die Wiederherstellung direkt, wobei die Wiederherstellung von Datei oder LUN auf ONTAP durchgeführt wird. SnapCenter unterstützt als Teil der in-Place-Wiederherstellungsmethode nur Single File SnapRestore (SFSR).
 
 
-NOTE: Data ONTAP 8.3 oder höher unterstützt in-Place-Restores vom sekundären Standort.
+NOTE: NetApp ONTAP unterstützt die Wiederherstellung aus dem sekundären Standort vor Ort.
 
 Wenn Sie die Datenbank wiederherstellen möchten, stellen Sie sicher, dass nur Datendateien auf der ASM-Festplattengruppe vorhanden sind. Sie müssen ein Backup erstellen, nachdem Änderungen an der ASM-Laufwerksgruppe oder in der physischen Struktur der Datenbank vorgenommen wurden. Nach der Durchführung der in-Place-Wiederherstellung enthält die Festplattengruppe die gleiche Anzahl von Datendateien wie zum Zeitpunkt des Backups.
 

@@ -130,9 +130,6 @@ Wenn dem ONTAP Cluster über die ONTAP-Benutzeroberfläche eine neue SVM hinzuge
 
 
 
-
-NOTE: Wenn Sie ein Upgrade der FAS- oder AFF-Speichersysteme auf All-SAN-Array (ASA) durchgeführt haben, müssen Sie die Speicherverbindung im SnapCenter-Server aktualisieren, damit der neue Speichertyp in SnapCenter berücksichtigt wird.
-
 *Nach Ihrer Beendigung*
 
 Ein Cluster-Administrator muss AutoSupport auf jedem Node des Storage-Systems aktivieren, um E-Mail-Benachrichtigungen von allen Storage-Systemen zu senden, auf die SnapCenter Zugriff hat, indem der folgende Befehl über die Befehlszeile des Storage-Systems ausgeführt wird:

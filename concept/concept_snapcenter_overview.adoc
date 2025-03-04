@@ -26,7 +26,7 @@ Es gibt folgende Möglichkeiten für die Implementierung von SnapCenter:
 
 * Lokal, um Folgendes zu schützen:
 +
-** Daten auf primären ONTAP FAS-, AFF- oder All-SAN-Array- (ASA) Systemen, die auf sekundäre ONTAP FAS-, AFF- oder ASA-Systeme repliziert werden
+** Daten auf primären ONTAP FAS, AFF oder ASA Systemen, die auf sekundäre ONTAP FAS, AFF oder ASA Systeme repliziert werden
 ** Daten auf primären ONTAP Select Systemen
 ** Daten auf primären und sekundären ONTAP FAS, AFF oder ASA Systemen, die auf lokalem StorageGRID Objekt-Storage gesichert sind
 ** Daten auf primären und sekundären ONTAP ASA r2-Systemen

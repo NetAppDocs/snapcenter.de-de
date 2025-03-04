@@ -42,7 +42,7 @@ Stellen Sie bei Plug-ins, die im NATIVEN Stil erstellt wurden, sicher, dass Sie 
  a| 
 Version
  a| 
-Plug-in-Version: Kann sowohl die Haupt- als auch die Nebenversion enthalten. Beispiel: 1.0, 1.1, 2.0, 2.1
+Plug-in-Version: Kann sowohl die Haupt- als auch die Nebenversion enthalten. Beispiel: 5.0, 6.0, 6.1
 
 
 

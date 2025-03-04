@@ -6,8 +6,6 @@ summary: Informationen zu verschiedenen von SnapCenter durchgeführten Vorgänge
 ---
 = Verwalten des SnapCenter-Server-Repositorys
 :allow-uri-read: 
-:icons: font
-:imagesdir: ../media/
 
 
 [role="lead"]

@@ -30,10 +30,7 @@ Beispiele für SnapCenter-Konfigurationsdateien: SnapDriveService.exe.config, SM
 .Über diese Aufgabe
 * Während des Upgrades wird ein SQL-Skript ausgeführt, um die Exchange-Daten in der NSM-Datenbank zu aktualisieren, die DAG und Host-Kurzname in FQDN konvertiert. Dies gilt nur, wenn Sie SnapCenter Server mit Exchange Plug-in verwenden.
 * Wenn Sie den Server-Host manuell in den Wartungsmodus versetzt haben, müssen Sie den Server-Host nach dem Upgrade manuell aus dem Wartungsmodus bringen, indem Sie auf *Hosts* > *Zeitplan aktivieren* klicken.
-* Für das SnapCenter Plug-in für Microsoft SQL Server, das SnapCenter Plug-in für Microsoft Exchange Server und das SnapCenter Plug-in für Microsoft Windows wird empfohlen, für DIE Ausführung VON SCRIPTS_PATH sowohl den Server als auch die Plug-in-Hosts auf die Version 4.7 zu aktualisieren.
-+
-Für die bestehenden Backup- und Verifizierungspläne mit aktivierten in der Richtlinie aktivierten Prescripts und Postscripts funktionieren die Backup-Vorgänge nach dem Upgrade weiterhin.
-
+* Für die bestehenden Backup- und Verifizierungspläne mit aktivierten in der Richtlinie aktivierten Prescripts und Postscripts funktionieren die Backup-Vorgänge nach dem Upgrade weiterhin.
 +
 Auf der Seite *Job Details* empfiehlt eine Warnmeldung, dass der Kunde die Skripte in DEN SCRIPTS_PATH kopieren und die Richtlinie bearbeiten sollte, um einen Pfad bereitzustellen, der sich auf den SCRIPTS_PATH bezogen. Für den Clone Lifecycle Job wird die Warnmeldung auf der Unterauftragsebene angezeigt.
 

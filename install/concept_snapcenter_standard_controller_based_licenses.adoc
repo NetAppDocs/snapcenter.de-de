@@ -11,13 +11,13 @@ summary: Wenn Sie FAS, AFF oder ASA Storage Controller verwenden, ist eine Contr
 
 
 [role="lead"]
-Wenn Sie FAS, AFF oder All SAN Array (ASA) Storage Controller verwenden, ist eine Controller-basierte Lizenz für SnapCenter Standard erforderlich.
+Wenn Sie FAS, AFF oder ASA Storage Controller verwenden, ist eine Controller-basierte Lizenz für SnapCenter Standard erforderlich.
 
 Die Controller-basierte Lizenz weist folgende Merkmale auf:
 
 * SnapCenter Standard-Nutzungsberechtigung ist beim Kauf von Premium oder Flash Bundle enthalten (nicht im Basispaket).
 * Unbegrenzte Storage-Nutzung
-* Sie kann entweder über den ONTAP System Manager oder die Storage-Cluster-Befehlszeile direkt zum FAS, AFF oder ASA Storage Controller hinzugefügt werden
+* Ermöglicht wird dies durch direktes Hinzufügen zum FAS, AFF oder ASA Storage Controller mithilfe von ONTAP System Manager oder der ONTAP CLI.
 +
 
 NOTE: Sie geben keine Lizenzinformationen in der SnapCenter GUI für die Controller-basierten SnapCenter Lizenzen ein.
@@ -162,7 +162,7 @@ All-Flash Optimized: false
 
 == Schritt 4: Rufen Sie die Seriennummer der Controller-basierten Lizenz ab
 
-Wenn Sie FAS oder AFF Storage verwenden, können Sie die Controller-basierte SnapCenter Lizenz von der NetApp Support Website abrufen, bevor Sie sie über die ONTAP-Befehlszeile installieren.
+Wenn Sie FAS SnapCenter-, ASA- oder AFF-Storage verwenden, können Sie die Controller-basierte Lizenz von der NetApp Support-Website abrufen, bevor Sie sie über die ONTAP-Befehlszeile installieren können.
 
 .Bevor Sie beginnen
 * Sie sollten über gültige Anmeldedaten für die NetApp Support Site verfügen.

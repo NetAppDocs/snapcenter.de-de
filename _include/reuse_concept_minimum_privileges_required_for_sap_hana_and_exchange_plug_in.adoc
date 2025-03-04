@@ -4,7 +4,7 @@
 
 Die erforderlichen Mindestberechtigungen für ONTAP variieren je nach SnapCenter Plug-ins, die Sie zur Datensicherung verwenden.
 
-* Befehle für All-Access: Mindestberechtigungen erforderlich für ONTAP 8.3.0 und höher
+* Befehle für All-Access: Mindestberechtigungen erforderlich für ONTAP 9.12.1 und höher
 +
 ** Event Generate-AutoSupport-log
 ** Job-Verlauf wird angezeigt

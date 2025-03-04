@@ -96,12 +96,6 @@ Sperrfrist für sekundäre Snapshots
  a| 
 Wählen Sie *Secondary Snapshot copy Sperrfrist* und wählen Sie Tage, Monate oder Jahre.
 
-Damit diese Option wirksam ist, müssen Sie die folgenden Aufgaben ausführen:
-
-*** Wählen Sie die Sperrfrist der *Primary Snapshot copy* aus.
-*** Wählen Sie eine oder beide Optionen für die sekundäre Replikation aus.
-
-
 |===
 +
 
@@ -148,9 +142,10 @@ Sekundäres Policy-Label
  a| 
 Wählen Sie eine Snapshot-Bezeichnung aus.
 
-+ abhängig von dem ausgewählten Snapshot-Label wendet ONTAP die sekundäre Snapshot- Aufbewahrungs-Policy an, die dem Label entspricht.
+Je nach der ausgewählten Snapshot-Beschriftung wendet ONTAP die sekundäre Snapshot-Aufbewahrungsrichtlinie an, die der Markierung entspricht.
 
-+ HINWEIS: Wenn Sie nach dem Erstellen einer lokalen-Kopie * *Update SnapMirror ausgewählt haben, können Sie optional das sekundäre Policy-Label angeben. Wenn Sie jedoch *Update SnapVault nach dem Erstellen einer lokalen Snapshot Kopie* ausgewählt haben, sollten Sie das sekundäre Policy Label angeben.
+
+NOTE: Wenn Sie *Update SnapMirror nach dem Erstellen einer lokalen Snapshot Kopie* ausgewählt haben, können Sie optional das Label für die sekundäre Richtlinie angeben. Wenn Sie jedoch *Update SnapVault nach dem Erstellen einer lokalen Snapshot Kopie* ausgewählt haben, sollten Sie das sekundäre Policy Label angeben.
 
 
 

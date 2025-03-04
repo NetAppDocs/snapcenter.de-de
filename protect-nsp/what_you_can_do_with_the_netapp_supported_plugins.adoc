@@ -31,7 +31,7 @@ Sie können ein Backup für das ONTAP Volume, die LUN oder einen qtree erstellen
 
 * Aktualisierung von Snapshots, die von Primärdaten auf eine sekundäre ONTAP erstellt wurden, mithilfe der SnapCenter Richtlinie zur Nutzung der bestehenden Replizierungsbeziehung (SnapVault/SnapMirror/einheitliche Replizierung)
 +
-Primäre und sekundäre ONTAP können ONTAP FAS, AFF, All-SAN-Array (ASA), Select oder Cloud ONTAP sein.
+Primäre und sekundäre ONTAP können ONTAP FAS, AFF, ASA, ONTAP Select oder Cloud Volumes ONTAP sein.
 
 * Stellen Sie komplette ONTAP Volumes, LUNs oder Dateien wieder her.
 +

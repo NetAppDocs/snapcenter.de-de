@@ -86,7 +86,7 @@ NOTE: Sie sollten keinen Platzhaltereintrag (*) verwenden, um alle Befehle zuzul
 
 == Konfigurieren von Sudo-Berechtigungen für Benutzer ohne Root-Zugriff auf Linux-Hosts
 
-Mit SnapCenter 2.0 und höheren Versionen kann ein nicht-Root-Benutzer das SnapCenter Plug-ins-Paket für Linux installieren und das Plug-in-Verfahren starten. Die Plug-in-Prozesse werden als effektiver nicht-Root-Benutzer ausgeführt. Sie sollten sudo-Berechtigungen für den nicht-Root-Benutzer konfigurieren, um Zugriff auf mehrere Pfade zu ermöglichen.
+Mit SnapCenter kann ein Benutzer, der kein Root-Benutzer ist, das SnapCenter-Plug-in-Paket für Linux installieren und den Plug-in-Prozess starten. Die Plug-in-Prozesse werden als effektiver nicht-Root-Benutzer ausgeführt. Sie sollten sudo-Berechtigungen für den nicht-Root-Benutzer konfigurieren, um Zugriff auf mehrere Pfade zu ermöglichen.
 
 *Was Sie brauchen*
 

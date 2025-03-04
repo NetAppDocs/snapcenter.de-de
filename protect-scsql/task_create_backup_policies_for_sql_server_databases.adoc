@@ -224,7 +224,7 @@ Bewahren Sie die Backup-Kopien für eine bestimmte Anzahl von Tagen auf.
 IMPORTANT: Standardmäßig ist der Wert der Aufbewahrungsanzahl auf 2 festgelegt. Wenn Sie die Aufbewahrungszahl auf 1 setzen, kann der Aufbewahrungsvorgang fehlschlagen, da der erste Snapshot der ReferenzSnapshot für die SnapVault-Beziehung ist, bis ein neuerer Snapshot auf das Ziel repliziert wird.
 
 
-NOTE: Der maximale Aufbewahrungswert ist 1018 für Ressourcen auf ONTAP 9.4 oder höher und 254 für Ressourcen unter ONTAP 9.3 oder einer früheren Version. Backups schlagen fehl, wenn die Aufbewahrung auf einen Wert festgelegt ist, der höher ist, als die zugrunde liegende ONTAP Version unterstützt.
+NOTE: Der maximale Aufbewahrungswert ist 1018. Backups scheitern, wenn die Aufbewahrung auf einen Wert festgelegt ist, der höher ist als der Wert, den die zugrunde liegende NetApp ONTAP Version unterstützt.
 
 . Dauer der Aufbewahrung von Snapshots
 +
@@ -237,13 +237,7 @@ Die SnapLock-Aufbewahrungsfrist sollte weniger als 100 Jahre betragen.
 
 . Wenn Sie die Sperrfrist der sekundären Snapshot-Kopie angeben möchten, wählen Sie *sekundäre Snapshot-Kopie Sperrfrist* und wählen Sie Tage, Monate oder Jahre.
 +
-Damit diese Option wirksam ist, müssen Sie die folgenden Aufgaben ausführen:
-
-+
-** Wählen Sie die Sperrfrist der *Primary Snapshot copy* aus.
-** Wählen Sie eine oder beide Optionen für die sekundäre Replikation aus.
-+
-Dieses Beispiel setzt die Snapshot-Protokollaufbewahrung auf 2:
+In diesem Beispiel wird die Snapshot-Aufbewahrung für Protokolldateien auf 2 festgelegt:
 
 +
 .Beispiel Anzeigen
@@ -254,8 +248,6 @@ Set-SmPolicy -PolicyName 'newpol' -PolicyTyp 'Backup' -PluginPolicyTyp 'SCSQL' -
 ====
 +
 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_retains_Snapshot_copies_of_the_database["SnapCenter behält Snapshot Kopien der Datenbank bei"]
-
-
 
 . Wählen Sie eine Snapshot-Beschriftung aus
 +

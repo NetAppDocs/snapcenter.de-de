@@ -25,7 +25,6 @@ NOTE: Klone eines Backups einer versionsflexiblen Spiegelung auf einem Volume vo
 * image:../media/topology_vault_secondary_storage.gif["Symbol für sekundären Tresor"] Zeigt die Anzahl der Backups und Klone an, die mithilfe der SnapVault Technologie auf dem sekundären Storage repliziert werden.
 +
 ** Die Anzahl der angezeigten Backups umfasst die Backups, die aus dem sekundären Speicher gelöscht wurden. Wenn Sie beispielsweise 6 Backups mit einer Richtlinie erstellt haben, um nur 4 Backups aufzubewahren, werden die Anzahl der angezeigten Backups 6 angezeigt.
-** Wenn Sie ein Upgrade von SnapCenter 1.1 durchgeführt haben, werden die Klone auf dem sekundären (Mirror oder Vault) nicht unter Mirror-Kopien oder Vault-Kopien in der Topologieseite angezeigt. Alle mit SnapCenter 1.1 erstellten Klone werden unter den lokalen Kopien in SnapCenter 3.0 angezeigt.
 
 
 
