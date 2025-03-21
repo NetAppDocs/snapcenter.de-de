@@ -8034,7 +8034,6 @@ Die Einstellung der Verfügbarkeit für NetApp Single Mailbox Recovery (EOA) ste
   <block id="98950caea953c79d817eba870ba7ae48" category="summary">Erstellen Sie die Azure-Zugangsdaten in SnapCenter, um auf das Azure NetApp-Konto zuzugreifen.</block>
   <block id="1ed01bab203e8745a0dcfe58f019c1d9" category="doc">Erstellen Sie die Azure-Zugangsdaten in SnapCenter</block>
   <block id="df807c6f76450e7af962b9ec2ffe867e" category="paragraph">Sie sollten die Azure-Anmeldeinformationen in SnapCenter erstellen, um auf das Azure NetApp-Konto zuzugreifen.</block>
-  <block id="c564c60262d5040cb9b4b2cb05c8532d" category="paragraph">Stellen Sie vor dem Erstellen der Azure-Anmeldeinformationen sicher, dass Sie den Dienstprinzipal in Azure erstellt haben. Zum Erstellen der Azure-Zugangsdaten müssen die Mandanten-ID, die Client-ID und der geheime Schlüssel, die dem Service-Principal zugeordnet sind, angegeben werden.</block>
   <block id="aeec85b47cdcde0a1bea1e8a52e7efae" category="paragraph">Wählen Sie *Azure Credential* aus der Dropdown-Liste aus.</block>
   <block id="7131a7a6bfe81200d21d5a33c64847b6" category="paragraph">Mandanten-ID</block>
   <block id="797fc8989dfaa45ed85ce3b352fc0fb9" category="paragraph">Geben Sie die Mandanten-ID ein.</block>
@@ -10070,4 +10069,11 @@ Die Aufbewahrung ist beispielsweise für eine Ressourcengruppe mit primärer SAP
   <block id="cdc0da196ab05c60eaebdca9a2459cd1" category="list-text">Informationen zu den FlexClone-Volume-Split-Vorgängen finden Sie unter, <block ref="a740171a60876518d945f2e24ddd79f9" category="inline-link-rx"></block></block>
   <block id="dc4d7bf5602b12335597fd5350deab23" category="admonition">Der maximale Aufbewahrungswert ist 1018. Backups scheitern, wenn die Aufbewahrung auf einen Wert festgelegt ist, der höher ist als der Wert, den die zugrunde liegende NetApp ONTAP Version unterstützt.</block>
   <block id="ee96dd48de878c0191d0701d853dd514" category="paragraph">In diesem Beispiel wird die Snapshot-Aufbewahrung für Protokolldateien auf 2 festgelegt:</block>
+  <block id="ab6d9fe11358cebc1d2cc02fa1c47496" category="list-text">Stellen Sie sicher, dass Sie den Dienstprinzipal in Azure erstellt haben.</block>
+  <block id="6f346066b074941885d0989051206e4e" category="list-text">Stellen Sie sicher, dass Ihnen die Mandanten-ID, die Client-ID und der geheime Schlüssel für den Dienstprinzipal zur Verfügung stehen.</block>
+  <block id="db4af27eace345776f29f9a3dbb3b5ff" category="list-text">Die Mandanten-ID ist im Azure-Portal auf der Übersichtsseite für die Entra ID verfügbar.</block>
+  <block id="dc2337ddc542969fd93e297dc61108a9" category="list-text">Die Client-ID wird auch als Anwendungs-ID für den Enterprise App/Service Principal bezeichnet. Sie finden dies im Azure-Portal auf der Seite „Übersicht“ für die von Ihnen erstellte Enterprise-Applikation, die als Service Principal für SnapCenter fungiert.</block>
+  <block id="ee69fc7e193d5b369d8bd7792465c781" category="list-text">Der Client Secret Key wird auch als Secret Value bezeichnet. Sie können diesen Client-Schlüssel im Azure-Portal erstellen, indem Sie unter Entra-ID zu *App-Registrierungen* navigieren. Nachdem Sie die von Ihnen erstellte Enterprise App ausgewählt haben, navigieren Sie zu *Certificates &amp; Secrets* und dann zu *New Client secret*.</block>
+  <block id="732f79401041a0ecc8df586c30756a84" category="admonition">Auf den geheimen Wert kann nur bei der Erstellung zugegriffen werden. Sie können später nicht darauf zugreifen.</block>
+  <block id="f221207f0adcd828979d33693cf006d5" category="list-text">Dem Service Principal müssen Berechtigungen gewährt werden. Die Rolle des Contributors ermöglicht es dem Service-Principal, erforderliche Aktionen in Azure durchzuführen. Dies kann über die Seite Zugriffssteuerung (Access Control, IAM) auf der Seite Abonnement gewährt werden.</block>
 </blocks>
