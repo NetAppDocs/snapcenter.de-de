@@ -3888,7 +3888,6 @@
   <block id="f367d650e57088caf7b808e01235016d" category="inline-link">Wiederherstellung aus dem sekundären Storage in SMBR mit SnapCenter</block>
   <block id="41b4c689a8b0e3ba8bfecb2a1e608e46" category="list-text"><block ref="41b4c689a8b0e3ba8bfecb2a1e608e46" category="inline-link-rx"></block></block>
   <block id="f004280f6db6ea5f9302c9851388d751" category="inline-link">Wiederherstellung von Microsoft Exchange Mail über SnapVault mit SMBR</block>
-  <block id="1b0fb59a5bc951f7dc82cb43fe362145" category="list-text"><block ref="00a76af185a73b84e54e96058031aef5" category="inline-link-rx"></block></block>
   <block id="ba8cc99b4cfaa3f9d3c3f0a8380082c0" category="doc">Abbrechen von Wiederherstellungsvorgängen für Exchange-Datenbank</block>
   <block id="309792b343a6affaca1b564ebe6d92a5" category="summary">Das SnapCenter Plug-in für Microsoft Exchange Server ist eine Host-seitige Komponente der NetAppSnapCenter Software, die das applikationsspezifische Datensicherungsmanagement von Exchange Datenbanken ermöglicht. Das Plug-in für Exchange automatisiert Backup und Restore von Exchange Datenbanken in Ihrer SnapCenter Umgebung.</block>
   <block id="c41e777bd921bd5fc9079273c0ed35db" category="doc">Übersicht über das SnapCenter Plug-in für Microsoft Exchange Server</block>
@@ -6976,7 +6975,6 @@
   <block id="a8d03bc12fa704a66e02c6802c0766f8" category="summary">Wenn das SnapCenter-Plug-in für SQL Server ausgefallen ist, führen Sie die folgenden manuellen Schritte aus, um das Plug-in wiederherzustellen.</block>
   <block id="112fa4c1243fe1af31b4cf57c26ced23" category="list-text">Schieben Sie das SnapCenter-Plug-in für SQL Server auf einen anderen Host, indem Sie die Seite *Add Host* oder *Modify Host* verwenden. Siehe <block ref="fc11fadbfb2b2b87f8c260a133d75ad2" category="inline-link-macro-rx"></block> Finden Sie weitere Informationen.</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">Schritte</block>
-  <block id="ab9238ca6f628634f6f6f2cf63502cdb" category="paragraph">Siehe <block ref="44de5c9fafab2e4e76e19e3717abc2e2" category="inline-link-macro-rx"></block> Video:</block>
   <block id="94c4200231b3891f27561beda5d4e31f" category="doc">SnapCenter Disaster Recovery</block>
   <block id="1da5a00a663269fc81a2098b0d91e4d6" category="paragraph">Mithilfe der Disaster Recovery-Funktion von SnapCenter können Sie den SnapCenter Server im Falle von Ausfällen wie einer Beschädigung von Ressourcen oder einem Serverabsturz wiederherstellen. Sie können SnapCenter Repositorys, Serverzeitpläne und Serverkonfigurationskomponenten wiederherstellen. Sie können auch das SnapCenter Plug-in für SQL Server und das SnapCenter Plug-in für SQL Server Storage wiederherstellen.</block>
   <block id="68e856b5be6554a8e4ee8b393b327b0b" category="paragraph">In diesem Abschnitt werden die beiden Arten der Disaster Recovery (DR) in SnapCenter beschrieben:</block>
@@ -10076,4 +10074,6 @@ Die Aufbewahrung ist beispielsweise für eine Ressourcengruppe mit primärer SAP
   <block id="ee69fc7e193d5b369d8bd7792465c781" category="list-text">Der Client Secret Key wird auch als Secret Value bezeichnet. Sie können diesen Client-Schlüssel im Azure-Portal erstellen, indem Sie unter Entra-ID zu *App-Registrierungen* navigieren. Nachdem Sie die von Ihnen erstellte Enterprise App ausgewählt haben, navigieren Sie zu *Certificates &amp; Secrets* und dann zu *New Client secret*.</block>
   <block id="732f79401041a0ecc8df586c30756a84" category="admonition">Auf den geheimen Wert kann nur bei der Erstellung zugegriffen werden. Sie können später nicht darauf zugreifen.</block>
   <block id="f221207f0adcd828979d33693cf006d5" category="list-text">Dem Service Principal müssen Berechtigungen gewährt werden. Die Rolle des Contributors ermöglicht es dem Service-Principal, erforderliche Aktionen in Azure durchzuführen. Dies kann über die Seite Zugriffssteuerung (Access Control, IAM) auf der Seite Abonnement gewährt werden.</block>
+  <block id="c23d56866a5b11fd0d8dc189fcf21298" category="list-text"><block ref="341e3fddad4b27511133b6917a75bb8a" category="inline-link-rx"></block></block>
+  <block id="57cf9c4ee485623172a5c60cbee423a4" category="paragraph">Video ansehen <block ref="96716f545c5cf1a209bf10c1a798ce38" category="inline-link-macro-rx"></block> .</block>
 </blocks>

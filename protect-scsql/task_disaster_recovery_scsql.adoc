@@ -25,4 +25,4 @@ Wenn das SnapCenter-Plug-in für SQL Server ausfällt, führen Sie die folgenden
 
 
 .Verwandte Informationen
-Siehe link:https://www.youtube.com/watch?v=Nbr_wm9Cnd4&list=PLdXI3bZJEw7nofM6lN44eOe4aOSoryckg["Disaster Recovery-APIs"^] Video:
+Video ansehen link:https://www.youtube.com/watch?v=_8NG-tTGy8k&list=PLdXI3bZJEw7nofM6lN44eOe4aOSoryckg["Disaster Recovery-APIs"^] .
