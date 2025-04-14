@@ -26,4 +26,4 @@ Bei der Installation des Plug-in für IBM DB2 Database können Sie SnapCenter mi
 
 Das SnapCenter Plug-in für DB2 unterstützt NFS und SAN unter File-Storage-Layouts von ONTAP und Azure NetApp.
 
-VMDK oder virtuelles Storage Layout wird nicht unterstützt.
+Das virtuelle VMDK, vVol und RDM Storage Layout wird unterstützt.
