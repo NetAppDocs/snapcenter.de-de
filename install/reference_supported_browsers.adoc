@@ -2,7 +2,7 @@
 permalink: install/reference_supported_browsers.html 
 sidebar: sidebar 
 keywords: SnapCenter, browsers, chrome, IE, Edge 
-summary: SnapCenter-Software kann auf mehreren Browsern verwendet werden. 
+summary: Die SnapCenter-Software kann in mehreren Browsern verwendet werden. 
 ---
 = Unterstützte Browser
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: SnapCenter-Software kann auf mehreren Browsern verwendet werden.
 
 
 [role="lead"]
-SnapCenter-Software kann auf mehreren Browsern verwendet werden.
+Die SnapCenter-Software kann in mehreren Browsern verwendet werden.
 
 * Chrome-Version 125 und höher
 * Microsoft Edge 110.0.1587.17 und höher

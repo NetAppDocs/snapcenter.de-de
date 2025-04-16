@@ -2,7 +2,7 @@
 permalink: concept/concept_snapcenter_overview.html 
 sidebar: sidebar 
 keywords: SnapCenter overview 
-summary: SnapCenter Software ist eine einfache, zentralisierte und skalierbare Plattform, die applikationskonsistenten Datenschutz für Applikationen, Datenbanken, Host-Filesysteme und VMs bietet, die auf ONTAP Systemen in der Hybrid Cloud ausgeführt werden. 
+summary: SnapCenter Software ist eine einfache, zentralisierte, skalierbare Plattform, die applikationskonsistenten Datenschutz für Applikationen, Datenbanken, Host-Filesysteme und VMs bietet, die auf ONTAP Systemen in der Hybrid Cloud ausgeführt werden. 
 ---
 = Übersicht über SnapCenter
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: SnapCenter Software ist eine einfache, zentralisierte und skalierbare P
 
 
 [role="lead"]
-SnapCenter Software ist eine einfache, zentralisierte und skalierbare Plattform, die applikationskonsistenten Datenschutz für Applikationen, Datenbanken, Host-Filesysteme und VMs bietet, die auf ONTAP Systemen in der Hybrid Cloud ausgeführt werden.
+SnapCenter Software ist eine einfache, zentralisierte, skalierbare Plattform, die applikationskonsistenten Datenschutz für Applikationen, Datenbanken, Host-Filesysteme und VMs bietet, die auf ONTAP Systemen in der Hybrid Cloud ausgeführt werden.
 
 SnapCenter bietet mithilfe von NetApp Snapshot, SnapRestore, FlexClone, SnapMirror und SnapVault Technologien folgende Vorteile:
 

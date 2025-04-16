@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: what is new, features, enhancements, 6.1 
 summary: Die Version 6.1 der SnapCenter Software enthält mehrere neue Funktionen und Verbesserungen. 
 ---
-= Neuerungen bei SnapCenter 6.1
+= Neuerungen bei SnapCenter Software 6.1
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
