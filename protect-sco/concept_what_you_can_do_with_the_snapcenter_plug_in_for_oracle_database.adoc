@@ -34,4 +34,6 @@ Das Klonen wird nur auf CDB-Ebene unterstützt.
 * Planung von Backup- und Verifizierungsvorgängen
 * Monitoring aller Vorgänge
 * Berichte für Backup-, Wiederherstellungs- und Klonvorgänge anzeigen
+* Automatisierung applikationsspezifischer Backups, Restores, Recoverys, Überprüfung, Mounten, Unmounten und Klonen für Oracle Datenbanken in Ihrer SnapCenter Umgebung
+* Unterstützung von Oracle-Datenbanken für SAP, aber die Integration von SAP BR*Tools ist nicht möglich
 

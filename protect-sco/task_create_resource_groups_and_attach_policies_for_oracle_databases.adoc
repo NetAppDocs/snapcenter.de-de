@@ -1,7 +1,7 @@
 ---
 permalink: protect-sco/task_create_resource_groups_and_attach_policies_for_oracle_databases.html 
 sidebar: sidebar 
-keywords: run as 
+keywords: run as, resource groups, policies, Oracle database 
 summary: Eine Ressourcengruppe ist ein Container, in dem Sie Ressourcen hinzufügen, die Sie sichern und schützen möchten. Mit einer Ressourcengruppe können Sie alle Daten, die einer bestimmten Anwendung zugeordnet sind, gleichzeitig sichern. 
 ---
 = Erstellen von Ressourcengruppen und Anhängen von Richtlinien für Oracle-Datenbanken

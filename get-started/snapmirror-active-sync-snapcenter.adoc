@@ -1,0 +1,29 @@
+---
+permalink: get-started/snapmirror-active-sync-snapcenter.html 
+sidebar: sidebar 
+keywords: snapmirror active sync 
+summary: Sie können den SnapCenter-Server bei einem Ausfall wie z. B. Ressourcenbeschädigung oder Serverabsturz mithilfe der SnapCenter Disaster Recovery-Funktion wiederherstellen. 
+---
+= Aktive SnapMirror-Synchronisierung in SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapMirror Active Sync ermöglicht Business Services auch bei einem vollständigen Standortausfall den Betrieb weiter und unterstützt Applikationen bei einem transparenten Failover mithilfe einer sekundären Kopie. Es sind weder manuelle Eingriffe noch zusätzliche Skripte erforderlich, um einen Failover mit SnapMirror Active Sync auszulösen.
+
+Weitere Informationen zu SnapMirror Active Sync finden Sie unter https://docs.netapp.com/us-en/ontap/smbc/index.html["Übersicht über SnapMirror Active Sync"].
+
+Stellen Sie für die aktive SnapMirror Synchronisierung sicher, dass Sie die verschiedenen Anforderungen an Hardware, Software und Systemkonfiguration erfüllt haben. Weitere Informationen finden Sie unter https://docs.netapp.com/us-en/ontap/smbc/smbc_plan_prerequisites.html["Voraussetzungen"]
+
+Folgende Plug-ins werden für diese Funktion unterstützt: SnapCenter Plug-in für SQL Server, SnapCenter Plug-in für Windows, SnapCenter Plug-in für Oracle Database, SnapCenter Plug-in für SAP HANA Database, SnapCenter Plug-in für Microsoft Exchange Server und SnapCenter Plug-in für Unix.
+
+
+NOTE: Um die Nähe des Host-Initiators in SnapCenter zu unterstützen, sollte dieser Wert entweder als Quelle oder als Ziel in ONTAP festgelegt werden.
+
+Die in SnapCenter nicht unterstützten Anwendungsfälle:
+
+* Wenn Sie vorhandene asymmetrische SnapMirror Workloads mit aktiver Synchronisierung in symmetrisch konvertieren, indem Sie die Richtlinie für die aktiven SnapMirror Synchronisierungsbeziehungen von _automatisiertFailover_ zu _automatisiertFailover_ in ONTAP ändern, wird dies auch nicht in SnapCenter unterstützt.
+* Wenn Backups einer Ressourcengruppe (bereits in SnapCenter geschützt) vorhanden sind und dann die Storage-Richtlinie auf den aktiven Synchronisierungsbeziehungen von SnapMirror von _automatisiertFailover_ auf _automatisiertFailover_ in ONTAP geändert wird, wird dies auch nicht in SnapCenter unterstützt.
+

@@ -133,7 +133,7 @@ Ja.
 
 
  a| 
-Starten Sie Plug-in-Services
+Starten von Plug-in-Services (gilt nur für Plug-ins, die auf Windows-Hosts ausgeführt werden)
  a| 
 Ja.
  a| 
@@ -141,7 +141,7 @@ Ja.
  a| 
 Ja.
  a| 
-Ja.
+Nein
  a| 
 Ja.
  a| 

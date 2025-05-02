@@ -45,7 +45,7 @@ Wenn die Datenbank verschoben wird, sollten Sie die folgenden Schritte ausführe
 
 
 
-== Für Oracle Versionen 12cR2 bis 18c
+== Für Oracle Versionen 12cR2 bis 18c, 19c oder 21c
 
 .RAC-Datenbank
 Die RAC-Datenbanken werden mit dem Befehl srvctl config ermittelt. Sie sollten die Datenbankeinträge in der Datei /etc/oratab haben.

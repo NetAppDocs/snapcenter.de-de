@@ -2,32 +2,12 @@
 section: install
 title: Installation von SnapCenter Server
 entries:
-- title: Installations-Workflow
-  url: "/install/install_workflow.html"
 - title: Bereiten Sie sich auf die Installation des SnapCenter-Servers vor
   entries:
-  - title: Anforderungen an Domäne und Arbeitsgruppe
-    url: "/install/reference_domain_and_workgroup_requirements.html"
-  - title: Platz- und Größenanforderungen
-    url: "/install/reference_space_and_sizing_requirements.html"
-  - title: SAN-Host-Anforderungen
-    url: "/install/reference_san_host_requirements.html"
-  - title: Unterstützte Storage-Systeme und Applikationen
-    url: "/install/reference_supported_storage_systems_and_applications.html"
-  - title: Erfahren Sie mehr über die Unterstützung von ASA r2-Systemen in SnapCenter
-    url: "/install/learn-about-supporting-asa-r2-in-snapcenter.html"
-  - title: Unterstützte Browser
-    url: "/install/reference_supported_browsers.html"
-  - title: Verbindungs- und Portanforderungen
-    url: "/install/reference_connection_and_port_requirements.html"
-  - title: SnapCenter-Lizenzen
-    url: "/install/concept_snapcenter_licenses.html"
-  - title: Registrieren Sie sich, um auf die SnapCenter Software zuzugreifen
+  - title: Anforderungen
+    url: "/install/requirements-to-install-snapcenter-server.html"
+  - title: Registrieren Sie sich auf der NetApp Support-Website
     url: "/install/register_enable_software_access.html"
-  - title: Authentifizierungsmethoden für Ihre Anmeldedaten
-    url: "/install/concept_authentication_methods_for_your_credentials.html"
-  - title: Verbindungen und Anmeldedaten für Storage Virtual Machines
-    url: "/install/concept_svm_connections_and_credentials.html"
   - title: Multi-Faktor-Authentifizierung (MFA)
     entries:
     - title: Multi-Faktor-Authentifizierung (MFA) managen
@@ -38,12 +18,22 @@ entries:
     - title: Konfigurieren Sie MFA in SnapCenter-Server mit PowerShell, SCCLI und
         REST-API
       url: "/install/configure_mfa_using_powershell_sccli_restapi.html"
-- title: Installieren Sie den SnapCenter-Server auf dem Windows-Host
-  url: "/install/task_install_the_snapcenter_server_using_the_install_wizard.html"
-- title: Installieren Sie den SnapCenter-Server auf dem Linux-Host
-  url: "/install/install_snapcenter_server_linux.html"
-- title: Melden Sie sich bei SnapCenter an
-  url: "/install/task_log_in_to_snapcenter.html"
+- title: Installieren Sie den SnapCenter-Server
+  entries:
+  - title: Installieren Sie den SnapCenter-Server auf dem Windows-Host
+    url: "/install/task_install_the_snapcenter_server_using_the_install_wizard.html"
+  - title: Installieren Sie den SnapCenter-Server auf dem Linux-Host
+    url: "/install/install_snapcenter_server_linux.html"
+  - title: Registrieren Sie SnapCenter
+    url: "/install/register-snapcenter-software.html"
+  - title: Melden Sie sich bei SnapCenter an
+    url: "/install/task_log_in_to_snapcenter.html"
+  - title: Während der Installation auf Ihrem Windows-Host aktivierte Funktionen
+    url: "/install/reference_features_enabled_on_your_windows_host_during_installation.html"
+  - title: Funktionen, die während der Installation auf dem Linux-Host aktiviert wurden
+    url: "/install/features_enabled_on_linux_host.html"
+- title: Konfigurieren Sie die zertifikatbasierte Authentifizierung
+  url: "/install/configure_certificate_based_authentication.html"
 - title: Konfigurieren Sie das CA-Zertifikat für den Windows-Host
   entries:
   - title: ZertifikatCSR-Datei erstellen
@@ -74,23 +64,6 @@ entries:
     url: "/install/configure_two_way_ssl_linux.html"
   - title: Aktivieren Sie die SSL-Kommunikation auf Linux-Host
     url: "/install/enable_two_way_ssl_linux.html"
-- title: Konfigurieren Sie die zertifikatbasierte Authentifizierung
-  entries:
-  - title: Exportieren Sie Zertifikate der Zertifizierungsstelle (CA) vom SnapCenter-Server
-    url: "/install/task_export_ca_certificates_from_snapcenter_server.html"
-  - title: Importieren Sie das CA-Zertifikat in die Windows-Host-Plug-ins
-    url: "/install/task_import_ca_certificate_to_windows_plugin_hosts.html"
-  - title: Importieren Sie das CA-Zertifikat in die UNIX-Host-Plug-ins, und konfigurieren
-      Sie Root- oder Zwischenzertifikate in den SPL-Trust-Store
-    entries:
-    - title: Importieren Sie das CA-Zertifikat in die UNIX-Host-Plug-ins
-      url: "/install/task_import_ca_certificate_to_unix_plugin_hosts.html"
-    - title: Konfigurieren Sie Root- oder Zwischenzertifikate in SPL Trust-Store
-      url: "/install/task_configure_root_or_intermediate_certificates_to_trust_store.html"
-  - title: Aktivieren Sie die zertifikatbasierte Authentifizierung
-    url: "/install/task_enable_certificate_based_authentication.html"
-  - title: Exportieren von SnapCenter-Zertifikaten
-    url: "/install/task_export_snapcenter_certificates.html"
 - title: Konfiguration von Active Directory, LDAP und LDAPS
   entries:
   - title: Registrieren Sie nicht vertrauenswürdige Active Directory-Domänen
@@ -129,6 +102,8 @@ entries:
   url: "/install/task_configure_audit_log_settings.html"
 - title: Storage-Systeme hinzufügen
   url: "/install/task_add_storage_systems.html"
+- title: Verbindungen und Anmeldedaten für Storage Virtual Machines
+  url: "/install/concept_svm_connections_and_credentials.html"
 - title: Controller-basierte SnapCenter Standard-Lizenzen hinzufügen
   url: "/install/concept_snapcenter_standard_controller_based_licenses.html"
 - title: Bereitstellung Ihres Storage-Systems
@@ -151,7 +126,3 @@ entries:
     url: "/install/concept_provision_storage_in_vmware_environments.html"
 - title: Konfigurieren Sie gesicherte MySQL-Verbindungen mit SnapCenter-Server
   url: "/install/concept_configure_secured_mysql_connections_with_snapcenter_server.html"
-- title: Während der Installation auf Ihrem Windows-Host aktivierte Funktionen
-  url: "/install/reference_features_enabled_on_your_windows_host_during_installation.html"
-- title: Funktionen, die während der Installation auf dem Linux-Host aktiviert wurden
-  url: "/install/features_enabled_on_linux_host.html"

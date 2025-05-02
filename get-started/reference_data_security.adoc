@@ -1,10 +1,10 @@
 ---
-permalink: concept/reference_data_security.html 
+permalink: get-started/reference_data_security.html 
 sidebar: sidebar 
-keywords: security,authentication, CA certificates 
+keywords: security, authentication, CA certificates, FIPS, SSL, AES, TLS, RBAC, MFA, multi-factor authentication 
 summary: SnapCenter setzt strenge Sicherheits- und Authentifizierungsfunktionen ein, damit Ihre Daten sicher bleiben. 
 ---
-= Sicherheitsfunktionen
+= Sicherheitsfunktionen in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -17,23 +17,20 @@ SnapCenter umfasst die folgenden Sicherheitsfunktionen:
 
 * Die gesamte Kommunikation zu SnapCenter verwendet HTTP über SSL (HTTPS).
 * Alle Anmeldedaten in SnapCenter werden mit AES-Verschlüsselung (Advanced Encryption Standard) geschützt.
-* SnapCenter verwendet Sicherheitsalgorithmen, die dem Federal Information Processing Standard (FIPS) entsprechen.
-* SnapCenter unterstützt die Verwendung der vom Kunden bereitgestellten autorisierten CA-Zertifikate.
-* SnapCenter 4.1.1 oder höher unterstützt TLS 1.2 (Transport Layer Security) für die Kommunikation mit ONTAP. Sie können TLS 1.2 auch für die Kommunikation zwischen Clients und Servern verwenden.
-+
-Ab 5.0 unterstützt SnapCenter (TLS) 1.3 für die Kommunikation mit ONTAP.
-
-* SnapCenter unterstützt einen bestimmten Satz von SSL-Cipher-Suites, um die Sicherheit der Netzwerkkommunikation zu gewährleisten.
-+
-Weitere Informationen finden Sie unter https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_the_supported_SSL_Cipher_Suite["So konfigurieren Sie die unterstützte SSL Cipher Suite"].
-
+* Unterstützt Sicherheitsalgorithmen, die den Federal Information Processing Standard (FIPS) erfüllen.
+* Unterstützt die Verwendung der vom Kunden bereitgestellten autorisierten Zertifizierungsstellenzertifikate.
+* Unterstützt TLS 1.3 (Transport Layer Security) für die Kommunikation mit ONTAP. Sie können TLS 1.2 auch für die Kommunikation zwischen Clients und Servern verwenden.
+* Unterstützt bestimmte SSL-Cipher-Suites für Sicherheit in der Netzwerkkommunikation. https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_the_supported_SSL_Cipher_Suite["Weitere Informationen ."].
 * SnapCenter wird innerhalb der Firewall Ihres Unternehmens installiert, um den Zugriff auf den SnapCenter Server zu ermöglichen und die Kommunikation zwischen dem SnapCenter Server und den Plug-ins zu ermöglichen.
 * Für den SnapCenter-API- und -Betriebszugriff werden Tokens verwendet, die mit AES-Verschlüsselung verschlüsselt sind und nach 24 Stunden ablaufen.
 * SnapCenter lässt sich zur Anmeldung und zur rollenbasierten Zugriffssteuerung (Role Based Access Control, RBAC) in Windows Active Directory integrieren und ermöglicht die Zugriffsberechtigungen.
 * IPsec wird mit SnapCenter auf ONTAP für Windows- und Linux-Hostcomputer unterstützt. https://docs.netapp.com/us-en/ontap/networking/configure_ip_security_@ipsec@_over_wire_encryption.html#use-ipsec-identities["Weitere Informationen ."].
 * SnapCenter PowerShell Commandlets sind über die Sitzungen gesichert.
-* Nach einer Standardlaufzeit von 15 Minuten Inaktivität warnt Sie SnapCenter, dass Sie in 5 Minuten abgemeldet werden. Nach 20 Minuten Inaktivität meldet SnapCenter Sie aus, und Sie müssen sich erneut anmelden. Sie können den Ausloggen Zeitraum ändern.
-* Die Anmeldung ist nach 5 oder mehr falschen Anmeldeversuchen vorübergehend deaktiviert.
+* Nach einer Standardlaufzeit von 15 Minuten Inaktivität warnt Sie SnapCenter, dass Sie in 5 Minuten abgemeldet werden.
++
+Nach 20 Minuten Inaktivität meldet SnapCenter Sie aus, und Sie müssen sich erneut anmelden. Sie können den Ausloggen Zeitraum ändern.
+
+* Die Anmeldung ist nach 5 falschen Anmeldeversuchen vorübergehend deaktiviert.
 * Unterstützt die Authentifizierung von CA-Zertifikaten zwischen SnapCenter Server und ONTAP. https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_securely_connect_SnapCenter_with_ONTAP_using_CA_certificate["Weitere Informationen ."].
 * Integritätsprüfung wird dem SnapCenter-Server und den Plug-ins hinzugefügt und validiert alle im Lieferumfang enthaltenen Binärdateien bei Neuinstallationen und Upgrades.
 

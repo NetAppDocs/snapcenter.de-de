@@ -1,0 +1,256 @@
+---
+permalink: install/configure_certificate_based_authentication.html 
+sidebar: sidebar 
+keywords: exporting certificates, enable certificate-based authentication, certificate-based authentication, configure CA signed key pair, configure root, configure intermediate certificates, security,authentication, export CA certificates 
+summary: Exportieren von SnapCenter-Zertifikaten 
+---
+= Konfigurieren Sie die zertifikatbasierte Authentifizierung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die zertifikatbasierte Authentifizierung erhöht die Sicherheit durch die Überprüfung der Identität des SnapCenter-Servers und der Plug-in-Hosts und gewährleistet so eine sichere und verschlüsselte Kommunikation.
+
+
+
+== Aktivieren Sie die zertifikatbasierte Authentifizierung
+
+Führen Sie das folgende PowerShell-Cmdlet aus, um die zertifikatbasierte Authentifizierung für SnapCenter Server und die Windows Plug-in-Hosts zu aktivieren.  Bei Linux-Plug-in-Hosts wird die zertifikatbasierte Authentifizierung aktiviert, wenn Sie die bidirektionale SSL-Funktion aktivieren.
+
+* So aktivieren Sie die clientzertifikatbasierte Authentifizierung:
++
+`Set-SmConfigSettings -Agent –configSettings @{"EnableClientCertificateAuthentication"="true"}` `-HostName`<<hostname>>
+
+* So deaktivieren Sie die clientzertifikatbasierte Authentifizierung:
++
+`Set-SmConfigSettings -Agent –configSettings @{"EnableClientCertificateAuthentication"="false"}` `-HostName` `<<hostname>>``
+
+
+
+
+
+== Exportieren Sie Zertifikate der Zertifizierungsstelle (CA) vom SnapCenter-Server
+
+Sie sollten die CA-Zertifikate über die Microsoft Management Console (MMC) vom SnapCenter-Server auf die Plug-in-Hosts exportieren.
+
+.Bevor Sie beginnen
+Sie sollten die bidirektionale SSL-Konfiguration vorgenommen haben.
+
+*Schritte*
+
+. Gehen Sie zur Microsoft Management Console (MMC) und klicken Sie dann auf *Datei* > *Snapin hinzufügen/entfernen*.
+. Wählen Sie im Fenster Snap-ins hinzufügen oder entfernen die Option *Zertifikate* und klicken Sie dann auf *Hinzufügen*.
+. Wählen Sie im Fenster Zertifikate Snap-in die Option *Computerkonto* aus und klicken Sie dann auf *Fertig stellen*.
+. Klicken Sie Auf *Konsolenstamm* > *Zertifikate - Lokaler Computer* > *Persönlich* > *Zertifikate*.
+. Klicken Sie mit der rechten Maustaste auf das beschaffte CA-Zertifikat, das für den SnapCenter-Server verwendet wird, und wählen Sie dann *Alle Aufgaben* > *Export* aus, um den Export-Assistenten zu starten.
+. Führen Sie die folgenden Aktionen im Assistenten aus.
+
+
+|===
+| Für diese Option... | Gehen Sie wie folgt vor... 
+
+
+ a| 
+Privaten Schlüssel Exportieren
+ a| 
+Wählen Sie *Nein, exportieren Sie den privaten Schlüssel nicht*, und klicken Sie dann auf *Weiter*.
+
+
+
+ a| 
+Dateiformat Exportieren
+ a| 
+Klicken Sie Auf *Weiter*.
+
+
+
+ a| 
+Dateiname
+ a| 
+Klicken Sie auf *Browse* und geben Sie den Dateipfad an, um das Zertifikat zu speichern, und klicken Sie auf *Weiter*.
+
+
+
+ a| 
+Assistent zum Exportieren von Zertifikaten abschließen
+ a| 
+Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*, um den Export zu starten.
+
+|===
+
+NOTE: Die zertifikatbasierte Authentifizierung wird für SnapCenter HA-Konfigurationen und das SnapCenter Plug-in für VMware vSphere nicht unterstützt.
+
+
+
+== Importieren Sie das CA-Zertifikat auf die Windows-Plug-in-Hosts
+
+Um das exportierte SnapCenter-Server-CA-Zertifikat zu verwenden, sollten Sie das zugehörige Zertifikat über die Microsoft-Managementkonsole (MMC) auf die SnapCenter-Windows-Plug-in-Hosts importieren.
+
+*Schritte*
+
+. Gehen Sie zur Microsoft Management Console (MMC) und klicken Sie dann auf *Datei* > *Snapin hinzufügen/entfernen*.
+. Wählen Sie im Fenster Snap-ins hinzufügen oder entfernen die Option *Zertifikate* und klicken Sie dann auf *Hinzufügen*.
+. Wählen Sie im Fenster Zertifikate Snap-in die Option *Computerkonto* aus und klicken Sie dann auf *Fertig stellen*.
+. Klicken Sie Auf *Konsolenstamm* > *Zertifikate - Lokaler Computer* > *Persönlich* > *Zertifikate*.
+. Klicken Sie mit der rechten Maustaste auf den Ordner „Personal“ und wählen Sie dann *Alle Aufgaben* > *Import*, um den Import-Assistenten zu starten.
+. Führen Sie die folgenden Aktionen im Assistenten aus.
+
+
+|===
+| Für diese Option... | Gehen Sie wie folgt vor... 
+
+
+ a| 
+Speicherort Des Geschäfts
+ a| 
+Klicken Sie Auf *Weiter*.
+
+
+
+ a| 
+Zu importierende Datei
+ a| 
+Wählen Sie das SnapCenter-Serverzertifikat aus, das mit der Erweiterung .cer endet.
+
+
+
+ a| 
+Zertifikatspeicher
+ a| 
+Klicken Sie Auf *Weiter*.
+
+
+
+ a| 
+Assistent zum Exportieren von Zertifikaten abschließen
+ a| 
+Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*, um den Import zu starten.
+
+|===
+
+
+== Importieren Sie das CA-Zertifikat auf die UNIX-Plug-in-Hosts
+
+Sie sollten das CA-Zertifikat auf die UNIX-Plug-in-Hosts importieren.
+
+*Über diese Aufgabe*
+
+* Sie können das Kennwort für den SPL-Keystore und den Alias des CA-Schlüsselpaars verwalten, das gerade verwendet wird.
+* Das Passwort für den SPL-Keystore und für das zugehörige Alias-Passwort des privaten Schlüssels muss identisch sein.
+
+
+*Schritte*
+
+. Sie können SPL Schlüsselspeicher Standardpasswort aus SPL Eigenschaftsdatei abrufen. Es ist der Wert, der dem Schlüssel entspricht `SPL_KEYSTORE_PASS`.
+. Ändern Sie das Schlüsselspeicher-Passwort:
+`$ keytool -storepasswd -keystore keystore.jks`
+. Ändern Sie das Kennwort für alle Aliase privater Schlüsseleinträge im Schlüsselspeicher auf dasselbe Kennwort, das für den Schlüsselspeicher verwendet wird:
+`$ keytool -keypasswd -alias "<alias_name>" -keystore keystore.jks`
+. Aktualisieren Sie das gleiche für den Schlüssel SPL_KEYSTORE_PASS in `spl.properties`` Datei:
+. Starten Sie den Dienst neu, nachdem Sie das Passwort geändert haben.
+
+
+
+
+=== Konfigurieren Sie Root- oder Zwischenzertifikate in SPL Trust-Store
+
+Sie sollten die Stammzertifikate oder Zwischenzertifikate für den SPL-Vertrauensspeicher konfigurieren. Sie sollten das Root-CA-Zertifikat und anschließend die Zwischenzertifizierungszertifikate hinzufügen.
+
+*Schritte*
+
+. Navigieren Sie zu dem Ordner, der den SPL-Keystore enthält: `/var/opt/snapcenter/spl/etc`.
+. Suchen Sie die Datei `keystore.jks`.
+. Liste der hinzugefügten Zertifikate im Schlüsselspeicher:
+`$ keytool -list -v -keystore keystore.jks`
+. Fügen Sie ein Stammzertifikat oder ein Zwischenzertifikat hinzu:
+`$ keytool -import -trustcacerts -alias <AliasNameForCerticateToBeImported> -file /<CertificatePath> -keystore` `keystore.jks`
+. Starten Sie den Dienst neu, nachdem Sie die Stammzertifikate oder Zwischenzertifikate in den SPL Trust-Store konfiguriert haben.
+
+
+
+
+=== Konfigurieren Sie das CA-signierte Schlüsselpaar für SPL Trust-Store
+
+Sie sollten das CA-Schlüsselpaar für den SPL Trust-Store konfigurieren.
+
+*Schritte*
+
+. Navigieren Sie zu dem Ordner, der den SPL-Keystore enthält `/var/opt/snapcenter/spl/etc`.
+. Suchen Sie die Datei `keystore.jks``.
+. Liste der hinzugefügten Zertifikate im Schlüsselspeicher:
+`$ keytool -list -v -keystore keystore.jks`
+. Fügen Sie das CA-Zertifikat mit einem privaten und einem öffentlichen Schlüssel hinzu.
+`$ keytool -importkeystore -srckeystore <CertificatePathToImport> -srcstoretype pkcs12 -destkeystore keystore.jks` `-deststoretype JKS`
+. Listen Sie die hinzugefügten Zertifikate im Schlüsselspeicher auf.
+`$ keytool -list -v -keystore keystore.jks`
+. Vergewissern Sie sich, dass der Schlüsselspeicher den Alias enthält, der dem neuen CA-Zertifikat entspricht, das dem Schlüsselspeicher hinzugefügt wurde.
+. Ändern Sie das hinzugefügte Passwort für den privaten Schlüssel für das CA-Zertifikat in das Schlüsselspeicher-Passwort.
++
+Standard-SPL-Keystore-Kennwort ist der Wert des Schlüssels SPL_KEYSTORE_PASS in `spl.properties` Datei:
+
++
+`$ keytool -keypasswd -alias "<aliasNameOfAddedCertInKeystore>" -keystore keystore.jks``
+
+. Wenn der Alias-Name im CA-Zertifikat lang ist und Leerzeichen oder Sonderzeichen enthält („*",","), ändern Sie den Alias-Namen in einen einfachen Namen:
+`$ keytool -changealias -alias "<OrignalAliasName>" -destalias "<NewAliasName>" -keystore keystore.jks``
+. Konfigurieren Sie den Aliasnamen aus dem Schlüsselspeicher in `spl.properties` Datei:
+Diesen Wert mit dem Schlüssel SPL_CERTIFICATE_ALIAS aktualisieren.
+. Starten Sie den Dienst neu, nachdem Sie das CA-signierte Schlüsselpaar auf SPL Trust-Store konfiguriert haben.
+
+
+
+
+== Exportieren von SnapCenter-Zertifikaten
+
+Sie sollten die SnapCenter-Zertifikate im PFX-Format exportieren.
+
+*Schritte*
+
+. Gehen Sie zur Microsoft Management Console (MMC) und klicken Sie dann auf *Datei* > *Snap-in hinzufügen/entfernen*.
+. Wählen Sie im Fenster Snap-ins hinzufügen oder entfernen die Option *Zertifikate* und klicken Sie dann auf *Hinzufügen*.
+. Wählen Sie im Snap-in-Fenster Zertifikate die Option *Mein Benutzerkonto* aus und klicken Sie dann auf *Fertig stellen*.
+. Klicken Sie Auf *Konsolenwurzel* > *Zertifikate - Aktueller Benutzer* > *Vertrauenswürdige Stammzertifizierungsbehörden* > *Zertifikate*.
+. Klicken Sie mit der rechten Maustaste auf das Zertifikat mit dem SnapCenter Friendly Name, und wählen Sie dann *Alle Aufgaben* > *Exportieren* aus, um den Exportassistenten zu starten.
+. Füllen Sie den Assistenten wie folgt aus:
++
+|===
+| In diesem Fenster des Assistenten... | Gehen Sie wie folgt vor... 
+
+
+ a| 
+Privaten Schlüssel Exportieren
+ a| 
+Wählen Sie die Option *Ja, exportieren Sie den privaten Schlüssel* und klicken Sie dann auf *Weiter*.
+
+
+
+ a| 
+Dateiformat Exportieren
+ a| 
+Keine Änderungen vornehmen; klicken Sie auf *Weiter*.
+
+
+
+ a| 
+Sicherheit
+ a| 
+Geben Sie das neue Passwort an, das für das exportierte Zertifikat verwendet werden soll, und klicken Sie dann auf *Weiter*.
+
+
+
+ a| 
+Zu exportierende Datei
+ a| 
+Geben Sie einen Dateinamen für das exportierte Zertifikat an (Sie müssen .pfx verwenden), und klicken Sie dann auf *Weiter*.
+
+
+
+ a| 
+Assistent zum Exportieren von Zertifikaten abschließen
+ a| 
+Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*, um den Export zu starten.
+
+|===
+

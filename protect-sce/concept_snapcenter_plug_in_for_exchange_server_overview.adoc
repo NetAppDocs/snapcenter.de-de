@@ -23,3 +23,7 @@ NetApp Single Mailbox Recovery ist ein Partnerprodukt von Ontrack. OnTrack Power
 Das Plug-in für Exchange unterstützt SnapMirror Active Sync (ursprünglich veröffentlicht als SnapMirror Business Continuity [SM-BC]). Damit können Business-Services auch bei einem vollständigen Standortausfall weiterlaufen und Applikationen mithilfe einer sekundären Kopie einen transparenten Failover unterstützen. Es sind weder manuelle Eingriffe noch zusätzliche Skripte erforderlich, um einen Failover mit SnapMirror Active Sync auszulösen.
 
 Er unterstützt den asymmetrischen Modus, Failover oder nicht-Duplex-Modus von SnapMirror Active Sync. Dies bezieht sich auf die Lösung, bei der sich der optimierte Pfad nur vom primären LUN-Besitzknoten befindet. Sämtliche I/O-Vorgänge, die auf den sekundären Cluster-Pfaden eingehen, werden von Proxying zum primären Cluster. Die synchrone Replizierung ist unidirektional und bewegt sich in Richtung des primären zu des sekundären.
+
+* Automatisiert applikationsspezifische Backup- und Restore-Vorgänge für Microsoft Exchange Server Datenbanken und Datenbankverfügbarkeitsgruppen (Database Availability Groups, DAGs) in Ihrer SnapCenter Umgebung
+* Unterstützt virtualisierte Exchange-Server auf RDM-LUNs, wenn Sie das SnapCenter Plug-in für VMware vSphere bereitstellen und das Plug-in bei SnapCenter registrieren.
+

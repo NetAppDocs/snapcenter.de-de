@@ -15,8 +15,6 @@ Sie können die ausführbare Datei für das SnapCenter-Server-Installationsprogr
 
 .Bevor Sie beginnen
 * Wenn Sie den SnapCenter-Server unter Verwendung eines nicht-root-Benutzers installieren möchten, der nicht über ausreichende Berechtigungen zum Installieren von SnapCenter verfügt, rufen Sie die sudoers-Prüfsummendatei von der NetApp-Support-Website ab. Sie sollten die entsprechende Prüfsummendatei verwenden, die auf der Linux-Version basiert.
-* Während der Installation von . NET Runtime, wenn die Installation die Abhängigkeiten der _libicu_-Bibliothek nicht auflöst, installieren Sie _libicu_, indem Sie den folgenden Befehl ausführen: `yum install -y libicu`
-* Wenn die Installation von SnapCenter Server aufgrund der Nichtverfügbarkeit von _Perl_ fehlschlägt, installieren Sie _Perl_, indem Sie den Befehl ausführen: `yum install -y perl`
 * Wenn das sudo-Paket in SUSE Linux nicht verfügbar ist, installieren Sie das sudo-Paket, um Authentifizierungsfehler zu vermeiden.
 * Konfigurieren Sie für SUSE Linux den Hostnamen, um einen Installationsfehler zu vermeiden.
 * Überprüfen Sie den sicheren Linux-Status, indem Sie den Befehl ausführen `sestatus`. Wenn der _SELinux Status_ „aktiviert“ ist und der _Current Mode_ „erzwingt“ ist, führen Sie folgende Schritte aus:
@@ -66,6 +64,8 @@ Wenn der Befehl „nichts zu tun“ zurückgibt, führen Sie den Befehl nach der
 ** Schlüsselbasierte Authentifizierung zur Anmeldung bei SnapCenter
 
 
+* Während der Installation von . NET Runtime, wenn die Installation die Abhängigkeiten der _libicu_-Bibliothek nicht auflöst, installieren Sie _libicu_, indem Sie den folgenden Befehl ausführen: `yum install -y libicu`
+* Wenn die Installation von SnapCenter Server aufgrund der Nichtverfügbarkeit von _Perl_ fehlschlägt, installieren Sie _Perl_, indem Sie den Befehl ausführen: `yum install -y perl`
 
 
 .Schritte
@@ -140,23 +140,4 @@ Zu übergebene Parameter für die Installation des SnapCenter-Servers:
 .. Lauf `setsebool -P httpd_can_network_connect on`
 
 
-
-
-
-
-== Registrieren Sie das Produkt, um den Support zu aktivieren
-
-Wenn Sie zum ersten mal bei NetApp sind und noch kein NetApp Konto haben, sollten Sie das Produkt registrieren, um den Support zu aktivieren.
-
-.Schritte
-. Navigieren Sie nach der Installation von SnapCenter zu *Hilfe > Info*.
-. Notieren Sie sich im Dialogfeld _Info zu SnapCenter_ die SnapCenter-Instanz, eine 20-stellige Zahl, die mit 971 beginnt.
-. Klicken Sie Auf https://register.netapp.com[].
-. Klicken Sie auf *Ich bin kein registrierter NetApp-Kunde*.
-. Geben Sie Ihre Daten an, um sich zu registrieren.
-. Lassen Sie das Feld NetApp Referenz SN leer.
-. Wählen Sie in der Dropdown-Liste Produktreihe *SnapCenter* aus.
-. Wählen Sie den Abrechnungsanbieter aus.
-. Geben Sie die 20-stellige SnapCenter-Instanz-ID ein.
-. Klicken Sie Auf *Absenden*.
 

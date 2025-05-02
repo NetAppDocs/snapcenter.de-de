@@ -24,7 +24,7 @@ Sie können dann klicken image:../media/filter_icon.gif["Filtersymbol"] , um den
 +
 Die Seite Datenbankschutz wird angezeigt.
 
-. Auf der Seite „Ressourcen“ können Sie die folgenden Schritte ausführen:
+. Führen Sie auf der Seite Ressourcen die folgenden Schritte aus:
 +
 .. Aktivieren Sie das Kontrollkästchen, und geben Sie ein benutzerdefiniertes Namensformat ein, das für den Snapshot-Namen verwendet werden soll.
 +
@@ -37,8 +37,7 @@ Beispiel: `customtext_policy_hostname` Oder `resource_hostname`. Standardmäßig
 +
 .. Wählen Sie eine oder mehrere Richtlinien aus der Dropdown-Liste aus.
 +
-
-NOTE: Sie können eine Richtlinie erstellen, indem Sie auf klicken image:../media/add_policy_from_resourcegroup.gif["Symbol hinzufügen"].
+Sie können eine Richtlinie erstellen, indem Sie auf klicken image:../media/add_policy_from_resourcegroup.gif["Symbol hinzufügen"].
 
 +
 Im Abschnitt „Zeitpläne für ausgewählte Richtlinien konfigurieren“ werden die ausgewählten Richtlinien aufgelistet.

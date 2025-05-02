@@ -1,19 +1,40 @@
 ---
-permalink: concept/reference_pre_defined_snapcenter_roles_and_permissions.html 
+permalink: get-started/rbac-snapcenter.html 
 sidebar: sidebar 
-keywords: RBAC, role, permission, pre-defined role 
-summary: 'Im Lieferumfang von SnapCenter sind vordefinierte Rollen enthalten, von denen jede bereits aktiviert ist. Beim Einrichten und Verwalten der rollenbasierten Zugriffssteuerung \(RBAC\) können Sie entweder diese vordefinierten Rollen verwenden oder neue erstellen.' 
+keywords: RBAC, roles, permissions, application-level RBAC, ONTAP permissions, default snapcenter roles, ONTAP permissions, SnapCenter Admin role 
+summary: 'Mit der rollenbasierten Zugriffssteuerung (RBAC) und den ONTAP Berechtigungen können SnapCenter Administratoren Rollen erstellen und Zugriffsberechtigungen festlegen. SnapCenter Dank dieses zentral gemanagten Zugriffs können Applikationsadministratoren innerhalb delegierter Umgebungen sicher arbeiten.' 
 ---
-= Vordefinierte SnapCenter-Rollen und -Berechtigungen
+= Rollenbasierte Zugriffssteuerung in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Im Lieferumfang von SnapCenter sind vordefinierte Rollen enthalten, von denen jede bereits aktiviert ist. Beim Einrichten und Verwalten der rollenbasierten Zugriffssteuerung können Sie entweder die vordefinierten Rollen verwenden oder neue erstellen.
+Mit der rollenbasierten Zugriffssteuerung (RBAC) und den ONTAP Berechtigungen von SnapCenter können SnapCenter Administratoren die Kontrolle über SnapCenter Ressourcen an verschiedene Benutzer oder Benutzergruppen delegieren. Dank dieses zentral gemanagten Zugriffs können Applikationsadministratoren innerhalb delegierter Umgebungen sicher arbeiten.
 
-SnapCenter umfasst die folgenden vordefinierten Rollen:
+Sie können jederzeit Rollen erstellen und ändern und den Benutzern Ressourcenzugriff hinzufügen. Wenn Sie jedoch zum ersten Mal SnapCenter einrichten, sollten Sie mindestens Active Directory-Benutzer oder -Gruppen zu Rollen hinzufügen und diesen Benutzern oder Gruppen dann Ressourcenzugriff hinzufügen.
+
+
+NOTE: Sie können SnapCenter nicht zum Erstellen von Benutzer- oder Gruppenkonten verwenden. Sie sollten Benutzer- oder Gruppenkonten in Active Directory des Betriebssystems oder der Datenbank erstellen.
+
+
+
+== Typen der RBAC in SnapCenter
+
+SnapCenter verwendet folgende Arten der rollenbasierten Zugriffssteuerung:
+
+* SnapCenter RBAC
+* RBAC auf Applikationsebene
+* SnapCenter Plug-in für VMware vSphere RBAC
+* ONTAP-Berechtigungen
+
+
+
+
+=== SnapCenter RBAC
+
+SnapCenter verfügt über vordefinierte Rollen, und Sie können diesen Rollen Benutzer oder Benutzergruppen zuweisen. Dies sind die vordefinierten Rollen:
 
 * SnapCenter Administratorrolle
 * Administratorrolle für App Backup und Klonen
@@ -21,19 +42,61 @@ SnapCenter umfasst die folgenden vordefinierten Rollen:
 * Rolle für den Infrastrukturadministrator
 
 
+Wenn Sie einem Benutzer eine Rolle zuweisen, werden auf der Seite Jobs nur Aufträge angezeigt, die für diesen Benutzer relevant sind, es sei denn, Sie haben die Rolle SnapCenterAdmin zugewiesen.
+
+Sie können auch neue Rollen erstellen und Berechtigungen und Benutzer verwalten. Sie können Benutzern oder Gruppen Berechtigungen zuweisen, um auf SnapCenter-Objekte wie Hosts, Speicherverbindungen und Ressourcengruppen zuzugreifen.
+
+Sie können Benutzern und Gruppen innerhalb derselben Gesamtstruktur und Benutzern, die zu verschiedenen Wäldern gehören, RBAC-Berechtigungen zuweisen. Sie können Benutzern, die zu verschachtelten Gruppen gehören, keine RBAC-Berechtigungen zuweisen.
+
+
+NOTE: Wenn Sie eine benutzerdefinierte Rolle erstellen, muss diese alle Berechtigungen der SnapCenterAdmin-Rolle enthalten. Wenn Sie nur einige der Berechtigungen kopieren, z. B. Host add oder Host remove, können Sie diese Vorgänge nicht ausführen.
+
+Benutzer müssen bei der Anmeldung über die grafische Benutzeroberfläche (GUI) oder PowerShell Commandlets über die Authentifizierung sorgen. Wenn Benutzer Mitglieder mehrerer Rollen sind, werden sie nach der Eingabe von Anmeldedaten aufgefordert, die gewünschte Rolle anzugeben. Benutzer müssen außerdem eine Authentifizierung zur Ausführung der APIs bereitstellen.
+
+
+
+=== RBAC auf Applikationsebene
+
+SnapCenter verwendet die Zugangsdaten, um sicherzustellen, dass autorisierte SnapCenter Benutzer auch über Berechtigungen auf Applikationsebene verfügen.
+
+Wenn Sie beispielsweise Datensicherungsvorgänge in einer SQL Server-Umgebung durchführen möchten, müssen Sie Anmeldedaten mit den richtigen Windows- oder SQL-Anmeldeinformationen festlegen. Der SnapCenter-Server authentifiziert die Anmeldeinformationen, die auf beiden Methoden festgelegt sind. Wenn Sie Datensicherungsvorgänge in einer Windows File System-Umgebung auf ONTAP Storage durchführen möchten, muss die SnapCenter Administrator-Rolle über admin Privileges auf dem Windows Host verfügen.
+
+Wenn Sie Datensicherungsvorgänge in einer Oracle-Datenbank durchführen möchten und wenn die Betriebssystemauthentifizierung im Datenbank-Host deaktiviert ist, müssen Sie die Anmeldedaten mit der Oracle-Datenbank oder den Oracle-ASM-Anmeldeinformationen festlegen. Der SnapCenter-Server authentifiziert die Anmeldeinformationen, die mit einer dieser Methoden festgelegt wurden, je nach Operation.
+
+
+
+=== SnapCenter Plug-in für VMware vSphere RBAC
+
+Wenn Sie das SnapCenter VMware Plug-in für die VM-konsistente Datensicherung nutzen, bietet der vCenter Server zusätzliche RBAC-Level. Das SnapCenter VMware Plug-in unterstützt sowohl vCenter Server RBAC als auch ONTAP RBAC. https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_types_of_rbac_for_snapcenter_users.html["Weitere Informationen"^]
+
+|===
+
+
+| *Best Practice:* NetApp empfiehlt, eine ONTAP-Rolle für das SnapCenter Plug-in für VMware vSphere Operationen zu erstellen und diese alle erforderlichen Berechtigungen zuzuweisen. 
+|===
+
+
+=== ONTAP-Berechtigungen
+
+Sie sollten ein vsadmin-Konto mit den erforderlichen Berechtigungen für den Zugriff auf das Storage-System erstellen. link:../install/task_add_a_user_or_group_and_assign_role_and_assets.html["Weitere Informationen"]
+
+
+
+== Berechtigungen, die den vordefinierten SnapCenter-Rollen zugewiesen sind
+
 Wenn Sie einem Benutzer einer Rolle hinzufügen, müssen Sie entweder die Berechtigung StorageConnection zuweisen, um die Kommunikation mit der Storage Virtual Machine (SVM) zu aktivieren, oder dem Benutzer eine SVM zuweisen, damit die Berechtigung zur Verwendung der SVM aktiviert wird. Mit der Berechtigung für Speicherverbindungen können Benutzer SVM-Verbindungen erstellen.
 
 Ein Benutzer mit der Rolle „SnapCenter-Admin“ kann beispielsweise SVM-Verbindungen erstellen und einem Benutzer mit der Rolle „App-Backup“ und „Clone Admin“ zuweisen. Dieser besitzt standardmäßig keine Berechtigung, SVM-Verbindungen zu erstellen oder zu bearbeiten. Ohne SVM-Verbindung können Benutzer Backup-, Klon- oder Restore-Vorgänge nicht abschließen.
 
 
 
-== SnapCenter Administratorrolle
+=== SnapCenter Administratorrolle
 
 In der SnapCenter-Administratorrolle sind alle Berechtigungen aktiviert. Sie können die Berechtigungen für diese Rolle nicht ändern. Sie können der Rolle Benutzer und Gruppen hinzufügen oder sie entfernen.
 
 
 
-== Administratorrolle für App Backup und Klonen
+=== Administratorrolle für App Backup und Klonen
 
 Die Rolle „App Backup“ und „Clone Admin“ verfügt über die erforderlichen Berechtigungen zur Durchführung administrativer Aktionen für Applikations-Backups und klonbezogene Aufgaben. Diese Rolle verfügt nicht über Berechtigungen für Host-Management, Bereitstellung, Storage-Verbindungs-Management oder Remote-Installation.
 
@@ -311,7 +374,7 @@ Keine Angabe
 |===
 
 
-== Backup und Clone Viewer-Rolle
+=== Backup und Clone Viewer-Rolle
 
 Die Rolle Backup und Clone Viewer verfügt über eine schreibgeschützte Ansicht aller Berechtigungen. In dieser Rolle sind auch Berechtigungen für Erkennung, Berichterstellung und Zugriff auf das Dashboard aktiviert.
 
@@ -590,7 +653,7 @@ Keine Angabe
 |===
 
 
-== Rolle für den Infrastrukturadministrator
+=== Rolle für den Infrastrukturadministrator
 
 Die Rolle „Infrastrukturadministrator“ hat Berechtigungen für Host-Management, Storage-Management, Bereitstellung, Ressourcengruppen, Remote-Installationsberichte, Zugriff auf das Dashboard.
 

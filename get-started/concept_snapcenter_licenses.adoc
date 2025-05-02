@@ -1,10 +1,10 @@
 ---
-permalink: install/concept_snapcenter_licenses.html 
+permalink: get-started/concept_snapcenter_licenses.html 
 sidebar: sidebar 
 keywords: licenses, FAS, AFF, ASA, SnapMirror, SnapVault, SnapRestore, FlexClone, SMBR, Single Mailbox Recovery 
 summary: Für die Aktivierung von Datensicherungsvorgängen SnapCenter sind mehrere Lizenzen erforderlich. Die Art der installierten SnapCenter Lizenzen hängt von Ihrer Storage-Umgebung und den gewünschten Funktionen ab. 
 ---
-= SnapCenter-Lizenzen
+= Von SnapCenter benötigte Lizenzen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -67,7 +67,7 @@ Auf primären und sekundären Storage-Systemen
 
 
  a| 
-Protokolle
+Protokolllizenzen
  a| 
 * ISCSI- oder FC-Lizenz für LUNs
 * CIFS-Lizenz für SMB-Freigaben
@@ -87,18 +87,19 @@ Sekundäre Ziele
 
 NOTE: Es wird empfohlen, aber nicht erforderlich, dass Sie SnapCenter Standard-Lizenzen zu sekundären Zielen hinzufügen. Wenn SnapCenter Standardlizenzen nicht für sekundäre Ziele aktiviert sind, können Sie nach einem Failover-Vorgang SnapCenter nicht für ein Backup von Ressourcen auf dem sekundären Ziel verwenden. Allerdings ist eine FlexClone Lizenz für sekundäre Ziele erforderlich, um Klon- und Verifizierungsvorgänge durchzuführen.
 
-|===
-
-NOTE: Lizenzen für SnapCenter Advanced- und SnapCenter-NAS-Fileservices sind veraltet und sind nicht mehr verfügbar. Für Amazon FSX for NetApp ONTAP, ONTAP Select, Cloud Volumes ONTAP und Azure NetApp Files sind die Standardlizenz und die kapazitätsbasierte Lizenz nicht mehr erforderlich.
-
-Sie sollten eine oder mehrere SnapCenter Lizenzen installieren. Informationen zum Hinzufügen von Lizenzen finden Sie unter link:../install/concept_snapcenter_standard_controller_based_licenses.html["Controller-basierte SnapCenter Standard-Lizenzen hinzufügen"].
 
 
-
-== Single Mailbox Recovery-Lizenzen (SMBR
-
+ a| 
+Single Mailbox Recovery-Lizenzen (SMBR
+ a| 
 Wenn Sie für das Management von Microsoft Exchange Server Datenbanken und Single Mailbox Recovery (SMBR) mit dem SnapCenter Plug-in für Exchange arbeiten, benötigen Sie eine zusätzliche Lizenz für SMBR, die separat in Abhängigkeit von der Benutzer-Mailbox erworben werden muss.
 
 Die Einstellung der Verfügbarkeit für NetApp Single Mailbox Recovery (EOA) steht am 12. Mai 2023 fest. Weitere Informationen finden Sie unter link:https://mysupport.netapp.com/info/communications/ECMLP2885729.html["CPC-00507"]. NetApp unterstützt Kunden, die für den Zeitraum der Support-Berechtigung Mailbox-Kapazität, Wartung und Support erworben haben, weiterhin über die am 24. Juni 2020 eingeführten Marketing-Teilenummern.
 
 NetApp Single Mailbox Recovery ist ein Partnerprodukt von Ontrack. OnTrack PowerControls bietet ähnliche Funktionen wie NetApp Single Mailbox Recovery. Kunden können von Ontrack (bis licensingteam@ontrack.com) neue Ontrack PowerControls Softwarelizenzen und Ontrack PowerControls Wartungs- und Supportverlängerungen für eine granulare Mailbox-Recovery nach dem EOA-Datum vom 12. Mai 2023 beziehen.
+
+|===
+
+NOTE: Lizenzen für SnapCenter Advanced- und SnapCenter-NAS-Fileservices sind veraltet und sind nicht mehr verfügbar. Für Amazon FSX for NetApp ONTAP, ONTAP Select, Cloud Volumes ONTAP und Azure NetApp Files sind die Standardlizenz und die kapazitätsbasierte Lizenz nicht mehr erforderlich.
+
+Sie sollten eine oder mehrere SnapCenter Lizenzen installieren. Informationen zum Hinzufügen von Lizenzen finden Sie unter link:../install/concept_snapcenter_standard_controller_based_licenses.html["Controller-basierte SnapCenter Standard-Lizenzen hinzufügen"].

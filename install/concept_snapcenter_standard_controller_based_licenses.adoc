@@ -25,7 +25,7 @@ NOTE: Sie geben keine Lizenzinformationen in der SnapCenter GUI für die Control
 * Gesperrt an die Seriennummer des Controllers
 
 
-Informationen zu den erforderlichen Lizenzen finden Sie unter link:../install/concept_snapcenter_licenses.html["SnapCenter-Lizenzen"^].
+Informationen zu den erforderlichen Lizenzen finden Sie unter link:../get-started/concept_snapcenter_licenses.html["SnapCenter-Lizenzen"].
 
 
 

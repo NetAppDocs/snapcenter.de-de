@@ -390,7 +390,7 @@ Sie müssen Anmeldedaten konfigurieren, die für Datensicherungsvorgänge in Ora
 
 *Über diese Aufgabe*
 
-Sie sollten die verschiedenen für die Oracle-Datenbank unterstützten Authentifizierungsmethoden überprüfen. Weitere Informationen finden Sie unterlink:../install/concept_authentication_methods_for_your_credentials.html["Authentifizierungsmethoden für Ihre Anmeldedaten"^].
+Sie sollten die verschiedenen für die Oracle-Datenbank unterstützten Authentifizierungsmethoden überprüfen. Weitere Informationen finden Sie unter link:../get-started/concept_authentication_methods_for_your_credentials.html["Authentifizierungsmethoden für Ihre Anmeldedaten"^].
 
 Wenn Sie Anmeldedaten für einzelne Ressourcengruppen einrichten und der Benutzername keine vollständigen Administratorrechte hat, muss der Benutzername mindestens über Ressourcengruppen- und Sicherungsrechte verfügen.
 

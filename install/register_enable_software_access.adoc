@@ -1,7 +1,7 @@
 ---
 permalink: install/register_enable_software_access.html 
 sidebar: sidebar 
-keywords: install, snapcenter software, install, register, new customer, NetApp account, enable 
+keywords: install, snapcenter software, install, register, new customer, NetApp account, enable, Amazon FSx for NetApp ONTAP, Azure NetApp Files 
 summary: Wenn Sie noch kein NetApp-Konto haben, führen Sie die folgenden Schritte aus, um sich für den Zugriff auf Software zu registrieren. 
 ---
 = Registrieren Sie sich, um auf die SnapCenter Software zuzugreifen
@@ -9,7 +9,7 @@ summary: Wenn Sie noch kein NetApp-Konto haben, führen Sie die folgenden Schrit
 
 
 [role="lead"]
-Sie können auf die SnapCenter-Software zugreifen, wenn Sie noch kein NetApp-Konto besitzen und noch kein Amazon FSX for NetApp ONTAP oder Azure NetApp Files-Konto besitzen.
+Sie sollten sich registrieren, um auf die SnapCenter Software zuzugreifen, wenn Sie zum ersten mal Amazon FSX for NetApp ONTAP oder Azure NetApp Files kennen und noch kein NetApp-Konto besitzen.
 
 .Bevor Sie beginnen
 * Sie sollten Zugriff auf die Unternehmens-E-Mail-ID haben.
@@ -18,21 +18,16 @@ Sie können auf die SnapCenter-Software zugreifen, wenn Sie noch kein NetApp-Kon
 
 
 .Über diese Aufgabe
-Ihre Registrierung unterliegt der Informationsvalidierung und kann bis zu einem Tag dauern, bis ein neues Konto auf der NetApp Support Website (NSS) bestätigt und ein Upgrade durchgeführt wird, damit Sie über den „Gastzugriff“ vollen Zugriff erhalten.
+Ihre Registrierung unterliegt der Informationsvalidierung und kann bis zu einem Tag dauern, bis Sie ein neues Konto auf der NetApp Support-Website (NSS) bestätigen und upgraden können, um vom *Guest*-Zugang *vollen* Zugriff zu erhalten.
 
 .Schritte
 . Klicken Sie hier, https://mysupport.netapp.com/site/user/registration[] um sich zu registrieren.
-. Geben Sie Ihre Firmen-E-Mail-ID ein, füllen Sie das Captcha aus und akzeptieren Sie die Datenschutzerklärung von NetApp und klicken Sie auf *Senden*.
+. Geben Sie Ihre Unternehmens-E-Mail-ID ein, füllen Sie das Captcha aus, akzeptieren Sie die Datenschutzerklärung von NetApp und klicken Sie auf *Senden*.
 . Authentifizieren Sie die Registrierung, indem Sie das an Ihre E-Mail-ID gesendete OTP eingeben und auf *Weiter* klicken.
 . Geben Sie auf der Seite zum Abschluss der Registrierung die folgenden Details ein, um die Registrierung abzuschließen.
 +
 .. Wählen Sie *NetApp-Kunde/Endbenutzer* aus.
-.. Geben Sie im Feld SERIENNUMMER eine der folgenden Werte ein:
-+
-*** Azure-Abonnement-ID, wenn Sie Azure NetApp Files verwenden.
-*** Dateisystem-ID, wenn Sie Amazon FSX für NetApp ONTAP verwenden.
-
-
+.. Geben Sie im Feld SERIENNUMMER entweder die Azure-Abonnement-ID ein, wenn Sie Azure NetApp Files verwenden, oder die Dateisystemkennung, wenn Sie Amazon FSX für NetApp ONTAP verwenden.
 
 
 
