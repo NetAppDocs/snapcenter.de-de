@@ -111,6 +111,7 @@ Message Queuing
 NOTE: Stellen Sie sicher, dass keine anderen Anwendungen den MSMQ-Dienst verwenden, den SnapCenter erstellt und verwaltet.
 
 * RabbitMQ
+* Erlang
 
 
 
