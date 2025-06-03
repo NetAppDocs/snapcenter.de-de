@@ -1166,9 +1166,7 @@
   <block id="017007d9e00e31e53994cdd0aad0c593" category="admonition">Nach der Installation des SnapCenter-Servers sollten Sie nicht die Domäne ändern, in der sich der SnapCenter-Host befindet. Wenn Sie den SnapCenter-Server-Host aus der Domäne entfernen, in der sich der SnapCenter-Server installiert hatte, und dann versuchen Sie, SnapCenter-Server zu deinstallieren, schlägt der Deinstallationsvorgang fehl.</block>
   <block id="e0b8c0081a448231b99fbbd92c77468c" category="summary">Vor Durchführung von Datensicherungsvorgängen sollten Sie die Speicherverbindungen einrichten und die Zugangsdaten hinzufügen, die der SnapCenter-Server und die SnapCenter-Plug-ins verwenden werden.</block>
   <block id="1dd26f6fcf67127f078a9bb0e9318802" category="doc">Storage-Verbindungen und Anmeldedaten</block>
-  <block id="6a57d2f6137b4e66b867cbd6a5c2622a" category="list-text">*Speicherverbindungen*</block>
   <block id="96da08df10311c05ab070820f34934cd" category="paragraph">Über die Speicherverbindungen können SnapCenter-Server und SnapCenter-Plug-ins auf den ONTAP-Speicher zugreifen. Zum Einrichten dieser Verbindungen gehört auch die Konfiguration von Funktionen für das AutoSupport- und Ereignismanagement-System (EMS).</block>
-  <block id="3a8e375f86c81e7b283b9ee0db531e4d" category="list-text">*Anmeldeinformationen*</block>
   <block id="d85f921b47758996b8653f3b79ea9ec4" category="list-text">_Benutzername@upn_</block>
   <block id="3d6fa605604b40d3883d094bc10103f4" category="paragraph">Geben Sie bei Systemen, die zu einer Arbeitsgruppe gehören, den integrierten lokalen Administrator auf dem System an, auf dem Sie das SnapCenter-Plug-in installieren. Sie können ein lokales Benutzerkonto angeben, das zur lokalen Administratorengruppe gehört, wenn das Benutzerkonto über erhöhte Berechtigungen verfügt oder die Benutzerzugriffssteuerungsfunktion auf dem Hostsystem deaktiviert ist.</block>
   <block id="a8e47e30e292005e707c23a6a28b0aec" category="paragraph">Das zulässige Format für das Feld Benutzername lautet: _Username_</block>
@@ -1391,15 +1389,10 @@
   <block id="b65c1e59593548dad4a7a0a8af00e702" category="list-text">Klicken Sie auf der Seite Einstellungen auf *Rollen*.</block>
   <block id="1cfc01edff8bef313773da53b3e8c4eb" category="inline-image-macro">Symbol hinzufügen im Bildschirm Datenbank konfigurieren</block>
   <block id="009dc93979222b8650a313a069bc7b26" category="list-text">Klicken Sie Auf <block ref="db9d5f6f137b990473b3ea783cd913f5" category="inline-image-macro-rx" type="image"></block>.</block>
-  <block id="5c53e4d8c07d4cd65ccef16c0c161e93" category="list-text">Geben Sie auf der Seite Rolle hinzufügen einen Namen und eine Beschreibung für die neue Rolle an.</block>
   <block id="6796f46044b1e944ba537cec849ce2dc" category="list-text">Wählen Sie *Alle Mitglieder dieser Rolle können Objekte anderer Mitglieder* sehen, damit andere Mitglieder der Rolle nach der Aktualisierung der Ressourcenliste Ressourcen wie Volumes und Hosts sehen können.</block>
   <block id="bdc510da052289a87e1a226330d7f96c" category="paragraph">Sie sollten diese Option deaktivieren, wenn Sie nicht möchten, dass Mitglieder dieser Rolle Objekte sehen, denen andere Mitglieder zugewiesen sind.</block>
   <block id="ded362adb32c7d3904226c777c650579" category="admonition">Wenn diese Option aktiviert ist, ist es nicht erforderlich, Benutzern Zugriff auf Objekte oder Ressourcen zuzuweisen, wenn Benutzer derselben Rolle angehören wie der Benutzer, der die Objekte oder Ressourcen erstellt hat.</block>
   <block id="01da87f05c72e88b0ab5bc8ce0bb2575" category="list-text">Wählen Sie auf der Seite Berechtigungen die Berechtigungen aus, die Sie der Rolle zuweisen möchten, oder klicken Sie auf *Alle auswählen*, um der Rolle alle Berechtigungen zu gewähren.</block>
-  <block id="248724fdb43c06d73682eae495a17c67" category="summary">Mit SnapCenter können Sie eine FC-verbundene oder iSCSI-verbundene LUN konfigurieren. Sie können auch SnapCenter verwenden, um eine vorhandene LUN mit einem Windows-Host zu verbinden.</block>
-  <block id="30837f98cbd95f5a4cd8f19178a695e8" category="doc">Konfigurieren des LUN-Speichers</block>
-  <block id="9660abd0b48a5f9635c3e498547f1163" category="inline-link">ONTAP 9 SAN Configuration Guide</block>
-  <block id="e44dc355289fca4137269dc7b5607927" category="paragraph">LUNs sind die grundlegende Storage-Einheit in einer SAN-Konfiguration. Der Windows-Host sieht LUNs auf Ihrem System als virtuelle Festplatten. Weitere Informationen finden Sie unter<block ref="9216224738613ab52bfe8b66b8e2b039" category="inline-link-rx"></block>.</block>
   <block id="ad5caf46af1da5ea3bb28f96c57941f2" category="section-title">Richten Sie eine iSCSI-Sitzung ein</block>
   <block id="5702420822d09ff123dca89121a7edb1" category="paragraph">Wenn Sie iSCSI zum Herstellen einer Verbindung zu einer LUN verwenden, müssen Sie eine iSCSI-Sitzung starten, bevor Sie die LUN erstellen, um die Kommunikation zu ermöglichen.</block>
   <block id="17e2d63e3b45ecbfe13bcc32fec929d0" category="paragraph">*Bevor Sie beginnen*</block>
@@ -1428,11 +1421,6 @@
   <block id="e56e6eb9f96878a5d909655ad543a59d" category="list-text">Wenn Sie mit Ihren Einträgen zufrieden sind, klicken Sie auf *Verbinden*.</block>
   <block id="8103ea1f974b6fe78b3263b7a1107692" category="paragraph">SnapCenter richtet die iSCSI-Sitzung ein.</block>
   <block id="d92abf366bd9060c59bb86c051a977d0" category="list-text">Wiederholen Sie diesen Vorgang, um für jedes Ziel eine Sitzung einzurichten.</block>
-  <block id="4abe930f7ed4aa8557d64ff364aa1be7" category="section-title">Trennen Sie eine iSCSI-Sitzung</block>
-  <block id="cbb23b8d6f2ddac05adf3b8df4d48c63" category="paragraph">Gelegentlich müssen Sie eine iSCSI-Sitzung von einem Ziel trennen, mit dem Sie mehrere Sitzungen haben.</block>
-  <block id="8604cb873c825c8a47d73b5809f9ece3" category="list-text">Wählen Sie aus der Liste der iSCSI-Sitzungen die Sitzung aus, die Sie trennen möchten, und klicken Sie auf *Sitzung trennen*.</block>
-  <block id="404198fd96b17670e542d194555e13b5" category="list-text">Klicken Sie im Dialogfeld Sitzung trennen auf *OK*.</block>
-  <block id="690d3c16f8977d088a13175ac12ac454" category="paragraph">SnapCenter trennt die iSCSI-Sitzung.</block>
   <block id="3eae407dfe0e4c7f1efa654af1ad8d78" category="summary">Wenn Sie die SnapCenter GUI nicht zum Ausführen von Aufgaben zur Host-Bereitstellung und zur Speicherplatzrückgewinnung verwenden möchten, können Sie die PowerShell Commandlets verwenden, die vom SnapCenter Plug-in für Microsoft Windows zur Verfügung gestellt werden. Sie können Cmdlets direkt verwenden oder zu Skripten hinzufügen.</block>
   <block id="7237d45fe61f4bbc73cd8a2c246ec386" category="doc">Stellen Sie Storage mit PowerShell cmdlets bereit</block>
   <block id="9da496a6d2e4812b4deab34ab555bde8" category="paragraph">Wenn Sie die Cmdlets auf einem Remote-Plug-in-Host ausführen, müssen Sie das Cmdlet SnapCenter Open-SMConnection ausführen, um eine Verbindung zum SnapCenter Server zu öffnen.</block>
@@ -1563,18 +1551,12 @@
   <block id="dbd15fc926d88400581480c213191cb7" category="paragraph">Geben Sie einen oder mehrere Domänencontroller-Namen an und klicken Sie auf *Auflösen*.</block>
   <block id="71e6f64a457aae198ec095aa115ff2d0" category="paragraph">Wenn die Domänencontrollernamen nicht vom SnapCenter-Server behoben werden können, sollten Sie die DNS-Auflösungen beheben.</block>
   <block id="a69e754efca1b9623b6b0f65a2d8dc73" category="doc">Fügen Sie mithilfe von Sicherheits-Login-Befehlen eine ONTAP RBAC-Rolle hinzu</block>
-  <block id="474d9e4d882e646ea038c1c3f1057d2e" category="list-text">Bevor Sie eine ONTAP RBAC-Rolle für Storage-Systeme mit Clustered ONTAP erstellen, müssen Sie Folgendes angeben:</block>
-  <block id="ebe591ae9d43ae4398d95940e9fd9562" category="list-text">Die Aufgabe (oder Aufgaben), die Sie ausführen möchten</block>
-  <block id="7a0abee5eccc23660191580add8cd728" category="list-text">Die zum Ausführen dieser Aufgaben erforderlichen Berechtigungen</block>
-  <block id="f8d5d5371173552fd813059761bfc086" category="list-text">Zum Konfigurieren einer RBAC-Rolle müssen Sie die folgenden Aktionen durchführen:</block>
   <block id="1559a0574adcf52bb6e38eec37381b49" category="list-text">Gewähren Sie Berechtigungen für Befehle und/oder Befehlsverzeichnisse.</block>
   <block id="875c5aedd735db244786063faf6da722" category="paragraph">Für jedes Befehlsverzeichnis gibt es zwei Zugriffsebenen: All-Access und Read-Only.</block>
   <block id="dee6c2623edcbb8e68bfe81ea75668fa" category="paragraph">Sie müssen immer zuerst die All-Access-Berechtigungen zuweisen.</block>
   <block id="1deb5fee27bfdda7d20d4c10f6e8f273" category="list-text">Rollen Benutzern zuweisen.</block>
-  <block id="407e9947315902e28583d3951a4332d4" category="list-text">Sie können Ihre Konfiguration abhängig davon, ob Ihre SnapCenter Plug-ins für das gesamte Cluster mit der Cluster Administrator-IP verbunden oder direkt mit einer SVM im Cluster verbunden sind.</block>
   <block id="9dc5053bca32e6394932747f3adab2c4" category="inline-link">ONTAP 9 Administratorauthentifizierung und RBAC-Energiehandbuch</block>
   <block id="cf450319b4b50a20dcf243d6273acbf4" category="paragraph">Weitere Informationen zum Einrichten von ONTAP RBAC-Rollen finden Sie im<block ref="4054a3747c1ed1604c443c75434e693a" category="inline-link-rx"></block>.</block>
-  <block id="74fec6bb431ffa93b327d4933607ec3f" category="admonition">Aus Konsistenzgründen bezieht sich die SnapCenter-Dokumentation auf die Rollen als Verwenden von Berechtigungen. Die OnCommand System Manager GUI verwendet den Begriff _attribut_ anstelle von _Privilege_. Beim Einrichten von ONTAP RBAC-Rollen bedeuten beide Begriffe dasselbe.</block>
   <block id="eaa07c06fe679751494bfd4b2951b580" category="list-text">Erstellen Sie auf dem Storage-System eine neue Rolle, indem Sie den folgenden Befehl eingeben:</block>
   <block id="2c7e6d2877f857f126c24c7742e84098" category="paragraph"><block ref="c33f6523b710a03a2fd5d3e78562afa6" prefix="" category="inline-code"></block></block>
   <block id="af7e38d09fe8c21a2365c6a2c6e9bafe" category="list-text">svm_Name ist der Name der SVM. Wenn Sie dieses Feld leer lassen, werden standardmäßig Cluster-Administratoren verwendet.</block>
@@ -2099,8 +2081,6 @@
   <block id="c9f3f49f993cbb32ca86319abe11e4c0" category="paragraph">Auf der zweiten Seite des Assistenten</block>
   <block id="0ee122a05d856cc276dc5ced92d00f89" category="paragraph">Klicken Sie auf *Durchsuchen*, wählen Sie das _Root-Zertifikat_ und klicken Sie auf *Weiter*.</block>
   <block id="1c867d11dfed4e2774f6c5f4ef6fa505" category="list-text">Wiederholen Sie die Schritte 5 und 6 für die Zwischenzertifikate.</block>
-  <block id="b6ac2f945924adc12a6cced3f4732d89" category="summary">Das SnapCenter-Serverinstallationsprogramm aktiviert die Windows-Funktionen und -Rollen auf Ihrem Windows-Host während der Installation. Diese sind möglicherweise für die Fehlerbehebung und die Wartung des Host-Systems interessant.</block>
-  <block id="03b777e98e70f41a1b91fc53f61e82ae" category="doc">Während der Installation auf Ihrem Windows-Host aktivierte Funktionen</block>
   <block id="3adbdb3ac060038aa0e6e6c138ef9873" category="cell">Kategorie</block>
   <block id="21021ea0e52be8e9c599f4dff41e5be0" category="cell">Merkmal</block>
   <block id="3e197446d1794d1838e3734e66b2162c" category="paragraph">Web-Server</block>
@@ -2260,7 +2240,6 @@
   <block id="b9eabe260cd8a0a2c241b35d09dfb062" category="paragraph">Sie können das verwenden<block ref="340b7328d82897326900685536aac803" prefix=" " category="inline-code"></block> Option Wenn Sie die Plug-ins manuell installiert haben und nicht überprüfen möchten, ob der Host die Anforderungen für die Installation des Plug-ins erfüllt.</block>
   <block id="7372096d67d7a00d21e644f03bd6b3f6" category="summary">Sie können das SnapCenter-Plug-in für Microsoft Windows lokal auf einem Windows-Host installieren, wenn Sie das Plug-in nicht Remote über die SnapCenter-Benutzeroberfläche installieren können. Sie können das SnapCenter-Plug-in für Microsoft Windows-Installationsprogramm unbeaufsichtigt, im Silent-Modus, über die Windows-Befehlszeile ausführen.</block>
   <block id="3065bc79c85488f5e9c34540aa589dee" category="doc">Installieren Sie das SnapCenter-Plug-in für Microsoft Windows im Hintergrund über die Befehlszeile</block>
-  <block id="45305b0c2be46c68805c14c7667e37d1" category="list-text">Sie müssen die Windows-Nachrichtenwarteschlange aktiviert haben.</block>
   <block id="3f9e658ebdc571b944cc7a6bb94fa2fc" category="list-text">Sie müssen ein lokaler Administrator auf dem Host sein.</block>
   <block id="012cef6769a01d5c95c3bd84a1587de6" category="list-text">Laden Sie das SnapCenter-Plug-in für Microsoft Windows von Ihrem Installationsort herunter.</block>
   <block id="e0080a28dd770f19702e65fb9e7b8c86" category="paragraph">Beispielsweise lautet der Standardinstallationspfad C:\ProgramData\NetApp\SnapCenter\Package Repository.</block>
@@ -6646,16 +6625,13 @@
   <block id="0e1b3005c7d7fef8012117ae579df248" category="sidebar">Workflow sichern</block>
   <block id="f2098dd68244eba28833e305c4c720a3" category="sidebar">Abbrechen der Backup-Vorgänge</block>
   <block id="5cb6a75832518fd27c8d399ca2772808" category="sidebar">Überwachen Sie Klonvorgänge in SnapCenter</block>
-  <block id="ab5f4e39159ac71e7f3f1e7080905a20" category="sidebar">Installation von SnapCenter Server</block>
   <block id="f514139bd8bb4cc318cbbff458dd2226" category="sidebar">Bereiten Sie sich auf die Installation des SnapCenter-Servers vor</block>
-  <block id="bb8e9cdba9e13f92c0ca73c3ae3f6c05" category="sidebar">Verbindungen und Anmeldedaten für Storage Virtual Machines</block>
   <block id="3a42fbb761150585f7eaf7c0a04e8c90" category="sidebar">Melden Sie sich bei SnapCenter an</block>
   <block id="d816b0b5150b290e2a4a44bdb570d328" category="sidebar">Importieren Sie CA-Zertifikate</block>
   <block id="d15484ff4ea42a9f2e2b7d78bd97103b" category="sidebar">Aktivieren Sie CA-Zertifikate für SnapCenter Server</block>
   <block id="0095bd100c1750fd3bff002bda60502e" category="sidebar">Konfiguration von Active Directory, LDAP und LDAPS</block>
   <block id="055367d73c719054881d2c3df6cfb418" category="sidebar">Konfiguration Der Hochverfügbarkeit</block>
   <block id="66533c4e3134a6b220ad1336cd288c49" category="sidebar">Konfigurieren der rollenbasierten Zugriffssteuerung (Role Based Access Control, RBAC)</block>
-  <block id="5d4caff07857398d579cdda92ce3f34f" category="sidebar">Bereitstellung Ihres Storage-Systems</block>
   <block id="0daccd45abdac281e7508c5de0fa492c" category="sidebar">Bereitstellen von Storage auf Windows Hosts</block>
   <block id="76eb854ee139a484003d75645a214f2b" category="sidebar">Deinstallieren Sie SnapCenter Server und Plug-ins</block>
   <block id="60bea4969590084ae9e74b765b209fad" category="sidebar">Deinstallieren Sie SnapCenter-Plug-in-Pakete</block>
@@ -8220,14 +8196,10 @@ Die Aufbewahrung ist beispielsweise für eine Ressourcengruppe mit primärer SAP
   <block id="d980d1319cdc2e847ec81791913617aa" category="list-text"><block ref="20c46755c96f02dde2f4eed87e68d5d1" prefix="" category="inline-code"></block></block>
   <block id="c9d5338c9cdd07e93595b944d815cb6b" category="list-text"><block ref="eaba2b789999def4688a2d7d4052792b" prefix="" category="inline-code"></block></block>
   <block id="e37068689bf336f6598b2d7e4c655d04" category="list-text"><block ref="eca0518c19e4265640a4cff88fbe761b" prefix="" category="inline-code"></block></block>
-  <block id="e2d84dceaeb159e34341cf9ed5c25d5b" category="summary">Das SnapCenter-Server-Installationsprogramm aktiviert die Linux-Funktionen und -Rollen auf Ihrem Linux-Host während der Installation. Diese sind möglicherweise für die Fehlerbehebung und die Wartung des Host-Systems interessant.</block>
   <block id="0615d0e2ee2ca176a2602bdbb3cbf96e" category="doc">Funktionen, die während der Installation auf dem Linux-Host aktiviert wurden</block>
-  <block id="bff6720248dd6aaffe2e42a4d70ef683" category="paragraph">Der SnapCenter-Server installiert die unten aufgeführten Softwarepakete. Diese können für die Fehlerbehebung und die Wartung des Host-Systems interessant sein.</block>
   <block id="2ac5f63d0bb2ab4a9898d18445391caf" category="list-text">Rabbitmq</block>
-  <block id="62e0b5b350c9e3d2c19aa801d9442ba9" category="list-text">Nginx</block>
   <block id="f7e853158b776246c53345b938159cc1" category="list-text">Erlang</block>
   <block id="21624173efc06090951170116cd13563" category="list-text">PAM-Entwicklung</block>
-  <block id="3d265b4e1eeef0ddf17881fa003b18cc" category="list-text">PowerShell</block>
   <block id="6e3da1e6c4de3ddc55b5442f3d8fbf10" category="summary">Sie können den SnapCenter-Server auf dem Linux-Host installieren.</block>
   <block id="a5133039db74945642b3f4bbb769135d" category="doc">Installieren Sie den SnapCenter-Server auf dem Linux-Host</block>
   <block id="1f4157da0a0359b1f842a4aae6fa96a5" category="list-text">Wenn Sie den SnapCenter-Server unter Verwendung eines nicht-root-Benutzers installieren möchten, der nicht über ausreichende Berechtigungen zum Installieren von SnapCenter verfügt, rufen Sie die sudoers-Prüfsummendatei von der NetApp-Support-Website ab. Sie sollten die entsprechende Prüfsummendatei verwenden, die auf der Linux-Version basiert.</block>
@@ -9495,7 +9467,6 @@ Die Aufbewahrung ist beispielsweise für eine Ressourcengruppe mit primärer SAP
   <block id="8c4149a5e3a16e71c373cac16eab56eb" category="list-text"><block ref="8031b6dd89dc17bc568c9124170bb66a" prefix="" category="inline-code"></block></block>
   <block id="1f46b6eec6f3def165a94aea4fbd2de8" category="list-text"><block ref="d873942b6f54bbecd97eb915c6e95c45" prefix="" category="inline-code"></block></block>
   <block id="73c050ddeaec2b5e5a856c81666f8026" category="list-text">Klicken Sie auf das <block ref="725f4bf2ffc300942027282d0182533f" category="inline-image-macro-rx" type="image"></block> Symbol, und klicken Sie dann auf *Zertifikatvalidierung aktivieren*.</block>
-  <block id="920adb74812a2a6ff8228ec39336b73d" category="list-text">.NET Runtime 8.0.12 (und alle nachfolgenden 8.0.x-Patches)</block>
   <block id="233125590fad11d81c05c1b0279c56f1" category="admonition">SnapCenter unterstützt nur VMware Virtual Machine File System (VMFS) auf ASA r2 Systemen.</block>
   <block id="989977a18a476a92018e04dd60ec37c1" category="inline-link">Erfahren Sie mehr über ASA r2-Systeme</block>
   <block id="b3c78f6e772922673e6d35ae6df26cbd" category="list-text">Erstellung primärer Backups von Anwendungen über VMDK</block>
@@ -9776,7 +9747,6 @@ Die Aufbewahrung ist beispielsweise für eine Ressourcengruppe mit primärer SAP
   <block id="9efdf202df78f9a33e298564c835e4ba" category="summary">Wenn auf Ihren Storage-Systemen Clustered NetApp ONTAP ausgeführt wird, können Sie über die Sicherheits-Login-Befehle eine Rolle für die rollenbasierte Zugriffssteuerung von NetApp ONTAP hinzufügen.</block>
   <block id="2ad5f6ef1c47048e237f2fafae87313a" category="doc">Fügen Sie mithilfe von Sicherheits-Login-Befehlen eine RBAC-Rolle für NetApp ONTAP hinzu</block>
   <block id="e1be0500812e131476a1a2d9b7429541" category="paragraph">Sie können die Sicherheitskontinbefehle verwenden, um eine RBAC-Rolle für NetApp ONTAP hinzuzufügen, wenn auf Ihren Storage-Systemen Clustered ONTAP ausgeführt wird.</block>
-  <block id="34a087679e427c81dd4b62602fb6e759" category="paragraph">Um die Konfiguration dieser Rollen auf Storage-Systemen zu vereinfachen, können Sie das Tool RBAC User Creator for NetApp ONTAP verwenden, das im NetApp Communities Forum bereitgestellt wird.</block>
   <block id="cd63f10378363da86bcf8672b918512a" category="paragraph">Dieses Tool verarbeitet automatisch die korrekte Einrichtung der ONTAP-Berechtigungen. Das Tool RBAC User Creator for NetApp ONTAP fügt beispielsweise die Privileges automatisch in der richtigen Reihenfolge hinzu, sodass die Privileges mit allen Zugriffsrechten zuerst angezeigt werden. Wenn Sie zuerst die schreibgeschützten Berechtigungen hinzufügen und dann die All-Access-Berechtigungen hinzufügen, markiert ONTAP die All-Access-Berechtigungen als Duplikate und ignoriert sie.</block>
   <block id="0715b20c4e81f0c852f66480ef00c667" category="admonition">Wenn Sie später SnapCenter oder ONTAP aktualisieren, sollten Sie das RBAC-Benutzerersteller für NetApp ONTAP-Tool erneut ausführen, um die zuvor erstellten Benutzerrollen zu aktualisieren. Benutzerrollen, die für eine frühere Version von SnapCenter oder ONTAP erstellt wurden, funktionieren nicht ordnungsgemäß mit aktualisierten Versionen. Wenn Sie das Tool erneut ausführen, übernimmt es automatisch die Aktualisierung. Sie müssen die Rollen nicht neu erstellen.</block>
   <block id="30962a20671f7b70a267e94343e24484" category="list-text">Objekt-Storage-Funktionen für FAS, ASA oder AFF ONTAP und Amazon FSX für NetApp ONTAP Storage-Systeme werden nicht unterstützt.</block>
@@ -9995,4 +9965,19 @@ Die Aufbewahrung ist beispielsweise für eine Ressourcengruppe mit primärer SAP
   <block id="2eadd26d0e5aeb8538a0e0d8cf0e68bf" category="sidebar">Authentifizierungsmethoden</block>
   <block id="06ad314b340900d226b1196e1fe289e9" category="sidebar">Schnellstart</block>
   <block id="a9246bf3c3eb55a8aee642477b14a8f7" category="sidebar">Registrieren Sie sich auf der NetApp Support-Website</block>
+  <block id="f8f43715a5fc1f86f8da231ed019b0c6" category="section-title">Speicherverbindungen</block>
+  <block id="596fc94bf8faf17d4f6a3ec6fc53437f" category="paragraph">Der SnapCenter-Server installiert die folgenden Softwarepakete, die bei der Fehlerbehebung und Wartung des Hostsystems helfen können.</block>
+  <block id="74b83e8446b3a82f3063984fb362fc4a" category="paragraph">Wenn Sie die SnapCenter-GUI nicht zum Durchführen von Hostbereitstellungs- und Speicherplatzrückgewinnungsaufträgen verwenden möchten, können Sie die PowerShell-Cmdlets verwenden. Sie können Cmdlets direkt verwenden oder zu Skripten hinzufügen.</block>
+  <block id="63865c4d9ae769f19103f3ee2d977184" category="list-text">Identifizieren Sie die Aufgabe (oder Aufgaben), die Sie ausführen möchten, und die Berechtigungen, die zum Ausführen dieser Aufgaben erforderlich sind.</block>
+  <block id="d7d6797642e09c2dc77b50ef5e78df62" category="list-text">Identifizieren Sie Ihre Konfiguration, je nachdem, ob Ihre SnapCenter-Plug-Ins mit der Cluster-Administrator-IP für den gesamten Cluster oder direkt mit einer SVM innerhalb des Clusters verbunden sind.</block>
+  <block id="02db4b32d20778ef679bcd2da9e5e94a" category="paragraph">Um die Konfiguration dieser Rollen auf Speichersystemen zu vereinfachen, können Sie das Tool „RBAC User Creator für NetApp ONTAP“ verwenden, das im NetApp Communities Forum veröffentlicht wird.</block>
+  <block id="edb8104325c03cc5ddc6550b87275741" category="paragraph">Um eigene Rollen zu erstellen, ist eine Anmeldung mit der Rolle „SnapCenterAdmin“ erforderlich.</block>
+  <block id="8116454de7e5e8911f5a289d793b43d9" category="list-text">Geben Sie einen Namen und eine Beschreibung für die neue Rolle an.</block>
+  <block id="0d27cfd920c0e17d1df5689d46baa774" category="admonition">In Benutzernamen und Gruppennamen dürfen nur die folgenden Sonderzeichen verwendet werden: Leerzeichen ( ), Bindestrich (-), Unterstrich (_) und Doppelpunkt (:).</block>
+  <block id="28dbcf5fe30fd921ce51a9e1c3a6c30f" category="section-title">Während der Installation auf dem Windows-Host aktivierte Funktionen</block>
+  <block id="83e7de52a01e78e22c88a405e22e660a" category="paragraph">Das SnapCenter-Serverinstallationsprogramm aktiviert die Windows-Funktionen und -Rollen auf Ihrem Windows-Host während der Installation. Diese könnten für die Fehlerbehebung und Wartung des Hostsystems von Interesse sein.</block>
+  <block id="76335228f2ee14e5df4e858ae5e7684c" category="sidebar">Installieren und Konfigurieren von SnapCenter Server</block>
+  <block id="d39d360863f3fda3c5d615dc978e14ae" category="sidebar">Installieren Sie den SnapCenter-Server</block>
+  <block id="3199d4d0758d0f4f53db9a8f36670c18" category="sidebar">Konfigurieren des SnapCenter-Servers</block>
+  <block id="4c975961e88401702aa6aac167300031" category="sidebar">Hinzufügen und Bereitstellen des Speichersystems</block>
 </blocks>

@@ -11,7 +11,7 @@ summary: Wenn Sie die SnapCenter GUI nicht zum Ausführen von Aufgaben zur Host-
 
 
 [role="lead"]
-Wenn Sie die SnapCenter GUI nicht zum Ausführen von Aufgaben zur Host-Bereitstellung und zur Speicherplatzrückgewinnung verwenden möchten, können Sie die PowerShell Commandlets verwenden, die vom SnapCenter Plug-in für Microsoft Windows zur Verfügung gestellt werden. Sie können Cmdlets direkt verwenden oder zu Skripten hinzufügen.
+Wenn Sie die SnapCenter-GUI nicht zum Durchführen von Hostbereitstellungs- und Speicherplatzrückgewinnungsaufträgen verwenden möchten, können Sie die PowerShell-Cmdlets verwenden. Sie können Cmdlets direkt verwenden oder zu Skripten hinzufügen.
 
 Wenn Sie die Cmdlets auf einem Remote-Plug-in-Host ausführen, müssen Sie das Cmdlet SnapCenter Open-SMConnection ausführen, um eine Verbindung zum SnapCenter Server zu öffnen.
 

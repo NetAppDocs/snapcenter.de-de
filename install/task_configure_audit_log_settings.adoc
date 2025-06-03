@@ -17,8 +17,7 @@ Prüfprotokolle werden durch die Generierung von Digital Signed Digest für jede
 
 Sie sollten sich als „SnapCenterAdmin“-Rolle angemeldet haben.
 
-*Über diese Aufgabe*
-
+.Über diese Aufgabe
 * Warnmeldungen werden in den folgenden Szenarien gesendet:
 +
 ** Der Zeitplan für die Integritätsprüfung des Überwachungsprotokolls oder der Syslog-Server ist aktiviert oder deaktiviert
@@ -40,8 +39,7 @@ Die Informationen zu den Parametern, die mit dem Cmdlet und deren Beschreibungen
 
 
 
-*Schritte*
-
+.Schritte
 . Navigieren Sie auf der Seite *Einstellungen* zu *Einstellungen* > *Globale Einstellungen* > *Prüfprotokoll-Einstellungen*.
 . Geben Sie im Abschnitt Prüfprotokoll die Details ein.
 . Geben Sie das Logverzeichnis *Audit* und das Verzeichnis *Prüfsumme-Prüfsumme-Protokoll* ein

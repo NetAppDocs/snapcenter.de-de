@@ -141,3 +141,13 @@ Zu übergebene Parameter für die Installation des SnapCenter-Servers:
 
 
 
+
+
+
+== Funktionen, die während der Installation auf dem Linux-Host aktiviert wurden
+
+Der SnapCenter-Server installiert die folgenden Softwarepakete, die bei der Fehlerbehebung und Wartung des Hostsystems helfen können.
+
+* Rabbitmq
+* Erlang
+
