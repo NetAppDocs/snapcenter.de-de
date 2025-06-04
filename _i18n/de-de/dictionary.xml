@@ -6767,7 +6767,6 @@
   <block id="04f76259e3406e39f106d09b85354906" category="inline-link">Bei Backups mit SnapCenter für Exchange wird nur die Hälfte der Snapshots auf dem Ziel-Log-Volume von Vault gespeichert</block>
   <block id="67e1d332319e6fe55fd35967c2ec989e" category="admonition">Erstellen Sie beim Umgang mit Exchange Volumes (LUNs) separate Vault-Richtlinien für Protokolle und Datenbanken, und setzen Sie die Keep (Retention) für die Protokollrichtlinie auf die doppelte Anzahl für jedes Label wie die Datenbankrichtlinie unter Verwendung derselben Labels. Weitere Informationen finden Sie unter:<block ref="069d987d34ba2a5b3f4862b42bb7f849" category="inline-link-rx"></block></block>
   <block id="b885eb831c1b0ea66dc957240ef0bacd" category="admonition">Stellen Sie beim Wiederherstellen von Kontrolldateien sicher, dass die Verzeichnisstruktur entweder vorhanden ist oder mit dem korrekten Benutzer- und Gruppeneigentum erstellt werden soll, falls vorhanden, damit die Dateien durch den Wiederherstellungsvorgang an den Zielspeicherort kopiert werden können. Wenn das Verzeichnis nicht vorhanden ist, schlägt der Wiederherstellungsauftrag fehl.</block>
-  <block id="3a6eb59ee064b09b020c1a87c5de4988" category="admonition">IBM Java wird nicht unterstützt.</block>
   <block id="bb92d00cc055d1fa0c3023946870bfd5" category="paragraph">Informationen zur .NET-spezifischen Fehlerbehebung finden Sie unter<block ref="d20f19fe60cd205f06739b1a5caeb450" category="inline-link-rx"></block></block>
   <block id="9756c6d75626032c8da05d425c1d0ca9" category="inline-link">SnapCenter-Upgrade oder -Installation schlägt bei Legacy-Systemen ohne Internetverbindung fehl</block>
   <block id="462fbac4d281be78bedf063a9dbd9f61" category="paragraph">Informationen zur .NET-spezifischen Fehlerbehebung finden Sie unter<block ref="b173f6267e94bec8cf82a1d95b991ed7" category="inline-link-rx"></block>.</block>
@@ -8723,7 +8722,6 @@ Die Aufbewahrung ist beispielsweise für eine Ressourcengruppe mit primärer SAP
   <block id="0b12a00876503fb1813afee6ad9b0a76" category="list-text">ORA_TEMP gibt das Verzeichnis für temporäre Dateien an.</block>
   <block id="e1ab4aa639aa539548c7d55759dc7004" category="list-text">ORACLE_HOME gibt das Verzeichnis an, in dem die Oracle-Software installiert ist.</block>
   <block id="57808f9033b6670d0e1ff1ecc8197488" category="list-text">ARCHIVE_LOG_ONLY gibt an, ob die Archivprotokolle gesichert werden sollen oder nicht.</block>
-  <block id="6d6058c414d1170875e11ce8a19484f0" category="list-text">ORACLE_BACKUP_MODE gibt an, ob ein Online- oder Offline-Backup durchgeführt werden soll.</block>
   <block id="c4e433903376436b2e77e2cfdc6f5913" category="summary">Wenn eine einzelne von NetApp unterstützte Plug-ins-Ressource nicht zu einer Ressourcengruppe gehört, können Sie die Ressource auf der Seite „Ressourcen“ sichern. Sie können die Ressource nach Bedarf sichern, oder wenn die Ressource über eine Richtlinie und einen konfigurierten Zeitplan verfügt, werden die Backups automatisch gemäß dem Zeitplan durchgeführt.</block>
   <block id="6ce5278b296a0a5a39af4a4d0cbd927c" category="doc">Backup einzelner von NetApp unterstützter Plug-ins-Ressourcen</block>
   <block id="37a077fe53864717026a312c9cfed412" category="doc">Backup von von NetApp unterstützten Plug-ins-Ressourcen</block>
@@ -9980,4 +9978,16 @@ Die Aufbewahrung ist beispielsweise für eine Ressourcengruppe mit primärer SAP
   <block id="d39d360863f3fda3c5d615dc978e14ae" category="sidebar">Installieren Sie den SnapCenter-Server</block>
   <block id="3199d4d0758d0f4f53db9a8f36670c18" category="sidebar">Konfigurieren des SnapCenter-Servers</block>
   <block id="4c975961e88401702aa6aac167300031" category="sidebar">Hinzufügen und Bereitstellen des Speichersystems</block>
+  <block id="81f9b64ab1987ed2d00f4d52a80ca52b" category="paragraph">Die neuesten Informationen zu unterstützten Versionen finden Sie im<block ref="315018c067f16596ddc2e2de507c24d0" category="inline-link-rx"></block>.</block>
+  <block id="0885e9f12d8cb35b0f02655c34c87004" category="admonition">IBM Java wird auf Windows- und Linux-Hosts nicht unterstützt.</block>
+  <block id="48c9a1bf5de7bf57f1efa648f3bc8d17" category="inline-link">JAVA für Windows herunterladen</block>
+  <block id="a4560fe71d10d98deabf55fdf50b90f0" category="paragraph"><block ref="a4560fe71d10d98deabf55fdf50b90f0" category="inline-link-rx"></block></block>
+  <block id="25827211b51e5a08cc74ddb2f845f386" category="inline-link">Laden Sie JAVA für Linux herunter</block>
+  <block id="0632a773655c14c1b1e9ced88bc550ed" category="paragraph"><block ref="0632a773655c14c1b1e9ced88bc550ed" category="inline-link-rx"></block></block>
+  <block id="ffef625a5852f63e8c97e120b261e871" category="inline-link">Laden Sie JAVA für AIX herunter</block>
+  <block id="1cf0cff6e7cd05dac4238e50abe74627" category="paragraph"><block ref="1cf0cff6e7cd05dac4238e50abe74627" category="inline-link-rx"></block></block>
+  <block id="67366bdaf9086e6015fe527a27beb845" category="inline-link">Laden Sie JAVA für alle Betriebssysteme herunter</block>
+  <block id="230f7d0fc162c3a559cd8b29556f41f4" category="paragraph"><block ref="230f7d0fc162c3a559cd8b29556f41f4" category="inline-link-rx"></block></block>
+  <block id="17103b09b3247a2b39032b11b995b325" category="list-text">ORACLE_BACKUPMODE gibt an, ob eine Online- oder Offline-Sicherung durchgeführt werden soll.</block>
+  <block id="849d9298ad9d6def4918273148b3d4bf" category="list-text">ORACLE_EXPORT_PARAMETERS gibt an, ob Umgebungsvariablen während der Ausführung von _bin/su_ exportiert werden können. Der Wert für ORACLE_EXPORT_PARAMETERS sollte auf *y* gesetzt werden.</block>
 </blocks>
