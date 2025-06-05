@@ -9989,5 +9989,5 @@ Die Aufbewahrung ist beispielsweise für eine Ressourcengruppe mit primärer SAP
   <block id="67366bdaf9086e6015fe527a27beb845" category="inline-link">Laden Sie JAVA für alle Betriebssysteme herunter</block>
   <block id="230f7d0fc162c3a559cd8b29556f41f4" category="paragraph"><block ref="230f7d0fc162c3a559cd8b29556f41f4" category="inline-link-rx"></block></block>
   <block id="17103b09b3247a2b39032b11b995b325" category="list-text">ORACLE_BACKUPMODE gibt an, ob eine Online- oder Offline-Sicherung durchgeführt werden soll.</block>
-  <block id="849d9298ad9d6def4918273148b3d4bf" category="list-text">ORACLE_EXPORT_PARAMETERS gibt an, ob Umgebungsvariablen während der Ausführung von _bin/su_ exportiert werden können. Der Wert für ORACLE_EXPORT_PARAMETERS sollte auf *y* gesetzt werden.</block>
+  <block id="e787bc810fe0c9919da5538cad8cb1f1" category="list-text">ORACLE_EXPORT_PARAMETERS gibt an, ob die oben definierten Umgebungsvariablen beim Ausführen von _/bin/su &lt;Benutzer, der sqlplus ausführt&gt; -c sqlplus /nolog &lt;Befehl&gt;_ erneut exportiert werden sollen. Dies ist typischerweise der Fall, wenn der Benutzer, der sqlplus ausführt, nicht alle Umgebungsvariablen gesetzt hat, die für die Verbindung zur Datenbank mit _connect / as sysdba_ erforderlich sind.</block>
 </blocks>
