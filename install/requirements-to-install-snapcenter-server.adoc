@@ -305,9 +305,9 @@ Von NetApp unterstützte Plug-ins für SnapCenter
 HTTPS
  a| 
  a| 
-Dies ist ein interner Port, der nur auf dem benutzerdefinierten Plug-in-Host verwendet wird. Es ist keine Firewall-Ausnahme erforderlich.
+Dies ist ein interner Port, der nur auf dem Plug-In-Host verwendet wird; es ist keine Firewall-Ausnahme erforderlich.
 
-Die Kommunikation zwischen dem SnapCenter-Server und benutzerdefinierten Plug-ins wird über Port 8145 geleitet.
+Die Kommunikation zwischen dem SnapCenter-Server und den Plug-Ins wird über Port 8145 geleitet.
 
 
 

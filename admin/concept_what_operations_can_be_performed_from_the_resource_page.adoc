@@ -16,13 +16,11 @@ Sie können auf der Seite Ressourcen Ressourcen Ressourcen Ressourcen Ressourcen
 Auf der Seite „Ressourcen“ können Sie die folgenden Aufgaben ausführen:
 
 |===
-| Sie können diese Aufgaben ausführen... | Für Microsoft Exchange Server | Für Microsoft SQL Server | Für Microsoft Windows | Für Oracle Database | Für SAP HANA Database | Für benutzerdefinierte Plug-ins 
+| Sie können diese Aufgaben ausführen... | Für Microsoft Exchange Server | Für Microsoft SQL Server | Für Microsoft Windows | Für Oracle Database | Für SAP HANA Database 
 
 
  a| 
 Bestimmen Sie, ob Ressourcen für ein Backup verfügbar sind
- a| 
-Ja.
  a| 
 Ja.
  a| 
@@ -48,15 +46,11 @@ Ja.
 Ja.
  a| 
 Ja.
- a| 
-Ja.
 
 
 
  a| 
 Restore aus Backups
- a| 
-Ja.
  a| 
 Ja.
  a| 
@@ -82,15 +76,11 @@ Ja.
 Ja.
  a| 
 Ja.
- a| 
-Ja.
 
 
 
  a| 
 Backup-Management
- a| 
-Ja.
  a| 
 Ja.
  a| 
@@ -116,15 +106,11 @@ Ja.
 Ja.
  a| 
 Ja.
- a| 
-Ja.
 
 
 
  a| 
 Management von Richtlinien
- a| 
-Ja.
  a| 
 Ja.
  a| 
@@ -150,8 +136,6 @@ Ja.
 Ja.
  a| 
 Ja.
- a| 
-Ja.
 
 
 
@@ -165,8 +149,6 @@ Nein
 Nein
  a| 
 Ja.
- a| 
-Nein
  a| 
 Nein
 
@@ -184,15 +166,11 @@ Nein
 Ja.
  a| 
 Nein
- a| 
-Nein
 
 
 
  a| 
 Details anzeigen
- a| 
-Ja.
  a| 
 Ja.
  a| 

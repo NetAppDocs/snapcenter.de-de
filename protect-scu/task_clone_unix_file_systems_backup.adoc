@@ -15,7 +15,7 @@ Sie können SnapCenter verwenden, um Unix-Dateisystem mit dem Backup des Dateisy
 
 .Bevor Sie beginnen
 * Sie können die Aktualisierung der fstab-Datei überspringen, indem Sie den Wert von _SKIP_FSTAB_UPDATE_ auf *true* in der Datei _agent.properties_ unter _/opt/NetApp/snapcenter/scc/etc_ setzen.
-* Sie können einen statischen Klon-Volume-Namen und einen Verbindungspfad erhalten, indem Sie den Wert von _USE_CUSTOM_CLONE_VOLUME_NAME_FORMAT_ in der Datei _agent.properties_ unter _/opt/NetApp/snapcenter/scc/etc_ auf *true* setzen. Nach dem Aktualisieren der Datei sollten Sie den SnapCenter for Custom Plug-in-Dienst neu starten, indem Sie den folgenden Befehl ausführen: `/opt/NetApp/snapcenter/scc/bin/scc restart`.
+* Sie können einen statischen Klon-Volume-Namen und einen Verbindungspfad erhalten, indem Sie den Wert von _USE_CUSTOM_CLONE_VOLUME_NAME_FORMAT_ in der Datei _agent.properties_ unter _/opt/NetApp/snapcenter/scc/etc_ auf *true* setzen. Nach der Aktualisierung der Datei sollten Sie den SnapCenter Plug-in Creator-Dienst neu starten, indem Sie den folgenden Befehl ausführen:  `/opt/NetApp/snapcenter/scc/bin/scc restart` .
 +
 Beispiel: Ohne diese Eigenschaft werden der Name des geklonten Volumes und der Verbindungspfad wie <Source_volume_name>_Clone_<Timestamp> sein, aber jetzt wird es <Source_volume_name>_Clone_<Clone_Name> sein
 

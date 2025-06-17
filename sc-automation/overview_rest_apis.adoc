@@ -17,7 +17,6 @@ Folgende Plug-ins unterstützen REST-APIs:
 
 * Plug-in für Microsoft SQL Server
 * Plug-in für SAP HANA Database
-* Benutzerdefinierte Plug-ins
 * Plug-in für Oracle Database
 
 

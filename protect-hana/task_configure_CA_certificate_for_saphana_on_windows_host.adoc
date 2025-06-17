@@ -2,7 +2,7 @@
 permalink: protect-hana/task_configure_CA_certificate_for_saphana_on_windows_host.html 
 sidebar: sidebar 
 keywords: SnapCenter 
-summary: Konfigurieren Sie das CA-Zertifikat für den benutzerdefinierten SnapCenter-Plug-ins-Dienst auf Windows-Host 
+summary: Konfigurieren des CA-Zertifikats für den SnapCenter-SAP HANA-Plug-ins-Service auf dem Windows-Host 
 ---
 = Konfigurieren des CA-Zertifikats für den SnapCenter-SAP HANA-Plug-ins-Service auf dem Windows-Host
 :allow-uri-read: 
@@ -11,16 +11,16 @@ summary: Konfigurieren Sie das CA-Zertifikat für den benutzerdefinierten SnapCe
 
 
 [role="lead"]
-Sie sollten das Passwort des benutzerdefinierten Plug-ins Keystore und dessen Zertifikat verwalten, das CA-Zertifikat konfigurieren, Root- oder Zwischenzertifikate für den benutzerdefinierten Plug-ins Trust-Store konfigurieren und das CA-signierte Schlüsselpaar auf benutzerdefinierte Plug-ins Trust-Store mit SnapCenter Custom Plug-ins Service konfigurieren, um das installierte digitale Zertifikat zu aktivieren.
+Sie sollten das Kennwort des Plug-In-Schlüsselspeichers und seines Zertifikats verwalten, das CA-Zertifikat konfigurieren, Stamm- oder Zwischenzertifikate für den Plug-In-Truststore konfigurieren und ein von der CA signiertes Schlüsselpaar für den Plug-In-Truststore mit dem SnapCenter-Plug-In-Dienst konfigurieren, um das installierte digitale Zertifikat zu aktivieren.
 
-Benutzerdefinierte Plug-ins verwenden die Datei _keystore.jks_, die sich unter _C:\Program Files\NetApp\SnapCenter\SnapCenter Plug-in Creator\etc_ befindet, sowohl als Vertrauensspeicher als auch als Schlüsselspeicher.
+Die Plug-Ins verwenden die Datei _keystore.jks_, die sich unter _C:\Programme\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc_ befindet, sowohl als Truststore als auch als Keystore.
 
 
 
-== Passwort für benutzerdefinierten Plug-in-Schlüsselspeicher und Alias des verwendeten CA-signierten Schlüsselpaares verwalten
+== Verwalten Sie das Kennwort für den Plug-In-Schlüsselspeicher und den Alias des verwendeten, von der Zertifizierungsstelle signierten Schlüsselpaars.
 
 .Schritte
-. Sie können benutzerdefinierte Plug-in Schlüsselspeicher Standardpasswort aus benutzerdefinierten Plug-in Agent Eigenschaftsdatei abrufen.
+. Sie können das Standardkennwort für den Plug-In-Keystore aus der Eigenschaftendatei des Plug-In-Agenten abrufen.
 +
 Es ist der Wert, der dem Schlüssel _KEYSTORE_PASS_ entspricht.
 
@@ -45,18 +45,18 @@ Aktualisieren Sie das gleiche für den Schlüssel KEYSTORE_PASS in _agent.proper
 . Starten Sie den Dienst neu, nachdem Sie das Passwort geändert haben.
 +
 
-NOTE: Das Kennwort für den benutzerdefinierten Plug-in-Schlüsselspeicher und für alle zugeordneten Alias-Passwörter des privaten Schlüssels sollte gleich sein.
+NOTE: Das Kennwort für den Plug-In-Schlüsselspeicher und für alle zugehörigen Aliaskennwörter des privaten Schlüssels müssen identisch sein.
 
 
 
 
 
-== Konfigurieren Sie Root- oder Zwischenzertifikate in einem benutzerdefinierten Plug-in Trust-Store
+== Konfigurieren Sie Stamm- oder Zwischenzertifikate für den Plug-In-Truststore
 
-Sie sollten die Stammzertifikate oder Zwischenzertifikate ohne privaten Schlüssel als benutzerdefinierten Plug-in-Vertrauensspeicher konfigurieren.
+Sie sollten die Stamm- oder Zwischenzertifikate ohne den privaten Schlüssel für den Plug-In-Truststore konfigurieren.
 
 .Schritte
-. Navigieren Sie zum Ordner mit dem benutzerdefinierten Plug-in Schlüsselspeicher _C:\Programme\NetApp\SnapCenter\SnapCenter Plug-in Creator\etc_
+. Navigieren Sie zu dem Ordner, der den Plug-in-Schlüsselspeicher enthält: _C:\Programme\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc_
 . Suchen Sie die Datei 'keystore.jks'.
 . Liste der hinzugefügten Zertifikate im Schlüsselspeicher:
 +
@@ -66,7 +66,7 @@ _Keytool -list -V -keystore keystore.jks_
 +
 _Keytool -Import -trustcacerts -alias myRootCA -file /root/USERTrustRSA_Root.cer -keystore keystore.jks_
 
-. Starten Sie den Dienst neu, nachdem Sie die Stammzertifikate oder Zwischenzertifikate in einen benutzerdefinierten Plug-in Trust-Store konfiguriert haben.
+. Starten Sie den Dienst neu, nachdem Sie die Stamm- oder Zwischenzertifikate für den Plug-In-Truststore konfiguriert haben.
 
 
 
@@ -74,12 +74,12 @@ NOTE: Sie sollten das Root-CA-Zertifikat und anschließend die Zwischenzertifizi
 
 
 
-== Konfigurieren Sie das CA-signierte Schlüsselpaar in einem benutzerdefinierten Plug-in-Vertrauensspeicher
+== Konfigurieren Sie das von der Zertifizierungsstelle signierte Schlüsselpaar für den Plug-In-Truststore
 
-Sie sollten das CA-signierte Schlüsselpaar für den benutzerdefinierten Plug-in Trust-Store konfigurieren.
+Sie sollten das von der Zertifizierungsstelle signierte Schlüsselpaar für den Truststore des Plug-Ins konfigurieren.
 
 .Schritte
-. Navigieren Sie zum Ordner mit dem benutzerdefinierten Plug-in Schlüsselspeicher _C:\Programme\NetApp\SnapCenter\SnapCenter Plug-in Creator\etc_
+. Navigieren Sie zu dem Ordner, der den Plug-in-Schlüsselspeicher enthält: _C:\Programme\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc_
 . Suchen Sie die Datei _keystore.jks_.
 . Liste der hinzugefügten Zertifikate im Schlüsselspeicher:
 +
@@ -96,7 +96,7 @@ _Keytool -list -V -keystore keystore.jks_
 . Vergewissern Sie sich, dass der Schlüsselspeicher den Alias enthält, der dem neuen CA-Zertifikat entspricht, das dem Schlüsselspeicher hinzugefügt wurde.
 . Ändern Sie das hinzugefügte Passwort für den privaten Schlüssel für das CA-Zertifikat in das Schlüsselspeicher-Passwort.
 +
-Das benutzerdefinierte Standard-Plug-in-Schlüsselspeicher-Passwort ist der Wert der SCHLÜSSELDATEI KEYSTORE_PASS in agent.properties.
+Das Standardkennwort für den Plug-in-Keystore ist der Wert des Schlüssels KEYSTORE_PASS in der Datei agent.properties.
 
 +
 _Keytool -keypasswd -alias „alias_Name_in_CA_cert“ -keystore keystore.jks_
@@ -105,17 +105,17 @@ _Keytool -keypasswd -alias „alias_Name_in_CA_cert“ -keystore keystore.jks_
 +
 Diesen Wert mit dem Schlüssel SCC_CERTIFICATE_ALIAS aktualisieren.
 
-. Starten Sie den Dienst neu, nachdem Sie das CA-signierte Schlüsselpaar in einen benutzerdefinierten Plug-in Trust-Store konfiguriert haben.
+. Starten Sie den Dienst neu, nachdem Sie das von der Zertifizierungsstelle signierte Schlüsselpaar für den Plug-In-Truststore konfiguriert haben.
 
 
 
 
-== Konfigurieren der Zertifikatsperrliste (CRL) für benutzerdefinierte SnapCenter-Plug-ins
+== Konfigurieren der Zertifikatsperrliste (CRL) für SnapCenter-Plug-Ins
 
 .Über diese Aufgabe
 * Informationen zum Herunterladen der neuesten CRL-Datei für das zugehörige CA-Zertifikat finden Sie unter https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_update_certificate_revocation_list_file_in_SnapCenter_CA_Certificate["Aktualisieren der Listendatei für Zertifikatsperrlisten im SnapCenter CA-Zertifikat"].
-* Benutzerdefinierte SnapCenter-Plug-ins suchen in einem vorkonfigurierten Verzeichnis nach den CRL-Dateien.
-* Das Standardverzeichnis für die CRL-Dateien für benutzerdefinierte SnapCenter Plug-ins ist _'C:\Programme\NetApp\SnapCenter\SnapCenter Plug-in Creator\ etc\crl'_.
+* SnapCenter-Plug-Ins suchen in einem vorkonfigurierten Verzeichnis nach den CRL-Dateien.
+* Das Standardverzeichnis für die CRL-Dateien für SnapCenter-Plug-ins ist _'C:\Programme\NetApp\SnapCenter\Snapcenter Plug-in Creator\ etc\crl'_.
 
 
 .Schritte

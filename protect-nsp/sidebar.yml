@@ -66,11 +66,11 @@ entries:
       url: "/protect-nsp/get_the_CA_certificate_thumbprint.html"
     - title: Konfigurieren Sie das CA-Zertifikat mit den Windows-Host-Plug-in-Diensten
       url: "/protect-nsp/configure_CA_certificate_with_Windows_host_plug-in_services.html"
-    - title: Konfigurieren Sie das CA-Zertifikat für den benutzerdefinierten SnapCenter-Plug-ins-Dienst
+    - title: Konfigurieren Sie das CA-Zertifikat für den SnapCenter Plug-Ins-Dienst
         auf dem Linux-Host
       url: "/protect-nsp/configure_CA_certificate_on_Linux_host.html"
-    - title: Konfigurieren Sie das CA-Zertifikat für den benutzerdefinierten SnapCenter-Plug-ins-Dienst
-        auf Windows-Host
+    - title: Konfigurieren Sie das CA-Zertifikat für den SnapCenter Plug-Ins-Dienst
+        auf dem Windows-Host
       url: "/protect-nsp/configure_CA_certificate_on_windows_host.html"
     - title: Aktivieren Sie CA-Zertifikate für Plug-ins
       url: "/protect-nsp/enable_ca_certificates_for_plug-ins.html"

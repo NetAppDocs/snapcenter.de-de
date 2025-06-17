@@ -119,7 +119,6 @@ Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
 * Wiederherstellen eines Backups einer SQL-Datenbank
 * Wiederherstellen eines Backups einer Oracle Datenbank
 * Wiederherstellung eines Backups benutzerdefinierter Applikationen
-* Erstellen Sie eine benutzerdefinierte Plug-in-Ressource
 * SAP HANA-Ressource erstellen
 * Schützen Sie eine benutzerdefinierte Ressource mit Plug-in für benutzerdefinierte Applikationen
 * Schützen Sie eine Microsoft SQL Server-Ressource mit Plug-in für Microsoft SQL Server
@@ -272,7 +271,6 @@ Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
 * SAP HANA-Datenbank mit einem Schlüssel konfigurieren
 * Konfigurieren Sie die Oracle-Datenbank mit einem Schlüssel
 * Wiederherstellung eines Backups benutzerdefinierter Applikationen mit einem Schlüssel
-* Erstellen Sie eine benutzerdefinierte Plug-in-Ressource
 * SAP HANA-Ressource erstellen
 * Erstellen einer Oracle Application Volume-Ressource
 * Schützen Sie eine benutzerdefinierte Ressource mit Plug-in für benutzerdefinierte Applikationen

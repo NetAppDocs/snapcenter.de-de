@@ -16,7 +16,6 @@ Sie können Hosts entfernen und einzelne Plug-ins oder Plug-in-Pakete mithilfe d
 Bevor Sie einen Host vom SnapCenter-Server entfernen, müssen Sie die Voraussetzungen erfüllen.
 
 * Melden Sie sich als Administrator an.
-* Wenn Sie benutzerdefinierte SnapCenter Plug-ins verwenden, sollten Sie alle Klone aus SnapCenter löschen, die dem Host zugeordnet sind.
 * Stellen Sie sicher, dass Ermittlungsjobs nicht auf dem Host ausgeführt werden.
 * Sie sollten eine Rolle mit den erforderlichen Berechtigungen zum Entfernen aller mit dem Host verknüpften Objekte zuweisen. Andernfalls schlägt das Entfernen fehl.
 * Sie sollten den Fingerabdruck bestätigen, wenn der SSH-Schlüssel nach dem Hinzufügen des Hosts zum SnapCenter geändert wurde.
