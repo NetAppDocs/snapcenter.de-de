@@ -23,8 +23,6 @@ Für Cloud-Umgebungen können Sie Hochverfügbarkeit entweder mit Amazon Web Ser
 --
 Anweisungen zum Konfigurieren von SnapCenter -Servern für hohe Verfügbarkeit mit F5 Load Balancer finden Sie unter  https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_SnapCenter_Servers_for_high_availability_using_F5_Load_Balancer["Konfigurieren von SnapCenter-Servern für Hochverfügbarkeit mit F5 Load Balancer"^] .
 
-Bild
-
 Sie müssen Mitglied der Gruppe Lokale Administratoren auf den SnapCenter-Servern sein (zusätzlich zur SnapCenterAdmin-Rolle zugewiesen), um die folgenden Cmdlets zum Hinzufügen und Entfernen von F5-Clustern zu verwenden:
 
 * Add-SmServerCluster

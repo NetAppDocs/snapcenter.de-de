@@ -41,6 +41,8 @@ Microsoft Windows
 
 Die neuesten Informationen zu unterstützten Versionen finden Sie im https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"^].
 
+Wenn Sie ein Windows-Cluster-Setup verwenden, sollten Sie auch die Windows-Remoteverwaltung (WinRM) installieren und konfigurieren.
+
 
 
  a| 
