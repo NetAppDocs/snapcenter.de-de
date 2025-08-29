@@ -17,10 +17,10 @@ Die Controller-basierte Lizenz weist folgende Merkmale auf:
 
 * SnapCenter Standard-Nutzungsberechtigung ist beim Kauf von Premium oder Flash Bundle enthalten (nicht im Basispaket).
 * Unbegrenzte Storage-Nutzung
-* Ermöglicht wird dies durch direktes Hinzufügen zum FAS, AFF oder ASA Storage Controller mithilfe von ONTAP System Manager oder der ONTAP CLI.
+* Wird mithilfe des ONTAP System Manager oder der ONTAP CLI direkt zum FAS, AFF oder ASA -Speichercontroller hinzugefügt.
 +
 
-NOTE: Sie geben keine Lizenzinformationen in der SnapCenter GUI für die Controller-basierten SnapCenter Lizenzen ein.
+NOTE: Für die Controller-basierten Lizenzen von SnapCenter geben Sie in der SnapCenter -Benutzeroberfläche keine Lizenzinformationen ein.
 
 * Gesperrt an die Seriennummer des Controllers
 
@@ -31,10 +31,10 @@ Informationen zu den erforderlichen Lizenzen finden Sie unter link:../get-starte
 
 == Schritt 1: Überprüfen Sie, ob die SnapManager Suite-Lizenz installiert ist
 
-Sie können die SnapCenter GUI verwenden, um festzustellen, ob eine SnapManager Suite Lizenz auf primären Storage-Systemen von FAS, AFF oder ASA installiert ist, und um zu ermitteln, für welche Storage-Systeme möglicherweise Lizenzen der SnapManager Suite erforderlich sind. Lizenzen der SnapManager Suite gelten nur für FAS, AFF und ASA SVMs oder Cluster auf primären Storage-Systemen.
+Sie können die SnapCenter Benutzeroberfläche verwenden, um zu überprüfen, ob eine SnapManager Suite-Lizenz auf FAS, AFF oder ASA Primärspeichersystemen installiert ist, und um festzustellen, welche Systeme Lizenzen benötigen.  SnapManager Suite-Lizenzen gelten nur für FAS, AFF und ASA -SVMs oder Cluster auf primären Speichersystemen.
 
 
-NOTE: Wenn Sie auf Ihrem Controller bereits eine Lizenz für die SnapManager Suite besitzen, wird die Controller-basierte SnapCenter Standard-Lizenzberechtigung automatisch bereitgestellt. Die Namen SnapManagerSuite Lizenz und SnapCenter Standard Controller-basierte Lizenz werden austauschbar verwendet, aber sie beziehen sich auf dieselbe Lizenz.
+NOTE: Wenn Sie bereits über eine SnapManager Suite-Lizenz auf Ihrem Controller verfügen, stellt SnapCenter automatisch die Berechtigung für die Standard-Controller-basierte Lizenz bereit.  Die Bezeichnungen SnapManagerSuite-Lizenz und Controller-basierte SnapCenter Standard-Lizenz werden synonym verwendet, beziehen sich jedoch auf dieselbe Lizenz.
 
 .Schritte
 . Wählen Sie im linken Navigationsbereich *Storage Systems* aus.
@@ -66,11 +66,11 @@ In der Spalte „Controller License“ wird der folgende Status angezeigt:
 Mit der ONTAP-Befehlszeile können Sie alle auf dem Controller installierten Lizenzen anzeigen. Sie sollten Cluster-Administrator auf dem FAS-, AFF- oder ASA-System sein.
 
 
-NOTE: Die Controller-basierte SnapCenter Standard-Lizenz wird auf dem Controller als SnapManagerSuite-Lizenz angezeigt.
+NOTE: Der Controller zeigt die Controller-basierte Lizenz von SnapCenter Standard als SnapManagerSuite-Lizenz an.
 
 .Schritte
 . Loggen Sie sich über die ONTAP-Befehlszeile beim NetApp Controller ein.
-. Geben Sie den Befehl license show ein, und zeigen Sie anschließend die Ausgabe an, um zu ermitteln, ob die SnapManagerSuite Lizenz installiert ist.
+. Geben Sie den Befehl „license show“ ein und sehen Sie sich dann die Ausgabe an, um zu sehen, ob die SnapManagerSuite-Lizenz installiert ist.
 +
 .Beispielausgabe
 [%collapsible]
@@ -110,7 +110,7 @@ Da hier beispielsweise die SnapManagerSuite Lizenz installiert ist, ist keine zu
 
 == Schritt 3: Rufen Sie die Seriennummer des Controllers ab
 
-Sie benötigen die Controller-Seriennummer zum Abrufen der Seriennummer Ihrer Controller-basierten Lizenz. Sie können die Seriennummer des Controllers über die ONTAP-Befehlszeile abrufen. Sie sollten Cluster-Administrator auf dem FAS-, AFF- oder ASA-System sein.
+Rufen Sie die Seriennummer des Controllers mithilfe der ONTAP -Befehlszeile ab.  Sie müssen Clusteradministrator auf dem FAS, AFF oder ASA -System sein, um Ihre Controller-basierte Lizenzseriennummer zu erhalten.
 
 .Schritte
 . Loggen Sie sich über die ONTAP-Befehlszeile beim Controller ein.
@@ -162,12 +162,12 @@ All-Flash Optimized: false
 
 == Schritt 4: Rufen Sie die Seriennummer der Controller-basierten Lizenz ab
 
-Wenn Sie FAS SnapCenter-, ASA- oder AFF-Storage verwenden, können Sie die Controller-basierte Lizenz von der NetApp Support-Website abrufen, bevor Sie sie über die ONTAP-Befehlszeile installieren können.
+Wenn Sie FAS, ASA oder AFF -Speicher verwenden, können Sie die Controller-basierte Lizenz für SnapCenter von der NetApp -Support-Site abrufen, bevor Sie sie über die ONTAP -Befehlszeile installieren.
 
 .Bevor Sie beginnen
 * Sie sollten über gültige Anmeldedaten für die NetApp Support Site verfügen.
 +
-Wenn Sie keine gültigen Anmeldedaten eingeben, werden keine Informationen für Ihre Suche zurückgegeben.
+Wenn Sie keine gültigen Anmeldeinformationen eingeben, gibt das System keine Informationen zu Ihrer Suche zurück.
 
 * Sie sollten die Controller-Seriennummer angeben.
 
@@ -220,7 +220,7 @@ Dieser Befehl ist auf der Administrator-Berechtigungsebene verfügbar.
 
 == Schritt 6: Entfernen Sie die Testlizenz
 
-Wenn Sie eine Controller-basierte SnapCenter Standard-Lizenz verwenden und die kapazitätsbasierte Testlizenz entfernen müssen (Seriennummer mit „`50`“ endet), sollten Sie MySQL-Befehle verwenden, um die Testlizenz manuell zu entfernen. Die Testlizenz kann nicht über die SnapCenter-Benutzeroberfläche gelöscht werden.
+Wenn Sie eine Controller-basierte SnapCenter Standard-Lizenz verwenden und die kapazitätsbasierte Testlizenz (Seriennummer endet mit „50“) entfernen müssen, sollten Sie MySQL-Befehle verwenden, um die Testlizenz manuell zu entfernen.  Die Testlizenz kann nicht über die SnapCenter Benutzeroberfläche gelöscht werden.
 
 
 NOTE: Das manuelle Entfernen einer Testlizenz ist nur erforderlich, wenn Sie eine Controller-basierte SnapCenter Standard-Lizenz verwenden.
@@ -228,10 +228,10 @@ NOTE: Das manuelle Entfernen einer Testlizenz ist nur erforderlich, wenn Sie ein
 .Schritte
 . Öffnen Sie auf dem SnapCenter-Server ein PowerShell-Fenster, um das MySQL-Passwort zurückzusetzen.
 +
-.. Führen Sie das Cmdlet "Open-SmConnection" aus, um eine Verbindungssitzung mit dem SnapCenter-Server für ein SnapCenterAdmin-Konto zu initiieren.
+.. Führen Sie das Cmdlet Open-SmConnection aus, um eine Verbindung mit dem SnapCenter -Server für ein SnapCenterAdmin-Konto herzustellen.
 .. Führen Sie das Set-RepositRepositRepositSmoryPassword aus, um das MySQL-Passwort zurückzusetzen.
 +
-Informationen zu den Cmdlets finden Sie unter https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["SnapCenter Software Cmdlet Referenzhandbuch"^].
+Informationen zu den Cmdlets finden Sie unter https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter Software Cmdlet Referenzhandbuch"^] .
 
 
 
@@ -241,6 +241,6 @@ MySQL fordert Sie zur Eingabe des Passworts auf. Geben Sie die Anmeldeinformatio
 
 . Entfernen Sie die Testlizenz aus der Datenbank:
 +
-`use nsm;``DELETE FROM nsm_License WHERE nsm_License_Serial_Number='510000050';`
+`use nsm;DELETE FROM nsm_License WHERE nsm_License_Serial_Number='510000050';`
 
 
