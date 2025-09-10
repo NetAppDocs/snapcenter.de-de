@@ -93,10 +93,6 @@ NOTE: Wenn Sie *Update SnapMirror nach dem Erstellen einer lokalen Snapshot Kopi
 
 . Wählen Sie im Abschnitt sekundäre Replikationsoptionen auswählen eine oder beide der folgenden sekundären Replikationsoptionen aus:
 +
-
-NOTE: Sie müssen die sekundären Replikationsoptionen für *Sperrfrist der sekundären Snapshot-Kopie* auswählen, um wirksam zu sein.
-
-+
 |===
 | Für dieses Feld... | Tun Sie das... 
 
@@ -158,18 +154,11 @@ Wählen Sie diese Option, wenn Sie die Anzahl der Tage angeben möchten, die Sna
 
 
  a| 
-Sperrfrist der primären Snapshot-Kopie
+Sperrzeitraum für Snapshot-Kopien
  a| 
-Wählen Sie als Sperrzeitraum für Snapshots Tage, Monate oder Jahre aus.
+Wählen Sie den Snapshot-Sperrzeitraum aus und geben Sie die Dauer in Tagen, Monaten oder Jahren an.
 
 Die SnapLock-Aufbewahrungsfrist sollte weniger als 100 Jahre betragen.
-
-
-
- a| 
-Sperrfrist für sekundäre Snapshot-Kopien
- a| 
-Wählen Sie *Secondary Snapshot copy Sperrfrist* und wählen Sie Tage, Monate oder Jahre.
 
 |===
 +
@@ -178,7 +167,7 @@ IMPORTANT: Sie sollten den Aufbewahrungswert auf 2 oder höher einstellen. Der M
 
 +
 
-NOTE: Der maximale Aufbewahrungswert ist 1018. Backups schlagen fehl, wenn die Aufbewahrung auf einen Wert festgelegt ist, der höher ist, als die zugrunde liegende ONTAP Version unterstützt.
+NOTE: Der maximale Aufbewahrungswert beträgt 1018.  Sicherungen schlagen fehl, wenn die Aufbewahrung auf einen höheren Wert eingestellt ist, als von der ONTAP Version unterstützt wird.
 
 . Geben Sie auf der Seite Skript den Pfad des Prescript oder Postscript ein, den der SnapCenter-Server vor oder nach dem Backup ausführen soll, bzw. ein Zeitlimit, das SnapCenter wartet, bis das Skript ausgeführt wird, bevor das Timing out abgeschlossen wird.
 +

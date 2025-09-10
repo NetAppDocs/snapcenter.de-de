@@ -43,18 +43,8 @@ Bei ONTAP Version 9.12.1 und niedriger übernehmen die im Rahmen der Wiederherst
 +
 .. Geben Sie die Backup-Einstellungen an.
 .. Geben Sie die Zeitplanhäufigkeit an, indem Sie *on Demand*, *hourly*, *Daily*, *Weekly* oder *Monthly* auswählen.
-.. Wählen Sie eine Snapshot-Bezeichnung aus.
-+
-Je nach der ausgewählten Snapshot-Beschriftung wendet ONTAP die sekundäre Snapshot-Aufbewahrungsrichtlinie an, die der Markierung entspricht.
-
-+
-
-NOTE: Wenn Sie *Update SnapMirror nach dem Erstellen einer lokalen Snapshot Kopie* ausgewählt haben, können Sie optional das Label für die sekundäre Richtlinie angeben. Wenn Sie jedoch *Update SnapVault nach dem Erstellen einer lokalen Snapshot Kopie* ausgewählt haben, sollten Sie das sekundäre Policy Label angeben.
-
 .. Wählen Sie im Abschnitt sekundäre Replikationsoptionen auswählen eine oder beide der folgenden sekundären Replikationsoptionen aus:
-+
 
-NOTE: Sie müssen die sekundären Replikationsoptionen für *Sperrfrist der sekundären Snapshot-Kopie* auswählen, um wirksam zu sein. Die Option *sekundäre Snapshot Kopie Sperrfrist* ist auf der Aufbewahrungsseite verfügbar.
 
 +
 |===
@@ -83,12 +73,6 @@ Fehler bei Wiederholungszählung
 Geben Sie die maximale Anzahl von Replikationsversuchen ein, die zulässig sind, bevor der Vorgang beendet wird.
 
 |===
-+
-
-NOTE: Sie sollten die SnapMirror Aufbewahrungsrichtlinie in ONTAP für den sekundären Storage konfigurieren, um die maximale Grenze von Snapshots auf dem sekundären Storage zu vermeiden.
-
-
-
 . Geben Sie auf der Seite Aufbewahrung die Aufbewahrungseinstellungen für den Sicherungstyp und den auf der Seite Sicherung und Replikation ausgewählten Zeitplantyp an:
 +
 |===
@@ -100,7 +84,7 @@ NOTE: Sie sollten die SnapMirror Aufbewahrungsrichtlinie in ONTAP für den sekun
  a| 
 Behalten Sie eine bestimmte Anzahl von Snapshots bei
  a| 
-Wählen Sie *Total Snapshot Copies to keep* aus, und geben Sie dann die Anzahl der Snapshots an, die Sie behalten möchten.
+Wählen Sie *Kopien, die behalten werden sollen*, und geben Sie dann die Anzahl der Snapshots an, die Sie behalten möchten.
 
 Wenn die Anzahl der Snapshots die angegebene Zahl überschreitet, werden die Snapshots mit den ältesten zuerst gelöschten Kopien gelöscht.
 
@@ -115,28 +99,22 @@ IMPORTANT: Sie müssen die Aufbewahrungsanzahl auf 2 oder höher einstellen, wen
  a| 
 Bewahren Sie die Snapshots für eine bestimmte Anzahl von Tagen auf
  a| 
-Wählen Sie *Snapshot-Kopien behalten für*, und geben Sie dann die Anzahl der Tage an, für die Sie die Snapshots vor dem Löschen behalten möchten.
+Wählen Sie *Kopien behalten für*, und geben Sie dann die Anzahl der Tage an, für die Sie die Snapshots vor dem Löschen aufbewahren möchten.
 
 
 
  a| 
-Sperrfrist der primären Snapshot-Kopie
+Sperrzeitraum für Snapshot-Kopien
  a| 
-Wenn Sie die Sperrfrist für den primären Snapshot angeben möchten, wählen Sie *primäre Sperrfrist für die Snapshot-Kopie* und wählen Sie Tage, Monate oder Jahre aus.
+Wählen Sie *Sperrzeitraum für Snapshot-Kopien* und geben Sie die Dauer in Tagen, Monaten oder Jahren an.
 
 Die SnapLock-Aufbewahrungsfrist sollte weniger als 100 Jahre betragen.
 
-
-
- a| 
-Sperrfrist für sekundäre Snapshots
- a| 
-Wählen Sie *Secondary Snapshot copy Sperrfrist* und wählen Sie Tage, Monate oder Jahre.
-
 |===
+. Wählen Sie die Bezeichnung der Richtlinie aus.
 +
 
-NOTE: Sie können Archiv-Protokoll-Backups nur dann aufbewahren, wenn Sie die Archiv-Log-Dateien als Teil Ihrer Sicherung ausgewählt haben.
+NOTE: Sie können primären Snapshots SnapMirror Labels für die Remote-Replikation zuweisen, sodass die primären Snapshots den Snapshot-Replikationsvorgang von SnapCenter auf sekundäre ONTAP -Systeme auslagern können.  Dies kann erfolgen, ohne die Option SnapMirror oder SnapVault auf der Richtlinienseite zu aktivieren.
 
 . Geben Sie auf der Seite Skript den Pfad und die Argumente des Prescript oder Postscript ein, das Sie vor oder nach dem Backup ausführen möchten.
 +

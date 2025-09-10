@@ -77,7 +77,7 @@ Wenn die Anzahl der Snapshots die angegebene Zahl überschreitet, werden die Sna
 NOTE: Sie müssen die Aufbewahrungsanzahl auf 2 oder höher einstellen, wenn Sie die SnapVault-Replikation aktivieren möchten. Wenn Sie den Aufbewahrungszeitraum auf 1 festlegen, kann der Aufbewahrungsvorgang fehlschlagen, weil der erste Snapshot der ReferenzSnapshot für die SnapVault-Beziehung ist, bis ein neuerer Snapshot auf das Ziel repliziert wird.
 
 
-NOTE: Der maximale Aufbewahrungswert ist 1018. Backups schlagen fehl, wenn die Aufbewahrung auf einen Wert festgelegt ist, der höher ist, als die zugrunde liegende ONTAP Version unterstützt.
+NOTE: Der maximale Aufbewahrungswert beträgt 1018.  Sicherungen schlagen fehl, wenn die Aufbewahrung auf einen höheren Wert eingestellt ist, als von der ONTAP -Version unterstützt wird.
 
 
 
@@ -89,35 +89,21 @@ Wählen Sie *Kopien behalten für*, und geben Sie dann die Anzahl der Tage an, f
 
 
  a| 
-Sperrfrist der primären Snapshot-Kopie
+Sperrzeitraum für Snapshot-Kopien
  a| 
-Wählen Sie als Sperrzeitraum für Snapshots Tage, Monate oder Jahre aus.
+Wählen Sie *Sperrzeitraum für Snapshot-Kopien* und geben Sie Tage, Monate oder Jahre an.
 
 Die SnapLock-Aufbewahrungsfrist sollte weniger als 100 Jahre betragen.
-
-
-
- a| 
-Sperrfrist für sekundäre Snapshot-Kopien
- a| 
-Wählen Sie *Secondary Snapshot copy Sperrfrist* und wählen Sie Tage, Monate oder Jahre.
 
 |===
 
 
 . Wählen Sie eine Richtlinienbezeichnung aus.
 +
-Je nach der ausgewählten Richtlinienbezeichnung wendet ONTAP die sekundäre Snapshot-Aufbewahrungsrichtlinie an, die der Markierung entspricht.
 
-+
-
-NOTE: Wenn Sie *Update SnapMirror nach dem Erstellen einer lokalen Snapshot Kopie* ausgewählt haben, können Sie optional das Label für die sekundäre Richtlinie angeben. Wenn Sie jedoch *Update SnapVault nach dem Erstellen einer lokalen Snapshot Kopie* ausgewählt haben, sollten Sie das sekundäre Policy Label angeben.
+NOTE: Sie können primären Snapshots SnapMirror Labels für die Remote-Replikation zuweisen, sodass die primären Snapshots den Snapshot-Replikationsvorgang von SnapCenter auf sekundäre ONTAP -Systeme auslagern können.  Dies kann erfolgen, ohne die Option SnapMirror oder SnapVault auf der Richtlinienseite zu aktivieren.
 
 . Wählen Sie im Abschnitt sekundäre Replikationsoptionen auswählen eine oder beide der folgenden sekundären Replikationsoptionen aus:
-+
-
-NOTE: Sie müssen die sekundären Replikationsoptionen für *Sperrfrist der sekundären Snapshot-Kopie* auswählen, um wirksam zu sein.
-
 +
 |===
 | Für dieses Feld... | Tun Sie das... 

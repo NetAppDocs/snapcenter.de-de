@@ -214,48 +214,33 @@ Bewahren Sie die Backup-Kopien für eine bestimmte Anzahl von Tagen auf.
 +
 ... Um die Anzahl der zu befolgenden Snapshots festzulegen, wählen Sie *zu bebewahrende Kopien* aus.
 ... Wenn die Anzahl der Snapshots die angegebene Zahl überschreitet, werden die Snapshots gelöscht, wobei die ältesten Kopien zuerst gelöscht werden.
-
-
-
-
-
-
++
 
 IMPORTANT: Standardmäßig ist der Wert der Aufbewahrungsanzahl auf 2 festgelegt. Wenn Sie die Aufbewahrungszahl auf 1 setzen, kann der Aufbewahrungsvorgang fehlschlagen, da der erste Snapshot der ReferenzSnapshot für die SnapVault-Beziehung ist, bis ein neuerer Snapshot auf das Ziel repliziert wird.
 
++
 
 NOTE: Der maximale Aufbewahrungswert ist 1018. Backups scheitern, wenn die Aufbewahrung auf einen Wert festgelegt ist, der höher ist als der Wert, den die zugrunde liegende NetApp ONTAP Version unterstützt.
+
+
+
+
+
+
 
 . Dauer der Aufbewahrung von Snapshots
 +
 .. Wenn Sie die Anzahl der Tage angeben möchten, für die Sie die Snapshots vor dem Löschen behalten möchten, wählen Sie *bewahre Kopien für*.
 
 
-. Wenn Sie die Sperrfrist der primären Snapshot-Kopie angeben möchten, wählen Sie *primäre Snapshot-Kopie Sperrfrist* und wählen Sie Tage, Monate oder Jahre.
+. Wählen Sie *Sperrzeitraum für Snapshot-Kopien* und geben Sie die Dauer in Tagen, Monaten oder Jahren an.
 +
 Die SnapLock-Aufbewahrungsfrist sollte weniger als 100 Jahre betragen.
 
-. Wenn Sie die Sperrfrist der sekundären Snapshot-Kopie angeben möchten, wählen Sie *sekundäre Snapshot-Kopie Sperrfrist* und wählen Sie Tage, Monate oder Jahre.
-+
-In diesem Beispiel wird die Snapshot-Aufbewahrung für Protokolldateien auf 2 festgelegt:
-
-+
-.Beispiel Anzeigen
-[]
-====
-Set-SmPolicy -PolicyName 'newpol' -PolicyTyp 'Backup' -PluginPolicyTyp 'SCSQL' -sqlbackuptyp 'FullBackupAndLogBackup' -RetentionSettings @{BackupType='DATA';ScheduleType='hourly';RetentionCount=2},@{2}@{2} BackupType='LOG';ScheduleType='hourly'
-
-====
-+
-https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_retains_Snapshot_copies_of_the_database["SnapCenter behält Snapshot Kopien der Datenbank bei"]
-
-. Wählen Sie eine Snapshot-Beschriftung aus
-+
-Je nach der ausgewählten Snapshot-Beschriftung wendet ONTAP die sekundäre Snapshot-Aufbewahrungsrichtlinie an, die der Markierung entspricht.
-
+. Wählen Sie eine Richtlinienbezeichnung aus.
 +
 
-NOTE: Wenn Sie *Update SnapMirror nach dem Erstellen einer lokalen Snapshot Kopie* ausgewählt haben, können Sie optional das Label für die sekundäre Richtlinie angeben. Wenn Sie jedoch *Update SnapVault nach dem Erstellen einer lokalen Snapshot Kopie* ausgewählt haben, sollten Sie das sekundäre Policy Label angeben.
+NOTE: Sie können primären Snapshots SnapMirror Labels für die Remote-Replikation zuweisen, sodass die primären Snapshots den Snapshot-Replikationsvorgang von SnapCenter auf sekundäre ONTAP -Systeme auslagern können.  Dies kann erfolgen, ohne die Option SnapMirror oder SnapVault auf der Richtlinienseite zu aktivieren.
 
 
 
@@ -264,10 +249,6 @@ NOTE: Wenn Sie *Update SnapMirror nach dem Erstellen einer lokalen Snapshot Kopi
 == Schritt 7: Konfigurieren Sie Optionen für die sekundäre Replikation
 
 . Wählen Sie im Abschnitt sekundäre Replikationsoptionen auswählen eine oder beide der folgenden sekundären Replikationsoptionen aus:
-+
-
-NOTE: Sie müssen die sekundären Replikationsoptionen für *Sperrfrist der sekundären Snapshot-Kopie* auswählen, um wirksam zu sein.
-
 
 
 [role="tabbed-block"]
