@@ -26,9 +26,15 @@ NOTE: Applikations-Volumes unterstützen nur direkte NFS- und iSCSI-Verbindungen
 ** Geben Sie im Feld Hostname den Namen des Hosts ein.
 
 
-. Geben Sie auf der Seite Speicherabdruck den Namen des Speichersystems ein, wählen Sie ein oder mehrere Volumes aus und geben Sie die zugehörigen LUNs oder qtrees an.
+. Führen Sie auf der Seite „Speicherbedarf“ die folgenden Aktionen aus:
 +
-Sie können mehrere Storage-Systeme hinzufügen.
+** Wählen Sie den Speichertyp aus.
+** Geben Sie den Namen des Speichersystems ein.
+** Wählen Sie die Speichereinheiten aus.
++
+Sie können mehrere Speichereinheiten hinzufügen.
+
+
 
 . Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
 . Wählen Sie auf der Seite Ressourcen in der Liste *Ansicht* die Option *Anwendungsvolumen* aus, um alle Anwendungsvolumes anzuzeigen, die Sie hinzugefügt haben.
@@ -60,5 +66,5 @@ Falls erforderlich, können Sie mit SnapCenter den Löschvorgang rückgängig ma
 
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das Oracle Datenbank-Plug-in aus der Liste aus.
 . Wählen Sie auf der Seite Ressourcen in der Liste *Ansicht* die Option *Anwendungsvolumen* aus.
-. Klicken Sie auf image:../media/delete_icon.gif["Symbol Löschen"]„Symbol löschen“], um die Werte zu ändern.
+. Klickenimage:../media/delete_icon.gif["Symbol Löschen"] , um das Anwendungsvolume zu löschen.
 

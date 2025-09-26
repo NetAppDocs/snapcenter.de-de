@@ -11,24 +11,32 @@ summary: Sie sollten das unterstützte Storage-System, die Applikationen und Dat
 
 
 [role="lead"]
-ASA R2-Speichersysteme werden ab SnapCenter 6.1 unterstützt.  https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["Erfahren Sie mehr über ASA r2-Systeme"]
+ASA r2-Speichersysteme werden ab SnapCenter 6.1 unterstützt. https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["Erfahren Sie mehr über ASA r2-Systeme"^] .
 
-SnapCenter nutzt REST-APIs, um alle Vorgänge auf ASA r2-Systemen auszuführen, die ZAPIs nicht unterstützen.
+SnapCenter unterstützt sowohl den primären als auch den sekundären Schutz von Anwendungen, die auf physischen Systemen und auf Virtual Machine File Systems (VMFS) ausgeführt werden.  SnapCenter verwendet REST-APIs für alle Vorgänge auf ASA r2-Systemen.  ASA r2-Systeme unterstützen keine ZAPIs.
 
 *Von SnapCenter für ASA r2-Systeme unterstützte Vorgänge*
 
-* Erstellung primärer Backups von Anwendungen über VMDK
-* Übertragen von Snapshots von Konsistenzgruppen auf das sekundäre Speichersystem
-* Wiederherstellen der Backups von primären und sekundären Speichersystemen auf dem ursprünglichen Host oder dem alternativen Host
+* Erstellen primärer Backups von Anwendungen
+* Verschieben von Snapshots hierarchischer Konsistenzgruppen auf ein sekundäres Speichersystem
+* Wiederherstellen von Backups von primären und sekundären Speichersystemen auf dem ursprünglichen oder alternativen Host
 +
 ** In-Place-Wiederherstellung von primären und sekundären Speichersystemen mit VMware vMotion
 ** Verbinden und Kopieren sowie Wiederherstellen von primären und sekundären Speichersystemen
 
 
 * Klonen der Backups auf den ursprünglichen Host oder auf den alternativen Host
+* Raw Device Mapping (RDM)
+* Schutz von Anwendungsvolumes für Oracle
+* Schutz von SAP HANA NDV
+* LockVault
+* Sekundäre Bereitstellung des Protokollverzeichnisses des SQL-Plugin-Hosts
 
 
-SnapCenter kann ONTAP-Konsistenzgruppen erkennen oder erstellen. Darüber hinaus kann es SnapMirror-Beziehungen zum Zielcluster bereitstellen und initialisieren, um sekundären Schutz zu gewährleisten.
+SnapCenter erkennt oder erstellt ONTAP Konsistenzgruppen.  Es richtet SnapMirror -Beziehungen auf dem Zielcluster für sekundären Schutz ein. https://docs.netapp.com/us-en/ontap/consistency-groups["Erfahren Sie mehr über ONTAP Consistency Groups"^] .
+
+
+NOTE: Nach dem Upgrade auf SnapCenter 6.2 (Server und Plug-Ins) und ONTAP 9.17.1 ändert SnapCenter während der ersten geplanten Sicherung flache Konsistenzgruppen in hierarchische Konsistenzgruppen.
 
 Informationen zum Aktivieren des sekundären Schutzes auf ASA R2-Systemen für Ihre Anwendung finden Sie unter:
 
@@ -44,15 +52,15 @@ Informationen zum Aktivieren des sekundären Schutzes auf ASA R2-Systemen für I
 
 *Von SnapCenter für ASA r2-Systeme nicht unterstützte Vorgänge*
 
-* Raw Device Mapping (RDM)
-* Application Volumes für Oracle
-* SAP HANA NDV
-* LockVault
 * Manipulationssichere Snapshots
 * FlexGroup Volumes
-* Hierarchische Konsistenzgruppe
 * Migration von ASA-, AFF- oder FAS-Speichersystemen auf ASA r2-Speichersysteme
-* Schutz von Datenbanken mit einer Mischung aus ASA-, AFF- oder FAS-Ressourcen und ASA r2-Ressourcen
+* Schutz von Datenbanken mit einer Mischung aus ASA, AFF oder FAS -Ressourcen und ASA r2-Ressourcen
 * Umbenennen von Snapshots
-* Sekundäre Bereitstellung des Protokollverzeichnisses des SQL-Plugin-Hosts
+* Bereitstellung von Windows-Ressourcen
+* Sekundärer Schutz bei SnapMirror Active Sync Failover
+* Nonvolatile Memory Express (NVMe)-Protokoll, wenn SnapMirror Active Sync aktiviert ist
+* Schutz von Anwendungen, die auf AIX laufen
+* Technologieaktualisierung
+* Notfallwiederherstellung von Microsoft SQL-Ressourcen
 

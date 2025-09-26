@@ -46,6 +46,12 @@ Für Datensicherungsvorgänge können benutzerdefinierte Verordnungen und Postsk
 
 
 
+== Konsistenzgruppe (CG)
+
+Eine Konsistenzgruppe ist eine Sammlung von Volumes, die als eine Einheit verwaltet werden.  CGs werden zur Gewährleistung der Datenkonsistenz über Speichereinheiten und Datenträger hinweg synchronisiert.  In ONTAP bieten sie eine einfache Verwaltung und eine Schutzgarantie für eine Anwendungs-Workload, die sich über mehrere Volumes erstreckt. Erfahren Sie mehr über link:https://docs.netapp.com/us-en/ontap/consistency-groups["Konsistenzgruppen"^] .
+
+
+
 == Verwendung von Verordnungen und Postskripten
 
 Benutzerdefinierte Verordnungen und Postskripte können Ihre Datensicherungsaufgaben vor oder nach dem Job automatisieren. Sie können beispielsweise ein Skript hinzufügen, um Sie über Auftragsfehler oder Warnungen zu informieren. Bevor Sie sie einrichten, müssen Sie die Anforderungen für diese Skripte verstehen.

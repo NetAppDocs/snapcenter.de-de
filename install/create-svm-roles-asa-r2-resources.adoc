@@ -11,7 +11,7 @@ summary: Sie sollten SVM-Rollen erstellen, wenn Sie SVMs in ASA r2-Systemen für
 
 
 [role="lead"]
-Es gibt mehrere ONTAP CLI-Befehle, die Sie ausführen müssen, um eine Rolle für einen neuen SVM-Benutzer in ASA r2 Systemen zu erstellen. Diese Rolle ist erforderlich, wenn Sie SVMs in ASA r2-Systemen für die Verwendung mit SnapCenter konfigurieren und die vsadmin-Rolle nicht verwenden möchten.
+Es gibt mehrere ONTAP CLI-Befehle, die Sie ausführen müssen, um eine Rolle für einen neuen SVM-Benutzer in ASA r2-Systemen zu erstellen.  Diese Rolle ist erforderlich, wenn Sie SVMs in ASA r2-Systemen für die Verwendung mit SnapCenter konfigurieren und die Rolle „vsadmin“ nicht verwenden möchten.
 
 *Schritte*
 

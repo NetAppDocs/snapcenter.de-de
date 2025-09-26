@@ -17,7 +17,7 @@ Der Klon-Workflow umfasst die Planung, die Durchführung des Klonvorgangs und di
 
 Sie sollten die folgenden Befehle ausführen, um die Oracle Database Clone Specification File zu erstellen und den Klonvorgang zu starten.
 
-Die Informationen zu den Parametern, die mit dem Befehl und deren Beschreibungen verwendet werden können, können durch Ausführen von get-Help _Command_Name_ abgerufen werden. Alternativ können Sie auch auf die https://library.netapp.com/ecm/ecm_download_file/ECMLP3337666["SnapCenter Software Command Reference Guide"^].
+Informationen zu den mit dem Befehl verwendbaren Parametern und deren Beschreibungen erhalten Sie durch Ausführen von Get-Help _command_name_.  Alternativ können Sie auch auf die https://library.netapp.com/ecm/ecm_download_file/ECMLP3359469["SnapCenter Software Command Reference Guide"^] .
 
 *Schritte*
 

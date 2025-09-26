@@ -13,7 +13,7 @@ summary: Mithilfe eines SnapCenter Plug-ins mit ONTAP SnapMirror Technologie las
 [role="lead"]
 Mithilfe eines SnapCenter Plug-ins mit ONTAP SnapMirror Technologie lassen sich Spiegelkopien von Backup-Sets auf einem anderen Volume erstellen. Dank der ONTAP SnapVault Technologie kann eine Disk-to-Disk-Backup-Replizierung zwecks Standards Compliance und anderen Governance-Zwecken durchgeführt werden. Bevor Sie diese Aufgaben durchführen, müssen Sie eine Datensicherungsbeziehung zwischen den Quell- und Ziel-Volumes konfigurieren und die Beziehung initialisieren.
 
-SnapCenter führt die Updates für SnapMirror und SnapVault durch, nachdem der Snapshot Vorgang abgeschlossen wurde. SnapMirror und SnapVault Updates werden als Teil des SnapCenter Jobs ausgeführt. Erstellen Sie keinen separaten ONTAP Zeitplan.
+SnapCenter führt die Aktualisierungen für SnapMirror und SnapVault durch, nachdem der Snapshot-Vorgang abgeschlossen ist.  SnapMirror und SnapVault Updates werden als Teil des SnapCenter -Jobs durchgeführt.  Wenn Sie SnapMirror Active Sync verwenden, verwenden Sie die Standardzeitpläne von SnapMirror oder SnapVault sowohl für SnapMirror Active Sync als auch für asynchrone Beziehungen.
 
 
 NOTE: Wenn Sie von einem NetApp SnapManager Produkt zu SnapCenter kommen und mit Ihren konfigurierten Datensicherungsbeziehungen zufrieden sind, können Sie diesen Abschnitt überspringen.

@@ -21,12 +21,15 @@ Sie sollten die Storage-Systeme, Applikationen und Datenbanken kennen, die von S
 * Azure NetApp Dateien
 * Amazon FSX für NetApp ONTAP
 +
-Unterstützt Non-Volatile Memory Express (NVMe) über Transport Control Protocol (TCP).
+Amazon FSx for NetApp ONTAP unterstützt Non-Volatile Memory Express (NVMe) über Transport Control Protocol (TCP).
 
 +
 Informationen zu Amazon FSX für NetApp ONTAP finden Sie unter https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["Dokumentation zu Amazon FSX für NetApp ONTAP"^].
 
-* NetApp ASA r2-Systeme mit NetApp ONTAP 9.16.1.
+* NetApp ASA r2-Systeme, auf denen NetApp ONTAP 9.16.1 und höher ausgeführt wird
++
+Sie sollten ONTAP 9.17.1 verwenden, wenn Sie SnapCenter Server 6.2 und SnapCenter -Plug-Ins 6.2 verwenden.
+
 
 
 

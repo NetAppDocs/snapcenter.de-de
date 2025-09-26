@@ -11,20 +11,17 @@ summary: Die von SnapCenter unterstützten Upgrade-Pfade
 
 
 [role="lead"]
-Der Upgrade-Pfad verhilft Ihnen zu einem Bild davon, von welchen älteren SnapCenter Versionen Sie ein Upgrade auf die neueste SnapCenter Version durchführen können und welche Plug-ins-Versionen unterstützt werden.
+Der Upgrade-Pfad zeigt, von welchen SnapCenter -Versionen Sie ein Upgrade durchführen können und welche Plug-in-Versionen unterstützt werden.
+
+
+NOTE: Wenn Sie SnapCenter Server auf 6.2 aktualisieren, aktualisieren Sie auch die Plug-Ins auf 6.2.
 
 |===
 | Wenn Sie sich auf SnapCenter Server-Version befinden... | Sie können ein Upgrade des SnapCenter-Servers direkt auf... | Unterstützte Plug-in-Versionen 
 
 
-.3+| 5.0 | 6,0  a| 
-* 5.0
+.3+| 6,0 | 6.0.1  a| 
 * 6,0
-
-
-
-
-| 6.0.1  a| 
 * 6.0.1
 
 
@@ -36,24 +33,28 @@ Der Upgrade-Pfad verhilft Ihnen zu einem Bild davon, von welchen älteren SnapCe
 
 
 
-.2+| 6,0  a| 
-6.0.1
+| 6,2  a| 
+* 6,2
+
+
+
+
+.2+| 6.0.1  a| 
+6,1
  a| 
-* 6,0
-* 6.0.1
-
-
-
-
-| 6,1  a| 
 * 6,1
 
 
 
 
-| 6.0.1 | 6,1  a| 
-* 6.0.1
-* 6,1
+| 6,2  a| 
+* 6,2
+
+
+
+
+| 6,1 | 6,2  a| 
+* 6,2
 
 
 |===
