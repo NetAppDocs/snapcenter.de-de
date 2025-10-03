@@ -9595,7 +9595,6 @@ Die Aufbewahrung ist beispielsweise für eine Ressourcengruppe mit primärer SAP
   <block id="652468e7a8f47c94c0dfc2bbbe3f6788" category="inline-link-macro">Was ist neu in SnapCenter 6.2</block>
   <block id="d5d7d6e218fb8deef9aa758f16f3e053" category="paragraph">Eine vollständige Liste der neuen Funktionen und Verbesserungen finden Sie unter <block ref="ba56a05032a421946bbeef30dde12674" category="inline-link-macro-rx"></block> .</block>
   <block id="24443d9133830b434ac05072f0c9653a" category="inline-link">Versionshinweise zur SnapCenter -Software 6.2</block>
-  <block id="34319768640d09bbc428643b51adb5af" category="paragraph">Einzelheiten zu bekannten Problemen, Einschränkungen, behobenen Problemen sowie neuen und geänderten Befehlen finden Sie im<block ref="b5242c8747d109e2a469b208226df65c" category="inline-link-rx"></block> . Sie müssen sich mit Ihrem NetApp -Konto anmelden oder ein Konto erstellen, um auf die Versionshinweise zugreifen zu können.</block>
   <block id="320bd16b81d8a6a0a077d7308db7683d" category="paragraph">Der Upgrade-Pfad zeigt, von welchen SnapCenter -Versionen Sie ein Upgrade durchführen können und welche Plug-in-Versionen unterstützt werden.</block>
   <block id="f734f899336791933d28373bca69a72f" category="admonition">Wenn Sie SnapCenter Server auf 6.2 aktualisieren, aktualisieren Sie auch die Plug-Ins auf 6.2.</block>
   <block id="7a22247de8db3271f3bf8573be10e986" category="cell">6,2</block>
@@ -9608,4 +9607,5 @@ Die Aufbewahrung ist beispielsweise für eine Ressourcengruppe mit primärer SAP
   <block id="24f24d3f1f893e4176aff86940b1f7bd" category="paragraph">Informationen zum Upgrade des SnapCenter Plug-in for VMware vSphere finden Sie unter<block ref="9fa07c2f7a59d2185d48077e327b705e" category="inline-link-rx"></block> .</block>
   <block id="97e76bbffdf8f08342d1c5a741af4b2a" category="sidebar">Die SnapCenter software ist eine einfache, zentralisierte und skalierbare Plattform, die anwendungskonsistenten Datenschutz für Anwendungen, Datenbanken, Host-Dateisysteme und VMs bietet, die überall in der Hybrid Cloud auf ONTAP -Systemen ausgeführt werden.  Diese Dokumentationsbibliothek enthält Informationen zur Version 6.2.</block>
   <block id="1e0eab11641f75c3ff495410ce40bf66" category="sidebar">SnapCenter software 6.2-Dokumente</block>
+  <block id="9968307e35346723a7def9d1da87a203" category="paragraph">Einzelheiten zu bekannten Problemen, Einschränkungen, behobenen Problemen sowie neuen und geänderten Befehlen finden Sie im<block ref="bedfbb0cb9ae5977029e72ca67318671" category="inline-link-rx"></block> . Sie müssen sich mit Ihrem NetApp -Konto anmelden oder ein Konto erstellen, um auf die Versionshinweise zugreifen zu können.</block>
 </blocks>
