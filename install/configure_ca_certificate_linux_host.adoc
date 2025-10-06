@@ -11,7 +11,7 @@ summary: Sie sollten das CA-Zertifikat mit SnapCenter-Server auf Linux-Host konf
 
 
 [role="lead"]
-Nach der Installation des SnapCenter-Servers unter Linux erstellt das Installationsprogramm das selbstsignierte Zertifikat. Wenn Sie das CA-Zertifikat verwenden möchten, sollten Sie die Zertifikate für nginx Reverse Proxy, Audit-Protokollierung und SnapCenter-Dienste konfigurieren.
+Nach der Installation des SnapCenter -Servers unter Linux erstellt das Installationsprogramm das selbstsignierte Zertifikat. Wenn Sie das CA-Zertifikat verwenden möchten, sollten Sie die Zertifikate für den Nginx-Reverse-Proxy, die Audit-Protokollierung und SnapCenter konfigurieren.
 
 
 
@@ -45,7 +45,7 @@ Für das Auditprotokoll-Zertifikat wird nur das _.pfx_-Format unterstützt.
 
 
 
-== Konfigurieren Sie das Zertifikat für SnapCenter-Services
+== Konfigurieren des SnapCenter -Zertifikats
 
 .Schritte
 . Öffnen Sie die folgenden Konfigurationsdateien mit vi oder einem beliebigen Texteditor.
@@ -60,7 +60,7 @@ Der Standardwert von _INSTALL_dir_ ist _/opt_.
 
 . Bearbeiten Sie die Schlüssel *SERVICE_CERTIFICATE_PATH* und *SERVICE_CERTIFICATE_PASSWORD*, um den CA-Zertifikatspfad und das entsprechende Passwort einzuschließen.
 +
-Für das SnapCenter-Servicezertifikat wird nur das _.pfx_-Format unterstützt.
+Für das SnapCenter -Zertifikat wird nur das _.pfx_-Format unterstützt.
 
 . Speichern und schließen Sie die Dateien.
 . Starten Sie alle Dienste neu.
