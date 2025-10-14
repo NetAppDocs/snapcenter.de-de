@@ -853,7 +853,6 @@
   <block id="718d9231009edb9654b9f6f52346a835" category="list-text">Firewalls, Proxys oder andere Netzwerkgeräte sollten keine Verbindung stören.</block>
   <block id="eceb61ca100437ca326b49341fc1f909" category="list-text">Wenn Sie bei der Installation von SnapCenter einen benutzerdefinierten Port angeben, sollten Sie auf dem Plug-in-Host eine Firewall-Regel für diesen Port für den SnapCenter-Plug-in-Loader hinzufügen.</block>
   <block id="29e256a27c9d420cee02c5cda005de01" category="paragraph">In der folgenden Tabelle werden die verschiedenen Ports und ihre Standardwerte aufgeführt.</block>
-  <block id="ed00b70cc595a411eff2cc42510a291f" category="paragraph">SnapCenter-Port</block>
   <block id="18622e175ff22b2375f9cbc2314b3285" category="paragraph">SnapCenter SMCore-Kommunikations-Port</block>
   <block id="91ca015b30de2a05aff2f16ec93231dd" category="paragraph">MySQL-Anschluss</block>
   <block id="4abc501abe98e95144eba2c4d17174ad" category="paragraph">Windows Plug-in-Hosts</block>
@@ -9612,4 +9611,5 @@ Die Aufbewahrung ist beispielsweise für eine Ressourcengruppe mit primärer SAP
   <block id="995c8f79a8e07fbd8d519e45d03d6004" category="paragraph">Die NetApp Console basiert auf der verbesserten und neu strukturierten BlueXP -Grundlage und ermöglicht die zentrale Verwaltung von NetApp Storage und NetApp Data Services in On-Premises- und Cloud-Umgebungen auf Unternehmensniveau. Sie liefert Einblicke in Echtzeit, schnellere Workflows und eine vereinfachte Administration mit hoher Sicherheit und Konformität.</block>
   <block id="2ef9d641d45afe99b74ad6f9a9f797ad" category="inline-link-macro">Versionshinweise zur NetApp Konsole</block>
   <block id="1e3eeac5409758903bc21870184a640a" category="paragraph">Einzelheiten zu den Änderungen finden Sie im<block ref="06d876b9fcdfcba8772d93beac1ca38b" category="inline-link-macro-rx"></block> .</block>
+  <block id="e6f36a956625505e0a3733e3e0073fa0" category="paragraph">SnapCenter -Webport</block>
 </blocks>
