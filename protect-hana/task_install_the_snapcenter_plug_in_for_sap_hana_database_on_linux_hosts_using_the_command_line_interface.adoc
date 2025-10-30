@@ -17,10 +17,7 @@ Sie sollten das SnapCenter-Plug-in für SAP HANA-Datenbank über die SnapCenter-
 * Sie sollten das Plug-in für die SAP HANA-Datenbank auf jedem Linux-Host installieren, auf dem sich der HDBSQL-Client befindet.
 * Der Linux-Host, auf dem Sie das SnapCenter-Plug-in für SAP HANA Database installieren, muss die Anforderungen der abhängigen Software, der Datenbank und des Betriebssystems erfüllen.
 +
-Das Interoperabilitäts-Matrix-Tool (IMT) enthält aktuelle Informationen zu unterstützten Konfigurationen.
-
-+
-https://imt.netapp.com/matrix/imt.jsp?components=121029;&solution=1259&isHWU&src=IMT[]
+Der https://imt.netapp.com/imt/imt.jsp?components=180320;180336;&solution=1257&isHWU&src=IMT["Interoperabilitätsmatrix-Tool (IMT)"] Enthält die aktuellsten Informationen zu den unterstützten Konfigurationen.
 
 * Das SnapCenter-Plug-in für SAP HANA-Datenbank ist Teil des SnapCenter Plug-ins-Pakets für Linux. Bevor Sie das SnapCenter Plug-ins Paket für Linux installieren, sollten Sie bereits SnapCenter auf einem Windows-Host installiert haben.
 

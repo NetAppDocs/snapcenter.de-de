@@ -44,4 +44,4 @@ PDB-Migration und PDB-Klonvorgänge werden nicht unterstützt.
 
 
 
-Aktuelle Informationen zu unterstützten Oracle-Versionen finden Sie im https://imt.netapp.com/matrix/imt.jsp?components=121071;&solution=1259&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"^].
+Die aktuellsten Informationen zu den unterstützten Oracle-Versionen finden Sie unter https://imt.netapp.com/imt/imt.jsp?components=180338;180332;134509;180320;&solution=1257&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"^]Die

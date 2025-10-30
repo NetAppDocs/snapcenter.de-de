@@ -31,8 +31,6 @@ Unterstützt VMware Paravirtuellen SCSI-Controller 256 Festplatten können auf R
 
 
 
-Aktuelle Informationen zu unterstützten Versionen finden Sie unter https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"^].
-
 
 
 === Serverbezogene Einschränkungen bei VMware ESXi

@@ -87,4 +87,3 @@ Unterstützt die Inline-Protokollierung auf SAN-Dateisystemen und LVM-Layout.
 
 
 |===
-Das https://imt.netapp.com/matrix/imt.jsp?components=121071;&solution=1259&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"] enthält die neuesten Informationen zu den unterstützten Versionen.

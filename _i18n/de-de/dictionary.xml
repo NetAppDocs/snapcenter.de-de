@@ -2284,7 +2284,6 @@
   <block id="d444fb67779b9c8a26850d1ce6c0e031" category="paragraph">Sie sollten das SnapCenter-Plug-in für SAP HANA-Datenbank über die SnapCenter-Benutzeroberfläche installieren. Wenn Ihre Umgebung die Remote-Installation des Plug-ins über die SnapCenter-Benutzeroberfläche nicht zulässt, können Sie das Plug-in für SAP HANA-Datenbank entweder im Konsolenmodus oder im Silent-Modus installieren, indem Sie die Befehlszeilenschnittstelle (CLI) verwenden.</block>
   <block id="c20d8d729a2cb1909e6c92aa4b0635a1" category="list-text">Sie sollten das Plug-in für die SAP HANA-Datenbank auf jedem Linux-Host installieren, auf dem sich der HDBSQL-Client befindet.</block>
   <block id="9638dcdc640dbf6662834e293cbc12b3" category="list-text">Der Linux-Host, auf dem Sie das SnapCenter-Plug-in für SAP HANA Database installieren, muss die Anforderungen der abhängigen Software, der Datenbank und des Betriebssystems erfüllen.</block>
-  <block id="9e8c841a17bd4c0ec7d85ab94b954bca" category="paragraph">Das Interoperabilitäts-Matrix-Tool (IMT) enthält aktuelle Informationen zu unterstützten Konfigurationen.</block>
   <block id="33a8f9c4fe2c0cd8ae505b8d4831fe28" category="list-text">Das SnapCenter-Plug-in für SAP HANA-Datenbank ist Teil des SnapCenter Plug-ins-Pakets für Linux. Bevor Sie das SnapCenter Plug-ins Paket für Linux installieren, sollten Sie bereits SnapCenter auf einem Windows-Host installiert haben.</block>
   <block id="14121664b691a3085947fb503ee4883e" category="list-text">Kopieren Sie das SnapCenter Plug-ins-Paket für die Linux-Installationsdatei (snapcenter_linux_Host_Plugin.bin) aus C:\ProgramData\NetApp\SnapCenter\Paket-Repository auf den Host, auf dem Sie das Plug-in für SAP HANA-Datenbank installieren möchten.</block>
   <block id="b3f72639442ac8dbec9806a234d5e8db" category="list-text">Bearbeiten Sie die Datei /&lt;Installationsverzeichnis&gt;/NetApp/snapcenter/scc/etc/SC_SMS_Services.properties und fügen SIE dann DEN Parameter PLUGINS_ENABLED = hana:3.0 hinzu.</block>
@@ -2741,8 +2740,6 @@
   <block id="1ca9ef3a64115b9b5155a63404740914" category="paragraph">Es wird eine implizite Ressourcengruppe erstellt. Sie können dies anzeigen, indem Sie auf der Seite „Benutzerzugriff“ den jeweiligen Benutzer oder die jeweilige Gruppe auswählen. Der implizite Gruppentyp lautet „`Ressource`“.</block>
   <block id="bd399fbf6546e1ea1b462c96e03932f3" category="inline-link-macro">Erstellen von Backup-Richtlinien für SQL Server-Datenbanken</block>
   <block id="50e1edb21a598f492619b01f99e77a4f" category="paragraph"><block ref="50e1edb21a598f492619b01f99e77a4f" category="inline-link-macro-rx"></block></block>
-  <block id="db9c751c1327ee48b470f3140421daf6" category="inline-link">Backup-Vorgänge schlagen wegen der Verzögerung im TCP_TIMEOUT bei MySQL-Verbindungsfehler fehl</block>
-  <block id="0cd607c6c3ab41f1a5532b188171495c" category="paragraph"><block ref="0cd607c6c3ab41f1a5532b188171495c" category="inline-link-rx"></block></block>
   <block id="c473dc65af16d92c688e88cffad5b825" category="inline-link">Das Backup schlägt mit dem Windows Scheduler-Fehler fehl</block>
   <block id="ee70f525f7b0b70b3e7de9d8f872cbe4" category="paragraph"><block ref="ee70f525f7b0b70b3e7de9d8f872cbe4" category="inline-link-rx"></block></block>
   <block id="f1b0e4721c4648a3a0d9747b1df24457" category="inline-link">Fehler beim Quiesce oder Gruppieren von Ressourcen</block>
@@ -2855,7 +2852,6 @@
   <block id="cc8872fd3647eea5077aab482b8a8315" category="paragraph">Wenn Sie das vollständige Recovery-Modell verwenden, können Sie eine Datenbank vom Zeitpunkt eines Ausfalls auf ihren vorherigen Zustand wiederherstellen.</block>
   <block id="a93af87c8649f227602a94864e899324" category="list-text">Recovery-Modell mit Massenprotokollierter</block>
   <block id="75f9316c993a023ec1a7767f5f57f99b" category="paragraph">Wenn Sie das Recovery-Modell mit der Massenprotokollierfunktion verwenden, müssen Sie den protokollierten Massenvorgang manuell erneut ausführen. Sie müssen den protokollierten Massenvorgang durchführen, wenn das Transaktionsprotokoll, das den Verschiebdatensatz des Vorgangs enthält, vor der Wiederherstellung nicht gesichert wurde. Wenn der Bulk Logged-Vorgang 10 Millionen Zeilen in eine Datenbank einfügt und die Datenbank vor dem Backup des Transaktionsprotokolls ausfällt, enthält die wiederhergestellte Datenbank nicht die Zeilen, die von der protokollierten Massenoperation eingefügt wurden.</block>
-  <block id="918d32b75f0ab883abba3a8dc0c3ae8d" category="inline-link">Interoperabilitäts-Matrix-Tool</block>
   <block id="8124579383e90243e4b06323d2b37f8d" category="cell">Hosts</block>
   <block id="5ae5c2db7baad917cb8389420693266d" category="paragraph">SnapCenter Plug-in für Windows</block>
   <block id="72de9cea28a7cca58f8423279c68e8c6" category="list-text">Laden Sie das Installationspaket für den SnapCenter-Server von herunter<block ref="d4fdc92072f5257471f3139636068769" category="inline-link-rx"></block> Doppelklicken Sie anschließend auf die exe.</block>
@@ -3074,10 +3070,6 @@
   <block id="999e40363ae36d8696166b52a3c23152" category="paragraph">Im folgenden Workflow ist die Reihenfolge aufgeführt, in der Sie die Klonvorgänge ausführen müssen:</block>
   <block id="70124670f70878681ab7bb78e2860796" category="image-alt">Workflow-Diagramm Klonen</block>
   <block id="3eee6ccd820abf187846b44912303266" category="inline-link-macro">Klonen aus einem Backup der SQL Server Datenbank</block>
-  <block id="a121a292ca8a39c5591cdcc69d0f0ff8" category="paragraph"><block ref="a121a292ca8a39c5591cdcc69d0f0ff8" category="inline-link-macro-rx"></block></block>
-  <block id="b5fb765366530fd4f75c7c5c651544bd" category="paragraph"><block ref="b5fb765366530fd4f75c7c5c651544bd" category="inline-link-macro-rx"></block></block>
-  <block id="68f8e37f5b3d7c3c6c34a481b33a736f" category="inline-link-macro">Der Klonvorgang kann fehlschlagen oder längere Zeit zum Abschließen mit dem Standardwert für TCP_TIMEOUT benötigen</block>
-  <block id="5f2b3d8994098e5cded686a40b8bb7c9" category="paragraph"><block ref="5f2b3d8994098e5cded686a40b8bb7c9" category="inline-link-macro-rx"></block></block>
   <block id="2fd9111fd14738ba180065d2a1781ed9" category="summary">Bevor Sie eine SQL Server-Datenbank aus einem SnapCenter Plug-in für Microsoft SQL Server-Backup wiederherstellen, müssen Sie sicherstellen, dass mehrere Anforderungen erfüllt sind.</block>
   <block id="818095849ac39056a1077a0f3a155684" category="doc">Anforderungen für das Wiederherstellen einer Datenbank</block>
   <block id="20b078430559b42b4240a3017f788a65" category="list-text">Die Ziel-SQL Server-Instanz muss online sein und ausgeführt werden, bevor Sie eine Datenbank wiederherstellen können.</block>
@@ -3186,7 +3178,6 @@
   <block id="418da21041a76d47214208138e1523e2" category="paragraph">Dieser Point-in-Time-Klon stoppt den Klon der Transaktions-Log-Einträge, die nach dem angegebenen Datum und der angegebenen Zeit aufgezeichnet wurden.</block>
   <block id="b8ceb1eaf0d60af03679989562024d6b" category="paragraph">Nach dem Erstellen des Klons sollten Sie ihn nicht mehr umbenennen.</block>
   <block id="8a2bd81e968aaadb6ec10a1b58f541cc" category="inline-link-macro">Sichern Sie die SQL Server-Datenbank, -Instanz oder -Verfügbarkeitsgruppe</block>
-  <block id="f7e7f0dd9d36aec3d609775de2dbbd0b" category="paragraph"><block ref="f7e7f0dd9d36aec3d609775de2dbbd0b" category="inline-link-rx"></block></block>
   <block id="1e9ab426973a56020f8d1db85cb07f06" category="inline-link">Der Datenbankklon für die Failover-Cluster-Instanz ist fehlgeschlagen</block>
   <block id="2df5362c7aa8c12a0dd2f1b211cdf61d" category="paragraph"><block ref="2df5362c7aa8c12a0dd2f1b211cdf61d" category="inline-link-rx"></block></block>
   <block id="43bd5db5bd3f4be62400e5e4a8b1b32f" category="doc">Richten Sie die Anmeldeinformationen für das SnapCenter-Plug-ins-Paket für Windows ein</block>
@@ -7271,7 +7262,6 @@ Die Einstellung der Verfügbarkeit für NetApp Single Mailbox Recovery (EOA) ste
   <block id="106eca4a643cd4a82ba724aaf63cf399" category="sidebar">Stellen Sie Unix-Dateisysteme wieder her</block>
   <block id="acebdece1b3734e875859ee761ab347e" category="sidebar">Klonen von Unix-Dateisystemen</block>
   <block id="1121f6eb8ee08b3fbbc4d05a5ee6ca76" category="sidebar">Technologieaktualisierung</block>
-  <block id="4bb4114cf33351f203faec5f1e34960e" category="paragraph"><block ref="11d2d1b194d6948e42dc38dca8202191" category="inline-link-rx"></block></block>
   <block id="9166c380efba6c6a0d61dc08bcc135ee" category="summary">Erstellen Sie eine Sicherungsrichtlinie für die Ressource oder Ressourcengruppe, die Sie sichern möchten.</block>
   <block id="73f45971c435fbf9828b3c34fe76a670" category="paragraph">Bevor Sie SnapCenter zum Backup von Oracle-Datenbankressourcen verwenden, müssen Sie eine Backup-Richtlinie für die Ressource oder die Ressourcengruppe erstellen, die Sie sichern möchten.</block>
   <block id="32005b30ff172564875bf82c9538168f" category="list-text">Wählen Sie Oracle Database aus der Dropdown-Liste aus.</block>
@@ -8324,7 +8314,6 @@ Die Aufbewahrung ist beispielsweise für eine Ressourcengruppe mit primärer SAP
   <block id="b64964f7c6cb3e2d0ad50647f28415f4" category="list-text">Installieren Sie gegebenenfalls Java 11 auf dem Plug-in-Host.</block>
   <block id="70470fa292d95a8fc9a82053e4e3efc0" category="paragraph">Port 9090 muss zusätzlich zu den anderen von SnapCenter benötigten Ports für die Verwendung durch von NetApp unterstützte Plug-ins reserviert werden.</block>
   <block id="db39871b690a95f007f3b71acd6533d2" category="doc">Voraussetzungen für das Hinzufügen von Hosts und die Installation von von von NetApp unterstützten Plug-ins</block>
-  <block id="1bd7b03e9e6f0b21298c8109c8f483ce" category="paragraph">Wenn Sie Windows Server 2019 oder Windows Server 2016 für den SnapCenter Server-Host verwenden, müssen Sie Java 11 installieren. Das Interoperabilitäts-Matrix-Tool (IMT) enthält aktuelle Informationen zu Anforderungen.</block>
   <block id="06489e5a01873cf102f78c0da703ea59" category="list-text">Der Standardwiederherstellungsvorgang stellt nur Storage-Objekte wieder her. Wiederherstellungen auf Applikationsebene können nur durchgeführt werden, wenn das von NetApp unterstützte Plug-in diese Funktion bietet.</block>
   <block id="67d899b4318f9296298e7c4bb8999573" category="doc">Stellen Sie von NetApp unterstützte Plug-in-Ressourcen wieder her</block>
   <block id="f62ecec13f26504ecae9b49f3ed6b228" category="paragraph">Außerdem können Sie PowerShell Cmdlets manuell oder in Skripten verwenden, um Backup-, Wiederherstellungs- und Klonvorgänge durchzuführen. Informationen zu PowerShell-Cmdlets finden Sie in der SnapCenter Cmdlet-Hilfe oder im<block ref="b1f5996558dd020cdfc2747708228767" category="inline-link-rx"></block>.</block>
@@ -8626,26 +8615,7 @@ Die Aufbewahrung ist beispielsweise für eine Ressourcengruppe mit primärer SAP
   <block id="a2706d1c365c79f6f2378228b67eb95a" category="admonition">Für Azure NetApp Files sind keine Standardlizenzen und kapazitätsbasierte Lizenz erforderlich.</block>
   <block id="9e19caeb431a5e29a1a63e3cee4b36c9" category="inline-link">Oracle Datensicherung mit ONTAP</block>
   <block id="d118010bb2b3542007c6749bfd237123" category="list-text"><block ref="d118010bb2b3542007c6749bfd237123" category="inline-link-rx"></block></block>
-  <block id="3fd57bbce38ee807b2553fd56f562c3a" category="paragraph">Die neuesten Informationen zu unterstützten Versionen finden Sie im<block ref="734369dbdcbe00444fc7be843d617a6c" category="inline-link-rx"></block>.</block>
-  <block id="e688fd8ff964975e518ba6e9fff48630" category="paragraph">Aktuelle Informationen zu unterstützten Versionen finden Sie unter<block ref="64fc8efacd4fa13b8c1907c1db527b3d" category="inline-link-rx"></block>.</block>
-  <block id="580a1e1b3bc67640f27785bacfdba10c" category="paragraph">Aktuelle Informationen zu unterstützten Versionen finden Sie unter <block ref="fd691abce396db29ca9081f79eea36a4" category="inline-link-rx"></block>.</block>
-  <block id="f773b518874c315e0079bcc43b41dafb" category="paragraph">Aktuelle Informationen zu unterstützten Versionen finden Sie unter <block ref="7e664c06fb213184870ee71fe5278749" category="inline-link-rx"></block>.</block>
-  <block id="5ff7954c3f2b829e25e83d1cec41fd90" category="paragraph">Die neuesten Informationen zu unterstützten Versionen finden Sie im<block ref="bf4b590a983f5498451b0eaa24cb5904" category="inline-link-rx"></block>.</block>
-  <block id="0a2ff1c0a6b2aee7bcd66cc2b6860aee" category="paragraph">Die neuesten Informationen zu unterstützten Versionen finden Sie im<block ref="fe8a65f917aada6df3764fc6c6209a28" category="inline-link-rx"></block>.</block>
-  <block id="752a11b4b210ea35436698a7cd80caea" category="paragraph"><block ref="e7d7a2115bf371d0f0089011e31cda38" category="inline-link-rx"></block></block>
-  <block id="f2a30e95b118ce2c4e84d94437f4a891" category="paragraph"><block ref="441e536b7611a093a15728d219a7454c" category="inline-link-rx"></block></block>
-  <block id="ae40aaa559a1bbbe76fec5e022433b75" category="paragraph"><block ref="351286a887d0b0d2fc33bf3b0aea6c46" category="inline-link-rx"></block></block>
-  <block id="9739b5dca00527fc095cb7d7328ae9a7" category="paragraph"><block ref="4ff8a1baebd27154daa6b321538c5ed7" category="inline-link-rx"></block></block>
-  <block id="56a209ac4190647592f4f2269ba15e4b" category="paragraph"><block ref="c8cd869b77fffd17e64627cb1aa57436" category="inline-link-rx"></block></block>
-  <block id="15819c8f1b3ff9ce9e18a6765617b72f" category="paragraph"><block ref="370c38cf447e1e69e1ad058e85ef81da" category="inline-link-rx"></block></block>
   <block id="b292068e5bdee43d554d534df100834f" category="paragraph">Aktuelle Informationen zu unterstützten Versionen finden Sie im<block ref="bf4b590a983f5498451b0eaa24cb5904" category="inline-link-rx"></block></block>
-  <block id="26c29286acbcac90c9ca148d0edc6829" category="paragraph"><block ref="f4c726cc6a480d91bc287e4e17640f59" category="inline-link-rx"></block></block>
-  <block id="cbf06340cf7e3ebe82b098559b7d3b1d" category="paragraph">SnapCenter Provisioning und Datensicherung werden unter Windows Server unterstützt. Die neuesten Informationen zu unterstützten Versionen finden Sie im<block ref="ac8016761c99410cb5502fc617daf49f" category="inline-link-rx"></block> [NetApp Interoperabilitäts-Matrix-Tool^].</block>
-  <block id="dd51beca21dafbea1327c8a54048049f" category="paragraph">Die Konfigurationen, die vom SnapCenter-Plug-in für Oracle-Datenbank unterstützt werden, sind in der aufgeführt<block ref="f921a84bb94ef2f856de2002022c7838" category="inline-link-rx"></block>.</block>
-  <block id="ea7066cba2f5864f04733d3067090883" category="list-text"><block ref="24657c22d8d7f925e015eed9a43e11c5" category="inline-link-rx"></block></block>
-  <block id="93c316672b17211820e2eaed5f45f68f" category="paragraph">Die neuesten Informationen zu unterstützten Versionen finden Sie im<block ref="b02065f5fe9f591a1587fb1e13c5796e" category="inline-link-rx"></block>.</block>
-  <block id="b394be29329a30bfde3ff6670085b4f8" category="paragraph">Das<block ref="df4d48b0823cb16de0f94c0dcd83ea6f" category="inline-link-rx"></block> enthält die neuesten Informationen zu den unterstützten Versionen.</block>
-  <block id="54634901ea136d581a907da437231faa" category="paragraph">Aktuelle Informationen zu unterstützten Oracle-Versionen finden Sie im<block ref="f921a84bb94ef2f856de2002022c7838" category="inline-link-rx"></block>.</block>
   <block id="f726f8fd5eef7b55d41228aa71d0a7e9" category="list-text">Führen Sie die Host Refresh API:<block ref="b37cd34fbbf7b073a1b5c2fd52ee92dd" prefix=" " category="inline-code"></block> Oder das Cmdlet: _Invoke-SmTechRefreshHost_ aus.</block>
   <block id="875d7a3460c60f3568be1f2abe89a635" category="list-text">Erstellen Sie eine Sicherung des SnapCenter-Servers auf dem alten Host entweder mit der API: Oder mit<block ref="88422de128aef85dbcc043bb5e99d727" prefix=" " category="inline-code"></block> dem Cmdlet: _New-SmServerBackup_.</block>
   <block id="717c72270ce876f743856a621389e967" category="list-text">Stellen Sie die Sicherung des SnapCenter-Servers auf dem neuen Host entweder mit der API: Oder mit dem Cmdlet: _Restore-SmServerBackup_ wieder<block ref="4c4a6e8508df6259fb36bbdfd36c0086" prefix=" " category="inline-code"></block> her.</block>
@@ -8660,7 +8630,6 @@ Die Aufbewahrung ist beispielsweise für eine Ressourcengruppe mit primärer SAP
   <block id="cc0cce77e1e28838ab6e9078eb7da114" category="list-text">Nachdem Sie die Speicherdetails überprüft haben, setzen Sie das Attribut _IsDryRun_ auf False und führen Sie die Speicheraktualisierung-API:<block ref="84d2bad3561662612c0f19102d8af171" prefix=" " category="inline-code"></block> Oder das Cmdlet: _Invoke-SmTechRefreshPrimaryStorage_ aus.</block>
   <block id="c81b0a7466aafc83de0beda501358cdd" category="list-text">(Optional) Wenn nicht alle Snapshots aus dem alten primären Speicher in den neuen primären Speicher verschoben werden, führen Sie die folgende API aus:<block ref="6e088a1a2676abbb3b6434c32a05fa0c" prefix=" " category="inline-code"></block> Oder das Cmdlet _Invoke-SmPrimaryBackupsExistenceCheck_.</block>
   <block id="da838fd656a52206a5571426cdea502d" category="list-text">Nachdem alle Ressourcen in einem Host gesichert wurden, führen Sie entweder die sekundäre Speicher-Refresh-API aus: Oder das Cmdlet:<block ref="519c39228e07d21e137e72515657a3cf" prefix=" " category="inline-code"></block> _Invoke-SmTechRefreshSecondaryStorage_.</block>
-  <block id="4f76be6e3e78147f069df76d367c9608" category="paragraph">SnapCenter Provisioning und Datensicherung werden unter Windows Server unterstützt. Die neuesten Informationen zu unterstützten Versionen finden Sie im <block ref="1b8aeeaa3467913188c00052ded68716" category="inline-link-rx"></block>.</block>
   <block id="e41c493e675bae82cb792b14a41ea23d" category="list-text">Aktualisieren Sie den Wert des Schlüssels MySQLProtocol in der Datei SnapManager.Web.UI.dll.config.</block>
   <block id="195748e3bf5f1bb6db5e627914555154" category="paragraph">Das folgende Beispiel zeigt den Wert des Schlüssels MySQLProtocol, der in der Datei SnapManager.Web.UI.dll.config aktualisiert wurde.</block>
   <block id="fc8660e632799d14ef937c4ca79726ab" category="list-text">Aktualisieren Sie die Datei SnapManager.Web.UI.dll.config mit den Pfaden, die im Abschnitt [Client] der Datei my.ini bereitgestellt wurden.</block>
@@ -9312,7 +9281,6 @@ Die Aufbewahrung ist beispielsweise für eine Ressourcengruppe mit primärer SAP
   <block id="7450cfde7058dc5e1f7909d0280fd7ae" category="list-text">Azure NetApp Dateien</block>
   <block id="4d82a1ec1af02725042c8c785564ee7a" category="list-text">Amazon FSX für NetApp ONTAP</block>
   <block id="0b4e0166878acdd36f882f2270445c06" category="section-title">Unterstützte Applikationen und Datenbanken</block>
-  <block id="29756d78461f8a62cb986dc97f47496b" category="paragraph">SnapCenter unterstützt den Schutz verschiedener Applikationen und Datenbanken. Ausführliche Informationen zu den unterstützten Anwendungen und Datenbanken finden Sie unter<block ref="734369dbdcbe00444fc7be843d617a6c" category="inline-link-rx"></block>.</block>
   <block id="ee0febdaba6d4c618d2cca84b2c49df1" category="paragraph">SnapCenter unterstützt den Schutz von Oracle- und Microsoft SQL-Workloads in VMware Cloud auf AWS-Umgebungen (Software-Defined Data Center) von Amazon Web Services. <block ref="95513dc65edb533209d1910ac5e4b37d" category="inline-link-rx"></block>.</block>
   <block id="b9c10c8dd3cdddca3cd9a96c6f110517" category="doc">Aktive SnapMirror-Synchronisierung in SnapCenter</block>
   <block id="24a4022d37c99455611842cdead9d299" category="paragraph">Weitere Informationen zu SnapMirror Active Sync finden Sie unter<block ref="014166fe18ae8fdd05d96b765aaf21c5" category="inline-link-rx"></block>.</block>
@@ -9380,7 +9348,6 @@ Die Aufbewahrung ist beispielsweise für eine Ressourcengruppe mit primärer SAP
   <block id="d39d360863f3fda3c5d615dc978e14ae" category="sidebar">Installieren Sie den SnapCenter-Server</block>
   <block id="3199d4d0758d0f4f53db9a8f36670c18" category="sidebar">Konfigurieren des SnapCenter-Servers</block>
   <block id="4c975961e88401702aa6aac167300031" category="sidebar">Hinzufügen und Bereitstellen des Speichersystems</block>
-  <block id="81f9b64ab1987ed2d00f4d52a80ca52b" category="paragraph">Die neuesten Informationen zu unterstützten Versionen finden Sie im<block ref="315018c067f16596ddc2e2de507c24d0" category="inline-link-rx"></block>.</block>
   <block id="0885e9f12d8cb35b0f02655c34c87004" category="admonition">IBM Java wird auf Windows- und Linux-Hosts nicht unterstützt.</block>
   <block id="48c9a1bf5de7bf57f1efa648f3bc8d17" category="inline-link">JAVA für Windows herunterladen</block>
   <block id="a4560fe71d10d98deabf55fdf50b90f0" category="paragraph"><block ref="a4560fe71d10d98deabf55fdf50b90f0" category="inline-link-rx"></block></block>
@@ -9613,4 +9580,25 @@ Die Aufbewahrung ist beispielsweise für eine Ressourcengruppe mit primärer SAP
   <block id="1e3eeac5409758903bc21870184a640a" category="paragraph">Einzelheiten zu den Änderungen finden Sie im<block ref="06d876b9fcdfcba8772d93beac1ca38b" category="inline-link-macro-rx"></block> .</block>
   <block id="e6f36a956625505e0a3733e3e0073fa0" category="paragraph">SnapCenter -Webport</block>
   <block id="da994c44eacde8f5cafe8883779cb695" category="sidebar">Technische Berichte von SnapCenter</block>
+  <block id="a5ae087d92fe3db87c6e8de8e579868c" category="paragraph">Die aktuellsten Informationen zu den unterstützten Versionen finden Sie unter<block ref="845d98cf9e1414112b381d552d9c8014" category="inline-link-rx"></block>Die</block>
+  <block id="96210757b8412d030188fecde28ceb9d" category="paragraph">SnapCenter -Bereitstellungs- und Datenschutzunterstützung ist auf Windows Server verfügbar. Die aktuellsten Informationen zu den unterstützten Versionen finden Sie unter <block ref="6c9a8409bf98d8a8939e1ebaf2e43454" category="inline-link-rx"></block>Die</block>
+  <block id="cf12f1baaed2b3c195374322d8d857bc" category="paragraph">SnapCenter unterstützt den Schutz verschiedener Anwendungen und Datenbanken.</block>
+  <block id="02ad1debcdf6904dd2ade67597e4c26e" category="paragraph">Die aktuellsten Informationen zu den unterstützten Versionen finden Sie unter <block ref="0bd5b4c33632bb634c82faaae99e0602" category="inline-link-rx"></block>Die</block>
+  <block id="73f538f8783386e78b66d9443bb98bd0" category="paragraph">Die aktuellsten Informationen zu den unterstützten Versionen finden Sie unter <block ref="9ba7ed904923f6110f4eb8cece054441" category="inline-link-rx"></block>Die</block>
+  <block id="891f174b4f7f5c2ac6b414ca9ea01713" category="paragraph">Die neuesten Informationen zu unterstützten Versionen finden Sie im<block ref="00e02cae149cc9de4aea278bb76f630e" category="inline-link-rx"></block> .</block>
+  <block id="2a38b23cace66a1ff7fcaae540c065e1" category="paragraph">+ Aktuelle Informationen zu unterstützten Versionen finden Sie unter<block ref="6191699ded4b56fe00b3328a9193fb3c" category="inline-link-rx"></block>Die</block>
+  <block id="c9dd6bad4c7d561872f2e2d498a990bf" category="inline-link">Interoperabilitätsmatrix-Tool (IMT)</block>
+  <block id="298397a9c073629495179c7913e1c3ce" category="paragraph">Der<block ref="af6eb6bb2f15f565365a0be0579b55eb" category="inline-link-rx"></block> Enthält die aktuellsten Informationen zu den unterstützten Konfigurationen.</block>
+  <block id="c09f9355ffec7a4ebce82be71a8c243f" category="paragraph">Der<block ref="fb864633e8f65af932ce118a1d181b8d" category="inline-link-rx"></block> Enthält die aktuellsten Informationen zu den unterstützten Konfigurationen.</block>
+  <block id="d289bbfe1554f83d213d5958a481c248" category="paragraph">Die aktuellsten Informationen zu den unterstützten Versionen finden Sie unter<block ref="00e02cae149cc9de4aea278bb76f630e" category="inline-link-rx"></block>Die</block>
+  <block id="0be174a8508a59f21b484245da1e1605" category="paragraph">Die neuesten Informationen zu unterstützten Versionen finden Sie im<block ref="845d98cf9e1414112b381d552d9c8014" category="inline-link-rx"></block> .</block>
+  <block id="57c12b0c6639b8884c79259831fa9f28" category="paragraph">Der<block ref="45ef37a4bb1edb251808bfcdb0b9e22c" category="inline-link-rx"></block> Enthält die aktuellsten Informationen zu den unterstützten Konfigurationen.</block>
+  <block id="f101abf86e878a2ecb48d889221777be" category="paragraph">Wenn Sie Windows Server 2019 oder Windows Server 2016 für den SnapCenter Server-Host verwenden, müssen Sie Java 11 installieren.</block>
+  <block id="a0d1f8ac2dd9261f6193237061098514" category="paragraph">Der<block ref="b6383984df7f2080eb1163b0aa6a5917" category="inline-link-rx"></block> Enthält die aktuellsten Informationen zu den unterstützten Konfigurationen.</block>
+  <block id="6fc7bf078a50f1c4ddd79c0229afe3ff" category="doc">Vom SnapCenter -Plug-in für Microsoft Exchange Server unterstützte Speichertypen</block>
+  <block id="08fed5985d86e1f1278601d57e1bff6b" category="paragraph">SnapCenter -Bereitstellungs- und Datenschutzunterstützung ist auf Windows Server verfügbar. Die neuesten Informationen zu unterstützten Versionen finden Sie im<block ref="bf4b37302d584cabdf50327923359db4" category="inline-link-rx"></block> .</block>
+  <block id="a9ac2dfd2f149cd6721af54e0c2be71a" category="paragraph">Die vom SnapCenter Plug-in für Oracle Database unterstützten Konfigurationen sind in der folgenden Liste aufgeführt:<block ref="58ad8fcd3a707b69946dbf79718bb07e" category="inline-link-rx"></block>Die</block>
+  <block id="3c5c3e6bd14b3e4e352c8002cf589e92" category="paragraph">Die aktuellsten Informationen zu den unterstützten Oracle-Versionen finden Sie unter<block ref="a89f191aac75a149b4bd1d52674271e1" category="inline-link-rx"></block>Die</block>
+  <block id="376e524c167313cb5049a67eee645bf3" category="paragraph">Sie können PowerShell-Cmdlets auch manuell oder in Skripts verwenden, um Sicherungs-, Wiederherstellungs-, Überprüfungs- und Klonvorgänge durchzuführen. Ausführliche Informationen zu PowerShell-Cmdlets finden Sie in der SnapCenter Cmdlet-Hilfe oder unter [Link einfügen].<block ref="b1f5996558dd020cdfc2747708228767" category="inline-link-rx"></block>Die</block>
+  <block id="de59c74d77a24fb63e10ea5992296495" category="paragraph">Die neuesten Informationen zu unterstützten Versionen finden Sie im<block ref="80c012152b8b3575d1f77200bc55e9c0" category="inline-link-rx"></block> .</block>
 </blocks>

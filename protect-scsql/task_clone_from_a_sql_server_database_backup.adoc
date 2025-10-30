@@ -156,14 +156,13 @@ Informationen zu EMS finden Sie unter https://docs.netapp.com/us-en/snapcenter/a
 
 . Überprüfen Sie die Zusammenfassung, und wählen Sie dann *Fertig stellen*.
 . Überwachen Sie den Vorgangsfortschritt, indem Sie *Monitor* > *Jobs* auswählen.
++
+
+NOTE: Nach dem Erstellen des Klons sollten Sie ihn nicht mehr umbenennen.
 
 
-.Nachdem Sie fertig sind
-Nach dem Erstellen des Klons sollten Sie ihn nicht mehr umbenennen.
 
 .Verwandte Informationen
-https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Clone_operation_might_fail_or_take_longer_time_to_complete_with_default_TCP_TIMEOUT_value["Der Klonvorgang kann fehlschlagen oder längere Zeit zum Abschließen mit dem Standardwert für TCP_TIMEOUT benötigen"]
-
 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/The_failover_cluster_instance_database_clone_fails["Der Datenbankklon für die Failover-Cluster-Instanz ist fehlgeschlagen"]
 
 --
