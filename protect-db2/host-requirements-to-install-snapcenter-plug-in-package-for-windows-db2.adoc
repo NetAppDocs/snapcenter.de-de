@@ -22,7 +22,7 @@ Betriebssysteme
  a| 
 Microsoft Windows
 
-+ Aktuelle Informationen zu unterstützten Versionen finden Sie unter https://imt.netapp.com/imt/imt.jsp?components=180321;180339;&solution=1257&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"]Die
+Die neuesten Informationen zu unterstützten Versionen finden Sie im https://imt.netapp.com/imt/imt.jsp?components=180321;180339;&solution=1257&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"] .
 
 
 

@@ -168,6 +168,7 @@ Die folgenden Wiederherstellungs- und Recovery-Vorgänge werden nicht unterstüt
 * Restore und Recovery von Tabellen der Root-Container-Datenbank (CDB)
 * Wiederherstellung temporärer Tabellen und temporärer Tablespaces im Zusammenhang mit PDBs
 * Wiederherstellung und Wiederherstellung von Tabellen aus mehreren PDBs gleichzeitig
+* Wiederherstellung temporärer Dateien, da das Oracle-Plug-in keine Sicherung temporärer Dateien erstellt.
 * Wiederherstellung von Log-Backups
 * Wiederherstellung von Backups an einem anderen Speicherort
 * Wiederherstellung von Wiederherstellungsprotokolldateien in einer anderen Konfiguration als Data Guard Standby oder Active Data Guard Standby-Datenbanken

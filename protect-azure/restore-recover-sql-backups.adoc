@@ -11,14 +11,15 @@ summary: Mit SnapCenter können Daten von einem oder mehreren Backups wiederherg
 
 
 [role="lead"]
-Sie können SnapCenter verwenden, um gesicherte SQL Server-Datenbanken wiederherzustellen. Die Datenbankwiederherstellung ist ein mehrstufiger Prozess, der alle Daten und Protokollseiten aus einem angegebenen SQL Server-Backup in eine angegebene Datenbank kopiert.
+Mit SnapCenter können Sie SQL Server-Datenbanken wiederherstellen.  Die Wiederherstellung einer Datenbank ist ein mehrphasiger Prozess, bei dem alle Daten und Protokollseiten aus einer bestimmten SQL-Server-Sicherung in eine bestimmte Datenbank kopiert werden.
 
-.Über diese Aufgabe
-Sie sollten sicherstellen, dass die Zielinstanz für die Wiederherstellung mit einem Active Directory-Benutzer konfiguriert ist, der zur SMB ADActive Directory-Domäne gehört und über die Berechtigungen verfügt, die Dateiberechtigungen entsprechend festzulegen. Sie sollten die Anmeldeinformationen in SnapCenter auf Instanzebene konfigurieren.
+.Bevor Sie beginnen
+* Konfigurieren Sie die Zielinstanz mit einem Active Directory-Benutzer, der zur SMB Active Directory-Domäne gehört und über die Berechtigung verfügt, die Dateiberechtigungen entsprechend festzulegen.
+* Konfigurieren Sie die Anmeldeinformationen auf SnapCenter Instanzebene.
+* Wenn sich die SQL-Datenbank auf einer CIFS-Freigabe befindet, müssen das RunAS-Konto und das SQL-Dienstkonto (Domänenkonto) des Plug-in-Hosts Teil der Konfiguration sein. `BUILTIN\Administrators` Gruppe des CIFS-Servers in ONTAP.
+* SMB-Konfigurationen unterstützen keine SQL-Authentifizierung für die Zielinstanz.  Konfigurieren Sie die Zielinstanz in SnapCenter mit einem Active Directory-Benutzer, der über die erforderlichen Berechtigungen verfügt.
+* Wenn es sich bei dem SnapCenter Plug-in-Dienstkonto nicht um einen Active Directory-Benutzer handelt, stellen Sie sicher, dass beim Wiederherstellen auf einem alternativen Host ein Benutzer mit vollständiger Kontrolle über die Quellvolumes verfügbar ist.
 
-Die SQL-Authentifizierung für die Zielinstanz wird für SMB-Konfigurationen nicht unterstützt. Die Zielinstanz sollte in SnapCenter konfiguriert werden, wobei der Active Directory-Benutzer über die erforderlichen Berechtigungen verfügt.
-
-Wenn das Dienstkonto für die SnapCenter-Plug-in-Dienste kein Active Directory-Benutzer ist, ist bei der Wiederherstellung auf einem alternativen Host der Benutzer erforderlich, der die volle Kontrolle über die Quell-Volumes hat, damit er imitiert werden kann und den erforderlichen Vorgang ausführen kann.
 
 .Schritte
 . Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
@@ -28,8 +29,8 @@ Wenn das Dienstkonto für die SnapCenter-Plug-in-Dienste kein Active Directory-B
 . Wählen Sie das Backup aus der Tabelle aus, und klicken Sie dann auf das image:../media/restore_icon.gif["Symbol Wiederherstellen"] Symbol.
 . Wählen Sie auf der Seite „Bereich wiederherstellen“ eine der folgenden Optionen aus:
 +
-.. Wählen Sie *Datenbank auf demselben Host wiederherstellen, auf dem die Sicherung erstellt wurde*, wenn Sie die Datenbank auf demselben SQL Server wiederherstellen möchten, auf dem die Backups durchgeführt werden.
-.. Wählen Sie *Wiederherstellen der Datenbank auf einem alternativen Host*, wenn Sie möchten, dass die Datenbank auf einem anderen SQL-Server auf demselben oder einem anderen Host wiederhergestellt wird, auf dem Backups durchgeführt werden.
+.. Wählen Sie *Datenbank auf demselben Host wiederherstellen, auf dem die Sicherung erstellt wurde*, um die Datenbank auf demselben SQL-Server wiederherzustellen.
+.. Wählen Sie *Datenbank auf einem alternativen Host wiederherstellen*, wenn Sie die Datenbank auf einem anderen SQL-Server auf demselben oder einem anderen Host wiederherstellen möchten, auf dem die Sicherungen erstellt werden.
 
 
 . Wählen Sie auf der Seite „Recovery Scope“ eine der folgenden Optionen aus:
