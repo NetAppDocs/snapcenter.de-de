@@ -37,6 +37,3 @@ Die Überprüfung der SQL Server Systemdatenbank wird nicht unterstützt. SnapCe
 * Planen von Backup-Vorgängen und Klonvorgängen
 * Überwachung von Backup-Vorgängen, Restore-Vorgängen und Klonvorgängen
 
-
-
-NOTE: Das Plug-in für SQL Server unterstützt kein Backup und Recovery von SQL Server Datenbanken auf SMB-Freigaben.

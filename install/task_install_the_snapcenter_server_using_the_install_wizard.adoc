@@ -160,24 +160,9 @@ Informationen zur .NET-spezifischen Fehlerbehebung finden Sie unter https://kb.n
 
 
  a| 
-Message Queuing
- a| 
-* Message Queuing Services
-+
-
-NOTE: Stellen Sie sicher, dass keine anderen Anwendungen den MSMQ-Dienst verwenden, den SnapCenter erstellt und verwaltet.
-
-* RabbitMQ
-* Erlang
-
-
-
-
- a| 
 Windows-Prozess-Aktivierungsdienst
  a| 
-* Prozessmodell
-
+Prozessmodell
 
 
 
