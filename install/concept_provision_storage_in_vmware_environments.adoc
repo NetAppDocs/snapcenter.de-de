@@ -134,4 +134,10 @@ Der Initiator muss entweder FC oder Microsoft iSCSI sein, aber nicht beides.
 
 Bevor Sie in einem Microsoft Cluster Speicher zwischen den Knoten mit FC RDM LUNs teilen können, müssen Sie zuerst die gemeinsame Quorum-Festplatte und die freigegebene Speicherplatte erstellen und diese dann beiden virtuellen Maschinen im Cluster hinzufügen.
 
-Das freigegebene Laufwerk wird mit dem Plug-in für Windows nicht erstellt. Sie sollten die gemeinsame LUN erstellen und dann jeder virtuellen Maschine im Cluster hinzufügen. Weitere Informationen finden Sie unter https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/6-7/setup-for-failover-clustering-and-microsoft-cluster-service.html["Clustern Von Virtual Machines Über Physische Hosts Hinweg"^].
+Die gemeinsam genutzte Festplatte wird nicht mithilfe des Plug-in for Windows erstellt. Sie sollten die Shared-LUN erstellen und dann jeder virtuellen Maschine im Cluster hinzufügen.
+
+
+
+== Verwandte Informationen
+
+Konsultieren Sie link:https://techdocs.broadcom.com["Broadcom Technische Dokumentation"^] und suchen Sie in der Dokumentation nach Informationen zum Clustern virtueller Maschinen über physische Hosts hinweg und zum Erstellen von Shared-FC-RDM-LUNs für Microsoft-Cluster.
