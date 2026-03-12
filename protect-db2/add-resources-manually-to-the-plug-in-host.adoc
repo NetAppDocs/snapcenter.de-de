@@ -25,7 +25,7 @@ Die manuelle Erkennung wird für die folgenden Konfigurationen nicht unterstütz
 
 .Schritte
 . Wählen Sie im linken Navigationsbereich *Ressourcen* aus, und wählen Sie dann das SnapCenter-Plug-in für IBM DB2 aus der Dropdown-Liste aus.
-. Klicken Sie auf der Seite Ressourcen auf *IBM DB2-Ressource hinzufügen*.
+. Wählen Sie auf der Seite Ressourcen *IBM DB2 Resource hinzufügen* aus.
 . Führen Sie auf der Seite „Ressourcendetails bereitstellen“ die folgenden Aktionen durch:
 +
 |===
@@ -61,21 +61,28 @@ Geben Sie den Namen der Instanz an, die das übergeordnete Element der Datenbank
 
 
  a| 
+Mount-Pfade
+ a| 
+Geben Sie die Mount-Pfade an, unter denen die Ressource eingebunden ist. Dies gilt nur für Windows-Hosts.
+
+
+
+ a| 
 Anmeldedaten
  a| 
 Wählen Sie die Anmeldeinformationen aus, oder fügen Sie Informationen zu den Anmeldeinformationen hinzu.
 
-Dies ist optional.
+Dieses Feld ist optional.
 
 |===
 . Wählen Sie auf der Seite „Storage Footprint bereitstellen“ einen Speichertyp aus und wählen Sie ein oder mehrere Volumes, LUNs und qtrees aus, und klicken Sie dann auf *Save*.
 +
 Optional: Sie können auf das * -Symbol klickenimage:../media/add_policy_from_resourcegroup.gif["Ressourcengruppe für Richtlinienformular hinzufügen"], um weitere Volumes, LUNs und qtrees von anderen Storage-Systemen hinzuzufügen.
 
-. Optional: Geben Sie auf der Seite Ressourceneinstellungen für Ressourcen auf dem Windows-Host benutzerdefinierte Schlüssel-Wert-Paare für IBM DB2-Plug-in ein
+. Optional: Auf der Seite „Ressourceneinstellungen“ können Sie für Ressourcen auf Linux-Hosts, auf denen das SnapCenter Plug-in für IBM Db2 installiert ist, benutzerdefinierte Schlüssel-Wert-Paare für das IBM Db2 Plug-in eingeben. Benutzerdefinierte Schlüssel-Wert-Paare werden für IBM Db2-Datenbanken, die als zentrales Windows-Plug-in registriert sind, nicht unterstützt.
 . Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
 +
-Die Datenbanken werden zusammen mit Informationen wie dem Hostnamen, zugehörigen Ressourcengruppen und Richtlinien sowie dem Gesamtstatus angezeigt
+Die Datenbanken werden zusammen mit Informationen wie dem Hostnamen, den zugehörigen Ressourcengruppen und Richtlinien sowie dem Gesamtstatus angezeigt.
 
 
 

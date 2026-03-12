@@ -7878,7 +7878,6 @@ Die Aufbewahrung ist beispielsweise für eine Ressourcengruppe mit primärer SAP
   <block id="66fe54fa4e213e520e33fab0de4829f3" category="list-text">Sie müssen Aufgaben wie die Installation des SnapCenter-Servers, das Hinzufügen von Hosts und das Einrichten von Speichersystemverbindungen abgeschlossen haben.</block>
   <block id="8d8222bc5c37db0562c84d9175b85db9" category="paragraph">Die manuelle Erkennung wird für die folgenden Konfigurationen nicht unterstützt:</block>
   <block id="0e74c3e0dd316d16d24798ac1b0249ef" category="list-text">Wählen Sie im linken Navigationsbereich *Ressourcen* aus, und wählen Sie dann das SnapCenter-Plug-in für IBM DB2 aus der Dropdown-Liste aus.</block>
-  <block id="6425c50f54d17cde35a57532dc8e8d08" category="list-text">Klicken Sie auf der Seite Ressourcen auf *IBM DB2-Ressource hinzufügen*.</block>
   <block id="75795411fa0821e8da73e95200ff81ad" category="paragraph">Geben Sie den Datenbanknamen an.</block>
   <block id="1c07f24dbaeb847f4662960d2691d528" category="paragraph">Host-Name</block>
   <block id="ce7a42c0c120b0e761b1d9b2851def5b" category="paragraph">Geben Sie den Hostnamen ein.</block>
@@ -7888,7 +7887,6 @@ Die Aufbewahrung ist beispielsweise für eine Ressourcengruppe mit primärer SAP
   <block id="5efe9e6fa4156b39ced69425eba7fb49" category="paragraph">Wählen Sie die Anmeldeinformationen aus, oder fügen Sie Informationen zu den Anmeldeinformationen hinzu.</block>
   <block id="deec2d29ae112d513d1bbd8cb6f3a23c" category="paragraph">Dies ist optional.</block>
   <block id="4e4f9229f5def86d57e9acaf8014a093" category="list-text">Wählen Sie auf der Seite „Storage Footprint bereitstellen“ einen Speichertyp aus und wählen Sie ein oder mehrere Volumes, LUNs und qtrees aus, und klicken Sie dann auf *Save*.</block>
-  <block id="bdf0204433b7ea9c415d7d723d74d2ef" category="list-text">Optional: Geben Sie auf der Seite Ressourceneinstellungen für Ressourcen auf dem Windows-Host benutzerdefinierte Schlüssel-Wert-Paare für IBM DB2-Plug-in ein</block>
   <block id="da0726c01021262f418bf88a38a3c39d" category="paragraph">Die Datenbanken werden zusammen mit Informationen wie dem Hostnamen, zugehörigen Ressourcengruppen und Richtlinien sowie dem Gesamtstatus angezeigt</block>
   <block id="c919dec0be0a88ec3d86651541015ec0" category="paragraph">Nach dem Hinzufügen der Datenbanken können Sie die IBM DB2-Datenbankdetails ändern.</block>
   <block id="8c1a9a6f582efdb1bcf39b24b3a86ac7" category="summary">Ressourcen sind IBM DB2-Datenbanken und Instanzen auf dem Linux-Host, die von SnapCenter gemanagt werden. Nach der Installation des SnapCenter-Plug-ins für IBM DB2 werden die IBM DB2-Datenbanken auf diesem Linux-Host automatisch erkannt und auf der Seite „Ressourcen“ angezeigt.</block>
@@ -9606,4 +9604,21 @@ Die Aufbewahrung ist beispielsweise für eine Ressourcengruppe mit primärer SAP
   <block id="ae0aa1a81eb18e69d5fc662eaee0efd5" category="inline-link-macro">Broadcom Technische Dokumentation</block>
   <block id="35108ed715245e1479e838ca41d91463" category="paragraph">Konsultieren Sie <block ref="fba62a4233b1f0aa3ff3e46f7f59037b" category="inline-link-macro-rx"></block> und suchen Sie in der Dokumentation nach Informationen zum Clustern virtueller Maschinen über physische Hosts hinweg und zum Erstellen von Shared-FC-RDM-LUNs für Microsoft-Cluster.</block>
   <block id="82b9e59bccf9587b5e339fa8a0f02dd5" category="list-text">NVMe-Controller werden nur mit NVMe-Datastores unterstützt.</block>
+  <block id="cc05f18551b367465c63e80895a59c04" category="list-text">Wählen Sie auf der Seite Ressourcen *IBM DB2 Resource hinzufügen* aus.</block>
+  <block id="89cb4324d3c17b7b0eaa5b7eb935edd8" category="paragraph">Mount-Pfade</block>
+  <block id="cc1a25d74bb64939e2163e074e092923" category="paragraph">Geben Sie die Mount-Pfade an, unter denen die Ressource eingebunden ist. Dies gilt nur für Windows-Hosts.</block>
+  <block id="30deb25c4a7c59e8200ce96d5e23156f" category="paragraph">Dieses Feld ist optional.</block>
+  <block id="d353032aed6d3d3117bcf87b841c7809" category="list-text">Optional: Auf der Seite „Ressourceneinstellungen“ können Sie für Ressourcen auf Linux-Hosts, auf denen das SnapCenter Plug-in für IBM Db2 installiert ist, benutzerdefinierte Schlüssel-Wert-Paare für das IBM Db2 Plug-in eingeben. Benutzerdefinierte Schlüssel-Wert-Paare werden für IBM Db2-Datenbanken, die als zentrales Windows-Plug-in registriert sind, nicht unterstützt.</block>
+  <block id="a56c9defea42601d21f4c5106fa4712f" category="paragraph">Die Datenbanken werden zusammen mit Informationen wie dem Hostnamen, den zugehörigen Ressourcengruppen und Richtlinien sowie dem Gesamtstatus angezeigt.</block>
+  <block id="aeab626a715ace67f9b44eba97173286" category="list-text">Für ONTAP 9.12.1 und früher übernehmen die im Rahmen der Wiederherstellung aus den SnapLock Vault-Snapshots erstellten Klone die SnapLock Vault-Ablaufzeit. Speicheradministratoren sollten die Klone nach der SnapLock Vault-Ablaufzeit manuell bereinigen.</block>
+  <block id="988351bdb1f1d7ecd10610f11fe7bd42" category="list-text">Wählen Sie auf der Seite *Ressourcen* *New Resource Group* aus.</block>
+  <block id="5c97cba64ecb09baf4d77b8f9af3d46f" category="paragraph">Benutzerdefiniertes Namensformat für Snapshot verwenden</block>
+  <block id="5ff5fcae197a653580a534917740d7f8" category="list-text">Wählen Sie den *Scripts*-Pfeil und geben Sie die Vor- und Nachbefehle für die Vorgänge Quiesce, Snapshot und Unquiesce ein. Sie können auch die Vorbefehle eingeben, die im Fehlerfall vor dem Beenden ausgeführt werden sollen.</block>
+  <block id="d3436e2d89e59038914374a22cc8c673" category="list-text">Wählen Sie den *Benutzerdefinierte Konfigurationen*-Pfeil aus und geben Sie die benutzerdefinierten Schlüssel-Wert-Paare ein, die für alle Data-Protection-Operationen mit dieser Ressource erforderlich sind.</block>
+  <block id="98f1c90d5d623746b2adfec471311f76" category="list-text">Wählen Sie den Pfeil *Snapshot Copy Tool*, um das Werkzeug zum Erstellen von Snapshots auszuwählen:</block>
+  <block id="7658971f73ec7751e63de7b917ad3277" category="paragraph">Um den Befehl einzugeben, der auf dem Host ausgeführt werden soll, um Snapshots zu erstellen.</block>
+  <block id="375a1cee000ea12f25f7ea0aa40c92d2" category="paragraph"><block ref="375a1cee000ea12f25f7ea0aa40c92d2" category="inline-link-macro-rx"></block></block>
+  <block id="3edc812c3aede1bb8931ed56901c3d63" category="list-text">Sie müssen Java 11 auf Ihren Linux- oder AIX-Hosts installiert haben.</block>
+  <block id="67444cdbc60594b36af73fd32a491c3e" category="paragraph"><block ref="67444cdbc60594b36af73fd32a491c3e" category="inline-link-macro-rx"></block></block>
+  <block id="947890351727a5bfefd25ab911655064" category="paragraph"><block ref="947890351727a5bfefd25ab911655064" category="inline-link-macro-rx"></block></block>
 </blocks>

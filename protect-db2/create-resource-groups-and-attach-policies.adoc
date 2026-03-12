@@ -14,12 +14,12 @@ summary: Eine Ressourcengruppe ist der Container, dem Sie Ressourcen hinzufügen
 Eine Ressourcengruppe ist der Container, dem Sie Ressourcen hinzufügen müssen, die Sie sichern und schützen möchten. Mit einer Ressourcengruppen können Sie alle Daten sichern, die einer bestimmten Anwendung zugeordnet sind. Für jeden Datenschutzauftrag ist eine Ressourcengruppen erforderlich. Sie müssen der Ressourcengruppe auch eine oder mehrere Richtlinien zuordnen, um den Typ des Datensicherungsauftrags zu definieren, den Sie ausführen möchten.
 
 .Über diese Aufgabe
-* Bei ONTAP Version 9.12.1 und niedriger übernehmen die im Rahmen der Wiederherstellung aus den SnapLock Vault Snapshots erstellten Klone die Verfallszeit von SnapLock Vault. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
+* Für ONTAP 9.12.1 und früher übernehmen die im Rahmen der Wiederherstellung aus den SnapLock Vault-Snapshots erstellten Klone die SnapLock Vault-Ablaufzeit. Speicheradministratoren sollten die Klone nach der SnapLock Vault-Ablaufzeit manuell bereinigen.
 
 
 .Schritte
-. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
-. Klicken Sie auf der Seite Ressourcen auf *Neue Ressourcengruppe*.
+. Wählen Sie im linken Navigationsbereich *Ressourcen* aus, und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Wählen Sie auf der Seite *Ressourcen* *New Resource Group* aus.
 . Führen Sie auf der Seite Name die folgenden Aktionen durch:
 +
 |===
@@ -46,7 +46,7 @@ Wenn Sie beispielsweise HR als Tag zu mehreren Ressourcengruppen hinzufügen, k�
 
 
  a| 
-Verwenden Sie ein benutzerdefiniertes Namensformat für Snapshot-Kopie
+Benutzerdefiniertes Namensformat für Snapshot verwenden
  a| 
 Aktivieren Sie dieses Kontrollkästchen, und geben Sie ein benutzerdefiniertes Namensformat ein, das für den Snapshot-Namen verwendet werden soll.
 
@@ -60,7 +60,7 @@ Dadurch können Informationen auf dem Bildschirm gefiltert werden.
 . Wählen Sie die Ressourcen im Abschnitt *Verfügbare Ressourcen* aus und klicken Sie dann auf den rechten Pfeil, um sie in den Abschnitt *Ausgewählte Ressourcen* zu verschieben.
 . Gehen Sie auf der Seite Anwendungseinstellungen wie folgt vor:
 +
-.. Klicken Sie auf den Pfeil *Backups*, um zusätzliche Backup-Optionen festzulegen:
+.. Wählen Sie den Pfeil *Backups*, um zusätzliche Backup-Optionen festzulegen:
 +
 Aktivieren Sie das Backup von Konsistenzgruppen und führen Sie die folgenden Aufgaben aus:
 
@@ -87,8 +87,8 @@ Wählen Sie diese Option aus, um zu vermeiden, einen WAFL Konsistenzpunkt zu erz
 +
 image:../media/application_settings.gif["Anwendungseinstellungen"]
 
-.. Klicken Sie auf den Pfeil *Scripts* und geben Sie die Pre- und Post-Befehle für Quiesce-, Snapshot- und Unquiesce-Vorgänge ein. Sie können auch die vor dem Beenden auszuführenden Vorbefehle im Falle eines Fehlers eingeben.
-.. Klicken Sie auf den Pfeil *Benutzerdefinierte Konfigurationen* und geben Sie die für alle Datenschutzvorgänge erforderlichen benutzerdefinierten Schlüsselwert-Paare mit dieser Ressource ein.
+.. Wählen Sie den *Scripts*-Pfeil und geben Sie die Vor- und Nachbefehle für die Vorgänge Quiesce, Snapshot und Unquiesce ein. Sie können auch die Vorbefehle eingeben, die im Fehlerfall vor dem Beenden ausgeführt werden sollen.
+.. Wählen Sie den *Benutzerdefinierte Konfigurationen*-Pfeil aus und geben Sie die benutzerdefinierten Schlüssel-Wert-Paare ein, die für alle Data-Protection-Operationen mit dieser Ressource erforderlich sind.
 +
 |===
 | Parameter | Einstellung | Beschreibung 
@@ -148,7 +148,7 @@ Sie sollten diesen Parameter verwenden, wenn sich die Archivprotokolle unter Unt
 
 NOTE: Die benutzerdefinierten Schlüssel-Wert-Paare werden für IBM DB2 Linux-Plug-in-Systeme unterstützt und nicht für IBM DB2-Datenbanken unterstützt, die als zentralisiertes Windows-Plug-in registriert sind.
 
-.. Klicken Sie auf den Pfeil *Snapshot Copy Tool*, um das Tool zum Erstellen von Snapshots auszuwählen:
+.. Wählen Sie den Pfeil *Snapshot Copy Tool*, um das Werkzeug zum Erstellen von Snapshots auszuwählen:
 +
 |===
 | Ihre Situation | Dann... 
@@ -169,7 +169,7 @@ Wählen Sie *SnapCenter ohne Dateisystemkonsistenz* aus.
 
 
  a| 
-Um den Befehl ein, der auf dem Host ausgeführt werden soll, um Snapshot Kopien zu erstellen.
+Um den Befehl einzugeben, der auf dem Host ausgeführt werden soll, um Snapshots zu erstellen.
  a| 
 Wählen Sie *other* aus, und geben Sie dann den Befehl ein, der auf dem Host ausgeführt werden soll, um einen Snapshot zu erstellen.
 
@@ -187,7 +187,7 @@ NOTE: Sie können eine Richtlinie auch erstellen, indem Sie auf * * klickenimage
 Die Richtlinien sind im Abschnitt „Zeitpläne für ausgewählte Richtlinien konfigurieren“ aufgeführt.
 
 .. Klicken Sie in der Spalte Zeitpläne konfigurieren auf * *image:../media/add_policy_from_resourcegroup.gif["Ressourcengruppe für Richtlinienformular hinzufügen"]für die Richtlinie, die Sie konfigurieren möchten.
-.. Konfigurieren Sie im Dialogfeld Add Schedules for Policy_Policy_Name_ den Zeitplan, und klicken Sie dann auf *OK*.
+.. Konfigurieren Sie im Dialogfeld Add Schedules for Policy _Policy_Name_ den Zeitplan, und wählen Sie dann *OK* aus.
 +
 Hier ist Policy_Name der Name der von Ihnen ausgewählten Richtlinie.
 
