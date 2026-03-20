@@ -13,6 +13,6 @@ summary: Liefert wichtige Informationen zu dieser Version von SnapCenter Server 
 [role="lead"]
 Informieren Sie sich über die neuen und verbesserten Funktionen in SnapCenter 6.2.
 
-Eine vollständige Liste der neuen Funktionen und Verbesserungen finden Sie unter link:what's-new-in-snapcenter61.html["Was ist neu in SnapCenter 6.2"] .
+Eine vollständige Liste der neuen Funktionen und Verbesserungen finden Sie unter link:what's-new-in-snapcenter62.html["Was ist neu in SnapCenter 6.2"].
 
 Einzelheiten zu bekannten Problemen, Einschränkungen, behobenen Problemen sowie neuen und geänderten Befehlen finden Sie im https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467["Versionshinweise zur SnapCenter -Software 6.2"^] . Sie müssen sich mit Ihrem NetApp -Konto anmelden oder ein Konto erstellen, um auf die Versionshinweise zugreifen zu können.

@@ -15,14 +15,14 @@ Eine Ressourcengruppe ist der Container, dem Sie Ressourcen hinzufügen müssen,
 
 .Über diese Aufgabe
 * Zur Erstellung von SAP HANA System-Replikations-Backups wird empfohlen, alle Ressourcen des SAP HANA-Systems zu einer Ressourcengruppe hinzuzufügen. So wird für ein nahtloses Backup im Takeover-Failback-Modus gesorgt.
-* Bei ONTAP Version 9.12.1 und niedriger übernehmen die im Rahmen der Wiederherstellung aus den SnapLock Vault Snapshots erstellten Klone die Verfallszeit von SnapLock Vault. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock-Gültigkeitsdauer manuell bereinigen.
+* Für ONTAP 9.12.1 und früher erben die im Rahmen der Wiederherstellung aus den SnapLock Vault-Snapshots erstellten Klone die SnapLock Vault-Ablaufzeit. Der Storage-Administrator sollte die Klone nach Ablauf der SnapLock Vault-Ablaufzeit manuell bereinigen.
 * Das Hinzufügen neuer Datenbanken ohne SnapMirror Active Sync zu einer vorhandenen Ressourcengruppe, die Ressourcen mit SnapMirror Active Sync enthält, wird nicht unterstützt.
 * Das Hinzufügen neuer Datenbanken zu einer vorhandenen Ressourcengruppe im Failover-Modus von SnapMirror Active Sync wird nicht unterstützt. Sie können der Ressourcengruppe nur im regulären oder Failback-Status Ressourcen hinzufügen.
 
 
 .Schritte
-. Klicken Sie im linken Navigationsbereich auf *Ressourcen* und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
-. Klicken Sie auf der Seite Ressourcen auf *Neue Ressourcengruppe*.
+. Wählen Sie im linken Navigationsbereich *Ressourcen* aus, und wählen Sie dann das entsprechende Plug-in aus der Liste aus.
+. Wählen Sie auf der Seite *Ressourcen* *New Resource Group* aus.
 . Führen Sie auf der Seite Name die folgenden Aktionen durch:
 +
 |===
@@ -49,21 +49,21 @@ Wenn Sie beispielsweise HR als Tag zu mehreren Ressourcengruppen hinzufügen, k�
 
 
  a| 
-Verwenden Sie für Snapshot-Kopie das benutzerdefinierte Namensformat
+Verwenden Sie ein benutzerdefiniertes Namensformat für Snapshots.
  a| 
 Aktivieren Sie dieses Kontrollkästchen, und geben Sie ein benutzerdefiniertes Namensformat ein, das für den Snapshot-Namen verwendet werden soll.
 
-Beispiel: Custtext_Resource Group_Policy_hostname oder Resource Group_hostname. Standardmäßig wird an den Snapshot Namen ein Zeitstempel angehängt.
+Beispielsweise customtext_resourcegroup_policy_hostname oder resource group_hostname. Standardmäßig wird dem Snapshot-Namen ein Zeitstempel angehängt.
 
 |===
 . Wählen Sie auf der Seite Ressourcen einen Hostnamen aus der Dropdown-Liste *Host* und Ressourcentyp aus der Dropdown-Liste *Ressourcentyp* aus.
 +
 Dadurch können Informationen auf dem Bildschirm gefiltert werden.
 
-. Wählen Sie die Ressourcen im Abschnitt *Verfügbare Ressourcen* aus und klicken Sie dann auf den rechten Pfeil, um sie in den Abschnitt *Ausgewählte Ressourcen* zu verschieben.
+. Wählen Sie die Ressourcen aus dem Abschnitt *Verfügbare Ressourcen* aus, und wählen Sie dann den Pfeil nach rechts, um sie in den Abschnitt *Ausgewählte Ressourcen* zu verschieben.
 . Gehen Sie auf der Seite Anwendungseinstellungen wie folgt vor:
 +
-.. Klicken Sie auf den Pfeil *Backups*, um zusätzliche Backup-Optionen festzulegen:
+.. Wählen Sie den Pfeil *Backups*, um zusätzliche Backup-Optionen festzulegen:
 +
 Aktivieren Sie das Backup von Konsistenzgruppen und führen Sie die folgenden Aufgaben aus:
 
@@ -73,9 +73,9 @@ Aktivieren Sie das Backup von Konsistenzgruppen und führen Sie die folgenden Au
 
 
  a| 
-Es dauert nicht lange, bis der Snapshot-Vorgang der Konsistenzgruppe abgeschlossen ist
+Warten Sie die Dauer des Snapshot-Vorgangs der Konsistenzgruppe
  a| 
-Wählen Sie *dringend*, *Mittel* oder *entspannt* aus, um die Wartezeit für den Snapshot-Vorgang anzugeben.
+Wählen Sie *dringend*, *Mittel* oder *entspannt*, um die Wartezeit für den Snapshot-Vorgang anzugeben.
 
 Dringend = 5 Sekunden, Mittel = 7 Sekunden und entspannt = 20 Sekunden.
 
@@ -90,8 +90,8 @@ Wählen Sie diese Option aus, um zu vermeiden, einen WAFL Konsistenzpunkt zu erz
 +
 image:../media/application_settings.gif["Anwendungseinstellungen"]
 
-.. Klicken Sie auf den Pfeil *Scripts* und geben Sie die Pre- und Post-Befehle für Stilllegung, Snapshot und Stilllegung ein. Sie können auch die vor dem Beenden auszuführenden Vorbefehle im Falle eines Fehlers eingeben.
-.. Klicken Sie auf den Pfeil *Benutzerdefinierte Konfigurationen* und geben Sie die für alle Datenschutzvorgänge erforderlichen benutzerdefinierten Schlüsselwert-Paare mit dieser Ressource ein.
+.. Wählen Sie den *Scripts*-Pfeil und geben Sie die Vor- und Nachbefehle für die Vorgänge Quiesce, Snapshot und Unquiesce ein. Sie können auch die Vorbefehle eingeben, die im Fehlerfall vor dem Beenden ausgeführt werden sollen.
+.. Wählen Sie den *Benutzerdefinierte Konfigurationen*-Pfeil aus und geben Sie die benutzerdefinierten Schlüssel-Wert-Paare ein, die für alle Data-Protection-Operationen mit dieser Ressource erforderlich sind.
 +
 |===
 | Parameter | Einstellung | Beschreibung 
@@ -111,9 +111,9 @@ ARCHIVE_LOG_RETENTION
  a| 
 Anzahl_Tage
  a| 
-Gibt die Anzahl der Tage an, die die Archivprotokolle aufbewahrt werden.
+Gibt die Anzahl der Tage an, für die die Archivprotokolle aufbewahrt werden.
 
-Diese Einstellung muss gleich oder größer sein als NTAP_SNAPSHOT_ AUFBEWAHRUNG.
+Diese Einstellung muss gleich oder größer als NTAP_SNAPSHOT_RETENTIONS sein.
 
 
 
@@ -122,7 +122,7 @@ ARCHIVE_LOG_DIR
  a| 
 Change_info_Directory/logs
  a| 
-Gibt den Pfad zum Verzeichnis an, das die Archivprotokolle enthält.
+Gibt den Pfad zu dem Verzeichnis an, das die Archive-Logs enthält.
 
 
 
@@ -131,27 +131,27 @@ ARCHIVE_LOG_EXT
  a| 
 Dateierweiterung
  a| 
-Gibt die Länge der Erweiterung der Archivprotokolldatei an.
+Gibt einen regulären Ausdruck an, der mit den Dateinamenerweiterungen der Protokolldateien übereinstimmt.
 
-Wenn das Archivprotokoll beispielsweise log_Backup_0_0_0_0.161518551942 9 lautet und der Wert file_Extension 5 ist, bleibt die Erweiterung des Protokolls 5 Ziffern, also 16151.
+Für Logdateien, die mit einer bestimmten Anzahl von Ziffern enden, verwenden Sie einen regulären Ausdruck, wie  `[0-9+]` oder (ab 6.0)  `\d+` (beliebige Länge von Ziffern mit mindestens einem Zeichen) als Wert für den Parameter, der eine beliebige Logsequenznummer in SAP HANA darstellt.
 
 
 
  a| 
-ARCHIVE_LOG_RECURSIVE_SE-BOGEN
+ARCHIVE_LOG_RECURSIVE_SEARCH
  a| 
 (J/N)
  a| 
-Ermöglicht das Management von Archivprotokollen innerhalb von Unterverzeichnissen.
+Ermöglicht die Verwaltung von Archivprotokollen in Unterverzeichnissen.
 
 Sie sollten diesen Parameter verwenden, wenn sich die Archivprotokolle unter Unterverzeichnissen befinden.
 
 |===
 +
 
-NOTE: Die benutzerdefinierten Schlüsselwerterpaare werden für SAP HANA Linux-Plug-in-Systeme unterstützt und nicht für SAP HANA-Datenbanken unterstützt, die als zentrales Windows-Plug-in registriert sind.
+NOTE: Benutzerdefinierte Schlüssel-Wert-Paare werden für das SnapCenter Plug-in für SAP HANA Database auf Linux-Systemen unterstützt, jedoch nicht für SAP HANA databases, die mit dem SnapCenter Plug-in für Microsoft Windows registriert sind.
 
-.. Klicken Sie auf den Pfeil *Snapshot Copy Tool*, um das Tool zum Erstellen von Snapshots auszuwählen:
+.. Wählen Sie den Pfeil *Snapshot Copy Tool*, um das Werkzeug zum Erstellen von Snapshots auszuwählen:
 +
 |===
 | Ihre Situation | Dann... 
@@ -174,7 +174,7 @@ Wählen Sie *SnapCenter ohne Dateisystemkonsistenz* aus.
 
 
  a| 
-Geben Sie den Befehl ein, der auf dem Host ausgeführt werden soll, um Snapshot Kopien zu erstellen.
+Um den Befehl ein, der auf dem Host ausgeführt werden soll, um Snapshot Kopien zu erstellen.
  a| 
 Wählen Sie *other* aus, und geben Sie dann den Befehl ein, der auf dem Host ausgeführt werden soll, um einen Snapshot zu erstellen.
 
@@ -186,13 +186,13 @@ Wählen Sie *other* aus, und geben Sie dann den Befehl ein, der auf dem Host aus
 .. Wählen Sie eine oder mehrere Richtlinien aus der Dropdown-Liste aus.
 +
 
-NOTE: Sie können eine Richtlinie auch erstellen, indem Sie auf * * klickenimage:../media/add_policy_from_resourcegroup.gif["Ressourcengruppe für Richtlinienformular hinzufügen"].
+NOTE: Sie können auch eine Richtlinie erstellen, indem Sie *image:../media/add_policy_from_resourcegroup.gif["Ressourcengruppe für Richtlinienformular hinzufügen"]* auswählen.
 
 +
 Die Richtlinien sind im Abschnitt „Zeitpläne für ausgewählte Richtlinien konfigurieren“ aufgeführt.
 
-.. Klicken Sie in der Spalte Zeitpläne konfigurieren auf * *image:../media/add_policy_from_resourcegroup.gif["Ressourcengruppe für Richtlinienformular hinzufügen"]für die Richtlinie, die Sie konfigurieren möchten.
-.. Konfigurieren Sie im Dialogfeld Add Schedules for Policy_Policy_Name_ den Zeitplan, und klicken Sie dann auf *OK*.
+.. Wählen Sie in der Spalte „Zeitpläne konfigurieren“ *image:../media/add_policy_from_resourcegroup.gif["Ressourcengruppe für Richtlinienformular hinzufügen"]* für die Richtlinie aus, die Sie konfigurieren möchten.
+.. Konfigurieren Sie im Dialogfeld Add Schedules for Policy _Policy_Name_ den Zeitplan, und wählen Sie dann *OK* aus.
 +
 Hier ist Policy_Name der Name der von Ihnen ausgewählten Richtlinie.
 
@@ -208,5 +208,5 @@ Backup-Zeitpläne von Drittanbietern werden nicht unterstützt, wenn sie sich mi
 +
 Außerdem müssen Sie die E-Mail-Adressen für Absender und Empfänger sowie den Betreff der E-Mail angeben. Der SMTP-Server muss unter *Einstellungen* > *Globale Einstellungen* konfiguriert sein.
 
-. Überprüfen Sie die Zusammenfassung und klicken Sie dann auf *Fertig stellen*.
+. Überprüfen Sie die Zusammenfassung, und wählen Sie dann *Fertig stellen*.
 
