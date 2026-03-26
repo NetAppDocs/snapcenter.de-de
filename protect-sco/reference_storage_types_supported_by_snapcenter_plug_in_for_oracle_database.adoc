@@ -58,6 +58,21 @@ VVol Datastore kann nur mit ONTAP Tools für VMware vSphere bereitgestellt werde
 
 
 
+
+
+ a| 
+Andere Hypervisoren
+ a| 
+Linux wird unter KVM, Xen, Hyper-V und Hyperscaler-Hypervisoren unterstützt, wenn das Gastbetriebssystem direkten TCP/IP-Zugriff auf die benötigten ONTAP-Speicherressourcen über die folgenden Methoden hat:
+
+* ISCSI-verbundene LUNs
+* Volumes mit NFS-Anbindung
+* NVMe/TCP
+
+
+
+NOTE: Datastores und Rohgerätedarstellungen werden außerhalb von VMware nicht unterstützt.
+
 |===
 
 
