@@ -108,6 +108,8 @@ entries:
   entries:
   - title: Workflow sichern
     url: "/protect-postgresql/back-up-postgresql-resources.html"
+  - title: Konfigurieren Sie die Anmeldeinformationen für den PostgreSQL-Cluster
+    url: "/protect-postgresql/configure-credentials-for-postgresql-cluster.html"
   - title: Automatische Erkennung der Cluster
     url: "/protect-postgresql/discover-the-clusters-automatically.html"
   - title: Fügen Sie dem Plug-in-Host manuell Ressourcen hinzu

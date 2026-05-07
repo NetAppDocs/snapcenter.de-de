@@ -27,7 +27,7 @@ SnapCenter unterstützt nicht mehrere Storage-Systeme mit demselben Namen auf ve
 
 
 .Schritte
-. Starten Sie eine PowerShell Core-Verbindungssitzung mit dem Cmdlet "Open-SmConnection".
+. Initiieren Sie eine PowerShell-Verbindungssitzung mit dem Cmdlet Open-SmConnection.
 +
 [listing]
 ----

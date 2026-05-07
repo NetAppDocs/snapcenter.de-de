@@ -1,0 +1,28 @@
+---
+permalink: protect-sco/enable-consistency-group-snapshots-resource-group-level.html 
+sidebar: sidebar 
+keywords: consistency group, enable, create, resource group level 
+summary: Eine Ressourcengruppe ist ein Container, in dem Sie Ressourcen hinzufügen, die Sie sichern und schützen möchten. Mit einer Ressourcengruppe können Sie alle Daten, die einer bestimmten Anwendung zugeordnet sind, gleichzeitig sichern. 
+---
+= Aktivieren Sie Konsistenzgruppen-Snapshots auf Ressourcengruppenebene
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Standardmäßig erstellt das SnapCenter Plug-in für Oracle Database Konsistenzgruppen-Snapshots auf der ASM-Festplattengruppen- (Automatic Storage Management) oder LVM-Volumegruppenebene (Logical Volume Management). Als Best Practice sollten Datenbanken innerhalb einer einzelnen Ressourcengruppe keine ONTAP Volumes über verschiedene ASM-Festplattengruppen oder LVM-Volumegruppen hinweg gemeinsam nutzen.
+
+Wenn jedoch ASM-Festplattengruppen oder LVM-Volume-Gruppen zugrunde liegende ONTAP Volumes gemeinsam nutzen, kann der Snapshot der Konsistenzgruppe aufgrund von Konflikten mit doppelten Snapshots fehlschlagen. In solchen Fällen fällt SnapCenter automatisch auf Snapshots auf Volume-Ebene zurück.
+
+.Über diese Aufgabe
+In Szenarien, in denen Volumes über ASM-Festplattengruppen oder LVM-Volume-Gruppen gemeinsam genutzt werden, unterstützt SnapCenter die Aktivierung von Konsistenzgruppen-Snapshots auf Ressourcengruppenebene. Dies stellt sicher, dass alle ASM-Festplattengruppen oder LVM-Volume-Gruppen, die mit Datenbanken innerhalb der Ressourcengruppe verbunden sind, in einem einzigen Konsistenzgruppen-Snapshot erfasst werden. Die folgenden Schritte zeigen, wie Sie diese Funktion verwenden.
+
+.Schritte
+. Navigieren Sie zur folgenden Konfigurationsdatei auf dem SnapCenter Server:
++
+`C:\Program Files\NetApp\SMCore\SMCoreServiceHost.dll.config`.
+
+. Suchen Sie den  `isCgSnapshotForRg`Parameter und ändern Sie seinen Wert von *false* auf *true*.
+. Starten Sie den  `SMCoreService` Dienst neu, damit die Änderung wirksam wird.
+

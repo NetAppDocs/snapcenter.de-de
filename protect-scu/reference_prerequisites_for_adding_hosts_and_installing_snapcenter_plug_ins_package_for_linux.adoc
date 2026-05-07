@@ -19,13 +19,13 @@ Bevor Sie einen Host hinzufügen und das Plug-in-Paket für Linux installieren, 
 Das SnapCenter-Plug-in für Unix-Dateisysteme kann von einem Benutzer installiert werden, der kein Root-Benutzer ist. Sie sollten jedoch die sudo-Berechtigungen für den nicht-Root-Benutzer konfigurieren, um den Plug-in-Prozess zu installieren und zu starten. Nach der Installation des Plug-ins werden die Prozesse als effektiver nicht-Root-Benutzer ausgeführt.
 
 * Anmeldedaten mit Authentifizierungsmodus als Linux für den Installationsbenutzer erstellen.
-* Sie müssen Java 11 auf Ihrem Linux-Host installiert haben.
+* Sie müssen Java 17 auf Ihrem Linux-Host installiert haben.
 +
 
-NOTE: Stellen Sie sicher, dass Sie nur die zertifizierte Version VON JAVA 11 auf dem Linux-Host installiert haben.
+NOTE: Stellen Sie sicher, dass Sie auf dem Linux-Host ausschließlich die zertifizierte Edition von Java 17 installiert haben.
 
 +
-Informationen zum Herunterladen VON JAVA finden Sie unter: http://www.java.com/en/download/manual.jsp["Java-Downloads für alle Betriebssysteme"^]
+Informationen zu Java-Downloads finden Sie unter link:https://www.oracle.com/java/technologies/downloads/#java17["Laden Sie Java für alle Betriebssysteme herunter"^].
 
 * Sie sollten *bash* als Standard-Shell für die Plug-in-Installation haben.
 
@@ -70,12 +70,12 @@ NOTE: Sie sollten genügend Festplattenspeicher zuweisen und den Speicherverbrau
  a| 
 Erforderliche Softwarepakete
  a| 
-Java 11 Oracle Java und OpenJDK
+Java 17 (Oracle Java und OpenJDK)
 
 
-NOTE: Stellen Sie sicher, dass Sie nur die zertifizierte Version VON JAVA 11 auf dem Linux-Host installiert haben.
+NOTE: Stellen Sie sicher, dass Sie auf dem Linux-Host ausschließlich die zertifizierte Edition von Java 17 installiert haben.
 
-Wenn SIE JAVA auf die neueste Version aktualisiert haben, müssen Sie sicherstellen, dass die JAVA_HOME-Option unter /var/opt/snapcenter/spl/etc/spl.properties auf die richtige JAVA-Version und den richtigen Pfad eingestellt ist.
+Wenn Sie Java auf die neueste Version aktualisiert haben, müssen Sie sicherstellen, dass die Option JAVA_HOME unter /var/opt/snapcenter/spl/etc/spl.properties auf die richtige Java-Version und den richtigen Pfad eingestellt ist.
 
 |===
 Die neuesten Informationen zu unterstützten Versionen finden Sie im https://imt.netapp.com/imt/imt.jsp?components=180320;180338;&solution=1257&isHWU&src=IMT["NetApp Interoperabilitäts-Matrix-Tool"] .

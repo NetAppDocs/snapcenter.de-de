@@ -36,7 +36,7 @@ SnapCenter unterstützt sowohl den primären als auch den sekundären Schutz von
 SnapCenter erkennt oder erstellt ONTAP Konsistenzgruppen.  Es richtet SnapMirror -Beziehungen auf dem Zielcluster für sekundären Schutz ein. https://docs.netapp.com/us-en/ontap/consistency-groups["Erfahren Sie mehr über ONTAP Consistency Groups"^] .
 
 
-NOTE: Nach dem Upgrade auf SnapCenter 6.2 (Server und Plug-Ins) und ONTAP 9.17.1 ändert SnapCenter während der ersten geplanten Sicherung flache Konsistenzgruppen in hierarchische Konsistenzgruppen.
+NOTE: Nach dem Upgrade auf SnapCenter 6.2.1 (Server und Plug-ins) und ONTAP 9.17.1 ändert SnapCenter flache Konsistenzgruppen während der ersten geplanten Sicherung in hierarchische Konsistenzgruppen.
 
 Informationen zum Aktivieren des sekundären Schutzes auf ASA R2-Systemen für Ihre Anwendung finden Sie unter:
 
