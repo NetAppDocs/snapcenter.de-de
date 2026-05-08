@@ -21,11 +21,11 @@ Führen Sie das folgende PowerShell-Cmdlet aus, um die zertifikatbasierte Authen
 
 * So aktivieren Sie die clientzertifikatbasierte Authentifizierung:
 +
-`Set-SmConfigSettings -Agent –configSettings @{"EnableClientCertificateAuthentication"="true"}` `-HostName`<<hostname>>
+`Set-SmConfigSettings -Agent –configSettings @{"EnableClientCertificateAuthentication"="true"}` `-HostName` `hostname`
 
 * So deaktivieren Sie die clientzertifikatbasierte Authentifizierung:
 +
-`Set-SmConfigSettings -Agent –configSettings @{"EnableClientCertificateAuthentication"="false"}` `-HostName` `<<hostname>>``
+`Set-SmConfigSettings -Agent –configSettings @{"EnableClientCertificateAuthentication"="false"}` `-HostName` `hostname`
 
 
 
