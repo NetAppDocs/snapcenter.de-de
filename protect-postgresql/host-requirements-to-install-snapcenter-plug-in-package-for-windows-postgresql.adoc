@@ -46,7 +46,7 @@ NOTE: Sie sollten genügend Festplattenspeicher zuweisen und den Speicherverbrau
  a| 
 Erforderliche Softwarepakete
  a| 
-* ASP.NET Core Runtime 8.0.12 (und alle nachfolgenden 8.0.x-Patches) Hosting Bundle
+* ASP.NET Core Runtime 8.0.24 (und alle nachfolgenden 8.0.x-Patches) Hosting Bundle
 * PowerShell 7.4.13
 
 

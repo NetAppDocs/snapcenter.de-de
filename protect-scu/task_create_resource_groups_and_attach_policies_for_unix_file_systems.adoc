@@ -63,12 +63,12 @@ NOTE: Die Ressourcen werden im Abschnitt Verfügbare Ressourcen nur dann aufgeli
 *** Wählen Sie *File System consistent* aus, wenn Sie sicherstellen möchten, dass die zwischengespeicherten Daten der Dateisysteme vor der Erstellung der Sicherung gelöscht werden und keine ein- oder Ausgabevorgänge im Dateisystem während der Erstellung der Sicherung erlaubt sind.
 +
 
-NOTE: Für File-System-konsistente Snapshots werden für LUNs, die in der Volume-Gruppe beteiligt sind, Snapshots von Konsistenzgruppen erstellt.
+NOTE: Für die Dateisystemkonsistenz werden Konsistenzgruppen-Snapshots für die an der Volumengruppe beteiligten LUNs erstellt.
 
 *** Wählen Sie *Crash-konsistent*, wenn Sie sicherstellen möchten, dass die zwischengespeicherten Daten der Dateisysteme vor der Erstellung der Sicherung gelöscht werden.
 +
 
-NOTE: Wenn Sie verschiedene Dateisysteme in der Ressourcengruppe hinzugefügt haben, werden alle Volumes aus verschiedenen Dateisystemen in der Ressourcengruppe in eine Konsistenzgruppe aufgenommen.
+NOTE: Wenn Sie der Ressourcengruppe verschiedene Dateisysteme hinzugefügt haben, werden alle Volumes aus verschiedenen Dateisystemen in der Ressourcengruppe in einer Konsistenzgruppe zusammengefasst. Für absturzkonsistente Backups wird standardmäßig ein Snapshot der Konsistenzgruppe erstellt, selbst wenn nur ein Dateisystem oder Volume vorhanden ist.
 
 
 

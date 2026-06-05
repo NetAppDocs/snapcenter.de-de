@@ -105,7 +105,7 @@ Keine Angabe
  a| 
 Erforderliche Softwarepakete
  a| 
-* ASP.NET Core Runtime 8.0.12 (und alle nachfolgenden 8.0.x-Patches) Hosting Bundle
+* ASP.NET Core Runtime 8.0.24 (und alle nachfolgenden 8.0.x-Patches) Hosting Bundle
 * PowerShell 7.4.2 oder höher
 
 

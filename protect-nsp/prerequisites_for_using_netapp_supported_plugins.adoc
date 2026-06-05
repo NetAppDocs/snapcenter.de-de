@@ -17,7 +17,7 @@ Bevor Sie von SnapCenter NetApp unterstützte Plug-ins verwenden, muss der SnapC
 * Melden Sie sich beim SnapCenter-Server an.
 * Konfigurieren Sie die SnapCenter Umgebung, indem Sie Storage-Systemverbindungen hinzufügen und ggf. Anmeldedaten erstellen.
 * Fügen Sie Hosts hinzu, und installieren und laden Sie die Plug-ins hoch.
-* Installieren Sie gegebenenfalls Java 17 auf dem Plug-in-Host.
+* Installieren Sie gegebenenfalls Java 17, Java 11 (nur für SnapCenter 6.2) auf dem Plug-in-Host.
 * Wenn Sie mehrere Datenpfade (LIFs) oder eine dNFS-Konfiguration haben, können Sie Folgendes mithilfe der SnapCenter-CLI auf dem Datenbank-Host durchführen:
 +
 ** Standardmäßig werden alle IP-Adressen des Datenbank-Hosts der Richtlinie für den NFS-Storage-Export in der Storage Virtual Machine (SVM) für die geklonten Volumes hinzugefügt. Wenn Sie eine bestimmte IP-Adresse haben oder auf eine Teilmenge der IP-Adressen beschränken möchten, führen Sie die CLI Set-PreferredHostIPsInStorageExportPolicy aus.
