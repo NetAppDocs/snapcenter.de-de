@@ -48,7 +48,9 @@ NOTE: Sie sollten genügend Festplattenspeicher zuweisen und den Speicherverbrau
  a| 
 Erforderliche Softwarepakete
  a| 
-Java 17 (Oracle Java oder OpenJDK), Java 11 (nur für SnapCenter 6.2)
+* Java 17 (Oracle Java oder OpenJDK) für SnapCenter 6.2.1 und höher oder
+* Java 11 für SnapCenter 6.2 und älter
+
 
 Wenn Sie Java auf die neueste Version aktualisiert haben, müssen Sie sicherstellen, dass die Option JAVA_HOME unter /var/opt/snapcenter/spl/etc/spl.properties auf die richtige Java-Version und den richtigen Pfad eingestellt ist.
 

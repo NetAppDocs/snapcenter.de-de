@@ -16,7 +16,8 @@ Bevor Sie einen Host hinzufügen und die Plug-ins-Pakete installieren, müssen S
 
 NOTE: Storage und Oracle Applikationen werden auf AIX unterstützt.
 
-* Sie müssen Java 17, Java 11 (nur für SnapCenter 6.2) auf Ihrem Linux-, Windows- oder AIX-Host installiert haben.
+* Sie müssen Java 17 (Oracle Java oder OpenJDK) für SnapCenter 6.2.1 und höher installiert haben oder
+* Java 11 für SnapCenter 6.2 und früher auf Ihrem Linux-, Windows- oder AIX-Host.
 +
 
 NOTE: IBM Java wird auf Windows- und Linux-Hosts nicht unterstützt.
@@ -51,9 +52,10 @@ link:https://www.oracle.com/java/technologies/downloads/#java17["Java für Windo
 NOTE: Storage und Oracle Applikationen werden auf AIX unterstützt.
 
 * Sie müssen die passwortbasierte SSH-Verbindung für den Root- oder nicht-Root-Benutzer aktiviert haben.
-* Sie müssen Java 17 oder Java 11 (für SnapCenter 6.2 nur) auf Ihrem Linux-Host installiert haben.
+* Sie müssen Java 17 (Oracle Java oder OpenJDK) für SnapCenter 6.2.1 und höher installiert haben oder
+* Java 11 für SnapCenter 6.2 und älter auf Ihrem Linux-Host.
 +
-Wenn Sie Windows Server 2019 oder Windows Server 2016 für den SnapCenter Server-Host verwenden, müssen Sie Java 17, Java 11 (nur für SnapCenter 6.2) installieren.
+Wenn Sie Windows Server 2019 oder Windows Server 2016 für den SnapCenter Server-Host verwenden, müssen Sie Java 17 (Oracle Java oder OpenJDK) für SnapCenter 6.2.1 und höher oder Java 11 für SnapCenter 6.2 und früher installieren.
 
 +
 link:https://www.oracle.com/java/technologies/downloads/#java17["Java für Linux herunterladen"]
@@ -140,7 +142,9 @@ NOTE: Sie sollten genügend Festplattenspeicher zuweisen und den Speicherverbrau
  a| 
 Erforderliche Softwarepakete
  a| 
-Java 17, Java 11 (nur für SnapCenter 6.2), IBM Java
+* Java 17 für SnapCenter 6.2.1 und höher, IBM Java oder
+* Java 11 für SnapCenter 6.2 und älter, IBM Java
+
 
 Wenn Sie Java auf die neueste Version aktualisiert haben, müssen Sie sicherstellen, dass die Option JAVA_HOME unter /var/opt/snapcenter/spl/etc/spl.properties auf die richtige Java-Version und den richtigen Pfad eingestellt ist.
 

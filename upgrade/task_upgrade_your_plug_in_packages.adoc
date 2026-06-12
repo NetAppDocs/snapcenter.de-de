@@ -17,8 +17,8 @@ Das System wählt alle Plug-ins im Paket aus, aktualisiert aber nur die Plug-ins
 
 .Bevor Sie beginnen
 * Wenn Sie nicht-Root-Benutzer mit Zugriff auf die Linux-Maschinen sind, sollten Sie die Datei _/etc/sudoers_ vor der Durchführung des Upgrade-Vorgangs mit den neuesten Prüfsummenwerten aktualisieren.
-* Stellen Sie sicher, dass PowerShell 7.4.13 auf dem Windows-Plug-in-Host installiert ist.
-* Stellen Sie sicher, dass Java 17 (Oracle Java oder OpenJDK) auf Windows- und Linux-Plug-in-Hosts installiert ist (oder Java 11 nur für SnapCenter 6.2).
+* Stellen Sie sicher, dass das ASP.NET Core Runtime 8.0.24 (und alle nachfolgenden 8.0.x-Patches) Hosting Bundle und PowerShell 7.4.13 oder höher auf dem Windows-Plug-in-Host installiert sind.
+* Stellen Sie sicher, dass Java 17 (Oracle Java oder OpenJDK) für SnapCenter 6.2.1 und höher oder Java 11 für SnapCenter 6.2 und niedriger auf Windows- und Linux-Plug-in-Hosts installiert ist.
 * Standardmäßig erkennt SnapCenter JAVA_HOME von der Umgebung. Wenn Sie eine feste JAVA_HOME-DATEI verwenden möchten und wenn Sie die Plug-ins auf einem Linux-Host aktualisieren, sollten Sie den PARAMETER SKIP_JAVAHOME_UPDATE manuell in die Datei _spl.properties_ unter _/var/opt/snapcenter/spl/etc/_ hinzufügen und den Wert auf TRUE setzen.
 +
 DER Wert VON JAVA_HOME wird aktualisiert, wenn das Plug-in aktualisiert wird oder wenn der SPL-Dienst (Plug-in Loader) von SnapCenter neu startet. Wenn Sie vor dem Aktualisieren oder Neustart der SPL den Parameter SKIP_JAVAHOME_UPDATE hinzufügen und den Wert auf TRUE setzen, wird DER Wert VON JAVA_HOME nicht aktualisiert.
