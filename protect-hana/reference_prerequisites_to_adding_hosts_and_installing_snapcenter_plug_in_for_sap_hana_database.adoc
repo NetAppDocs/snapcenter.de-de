@@ -13,8 +13,7 @@ summary: Bevor Sie einen Host hinzufügen und die Plug-in-Pakete installieren, m
 [role="lead"]
 Bevor Sie einen Host hinzufügen und die Plug-in-Pakete installieren, müssen Sie alle Anforderungen erfüllen. Das SnapCenter Plug-in für SAP HANA Database ist sowohl in Windows als auch in Linux Umgebungen verfügbar.
 
-* Sie müssen Java 17 (Oracle Java oder OpenJDK) für SnapCenter 6.2.1 und höher installiert haben oder
-* Java 11 für SnapCenter 6.2 und älter auf Ihrem Host.
+* Java 17 (Oracle Java, OpenJDK oder SAP JDK) muss für SnapCenter 6.2.1 und höher oder Java 11 für SnapCenter 6.2 und früher auf Ihrem Host installiert sein.
 +
 
 NOTE: IBM Java wird auf Windows- und Linux-Hosts nicht unterstützt.
@@ -34,8 +33,7 @@ NOTE: IBM Java wird auf Windows- und Linux-Hosts nicht unterstützt.
 * Sie müssen über einen Domänenbenutzer mit lokalen Administratorrechten mit lokalen Anmeldeberechtigungen auf dem Remote-Host verfügen.
 * Bei der Installation von Plug-in für SAP HANA-Datenbank auf einem Windows-Host wird das SnapCenter Plug-in für Microsoft Windows automatisch installiert.
 * Sie müssen die passwortbasierte SSH-Verbindung für den Root- oder nicht-Root-Benutzer aktiviert haben.
-* Sie müssen Java 17 (Oracle Java oder OpenJDK) für SnapCenter 6.2.1 und höher installiert haben oder
-* Java 11 für SnapCenter 6.2 und älter auf Ihrem Windows-Host.
+* Java 17 (Oracle Java, OpenJDK oder SAP JDK) für SnapCenter 6.2.1 und höher oder Java 11 für SnapCenter 6.2 und früher muss auf Ihrem Windows-Host installiert sein.
 +
 link:https://www.oracle.com/java/technologies/downloads/#java17["Laden Sie Java für alle Betriebssysteme herunter"]
 
@@ -46,8 +44,7 @@ link:https://www.oracle.com/java/technologies/downloads/#java17["Laden Sie Java 
 == Linux-Hosts
 
 * Sie müssen die passwortbasierte SSH-Verbindung für den Root- oder nicht-Root-Benutzer aktiviert haben.
-* Sie müssen Java 17 (Oracle Java oder OpenJDK) für SnapCenter 6.2.1 und höher installiert haben oder
-* Java 11 für SnapCenter 6.2 und älter auf Ihrem Linux-Host.
+* Java 17 (Oracle Java, OpenJDK oder SAP JDK) für SnapCenter 6.2.1 und höher oder Java 11 für SnapCenter 6.2 und früher muss auf Ihrem Linux-Host installiert sein.
 +
 link:https://www.oracle.com/java/technologies/downloads/#java17["Laden Sie Java für alle Betriebssysteme herunter"]
 

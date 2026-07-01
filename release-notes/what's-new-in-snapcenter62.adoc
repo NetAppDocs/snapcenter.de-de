@@ -11,7 +11,7 @@ summary: Die Version 6.2 der SnapCenter software enthält mehrere neue Funktione
 
 
 [role="lead"]
-Die Version 6.2 der SnapCenter software enthält die folgende erweiterte Funktion.
+Die Version 6.2 der SnapCenter software enthält bekannte Fehlerbehebungen und Aktualisierungen der qualifizierten Versionen für den SnapCenter Server und die Plug-ins. Außerdem ist die folgende erweiterte Funktion enthalten. Weitere Details sind in der link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467["SnapCenter 6.2.2 Versionshinweise"^] zu finden.
 
 |===
 | Aktualisierung | Beschreibung 

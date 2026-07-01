@@ -23,8 +23,7 @@ NOTE: Der RSA-Schlüssel ist das einzige von SSH unterstützte Schlüsselformat 
 Das SnapCenter-Plug-in für Unix-Dateisysteme kann von einem Benutzer installiert werden, der kein Root-Benutzer ist. Sie sollten jedoch die sudo-Berechtigungen für den nicht-Root-Benutzer konfigurieren, um den Plug-in-Prozess zu installieren und zu starten. Nach der Installation des Plug-ins werden die Prozesse als effektiver nicht-Root-Benutzer ausgeführt.
 
 * Anmeldedaten mit Authentifizierungsmodus als Linux für den Installationsbenutzer erstellen.
-* Sie müssen Java 17 für SnapCenter 6.2.1 und höher installiert haben oder
-* Java 11 für SnapCenter 6.2 und älter auf Ihrem Linux-Host.
+* Java 17 für SnapCenter 6.2.1 und höher oder Java 11 für SnapCenter 6.2 und früher muss auf Ihrem Linux-Host installiert sein.
 +
 
 NOTE: Stellen Sie sicher, dass Sie auf dem Linux-Host nur die zertifizierte Edition von Java 17 für SnapCenter 6.2.1 und höher oder Java 11 für SnapCenter 6.2 und früher installiert haben.
@@ -75,8 +74,7 @@ NOTE: Sie sollten genügend Festplattenspeicher zuweisen und den Speicherverbrau
  a| 
 Erforderliche Softwarepakete
  a| 
-* Java 17 (Oracle Java oder OpenJDK) für SnapCenter 6.2.1 und höher oder
-* Java 11 für SnapCenter 6.2 und älter
+* Java 17 (Oracle Java, OpenJDK oder SAP JDK) für SnapCenter 6.2.1 und höher oder Java 11 für SnapCenter 6.2 und früher
 
 
 
