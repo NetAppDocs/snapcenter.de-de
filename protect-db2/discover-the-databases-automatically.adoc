@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials 
 summary: Bei den Ressourcen handelt es sich um IBM DB2-Datenbanken auf dem Linux-Host, die von SnapCenter gemanagt werden. Sie können diese Ressourcen zu Ressourcengruppen hinzufügen, um Datensicherungsvorgänge auszuführen, nachdem Sie die verfügbaren IBM DB2-Datenbanken erkannt haben. 
 ---
-= Automatische Erkennung von Datenbanken
+= IBM Db2 Datenbanken automatisch mit SnapCenter erkennen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

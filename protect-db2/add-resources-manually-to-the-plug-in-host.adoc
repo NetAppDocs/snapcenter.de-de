@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for IBM Db2 
 summary: Die automatische Erkennung wird für bestimmte DB2-Instanzen nicht unterstützt. Sie müssen diese Ressourcen manuell hinzufügen. 
 ---
-= Fügen Sie dem Plug-in-Host manuell Ressourcen hinzu
+= IBM Db2-Ressourcen manuell zum SnapCenter Plug-in-Host hinzufügen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

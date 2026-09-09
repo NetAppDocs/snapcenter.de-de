@@ -4,7 +4,7 @@ permalink: sc-automation/concept_interpreting_an_api_response.html
 keywords: http status code, error code 
 summary: Jede API-Anfrage generiert eine Antwort an den Client. Sie sollten die Antwort überprüfen, um festzustellen, ob sie erfolgreich war, und weitere Daten nach Bedarf abrufen. 
 ---
-= Interpretation einer API-Antwort
+= Interpretation einer SnapCenter REST-API-Antwort
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ Jede API-Anfrage generiert eine Antwort an den Client. Sie sollten die Antwort �
 
 
 
+[[http-status-code]]
 == HTTP-Statuscode
 
 Im Folgenden werden die von der SnapCenter REST API verwendeten HTTP-Statuscodes beschrieben.
@@ -54,66 +55,77 @@ Im Folgenden werden die von der SnapCenter REST API verwendeten HTTP-Statuscodes
 |===
 
 
+[[response-headers]]
 == Antwortkopfzeilen
 
 In der vom SnapCenter erzeugten HTTP-Antwort sind mehrere Header enthalten.
 
 
 
+[[location]]
 === Standort
 
 Wenn ein Objekt erstellt wird, enthält die Standortkopfzeile die komplette URL zum neuen Objekt einschließlich der eindeutigen Kennung, die dem Objekt zugewiesen ist.
 
 
 
+[[content-type]]
 === Inhaltstyp
 
 Dies ist normalerweise der Fall `application/json`.
 
 
 
+[[response-body]]
 == Antwortkörper
 
 Der Inhalt des Antwortkörpers, der sich aus einer API-Anfrage ergibt, unterscheidet sich je nach Objekt, Verarbeitungstyp und Erfolg oder Misserfolg der Anforderung. Die Antwort wird immer in JSON gerendert.
 
 
 
+[[single-object]]
 === Einzelnes Objekt
 
 Je nach Anforderung kann ein einzelnes Objekt mit einer Reihe von Feldern zurückgegeben werden. Beispielsweise können Sie GET verwenden, um ausgewählte Eigenschaften eines Clusters mit der eindeutigen Kennung abzurufen.
 
 
 
+[[multiple-objects]]
 === Mehrere Objekte
 
 Es können mehrere Objekte aus einer Ressourcensammlung zurückgegeben werden. In allen Fällen wird ein konsistentes Format verwendet, mit `num_records` Angabe der Anzahl der Datensätze und Datensätze, die ein Array der Objektinstanzen enthalten. Beispielsweise können Sie die in einem bestimmten Cluster definierten Nodes abrufen.
 
 
 
+[[job-object]]
 === Jobobjekt
 
 Wenn ein API-Aufruf asynchron verarbeitet wird, wird ein Job-Objekt zurückgegeben, das den Hintergrund-Task ankers. Beispielsweise wird die PATCH-Anfrage, die zum Aktualisieren der Cluster-Konfiguration verwendet wird, asynchron verarbeitet und ein Job-Objekt zurückgegeben.
 
 
 
+[[error-object]]
 === Fehlerobjekt
 
 Wenn ein Fehler auftritt, wird immer ein Fehlerobjekt zurückgegeben. Beispielsweise erhalten Sie einen Fehler beim Versuch, ein Feld zu ändern, das nicht für ein Cluster definiert ist.
 
 
 
+[[empty]]
 === Leer
 
 In bestimmten Fällen werden keine Daten zurückgegeben und der Antwortkörper enthält ein leeres JSON-Objekt.
 
 
 
+[[errors]]
 == Fehler
 
 Wenn ein Fehler auftritt, wird ein Fehlerobjekt im Antwortkörper zurückgegeben.
 
 
 
+[[format]]
 === Formatieren
 
 Ein Fehlerobjekt hat das folgende Format:
@@ -129,6 +141,7 @@ Sie können den Codewert verwenden, um den allgemeinen Fehlertyp oder die allgem
 
 
 
+[[common-error-codes]]
 === Allgemeine Fehlercodes
 
 Die gängigen Fehlercodes werden in der folgenden Tabelle beschrieben. Spezifische API-Aufrufe können zusätzliche Fehlercodes enthalten.

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resource group 
 summary: Für jeden Datenschutzauftrag ist eine Ressourcengruppen erforderlich. Sie müssen der Ressourcengruppe auch eine oder mehrere Richtlinien zuordnen, um den Typ des zu erfütienden Datenschutzauftrags und den Schutzzeitplan zu definieren. 
 ---
-= Erstellen von Ressourcengruppen und Anhängen von Richtlinien für Exchange-Server
+= Ressourcengruppen erstellen und Richtlinien für Exchange Server in SnapCenter zuweisen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: split a clone, split 
 summary: Sie können SnapCenter verwenden, um eine geklonte Ressource von der übergeordneten Ressource zu trennen. Der geteilte Klon ist unabhängig von der übergeordneten Ressource. 
 ---
-= Oracle Database klonen
+= Eine Oracle Datenbank-Klon in SnapCenter trennen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

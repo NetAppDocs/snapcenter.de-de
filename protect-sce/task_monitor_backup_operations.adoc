@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Exchange Server 
 summary: Sie können den Fortschritt verschiedener Backup-Vorgänge über die Seite SnapCenterJobs überwachen. Sie können den Fortschritt überprüfen, um festzustellen, wann er abgeschlossen ist oder ob ein Problem vorliegt. 
 ---
-= Monitoring von Backup-Vorgängen
+= Überwachung der SnapCenter Sicherungsvorgänge für Exchange Server
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -49,6 +49,7 @@ Die Schaltfläche *Protokolle anzeigen* zeigt die detaillierten Protokolle für 
 
 
 
+[[monitor-operations-in-the-activity-pane]]
 == Überwachen Sie die Vorgänge im Teilfenster „Aktivität“
 
 Im Aktivitätsbereich werden die fünf zuletzt durchgeführten Operationen angezeigt. Der Bereich „Aktivität“ wird auch angezeigt, wenn der Vorgang initiiert wurde und der Status des Vorgangs.

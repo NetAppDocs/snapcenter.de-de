@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: RBAC, add user, add group, assign role, assign assets 
 summary: Um die rollenbasierte Zugriffssteuerung für SnapCenter-Benutzer zu konfigurieren, können Sie Benutzer oder Gruppen hinzufügen und Rollen zuweisen. Die Rolle legt die Optionen fest, auf die SnapCenter-Benutzer zugreifen können. 
 ---
-= Fügen Sie einen Benutzer oder eine Gruppe hinzu und weisen Sie Rollen und Assets zu
+= Einen Benutzer oder eine Gruppe hinzufügen sowie eine Rolle und Assets in SnapCenter zuweisen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

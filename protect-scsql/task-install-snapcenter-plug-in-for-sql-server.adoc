@@ -15,6 +15,7 @@ Enthält einen zusammengefassten Satz von Installationsanweisungen für das Snap
 
 
 
+[[step-1-set-up-run-as-credentials-to-install-the-plug-in-for-microsoft-sql-server]]
 == Schritt 1: Richten Sie Run As Credentials ein, um das Plug-in für Microsoft SQL Server zu installieren
 
 . Klicken Sie im linken Fensterbereich auf *Einstellungen > Anmeldeinformationen > Neu*.
@@ -29,6 +30,7 @@ Verwenden Sie für ein integriertes lokales Format für den Admin-Benutzernamen 
 
 
 
+[[step-2-add-a-host-and-install-the-plug-in-for-microsoft-sql-server]]
 == Schritt 2: Fügen Sie einen Host hinzu und installieren Sie das Plug-in für Microsoft SQL Server
 
 . Klicken Sie im linken Fensterbereich der SnapCenter-Benutzeroberfläche auf *Hosts > verwaltete Hosts > Hinzufügen*.

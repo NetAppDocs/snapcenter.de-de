@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Microsoft Exchange Server 
 summary: Mit SnapCenter können Exchange-Datenbanken wiederhergestellt werden, indem ein oder mehrere Backups auf dem aktiven File-System wiederhergestellt werden. 
 ---
-= Wiederherstellung des Workflows
+= Workflow zur Wiederherstellung der Exchange-Datenbank in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

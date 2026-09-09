@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa r2, secondary protection, consistency group, primary consistency group, secondary consistency group 
 summary: Eine Ressourcengruppe ist ein Container, in dem Sie Ressourcen hinzufügen, die Sie sichern und schützen möchten. Mit einer Ressourcengruppe können Sie alle Daten, die einer bestimmten Anwendung zugeordnet sind, gleichzeitig sichern. 
 ---
-= Erstellen von Ressourcengruppen und Aktivieren des sekundären Schutzes für Oracle-Ressourcen auf ASA r2-Systemen
+= Erstellen von SnapCenter Ressourcengruppen für die sekundäre ASA r2-Sicherung von Oracle-Ressourcen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

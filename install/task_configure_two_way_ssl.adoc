@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: security,two-way ssl,configure two-way ssl, windows host 
 summary: Sie sollten die bidirektionale SSL-Kommunikation so konfigurieren, dass die gegenseitige Kommunikation zwischen SnapCenter-Server auf Windows-Host und den Plug-ins gesichert ist. 
 ---
-= Konfigurieren Sie die bidirektionale SSL-Kommunikation auf dem Windows-Host
+= Konfiguration der bidirektionalen SSL-Kommunikation auf einem SnapCenter Windows-Host
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -113,6 +113,7 @@ Im Windows-Registrierungs-Editor, Traverse auf den unten genannten Pfad,
 
 
 
+[[configure-snapcenter-windows-plug-in-for-two-way-ssl-communication]]
 == Konfigurieren Sie das SnapCenter-Windows-Plug-in für die bidirektionale SSL-Kommunikation
 
 Sie sollten das SnapCenter-Windows-Plug-in für die bidirektionale SSL-Kommunikation mithilfe von PowerShell Befehlen konfigurieren.

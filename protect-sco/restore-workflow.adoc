@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore, workflow 
 summary: Der Restore-Workflow umfasst Planung, Durchführung von Restore-Vorgängen und Monitoring der Betriebsprozesse. 
 ---
-= Wiederherstellung des Workflows
+= Oracle Datenbank-Wiederherstellungs-Workflow in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

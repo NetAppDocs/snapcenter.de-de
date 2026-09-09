@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clone 
 summary: Sie können den Status von SnapCenter-Klonvorgängen mithilfe der Seite Jobs überwachen. Sie können den Fortschritt eines Vorgangs überprüfen, um zu bestimmen, wann dieser abgeschlossen ist oder ob ein Problem vorliegt. 
 ---
-= Überwachen Sie die Klonvorgänge von SQL Datenbanken
+= Überwachung von SQL-Datenbank-Klonvorgängen in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

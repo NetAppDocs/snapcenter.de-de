@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup, resource group 
 summary: Eine Ressourcengruppe ist eine Sammlung von Ressourcen auf einem Host oder Cluster. Für alle in der Ressourcengruppe definierten Ressourcen wird ein Sicherungsvorgang in der Ressourcengruppe durchgeführt. 
 ---
-= Sichern Sie Oracle Database Resource Groups
+= Oracle Datenbankressourcengruppen in SnapCenter sichern
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

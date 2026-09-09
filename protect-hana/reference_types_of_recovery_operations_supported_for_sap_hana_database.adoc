@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: recovery operations 
 summary: SnapCenter ermöglicht Ihnen die Durchführung verschiedener Recovery-Vorgänge für SAP HANA Datenbanken. 
 ---
-= Arten von Recovery-Vorgängen unterstützt für SAP HANA-Datenbanken
+= Arten von Wiederherstellungsoperationen für SAP HANA-Datenbanken in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

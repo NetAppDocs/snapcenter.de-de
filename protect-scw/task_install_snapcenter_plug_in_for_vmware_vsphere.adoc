@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: install, VMware vSphere 
 summary: 'Wenn Ihre Datenbanken auf Virtual Machines (VMs) gespeichert sind oder VMs und Datastores geschützt werden sollen, müssen Sie das SnapCenter Plug-in für die virtuelle Appliance VMware vSphere implementieren.' 
 ---
-= Installieren Sie das SnapCenter Plug-in für VMware vSphere
+= Das SnapCenter Plug-in für VMware vSphere installieren
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -17,12 +17,14 @@ Informationen zur Bereitstellung finden Sie unter https://docs.netapp.com/us-en/
 
 
 
+[[deploy-ca-certificate]]
 == Bereitstellen eines CA-Zertifikats
 
 Um das CA-Zertifikat mit dem SnapCenter Plug-in für VMware vSphere zu konfigurieren, siehe  https://kb.netapp.com/data-mgmt/SnapCenter/SC_KBs/How_to_create_and_or_import_an_SSL_certificate_to_SnapCenter_Plug-in_for_VMware_vSphere["Erstellen oder importieren Sie ein SSL-Zertifikat"^].
 
 
 
+[[configure-the-crl-file]]
 == Konfigurieren Sie die CRL-Datei
 
 Das SnapCenter Plug-in für VMware vSphere sucht die CRL-Dateien in einem vorkonfigurierten Verzeichnis. Das Standardverzeichnis der CRL-Dateien für das SnapCenter Plug-in für VMware vSphere ist _/opt/netapp/config/crl_.

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SQL Server 
 summary: Sie können SnapCenter verwenden, um verschiedene Arten von Wiederherstellungsvorgängen auf SQL Server-Ressourcen durchzuführen. 
 ---
-= Arten von Wiederherstellungsvorgängen
+= SQL Server Wiederherstellungsoperationstypen in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -28,6 +28,7 @@ NOTE: SnapCenter bietet keine Unterstützung für Volume-basierte SnapRestore.
 
 
 
+[[restore-up-to-the-minute]]
 == Führen Sie Wiederherstellungen minutengenau durch
 
 In einem up-to-the-minute-Wiederherstellungsvorgang (standardmäßig ausgewählt) werden Datenbanken bis zum Fehlerpunkt wiederhergestellt. SnapCenter erreicht dies durch folgende Sequenz:
@@ -48,12 +49,14 @@ Wenn Sie keine up-to-the-minute-Wiederherstellung für alle Backups benötigen, 
 
 
 
+[[example-of-an-up-to-the-minute-restore-operation]]
 == Beispiel für einen minutengenauen Restore-Vorgang
 
 Angenommen, Sie führen das SQL Server-Backup täglich mittags und mittwochs um 4:00 Uhr aus Sie müssen eine Wiederherstellung aus einem Backup durchführen. Aus irgendeinem Grund, die Sicherung von Mittwoch Mittag nicht überprüft, so entscheiden Sie sich für die Wiederherstellung von Dienstag Mittag Backup. Wenn das Backup wiederhergestellt wird, werden alle Transaktionsprotokolle nach vorn verschoben und auf die wiederhergestellten Datenbanken angewendet, beginnend mit denen, die nicht begangen wurden, als Sie am Dienstag das Backup erstellt haben und das letzte Transaktions-Log, das am Mittwoch um 4:00 Uhr geschrieben wurde, durchgehen (Wenn die Transaktions-Logs gesichert wurden).
 
 
 
+[[restore-to-a-previous-point-in-time]]
 == Wiederherstellung auf einen früheren Zeitpunkt
 
 In einer zeitpunktgenauen Restore-Operation werden Datenbanken nur auf eine bestimmte Zeit aus der Vergangenheit wiederhergestellt. Ein Point-in-Time-Wiederherstellungsvorgang findet in den folgenden Situationen statt:
@@ -75,6 +78,7 @@ Wenn Sie Backups des Transaktionsprotokolls anwenden, können Sie auch ein besti
 
 
 
+[[example-of-a-point-in-time-restore-operation]]
 == Beispiel für einen Point-in-Time Restore-Vorgang
 
 Angenommen, Sie erstellen um Mitternacht volle Datenbank-Backups und ein Transaktions-Log-Backup jede Stunde. Die Datenbank stürzt um 9:45 Uhr ab, aber Sie sichern immer noch die Transaktionsprotokolle der fehlgeschlagenen Datenbank. Es stehen folgende Point-in-Time-Wiederherstellungsszenarien zur Auswahl:

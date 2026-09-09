@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clone, pluggable database, PDB 
 summary: 'Sie können eine steckbare Datenbank \(PDB\) auf einem anderen oder demselben Ziel-CDB auf demselben Host oder einem anderen Host klonen. Sie können die geklonte PDB auch auf einem gewünschten SCN oder Datum und Uhrzeit wiederherstellen.' 
 ---
-= Klonen einer sofort anschließbaren Datenbank
+= Klonen einer Oracle Pluggable Datenbank mit SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Microsoft Exchange Server 
 summary: Mit dem Plug-in für Exchange können Sie Exchange Server Datenbanken sichern und wiederherstellen. 
 ---
-= Ihre Möglichkeiten mit dem SnapCenter Plug-in für Microsoft Exchange Server
+= Funktionen des SnapCenter Plug-ins für Microsoft Exchange Server
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

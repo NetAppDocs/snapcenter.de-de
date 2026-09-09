@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: Wenn eine Datenbank nicht Teil einer Ressourcengruppe ist, können Sie die Datenbank oder die Datenbankverfügbarkeitsgruppe auf der Seite Ressourcen sichern. 
 ---
-= Backup von Exchange Datenbanken
+= Exchange-Datenbanken mit SnapCenter sichern
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

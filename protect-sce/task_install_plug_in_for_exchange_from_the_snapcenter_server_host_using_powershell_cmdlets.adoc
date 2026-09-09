@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: Sie sollten das Plug-in für Exchange über die SnapCenter-Benutzeroberfläche installieren. Wenn Sie die GUI nicht verwenden möchten, können Sie PowerShell Cmdlets auf dem SnapCenter Server Host oder auf einem Remote Host verwenden. 
 ---
-= Installieren Sie das Plug-in für Exchange über den SnapCenter Server Host mithilfe von PowerShell Cmdlets
+= Das SnapCenter Plug-in für Exchange kann mithilfe von PowerShell Cmdlets installiert werden.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

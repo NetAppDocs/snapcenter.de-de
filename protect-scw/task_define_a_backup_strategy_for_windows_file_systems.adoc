@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup strategy 
 summary: 'Wenn Sie eine Backup-Strategie definieren, bevor Sie Ihre Backups erstellen, erhalten Sie die Backups, die Sie benötigen, um Ihre File-Systeme erfolgreich wiederherzustellen oder zu klonen. Ihr Service Level Agreement (SLA), Recovery Time Objective (RTO) und Recovery Point Objective (RPO) bestimmen Ihre Backup-Strategie weitestgehend.' 
 ---
-= Definieren einer Backup-Strategie für Windows File-Systeme
+= Backup-Strategie für Windows-Dateisysteme in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -17,6 +17,7 @@ Ein SLA definiert das erwartete Service-Level und behandelt viele Service-bezoge
 
 
 
+[[backup-schedules-for-windows-file-systems]]
 == Backup-Pläne für Windows File-Systeme
 
 Die Sicherungshäufigkeit wird in den Richtlinien angegeben. Ein Backup-Zeitplan wird in der Konfiguration der Ressourcengruppe angegeben. Der wichtigste Faktor bei der Ermittlung der Backup-Häufigkeit oder des Zeitplans ist die Änderungsrate für die Ressource und die Bedeutung der Daten. Sie können eine stark genutzte Ressource unter Umständen jede Stunde sichern, während Sie selten genutzte Ressourcen einmal am Tag sichern können. Weitere Faktoren sind die Bedeutung der Ressource für Ihr Unternehmen, das Service Level Agreement (SLA) und das Recovery Point Objective (RPO).
@@ -39,12 +40,14 @@ Backup-Zeitpläne (genau, wann Backups durchgeführt werden sollen) sind Teil de
 
 
 
+[[number-of-backups-needed-for-windows-file-systems]]
 == Anzahl der für Windows File-Systeme benötigten Backups
 
 Faktoren, die die Anzahl der erforderlichen Backups bestimmen, umfassen die Größe des Windows-Dateisystems, die Anzahl der verwendeten Volumes, die Änderungsrate des Dateisystems und die Service Level Agreement (SLA).
 
 
 
+[[backup-naming-convention-for-windows-file-systems]]
 == Backup Namenskonvention für Windows File-Systeme
 
 Für Windows-Dateisystem-Backups wird die standardmäßige Snapshot-Namenskonvention verwendet. Die standardmäßige Backup-Namenskonvention fügt Snapshot Namen einen Zeitstempel hinzu, der Ihnen dabei hilft, zu ermitteln, wann die Kopien erstellt wurden.
@@ -68,6 +71,7 @@ Beim Erstellen eines Backups können Sie auch ein beschreibende Tag hinzufügen,
 
 
 
+[[backup-retention-options]]
 == Optionen zur Backup-Aufbewahrung
 
 Sie können entweder die Anzahl der Tage festlegen, für die Backup-Kopien aufbewahrt werden sollen, oder die Anzahl der Backup-Kopien angeben, die aufbewahrt werden sollen, bis zu einem ONTAP von maximal 255 Kopien. Beispielsweise muss Ihr Unternehmen unter Umständen Backup-Kopien von 10 Tagen oder 130 Backup-Kopien aufbewahren.

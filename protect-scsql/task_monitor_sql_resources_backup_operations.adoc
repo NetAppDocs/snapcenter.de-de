@@ -49,6 +49,7 @@ Die Schaltfläche *Protokolle anzeigen* zeigt die detaillierten Protokolle für 
 
 
 
+[[monitor-data-protection-operations-on-sql-resources-in-the-activity-pane]]
 == Überwachen Sie Datenschutzvorgänge für SQL-Ressourcen im Bereich „Aktivität“
 
 Im Aktivitätsbereich werden die fünf zuletzt durchgeführten Operationen angezeigt. Der Bereich „Aktivität“ wird auch angezeigt, wenn der Vorgang initiiert wurde und der Status des Vorgangs.

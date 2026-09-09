@@ -20,6 +20,7 @@ NOTE: SnapCenter erstellt keine Benutzer- oder Gruppenkonten.  Erstellen Sie Ben
 
 
 
+[[types-of-rbac-in-snapcenter]]
 == Typen der RBAC in SnapCenter
 
 SnapCenter unterstützt die folgenden Arten der rollenbasierten Zugriffskontrolle:
@@ -32,6 +33,7 @@ SnapCenter unterstützt die folgenden Arten der rollenbasierten Zugriffskontroll
 
 
 
+[[snapcenter-rbac]]
 === SnapCenter RBAC
 
 SnapCenter verfügt über vordefinierte Rollen und Sie können diesen Rollen Benutzer oder Gruppen zuweisen.
@@ -55,6 +57,7 @@ Benutzer müssen sich bei der Anmeldung über die Benutzeroberfläche oder Power
 
 
 
+[[application-level-rbac]]
 === RBAC auf Applikationsebene
 
 SnapCenter verwendet die Zugangsdaten, um sicherzustellen, dass autorisierte SnapCenter Benutzer auch über Berechtigungen auf Applikationsebene verfügen.
@@ -65,6 +68,7 @@ Wenn Sie Datenschutzvorgänge für eine Oracle-Datenbank durchführen möchten u
 
 
 
+[[snapcenter-plug-in-for-vmware-vsphere-rbac]]
 === SnapCenter Plug-in für VMware vSphere RBAC
 
 Wenn Sie das SnapCenter VMware Plug-in für die VM-konsistente Datensicherung nutzen, bietet der vCenter Server zusätzliche RBAC-Level. Das SnapCenter VMware Plug-in unterstützt sowohl vCenter Server RBAC als auch ONTAP RBAC. https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_types_of_rbac_for_snapcenter_users.html["Weitere Informationen"^]
@@ -73,12 +77,14 @@ HINWEIS: NetApp empfiehlt, dass Sie eine ONTAP Rolle für SnapCenter Plug-in for
 
 
 
+[[ontap-permissions]]
 === ONTAP-Berechtigungen
 
 Sie sollten ein vsadmin-Konto mit den erforderlichen Berechtigungen für den Zugriff auf das Speichersystem erstellen.link:../install/task_add_a_user_or_group_and_assign_role_and_assets.html["Weitere Informationen"]
 
 
 
+[[permissions-assigned-to-the-pre-defined-snapcenter-roles]]
 == Berechtigungen, die den vordefinierten SnapCenter-Rollen zugewiesen sind
 
 Wenn Sie einen Benutzer zu einer Rolle hinzufügen, weisen Sie ihm entweder die Berechtigung „StorageConnection“ zu, um die Kommunikation mit der Storage Virtual Machine (SVM) zu ermöglichen, oder weisen Sie dem Benutzer eine SVM zu, um ihm die Berechtigung zur Verwendung der SVM zu erteilen.  Mit der Berechtigung „Speicherverbindung“ können Benutzer SVM-Verbindungen erstellen.
@@ -87,12 +93,14 @@ Beispielsweise kann ein SnapCenter Administrator SVM-Verbindungen erstellen und 
 
 
 
+[[snapcenter-admin-role]]
 === SnapCenter Administratorrolle
 
 In der SnapCenter-Administratorrolle sind alle Berechtigungen aktiviert. Sie können die Berechtigungen für diese Rolle nicht ändern. Sie können der Rolle Benutzer und Gruppen hinzufügen oder sie entfernen.
 
 
 
+[[app-backup-and-clone-admin-role]]
 === Administratorrolle für App Backup und Klonen
 
 Die Rolle „App Backup“ und „Clone Admin“ verfügt über die erforderlichen Berechtigungen zur Durchführung administrativer Aktionen für Applikations-Backups und klonbezogene Aufgaben. Diese Rolle verfügt nicht über Berechtigungen für Host-Management, Bereitstellung, Storage-Verbindungs-Management oder Remote-Installation.
@@ -371,6 +379,7 @@ Keine Angabe
 |===
 
 
+[[backup-and-clone-viewer-role]]
 === Backup und Clone Viewer-Rolle
 
 Die Rolle „Backup- und Klon-Viewer“ verfügt über die schreibgeschützte Ansicht aller Berechtigungen.  Für diese Rolle sind außerdem Berechtigungen für die Erkennung, Berichterstellung und den Zugriff auf das Dashboard aktiviert.
@@ -650,6 +659,7 @@ Keine Angabe
 |===
 
 
+[[infrastructure-admin-role]]
 === Rolle für den Infrastrukturadministrator
 
 Die Rolle „Infrastrukturadministrator“ hat Berechtigungen für Host-Management, Storage-Management, Bereitstellung, Ressourcengruppen, Remote-Installationsberichte, Zugriff auf das Dashboard.

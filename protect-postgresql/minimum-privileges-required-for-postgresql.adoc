@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Minimum ONTAP privileges 
 summary: Die erforderlichen Mindestberechtigungen für ONTAP variieren je nach SnapCenter Plug-ins, die Sie zur Datensicherung verwenden. 
 ---
-= Für das PostgreSQL-Plug-in sind mindestens ONTAP-Berechtigungen erforderlich
+= SnapCenter Plug-in für PostgreSQL Mindest-ONTAP-Berechtigungen erforderlich
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

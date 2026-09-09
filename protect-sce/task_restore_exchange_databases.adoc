@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: Mit SnapCenter können Sie gesicherte Exchange Datenbanken wiederherstellen. 
 ---
-= Exchange Datenbanken wiederherstellen
+= Exchange-Datenbanken mit SnapCenter wiederherstellen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

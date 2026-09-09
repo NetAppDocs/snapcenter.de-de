@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Server, NetApp supported plug-in 
 summary: Sie können den Fortschritt der verschiedenen Backup-Vorgänge überwachen, indem Sie die Seite SnapCenter-Jobs verwenden. Sie können den Fortschritt überprüfen, um festzustellen, wann er abgeschlossen ist oder ob ein Problem vorliegt. 
 ---
-= Überwachung von Backup-Vorgängen bei von NetApp unterstützten Plug-in-Ressourcen
+= Überwachung von Sicherungsvorgängen für von NetApp unterstützte Plug-in-Ressourcen in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

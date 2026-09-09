@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Backup naming conventions 
 summary: Sie können entweder die standardmäßige Namenskonvention für Snapshots verwenden oder eine benutzerdefinierte Namenskonvention verwenden. Die standardmäßige Backup-Namenskonvention fügt einem Snapshot Namen einen Zeitstempel hinzu, der Ihnen dabei hilft, zu ermitteln, wann die Kopien erstellt wurden. 
 ---
-= Backup-Namenskonventionen für Plug-in für MySQL-Datenbanken
+= MySQL Backup-Namenskonventionen in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup, cli, commands 
 summary: Der Backup-Workflow umfasst die Planung, die Ermittlung der Backup-Ressourcen, die Erstellung von Backup-Richtlinien, das Erstellen von Ressourcengruppen und das Anhängen von Richtlinien, das Erstellen von Backups und das Monitoring der Betriebsprozesse. 
 ---
-= Sichern Sie Oracle Datenbanken mit UNIX Befehlen
+= Oracle-Datenbanken werden mithilfe von UNIX-Befehlen in SnapCenter gesichert
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

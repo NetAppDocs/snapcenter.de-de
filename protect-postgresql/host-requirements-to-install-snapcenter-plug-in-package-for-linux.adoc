@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter 
 summary: Bevor Sie das SnapCenter Plug-ins-Paket für Linux installieren, sollten Sie mit einigen grundlegenden Speicherplatz- und Größenanforderungen des Host-Systems vertraut sein. 
 ---
-= Host-Anforderungen für die Installation des SnapCenter Plug-ins Pakets für Linux
+= SnapCenter Plug-ins Package für Linux Host-Anforderungen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

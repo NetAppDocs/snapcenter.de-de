@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa r2, secondary protection, consistency group, primary consistency group, secondary consistency group 
 summary: Eine Ressourcengruppe ist ein Container, in dem Sie Ressourcen hinzufügen, die Sie sichern und schützen möchten. Mit einer Ressourcengruppe können Sie alle Daten, die einer bestimmten Anwendung zugeordnet sind, gleichzeitig sichern. 
 ---
-= Erstellen von Ressourcengruppen und Aktivieren des sekundären Schutzes für MySQL-Ressourcen auf ASA r2-Systemen
+= Ressourcengruppen erstellen und sekundären Schutz für MySQL-Ressourcen auf ASA r2-Systemen in SnapCenter aktivieren
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

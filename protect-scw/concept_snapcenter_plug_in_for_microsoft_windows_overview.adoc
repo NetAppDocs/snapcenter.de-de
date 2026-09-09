@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Microsoft Windows 
 summary: Das SnapCenter Plug-in für Microsoft Windows ist eine Host-seitige Komponente der NetApp SnapCenter Software, die das applikationsgerechte Datensicherungsmanagement von Microsoft Filesystem-Ressourcen ermöglicht. Darüber hinaus bietet sie Storage-Bereitstellung, Snapshot Konsistenz und Speicherplatzrückgewinnung für Windows Filesysteme. Das Plug-in für Windows automatisiert Backup, Wiederherstellung und Klonvorgänge in File-Systemen in Ihrer SnapCenter Umgebung. 
 ---
-= SnapCenter Plug-in für Microsoft Windows – Übersicht
+= Informationen zum SnapCenter Plug-in für Microsoft Windows
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

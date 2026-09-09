@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Database 
 summary: Bei der Vorbereitung von Backups und Klonen einer Ressource ist es unter Umständen hilfreich, eine grafische Darstellung aller Backups und Klone auf dem primären und sekundären Storage anzuzeigen. 
 ---
-= Sehen Sie sich SAP HANA Datenbank-Backups und -Klone auf der Seite Topologie an
+= SAP HANA Backups und Klone auf der SnapCenter Topologieseite
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

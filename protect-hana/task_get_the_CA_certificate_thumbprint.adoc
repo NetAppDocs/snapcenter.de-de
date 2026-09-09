@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter 
 summary: Abrufen des Daumenabdrucks für das CA-Zertifikat 
 ---
-= Abrufen des Daumenabdrucks für das CA-Zertifikat
+= Den Fingerabdruck des CA-Zertifikats in SnapCenter abrufen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Postgresql 
 summary: Die automatische Erkennung wird für bestimmte PostgreSQL-Instanzen nicht unterstützt. Sie müssen diese Ressourcen manuell hinzufügen. 
 ---
-= Fügen Sie dem Plug-in-Host manuell Ressourcen hinzu
+= PostgreSQL-Ressourcen von SnapCenter manuell zum Plug-in-Host hinzufügen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: oracle databases discover 
 summary: 'Optionen zur Backup-Aufbewahrung:' 
 ---
-= Optionen zur Backup-Aufbewahrung
+= Optionen zur Backup-Aufbewahrung in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

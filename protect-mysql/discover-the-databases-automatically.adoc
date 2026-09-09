@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials 
 summary: Bei den Ressourcen handelt es sich um MySQL-Datenbanken auf dem Linux-Host, die von SnapCenter gemanagt werden. Sie können diese Ressourcen zu Ressourcengruppen hinzufügen, um Datensicherungsvorgänge auszuführen, nachdem Sie die verfügbaren MySQL-Datenbanken erkannt haben. 
 ---
-= Automatische Erkennung von Datenbanken
+= MySQL Datenbanken automatisch in SnapCenter erkennen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

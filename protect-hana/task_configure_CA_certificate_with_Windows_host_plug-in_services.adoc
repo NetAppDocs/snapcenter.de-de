@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter 
 summary: Konfigurieren Sie das CA-Zertifikat mit Windows-Host-Plug-in-Diensten 
 ---
-= Konfigurieren Sie das CA-Zertifikat mit den Windows-Host-Plug-in-Diensten
+= Konfigurieren eines CA-Zertifikats mit SnapCenter Windows Host Plug-in-Diensten
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

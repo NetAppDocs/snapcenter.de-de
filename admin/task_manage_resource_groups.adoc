@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Manage resource groups 
 summary: Sie können verschiedene Vorgänge an Ressourcengruppen ausführen. 
 ---
-= Verwalten von Ressourcengruppen
+= Ressourcengruppen in SnapCenter verwalten
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -39,6 +39,7 @@ Dieser Vorgang wird nur für SQL-Ressourcengruppen (die nur Datenbanken enthalte
 
 
 
+[[stop-and-resume-operations-on-resource-groups]]
 == Stoppen und fortsetzen Sie den Betrieb in Ressourcengruppen
 
 Sie können geplante Vorgänge vorübergehend vom Starten einer Ressourcengruppe deaktivieren. Später können Sie diese Vorgänge aktivieren.
@@ -55,6 +56,7 @@ Wenn Sie die Vorgänge der Ressourcengruppe, die Sie im Wartungsmodus ausgeführ
 
 
 
+[[delete-resource-groups]]
 == Löschen von Ressourcengruppen
 
 Sie können eine Ressourcengruppe löschen, wenn Sie die Ressourcen in der Ressourcengruppe nicht mehr schützen müssen. Sie müssen sicherstellen, dass Ressourcengruppen gelöscht werden, bevor Sie Plug-ins aus SnapCenter entfernen.

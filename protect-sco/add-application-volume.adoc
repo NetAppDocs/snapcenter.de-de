@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: application volume, overview, add, modify, delete, Oracle database 
 summary: Sie sollten die Anwendungsvolumes manuell hinzufügen. 
 ---
-= Hinzufügen von Applikations-Volumes
+= Anwendungs-Volumes für Oracle-Datenbanken in SnapCenter hinzufügen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -42,6 +42,7 @@ Sie können mehrere Speichereinheiten hinzufügen.
 
 
 
+[[modify-application-volume]]
 == Anwendungsvolumen ändern
 
 Wenn keine Backups erstellt werden, können Sie alle Werte ändern, die Sie beim Hinzufügen des Anwendungs-Volumes angegeben haben. Wenn das Backup erstellt wird, können Sie nur die Details des Speichersystems ändern.
@@ -56,6 +57,7 @@ Wenn keine Backups erstellt werden, können Sie alle Werte ändern, die Sie beim
 
 
 
+[[delete-application-volume]]
 == Anwendungsvolumen löschen
 
 Wenn Sie ein Applikations-Volume löschen, werden im Falle von Backups, die mit dem Applikations-Volume verbunden sind, das Applikations-Volume in den Wartungsmodus versetzt, ohne dass neue Backups erstellt werden und keine früheren Backups erhalten werden. Wenn keine Backups zugeordnet sind, werden alle Metadaten gelöscht.

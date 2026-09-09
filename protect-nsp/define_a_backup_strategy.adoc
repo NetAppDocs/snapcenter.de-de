@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup strategy 
 summary: 'Wenn Sie eine Backup-Strategie definieren, bevor Sie Ihre Backup-Jobs erstellen, stellen Sie sicher, dass Sie über die Backups verfügen, die Sie benötigen, um Ihre Ressourcen erfolgreich wiederherzustellen oder zu klonen. Ihr Service Level Agreement \ (SLA\), die Recovery-Zeitvorgabe \ (RTO\) und der Recovery-Zeitpunkt \ (RPO\) bestimmen weitgehend Ihre Backup-Strategie.' 
 ---
-= Backup-Strategie definieren
+= Eine SnapCenter Backup-Strategie definieren
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter 
 summary: Sie müssen eine Strategie definieren, bevor Sie die Restore-Vorgänge mit SnapCenter erfolgreich durchführen können. Es gibt zwei Arten von Wiederherstellungsstrategien für manuell hinzugefügte IBM DB2-Ressourcen. Manuell hinzugefügte IBM DB2-Ressourcen können nicht wiederhergestellt werden. 
 ---
-= Arten von Wiederherstellungsstrategien, die für manuell hinzugefügte IBM DB2-Ressourcen unterstützt werden
+= Wiederherstellungsstrategien für manuell hinzugefügte IBM Db2-Ressourcen in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -18,6 +18,7 @@ NOTE: Manuell hinzugefügte IBM DB2-Ressourcen können nicht wiederhergestellt w
 
 
 
+[[complete-resource-restore]]
 == Komplette Ressourcenwiederherstellung
 
 * Stellt alle Volumes, qtrees und LUNs einer Ressource wieder her

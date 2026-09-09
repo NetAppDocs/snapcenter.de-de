@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Manage resources 
 summary: 'Zusätzlich zum Managen von Hosts in vertrauenswürdigen Active Directory \(AD\) Domänen managt SnapCenter auch Hosts in mehreren AD nicht vertrauenswürdigen Domänen. Die nicht vertrauenswürdigen AD-Domänen müssen beim SnapCenter-Server registriert werden. SnapCenter unterstützt Benutzer und Gruppen aus mehreren nicht vertrauenswürdigen AD-Domänen.' 
 ---
-= Management von Ressourcen von nicht vertrauenswürdigen Domänen
+= Ressourcen von SnapCenter in nicht vertrauenswürdigen Domänen verwalten
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -19,6 +19,7 @@ Active Directory-Gruppen (AD), die zu Domänen gehören, die nicht mit dem SnapC
 
 
 
+[[modify-untrusted-domains]]
 == Ändern Sie nicht vertrauenswürdige Domains
 
 Sie können eine nicht vertrauenswürdige Domäne ändern, wenn Sie die IP-Adressen des Domänencontrollers oder den vollständig qualifizierten Domänennamen (FQDN) aktualisieren möchten.
@@ -58,6 +59,7 @@ Wenn der Domain-FQDN nicht lösbar ist, geben Sie eine oder mehrere IP-Adressen 
 
 
 
+[[unregister-untrusted-active-directory-domains]]
 == Nicht vertrauenswürdige Active Directory-Domänen werden nicht registriert
 
 Sie können die Registrierung einer nicht vertrauenswürdigen Active Directory-Domäne aufheben, wenn Sie die Assets, die dieser Domäne zugeordnet sind, nicht verwenden möchten.

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Microsoft SQL Server 
 summary: Das SnapCenter Plug-in für Microsoft SQL Server ist eine Host-seitige Komponente der NetApp SnapCenter Software, die das Management der applikationsgerechten Datensicherung von Microsoft SQL Server Datenbanken ermöglicht. Das Plug-in für SQL Server automatisiert Backups, Verifizierungen, Restores und Klonvorgänge in Ihrer SnapCenter Umgebung. 
 ---
-= SnapCenter Plug-in für Microsoft SQL Server – Übersicht
+= Informationen zum SnapCenter Plug-in für Microsoft SQL Server
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

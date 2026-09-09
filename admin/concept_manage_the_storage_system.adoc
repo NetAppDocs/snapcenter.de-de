@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Manage storage system 
 summary: Nach dem Hinzufügen des Speichersystems können Sie die Konfiguration und Verbindungen des Speichersystems ändern oder das Speichersystem löschen. 
 ---
-= Management des Storage-Systems
+= Das Speichersystem in SnapCenter verwalten
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ Nach dem Hinzufügen des Speichersystems können Sie die Konfiguration und Verbi
 
 
 
+[[modify-storage-system-configuration]]
 == Konfiguration des Storage-Systems ändern
 
 Sie können mit SnapCenter die Konfiguration Ihres Storage-Systems ändern, wenn Sie den Benutzernamen, das Passwort, die Plattform, Port, das Protokoll, ändern möchten. Timeout-Zeitraum, bevorzugte IP-Adresse oder Messaging-Optionen.
@@ -72,6 +73,7 @@ Anzeige aller hinzugefügten Cluster und Änderung der erforderlichen Cluster-Ko
 
 
 
+[[delete-the-storage-system]]
 == Löschen Sie das Speichersystem
 
 Sie können SnapCenter verwenden, um alle nicht verwendeten Speichersysteme zu löschen.
@@ -102,6 +104,7 @@ NOTE: Wenn eine SVM aus dem ONTAP-Cluster mithilfe der ONTAP-GUI gelöscht wird,
 
 
 
+[[rest-api-support]]
 == REST API-Support
 
 Alle ASA-, AFF- oder FAS-Systemverbindungen zu ONTAP erfolgen standardmäßig über ZAPI. REST API kann für bestimmte ONTAP-Versionen aktiviert werden.

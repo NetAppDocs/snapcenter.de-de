@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: application volume, clone, split a clone 
 summary: Mit SnapCenter können Backups des Applikations-Volumes geklont, der Klon geteilt und der Klon gelöscht werden. 
 ---
-= Backup von Klon-Applikations-Volumes
+= Klonen von Anwendungsvolume-Backups in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -62,6 +62,7 @@ NOTE: Für eine E-Mail-Benachrichtigung müssen Sie die SMTP-Serverdetails entwe
 
 
 
+[[split-an-application-volume-clone]]
 == Einen Applikations-Volume-Klon aufteilen
 
 Sie können SnapCenter verwenden, um eine geklonte Ressource von der übergeordneten Ressource zu trennen. Der geteilte Klon ist unabhängig von der übergeordneten Ressource.
@@ -77,6 +78,7 @@ Sie können SnapCenter verwenden, um eine geklonte Ressource von der übergeordn
 
 
 
+[[delete-an-application-volume-clone]]
 == Löschen eines Applikations-Volume-Klons
 
 Klone können gelöscht werden, wenn Sie sie nicht mehr benötigen. Klone, die sich als Quelle für andere Klone fungieren, können nicht gelöscht werden.

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: NetApp supported plug-ins 
 summary: Sie können die von NetApp unterstützten Plug-ins für Datensicherungsvorgänge verwenden. 
 ---
-= Funktionen der von NetApp unterstützten Plug-ins
+= Informationen zu von NetApp unterstützten Plug-ins in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

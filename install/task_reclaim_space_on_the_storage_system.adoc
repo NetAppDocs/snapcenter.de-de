@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: space, storage system, reclaim 
 summary: Obwohl NTFS den verfügbaren Speicherplatz auf einer LUN verfolgt, wenn Dateien gelöscht oder geändert werden, werden die neuen Informationen nicht dem Storage-System gemeldet. Sie können das PowerShell Cmdlet zur Speicherplatzrückgewinnung auf dem Plug-in für Windows Host ausführen, um sicherzustellen, dass neu freigegebene Blöcke im Storage als verfügbar markiert werden. 
 ---
-= Rückgewinnung von Speicherplatz im Storage-System
+= Speicherplatz im Speichersystem mit SnapCenter zurückgewinnen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

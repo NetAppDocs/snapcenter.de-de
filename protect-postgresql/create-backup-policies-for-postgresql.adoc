@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for PostgreSQL 
 summary: Bevor Sie SnapCenter zum Sichern von PostgreSQL-Clusterressourcen verwenden, müssen Sie eine Sicherungsrichtlinie für die Ressource oder Ressourcengruppe erstellen, die Sie sichern möchten. Eine Backup-Richtlinie ist eine Reihe von Regeln, die das Managen, Planen und Aufbewahren von Backups regeln. 
 ---
-= Erstellen Sie Backup-Richtlinien für PostgreSQL
+= Erstellen Sie SnapCenter Plug-in für PostgreSQL-Sicherungsrichtlinien
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

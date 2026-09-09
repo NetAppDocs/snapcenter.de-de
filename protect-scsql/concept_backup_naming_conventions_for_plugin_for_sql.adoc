@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Backup naming conventions 
 summary: Sie können entweder die standardmäßige Snapshot-Namenskonvention verwenden oder eine benutzerdefinierte Namenskonvention verwenden. Die standardmäßige Backup-Namenskonvention fügt Snapshot Namen einen Zeitstempel hinzu, der Ihnen dabei hilft, zu ermitteln, wann die Kopien erstellt wurden. 
 ---
-= Backup-Namenskonventionen für SQL Server
+= Backup-Namenskonventionen für das SnapCenter Plug-in für SQL Server
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

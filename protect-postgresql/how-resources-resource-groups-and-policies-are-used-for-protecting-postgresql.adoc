@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: postgresql 
 summary: Bevor Sie SnapCenter verwenden, ist es hilfreich, grundlegende Konzepte im Zusammenhang mit Backup-, Klon- und Restore-Vorgängen zu verstehen, die durchgeführt werden sollen. Sie interagieren mit Ressourcen, Ressourcengruppen und Richtlinien für verschiedene Vorgänge. 
 ---
-= Wie Ressourcen, Ressourcengruppen und Richtlinien zum Schutz von PostgreSQL verwendet werden
+= Ressourcen, Ressourcengruppen und Richtlinien zum Schutz von PostgreSQL in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

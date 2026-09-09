@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Der Restore- und Recovery-Workflow umfasst Planung, Durchführung von Restore-Vorgängen und Monitoring von Vorgängen. 
 ---
-= Stellen Sie von NetApp unterstützte Plug-in-Ressourcen wieder her
+= NetApp unterstützte Plug-ins stellen den Wiederherstellungs-Workflow in SnapCenter bereit
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

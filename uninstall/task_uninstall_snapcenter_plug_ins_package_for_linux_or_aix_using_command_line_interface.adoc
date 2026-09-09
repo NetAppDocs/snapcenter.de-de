@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: uninstall plug-ins, linux, aix, command-line interface, cli 
 summary: Sie können das SnapCenter Plug-ins Package für Linux oder das SnapCenter Plug-ins Package für AIX über die Befehlszeilenschnittstelle deinstallieren. 
 ---
-= Deinstallieren Sie das Plug-ins-Paket für Linux oder AIX mithilfe von CLI
+= Das SnapCenter Plug-ins Package für Linux oder AIX mithilfe der CLI deinstallieren
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

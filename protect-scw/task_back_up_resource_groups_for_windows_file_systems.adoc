@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backing up 
 summary: Eine Ressourcengruppe ist eine Sammlung von Ressourcen auf einem Host oder Cluster. Für alle in der Ressourcengruppe definierten Ressourcen wird ein Sicherungsvorgang in der Ressourcengruppe durchgeführt. Auf der Seite „Ressourcen“ können Sie ein Backup einer Ressourcengruppe nach Bedarf erstellen. Wenn eine Ressourcengruppe über eine Richtlinie und einen konfigurierten Zeitplan verfügt, werden die Backups automatisch gemäß dem Zeitplan durchgeführt. 
 ---
-= Sichern Sie Ressourcengruppen für Windows File-Systeme
+= Sichern von Windows-Dateisystemressourcengruppen in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

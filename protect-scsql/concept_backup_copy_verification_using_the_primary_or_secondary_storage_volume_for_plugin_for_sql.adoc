@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Backup copy verification 
 summary: Sie können Backup-Kopien auf dem primären Storage Volume oder auf dem sekundären SnapMirror oder SnapVault Storage Volume überprüfen. Bei der Überprüfung und Verwendung eines sekundären Storage-Volumes wird die Last für das primäre Storage Volume verringert. 
 ---
-= Verifizierung von Backup-Kopien für SQL Server mithilfe des primären oder sekundären Storage Volumes
+= Überprüfung der Sicherungskopie für das SnapCenter Plug-in für SQL Server
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

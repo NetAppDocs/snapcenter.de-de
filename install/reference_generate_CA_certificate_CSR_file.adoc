@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter, certificate signing request, ca, 
 summary: 'Sie können eine Zertifikatsignierungsanforderung (CSR) generieren und das Zertifikat importieren, das von einer Zertifizierungsstelle (CA) mit dem generierten CSR abgerufen werden kann. Dem Zertifikat ist ein privater Schlüssel zugeordnet.' 
 ---
-= ZertifikatCSR-Datei erstellen
+= CA-Zertifikat-CSR-Dateien in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

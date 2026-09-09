@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials 
 summary: Ressourcen sind PostgreSQL-Cluster auf dem Linux-Host, die von SnapCenter verwaltet werden. Sie können diese Ressourcen zu Ressourcengruppen hinzufügen, um Datensicherungsvorgänge auszuführen, nachdem Sie die verfügbaren PostgreSQL-Cluster erkannt haben. 
 ---
-= Automatische Erkennung der Cluster
+= PostgreSQL Cluster werden in SnapCenter automatisch erkannt
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

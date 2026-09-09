@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Microsoft Exchange Server 
 summary: SnapCenter unterstützt eine Vielzahl von Storage-Typen sowohl auf physischen Computern als auch auf Virtual Machines. Sie müssen überprüfen, ob Ihr Speichertyp unterstützt wird, bevor Sie das Paket für Ihren Host installieren. 
 ---
-= Vom SnapCenter -Plug-in für Microsoft Exchange Server unterstützte Speichertypen
+= Vom SnapCenter Plug-in für Microsoft Exchange Server unterstützte Speichertypen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

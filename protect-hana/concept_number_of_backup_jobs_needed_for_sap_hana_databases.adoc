@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Database 
 summary: 'Zu den Faktoren, die die Anzahl der erforderlichen Backup-Jobs bestimmen, zählen die Größe der Ressource, die Anzahl der verwendeten Volumes, die Änderungsrate der Ressource und Ihr Service Level Agreement \ (SLA\).' 
 ---
-= Anzahl der für SAP HANA-Datenbanken erforderlichen Backup-Jobs
+= Anzahl der für SAP HANA Datenbanken benötigten Backup-Jobs in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

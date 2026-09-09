@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore operation 
 summary: Sie können SnapCenter verwenden, um gesicherte SQL Server-Datenbanken wiederherzustellen. Die Wiederherstellung der Datenbank ist ein mehrphasiger Prozess, der alle Daten- und Protokollseiten von einem bestimmten SQL Server-Backup in eine angegebene Datenbank kopiert. 
 ---
-= Stellen Sie Backups von SQL Server Datenbanken wieder her
+= Wiederherstellung von SQL Server Datenbank-Backups in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

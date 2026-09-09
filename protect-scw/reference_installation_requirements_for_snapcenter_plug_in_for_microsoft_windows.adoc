@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: requirements 
 summary: Vor der Installation des Plug-ins für Windows sollten Sie sich über bestimmte Installationsanforderungen im Klaren sein. 
 ---
-= Installationsanforderungen für das SnapCenter Plug-in für Microsoft Windows
+= Installationsvoraussetzungen für das SnapCenter Plug-in für Microsoft Windows
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -26,6 +26,7 @@ Die SnapCenter-Administratorrolle muss über Administratorrechte verfügen.
 
 
 
+[[host-requirements-to-install-snapcenter-plug-ins-package-for-windows]]
 == Hostanforderungen für die Installation des SnapCenter Plug-ins Pakets für Windows
 
 Bevor Sie das SnapCenter Plug-ins-Paket für Windows installieren, sollten Sie mit einigen grundlegenden Speicherplatzanforderungen und Größenanforderungen für das Host-System vertraut sein.
@@ -76,6 +77,7 @@ Informationen zur .NET-spezifischen Fehlerbehebung finden Sie unter https://kb.n
 |===
 
 
+[[set-up-your-credentials-for-the-plug-in-for-windows]]
 == Richten Sie Ihre Anmeldedaten für das Plug-in für Windows ein
 
 SnapCenter verwendet Zugangsdaten, um Benutzer für SnapCenter-Vorgänge zu authentifizieren. Sie sollten Anmeldedaten für die Installation von SnapCenter-Plug-ins erstellen und zusätzliche Anmeldedaten für die Durchführung von Datenschutzvorgängen auf Windows-Dateisystemen erhalten.
@@ -145,6 +147,7 @@ Nachdem Sie die Einrichtung von Anmeldeinformationen abgeschlossen haben, möcht
 
 
 
+[[configure-gmsa-on-windows-server-2016-or-later]]
 == Konfigurieren Sie gMSA unter Windows Server 2016 oder höher
 
 Mit Windows Server 2016 oder höher können Sie ein Group Managed Service Account (gMSA) erstellen, das über ein verwaltetes Domain-Konto eine automatisierte Verwaltung von Service-Konten ermöglicht.

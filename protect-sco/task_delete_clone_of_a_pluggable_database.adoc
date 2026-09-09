@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, PDB, clone PDB 
 summary: 'Sie können den Klon einer steckbaren Datenbank \(PDB\) löschen, wenn Sie nicht mehr benötigen.' 
 ---
-= Löschen des Klons einer steckbaren Datenbank
+= Einen Klon einer pluggable Datenbank in SnapCenter löschen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

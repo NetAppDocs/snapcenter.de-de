@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for MySQL 
 summary: Der Restore- und Recovery-Workflow umfasst Planung, Durchführung von Restore-Vorgängen und Monitoring von Vorgängen. 
 ---
-= Wiederherstellung des Workflows
+= MySQL Wiederherstellungsworkflow
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

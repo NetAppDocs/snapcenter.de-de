@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Database 
 summary: 'Sie können entweder ein Backup einer Ressource \(Datenbank\) oder einer Ressourcengruppe erstellen. Der Backup-Workflow umfasst die Planung, Identifizierung der Backup-Datenbanken, das Management von Backup-Richtlinien, das Erstellen von Ressourcengruppen und das Anhängen von Richtlinien, das Erstellen von Backups und das Monitoring der Betriebsprozesse.' 
 ---
-= SAP HANA-Ressourcen sichern
+= SAP HANA Resource-Backup-Workflow in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Database 
 summary: Der Klon-Workflow umfasst die Durchführung des Klonvorgangs und die Überwachung des Vorgangs. 
 ---
-= Klon-Workflow
+= SnapCenter SAP HANA Datenbank-Klon-Workflow
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

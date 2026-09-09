@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: oracle databases backup 
 summary: Überprüfen Sie die Backup-Kopie mithilfe des primären oder sekundären Storage-Volumes. 
 ---
-= Wo die Sicherungskopie überprüft werden soll
+= Wie SnapCenter Sicherungskopien überprüft
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Monitor jobs, schedules, events, logs 
 summary: Sie können den Fortschritt Ihrer Jobs überwachen, Informationen zu geplanten Jobs abrufen und Ereignisse und Protokolle auf der Seite Überwachen überprüfen. 
 ---
-= Überwachen von Jobs, Zeitplänen, Ereignissen und Protokollen
+= SnapCenter-Jobs, Zeitpläne, Ereignisse und Protokolle überwachen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ Sie können den Fortschritt Ihrer Jobs überwachen, Informationen zu geplanten J
 
 
 
+[[monitor-jobs]]
 == Überwachen von Jobs
 
 Sie können Informationen zu Backup-, Klon-, Wiederherstellungs- und Verifizierungsaufgaben von SnapCenter anzeigen. Sie können diese Ansicht nach Start- und Enddatum, Jobtyp, Ressourcengruppe, Richtlinie oder SnapCenter-Plug-in filtern. Sie können auch zusätzliche Details und Protokolldateien für bestimmte Jobs erhalten.
@@ -33,6 +34,7 @@ Sie können die folgenden Aufgaben im Zusammenhang mit Überwachungsaufgaben aus
 
 
 
+[[manage-scheduled-backup-jobs]]
 === Managen geplanter Backup-Jobs
 
 Ab Version SnapCenter 6.0.1 wurde ein neuer Parameter *JobConcurrencyThreshold* eingeführt, der einen Schwellenwert für die Anzahl der geplanten Jobs festlegt, die zu einem bestimmten Zeitpunkt ausgeführt werden können. So können Sie die Anzahl der Backups steuern, die basierend auf der Hardwarekonfiguration des Systems ausgeführt werden sollen.
@@ -50,6 +52,7 @@ NOTE: Wenn Sie *JobConcurrencyThreshold* aktivieren, um gleichzeitige Jobs zu ve
 
 
 
+[[manage-stale-jobs]]
 === Veraltete Jobs verwalten
 
 Veraltete Jobs werden durch Unterbrechungen in SnapCenter oder durch unsachgemäße Job-Updates erstellt. Ab Version SnapCenter 6.0.1 wird ein vordefinierter Zeitplan eingeführt, um diese veralteten Jobs, die mehr als 72 Stunden im System stecken bleiben, zu bereinigen. Sie können die Zeitplanhäufigkeit ändern, indem Sie den konfigurierbaren Parameter *CleanUpStaleJobsIntervalHours* bearbeiten.
@@ -64,6 +67,7 @@ Sie können die Bereinigung bei Bedarf auslösen, indem Sie den Zeitplan unter *
 
 
 
+[[monitor-schedules]]
 == Überwachung von Zeitplänen
 
 Sie möchten möglicherweise aktuelle Zeitpläne anzeigen, um zu bestimmen, wann der Vorgang gestartet wird, wann er zuletzt ausgeführt wurde und wann er als Nächstes ausgeführt wird. Sie können auch den Host bestimmen, auf dem der Vorgang ausgeführt wird, sowie die Ressourcengruppe und die Richtlinieninformationen des Vorgangs.
@@ -78,6 +82,7 @@ Sie möchten möglicherweise aktuelle Zeitpläne anzeigen, um zu bestimmen, wann
 
 
 
+[[monitor-events]]
 == Monitoring von Ereignissen
 
 Sie können eine Liste der SnapCenter-Ereignisse im System anzeigen, z. B. wenn ein Benutzer eine Ressourcengruppe erstellt oder wenn das System Aktivitäten initiiert, z. B. die Erstellung eines geplanten Backups. Möglicherweise möchten Sie Ereignisse anzeigen, um zu bestimmen, ob ein Vorgang, z. B. ein Backup- oder Wiederherstellungsvorgang, derzeit ausgeführt wird.
@@ -96,6 +101,7 @@ Alle Jobinformationen werden auf der Seite Ereignisse angezeigt. Wenn beispielsw
 
 
 
+[[monitor-logs]]
 == Monitoring von Protokollen
 
 Sie können SnapCenter-Serverprotokolle, SnapCenter-Host-Agent-Protokolle und Plug-in-Protokolle anzeigen und herunterladen. Sie sollten die Protokolle anzeigen, die Ihnen bei der Fehlerbehebung helfen.
@@ -146,6 +152,7 @@ NOTE: Führen Sie das Cmdlet aus, um auf Daten zum Systemzustand oder zur Konfig
 
 
 
+[[remove-jobs-and-logs-from-snapcenter]]
 == Entfernen Sie Jobs und Protokolle aus SnapCenter
 
 Sie können Backup-, Restore-, Klon- und Verifizierungsaufgaben und Protokolle aus SnapCenter entfernen. SnapCenter speichert erfolgreiche und fehlgeschlagene Job-Protokolle unbeschränkt, es sei denn, Sie entfernen sie. Möglicherweise möchten Sie sie entfernen, um den Storage aufzufüllen.

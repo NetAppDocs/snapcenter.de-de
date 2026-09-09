@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Minimum ONTAP privileges 
 summary: Die erforderlichen Mindestberechtigungen für ONTAP variieren je nach SnapCenter Plug-ins, die Sie zur Datensicherung verwenden. 
 ---
-= Für das IBM DB2-Plug-in sind minimale ONTAP-Berechtigungen erforderlich
+= Minimale ONTAP Berechtigungen, die vom SnapCenter Plug-in für IBM Db2 benötigt werden
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

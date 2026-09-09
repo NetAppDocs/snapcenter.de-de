@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Backup workflow 
 summary: Wenn Sie das SnapCenter Plug-in für Microsoft SQL Server in Ihrer Umgebung installieren, können Sie mit SnapCenter die SQL Server Ressourcen sichern. 
 ---
-= Backup-Workflow
+= SQL Server Backup-Workflow in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -28,6 +28,7 @@ Außerdem können Sie PowerShell Cmdlets manuell oder in Skripten verwenden, um 
 
 
 
+[[how-snapcenter-backs-up-databases]]
 == Wie SnapCenter Datenbanken sichert
 
 SnapCenter verwendet Snapshot Technologie, um die SQL Server Datenbanken auf LUNs oder VMDKs zu sichern. SnapCenter erstellt das Backup durch Erstellen von Snapshots der Datenbanken.

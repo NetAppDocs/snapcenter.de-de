@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: disks, create, manage, clustered disks, view 
 summary: Der Windows-Host sieht LUNs auf Ihrem Storage-System als virtuelle Festplatten. Sie können SnapCenter verwenden, um eine FC-verbundene oder iSCSI-verbundene LUN zu erstellen und zu konfigurieren. 
 ---
-= Erstellen und Verwalten von Festplatten
+= Datenträger in SnapCenter erstellen und verwalten
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -23,6 +23,7 @@ NOTE: SnapCenter unterstützt das Umbenennen einer Festplatte nicht. Wenn eine v
 
 
 
+[[view-the-disks-on-a-host]]
 == Zeigen Sie die Festplatten auf einem Host an
 
 Sie können die Festplatten auf jedem Windows Host, den Sie mit SnapCenter verwalten, anzeigen.
@@ -39,6 +40,7 @@ Die Festplatten werden aufgelistet.
 
 
 
+[[view-clustered-disks]]
 == Anzeige geclusterter Festplatten
 
 Sie können Cluster-Festplatten auf dem Cluster anzeigen, den Sie mit SnapCenter verwalten. Die Cluster-Laufwerke werden nur angezeigt, wenn Sie das Cluster aus dem Dropdown-Menü Hosts auswählen.
@@ -55,6 +57,7 @@ Die Festplatten werden aufgelistet.
 
 
 
+[[establish-an-iscsi-session]]
 == Richten Sie eine iSCSI-Sitzung ein
 
 Wenn Sie iSCSI zum Herstellen einer Verbindung zu einer LUN verwenden, müssen Sie eine iSCSI-Sitzung starten, bevor Sie die LUN erstellen, um die Kommunikation zu ermöglichen.
@@ -129,6 +132,7 @@ SnapCenter richtet die iSCSI-Sitzung ein.
 
 
 
+[[create-fc-connected-or-iscsi-connected-luns-or-disks]]
 == Erstellen Sie mit FC verbundene oder mit iSCSI verbundene LUNs oder Festplatten
 
 Der Windows-Host sieht die LUNs auf Ihrem Storage-System als virtuelle Festplatten. Sie können SnapCenter verwenden, um eine FC-verbundene oder iSCSI-verbundene LUN zu erstellen und zu konfigurieren.
@@ -359,6 +363,7 @@ SnapCenter erstellt die LUN und verbindet sie mit dem angegebenen Laufwerk oder 
 
 
 
+[[resize-a-disk]]
 == Ändern der Größe einer Festplatte
 
 Sie können die Größe einer Festplatte bei sich ändernden Anforderungen Ihres Storage-Systems erhöhen oder reduzieren.
@@ -398,6 +403,7 @@ SnapCenter Größe der Festplatte neu.
 
 
 
+[[connect-a-disk]]
 == Schließen Sie eine Festplatte an
 
 Sie können den Assistenten zum Verbinden von Festplatten verwenden, um eine vorhandene LUN mit einem Host zu verbinden, oder um eine getrennte LUN erneut zu verbinden.
@@ -580,6 +586,7 @@ SnapCenter verbindet die LUN mit dem angegebenen Laufwerk- oder Laufwerkspfad am
 
 
 
+[[disconnect-a-disk]]
 == Trennen Sie eine Festplatte
 
 Sie können eine LUN ohne Auswirkungen auf den Inhalt der LUN von einem Host trennen, mit einer Ausnahme: Wenn Sie einen Klon vor dessen Trennung trennen, verlieren Sie den Inhalt des Klons.
@@ -613,6 +620,7 @@ SnapCenter trennt die Verbindung der Festplatte.
 
 
 
+[[delete-a-disk]]
 == Löschen Sie eine Festplatte
 
 Sie können einen Datenträger löschen, wenn Sie ihn nicht mehr benötigen. Nach dem Löschen eines Datenträgers können Sie das Löschen nicht rückgängig machen.

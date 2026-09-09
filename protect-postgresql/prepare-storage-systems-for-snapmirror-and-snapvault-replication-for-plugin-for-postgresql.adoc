@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: snapmirror, snapvault, storage system, replication 
 summary: Sie können ein SnapCenter Plug-in mit ONTAP SnapMirror und SnapVault Technologien verwenden 
 ---
-= Bereiten Sie die Storage-Systeme für SnapMirror und SnapVault Replication für PostgreSQL vor
+= Speichersysteme für die Unterstützung der SnapMirror- und SnapVault-Replikation für SnapCenter PostgreSQL vorbereiten
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

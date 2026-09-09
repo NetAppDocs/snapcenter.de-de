@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: 'Wenn Sie eine Backup-Strategie definieren, bevor Sie Ihre Backup-Jobs erstellen, können Sie sicherstellen, dass Sie über die Backups verfügen, die Sie benötigen, um Ihre Datenbanken erfolgreich wiederherzustellen. Ihre Service Level Agreement (SLA), Recovery Time Objective (RTO) und Recovery Point Objective \ (RPO\) bestimmen Ihre Backup-Strategie weitestgehend.' 
 ---
-= Backup-Strategie für Exchange Server-Ressourcen definieren
+= Eine Backup-Strategie für Exchange Server Ressourcen in SnapCenter festlegen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -17,6 +17,7 @@ Ein SLA definiert das erwartete Service-Level und löst zahlreiche Service-bezog
 
 
 
+[[types-of-backups-supported-for-exchange-database]]
 == Arten von Backups, die für Exchange-Datenbank unterstützt werden
 
 Für das Backup von Exchange Mailboxen mit SnapCenter müssen Sie den Ressourcentyp auswählen, beispielsweise Datenbanken und Datenbankverfügbarkeitsgruppen (Database Availability Groups, DAG). Mithilfe der Snapshot Technologie werden schreibgeschützte Online-Kopien der Volumes erstellt, auf denen sich die Ressourcen befinden.
@@ -55,6 +56,7 @@ Die gekürzten Protokolle, die bereits in die Datenbank geschrieben sind, werden
 |===
 
 
+[[backup-schedules-for-database-plug-ins]]
 == Backup-Pläne für Datenbank-Plug-ins
 
 Die Sicherungshäufigkeit (Planungstyp) wird in den Richtlinien angegeben. In der Konfiguration der Ressourcengruppe wird ein Backup-Zeitplan angegeben. Der wichtigste Faktor bei der Ermittlung der Backup-Häufigkeit oder des Zeitplans ist die Änderungsrate für die Ressource und die Bedeutung der Daten. Sie können eine stark genutzte Ressource unter Umständen jede Stunde sichern, während Sie selten genutzte Ressourcen einmal am Tag sichern können. Weitere Faktoren sind die Bedeutung der Ressource für Ihr Unternehmen, das Service Level Agreement (SLA) und das Recovery Point Objective (RPO).
@@ -77,12 +79,14 @@ Backup-Zeitpläne (genau, wann Backups durchgeführt werden sollen) sind Teil de
 
 
 
+[[number-of-backup-jobs-needed-for-databases]]
 == Anzahl der für Datenbanken erforderlichen Backup-Jobs
 
 Zu den Faktoren, die die Anzahl der erforderlichen Backup-Jobs bestimmen, zählen die Größe der Ressource, die Anzahl der verwendeten Volumes, die Änderungsrate der Ressource und Ihr Service Level Agreement (SLA).
 
 
 
+[[backup-naming-conventions]]
 == Konventionen bei Backup-Namen
 
 Sie können entweder die standardmäßige Snapshot-Namenskonvention verwenden oder eine benutzerdefinierte Namenskonvention verwenden. Die standardmäßige Backup-Namenskonvention fügt Snapshot Namen einen Zeitstempel hinzu, der Ihnen dabei hilft, zu ermitteln, wann die Kopien erstellt wurden.
@@ -108,6 +112,7 @@ Alternativ können Sie das Snapshot-Namensformat beim Schutz von Ressourcen oder
 
 
 
+[[backup-retention-options]]
 == Optionen zur Backup-Aufbewahrung
 
 Sie können entweder die Anzahl der Tage festlegen, für die Backup-Kopien aufbewahrt werden sollen, oder die Anzahl der Backup-Kopien angeben, die aufbewahrt werden sollen, bis zu einem ONTAP von maximal 255 Kopien. Beispielsweise muss Ihr Unternehmen unter Umständen Backup-Kopien von 10 Tagen oder 130 Backup-Kopien aufbewahren.
@@ -123,6 +128,7 @@ NOTE: Für die langfristige Aufbewahrung von Backup-Kopien sollten Sie SnapVault
 
 
 
+[[how-long-to-retain-transaction-log-backups-on-the-source-storage-volume-for-exchange-server]]
 == Wie lange dauert die Speicherung von Transaktions-Log-Backups auf dem Quell-Storage Volume für Exchange Server
 
 Das SnapCenter Plug-in für Microsoft Exchange Server benötigt Transaktions-Log-Backups, um minutengenaue Restore-Vorgänge durchzuführen, bei denen Ihre Datenbank zwischen zwei vollständigen Backups wiederhergestellt wird.

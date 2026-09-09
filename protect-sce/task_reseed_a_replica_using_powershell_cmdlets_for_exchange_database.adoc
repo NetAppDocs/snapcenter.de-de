@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: Sie können PowerShell Cmdlets verwenden, um eine fehlerhafte Kopie wiederherzustellen, indem Sie entweder die aktuellste Kopie auf demselben Host oder die aktuellste Kopie von einem alternativen Host verwenden. 
 ---
-= Erneutes Seeding mit PowerShell cmdlets für Exchange Datenbank
+= Eine Exchange-Replika mithilfe von SnapCenter PowerShell Cmdlets neu initialisieren
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

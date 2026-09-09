@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore, recover, CLI 
 summary: Der Restore- und Recovery-Workflow umfasst Planung, Durchführung von Restore- und Recovery-Vorgängen und Monitoring der betrieblichen Vorgänge. 
 ---
-= Stellen Sie Oracle Datenbanken mithilfe von UNIX-Befehlen wieder her
+= Wiederherstellung und Wiederherstellung von Oracle-Datenbanken mit UNIX-Befehlen in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

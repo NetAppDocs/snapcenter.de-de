@@ -19,6 +19,7 @@ In diesem Fall können LUNs VMware RDM-Festplatten und die dem Gast zugeordneten
 
 
 
+[[lun-and-vmdk-requirements]]
 == LUN- und VMDK-Anforderungen
 
 Sie können optional dedizierte LUNs oder VMDKs für eine optimale Performance und ein optimales Management für die folgenden Datenbanken verwenden:
@@ -36,6 +37,7 @@ Für das Log-Verzeichnis sollten Sie eine separate LUN oder VMDK erstellen, dami
 
 
 
+[[lun-and-vmdk-sample-layouts]]
 == Beispiellayouts für LUN und VMDK
 
 Die folgende Grafik zeigt, wie Sie das Storage-Layout für große Datenbanken auf LUNs konfigurieren können:

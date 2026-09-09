@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for MySQL 
 summary: Bevor Sie SnapCenter zum Sichern von MySQL-Datenbankressourcen verwenden, müssen Sie eine Sicherungsrichtlinie für die Ressource oder Ressourcengruppe erstellen, die Sie sichern möchten. Eine Backup-Richtlinie ist eine Reihe von Regeln, die das Managen, Planen und Aufbewahren von Backups regeln. 
 ---
-= Backup-Richtlinien für MySQL erstellen
+= Sicherungsrichtlinien für MySQL mit SnapCenter erstellen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

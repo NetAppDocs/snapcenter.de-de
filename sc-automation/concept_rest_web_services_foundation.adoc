@@ -4,7 +4,7 @@ permalink: sc-automation/concept_rest_web_services_foundation.html
 keywords: uri endpoints, http messages, json format 
 summary: REST ist ein Stil für die Erstellung verteilter Web-Anwendungen. Bei der Anwendung auf das Design einer Web-Services-API werden eine Reihe von Technologien und Best Practices erstellt, um serverbasierte Ressourcen freizulegen und deren Status zu verwalten. Die flexible Grundlage für das Management von SnapCenter bildet mit Mainstream-Protokollen und -Standards. 
 ---
-= REST-Web-Services-Grundlage
+= REST-Webdienste-Grundlage für SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,24 +15,28 @@ Representational State Transfer (REST) ist ein Stil für die Erstellung von vert
 
 
 
+[[resources-and-state-representation]]
 == Ressourcen- und Zustandsdarstellung
 
 Ressourcen sind die Grundkomponenten eines webbasierten Systems. Beim Erstellen einer ANWENDUNG FÜR REST-Webservices umfassen die frühen Designaufgaben Folgendes:
 
 
 
+[[identification-of-system-or-server-based-resources]]
 === Identifizierung von System- oder serverbasierten Ressourcen
 
 Jedes System nutzt und verwaltet Ressourcen. Eine Ressource kann eine Datei-, Geschäftstransaktion-, Prozess- oder Verwaltungseinheit sein. Eine der ersten Aufgaben bei der Entwicklung einer auf REST-Webservices basierenden Applikation ist die Identifizierung der Ressourcen.
 
 
 
+[[definition-of-resource-states-and-associated-state-operations]]
 === Definition von Ressourcenstatus und zugehörigen Statusoperationen
 
 Die Ressourcen befinden sich immer in einer endlichen Anzahl von Staaten. Die Zustände sowie die damit verbundenen Operationen, die zur Auswirkung der Statusänderungen verwendet werden, sollten klar definiert werden.
 
 
 
+[[uri-endpoints]]
 == URI-Endpunkte
 
 Jede REST-Ressource muss definiert und über ein gut definiertes Adressierungssystem verfügbar gemacht werden. Die Endpunkte, in denen die Ressourcen gefunden und identifiziert werden, verwenden einen einheitlichen Resource Identifier (URI).
@@ -41,6 +45,7 @@ Der URI bietet ein allgemeines Framework zum Erstellen eines eindeutigen Namens 
 
 
 
+[[http-messages]]
 == HTTP-Meldungen
 
 Hypertext Transfer Protocol (HTTP) ist das Protokoll, das vom Webservice-Client und -Server zum Austausch von Anforderungs- und Antwortmeldungen zu den Ressourcen verwendet wird.
@@ -49,6 +54,7 @@ Im Rahmen der Entwicklung einer Web-Services-Anwendung werden HTTP-Methoden den 
 
 
 
+[[json-formatting]]
 == JSON-Formatierung
 
 Während Informationen auf verschiedene Weise zwischen einem Web-Services-Client und Server strukturiert und übertragen werden können, ist die beliebteste Option JavaScript Object Notation (JSON).

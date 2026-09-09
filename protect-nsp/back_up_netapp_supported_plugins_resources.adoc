@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup 
 summary: Der Backup-Workflow umfasst die Planung, die Ermittlung der Backup-Ressourcen, das Management von Backup-Richtlinien, das Erstellen von Ressourcengruppen und das Anhängen von Richtlinien, das Erstellen von Backups und das Monitoring der Betriebsprozesse. 
 ---
-= Backup von von NetApp unterstützten Plug-ins-Ressourcen
+= SnapCenter Backup-Workflow für NetApp unterstützte Plug-in-Ressourcen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

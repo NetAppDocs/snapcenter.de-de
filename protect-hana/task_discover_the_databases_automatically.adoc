@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials 
 summary: Ressourcen sind SAP HANA Datenbanken und nicht-Daten-Volumes auf dem Linux-Host, die von SnapCenter gemanagt werden. Diese Ressourcen können Ressourcengruppen hinzugefügt werden, um Datensicherungsvorgänge durchzuführen, nachdem die verfügbaren SAP HANA Datenbanken ermittelt wurden. 
 ---
-= Automatische Erkennung von Datenbanken
+= SAP HANA-Datenbanken werden in SnapCenter automatisch erkannt
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

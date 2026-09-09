@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for IBM Db2 
 summary: 'SnapCenter unterstützt Volume-basierte SnapRestore \(VBSR\)-, Single File SnapRestore- und Connect-and-Copy-Wiederherstellungsarten für automatisch erkannte IBM DB2-Datenbanken.' 
 ---
-= Arten von Wiederherstellungsvorgängen für automatisch ermittelte IBM DB2
+= Wiederherstellungstypen für automatisch erkannte IBM Db2-Datenbanken in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ Das SnapCenter Plug-in für IBM DB2 unterstützt Single File SnapRestore und Wie
 
 
 
+[[single-file-snaprestore-is-performed-in-nfs-environments-for-the-following-scenarios]]
 == Single File SnapRestore wird in NFS-Umgebungen für die folgenden Szenarien durchgeführt:
 
 * Wenn nur die Option *Complete Resource* ausgewählt ist
@@ -23,6 +24,7 @@ Das SnapCenter Plug-in für IBM DB2 unterstützt Single File SnapRestore und Wie
 
 
 
+[[single-file-snaprestore-is-performed-in-san-environments-for-the-following-scenarios]]
 == Single File SnapRestore wird in SAN-Umgebungen für die folgenden Szenarien durchgeführt:
 
 * Wenn nur die Option *Complete Resource* ausgewählt ist

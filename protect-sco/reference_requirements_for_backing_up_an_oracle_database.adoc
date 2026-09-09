@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: requirements, prerequisites 
 summary: Bevor Sie eine Oracle-Datenbank sichern, sollten Sie sicherstellen, dass die Voraussetzungen abgeschlossen sind. 
 ---
-= Anforderungen für das Backup einer Oracle-Datenbank
+= Anforderungen für die Sicherung einer Oracle Datenbank mit SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

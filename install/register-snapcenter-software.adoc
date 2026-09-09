@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: register, new customer, NetApp account, enable support 
 summary: Falls Sie noch kein NetApp Konto haben, sollten Sie das Produkt registrieren, um den Support zu aktivieren. 
 ---
-= Registrieren Sie SnapCenter
+= SnapCenter registrieren, um Support zu aktivieren
 :allow-uri-read: 
 
 

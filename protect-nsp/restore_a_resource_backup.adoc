@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore 
 summary: Mit SnapCenter können Sie Ressourcen wiederherstellen. Die Funktionen der Restore-Vorgänge hängen vom verwendeten Plug-in ab. 
 ---
-= Wiederherstellen eines Ressourcenbackups
+= Eine Ressourcensicherung in SnapCenter wiederherstellen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

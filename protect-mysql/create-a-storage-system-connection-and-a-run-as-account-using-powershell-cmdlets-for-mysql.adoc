@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for MySQL 
 summary: 'Sie müssen eine Storage Virtual Machine (SVM)-Verbindung und Zugangsdaten erstellen, bevor Sie PowerShell Cmdlets zum Backup, zur Wiederherstellung oder zum Klonen von MySQL-Datenbanken verwenden.' 
 ---
-= Erstellen Sie eine Storage-Systemverbindung und Zugangsdaten mit PowerShell Cmdlets für MySQL
+= Eine Verbindung zum Speichersystem und Anmeldeinformationen werden mit SnapCenter PowerShell Cmdlets für MySQL erstellt.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

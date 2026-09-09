@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create policies, sql, backup policies 
 summary: Erstellen Sie eine Sicherungsrichtlinie für die Ressource oder Ressourcengruppe, die Sie sichern möchten. 
 ---
-= Erstellen von Backup-Richtlinien für SQL Server-Datenbanken
+= Sicherungsrichtlinien für SQL Server Datenbanken in SnapCenter erstellen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

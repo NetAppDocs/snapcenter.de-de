@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: view backups, view clones 
 summary: Wenn Sie die Erstellung von Backups oder Klonen einer Ressource vorbereiten, können Sie eine grafische Darstellung aller Backups und Klone auf dem primären und sekundären Storage anzeigen. Auf der Seite Topology sehen Sie alle Backups und Klone, die für die ausgewählte Ressource oder Ressourcengruppe zur Verfügung stehen. Sie können die Details zu diesen Backups und Klonen anzeigen und diese dann zur Durchführung von Datensicherungsvorgängen auswählen. 
 ---
-= Sehen Sie sich zugehörige Backups und Klone auf der Seite Topologie an
+= Zugehörige Backups und Klone werden auf der SnapCenter Topologieseite für Windows angezeigt.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

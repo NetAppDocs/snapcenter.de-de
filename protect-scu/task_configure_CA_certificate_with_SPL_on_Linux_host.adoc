@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter, SPL, Plug-in loader service, CA certificate, certificate 
 summary: Konfigurieren Sie das CA-Zertifikat mit dem SnapCenter Plug-in Loader Service auf Linux Host 
 ---
-= Konfigurieren Sie das CA-Zertifikat mit dem SnapCenter Plug-in Loader (SPL)-Service auf dem Linux-Host
+= Konfigurieren eines CA-Zertifikats mit dem SnapCenter Plug-in Loader Dienst auf einem Linux-Host
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -18,6 +18,7 @@ IMPORTANT: SPL verwendet die Datei 'keystore.jks', die sich bei ‘/var/opt/snap
 
 
 
+[[manage-password-for-spl-keystore-and-alias-of-the-ca-signed-key-pair-in-use]]
 == Passwort für SPL-Schlüsselspeicher und Alias des verwendeten CA-signierten Schlüsselpaares verwalten
 
 *Schritte*
@@ -43,6 +44,7 @@ NOTE: Passwort für SPL-Schlüsselspeicher und für alle zugeordneten Alias-Pass
 
 
 
+[[configure-root-or-intermediate-certificates-to-spl-trust-store]]
 == Konfigurieren Sie Root- oder Zwischenzertifikate in SPL Trust-Store
 
 Sie sollten die Stammzertifikate oder Zwischenzertifikate ohne privaten Schlüssel in den SPL Trust-Store konfigurieren.
@@ -65,6 +67,7 @@ NOTE: Sie sollten das Root-CA-Zertifikat und anschließend die Zwischenzertifizi
 
 
 
+[[configure-ca-signed-key-pair-to-spl-trust-store]]
 == Konfigurieren Sie das CA-signierte Schlüsselpaar für SPL Trust-Store
 
 Sie sollten das CA-signierte Schlüsselpaar für den SPL Trust-Store konfigurieren.
@@ -101,6 +104,7 @@ Diesen Wert mit dem Schlüssel SPL_CERTIFICATE_ALIAS aktualisieren.
 
 
 
+[[configure-certificate-revocation-list-crl-for-spl]]
 == Konfigurieren der Zertifikatsperrliste (CRL) für SPL
 
 Sie sollten die CRL für SPL konfigurieren

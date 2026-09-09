@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: monitor, install, snapCenter plug-in for IBM Db2 
 summary: Sie können den Fortschritt der Installation des SnapCenter-Plug-in-Pakets über die Seite Jobs überwachen. Möglicherweise möchten Sie den Installationsfortschritt prüfen, um festzustellen, wann die Installation abgeschlossen ist oder ob ein Problem vorliegt. 
 ---
-= Überwachen Sie den Status der Installation von Plug-in für IBM DB2
+= Den Installationsstatus des SnapCenter Plug-in für IBM Db2 überwachen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

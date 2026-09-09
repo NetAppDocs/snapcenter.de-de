@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for mysql 
 summary: Bei der Vorbereitung von Backups und Klonen einer Ressource ist es unter Umständen hilfreich, eine grafische Darstellung aller Backups und Klone auf dem primären und sekundären Storage anzuzeigen. 
 ---
-= Zeigen Sie MySQL-Backups und -Klone auf der Seite Topologie an
+= MySQL-Backups und -Klone werden auf der SnapCenter Topologieseite angezeigt.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

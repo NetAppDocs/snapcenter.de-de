@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for IBM Db2 
 summary: Das Sichern einer Datenbank umfasst die Einrichtung einer Verbindung mit dem SnapCenter-Server, das Hinzufügen von Ressourcen, das Hinzufügen einer Richtlinie, das Erstellen einer Backup-Ressourcengruppen und das Sichern von Ressourcen. 
 ---
-= Backup von DB2-Datenbanken
+= IBM Db2 Datenbanken mit SnapCenter sichern
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

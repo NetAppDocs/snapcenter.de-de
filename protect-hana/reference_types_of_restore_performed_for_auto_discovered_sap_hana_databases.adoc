@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Databases 
 summary: 'SnapCenter unterstützt Volume-basierte SnapRestore \(VBSR\), Single File SnapRestore und Connect-and-Copy-Restore-Typen für automatisch erkannte SAP HANA Datenbanken.' 
 ---
-= Arten von Wiederherstellungsvorgängen für automatisch erkannte SAP HANA-Datenbanken
+= Wiederherstellungsvorgänge für automatisch erkannte SAP HANA-Datenbanken in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ SnapCenter unterstützt Volume-basierte SnapRestore (VBSR), Single File SnapRest
 
 
 
+[[volume-based-snaprestore-vbsr-is-performed-in-nfs-environments-for-the-following-scenarios]]
 == Volume-basiertes SnapRestore (VBSR) wird in NFS-Umgebungen für die folgenden Szenarien ausgeführt:
 
 * Wenn das für die Wiederherstellung ausgewählte Backup auf Versionen vor SnapCenter 4.3 durchgeführt wird, und nur, wenn die Option **Complete Resource**ausgewählt ist
@@ -23,6 +24,7 @@ SnapCenter unterstützt Volume-basierte SnapRestore (VBSR), Single File SnapRest
 
 
 
+[[single-file-snaprestore-is-performed-in-nfs-environments-for-the-following-scenarios]]
 == Single File SnapRestore wird in NFS-Umgebungen für die folgenden Szenarien durchgeführt:
 
 * Wenn die für die Wiederherstellung ausgewählte Sicherung in SnapCenter 4.3 erstellt wird und nur die Option *vollständige Ressource* ausgewählt ist
@@ -32,6 +34,7 @@ SnapCenter unterstützt Volume-basierte SnapRestore (VBSR), Single File SnapRest
 
 
 
+[[single-file-snaprestore-is-performed-in-san-environments-for-the-following-scenarios]]
 == Single File SnapRestore wird in SAN-Umgebungen für die folgenden Szenarien durchgeführt:
 
 * Wenn Backups auf Versionen vor SnapCenter 4.3 erstellt werden und nur dann, wenn die Option *Complete Resource* ausgewählt ist
@@ -41,6 +44,7 @@ SnapCenter unterstützt Volume-basierte SnapRestore (VBSR), Single File SnapRest
 
 
 
+[[connect-and-copy-based-restore-is-performed-in-san-environments-for-the-following-scenario]]
 == Connect-and-Copy-Based Restore wird in SAN-Umgebungen für das folgende Szenario durchgeführt:
 
 * Für MDC, wenn die für die Wiederherstellung ausgewählte Sicherung in SnapCenter 4.3 erstellt wird, und die Option *Tenant Database* ausgewählt ist

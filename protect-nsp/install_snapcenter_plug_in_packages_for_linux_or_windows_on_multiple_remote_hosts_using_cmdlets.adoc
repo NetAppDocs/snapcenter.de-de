@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: install, snapcenter 
 summary: 'Sie können die SnapCenter-Plug-in-Pakete für Linux oder Windows gleichzeitig auf mehreren Hosts installieren, indem Sie das Cmdlet "Install-SmHostPackage PowerShell" verwenden.' 
 ---
-= Installieren Sie mithilfe von Cmdlets SnapCenter-Plug-in-Pakete für Linux, Windows oder AIX auf mehreren Remote-Hosts
+= Installation von SnapCenter Plug-in-Paketen auf mehreren Remote-Hosts mithilfe von Cmdlets
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

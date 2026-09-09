@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clone strategy 
 summary: Wenn Sie eine Klonstrategie definieren, können Sie Ihre Datenbank erfolgreich klonen. 
 ---
-= Definieren Sie eine Klonstrategie für SQL Server
+= Klonstrategie für SQL Server in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -19,6 +19,7 @@ Wenn Sie eine Klonstrategie definieren, können Sie Ihre Datenbank erfolgreich k
 
 
 
+[[limitations-of-clone-operations]]
 == Einschränkungen von Klonvorgängen
 
 Die Einschränkungen von Klonvorgängen sollten Sie beachten, bevor Sie die Datenbanken klonen.
@@ -31,6 +32,7 @@ Die Einschränkungen von Klonvorgängen sollten Sie beachten, bevor Sie die Date
 
 
 
+[[types-of-clone-operations]]
 == Typen von Klonvorgängen
 
 Sie können SnapCenter verwenden, um ein Backup einer SQL Server Datenbank oder eine Produktionsdatenbank zu klonen.

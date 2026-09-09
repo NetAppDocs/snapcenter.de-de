@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Active Directory 
 summary: Sie sollten das Active Directory beim SnapCenter-Server registrieren, um Hosts, Benutzer und Gruppen aus mehreren nicht vertrauenswürdigen Active Directory-Domänen zu verwalten. 
 ---
-= Registrieren Sie nicht vertrauenswürdige Active Directory-Domänen
+= Nicht vertrauenswürdige Active Directory-Domänen bei SnapCenter registrieren
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

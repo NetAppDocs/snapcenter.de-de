@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: mfa, authentication, multifactor authentication 
 summary: Sie können Rest-API-, PowerShell- und SCCLI-Schnittstellen zum Management von MFA verwenden. 
 ---
-= Multi-Faktor-Authentifizierung (MFA) mit Rest-API, PowerShell und SCCLI managen
+= MFA in SnapCenter mit REST API, PowerShell und SCCLI verwalten
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ Die MFA-Anmeldung wird von Browser, REST-API, PowerShell und SCCLI unterstützt.
 
 
 
+[[setup-ad-fs-as-oauthoidc]]
 == Richten Sie AD FS als OAuth/OIDC ein
 
 *Konfigurieren Sie AD FS mit dem Windows GUI Wizard*
@@ -95,6 +96,7 @@ Konfigurieren Sie OpenID Connect so, dass ein Benutzername als Schadensfälle an
 
 
 
+[[create-application-group-using-powershell-commands]]
 == Erstellen Sie eine Anwendungsgruppe mit PowerShell Befehlen
 
 Sie können die Anwendungsgruppe und die Web-API erstellen und den Umfang und die Ansprüche mit PowerShell Befehlen hinzufügen. Diese Befehle sind im automatisierten Skriptformat verfügbar. Weitere Informationen finden Sie im <link to KB article>.
@@ -174,6 +176,7 @@ Sie können die Anwendungsgruppe und die Web-API erstellen und den Umfang und di
 
 
 
+[[update-access-token-expiry-time]]
 == Ablaufdatum des Zugriffstoken aktualisieren
 
 Sie können die Ablaufzeit des Zugriffstoken mit dem PowerShell Befehl aktualisieren.
@@ -193,6 +196,7 @@ Verwenden Sie den folgenden Befehl im AD FS-Server, um die Ablaufzeit des Zugrif
 
 
 
+[[get-the-bearer-token-from-ad-fs]]
 == Holen Sie sich das Inhabertoken von AD FS
 
 Sie sollten die unten genannten Parameter in jedem REST-Client (wie Postman) ausfüllen und Sie werden aufgefordert, die Benutzeranmeldeinformationen einzugeben. Zusätzlich sollten Sie die zweite-Faktor-Authentifizierung eingeben (etwas, das Sie haben und etwas, das Sie sind), um den Träger-Token zu erhalten.

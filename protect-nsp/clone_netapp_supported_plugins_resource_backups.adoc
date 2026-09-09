@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clone, NetApp supported plug-ins 
 summary: Der Klon-Workflow umfasst die Durchführung des Klonvorgangs und die Überwachung des Vorgangs. 
 ---
-= Von NetApp unterstütztes Klon-Plug-in-Ressourcen-Backups
+= SnapCenter Klon-Workflow für NetApp unterstützte Plug-in-Ressourcensicherungen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

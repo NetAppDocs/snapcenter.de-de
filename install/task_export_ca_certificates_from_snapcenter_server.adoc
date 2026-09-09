@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: security,authentication, export CA certificates 
 summary: Sie sollten die CA-Zertifikate vom SnapCenter-Server auf die Plug-in-Hosts exportieren. 
 ---
-= Exportieren Sie Zertifikate der Zertifizierungsstelle (CA) vom SnapCenter-Server
+= CA-Zertifikate vom SnapCenter Server exportieren
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

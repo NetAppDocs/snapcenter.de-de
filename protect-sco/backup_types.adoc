@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup type, preferred nodes, catalog backups, schedules, backup name format, retention, verification 
 summary: Für Oracle-Datenbanken unterstützte Backup-Typen 
 ---
-= Arten von Backups, die für Oracle-Datenbanken unterstützt werden
+= Unterstützte Backup-Typen für Oracle-Datenbanken in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ Der Sicherungstyp gibt den Sicherungstyp an, den Sie erstellen möchten. SnapCen
 
 
 
+[[online-backup]]
 == Online-Backup
 
 Ein Backup, das erstellt wird, wenn sich die Datenbank im Online-Status befindet, wird als Online-Backup bezeichnet. Auch als Hot Backup bezeichnet, ermöglicht ein Online-Backup die Erstellung eines Backups der Datenbank, ohne dass es heruntergefahren werden muss.
@@ -28,6 +29,7 @@ Im Rahmen des Online-Backups können Sie eine Sicherung der folgenden Dateien er
 
 
 
+[[offline-backup]]
 == Offline-Backup
 
 Ein Backup, das erstellt wird, wenn sich die Datenbank entweder im gemounteten oder Herunterfahrzustand befindet, wird als Offline-Backup bezeichnet. Ein Offline-Backup wird auch als Cold Backup bezeichnet. Sie können nur Datendateien und Steuerdateien in Offline-Backups einbeziehen. Sie können entweder einen Offline-Mount- oder Offline-Shutdown-Backup erstellen.

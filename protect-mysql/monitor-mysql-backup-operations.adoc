@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Server 
 summary: Sie können den Fortschritt der verschiedenen Backup-Vorgänge überwachen, indem Sie die Seite SnapCenter-Jobs verwenden. Sie können den Fortschritt überprüfen, um festzustellen, wann er abgeschlossen ist oder ob ein Problem vorliegt. 
 ---
-= Monitoring von MySQL Backup-Vorgängen
+= Überwachung von MySQL Sicherungsvorgängen in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -49,6 +49,7 @@ Die Schaltfläche *Protokolle anzeigen* zeigt die detaillierten Protokolle für 
 
 
 
+[[monitor-data-protection-operations-on-mysql-instances-in-the-activity-pane]]
 == Überwachen Sie Datensicherungsvorgänge bei MySQL Instanzen im Teilfenster „Aktivität“
 
 Im Aktivitätsbereich werden die fünf zuletzt durchgeführten Operationen angezeigt. Der Bereich „Aktivität“ wird auch angezeigt, wenn der Vorgang initiiert wurde und der Status des Vorgangs.

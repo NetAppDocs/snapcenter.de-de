@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for mysql 
 summary: Mit SnapCenter können Daten von einem oder mehreren Backups wiederhergestellt werden. 
 ---
-= Stellen Sie ein automatisch ermittelte Datenbank-Backup wieder her
+= Wiederherstellen und Wiederherstellen einer automatisch erkannten MySQL Datenbanksicherung
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

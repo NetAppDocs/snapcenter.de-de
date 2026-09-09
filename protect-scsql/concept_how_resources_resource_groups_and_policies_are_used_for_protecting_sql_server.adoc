@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SQL Server 
 summary: Bevor Sie SnapCenter verwenden, ist es hilfreich, grundlegende Konzepte im Zusammenhang mit Backup-, Klon- und Restore-Vorgängen zu verstehen, die durchgeführt werden sollen. Sie interagieren mit Ressourcen, Ressourcengruppen und Richtlinien für verschiedene Vorgänge. 
 ---
-= Wie Ressourcen, Ressourcengruppen und Richtlinien zum Schutz von SQL Server verwendet werden
+= Wie SnapCenter Ressourcen, Ressourcengruppen und Richtlinien für SQL Server verwendet
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

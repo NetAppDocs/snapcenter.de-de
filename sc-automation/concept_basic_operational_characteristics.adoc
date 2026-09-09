@@ -4,7 +4,7 @@ permalink: sc-automation/concept_basic_operational_characteristics.html
 keywords: request and response, object identifiers, synchronous, asynchronous 
 summary: IM RUHEZUSTAND werden einheitliche Technologien und Best Practices erstellt, jedoch können die Details jeder API je nach dem verfügbaren Design variieren. 
 ---
-= Grundlegende betriebliche Eigenschaften
+= Grundlegende Funktionsweise der SnapCenter REST API
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ IM RUHEZUSTAND werden einheitliche Technologien und Best Practices erstellt, jed
 
 
 
+[[request-and-response-api-transaction]]
 == API-Transaktion bei Anfrage und Reaktion
 
 Jeder REST-API-Aufruf wird als HTTP-Anfrage an das SnapCenter-Serversystem durchgeführt, das eine entsprechende Antwort auf den Client generiert. Dieses Anforderungs- und Antwortpaar wird als API-Transaktion betrachtet.
@@ -23,6 +24,7 @@ Bevor Sie die API verwenden, sollten Sie mit den verfügbaren Eingabevariablen z
 
 
 
+[[support-for-crud-operations]]
 == Unterstützung von CRUD-Vorgängen
 
 Auf alle über das SnapCenter REST API verfügbaren Ressourcen kann basierend auf dem CRUD-Modell zugegriffen werden:
@@ -37,6 +39,7 @@ Für einige der Ressourcen wird nur ein Teil der Vorgänge unterstützt.
 
 
 
+[[object-identifiers]]
 == Objektkennungen
 
 Jeder Ressourceninstanz oder jedem Objekt wird eine eindeutige Kennung zugewiesen, wenn sie erstellt wird. In den meisten Fällen ist die Kennung eine 128-Bit-UUID. Diese Kennungen sind global eindeutig in einem bestimmten SnapCenter-Server.
@@ -48,18 +51,21 @@ IMPORTANT: Der Inhalt und die interne Struktur der Objektkennungen können jeder
 
 
 
+[[object-instances-and-collections]]
 == Objektinstanzen und -Sammlungen
 
 Je nach Ressourcenpfad und HTTP-Methode kann ein API-Aufruf auf eine bestimmte Objektinstanz oder eine Sammlung von Objekten angewendet werden.
 
 
 
+[[synchronous-and-asynchronous-operations]]
 == Synchroner und asynchroner Betrieb
 
 SnapCenter führt eine HTTP-Anforderung durch, die von einem Client entweder synchron oder asynchron empfangen wird.
 
 
 
+[[synchronous-processing]]
 === Synchrone Verarbeitung
 
 SnapCenter führt die Anfrage sofort aus und antwortet mit einem HTTP-Statuscode von 200 oder 201, wenn er erfolgreich ist.
@@ -68,6 +74,7 @@ Jede Anfrage, die die Methode GET verwendet, wird immer synchron ausgeführt. Zu
 
 
 
+[[asynchronous-processing]]
 === Asynchrone Verarbeitung
 
 Wenn eine asynchrone Anforderung gültig ist, erstellt SnapCenter eine Hintergrundaufgabe zur Verarbeitung der Anforderung und ein Jobobjekt zum Anker der Aufgabe. Der HTTP-Statuscode 202 wird zusammen mit dem Jobobjekt an den Anrufer zurückgegeben. Sie sollten den Status des Jobs abrufen, um den Erfolg oder den Fehler zu ermitteln.
@@ -76,18 +83,21 @@ Anfragen, die DIE POST- und LÖSCHMETHODEN verwenden, werden asynchron ausgefüh
 
 
 
+[[security]]
 == Sicherheit
 
 Die Sicherheit der REST-API basiert in erster Linie auf den vorhandenen Sicherheitsfunktionen von SnapCenter. Die folgende Sicherheit wird von der API verwendet:
 
 
 
+[[transport-layer-security]]
 === Sicherheit In Transportschicht
 
 Der gesamte über das Netzwerk zwischen dem SnapCenter-Server und dem Client gesendete Datenverkehr wird basierend auf den SnapCenter-Konfigurationseinstellungen in der Regel mit TLS verschlüsselt.
 
 
 
+[[http-authentication]]
 === HTTP-Authentifizierung
 
 Auf HTTP-Ebene wird die grundlegende Authentifizierung für die API-Transaktionen verwendet. Jeder Anforderung wird ein HTTP-Header mit dem Benutzernamen und Passwort in einem Base64-String hinzugefügt.

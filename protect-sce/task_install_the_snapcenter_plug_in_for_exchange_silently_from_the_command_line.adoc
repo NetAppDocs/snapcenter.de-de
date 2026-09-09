@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: Sie sollten Plug-in für Exchange über die Benutzeroberfläche von SnapCenter installieren. Wenn Sie jedoch aus irgendeinem Grund nicht in der Lage sind, das Installationsprogramm Plug-in for Exchange unbeaufsichtigt im Silent-Modus von der Windows-Befehlszeile aus auszuführen. 
 ---
-= Installieren Sie das SnapCenter Plug-in für Exchange im Hintergrund über die Befehlszeile
+= Das SnapCenter Plug-in für Exchange über die Befehlszeile installieren
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: install, snapcenter software, install wizard, features enabled 
 summary: Sie können die ausführbare Datei für das SnapCenter-Server-Installationsprogramm ausführen, um den SnapCenter-Server zu installieren. 
 ---
-= Installieren Sie den SnapCenter-Server auf dem Windows-Host
+= Der SnapCenter Server wird auf einem Windows Host installiert
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -66,6 +66,7 @@ Protokolldateien werden immer im Ordner %temp% des Admin-Benutzers aufgeführt (
 
 
 
+[[features-enabled-on-windows-host-during-installation]]
 == Während der Installation auf dem Windows-Host aktivierte Funktionen
 
 Das SnapCenter-Serverinstallationsprogramm aktiviert die Windows-Funktionen und -Rollen auf Ihrem Windows-Host während der Installation. Diese könnten für die Fehlerbehebung und Wartung des Hostsystems von Interesse sein.

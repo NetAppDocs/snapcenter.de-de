@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Manage backups 
 summary: Sie können Backups umbenennen und löschen. Sie können auch mehrere Backups gleichzeitig löschen. 
 ---
-= Backup-Management
+= Backups in SnapCenter verwalten
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ Sie können Backups umbenennen und löschen. Sie können auch mehrere Backups gl
 
 
 
+[[rename-backups]]
 == Backups umbenennen
 
 Sie können Backups umbenennen, wenn Sie einen besseren Namen angeben möchten, um die Suchfähigkeit zu verbessern.
@@ -40,6 +41,7 @@ Wenn Sie die Backups von Oracle-Datenbanken mithilfe von Oracle Recovery Manager
 
 
 
+[[delete-backups]]
 == Backups löschen
 
 Backups können gelöscht werden, wenn das Backup für andere Datensicherungsvorgänge nicht mehr benötigt wird.
@@ -79,6 +81,7 @@ NOTE: Wenn Sie einige veraltete Datenbank-Backups in SnapCenter haben, die keine
 
 
 
+[[remove-protection]]
 == Schutz entfernen
 
 Durch Entfernen des Schutzes werden alle Backups gelöscht und alle Richtlinien entfernt. Bevor Sie den Schutz entfernen, sollten Sie sicherstellen, dass die Backups nicht gemountet werden und dass keine Klone mit dem Backup verknüpft sind.

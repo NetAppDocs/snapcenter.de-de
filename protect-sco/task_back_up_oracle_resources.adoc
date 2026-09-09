@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup, Oracle database, policy, schedule, verification, resources 
 summary: Wenn eine Ressource nicht zu einer Ressourcengruppe gehört, können Sie die Ressource auf der Seite Ressourcen sichern. 
 ---
-= Oracle-Ressourcen sichern
+= Oracle-Ressourcen in SnapCenter sichern
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

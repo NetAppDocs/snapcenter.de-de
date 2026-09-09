@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Oracle Databases 
 summary: Bei der Vorbereitung von Backups und Klonen einer Ressource ist es unter Umständen hilfreich, eine grafische Darstellung aller Backups und Klone auf dem primären und sekundären Storage anzuzeigen. 
 ---
-= Sehen Sie sich Backups und Klone von Oracle Datenbanken auf der Seite Topologie an
+= Oracle Datenbank-Backups und -Klone auf der SnapCenter Topologieseite anzeigen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

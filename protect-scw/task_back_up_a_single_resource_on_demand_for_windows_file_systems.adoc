@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backing up 
 summary: Wenn sich eine Ressource nicht in einer Ressourcengruppe befindet, können Sie die Ressource On Demand auf der Seite Ressourcen sichern. 
 ---
-= Bedarfsgerechtes Backup für eine einzelne Ressource für Windows File-Systeme
+= Eine Windows-Dateisystemressource bei Bedarf in SnapCenter sichern
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

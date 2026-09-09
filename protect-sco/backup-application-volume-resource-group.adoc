@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: application volume, resource group, back up, database 
 summary: Sie können ein Backup der Ressourcengruppe erstellen, die nur Applikations-Volumes oder eine Mischung aus Applikations-Volumes und Datenbank enthält. 
 ---
-= Sichern Sie die Ressourcengruppe Anwendungsvolumes
+= Sichern einer Anwendungsvolumes Ressourcengruppe in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

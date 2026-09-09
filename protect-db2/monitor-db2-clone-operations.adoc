@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: monitor, IBM Db2 database, clone operations 
 summary: Sie können den Status von SnapCenter-Klonvorgängen mithilfe der Seite Jobs überwachen. Sie können den Fortschritt eines Vorgangs überprüfen, um zu bestimmen, wann dieser abgeschlossen ist oder ob ein Problem vorliegt. 
 ---
-= Überwachung von IBM DB2-Klonvorgängen
+= IBM Db2 Klonvorgänge in SnapCenter überwachen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

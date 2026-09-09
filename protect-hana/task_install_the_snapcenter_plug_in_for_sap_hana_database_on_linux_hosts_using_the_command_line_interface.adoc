@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: install, SnapCenter Plug-in for SAP HANA Database 
 summary: 'Sie sollten das SnapCenter-Plug-in für SAP HANA-Datenbank über die SnapCenter-Benutzeroberfläche installieren. Wenn Ihre Umgebung die Remote-Installation des Plug-ins über die SnapCenter-Benutzeroberfläche nicht zulässt, können Sie das Plug-in für SAP HANA-Datenbank entweder im Konsolenmodus oder im Silent-Modus installieren, indem Sie die Befehlszeilenoberfläche (CLI1) verwenden.' 
 ---
-= Installieren Sie das SnapCenter-Plug-in für SAP HANA-Datenbanken auf Linux-Hosts über die Befehlszeilenschnittstelle
+= Das SnapCenter Plug-in für SAP HANA Database auf Linux-Hosts mithilfe der CLI installieren
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Bevor Sie eine Oracle-Datenbank wiederherstellen, sollten Sie sicherstellen, dass die Voraussetzungen abgeschlossen sind. 
 ---
-= Anforderungen für die Wiederherstellung einer Oracle-Datenbank
+= SnapCenter Anforderungen für die Wiederherstellung einer Oracle-Datenbank
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

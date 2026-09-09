@@ -17,6 +17,7 @@ In den folgenden Abschnitten wird der Prozess beschrieben, den SnapCenter zur Er
 
 
 
+[[for-oracle-versions-11g-to-12cr1]]
 == Für Oracle-Versionen 11__g_ bis 12__c__R1
 
 .RAC-Datenbank
@@ -45,6 +46,7 @@ Wenn die Datenbank verschoben wird, sollten Sie die folgenden Schritte ausführe
 
 
 
+[[for-oracle-versions-12cr2-to-18c-19c-or-21c]]
 == Für Oracle Versionen 12cR2 bis 18c, 19c oder 21c
 
 .RAC-Datenbank

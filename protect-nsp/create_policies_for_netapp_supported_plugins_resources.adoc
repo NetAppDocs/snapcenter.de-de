@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create policies, NetApp supported plug-in 
 summary: Bevor Sie SnapCenter zum Sichern bestimmter NetApp-unterstützter Plug-in-Ressourcen verwenden, müssen Sie eine Backup-Richtlinie für die Ressource oder Ressourcengruppe erstellen, die Sie sichern möchten. 
 ---
-= Erstellen von Richtlinien für von NetApp unterstützte Plug-in-Ressourcen
+= Erstellung von SnapCenter Richtlinien für von NetApp unterstützte Plug-in-Ressourcen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

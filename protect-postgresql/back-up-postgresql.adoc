@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for PostgreSQL 
 summary: Wenn eine Ressource noch nicht zu einer Ressourcengruppe gehört, können Sie die Ressource auf der Seite Ressourcen sichern. 
 ---
-= Sichern Sie PostgreSQL
+= PostgreSQL in SnapCenter sichern
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resource, resource group, policy 
 summary: Bevor Sie SnapCenter verwenden, ist es hilfreich, grundlegende Konzepte im Zusammenhang mit Backup-, Klon- und Restore-Vorgängen zu verstehen, die durchgeführt werden sollen. 
 ---
-= Schlüsselkonzepte der Datensicherung
+= Ressourcen, Ressourcengruppen und Richtlinien in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,12 +15,14 @@ Bevor Sie SnapCenter verwenden, sollten Sie sich über die Schlüsselkonzepte f�
 
 
 
+[[resources]]
 == Ressourcen
 
 Zu den Ressourcen zählen Datenbanken, Windows Filesysteme oder Dateifreigaben, die mit SnapCenter gesichert oder geklont wurden. Je nach Umgebung können außerdem Datenbankinstanzen, SQL Server-Verfügbarkeitsgruppen, Oracle-Datenbanken, RAC-Datenbanken oder benutzerdefinierte Applikationsgruppen sein.
 
 
 
+[[resource-group]]
 == Ressourcengruppe
 
 Eine Ressourcengruppe ist eine Sammlung von Ressourcen auf einem Host oder Cluster, möglicherweise von mehreren Hosts und Clustern. Vorgänge, die für eine Ressourcengruppe ausgeführt werden, werden auf Basis des angegebenen Zeitplans auf alle zugehörigen Ressourcen angewendet. Sie können On-Demand- oder geplante Backups für einzelne Ressourcen oder Gruppen durchführen.
@@ -32,6 +34,7 @@ Verwenden Sie relevante Plug-ins, um spezifische Ressourcen zu sichern: Datenban
 
 
 
+[[policies]]
 == Richtlinien
 
 Mithilfe von Richtlinien werden die Backup-Häufigkeit, die Aufbewahrung von Kopien, Replizierung, Skripte und andere Merkmale von Datensicherungsvorgängen festgelegt.
@@ -46,18 +49,21 @@ Für Datensicherungsvorgänge können benutzerdefinierte Verordnungen und Postsk
 
 
 
+[[consistency-group-cg]]
 == Konsistenzgruppe (CG)
 
 Eine Konsistenzgruppe ist eine Sammlung von Volumes, die als eine Einheit verwaltet werden.  CGs werden zur Gewährleistung der Datenkonsistenz über Speichereinheiten und Datenträger hinweg synchronisiert.  In ONTAP bieten sie eine einfache Verwaltung und eine Schutzgarantie für eine Anwendungs-Workload, die sich über mehrere Volumes erstreckt. Erfahren Sie mehr über link:https://docs.netapp.com/us-en/ontap/consistency-groups["Konsistenzgruppen"^] .
 
 
 
+[[usage-of-prescripts-and-postscripts]]
 == Verwendung von Verordnungen und Postskripten
 
 Benutzerdefinierte Verordnungen und Postskripte können Ihre Datensicherungsaufgaben vor oder nach dem Job automatisieren. Sie können beispielsweise ein Skript hinzufügen, um Sie über Auftragsfehler oder Warnungen zu informieren. Bevor Sie sie einrichten, müssen Sie die Anforderungen für diese Skripte verstehen.
 
 
 
+[[supported-script-types]]
 === Unterstützte Skripttypen
 
 Die folgenden Skripttypen werden für Windows unterstützt:
@@ -80,6 +86,7 @@ NOTE: Zusammen mit Standard-Bash-Shell werden auch andere Shells wie sh-Shell, k
 
 
 
+[[script-path]]
 === Skriptpfad
 
 Alle Verordnungen und Postskripte, die als Teil der SnapCenter-Vorgänge auf nicht virtualisierten und nicht virtualisierten Storage-Systemen ausgeführt werden, werden auf dem Plug-in-Host ausgeführt.
@@ -98,6 +105,7 @@ NOTE: Der Skriptpfad wird zum Zeitpunkt der Ausführung validiert.
 
 
 
+[[where-to-specify-scripts]]
 === Angeben von Skripten
 
 Skripte werden in den Backup-Richtlinien angegeben. Wenn ein Backup-Job gestartet wird, ordnet die Policy das Skript automatisch den zu sichernden Ressourcen zu. Wenn Sie eine Sicherungsrichtlinie erstellen, können Sie die Vorschrift- und die Postscript-Argumente angeben.
@@ -107,12 +115,14 @@ NOTE: Sie können nicht mehrere Skripte angeben.
 
 
 
+[[script-timeouts]]
 === Skript-Timeouts
 
 Die Zeitüberschreitung ist standardmäßig auf 60 Sekunden eingestellt. Sie können den Zeitüberschreitungswert ändern.
 
 
 
+[[script-output]]
 === Skriptausgabe
 
 Das Standardverzeichnis für die Windows-Druckschriften und Postscripts-Ausgabedateien ist Windows\System32.

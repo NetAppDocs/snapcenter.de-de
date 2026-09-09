@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup policies, policies 
 summary: Bevor Sie SnapCenter zum Backup von Oracle-Datenbankressourcen verwenden, müssen Sie eine Backup-Richtlinie für die Ressource oder die Ressourcengruppe erstellen, die Sie sichern möchten. Eine Backup-Richtlinie ist eine Reihe von Regeln, die das Managen, Planen und Aufbewahren von Backups regeln. Sie können auch die Einstellungen für Replikation, Skript und Backup-Typ festlegen. Das Erstellen einer Richtlinie spart Zeit, wenn Sie die Richtlinie für eine andere Ressource oder Ressourcengruppe wiederverwenden möchten. 
 ---
-= Erstellung von Backup-Richtlinien für Oracle Datenbanken
+= Sicherungsrichtlinien für Oracle-Datenbanken in SnapCenter erstellen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

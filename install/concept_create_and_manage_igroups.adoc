@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: igroup 
 summary: Sie erstellen Initiatorgruppen, um anzugeben, welche Hosts auf eine bestimmte LUN im Storage-System zugreifen können. Sie können SnapCenter eine Initiatorgruppe auf einem Windows Host erstellen, umbenennen, ändern oder löschen. 
 ---
-= Erstellen und Verwalten von Initiatorgruppen
+= Erstellen und Verwalten von igroups in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ Sie erstellen Initiatorgruppen, um anzugeben, welche Hosts auf eine bestimmte LU
 
 
 
+[[create-an-igroup]]
 == Erstellen einer Initiatorgruppe
 
 Sie können SnapCenter zum Erstellen einer Initiatorgruppe auf einem Windows Host verwenden. Die Initiatorgruppe ist im Assistenten „Festplatte erstellen“ oder „Festplatte verbinden“ verfügbar, wenn Sie eine LUN zuordnen.
@@ -72,6 +73,7 @@ SnapCenter erstellt die Initiatorgruppe auf dem Storage-System.
 
 
 
+[[rename-an-igroup]]
 == Benennen Sie eine Initiatorgruppe um
 
 Sie können eine vorhandene Initiatorgruppe mit SnapCenter umbenennen.
@@ -87,6 +89,7 @@ Sie können eine vorhandene Initiatorgruppe mit SnapCenter umbenennen.
 
 
 
+[[modify-an-igroup]]
 == Ändern einer Initiatorgruppe
 
 Sie können mit SnapCenter Initiatoren zu einer vorhandenen Initiatorgruppe hinzufügen. Beim Erstellen einer Initiatorgruppe können Sie nur einen Host hinzufügen. Wenn Sie eine Initiatorgruppe für ein Cluster erstellen möchten, können Sie die Initiatorgruppe ändern, um dieser Initiatorgruppe weitere Nodes hinzuzufügen.
@@ -103,6 +106,7 @@ Sie können mit SnapCenter Initiatoren zu einer vorhandenen Initiatorgruppe hinz
 
 
 
+[[delete-an-igroup]]
 == Löschen einer Initiatorgruppe
 
 Sie können eine Initiatorgruppe mit SnapCenter löschen, wenn Sie sie nicht mehr benötigen.

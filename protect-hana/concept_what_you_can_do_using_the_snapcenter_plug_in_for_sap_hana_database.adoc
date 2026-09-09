@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Database 
 summary: Wenn Sie das Plug-in für SAP HANA Datenbank in Ihrer Umgebung installieren, können Sie mit SnapCenter SAP HANA Datenbanken und deren Ressourcen sichern, wiederherstellen und klonen. Sie können auch Aufgaben zur Unterstützung dieser Operationen ausführen. 
 ---
-= Was Sie mit dem SnapCenter Plug-in für SAP HANA Database tun können
+= Funktionen des SnapCenter Plug-ins für die SAP HANA Datenbank
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

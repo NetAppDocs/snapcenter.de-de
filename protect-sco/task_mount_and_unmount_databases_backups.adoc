@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: mount, unmount, backup, ASM, asm_diskstring 
 summary: Sie können einzelne oder mehrere Daten mounten und Backups protokollieren, wenn Sie auf die Dateien im Backup zugreifen möchten. Sie können das Backup entweder auf demselben Host, auf dem das Backup erstellt wurde, oder auf einem Remote-Host mit denselben Oracle- und Host-Konfigurationen mounten. Wenn Sie die Backups manuell gemountet haben, sollten Sie die Bereitstellung der Backups nach Abschluss des Vorgangs manuell aufheben. Sie können das Datenbank-Backup für eine bestimmte Datenbank nur einmal auf einem Host mounten. Während eines Vorgangs können Sie nur ein einzelnes Backup mounten. 
 ---
-= Binden Sie Datenbank-Backups ein und heben Sie sie ab
+= Datenbanksicherungen in SnapCenter ein- und aushängen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -18,6 +18,7 @@ NOTE: In einem Flex ASM-Setup können Sie den Mount-Vorgang auf Leaf-Knoten nich
 
 
 
+[[mount-a-database-backup]]
 == Mounten Sie ein Datenbank-Backup
 
 Sie sollten eine Datenbanksicherung manuell mounten, wenn Sie auf die Dateien im Backup zugreifen möchten.
@@ -85,6 +86,7 @@ Informationen zu den mit dem Befehl verwendbaren Parametern und deren Beschreibu
 
 
 
+[[unmount-a-database-backup]]
 == Heben Sie die Bereitstellung eines Datenbank-Backups auf
 
 Sie können die Bereitstellung einer gemounteten Datenbanksicherung manuell aufheben, wenn Sie nicht mehr auf Dateien im Backup zugreifen möchten.

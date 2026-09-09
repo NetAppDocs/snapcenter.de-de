@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials 
 summary: Ressourcen sind die Datenbanken, Exchange Database Availability Groups, die von den von Ihnen installierten Plug-ins verwaltet werden. Sie können diese Ressourcen zu Ressourcengruppen hinzufügen, sodass Sie Datensicherungsjobs ausführen können. Zunächst müssen Sie jedoch ermitteln, welche Ressourcen Sie zur Verfügung haben. Das ermitteln der verfügbaren Ressourcen überprüft außerdem, ob die Plug-in-Installation erfolgreich abgeschlossen wurde. 
 ---
-= Bestimmen Sie, ob Exchange Ressourcen für Backups verfügbar sind
+= Feststellen, ob Exchange-Ressourcen für das Backup in SnapCenter verfügbar sind
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

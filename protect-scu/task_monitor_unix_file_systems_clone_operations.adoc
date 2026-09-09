@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clone, monitor, unix file systems 
 summary: Sie können den Status von SnapCenter-Klonvorgängen mithilfe der Seite Jobs überwachen. Sie können den Fortschritt eines Vorgangs überprüfen, um zu bestimmen, wann dieser abgeschlossen ist oder ob ein Problem vorliegt. 
 ---
-= Überwachen Sie die Klonvorgänge von Unix-Dateisystemen
+= Klonvorgänge von UNIX-Dateisystemen in SnapCenter überwachen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: PDB, pluggable database, restore, CDB, PITR, point-in-time recovery, RMAN 
 summary: 'Sie können eine steckbare Datenbank (PDB) wiederherstellen, die beschädigt oder verworfen wurde, ohne die anderen PDBs in der Container-Datenbank \(CDB\) zu beeinträchtigen. SnapCenter nutzt RMAN zur Durchführung von Point-in-Time Recovery \(PITR\) der PDB.' 
 ---
-= Wiederherstellen steckbarer Datenbanken über zeitpunktgenaues Recovery
+= Eine pluggable Datenbank mithilfe der zeitpunktgenauen Wiederherstellung in SnapCenter wiederherstellen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

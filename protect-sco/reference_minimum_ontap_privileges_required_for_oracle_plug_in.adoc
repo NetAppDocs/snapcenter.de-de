@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP privileges 
 summary: Die erforderlichen Mindestberechtigungen für ONTAP variieren je nach SnapCenter Plug-ins, die Sie zur Datensicherung verwenden. 
 ---
-= Minimale ONTAP-Berechtigungen, die für das Plug-in für Oracle erforderlich sind
+= Minimale ONTAP Berechtigungen, die vom SnapCenter Plug-in für Oracle Database benötigt werden
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: installing 
 summary: Sie sollten das SnapCenter-Plug-in für IBM DB2 installieren und einrichten, wenn Sie IBM DB2 schützen möchten. 
 ---
-= Installationsworkflow des SnapCenter-Plug-ins für IBM DB2
+= SnapCenter Plug-in für IBM Db2 Installation und Setup-Workflow
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

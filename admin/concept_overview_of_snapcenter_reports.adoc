@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter reports 
 summary: SnapCenter bietet eine Vielzahl von Berichtsoptionen, mit denen Sie den Systemzustand und den Betrieb überwachen und managen können. 
 ---
-= Überblick über die Berichterstellungsfunktionen von SnapCenter
+= Informationen zu den Berichtsfunktionen von SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -55,6 +55,7 @@ Andere Benutzer als Administrator können den Zeitplan anhand ihrer Berechtigung
 |===
 
 
+[[access-reports]]
 == Aufrufen von Berichten
 
 Mit dem SnapCenter-Dashboard erhalten Sie einen schnellen Überblick über den Zustand Ihres Systems. Über das Dashboard können Sie weitere Details abrufen. Alternativ können Sie direkt auf detaillierte Berichte zugreifen.
@@ -67,6 +68,7 @@ Sie können auf Berichte über eine der folgenden Methoden zugreifen:
 
 
 
+[[filter-your-report]]
 == Filtern Sie Ihren Bericht
 
 Sie können Ihre Berichtsdaten nach verschiedenen Parametern filtern, je nachdem, wie viel Details und Zeit Sie benötigen.
@@ -91,6 +93,7 @@ Sie können Ihre Berichtsdaten nach verschiedenen Parametern filtern, je nachdem
 
 
 
+[[export-or-print-reports]]
 == Berichte exportieren oder drucken
 
 Durch das Exportieren von SnapCenter-Berichten können Sie den Bericht in verschiedenen anderen Formaten anzeigen. Sie können auch Berichte drucken.
@@ -110,6 +113,7 @@ Durch das Exportieren von SnapCenter-Berichten können Sie den Bericht in versch
 
 
 
+[[set-the-smtp-server-for-email-notifications]]
 == Stellen Sie den SMTP-Server für E-Mail-Benachrichtigungen ein
 
 Sie können den SMTP-Server angeben, der zum Senden von Datenschutzjobberichten an sich selbst oder andere verwendet werden soll. Sie können auch eine Test-E-Mail senden, um die Konfiguration zu überprüfen. Die Einstellungen werden global für jeden SnapCenter-Job angewendet, für den Sie die E-Mail-Benachrichtigung konfigurieren.
@@ -126,6 +130,7 @@ Mit dieser Option wird der SMTP-Server zum Senden aller Datensicherheitsjobberic
 
 
 
+[[configure-the-option-to-email-reports]]
 == Konfigurieren Sie die Option zum E-Mail-Versenden von Berichten
 
 Wenn Sie regelmäßige Aktualisierungen für den SnapCenter-Datenschutz an sich selbst oder andere Benutzer senden möchten, damit Sie den Status dieser Updates überwachen können, können Sie die Option konfigurieren, die SnapCenter-Berichte per E-Mail zu senden, wenn Sie eine Ressourcengruppe erstellen.

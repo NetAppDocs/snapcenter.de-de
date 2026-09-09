@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Oracle Database, back up, resource groups 
 summary: Eine Ressourcengruppe ist eine Sammlung von Ressourcen auf einem Host. Für alle in der Ressourcengruppe definierten Ressourcen wird ein Sicherungsvorgang in der Ressourcengruppe durchgeführt. 
 ---
-= Erstellen Sie ein Backup von Oracle Ressourcengruppen
+= Oracle-Ressourcengruppen in SnapCenter sichern
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

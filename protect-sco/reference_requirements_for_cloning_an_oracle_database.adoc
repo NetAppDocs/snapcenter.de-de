@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Bevor Sie eine Oracle-Datenbank klonen, sollten Sie sicherstellen, dass die Voraussetzungen erfüllt sind. 
 ---
-= Anforderungen für das Klonen einer Oracle Datenbank
+= Anforderungen für das Klonen einer Oracle Datenbank mit SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

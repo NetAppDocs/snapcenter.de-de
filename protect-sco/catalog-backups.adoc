@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: oracle databases discover 
 summary: So entdeckt SnapCenter Oracle Datenbanken. 
 ---
-= So katalogisieren Sie Backups mit Oracle Recovery Manager
+= Wie SnapCenter Backups mit Oracle RMAN katalogisiert
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -21,12 +21,14 @@ Wenn Sie Backups einer RAC-Datenbank katalogisieren möchten, stellen Sie sicher
 
 
 
+[[external-catalog-database]]
 == Externe Katalogdatenbank
 
 Standardmäßig wird die Kontrolldatei der Zieldatenbank zur Katalogisierung verwendet. Wenn Sie eine externe Katalogdatenbank hinzufügen möchten, können Sie diese konfigurieren, indem Sie die Anmeldeinformationen und den TNS-Namen (Transparent Network Substrat) des externen Katalogs mithilfe des Datenbankeinstellungs-Assistenten von der grafischen Benutzeroberfläche von SnapCenter (GUI) angeben. Sie können die externe Katalogdatenbank auch über die CLI konfigurieren, indem Sie den Befehl Configure-SmOracleDatabase mit den Optionen -OracleRmanCatalogCredentialName und -OracleRmanCatalogTnsName ausführen.
 
 
 
+[[rman-command]]
 == RMAN-Befehl
 
 Wenn Sie die Katalogisierung-Option aktiviert haben und gleichzeitig eine Oracle-Backup-Richtlinie über die SnapCenter-GUI erstellen, werden die Backups über Oracle RMAN als Teil des Backup-Vorgangs katalogisiert. Sie können auch eine verzögerte Katalogisierung von Backups durchführen, indem Sie das ausführen `Catalog-SmBackupWithOracleRMAN` Befehl.
@@ -35,6 +37,7 @@ Nach der Katalogisierung der Backups können Sie das ausführen `Get-SmBackupDet
 
 
 
+[[naming-format]]
 == Benennungsformat
 
 Wenn der Name der ASM-Festplattengruppe größer oder gleich 16 Zeichen ist, ab SnapCenter 3.0, lautet das für die Datensicherung verwendete Namensformat SC_HASHCODEofDISKGROUP_DBSID_BACKUPID. Wenn der Name der Laufwerksgruppe jedoch weniger als 16 Zeichen beträgt, ist das für das Backup verwendete Namensformat DISKGROUPNAME_DBSID_BACKUPID, das gleiche Format wie in SnapCenter 2.0.
@@ -43,6 +46,7 @@ Die HASHCODEofDISKGROUP ist eine automatisch generierte Nummer (2 bis 10 Stellen
 
 
 
+[[crosscheck-operations]]
 == Crosscheck-Operationen
 
 Sie können crosschecks durchführen, um veraltete RMAN Repository-Informationen über Backups zu aktualisieren, deren Repository-Datensätze nicht ihrem physischen Status entsprechen. Wenn ein Benutzer zum Beispiel archivierte Protokolle mit einem Betriebssystembefehl von der Festplatte entfernt, zeigt die Steuerdatei immer noch an, dass sich die Protokolle auf der Festplatte befinden, wenn sie sich tatsächlich nicht befinden.
@@ -53,6 +57,7 @@ Mit der crosscheck-Operation können Sie die Steuerdatei mit den Informationen a
 
 
 
+[[remove-catalog-information]]
 == Kataloginformationen entfernen
 
 Sie können die Kataloginformationen entfernen, indem Sie den Befehl Uncatalog-SmBackupWithOracleRMAN ausführen. Sie können die Kataloginformationen nicht mithilfe der SnapCenter-GUI entfernen. Die Informationen eines katalogisierten Backups werden jedoch beim Löschen des Backups oder beim Löschen der mit diesem katalogisierten Backup verknüpften Aufbewahrungs- und Ressourcengruppe entfernt.

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: Durch die Definition einer Wiederherstellungsstrategie für Exchange Server können Sie Ihre Datenbank erfolgreich wiederherstellen. 
 ---
-= Festlegen einer Restore-Strategie für Exchange-Datenbanken
+= Eine Wiederherstellungsstrategie für Exchange-Datenbanken in SnapCenter festlegen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ Durch die Definition einer Wiederherstellungsstrategie für Exchange Server kön
 
 
 
+[[sources-for-a-restore-operation-in-exchange-server]]
 == Quellen für eine Wiederherstellung in Exchange Server
 
 Sie können eine Exchange Server Datenbank aus einer Backup-Kopie im Primärspeicher wiederherstellen.
@@ -23,6 +24,7 @@ Sie können Datenbanken nur aus dem Primärspeicher wiederherstellen.
 
 
 
+[[types-of-restore-operations-supported-for-exchange-server]]
 == Arten von Wiederherstellungsvorgängen, die für Exchange Server unterstützt werden
 
 Mit SnapCenter können Sie verschiedene Arten von Restore-Vorgängen für Exchange Ressourcen ausführen.
@@ -33,6 +35,7 @@ Mit SnapCenter können Sie verschiedene Arten von Restore-Vorgängen für Exchan
 
 
 
+[[restore-up-to-the-minute]]
 === Führen Sie Wiederherstellungen minutengenau durch
 
 In einem up-to-the-minute-Wiederherstellungsvorgang werden Datenbanken bis zu dem Punkt des Ausfalls wiederhergestellt. SnapCenter erreicht dies durch folgende Sequenz:
@@ -64,6 +67,7 @@ Wenn Sie keine up-to-the-minute-Wiederherstellung für alle Backups benötigen, 
 
 
 
+[[restore-to-a-previous-point-in-time]]
 === Wiederherstellung auf einen früheren Zeitpunkt
 
 In einer zeitpunktgenauen Restore-Operation werden Datenbanken nur auf eine bestimmte Zeit aus der Vergangenheit wiederhergestellt. Ein Point-in-Time-Wiederherstellungsvorgang findet in den folgenden Situationen statt:

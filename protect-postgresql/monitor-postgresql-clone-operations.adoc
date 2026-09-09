@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: monitor, postgresql cluster, clone operations 
 summary: Sie können den Status von SnapCenter-Klonvorgängen mithilfe der Seite Jobs überwachen. Sie können den Fortschritt eines Vorgangs überprüfen, um zu bestimmen, wann dieser abgeschlossen ist oder ob ein Problem vorliegt. 
 ---
-= Überwachen von PostgreSQL-Klonvorgängen
+= PostgreSQL-Klonvorgänge in SnapCenter überwachen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

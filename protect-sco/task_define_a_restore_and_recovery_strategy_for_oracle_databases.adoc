@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup types, restore methods, connect-and-copy restore, full restore, partial restore, in-place restore, recovery type, limitations 
 summary: Sie müssen eine Strategie definieren, bevor Sie Ihre Datenbank wiederherstellen und wiederherstellen, damit Restore- und Recovery-Vorgänge erfolgreich durchgeführt werden können. 
 ---
-= Definition einer Restore- und Recovery-Strategie für Oracle Datenbanken
+= Informationen zu Wiederherstellungs- und Recovery-Strategien für Oracle-Datenbanken in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ Sie müssen eine Strategie definieren, bevor Sie Ihre Datenbank wiederherstellen
 
 
 
+[[types-of-backups-supported-for-restore-and-recovery-operations]]
 == Arten von Backups, die für Wiederherstellungs- und Recovery-Vorgänge unterstützt werden
 
 SnapCenter unterstützt die Wiederherstellung und Wiederherstellung unterschiedlicher Arten von Oracle Datenbank-Backups.
@@ -39,6 +40,7 @@ NOTE: Sie können keine Wiederherstellung von Active Data Guard Standby-Datenban
 
 
 
+[[types-of-restore-methods-supported-for-oracle-databases]]
 == Arten von Wiederherstellungsmethoden, die für Oracle-Datenbanken unterstützt werden
 
 SnapCenter unterstützt Connect-and-Copy oder in-Place-Restore für Oracle Datenbanken. Während eines Wiederherstellungsvorgangs bestimmt SnapCenter die Wiederherstellungsmethode, die für die Wiederherstellung des Dateisystems ohne Datenverlust geeignet ist.
@@ -48,6 +50,7 @@ NOTE: SnapCenter bietet keine Unterstützung für Volume-basierte SnapRestore.
 
 
 
+[[connect-and-copy-restore]]
 === Wiederherstellung von Verbindungen und Kopien
 
 Unterscheidet sich das Datenbanklayout von dem Backup, oder gibt es nach dem Backup neue Dateien, so wird die Wiederherstellung der Connect-and-Copy durchgeführt. In der Methode zum Wiederherstellen von Connect-and-Copy werden die folgenden Aufgaben ausgeführt:
@@ -76,6 +79,7 @@ Auch wenn Sie die Wiederherstellung vor Ort mit Nachdruck aktiviert haben, führ
 
 
 
+[[in-place-restore]]
 === In-Place-Wiederherstellung
 
 Wenn das Datenbank-Layout dem Backup ähnelt und keine Konfigurationsänderungen am Storage- und Datenbank-Stack durchgeführt wurden, erfolgt die Wiederherstellung direkt, wobei die Wiederherstellung von Datei oder LUN auf ONTAP durchgeführt wird. SnapCenter unterstützt als Teil der in-Place-Wiederherstellungsmethode nur Single File SnapRestore (SFSR).
@@ -110,6 +114,7 @@ In SAN-Umgebungen entfernt SnapCenter Geräte aus allen Peer-Nodes und führt LU
 
 
 
+[[types-of-restore-operations-supported-for-oracle-databases]]
 == Arten von Wiederherstellungsvorgängen, die für Oracle-Datenbanken unterstützt werden
 
 SnapCenter ermöglicht Ihnen die Durchführung verschiedener Arten von Restore-Vorgängen für Oracle Datenbanken.
@@ -118,6 +123,7 @@ Vor dem Wiederherstellen der Datenbank werden Backups validiert, um festzustelle
 
 
 
+[[full-restore]]
 === Vollständige Wiederherstellung
 
 * Stellt nur die Datendateien wieder her
@@ -128,6 +134,7 @@ Vor dem Wiederherstellen der Datenbank werden Backups validiert, um festzustelle
 
 
 
+[[partial-restore]]
 === Teilwiederherstellung
 
 * Stellt nur die ausgewählten Tabellen wieder her
@@ -137,6 +144,7 @@ Vor dem Wiederherstellen der Datenbank werden Backups validiert, um festzustelle
 
 
 
+[[types-of-recovery-operations-supported-for-oracle-databases]]
 == Arten von für Oracle-Datenbanken unterstützten Recovery-Vorgängen
 
 SnapCenter ermöglicht Ihnen die Durchführung verschiedener Arten von Recovery-Vorgängen für Oracle Datenbanken.
@@ -157,6 +165,7 @@ NOTE: Das Plug-in für Oracle-Datenbank unterstützt kein Recovery, wenn Sie mit
 
 
 
+[[limitations-related-to-restore-and-recovery-of-oracle-databases]]
 == Einschränkungen im Zusammenhang mit dem Restore und Recovery von Oracle Datenbanken
 
 Bevor Sie Restore- und Recovery-Vorgänge durchführen, müssen Sie die Einschränkungen beachten.
@@ -186,6 +195,7 @@ Dies kann durch die Durchführung einer der folgenden Maßnahmen vermieden werde
 
 
 
+[[limitations-related-to-point-in-time-recovery-of-tablespaces]]
 == Einschränkungen im Zusammenhang mit der zeitpunktgenauen Recovery von Tablespaces
 
 * Point-in-Time Recovery (PITR) von SYSTEM, SYSAUX und UNDO Tablespaces wird nicht unterstützt
@@ -212,18 +222,21 @@ Beispiele für diese Objekttypen sind PL/SQL, Java-Klassen, Ausrufprogramme, Ans
 
 
 
+[[sources-and-destinations-for-restoring-oracle-databases]]
 == Quellen und Ziele für die Wiederherstellung von Oracle-Datenbanken
 
 Sie können eine Oracle Datenbank aus einer Backup-Kopie auf dem Primär- oder Sekundärspeicher wiederherstellen. Sie können Datenbanken nur an demselben Speicherort auf derselben Datenbankinstanz wiederherstellen. Im Real Application Cluster (RAC) Setup können Sie jedoch Datenbanken auf anderen Knoten wiederherstellen.
 
 
 
+[[sources-for-restore-operations]]
 === Quellen für Wiederherstellungsvorgänge
 
 Sie können Datenbanken aus einem Backup auf dem primären oder sekundären Storage wiederherstellen. Wenn Sie in einer Konfiguration mit mehreren Spiegelungen ein Backup auf dem sekundären Storage wiederherstellen möchten, können Sie die sekundäre Storage-Spiegelung als Quelle auswählen.
 
 
 
+[[destinations-for-restore-operations]]
 === Ziele für Wiederherstellungen
 
 Sie können Datenbanken nur an demselben Speicherort auf derselben Datenbankinstanz wiederherstellen.

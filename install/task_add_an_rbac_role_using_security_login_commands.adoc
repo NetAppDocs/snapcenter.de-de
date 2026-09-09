@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: RBAC roles, add, NetApp ONTAP RBAC role, storage system 
 summary: Wenn auf Ihren Storage-Systemen Clustered NetApp ONTAP ausgeführt wird, können Sie über die Sicherheits-Login-Befehle eine Rolle für die rollenbasierte Zugriffssteuerung von NetApp ONTAP hinzufügen. 
 ---
-= Fügen Sie mithilfe von Sicherheits-Login-Befehlen eine RBAC-Rolle für NetApp ONTAP hinzu
+= Eine ONTAP RBAC-Rolle für SnapCenter mit Sicherheitsanmeldebefehlen hinzufügen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

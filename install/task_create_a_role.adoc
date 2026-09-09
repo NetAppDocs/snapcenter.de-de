@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: role, create, permission 
 summary: Zusätzlich zur Nutzung vorhandener SnapCenter-Rollen können Sie eigene Rollen erstellen und die Berechtigungen anpassen. 
 ---
-= Erstellen Sie eine Rolle
+= Eine Rolle in SnapCenter erstellen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create policies, Oracle, backup policies 
 summary: Erstellen Sie eine Sicherungsrichtlinie für die Ressource oder Ressourcengruppe, die Sie sichern möchten. 
 ---
-= Erstellung von Backup-Richtlinien für Oracle Datenbanken
+= Sicherungsrichtlinien für Oracle-Datenbanken in SnapCenter erstellen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

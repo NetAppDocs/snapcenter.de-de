@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cancel, restore 
 summary: Sie können Wiederherstellungsaufträge abbrechen, die in die Warteschlange gestellt werden. 
 ---
-= Wiederherstellungsvorgänge für SQL-Ressourcen abbrechen
+= Wiederherstellungsvorgänge für SQL-Ressourcen in SnapCenter abbrechen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

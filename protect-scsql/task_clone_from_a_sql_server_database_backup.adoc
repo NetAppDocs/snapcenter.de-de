@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clone 
 summary: Sie können das Backup einer SQL Server Datenbank mit SnapCenter klonen. Wenn Sie auf eine ältere Version der Daten zugreifen oder diese wiederherstellen möchten, können Sie Datenbank-Backups nach Bedarf klonen. 
 ---
-= Klonen aus einem Backup der SQL Server Datenbank
+= Klonen aus einem SQL Server Datenbank-Backup mithilfe von SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -152,7 +152,7 @@ Außerdem müssen Sie die E-Mail-Adressen für Absender und Empfänger sowie den
 NOTE: Für eine E-Mail-Benachrichtigung müssen Sie die SMTP-Serverdetails entweder mit der GUI oder mit dem PowerShell-Befehlssatz Set-SmtpServer angegeben haben.
 
 +
-Informationen zu EMS finden Sie unter https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_ems_data_collection.html["EMS-Datenerfassung managen"]
+Für EMS kann auf https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_ems_data_collection.html["Verwaltung der EMS-Datenerfassung in SnapCenter"] verwiesen werden
 
 . Überprüfen Sie die Zusammenfassung, und wählen Sie dann *Fertig stellen*.
 . Überwachen Sie den Vorgangsfortschritt, indem Sie *Monitor* > *Jobs* auswählen.

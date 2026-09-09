@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backups 
 summary: 'Sie können das Cmdlet "Remove-SmBackup" verwenden, um die Anzahl der Backups für sekundäre Backups, die keine Snapshots haben, zu bereinigen. Verwenden Sie dieses Cmdlet möglicherweise, wenn die in der Topologie zum Verwalten von Kopien angezeigten Snapshots insgesamt nicht mit der Einstellung für die Aufbewahrung von sekundären SpeicherSnapshot übereinstimmen.' 
 ---
-= Reinigen Sie die Anzahl der sekundären Backups mit PowerShell cmdlets
+= Die Anzahl der sekundären SQL Server Backups in SnapCenter bereinigen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

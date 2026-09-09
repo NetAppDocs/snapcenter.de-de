@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: 'Sie können eine gesicherte Exchange Server Datenbank aus dem sekundären Storage (Spiegel oder Vault) wiederherstellen.' 
 ---
-= Wiederherstellung einer Exchange Server-Datenbank aus dem sekundären Storage
+= Wiederherstellung einer Exchange Datenbank aus dem Sekundärspeicher in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

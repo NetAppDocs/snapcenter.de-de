@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for PostgreSQL 
 summary: Sie können das Plug-in verwenden, um Snapshots von Konsistenzgruppen für Ressourcengruppen zu erstellen. Eine Konsistenzgruppe ist ein Container, der mehrere Volumes beherbergen kann, sodass Sie sie als eine Einheit verwalten können. Eine Konsistenzgruppe ist simultane Snapshots mehrerer Volumes und stellt konsistente Kopien einer Gruppe von Volumes bereit. 
 ---
-= Wie das SnapCenter Plug-in für PostgreSQL Snapshots von Konsistenzgruppen verwendet
+= Wie SnapCenter Plug-in für PostgreSQL Snapshot Kopien von Konsistenzgruppen verwendet
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

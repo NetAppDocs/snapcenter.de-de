@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials 
 summary: Sie müssen Hosts über die Seite SnapCenter Add Host hinzufügen hinzufügen und dann die Plug-ins-Pakete installieren. Die Plug-ins werden automatisch auf den Remote-Hosts installiert. Sie können einen Host hinzufügen und Plug-in-Pakete für einen einzelnen Host oder für ein Cluster installieren. 
 ---
-= Fügen Sie Hosts hinzu und installieren Sie Plug-in-Pakete auf Remote-Hosts
+= Hosts hinzufügen und Plug-in-Pakete auf Remote-Hosts für MySQL installieren
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

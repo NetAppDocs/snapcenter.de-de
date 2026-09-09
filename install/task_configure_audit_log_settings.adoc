@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: audit, log, configure 
 summary: Sie können konfigurieren, um die Sicherheitsereignisse von Softwareplattformen und der Software, die auf diesen Plattformen ausgeführt wird, zu protokollieren. 
 ---
-= Konfigurieren Sie die Einstellungen für das Prüfprotokoll
+= Revisionsprotokoll-Einstellungen in SnapCenter konfigurieren
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

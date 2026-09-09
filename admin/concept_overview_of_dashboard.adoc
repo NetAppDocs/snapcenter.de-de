@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: dashboard 
 summary: 'Im linken Navigationsbereich von SnapCenter bietet das Dashboard einen ersten Überblick über den Systemzustand, einschließlich aktueller Jobaktivitäten, Warnmeldungen, Sicherungszusammenfassungen, Storage-Effizienz und -Auslastung, Status von SnapCenter-Jobs \ (Backup, Klonen, Wiederherstellung\), Konfigurationsstatus für Standalone- und Windows-Cluster-Hosts, Anzahl der von SnapCenter gemanagten Storage Virtual Machines (SVMs) sowie Lizenzkapazität.' 
 ---
-= Überblick über das Dashboard
+= Informationen zum SnapCenter Dashboard
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -19,6 +19,7 @@ In vielen Fällen können Sie mehr Informationen über ein Display anzeigen, ind
 
 
 
+[[recent-job-activities]]
 == Zuletzt Verwendete Job-Aktivitäten
 
 In der Kachel „Letzte Job-Aktivitäten“ werden die letzten Job-Aktivitäten von allen Backup-, Restore- und Clone-Jobs angezeigt, auf die Sie Zugriff haben. Jobs in dieser Anzeige haben einen der folgenden Status: Abgeschlossen, Warnung, Fehlgeschlagen, wird ausgeführt, Warteschlange, Und storniert.
@@ -29,6 +30,7 @@ Klicken Sie auf *Alle anzeigen*, um eine Historie aller SnapCenter-Jobs anzuzeig
 
 
 
+[[alerts]]
 == Meldungen
 
 Im Feld „Meldungen“ werden die neuesten nicht behobenen kritischen Warnmeldungen und Warnmeldungen für die Hosts und den SnapCenter-Server angezeigt.
@@ -39,6 +41,7 @@ Wenn Sie auf eine bestimmte Warnmeldung klicken, werden Sie zur Seite „Meldung
 
 
 
+[[latest-protection-summary]]
 == Aktuelle Zusammenfassung Des Schutzes
 
 Die Kachel Letzte Protection Summary gibt Ihnen den Schutzstatus für alle Einheiten an, auf die Sie Zugriff haben. Standardmäßig wird die Anzeige so eingestellt, dass der Status aller Plug-ins angezeigt wird. Statusinformationen werden für Ressourcen bereitgestellt, die im Primärspeicher als Snapshots gesichert werden, und für Sekundärspeicher mithilfe von SnapMirror und SnapVault Technologien. Die Verfügbarkeit von Schutzstatusinformationen für den sekundären Speicher basiert auf dem ausgewählten Plug-in-Typ.
@@ -98,6 +101,7 @@ NOTE: Wenn Sie zum Erstellen von Backups SnapCenter Server 4.2 und eine frühere
 
 
 
+[[jobs]]
 == Jobs
 
 Die Kachel Jobs bietet Ihnen eine Zusammenfassung der Backup-, Wiederherstellungs- und Klonaufgaben, auf die Sie Zugriff haben. Sie können den Zeitrahmen für jeden Bericht über das Dropdown-Menü anpassen. Die Optionen für den Zeitrahmen werden in den letzten 24 Stunden, den letzten 7 Tagen und den letzten 30 Tagen festgelegt. Der Standardbericht zeigt die in den letzten 7 Tagen ausgeführten Datensicherungsaufträge an.
@@ -137,6 +141,7 @@ Anzahl der aktuell ausgeführten Jobs.
 |===
 
 
+[[storage]]
 == Storage
 
 Im Bereich Storage wird der primäre und sekundäre Storage, der von Sicherungsaufgaben über einen Zeitraum von 90 Tagen verbraucht wird, grafisch dargestellt und zeigt Verbrauchstrends berechnet. Die Speicherinformationen werden alle 24 Stunden um 12 Uhr aktualisiert
@@ -152,6 +157,7 @@ NOTE: Wenn Sie zum Erstellen von Backups SnapCenter Server 4.2 und eine frühere
 
 
 
+[[configuration]]
 == Konfiguration
 
 Die Konfigurationtile bietet konsolidierte Statusinformationen für alle aktiven eigenständigen und Windows Cluster Hosts, die SnapCenter verwaltet, und auf die Sie Zugriff haben. Dazu gehören auch die mit diesen Hosts verknüpften Plug-in-Statusinformationen.

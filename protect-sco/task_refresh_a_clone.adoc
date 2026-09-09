@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: refresh clone, clone 
 summary: Sie können den Klon aktualisieren, indem Sie den Befehl „Refresh-SmClone“ ausführen. Mit diesem Befehl wird ein Backup der Datenbank erstellt, der vorhandene Klon gelöscht und ein Klon mit demselben Namen erstellt. 
 ---
-= Aktualisieren Sie einen Klon
+= Aktualisieren eines Klons für Oracle-Datenbanken in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

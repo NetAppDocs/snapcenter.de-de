@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: application volume, overview, backup, non-data volumes 
 summary: Applikations-Volumes sind der Storage, in dem Informationen zu Oracle Database gespeichert werden. 
 ---
-= Was sind Applikations-Volumes
+= Informationen zu Anwendungsvolumes im SnapCenter Plug-in für Oracle Database
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter 
 summary: Sie sollten die CA-Zertifikate konfigurieren und die CA-Zertifikate im SnapCenter-Server und den entsprechenden Plug-in-Hosts bereitstellen. 
 ---
-= Aktivieren Sie CA-Zertifikate für Plug-ins
+= CA-Zertifikate für SnapCenter Plug-ins aktivieren
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

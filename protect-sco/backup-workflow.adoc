@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup, workflow 
 summary: 'Sie können entweder ein Backup einer Ressource (Datenbank) oder einer Ressourcengruppe erstellen.' 
 ---
-= Überblick über den Sicherungsvorgang
+= SnapCenter Backup-Workflow für Oracle-Datenbanken
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

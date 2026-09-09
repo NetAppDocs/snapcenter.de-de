@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: Eine Ressourcengruppe ist eine Sammlung von Ressourcen auf einem Host oder Exchange DAG, und die Ressourcengruppe kann entweder eine vollständige DAG oder individuelle Datenbanken enthalten. Sie können die Ressourcengruppen auf der Seite Ressourcen sichern. 
 ---
-= Sichern von Exchange-Ressourcengruppen
+= Exchange-Ressourcengruppen mit SnapCenter sichern
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

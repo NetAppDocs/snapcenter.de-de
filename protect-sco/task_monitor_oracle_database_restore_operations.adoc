@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore, monitor 
 summary: Sie können den Fortschritt der verschiedenen SnapCenter-Wiederherstellungen über die Seite Jobs überwachen. Sie können den Fortschritt eines Vorgangs überprüfen, um zu bestimmen, wann dieser abgeschlossen ist oder ob ein Problem vorliegt. 
 ---
-= Überwachen Sie die Restore-Vorgänge für Oracle Datenbanken
+= Überwachung von Oracle Datenbank-Wiederherstellungsvorgängen in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

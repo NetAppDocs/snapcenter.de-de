@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clone, CLI, commands 
 summary: Der Klon-Workflow umfasst die Planung, die Durchführung des Klonvorgangs und die Überwachung des Vorgangs. 
 ---
-= Backups der Oracle Datenbank mit UNIX Befehlen klonen
+= Oracle Datenbank-Backups mithilfe von UNIX-Befehlen in SnapCenter klonen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

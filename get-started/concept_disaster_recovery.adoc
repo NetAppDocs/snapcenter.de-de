@@ -17,6 +17,7 @@ In diesem Abschnitt werden die beiden Arten von DR in SnapCenter erläutert:
 
 
 
+[[snapcenter-server-dr]]
 == DR mit SnapCenter Servern
 
 * Die Daten des SnapCenter Servers werden gesichert und können ohne Plug-in wiederhergestellt werden, das dem SnapCenter Server hinzugefügt oder durch ihn gemanagt wird.
@@ -28,6 +29,7 @@ In diesem Abschnitt werden die beiden Arten von DR in SnapCenter erläutert:
 
 
 
+[[snapcenter-plug-in-and-storage-dr]]
 == SnapCenter Plug-in und Storage DR
 
 DR ist nur für das SnapCenter Plug-in für SQL Server verfügbar. Wenn das Plug-in ausfällt, wechseln Sie zu einem anderen SQL-Host, und stellen Sie die Daten mithilfe einiger Schritte wieder her. Siehe link:../protect-scsql/task_disaster_recovery_scsql.html["Disaster Recovery eines SnapCenter Plug-ins für SQL Server"].

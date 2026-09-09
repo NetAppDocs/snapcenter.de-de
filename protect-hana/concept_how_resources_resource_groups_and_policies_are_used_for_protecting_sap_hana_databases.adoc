@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SAP HANA databases 
 summary: Bevor Sie SnapCenter verwenden, ist es hilfreich, grundlegende Konzepte im Zusammenhang mit Backup-, Klon- und Restore-Vorgängen zu verstehen, die durchgeführt werden sollen. Sie interagieren mit Ressourcen, Ressourcengruppen und Richtlinien für verschiedene Vorgänge. 
 ---
-= Verwendung von Ressourcen, Ressourcengruppen und Richtlinien zum Schutz von SAP HANA Datenbanken
+= Wie Ressourcen, Ressourcengruppen und Richtlinien SAP HANA Datenbanken in SnapCenter schützen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

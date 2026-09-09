@@ -15,6 +15,7 @@ Sie können SSL-Zertifikate (Secure Sockets Layer) und Schlüsseldateien generie
 
 
 
+[[configure-secured-mysql-connections-for-standalone-snapcenter-server-configurations]]
 == Konfigurieren Sie gesicherte MySQL-Verbindungen für eigenständige SnapCenter-Server-Konfigurationen
 
 Sie können SSL-Zertifikate (Secure Sockets Layer) und Schlüsseldateien generieren, wenn Sie die Kommunikation zwischen SnapCenter Server und MySQL Server sichern möchten. Sie müssen die Zertifikate und Schlüsseldateien im MySQL-Server und im SnapCenter-Server konfigurieren.
@@ -128,6 +129,7 @@ Das folgende Beispiel zeigt die im Abschnitt [Client] der Datei my.ini aktualisi
 
 
 
+[[configure-secured-mysql-connections-for-ha-configurations]]
 == Konfigurieren Sie gesicherte MySQL-Verbindungen für HA-Konfigurationen
 
 Sie können SSL-Zertifikate (Secure Sockets Layer) und Schlüsseldateien sowohl für die HA-Knoten (High Availability) generieren, wenn Sie die Kommunikation zwischen SnapCenter Server und MySQL Servern sichern möchten. Sie müssen die Zertifikate und Schlüsseldateien auf den MySQL-Servern und auf den HA-Knoten konfigurieren.

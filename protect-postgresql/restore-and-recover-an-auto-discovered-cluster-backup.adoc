@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for postgresql 
 summary: Mit SnapCenter können Daten von einem oder mehreren Backups wiederhergestellt werden. 
 ---
-= Wiederherstellung und Wiederherstellung einer automatisch erkannten Cluster-Sicherung
+= Wiederherstellung und Wiederherstellung eines automatisch erkannten Cluster-Backups mit dem SnapCenter Plug-in für PostgreSQL
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

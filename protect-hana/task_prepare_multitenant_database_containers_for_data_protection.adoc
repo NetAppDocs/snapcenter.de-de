@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: multitenant database containers 
 summary: 'Bei direkt in SnapCenter registrierten SAP HANA Hosts wird das Installieren oder Upgrade des SnapCenter Plug-ins für SAP HANA Database eine automatische Ermittlung der Ressourcen auf dem Host auslösen. Nach der Installation oder Aktualisierung des Plug-ins werden für jeden mandantenfähigen Datenbank-Container \(MDC\)-Ressource, die sich auf dem Plug-in-Host befand, automatisch eine andere MDC-Ressource mit einem anderen GUID-Format ermittelt und in SnapCenter registriert. Die neue Ressource befindet sich im Status „gesperrt“.' 
 ---
-= Mandantenfähige Datenbank-Container werden für die Datensicherung vorbereitet
+= Mandantenfähige Datenbank-Container für den Datenschutz in SnapCenter vorbereiten
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials, install plug-in, Linux, AIX, GUI, add host, monitor 
 summary: Sie können Hosts auf der Seite SnapCenter Add Host hinzufügen und dann das SnapCenter Plug-ins Paket für Linux oder SnapCenter Plug-ins Package für AIX installieren. Die Plug-ins werden automatisch auf den Remote-Hosts installiert. 
 ---
-= Fügen Sie Hosts hinzu und installieren Sie mithilfe der GUI das Plug-ins Package für Linux oder AIX
+= Hosts hinzufügen und das SnapCenter Plug-ins Package für Linux oder AIX installieren
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -162,6 +162,7 @@ Alle Datenbanken auf dem Host werden automatisch erkannt und auf der Seite Resso
 
 
 
+[[monitor-installation-status]]
 == Überwachung des Installationsstatus
 
 Sie können den Fortschritt der Installation des SnapCenter-Plug-in-Pakets über die Seite Jobs überwachen. Möglicherweise möchten Sie den Installationsfortschritt prüfen, um festzustellen, wann die Installation abgeschlossen ist oder ob ein Problem vorliegt.

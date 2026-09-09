@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: uninstall, snapcenter server, linux 
 summary: Wenn Sie den SnapCenter-Server nicht mehr zum Verwalten von Datenschutzaufträgen verwenden möchten, können Sie SnapCenter-Server deinstallieren. 
 ---
-= Deinstallieren Sie den SnapCenter-Server auf dem Linux-Host
+= Deinstallation des SnapCenter Server auf einem Linux-Host
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

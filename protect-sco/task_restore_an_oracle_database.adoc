@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore, recover, Oracle 
 summary: Bei einem Datenverlust können Sie mit SnapCenter Daten von einem oder mehreren Backups auf Ihrem aktiven Dateisystem wiederherstellen und dann die Datenbank wiederherstellen. 
 ---
-= Stellen Sie Oracle Datenbanken wieder her
+= Wiederherstellung und Wiederherstellung einer Oracle Datenbank in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

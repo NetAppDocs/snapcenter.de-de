@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: monitor, NetApp supported plug-in 
 summary: Sie können den Fortschritt der verschiedenen SnapCenter-Wiederherstellungen über die Seite Jobs überwachen. Sie können den Fortschritt eines Vorgangs überprüfen, um zu bestimmen, wann dieser abgeschlossen ist oder ob ein Problem vorliegt. 
 ---
-= Überwachen von Wiederherstellungsvorgängen mit von NetApp unterstützten Plug-in-Ressourcen
+= Wiederherstellungsvorgänge für von NetApp unterstützte Plug-in-Ressourcen in SnapCenter überwachen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

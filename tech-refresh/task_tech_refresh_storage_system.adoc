@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: tech refresh, storage system, 
 summary: Führen Sie eine Technologieaktualisierung des Storage-Systems durch, indem Sie die Daten vom alten in den neuen Storage verschieben, den neuen Storage auf die jeweiligen Hosts mounten und die Datenbanken anschließend wieder einrichten. 
 ---
-= Technologieaktualisierung des Storage-Systems
+= Technologieaktualisierung eines Speichersystems in SnapCenter durchführen
 :allow-uri-read: 
 
 
@@ -33,6 +33,7 @@ Die Aktualisierung der Storage-Technologie wird unterstützt, um den primären S
 
 
 
+[[update-the-backups-of-the-primary-storage]]
 == Aktualisieren Sie die Backups des primären Speichers
 
 Wenn der Speicher aktualisiert wird, sollten Sie die Storage Tech Refresh API oder das Cmdlet ausführen, um die alten Backups in SnapCenter mit den neuen Speicherdetails zu aktualisieren.
@@ -104,6 +105,7 @@ Dadurch wird die Snapshot-Existenzprüfung auf dem neuen primären Speicher durc
 
 
 
+[[update-the-backups-of-the-secondary-storage]]
 == Aktualisieren Sie die Backups des sekundären Speichers
 
 Wenn der Speicher aktualisiert wird, sollten Sie die Storage Tech Refresh API oder das Cmdlet ausführen, um die alten Backups in SnapCenter mit den neuen Speicherdetails zu aktualisieren.

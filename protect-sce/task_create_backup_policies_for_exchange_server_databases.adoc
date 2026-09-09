@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: Sie können eine Backup-Richtlinie für die Exchange-Ressourcen oder für die Ressourcengruppen erstellen, bevor Sie SnapCenter zum Sichern von Microsoft Exchange Server-Ressourcen verwenden. Alternativ können Sie beim Erstellen einer Ressourcengruppen oder beim Backup einer einzelnen Ressource eine Backup-Richtlinie erstellen. 
 ---
-= Erstellen von Backup-Richtlinien für Exchange Server-Datenbanken
+= Sicherungsrichtlinien für Exchange Server Datenbanken in SnapCenter erstellen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore 
 summary: Sie können SnapCenter verwenden, um Backups von Dateisystemen wiederherzustellen. Die Wiederherstellung des Dateisystems ist ein mehrphasiger Prozess, bei dem alle Daten von einem angegebenen Backup an den ursprünglichen Speicherort des Filesystems kopiert werden. 
 ---
-= Windows Dateisystemsicherungen wiederherstellen
+= Windows-Dateisystem-Backups mit SnapCenter wiederherstellen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

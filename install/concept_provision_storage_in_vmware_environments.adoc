@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: guest OS, VMware ESXi server, limitations, RDM, Microsoft cluster 
 summary: Mit dem SnapCenter Plug-in für Microsoft Windows in VMware Umgebungen können LUNs erstellt und gemanagt und Snapshot Backup-Kopien gemanagt werden. 
 ---
-= Bereitstellung von Storage in VMware Umgebungen
+= SnapCenter Speicherbereitstellung in VMware-Umgebungen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ Sie können das SnapCenter-Plug-in für Microsoft Windows in VMware-Umgebungen v
 
 
 
+[[supported-vmware-guest-os-platforms]]
 == Unterstützte VMware Gastbetriebssystemplattformen
 
 * Unterstützte Versionen von Windows Server
@@ -33,6 +34,7 @@ Unterstützt VMware Paravirtuellen SCSI-Controller 256 Festplatten können auf R
 
 
 
+[[vmware-esxi-server-related-limitations]]
 === Serverbezogene Einschränkungen bei VMware ESXi
 
 * Das Installieren des Plug-ins für Windows auf einem Microsoft-Cluster auf virtuellen Maschinen mit ESXi-Anmeldedaten wird nicht unterstützt.
@@ -46,6 +48,7 @@ Sie sollten Ihre vCenter-Anmeldedaten verwenden, wenn Sie das Plug-in für Windo
 
 
 
+[[minimum-vcenter-privileges-required-for-snapcenter-rdm-operations]]
 === Minimale vCenter-Berechtigungen, die für SnapCenter RDM-Vorgänge erforderlich sind
 
 Sie sollten die folgenden vCenter-Rechte auf dem Host haben, um RDM-Vorgänge in einem Gastbetriebssystem durchzuführen:
@@ -61,6 +64,7 @@ Nachdem Sie diese Berechtigungen zugewiesen haben, können Sie das Plug-in für 
 
 
 
+[[manage-fc-rdm-luns-in-a-microsoft-cluster]]
 == Verwalten Sie FC RDM LUNs in einem Microsoft Cluster
 
 Sie können das Plug-in für Windows verwenden, um einen Microsoft Cluster mithilfe von FC RDM LUNs zu verwalten. Sie müssen jedoch zuerst das gemeinsame RDM Quorum und den gemeinsam genutzten Speicher außerhalb des Plug-ins erstellen und dann die Festplatten den virtuellen Maschinen im Cluster hinzufügen.
@@ -69,6 +73,7 @@ Ab ESXi 5.5 können Sie auch ESX iSCSI und FCoE Hardware verwenden, um einen Mic
 
 
 
+[[requirements]]
 === Anforderungen
 
 Das Plug-in für Windows unterstützt Microsoft Cluster mithilfe von FC RDM LUNs auf zwei verschiedenen Virtual Machines, die zu zwei verschiedenen ESX- oder ESXi-Servern gehören, auch „Cluster Across“ genannt, wenn Sie die spezifischen Konfigurationsanforderungen erfüllen.
@@ -111,6 +116,7 @@ Wenn Sie eine RDM-LUN erstellen, wird eine Initiatorgruppe mit ALUA erstellt.
 
 
 
+[[limitations]]
 === Einschränkungen
 
 Das Windows-Plug-in unterstützt Microsoft Cluster mit FC/iSCSI RDM LUNs auf verschiedenen Virtual Machines, die zu verschiedenen ESX- oder ESXi-Servern gehören.
@@ -130,6 +136,7 @@ Der Initiator muss entweder FC oder Microsoft iSCSI sein, aber nicht beides.
 
 
 
+[[create-a-shared-fc-rdm-lun]]
 === Erstellen Sie eine gemeinsame FC RDM LUN
 
 Bevor Sie in einem Microsoft Cluster Speicher zwischen den Knoten mit FC RDM LUNs teilen können, müssen Sie zuerst die gemeinsame Quorum-Festplatte und die freigegebene Speicherplatte erstellen und diese dann beiden virtuellen Maschinen im Cluster hinzufügen.
@@ -138,6 +145,7 @@ Die gemeinsam genutzte Festplatte wird nicht mithilfe des Plug-in for Windows er
 
 
 
+[[related-information]]
 == Verwandte Informationen
 
 Konsultieren Sie link:https://techdocs.broadcom.com["Broadcom Technische Dokumentation"^] und suchen Sie in der Dokumentation nach Informationen zum Clustern virtueller Maschinen über physische Hosts hinweg und zum Erstellen von Shared-FC-RDM-LUNs für Microsoft-Cluster.

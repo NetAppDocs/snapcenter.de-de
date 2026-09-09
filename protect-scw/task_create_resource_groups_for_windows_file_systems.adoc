@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resource groups 
 summary: Eine Ressourcengruppe ist der Container, zu dem Sie mehrere Dateisysteme hinzufügen können, die Sie schützen möchten. Sie müssen auch eine oder mehrere Richtlinien an die Ressourcengruppe anhängen, um den Typ des Datensicherungsauftrags zu definieren, den Sie ausführen möchten, und dann den Backup-Zeitplan festlegen. 
 ---
-= Erstellen von Ressourcengruppen für Windows-Dateisysteme
+= Erstellen von SnapCenter Ressourcengruppen für Windows-Dateisysteme
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

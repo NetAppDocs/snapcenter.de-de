@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: NetApp supported plug-ins features, MongoDB, ORASCPM, Oracle Applications, SAP ASE, SAP MaxDB, Storage plug-in 
 summary: SnapCenter lässt sich in die Plug-in-Applikation und mit NetApp Technologien auf dem Storage-System integrieren. Um mit von NetApp unterstützten Plug-ins zu arbeiten, verwenden Sie die grafische Benutzeroberfläche von SnapCenter. 
 ---
-= Von NetApp unterstützte Plug-ins-Funktionen
+= NetApp unterstützte Plug-in-Funktionen in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

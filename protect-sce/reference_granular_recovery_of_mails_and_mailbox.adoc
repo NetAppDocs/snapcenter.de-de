@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SMBR, Single Mailbox recovery, Exchange database 
 summary: 'Die Single Mailbox Recovery Software (SMBR) ermöglicht es Ihnen, Mails oder Postfächer anstelle der gesamten Exchange Datenbank wiederherzustellen.' 
 ---
-= Granulares Recovery von Mails und Mailboxen
+= Granulare E-Mail- und Postfachwiederherstellung für das SnapCenter Plug-in für Microsoft Exchange Server
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

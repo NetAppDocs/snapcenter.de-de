@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Delete clones 
 summary: Klone können gelöscht werden, wenn Sie sie nicht mehr benötigen. 
 ---
-= Klone löschen
+= SnapCenter Klone löschen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

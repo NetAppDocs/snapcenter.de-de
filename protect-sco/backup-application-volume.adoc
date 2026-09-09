@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: application volume, back up 
 summary: Sie können ein Backup des Anwendungs-Volumes auf der Seite „Ressourcen“ erstellen, wenn das Anwendungs-Volume nicht zu einer Ressourcengruppen gehört. 
 ---
-= Backup des Anwendungsvolumes
+= Ein Anwendungsvolume in SnapCenter sichern
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

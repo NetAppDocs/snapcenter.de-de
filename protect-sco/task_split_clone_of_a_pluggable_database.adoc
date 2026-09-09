@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: split, PDB, cloned PDB 
 summary: 'Sie können SnapCenter verwenden, um eine geklonte steckbare Datenbank \(PDB\) aufzuteilen.' 
 ---
-= Split-Klon einer steckbaren Datenbank
+= Einen Klon einer pluggable Datenbank in SnapCenter aufteilen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

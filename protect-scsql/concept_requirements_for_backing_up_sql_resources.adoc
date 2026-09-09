@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Requirements 
 summary: Bevor Sie eine SQL-Ressource sichern, müssen Sie sicherstellen, dass mehrere Anforderungen erfüllt sind. 
 ---
-= Anforderungen für das Backup von SQL Ressourcen
+= Anforderungen für die Sicherung von SQL-Ressourcen in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

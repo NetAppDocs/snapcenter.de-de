@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: disaster recovery 
 summary: Wenn das SnapCenter-Plug-in für SQL Server ausgefallen ist, führen Sie die folgenden manuellen Schritte aus, um das Plug-in wiederherzustellen. 
 ---
-= Disaster Recovery eines SnapCenter Plug-ins für SQL Server
+= Wiederherstellung des SnapCenter Plug-in für SQL Server nach einem Desaster
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,7 +15,7 @@ Wenn das SnapCenter-Plug-in für SQL Server ausfällt, führen Sie die folgenden
 
 .Bevor Sie beginnen
 * Der sekundäre Host sollte das gleiche Betriebssystem, die gleiche Anwendung und den gleichen Hostnamen wie der primäre Host haben.
-* Schieben Sie das SnapCenter-Plug-in für SQL Server auf einen anderen Host, indem Sie die Seite *Add Host* oder *Modify Host* verwenden. Siehe link:https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_hosts.html["Management von Hosts"] Finden Sie weitere Informationen.
+* Das SnapCenter Plug-in für SQL Server kann mithilfe der Seite *Host hinzufügen* oder *Host ändern* auf einen alternativen Host verschoben werden. Siehe link:https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_hosts.html["Hosts in SnapCenter verwalten"] für weitere Informationen.
 
 
 .Schritte

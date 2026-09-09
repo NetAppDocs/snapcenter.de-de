@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP cluster role, privileges 
 summary: Sie sollten eine ONTAP-Cluster-Rolle mit minimalen Berechtigungen erstellen, damit Sie die ONTAP-Administratorrolle nicht verwenden müssen, um Vorgänge in SnapCenter auszuführen. 
 ---
-= Erstellen Sie ONTAP-Cluster-Rollen mit minimalen Berechtigungen
+= Eine ONTAP Clusterrolle mit minimalen Berechtigungen für SnapCenter erstellen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -35,6 +35,7 @@ NOTE: Sie sollten diesen Befehl für jede Berechtigung wiederholen.
 
 
 
+[[ontap-cli-commands-for-creating-cluster-roles-and-assigning-permissions]]
 == ONTAP CLI Befehle zum Erstellen von Clusterrollen und Zuweisen von Berechtigungen
 
 Es gibt verschiedene ONTAP CLI Befehle, die Sie ausführen sollten, um Cluster-Rollen zu erstellen und Berechtigungen zuzuweisen.

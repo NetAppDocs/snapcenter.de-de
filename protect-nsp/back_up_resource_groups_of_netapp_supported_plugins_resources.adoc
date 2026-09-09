@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup, NetApp supported plug-ins 
 summary: Auf der Seite „Ressourcen“ können Sie ein Backup einer Ressourcengruppe nach Bedarf erstellen. Wenn eine Ressourcengruppe über eine Richtlinie und einen konfigurierten Zeitplan verfügt, werden die Backups automatisch gemäß dem Zeitplan durchgeführt. 
 ---
-= Backup von Ressourcengruppen von von NetApp unterstützten Plug-in-Ressourcen
+= Ressourcengruppen von NetApp unterstützten Plug-ins in SnapCenter sichern
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

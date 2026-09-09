@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Credentials 
 summary: Bevor Sie von SnapCenter NetApp unterstützte Plug-ins verwenden, muss der SnapCenter-Administrator den SnapCenter-Server installieren und konfigurieren und die erforderlichen Aufgaben ausführen. 
 ---
-= Voraussetzungen für die Verwendung der von NetApp unterstützten Plug-ins
+= Voraussetzungen für die Verwendung von NetApp unterstützten Plug-ins mit SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

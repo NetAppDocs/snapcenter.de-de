@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for IBM Db2 
 summary: Bei der Vorbereitung von Backups und Klonen einer Ressource ist es unter Umständen hilfreich, eine grafische Darstellung aller Backups und Klone auf dem primären und sekundären Storage anzuzeigen. 
 ---
-= Zeigen Sie IBM DB2-Backups und -Klone auf der Topology-Seite an
+= IBM Db2 Backups und Klone auf der SnapCenter Topologieseite anzeigen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

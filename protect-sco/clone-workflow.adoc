@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clone operation, clone, workflow 
 summary: Der Klon-Workflow umfasst die Planung, die Durchführung des Klonvorgangs und die Überwachung des Vorgangs. 
 ---
-= Klon-Workflow
+= SnapCenter Klon-Workflow für Oracle-Datenbanken
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

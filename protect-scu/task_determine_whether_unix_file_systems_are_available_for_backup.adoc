@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for UNIX file systems, discovery,file systems, UNIX, Unix file systems 
 summary: Nach der Installation des Plug-ins für Unix-Dateisysteme werden die Dateisysteme auf dem Host automatisch erkannt und auf der Seite Ressourcen angezeigt. 
 ---
-= Ermitteln Sie die für Backups verfügbaren UNIX-Dateisysteme
+= Die für die Datensicherung verfügbaren UNIX-Dateisysteme in SnapCenter anzeigen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

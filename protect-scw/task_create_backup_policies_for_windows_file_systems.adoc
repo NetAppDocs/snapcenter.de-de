@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup policy 
 summary: Sie können eine neue Sicherungsrichtlinie für Ressourcen erstellen, bevor Sie SnapCenter zum Sichern von Windows-Dateisystemen verwenden, oder Sie können eine neue Backup-Richtlinie zum Zeitpunkt der Erstellung einer Ressourcengruppen oder beim Backup einer Ressource erstellen. 
 ---
-= Erstellen von Backup-Richtlinien für Windows Filesysteme
+= Erstellung von SnapCenter Sicherungsrichtlinien für Windows-Dateisysteme
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

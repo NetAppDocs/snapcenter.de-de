@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: security,two-way ssl,configure two-way ssl, linux host 
 summary: Sie sollten die bidirektionale SSL-Kommunikation konfigurieren, um die gegenseitige Kommunikation zwischen SnapCenter-Server auf Linux-Host und den Plug-ins zu sichern. 
 ---
-= Konfigurieren Sie die bidirektionale SSL-Kommunikation auf dem Linux-Host
+= Konfiguration der bidirektionalen SSL-Kommunikation auf einem SnapCenter Linux-Host
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

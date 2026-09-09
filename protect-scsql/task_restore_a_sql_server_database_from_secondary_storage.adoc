@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore operation 
 summary: 'Sie können die gesicherten SQL Server Datenbanken aus den physischen LUNs \ (RDM, iSCSI oder FCP\) auf einem sekundären Speichersystem wiederherstellen. Die Funktion „Restore“ ist ein mehrphasiger Prozess, bei dem alle Daten und Protokollseiten von einem bestimmten SQL Server Backup im sekundären Storage-System in eine angegebene Datenbank kopiert werden.' 
 ---
-= Wiederherstellung einer SQL Server-Datenbank aus dem sekundären Storage
+= Wiederherstellung einer SQL Server Datenbank aus dem Sekundärspeicher in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

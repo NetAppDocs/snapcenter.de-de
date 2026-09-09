@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: tech refresh, SnapCenter Server, cmdlet, APIs, F5, rollback, decommission, disaster recovery, standalone 
 summary: Installieren Sie dieselbe Version von SnapCenter Server auf dem neuen Host und führen Sie dann die APIs oder cmdlets aus, um die SnapCenter vom alten Server zu sichern und sie auf dem neuen Server wiederherzustellen. 
 ---
-= Technologieaktualisierung des SnapCenter-Serverhosts
+= Technologieaktualisierung des SnapCenter Serverhosts durchführen
 :allow-uri-read: 
 
 
@@ -55,6 +55,7 @@ NOTE: Wenn Sie die Datei Web.config im alten SnapCenter-Host manuell aktualisier
 
 
 
+[[tech-refresh-of-a-node-in-f5-cluster]]
 == Tech Refresh eines Node in F5 Cluster
 
 Sie können jeden beliebigen Knoten im F5-Cluster durch Entfernen des Knotens und Hinzufügen des neuen Knotens aktualisieren. Wenn der Node, der aktualisiert werden muss, aktiv ist, machen Sie einen anderen Node des Clusters als aktiv, und entfernen Sie dann den Node.
@@ -66,22 +67,26 @@ NOTE: Wenn sich die url des F5-Clusters ändert, kann die url auf allen Hosts en
 
 
 
+[[decommissioning-the-old-snapcenter-server-host]]
 == Den alten SnapCenter-Server-Host stilllegen
 
 Sie können den alten SnapCenter-Server-Host entfernen, nachdem Sie überprüft haben, ob der neue SnapCenter-Server betriebsbereit ist und alle Plug-in-Hosts mit dem neuen SnapCenter-Server kommunizieren können.
 
 
 
+[[rollback-to-the-old-snapcenter-server-host]]
 == Rollback auf den alten SnapCenter-Server-Host durchführen
 
 Im Falle von Problemen können Sie den alten SnapCenter-Server-Host zurückbringen, indem Sie die SnapCenter-Server-URL in allen Hosts entweder über die API: Oder das Cmdlet: _Set-SmServerConfig_ aktualisieren `/<snapcenter_version>/server/configureurl` .
 
 
 
+[[disaster-recovery]]
 == Disaster Recovery
 
 
 
+[[disaster-recovery-of-standalone-snapcenter-host]]
 === Disaster Recovery von Standalone-SnapCenter-Host
 
 Sie können eine Disaster Recovery durchführen, indem Sie die Serversicherung auf dem neuen Host wiederherstellen.
@@ -115,6 +120,7 @@ NOTE: Die Einträge des Servers _etc/Host_ werden nicht wiederhergestellt. Sie k
 
 
 
+[[disaster-recovery-of-snapcenter-f5-cluster]]
 === Disaster Recovery von SnapCenter F5 Clustern
 
 Sie können eine Disaster Recovery durchführen, indem Sie das Server-Backup auf dem neuen Host wiederherstellen und dann den eigenständigen Host in einen Cluster konvertieren.

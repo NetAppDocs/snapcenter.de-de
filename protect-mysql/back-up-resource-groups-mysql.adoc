@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for MySQL 
 summary: Eine Ressourcengruppe ist eine Sammlung von Ressourcen auf einem Host. Für alle in der Ressourcengruppe definierten Ressourcen wird ein Sicherungsvorgang in der Ressourcengruppe durchgeführt. 
 ---
-= Sichern von Ressourcengruppen
+= MySQL-Ressourcengruppen mit SnapCenter sichern
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

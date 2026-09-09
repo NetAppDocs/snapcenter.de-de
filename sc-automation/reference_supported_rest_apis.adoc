@@ -15,12 +15,14 @@ Die über die SnapCenter REST API verfügbaren Ressourcen sind nach Kategorien s
 
 
 
+[[auth]]
 == Auth
 
 Sie können diese API verwenden, um sich beim SnapCenter-Server anzumelden. Diese API gibt ein Benutzerautorisierungs-Token zurück, das zur Authentifizierung weiterer Anforderungen verwendet wird.
 
 
 
+[[domains]]
 == Domänen
 
 Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
@@ -33,6 +35,7 @@ Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
 
 
 
+[[jobs]]
 == Jobs
 
 Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
@@ -44,6 +47,7 @@ Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
 
 
 
+[[settings]]
 == Einstellungen
 
 Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
@@ -59,6 +63,7 @@ Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
 
 
 
+[[hosts]]
 == Hosts
 
 Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
@@ -89,6 +94,7 @@ Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
 
 
 
+[[resources]]
 == Ressourcen
 
 Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
@@ -143,6 +149,7 @@ Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
 
 
 
+[[backups]]
 == Backups
 
 Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
@@ -160,6 +167,7 @@ Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
 
 
 
+[[clones]]
 == Klone
 
 Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
@@ -176,6 +184,7 @@ Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
 
 
 
+[[clone-split]]
 == Aufteilung klonen
 
 Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
@@ -187,6 +196,7 @@ Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
 
 
 
+[[resource-groups]]
 == Ressourcengruppen
 
 Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
@@ -207,6 +217,7 @@ Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
 
 
 
+[[policies]]
 == Richtlinien
 
 Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
@@ -223,6 +234,7 @@ Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
 
 
 
+[[storage]]
 == Storage
 
 Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
@@ -239,6 +251,7 @@ Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
 
 
 
+[[share]]
 == Share
 
 Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
@@ -251,6 +264,7 @@ Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
 
 
 
+[[plugins]]
 == Plug-Ins
 
 Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
@@ -293,6 +307,7 @@ Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
 
 
 
+[[reports]]
 == Berichte An
 
 Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
@@ -304,6 +319,7 @@ Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
 
 
 
+[[alerts]]
 == Meldungen
 
 Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
@@ -315,6 +331,7 @@ Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
 
 
 
+[[rbac]]
 == Rbac
 
 Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
@@ -333,6 +350,7 @@ Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
 
 
 
+[[configuration]]
 == Konfiguration
 
 Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
@@ -343,6 +361,7 @@ Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
 
 
 
+[[certificatesettings]]
 == Zertifikateinstellungen
 
 Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
@@ -353,6 +372,7 @@ Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
 
 
 
+[[repository]]
 == Repository
 
 Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
@@ -366,6 +386,7 @@ Mit APIs können unterschiedliche Vorgänge durchgeführt werden.
 
 
 
+[[version]]
 == Version
 
 Sie können diese API zum Anzeigen der SnapCenter-Version verwenden.

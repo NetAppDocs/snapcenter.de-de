@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resource groups, attach policies, snapcenter, SAP HANA, backup polices, schedule 
 summary: Eine Ressourcengruppe ist der Container, dem Sie Ressourcen hinzufügen müssen, die Sie sichern und schützen möchten. 
 ---
-= Ressourcengruppen erstellen und SAP HANA Backup-Richtlinien anhängen
+= Erstellung von SnapCenter Ressourcengruppen und Anbindung von SAP HANA Sicherungsrichtlinien
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

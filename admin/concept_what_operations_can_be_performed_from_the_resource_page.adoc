@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Resources page 
 summary: Sie können auf der Seite Ressourcen Ressourcen Ressourcen Ressourcen Ressourcen erkennen und Datensicherungsvorgänge durchführen. Die Operationen, die Sie durchführen können, unterscheiden sich je nach dem Plug-in, das Sie für das Management Ihrer Ressourcen verwenden. 
 ---
-= Von der Seite Ressourcen unterstützte Vorgänge
+= Von der SnapCenter Ressourcen-Seite unterstützte Vorgänge
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Sie können Backup-Vorgänge, die ausgeführt werden, in die Warteschlange gestellt oder nicht ansprechbar sind, abbrechen. 
 ---
-= Backup-Vorgänge von Oracle-Datenbanken abbrechen
+= Abbrechen von Oracle Datenbank-Backup-Vorgängen in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

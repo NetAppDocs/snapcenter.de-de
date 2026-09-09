@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: Damit das SnapCenter Plug-in für Microsoft Exchange Server gemeinsam mit SnapManager für Microsoft Exchange Server eingesetzt werden kann, müssen Sie das SnapCenter Plug-in für Microsoft Exchange Server auf demselben Exchange Server installieren, auf dem SnapManager für Microsoft Exchange Server installiert ist, indem Sie die Zeitpläne für SnapManager für Exchange deaktivieren. Und neue Zeitpläne und Backups mit dem SnapCenter Plug-in für Microsoft Exchange Server konfigurieren. 
 ---
-= Konfigurieren Sie SnapManager 7.x für Exchange und SnapCenter, um koexistieren zu können
+= Konfiguration von SnapManager für Exchange zur Koexistenz mit SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

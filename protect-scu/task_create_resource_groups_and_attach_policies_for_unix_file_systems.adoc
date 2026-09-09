@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: unix file systems, resource group, policy 
 summary: Eine Ressourcengruppe ist ein Container, in dem Sie Ressourcen hinzufügen, die Sie sichern und schützen möchten. 
 ---
-= Erstellen von Ressourcengruppen und Anhängen von Richtlinien für Unix-Dateisysteme
+= Ressourcengruppen erstellen und Richtlinien für UNIX-Dateisysteme in SnapCenter zuweisen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

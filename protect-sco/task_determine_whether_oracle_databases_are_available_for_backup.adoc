@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials,SnapCenter Plug-in for Oracle Databases, non-database entries, oratab 
 summary: Ressourcen sind Oracle Datenbanken auf dem Host, die von SnapCenter gemanagt werden. Diese Datenbanken können Ressourcengruppen hinzugefügt werden, um Datensicherungsvorgänge auszuführen, nachdem Sie die verfügbaren Datenbanken ermittelt haben. 
 ---
-= Entdecken Sie die für Backups verfügbaren Oracle-Datenbanken
+= Oracle-Datenbanken, die in SnapCenter für die Datensicherung verfügbar sind, werden angezeigt
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -25,6 +25,7 @@ Weitere Informationen finden Sie unter https://docs.netapp.com/us-en/sc-plugin-v
 
 
 
+[[step-1-prevent-snapcenter-from-discovering-non-database-entries]]
 == Schritt 1: SnapCenter daran hindern, nicht-Datenbank-Einträge zu erkennen
 
 Sie können verhindern, dass SnapCenter nicht-Datenbank-Einträge entdeckt, die in der oratab-Datei hinzugefügt wurden.
@@ -66,6 +67,7 @@ IMPORTANT: Es wird immer empfohlen, vor dem Upgrade des SnapCenter-Plug-ins eine
 
 
 
+[[step-2-discover-resources]]
 == Schritt 2: Entdecken Sie Ressourcen
 
 Nach der Installation des Plug-ins werden alle Datenbanken auf diesem Host automatisch erkannt und auf der Seite Ressourcen angezeigt.

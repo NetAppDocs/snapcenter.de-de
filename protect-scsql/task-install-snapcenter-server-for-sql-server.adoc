@@ -15,6 +15,7 @@ Enthält eine zusammengefasste Reihe von Installationsanweisungen für die Insta
 
 
 
+[[step-1-download-and-install-snapcenter-server]]
 == Schritt 1: Downloaden und installieren Sie SnapCenter Server
 
 . Laden Sie das Installationspaket für den SnapCenter-Server von herunter https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab["NetApp Support Website"^] Doppelklicken Sie anschließend auf die exe.
@@ -34,6 +35,7 @@ NOTE: Das Sonderzeichen „%“ wird im benutzerdefinierten Pfad für die Instal
 
 
 
+[[step-2-log-in-to-snapcenter]]
 == Schritt 2: Melden Sie sich bei SnapCenter an
 
 . Starten Sie SnapCenter über eine Verknüpfung auf dem Host-Desktop oder über die URL, die von der Installation bereitgestellt wird (_\https://server:8146_ für Standardport 8146, auf dem SnapCenter-Server installiert ist).
@@ -49,6 +51,7 @@ Verwenden Sie für ein integriertes lokales Format für den Admin-Benutzernamen 
 
 
 
+[[step-3-add-a-snapcenter-standard-controller-based-license]]
 == Schritt 3: Fügen Sie eine Controller-basierte SnapCenter Standard-Lizenz hinzu
 
 . Loggen Sie sich über die ONTAP-Befehlszeile beim Controller ein und geben Sie Folgendes ein:
@@ -63,6 +66,7 @@ Verwenden Sie für ein integriertes lokales Format für den Admin-Benutzernamen 
 
 
 
+[[step-4-set-up-storage-system-connections]]
 == Schritt 4: Einrichten von Verbindungen zum Storage-System
 
 . Klicken Sie im linken Fensterbereich auf *Speichersysteme > Neu*.

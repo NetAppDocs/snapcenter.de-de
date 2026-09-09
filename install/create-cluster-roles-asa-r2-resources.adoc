@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cluster role, privileges, asa r2 systems 
 summary: Sie sollten ONTAP-Clusterrollen für ASA r2-Systeme erstellen, damit Sie für Vorgänge in SnapCenter nicht die ONTAP-Administratorrolle verwenden müssen. 
 ---
-= Erstellen von ONTAP Clusterrollen für ASA r2-Systeme
+= ONTAP Clusterrollen für ASA r2 Systeme in SnapCenter erstellen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -35,6 +35,7 @@ NOTE: Sie sollten diesen Befehl für jede Berechtigung wiederholen.
 
 
 
+[[ontap-cli-commands-for-creating-cluster-roles-and-assigning-permissions]]
 == ONTAP CLI Befehle zum Erstellen von Clusterrollen und Zuweisen von Berechtigungen
 
 Es gibt verschiedene ONTAP CLI Befehle, die Sie ausführen sollten, um Cluster-Rollen zu erstellen und Berechtigungen zuzuweisen.

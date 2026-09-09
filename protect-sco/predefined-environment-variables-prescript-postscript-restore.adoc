@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: environment variable, predefined, prescript, postscript, restore 
 summary: Mit SnapCenter können Sie die vordefinierten Umgebungsvariablen verwenden, wenn Sie das Prescript und das Postscript beim Wiederherstellen einer Datenbank ausführen. 
 ---
-= Vordefinierte Umgebungsvariablen zur Wiederherstellung spezifischer Vorschrift und Postscript
+= SnapCenter Präskript- und Postskript-Umgebungsvariablen für die Wiederherstellung
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

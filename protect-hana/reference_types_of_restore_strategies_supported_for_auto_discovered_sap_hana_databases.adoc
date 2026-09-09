@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Databases 
 summary: Sie müssen eine Strategie definieren, bevor Sie die Restore-Vorgänge mit SnapCenter erfolgreich durchführen können. Es gibt zwei Arten von Wiederherstellungsstrategien für automatisch erkannte SAP HANA Datenbanken. 
 ---
-= Arten von Wiederherstellungsstrategien werden für automatisch erkannte SAP HANA-Datenbanken unterstützt
+= SnapCenter Wiederherstellungsstrategien für automatisch erkannte SAP HANA Datenbanken
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ Sie müssen eine Strategie definieren, bevor Sie die Restore-Vorgänge mit SnapC
 
 
 
+[[complete-resource-restore]]
 == Komplette Ressourcenwiederherstellung
 
 * Stellt alle Volumes, qtrees und LUNs einer Ressource wieder her
@@ -30,6 +31,7 @@ NOTE: Wenn die Ressource Volumes oder qtrees enthält, werden die nach dem ausge
 
 
 
+[[tenant-database]]
 == Mandanten-Datenbank
 
 * Stellt die Mandantendatenbank wieder her

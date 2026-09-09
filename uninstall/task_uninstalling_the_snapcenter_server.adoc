@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: uninstall, snapcenter server, windows 
 summary: Wenn Sie den SnapCenter-Server nicht mehr für die Verwaltung von Datensicherungsaufgaben verwenden möchten, können Sie SnapCenter Server mit der Systemsteuerung Programme und Funktionen des SnapCenter-Servers deinstallieren. Durch die Deinstallation des SnapCenter Servers werden alle Komponenten entfernt. 
 ---
-= Deinstallieren Sie den SnapCenter-Server auf dem Windows-Host
+= Deinstallation des SnapCenter Server auf einem Windows Host
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

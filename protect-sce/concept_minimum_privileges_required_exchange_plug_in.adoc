@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Minimum ONTAP privileges 
 summary: Die erforderlichen Mindestberechtigungen für ONTAP variieren je nach SnapCenter Plug-ins, die Sie zur Datensicherung verwenden. 
 ---
-= Minimale ONTAP-Berechtigungen, die für das Exchange Plug-in erforderlich sind
+= Minimale ONTAP-Berechtigungen erforderlich für das SnapCenter Plug-in für Microsoft Exchange Server
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

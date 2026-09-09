@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: HDB User Store Key, HDBSQL OS User, SAP HANA database 
 summary: Sie müssen den HDB-Benutzerspeicherschlüssel und den HDBSQL OS-Benutzer konfigurieren, um Datenschutzvorgänge in SAP HANA-Datenbanken durchzuführen. 
 ---
-= Konfiguration des HDB-Benutzerspeicherschlüssels und des HDBSQL OS-Benutzers für die SAP HANA-Datenbank
+= HDB-Benutzerspeicherschlüssel und HDBSQL-Betriebssystembenutzer für SnapCenter SAP HANA-Datenbanken konfigurieren
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

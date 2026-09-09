@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Oracle Database, restore, recover, tablespaces, pluggable databases, point-in-time 
 summary: Mit SnapCenter können Daten von einem oder mehreren Backups wiederhergestellt werden. 
 ---
-= Stellen Sie Oracle Datenbanken wieder her
+= Wiederherstellung und Wiederherstellung von Oracle-Datenbanken mit SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -54,6 +54,7 @@ Bei einem Datenverlust können Sie mit SnapCenter Daten von einem oder mehreren 
 
 
 
+[[restore-and-recover-tablespaces-using-point-in-time-recovery]]
 == Wiederherstellen von Tabellen mit Point-in-Time Recovery
 
 Sie können eine Teilmenge an beschädigten oder abfallenen Tablespaces wiederherstellen, ohne die anderen Tablespaces in der Datenbank zu beeinträchtigen. SnapCenter verwendet RMAN für die Durchführung des Point-in-Time Recovery (PITR) der Tabellen.
@@ -88,6 +89,7 @@ Wenn die Sicherung nicht katalogisiert ist, sollten Sie die Sicherung auswählen
 
 
 
+[[restore-and-recover-pluggable-database-using-point-in-time-recovery]]
 == Wiederherstellen steckbarer Datenbanken über zeitpunktgenaues Recovery
 
 Sie können eine steckbare Datenbank (PDB) wiederherstellen, die beschädigt oder verworfen wurde, ohne die andere DBs in der Container-Datenbank (CDB) zu belasten. SnapCenter nutzt RMAN für die Durchführung von Point-in-Time Recoverys (PITR) der PDB.

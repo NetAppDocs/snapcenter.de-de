@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: unix file systems, preparation for protection, prerequisites 
 summary: Bevor Sie Datensicherungsvorgänge wie z. B. Backup-, Klon- oder Restore-Vorgänge durchführen, sollten Sie Ihre Umgebung einrichten. 
 ---
-= Bereiten Sie sich auf den Schutz von Unix-Dateisystemen vor
+= Voraussetzungen für den Schutz von UNIX-Dateisystemen mit SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

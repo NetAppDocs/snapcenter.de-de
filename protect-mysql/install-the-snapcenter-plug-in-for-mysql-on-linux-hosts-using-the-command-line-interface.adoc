@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: install, SnapCenter Plug-in for MySQL 
 summary: 'Sie sollten das SnapCenter-Plug-in für die MySQL-Datenbank über die SnapCenter-Benutzeroberfläche (UI) installieren. Wenn Ihre Umgebung die Remote-Installation des Plug-ins über die SnapCenter-Benutzeroberfläche nicht zulässt, können Sie das Plug-in für MySQL-Datenbank entweder im Konsolenmodus oder im unbeaufsichtigten Modus über die Befehlszeilenschnittstelle (CLI1) installieren.' 
 ---
-= Installieren Sie das SnapCenter-Plug-in für MySQL auf Linux-Hosts über die Befehlszeilenschnittstelle
+= Das SnapCenter Plug-in für MySQL auf Linux-Hosts mithilfe der CLI installieren
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

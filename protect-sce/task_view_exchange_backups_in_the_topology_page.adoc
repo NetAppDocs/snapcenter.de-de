@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: Wenn Sie die Datensicherung vorbereiten, ist es Ihnen eventuell hilfreich, eine grafische Darstellung aller Backups auf den primären und sekundären Speichern anzuzeigen. 
 ---
-= Zeigen Sie Exchange-Backups auf der Seite Topologie an
+= Exchange-Sicherungen auf der SnapCenter Topologieseite anzeigen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

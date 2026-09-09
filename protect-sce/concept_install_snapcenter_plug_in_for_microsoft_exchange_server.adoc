@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: installing 
 summary: Sie sollten das SnapCenter Plug-in für Microsoft Exchange Server installieren und einrichten, wenn Sie Exchange-Datenbanken schützen möchten. 
 ---
-= Installations-Workflow des SnapCenter Plug-ins für Microsoft Exchange Server
+= SnapCenter Plug-in-Installationsworkflow für Microsoft Exchange Server
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

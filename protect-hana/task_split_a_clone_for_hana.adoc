@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: split clone, snapcenter 
 summary: Sie können SnapCenter verwenden, um eine geklonte Ressource von der übergeordneten Ressource zu trennen. Der geteilte Klon ist unabhängig von der übergeordneten Ressource. 
 ---
-= Teilen Sie einen Klon auf
+= Einen SnapCenter Klon für eine SAP HANA Datenbank aufteilen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

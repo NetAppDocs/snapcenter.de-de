@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Microsoft SQL Server 
 summary: 'SnapCenter kann Backups zwar sofort nach der Erstellung überprüfen, kann aber die zum Abschließen des Backup-Jobs erforderliche Zeit erheblich verlängern und ist ressourcenintensiv. Daher ist es fast immer am besten, die Verifizierung in einem separaten Job für ein späteres Mal zu planen. Wenn Sie beispielsweise eine Datenbank um 5:00 Uhr sichern Sie können jeden Tag eine Verifizierung planen, und zwar eine Stunde später um 6:00 Uhr' 
 ---
-= Wann werden Überprüfungsaufträge geplant
+= Zeitpunkt für die Planung von Verifizierungsaufträgen in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

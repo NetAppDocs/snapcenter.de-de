@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: exporting certificates, enable certificate-based authentication, certificate-based authentication, configure CA signed key pair, configure root, configure intermediate certificates, security,authentication, export CA certificates 
 summary: Exportieren von SnapCenter-Zertifikaten 
 ---
-= Konfigurieren Sie die zertifikatbasierte Authentifizierung
+= Zertifikatbasierte Authentifizierung für SnapCenter konfigurieren
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ Die zertifikatbasierte Authentifizierung erhöht die Sicherheit durch die Überp
 
 
 
+[[enable-certificate-based-authentication]]
 == Aktivieren Sie die zertifikatbasierte Authentifizierung
 
 Führen Sie das folgende PowerShell-Cmdlet aus, um die zertifikatbasierte Authentifizierung für SnapCenter Server und die Windows Plug-in-Hosts zu aktivieren.  Bei Linux-Plug-in-Hosts wird die zertifikatbasierte Authentifizierung aktiviert, wenn Sie die bidirektionale SSL-Funktion aktivieren.
@@ -31,6 +32,7 @@ Führen Sie das folgende PowerShell-Cmdlet aus, um die zertifikatbasierte Authen
 
 
 
+[[export-certificate-authority-ca-certificates-from-snapcenter-server]]
 == Exportieren Sie Zertifikate der Zertifizierungsstelle (CA) vom SnapCenter-Server
 
 Sie sollten die CA-Zertifikate über die Microsoft Management Console (MMC) vom SnapCenter-Server auf die Plug-in-Hosts exportieren.
@@ -84,6 +86,7 @@ NOTE: Die zertifikatbasierte Authentifizierung wird für SnapCenter HA-Konfigura
 
 
 
+[[import-ca-certificate-to-the-windows-plug-in-hosts]]
 == Importieren Sie das CA-Zertifikat auf die Windows-Plug-in-Hosts
 
 Um das exportierte SnapCenter-Server-CA-Zertifikat zu verwenden, sollten Sie das zugehörige Zertifikat über die Microsoft-Managementkonsole (MMC) auf die SnapCenter-Windows-Plug-in-Hosts importieren.
@@ -131,6 +134,7 @@ Assistent zum Exportieren von Zertifikaten abschließen
 |===
 
 
+[[import-ca-certificate-to-the-unix-plug-in-hosts]]
 == Importieren Sie das CA-Zertifikat auf die UNIX-Plug-in-Hosts
 
 Sie sollten das CA-Zertifikat auf die UNIX-Plug-in-Hosts importieren.
@@ -154,6 +158,7 @@ Sie sollten das CA-Zertifikat auf die UNIX-Plug-in-Hosts importieren.
 
 
 
+[[configure-root-or-intermediate-certificates-to-spl-trust-store]]
 === Konfigurieren Sie Root- oder Zwischenzertifikate in SPL Trust-Store
 
 Sie sollten die Stammzertifikate oder Zwischenzertifikate für den SPL-Vertrauensspeicher konfigurieren. Sie sollten das Root-CA-Zertifikat und anschließend die Zwischenzertifizierungszertifikate hinzufügen.
@@ -171,6 +176,7 @@ Sie sollten die Stammzertifikate oder Zwischenzertifikate für den SPL-Vertrauen
 
 
 
+[[configure-ca-signed-key-pair-to-spl-trust-store]]
 === Konfigurieren Sie das CA-signierte Schlüsselpaar für SPL Trust-Store
 
 Sie sollten das CA-Schlüsselpaar für den SPL Trust-Store konfigurieren.
@@ -202,6 +208,7 @@ Diesen Wert mit dem Schlüssel SPL_CERTIFICATE_ALIAS aktualisieren.
 
 
 
+[[export-snapcenter-certificates]]
 == Exportieren von SnapCenter-Zertifikaten
 
 Sie sollten die SnapCenter-Zertifikate im PFX-Format exportieren.

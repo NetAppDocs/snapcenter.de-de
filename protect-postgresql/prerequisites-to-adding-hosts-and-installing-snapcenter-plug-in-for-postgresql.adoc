@@ -25,6 +25,7 @@ NOTE: IBM Java wird auf Windows- und Linux-Hosts nicht unterstützt.
 
 
 
+[[windows-hosts]]
 == Windows Hosts
 
 * Sie müssen über einen Domänenbenutzer mit lokalen Administratorrechten mit lokalen Anmeldeberechtigungen auf dem Remote-Host verfügen.
@@ -38,6 +39,7 @@ link:https://www.oracle.com/java/technologies/downloads/#java17["Laden Sie Java 
 
 
 
+[[linux-hosts]]
 == Linux-Hosts
 
 * Sie müssen die passwortbasierte SSH-Verbindung für den Root- oder nicht-Root-Benutzer aktiviert haben.
@@ -51,6 +53,7 @@ link:https://www.oracle.com/java/technologies/downloads/#java17["Laden Sie Java 
 
 
 
+[[supplemental-commands]]
 == Zusätzliche Befehle
 
 Um einen zusätzlichen Befehl auf dem SnapCenter Plug-in für PostgreSQL auszuführen, müssen Sie ihn in die Datei _allowed_commands.config_ einfügen.
@@ -78,6 +81,7 @@ NOTE: Sie sollten keinen Platzhaltereintrag (*) verwenden, um alle Befehle zuzul
 
 
 
+[[configure-sudo-privileges-for-non-root-users-for-linux-host]]
 == Konfigurieren von Sudo-Berechtigungen für Benutzer ohne Root-Zugriff auf Linux-Hosts
 
 Mit SnapCenter kann ein Benutzer, der kein Root-Benutzer ist, das SnapCenter-Plug-in-Paket für Linux installieren und den Plug-in-Prozess starten. Die Plug-in-Prozesse werden als effektiver nicht-Root-Benutzer ausgeführt. Sie sollten sudo-Berechtigungen für den nicht-Root-Benutzer konfigurieren, um Zugriff auf mehrere Pfade zu ermöglichen.

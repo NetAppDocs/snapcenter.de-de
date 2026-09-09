@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clone, cancel 
 summary: Sie können Klonvorgänge in die Warteschlange abbrechen. 
 ---
-= Klonvorgänge für SQL-Ressourcen abbrechen
+= SQL-Ressourcenklonvorgänge in SnapCenter abbrechen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter 
 summary: 'Sie können eine Zertifikatsignierungsanforderung (CSR) generieren und das Zertifikat importieren.' 
 ---
-= ZertifikatCSR-Datei erstellen
+= CA-Zertifikat-CSR-Dateien für SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

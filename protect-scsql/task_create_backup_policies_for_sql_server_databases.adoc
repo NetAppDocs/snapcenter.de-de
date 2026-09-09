@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup policy 
 summary: Sie können eine Sicherungsrichtlinie für die Ressource oder die Ressourcengruppe erstellen, bevor Sie SnapCenter zum Sichern von SQL Server-Ressourcen verwenden. Alternativ können Sie beim Erstellen einer Ressourcengruppen oder beim Sichern einer einzelnen Ressource eine Backup-Richtlinie erstellen. 
 ---
-= Erstellen von Backup-Richtlinien für SQL Server-Datenbanken
+= Sicherungsrichtlinien für SQL Server Datenbanken in SnapCenter erstellen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -58,6 +58,7 @@ Bei ONTAP Version 9.12.1 und niedriger übernehmen die im Rahmen der Wiederherst
 
 
 
+[[step-1-create-policy-name]]
 == Schritt: Richtliniennamen Erstellen
 
 . Wählen Sie im linken Navigationsbereich *Einstellungen*.
@@ -68,6 +69,7 @@ Bei ONTAP Version 9.12.1 und niedriger übernehmen die im Rahmen der Wiederherst
 
 
 
+[[step-2-configure-policy-options]]
 == Schritt 2: Konfigurieren von Richtlinienoptionen
 
 . Führen Sie auf der Seite Richtlinientyp die folgenden Schritte durch:
@@ -129,6 +131,7 @@ NOTE: Microsoft SQL unterstützt nicht die Option *nur kopieren Backup* zusammen
 
 
 
+[[step-3-configure-availability-group-settings]]
 == Schritt 3: Konfigurieren der Einstellungen für Verfügbarkeitsgruppen
 
 . Führen Sie im Abschnitt Einstellungen für Verfügbarkeitsgruppen die folgenden Aktionen durch:
@@ -158,6 +161,7 @@ NOTE: Bei Cluster-Konfigurationen werden die Backups entsprechend den in der Ric
 
 
 
+[[step-4-configure-snapshot-and-replication-settings]]
 == Schritt 4: Konfigurieren von Snapshot- und Replikationseinstellungen
 
 . Führen Sie auf der Seite Snapshot und Replikation die folgenden Schritte durch:
@@ -180,6 +184,7 @@ NOTE: Wenn Sie für 2:00 Uhr geplant sind, wird der Zeitplan während der Sommer
 
 
 
+[[step-5-configure-up-to-the-minute-retention-settings]]
 == Schritt 5: Konfigurieren Sie die aktuellen Einstellungen für die Aufbewahrung
 
 . Führen Sie im Abschnitt Einstellungen für die Aufbewahrung bis zur Minute je nach dem auf der Seite für den Sicherungstyp ausgewählten Sicherungstyp eine oder mehrere der folgenden Aktionen durch:
@@ -206,6 +211,7 @@ Bewahren Sie die Backup-Kopien für eine bestimmte Anzahl von Tagen auf.
 ====
 
 
+[[step-6-configure-snapshot-settings]]
 == Schritt 6: Snapshot-Einstellungen konfigurieren
 
 . Führen Sie für die Einstellungen für die vollständige Backup-Aufbewahrung die folgenden Aktionen durch:
@@ -246,6 +252,7 @@ NOTE: Sie können primären Snapshots SnapMirror Labels für die Remote-Replikat
 
 
 
+[[step-7-configure-secondary-replication-options]]
 == Schritt 7: Konfigurieren Sie Optionen für die sekundäre Replikation
 
 . Wählen Sie im Abschnitt sekundäre Replikationsoptionen auswählen eine oder beide der folgenden sekundären Replikationsoptionen aus:
@@ -299,6 +306,7 @@ Siehe link:../protect-scsql/task_view_sql_server_backups_and_clones_in_the_topol
 ====
 
 
+[[step-8-configure-script-settings]]
 == Schritt 8: Konfigurieren der Skripteinstellungen
 
 . Geben Sie auf der Seite Skript den Pfad und die Argumente des Vorskripts bzw. des Postskripts ein, die vor bzw. nach dem Backup ausgeführt werden sollen.
@@ -317,6 +325,7 @@ NOTE: Sie müssen die SnapMirror Aufbewahrungsrichtlinie in ONTAP so konfigurier
 
 
 
+[[step-9-configure-verification-settings]]
 == Schritt 9: Konfigurieren Sie die Überprüfungseinstellungen
 
 Führen Sie auf der Seite Überprüfung die folgenden Schritte aus:
@@ -361,6 +370,7 @@ NOTE: Der Pfad für Prescripts oder Postscripts darf keine Laufwerke oder Shares
 
 
 
+[[step-10-review-summary]]
 == Schritt 10: Zusammenfassung überprüfen
 
 . Überprüfen Sie die Zusammenfassung, und wählen Sie dann *Fertig stellen*.

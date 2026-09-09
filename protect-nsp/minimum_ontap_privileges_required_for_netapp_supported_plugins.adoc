@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Minimum ONTAP privileges 
 summary: Die erforderlichen Mindestberechtigungen für ONTAP variieren je nach SnapCenter Plug-ins, die Sie zur Datensicherung verwenden. 
 ---
-= Minimale ONTAP-Berechtigungen für von NetApp unterstütztes Plug-in erforderlich
+= Mindestberechtigungen in ONTAP, die für von NetApp unterstützte Plug-ins in SnapCenter erforderlich sind
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup policies, policies, unix file systems, file systems 
 summary: Erstellen Sie eine Sicherungsrichtlinie für die Unix-Dateisysteme, die Sie sichern möchten. 
 ---
-= Erstellen Sie Backup-Richtlinien für Unix-Dateisysteme
+= Sicherungsrichtlinien für UNIX-Dateisysteme in SnapCenter erstellen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

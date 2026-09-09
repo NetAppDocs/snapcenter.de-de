@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter 
 summary: Konfigurieren Sie das CA-Zertifikat für den SnapCenter IBM Db2Plug-ins-Dienst auf dem Linux-Host 
 ---
-= Konfigurieren Sie das CA-Zertifikat für den SnapCenter-IBM DB2-Plug-ins-Dienst auf Linux-Host
+= Das CA-Zertifikat für den SnapCenter IBM Db2 Plug-in Service auf einem Linux-Host konfigurieren
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -17,6 +17,7 @@ Die Plug-Ins verwenden die Datei „keystore.jks“, die sich unter _/opt/NetApp
 
 
 
+[[manage-password-for-plug-in-keystore-and-alias-of-the-ca-signed-key-pair-in-use]]
 == Verwalten Sie das Kennwort für den Plug-In-Schlüsselspeicher und den Alias des verwendeten, von der Zertifizierungsstelle signierten Schlüsselpaars.
 
 .Schritte
@@ -41,6 +42,7 @@ NOTE: Das Kennwort für den Plug-In-Schlüsselspeicher und für alle zugehörige
 
 
 
+[[configure-root-or-intermediate-certificates-to-plug-in-trust-store]]
 == Konfigurieren Sie Stamm- oder Zwischenzertifikate für den Plug-In-Truststore
 
 Sie sollten die Stamm- oder Zwischenzertifikate ohne den privaten Schlüssel für den Plug-In-Truststore konfigurieren.
@@ -63,6 +65,7 @@ NOTE: Sie sollten das Root-CA-Zertifikat und anschließend die Zwischenzertifizi
 
 
 
+[[configure-ca-signed-key-pair-to-plug-in-trust-store]]
 == Konfigurieren Sie das von der Zertifizierungsstelle signierte Schlüsselpaar für den Plug-In-Truststore
 
 Sie sollten das von der Zertifizierungsstelle signierte Schlüsselpaar für den Truststore des Plug-Ins konfigurieren.
@@ -101,6 +104,7 @@ Diesen Wert mit dem Schlüssel SCC_CERTIFICATE_ALIAS aktualisieren.
 
 
 
+[[configure-certificate-revocation-list-crl-for-plug-ins]]
 == Konfigurieren der Zertifikatsperrliste (CRL) für Plug-Ins
 
 .Über diese Aufgabe

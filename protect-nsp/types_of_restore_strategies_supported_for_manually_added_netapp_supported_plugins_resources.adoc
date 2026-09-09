@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter 
 summary: Sie müssen eine Strategie definieren, bevor Sie die Restore-Vorgänge mit SnapCenter erfolgreich durchführen können. Es gibt zwei Arten von Wiederherstellungsstrategien für manuell hinzugefügte von NetApp unterstützte Plug-in-Ressourcen. Sie können manuell hinzugefügte, von NetApp unterstützte Plug-in-Ressourcen nicht wiederherstellen. 
 ---
-= Typen von Wiederherstellungsstrategien, die für manuell hinzugefügte NetApp-unterstützte Plug-in-Ressourcen unterstützt werden
+= NetApp unterstützte Strategien zur Wiederherstellung von Plug-in-Ressourcen in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -18,6 +18,7 @@ NOTE: Sie können manuell hinzugefügte, von NetApp unterstützte Plug-in-Ressou
 
 
 
+[[complete-resource-restore]]
 == Komplette Ressourcenwiederherstellung
 
 * Stellt alle Volumes, qtrees und LUNs einer Ressource wieder her
@@ -28,6 +29,7 @@ NOTE: Wenn die Ressource Volumes oder qtrees enthält, werden die nach dem ausge
 
 
 
+[[file-level-restore]]
 == Wiederherstellung auf Dateiebene
 
 * Wiederherstellung von Dateien aus Volumes, qtrees oder Verzeichnissen

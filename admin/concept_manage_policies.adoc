@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Manage policies 
 summary: Sie können Richtlinien von einer Ressource oder Ressourcengruppe trennen, ändern, löschen, anzeigen und kopieren. 
 ---
-= Management von Richtlinien
+= Richtlinien in SnapCenter verwalten
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ Sie können Richtlinien von einer Ressource oder Ressourcengruppe trennen, ände
 
 
 
+[[modify-policies]]
 == Richtlinien ändern
 
 Sie können die Replikationsoptionen, die Snapshot-Aufbewahrungseinstellungen, die Anzahl der Fehlerversuche oder die Skriptinformationen ändern, während eine Richtlinie mit einer Ressource oder Ressourcengruppe verbunden ist. Sie können den Terminplantyp (Häufigkeit) nur ändern, wenn Sie eine Richtlinie trennen.
@@ -59,6 +60,7 @@ Wenn z. B. eine Richtlinie stündliche Backups angibt und Sie diese in tägliche
 
 
 
+[[detach-policies]]
 == Richtlinien trennen
 
 Sie können Richtlinien jederzeit von einer Ressource oder Ressourcengruppe trennen, wenn diese Richtlinien nicht mehr den Datenschutz für die Ressourcen regeln sollen. Sie müssen eine Richtlinie trennen, bevor Sie sie löschen können oder bevor Sie den Terminplantyp ändern.
@@ -74,6 +76,7 @@ Sie können Richtlinien jederzeit von einer Ressource oder Ressourcengruppe tren
 
 
 
+[[delete-policies]]
 == Richtlinien löschen
 
 Wenn Sie keine Richtlinien mehr benötigen, können Sie sie löschen.

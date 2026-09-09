@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Manage hosts 
 summary: Sie können Hosts hinzufügen und SnapCenter-Plug-in-Pakete installieren, einen Verifizierungsserver hinzufügen, Hosts entfernen, Backup-Jobs migrieren und den Host aktualisieren, um Plug-in-Pakete zu aktualisieren oder neue Plug-in-Pakete hinzuzufügen. Abhängig vom verwendeten Plug-in können Sie auch Festplatten bereitstellen, SMB-Freigaben managen, Initiatorgruppen \\ managen, iSCSI-Sessions managen und Daten migrieren. 
 ---
-= Management von Hosts
+= Hosts in SnapCenter verwalten
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -248,6 +248,7 @@ Nein
 |===
 
 
+[[refresh-virtual-machine-information]]
 == Informationen zu Virtual Machines aktualisieren
 
 Sie sollten Ihre Virtual Machine-Informationen aktualisieren, wenn sich die VMware vCenter-Anmeldedaten ändern oder der Datenbank- oder Dateisystem-Host neu startet. Durch die Aktualisierung der Informationen Ihrer Virtual Machine in SnapCenter wird die Kommunikation mit dem VMware vSphere vCenter initiiert und die Anmeldedaten für vCenter abgerufen.
@@ -265,6 +266,7 @@ NOTE: RDM-basierte Festplatten werden vom SnapCenter-Plug-in für Microsoft Wind
 
 
 
+[[modify-plug-in-hosts]]
 == Ändern Sie die Plug-in-Hosts
 
 Nach der Installation eines Plug-ins können Sie ggf. die Details der Plug-in Hosts ändern. Sie können Anmeldeinformationen, Installationspfad, Plug-ins, Logverzeichnis-Details für das SnapCenter-Plug-in für Microsoft SQL Server, das Group Managed Service Account (gMSA) und den Plug-in-Port ändern.
@@ -311,6 +313,7 @@ Der Host wurde validiert und zum SnapCenter-Server hinzugefügt.
 
 
 
+[[start-or-restart-plug-in-services]]
 == Plug-in-Dienste starten oder neu starten
 
 Wenn Sie die SnapCenter Plug-in-Dienste starten, können Sie Dienste starten, wenn sie nicht ausgeführt werden, oder wenn sie ausgeführt werden. Sie möchten die Dienste möglicherweise neu starten, nachdem die Wartung durchgeführt wurde.
@@ -330,6 +333,7 @@ Sie können den Service mehrerer Hosts gleichzeitig starten oder neu starten.
 
 
 
+[[suspend-schedules-for-host-maintenance]]
 == Unterbrechen Sie die Zeitpläne für die Hostwartung
 
 Wenn Sie verhindern möchten, dass der Host geplante SnapCenter-Jobs ausführt, können Sie Ihren Host in den Wartungsmodus versetzen. Führen Sie dies vor dem Upgrade der Plug-ins durch oder führen Sie Wartungsaufgaben auf Hosts durch.

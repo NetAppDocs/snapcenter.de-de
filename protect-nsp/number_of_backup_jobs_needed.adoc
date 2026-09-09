@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup jobs 
 summary: 'Zu den Faktoren, die die Anzahl der erforderlichen Backup-Jobs bestimmen, zählen die Größe der Ressource, die Anzahl der verwendeten Volumes, die Änderungsrate der Ressource und Ihr Service Level Agreement \ (SLA\).' 
 ---
-= Anzahl der erforderlichen Backup-Jobs
+= Anzahl der benötigten Sicherungsaufträge in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

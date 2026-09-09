@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: oracle databases discover 
 summary: So entdeckt SnapCenter Oracle Datenbanken. 
 ---
-= Bevorzugte Knoten im RAC-Setup
+= Wie SnapCenter bevorzugte Knoten in einer RAC-Konfiguration verwendet
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -26,12 +26,14 @@ Das node3 wird nicht für das Backup verwendet, da es sich nicht auf der Liste d
 
 
 
+[[flex-asm-setup]]
 == Flex ASM-Einrichtung
 
 In einem Flex ASM-Setup werden Leaf-Knoten nicht als bevorzugte Knoten aufgeführt, wenn die Kardinalität kleiner als die Anzahl der Knoten im RAC-Cluster ist. Wenn sich Änderungen an den Flex ASM-Cluster-Knotenrollen ergeben, sollten Sie manuell ermitteln, damit die bevorzugten Nodes aktualisiert werden.
 
 
 
+[[required-database-state]]
 == Erforderlicher Datenbankstatus
 
 Die RAC-Datenbankinstanzen auf den bevorzugten Nodes müssen den erforderlichen Status aufweisen, damit das Backup erfolgreich abgeschlossen werden kann:

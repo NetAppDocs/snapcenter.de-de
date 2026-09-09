@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SQL Server Database, back up, resource groups 
 summary: Eine Ressourcengruppe ist eine Sammlung von Ressourcen auf einem Host. Für alle in der Ressourcengruppe definierten Ressourcen wird ein Sicherungsvorgang in der Ressourcengruppe durchgeführt. 
 ---
-= Sichern Sie SQL Server-Ressourcengruppen
+= SQL Server-Ressourcengruppen in SnapCenter sichern
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

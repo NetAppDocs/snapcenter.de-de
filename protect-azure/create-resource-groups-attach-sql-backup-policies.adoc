@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resource groups, attach policies, snapcenter, sql, backup polices, schedule 
 summary: Eine Ressourcengruppe ist der Container, dem Sie Ressourcen hinzufügen müssen, die Sie sichern und schützen möchten. 
 ---
-= Erstellen von Ressourcengruppen und Anhängen von SQL-Backup-Richtlinien
+= Erstellung von SnapCenter Ressourcengruppen und Anbindung von SQL Server Sicherungsrichtlinien
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

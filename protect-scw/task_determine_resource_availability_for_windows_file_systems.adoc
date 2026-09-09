@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: availability 
 summary: Ressourcen sind die LUNs und ähnliche Komponenten in Ihrem Dateisystem, die von Ihren installierten Plug-ins verwaltet werden. Sie können diese Ressourcen zu Ressourcengruppen hinzufügen, sodass Sie Datensicherungsaufträge auf mehreren Ressourcen ausführen können. Zunächst müssen Sie jedoch ermitteln, welche Ressourcen Sie verfügbar haben. Die Ermittlung verfügbarer Ressourcen überprüft außerdem, ob die Plug-in-Installation erfolgreich abgeschlossen wurde. 
 ---
-= Bestimmen Sie die Verfügbarkeit von Ressourcen für Windows File-Systeme
+= Verfügbarkeit von SnapCenter-Ressourcen für Windows-Dateisysteme bestimmen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
