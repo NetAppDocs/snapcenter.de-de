@@ -78,7 +78,7 @@ indexpage:
     - title: NetApp Blog – SnapCenter
       url: https://blog.netapp.com/tag/snapcenter/
     - title: NetApp Community – SnapCenter
-      url: https://community.netapp.com/t5/forums/filteredbylabelpage/board-id/backup-and-restore-discussions/label-name/snapcenter
+      url: https://community.netapp.com/community/categories/solutions
   - title: Mehr Ressourcen
     links:
     - title: Cmdlet Referenzhandbuch
