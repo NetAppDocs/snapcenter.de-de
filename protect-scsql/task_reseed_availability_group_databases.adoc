@@ -2,7 +2,7 @@
 permalink: protect-scsql/task_reseed_availability_group_databases.html 
 sidebar: sidebar 
 keywords: reseed 
-summary: 'Erneutes Seeding ist eine Option zur Wiederherstellung von Datenbanken der Verfügbarkeitsgruppe \(AG\). Sollte die Synchronisierung einer sekundären Datenbank mit der primären Datenbank in einer AG nicht mehr synchronisiert werden, können Sie die sekundäre Datenbank erneut speichern.' 
+summary: 'Erneutes Seeding ist eine Option zur Wiederherstellung von Datenbanken der Availability Group (AG). Sollte die Synchronisierung einer sekundären Datenbank mit der primären Datenbank in einer AG nicht mehr synchronisiert werden, können Sie die sekundäre Datenbank erneut speichern.' 
 ---
 = Availability Group-Datenbanken in SnapCenter neu säen
 :allow-uri-read: 

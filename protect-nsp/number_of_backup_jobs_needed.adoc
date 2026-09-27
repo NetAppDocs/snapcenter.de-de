@@ -2,7 +2,7 @@
 permalink: protect-nsp/number_of_backup_jobs_needed.html 
 sidebar: sidebar 
 keywords: backup jobs 
-summary: 'Zu den Faktoren, die die Anzahl der erforderlichen Backup-Jobs bestimmen, zählen die Größe der Ressource, die Anzahl der verwendeten Volumes, die Änderungsrate der Ressource und Ihr Service Level Agreement \ (SLA\).' 
+summary: 'Zu den Faktoren, die die Anzahl der erforderlichen Backup-Jobs bestimmen, zählen die Größe der Ressource, die Anzahl der verwendeten Volumes, die Änderungsrate der Ressource und Ihr Service Level Agreement (SLA).' 
 ---
 = Anzahl der benötigten Sicherungsaufträge in SnapCenter
 :allow-uri-read: 

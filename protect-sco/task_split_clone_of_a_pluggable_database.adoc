@@ -2,7 +2,7 @@
 permalink: protect-sco/task_split_clone_of_a_pluggable_database.html 
 sidebar: sidebar 
 keywords: split, PDB, cloned PDB 
-summary: 'Sie können SnapCenter verwenden, um eine geklonte steckbare Datenbank \(PDB\) aufzuteilen.' 
+summary: 'Sie können eine geklonte Plug-in-Datenbank (PDB) mit SnapCenter teilen.' 
 ---
 = Einen Klon einer pluggable Datenbank in SnapCenter aufteilen
 :allow-uri-read: 

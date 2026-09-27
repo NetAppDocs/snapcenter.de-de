@@ -2,7 +2,7 @@
 permalink: admin/task_how_to_view_information_on_the_dashboard.html 
 sidebar: sidebar 
 keywords: dashboard 
-summary: 'Im linken Navigationsbereich der SnapCenter können Sie verschiedene Dashboard-Kacheln oder Anzeigen zusammen mit den zugehörigen Systemdetails anzeigen. Die Anzahl der im Dashboard verfügbaren Anzeigen ist festgelegt und kann nicht geändert werden. Der Inhalt der einzelnen Displays hängt von der rollenbasierten Zugriffssteuerung \(RBAC\) ab.' 
+summary: 'Im linken Navigationsbereich der SnapCenter können Sie verschiedene Dashboard-Kacheln oder Anzeigen zusammen mit den zugehörigen Systemdetails anzeigen. Die Anzahl der im Dashboard verfügbaren Anzeigen ist festgelegt und kann nicht geändert werden. Die in den einzelnen Displays bereitgestellten Inhalte hängen von der rollenbasierten Zugriffssteuerung (Role Based Access Control, RBAC) ab.' 
 ---
 = Informationen zum SnapCenter Dashboard anzeigen
 :allow-uri-read: 

@@ -2,7 +2,7 @@
 permalink: protect-postgresql/number-of-backup-jobs-needed-for-postgresql.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for postgresql 
-summary: 'Zu den Faktoren, die die Anzahl der erforderlichen Backup-Jobs bestimmen, zählen die Größe der Ressource, die Anzahl der verwendeten Volumes, die Änderungsrate der Ressource und Ihr Service Level Agreement \ (SLA\).' 
+summary: 'Zu den Faktoren, die die Anzahl der erforderlichen Backup-Jobs bestimmen, zählen die Größe der Ressource, die Anzahl der verwendeten Volumes, die Änderungsrate der Ressource und Ihr Service Level Agreement (SLA).' 
 ---
 = SnapCenter Plug-in für PostgreSQL Anzahl der benötigten Backup-Jobs
 :allow-uri-read: 

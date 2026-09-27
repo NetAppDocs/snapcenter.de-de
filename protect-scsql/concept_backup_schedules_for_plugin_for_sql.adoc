@@ -2,7 +2,7 @@
 permalink: protect-scsql/concept_backup_schedules_for_plugin_for_sql.html 
 sidebar: sidebar 
 keywords: Backup schedules 
-summary: 'Die Sicherungshäufigkeit \(Schedule type\) wird in den Richtlinien angegeben; ein Backup-Zeitplan wird in der Konfiguration der Ressourcengruppe angegeben.' 
+summary: 'Die Backup-Häufigkeit (Zeitplantyp) wird in den Richtlinien festgelegt, und ein Backup-Zeitplan wird in der Konfiguration der Ressourcengruppe festgelegt.' 
 ---
 = Sicherungszeitpläne für das SnapCenter Plug-in für SQL Server
 :allow-uri-read: 

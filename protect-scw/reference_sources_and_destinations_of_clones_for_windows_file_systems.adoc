@@ -2,7 +2,7 @@
 permalink: protect-scw/reference_sources_and_destinations_of_clones_for_windows_file_systems.html 
 sidebar: sidebar 
 keywords: snapcenter 
-summary: 'Sie können ein File-System-Backup vom primären oder sekundären Storage klonen. Sie können auch das Ziel wählen, das Ihre Anforderungen unterstützt: Entweder den ursprünglichen Backup-Standort oder ein anderes Ziel auf demselben Host oder auf einem anderen Host. Das Ziel muss sich auf demselben Volume befinden wie das Quellbackup des Klons.' 
+summary: Sie können eine Dateisystemsicherung vom primären oder sekundären Speicher klonen. Außerdem kann das Ziel ausgewählt werden, das Ihre Anforderungen unterstützt, entweder der ursprüngliche Speicherort der Sicherung oder ein anderes Ziel auf demselben Host oder auf einem anderen Host. Das Ziel muss sich auf demselben Volume wie die Quellsicherung des Klons befinden. 
 ---
 = SnapCenter Klonquellen und -ziele für Windows-Dateisysteme
 :allow-uri-read: 

@@ -2,7 +2,7 @@
 permalink: admin/concept_manage_resources_of_untrusted_domains.html 
 sidebar: sidebar 
 keywords: Manage resources 
-summary: 'Zusätzlich zum Managen von Hosts in vertrauenswürdigen Active Directory \(AD\) Domänen managt SnapCenter auch Hosts in mehreren AD nicht vertrauenswürdigen Domänen. Die nicht vertrauenswürdigen AD-Domänen müssen beim SnapCenter-Server registriert werden. SnapCenter unterstützt Benutzer und Gruppen aus mehreren nicht vertrauenswürdigen AD-Domänen.' 
+summary: 'Neben dem Management von Hosts in vertrauenswürdigen Active Directory (AD) Domänen managt SnapCenter auch Hosts in mehreren AD-Domänen, die nicht vertrauenswürdig sind. Die nicht vertrauenswürdigen AD-Domänen müssen beim SnapCenter-Server registriert werden. SnapCenter unterstützt Benutzer und Gruppen aus mehreren nicht vertrauenswürdigen AD-Domänen.' 
 ---
 = Ressourcen von SnapCenter in nicht vertrauenswürdigen Domänen verwalten
 :allow-uri-read: 

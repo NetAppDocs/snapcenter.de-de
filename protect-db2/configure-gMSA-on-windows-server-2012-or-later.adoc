@@ -2,7 +2,7 @@
 permalink: protect-db2/configure-gMSA-on-windows-server-2012-or-later.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Mit Windows Server 2016 oder höher können Sie ein Group Managed Service Account \(gMSA\) erstellen, das über ein verwaltetes Domain-Konto eine automatisierte Verwaltung von Service-Konten ermöglicht.' 
+summary: 'Mit Windows Server 2016 oder höher können Sie ein Group Managed Service Account (gMSA) erstellen, das über ein verwaltetes Domain-Konto eine automatisierte Verwaltung von Service-Konten ermöglicht.' 
 ---
 = gMSA auf Windows Server 2016 oder höher für SnapCenter konfigurieren
 :allow-uri-read: 

@@ -2,7 +2,7 @@
 permalink: protect-mysql/back-up-mysql-resources.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for MySQL 
-summary: 'Sie können entweder ein Backup einer Ressource \(Datenbank\) oder einer Ressourcengruppe erstellen. Der Backup-Workflow umfasst die Planung, Identifizierung der Backup-Datenbanken, das Management von Backup-Richtlinien, das Erstellen von Ressourcengruppen und das Anhängen von Richtlinien, das Erstellen von Backups und das Monitoring der Betriebsprozesse.' 
+summary: 'Sie können entweder ein Backup einer Ressource (Datenbank) oder einer Ressourcengruppe erstellen. Der Backup-Workflow umfasst die Planung, Identifizierung der Backup-Datenbanken, das Management von Backup-Richtlinien, das Erstellen von Ressourcengruppen und das Anhängen von Richtlinien, das Erstellen von Backups und das Monitoring der Betriebsprozesse.' 
 ---
 = MySQL Backup-Workflow mit SnapCenter
 :allow-uri-read: 

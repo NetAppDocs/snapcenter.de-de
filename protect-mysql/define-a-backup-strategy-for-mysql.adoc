@@ -2,7 +2,7 @@
 permalink: protect-mysql/define-a-backup-strategy-for-mysql.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for MySQL 
-summary: 'Wenn Sie eine Backup-Strategie definieren, bevor Sie Ihre Backup-Jobs erstellen, erhalten Sie die Backups, die Sie benötigen, um Ihre Ressourcen erfolgreich wiederherzustellen oder zu klonen. Ihr Service Level Agreement \ (SLA\), die Recovery-Zeitvorgabe \ (RTO\) und der Recovery-Zeitpunkt \ (RPO\) bestimmen weitgehend Ihre Backup-Strategie.' 
+summary: 'Wenn Sie eine Backup-Strategie definieren, bevor Sie Ihre Backup-Jobs erstellen, erhalten Sie die Backups, die Sie benötigen, um Ihre Ressourcen erfolgreich wiederherzustellen oder zu klonen. Ihr Service Level Agreement (SLA), Recovery Time Objective (RTO) und Recovery Point Objective (RPO) bestimmen Ihre Backup-Strategie weitestgehend.' 
 ---
 = Eine Backup-Strategie für MySQL mit SnapCenter definieren
 :allow-uri-read: 

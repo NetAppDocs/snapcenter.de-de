@@ -2,7 +2,7 @@
 permalink: protect-mysql/number-of-backup-jobs-needed-for-mysql.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for MySQL 
-summary: 'Zu den Faktoren, die die Anzahl der erforderlichen Backup-Jobs bestimmen, zählen die Größe der Ressource, die Anzahl der verwendeten Volumes, die Änderungsrate der Ressource und Ihr Service Level Agreement \ (SLA\).' 
+summary: 'Zu den Faktoren, die die Anzahl der erforderlichen Backup-Jobs bestimmen, zählen die Größe der Ressource, die Anzahl der verwendeten Volumes, die Änderungsrate der Ressource und Ihr Service Level Agreement (SLA).' 
 ---
 = Anzahl der vom SnapCenter Plug-in für MySQL benötigten Backup-Jobs
 :allow-uri-read: 

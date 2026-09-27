@@ -2,7 +2,7 @@
 permalink: admin/concept_manage_ems_data_collection.html 
 sidebar: sidebar 
 keywords: EMS data collection 
-summary: 'Sie können die Datenerfassung im Event Management System (EMS) mithilfe von PowerShell Cmdlets planen und verwalten. Die EMS-Datenerfassung umfasst das Sammeln von Details zum SnapCenter-Server, den installierten SnapCenter-Plug-in-Paketen, den Hosts und ähnlichen Informationen und das Senden an eine bestimmte virtuelle ONTAP Storage-Maschine \(SVM\).' 
+summary: 'Sie können die Datenerfassung im Event Management System (EMS) mithilfe von PowerShell Cmdlets planen und verwalten. Die EMS-Datenerfassung umfasst die Sammlung von Details zum SnapCenter-Server, den installierten SnapCenter-Plug-in-Paketen, den Hosts und ähnlichen Informationen und sendet sie dann an eine bestimmte ONTAP Storage Virtual Machine (SVM).' 
 ---
 = Verwaltung der EMS-Datenerfassung in SnapCenter
 :allow-uri-read: 

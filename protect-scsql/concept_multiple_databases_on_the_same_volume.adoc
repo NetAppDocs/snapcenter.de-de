@@ -2,7 +2,7 @@
 permalink: protect-scsql/concept_multiple_databases_on_the_same_volume.html 
 sidebar: sidebar 
 keywords: Multiple databases 
-summary: 'Sie können alle Datenbanken auf demselben Volume platzieren, da die Backup-Richtlinie über die Option verfügt, die maximale Datenbank pro Backup \ festzulegen (der Standardwert ist 100\).' 
+summary: 'Sie können alle Datenbanken auf demselben Volume ablegen, da die Backup-Richtlinie die Möglichkeit hat, die maximale Datenbank pro Backup festzulegen (Standardwert ist 100).' 
 ---
 = Mehrere Datenbanken auf demselben Volume in SnapCenter
 :allow-uri-read: 
