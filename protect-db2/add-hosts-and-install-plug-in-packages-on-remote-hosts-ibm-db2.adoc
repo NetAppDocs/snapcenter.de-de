@@ -132,6 +132,10 @@ NOTE: GSSA wird nur für den SnapCenter-Plug-in für Windows-Dienst als Anmelde-
 Wenn Sie das Kontrollkästchen „Vorabprüfungen überspringen“ nicht aktiviert haben, wird der Host überprüft, um festzustellen, ob er die Voraussetzungen für die Installation des Plug-ins erfüllt. Dabei werden Festplattenspeicher, Arbeitsspeicher, PowerShell-Version, .NET-Version, Installationsort (für Windows-Plug-ins) sowie Java 17 (für SnapCenter 6.2.1 und höher) bzw. Java 11 (für SnapCenter 6.2 und niedriger) für Windows- und Linux-Plug-ins mit den Mindestanforderungen abgeglichen. Werden die Mindestanforderungen nicht erfüllt, werden entsprechende Fehler- oder Warnmeldungen angezeigt.
 
 +
+
+NOTE: Benutzer ohne Root-Rechte müssen über Ausführungsberechtigungen verfügen, um Java auszuführen.
+
++
 Wenn der Fehler mit dem Festplattenspeicher oder RAM zusammenhängt, können Sie die Datei Web.config unter C:\Programme\NetApp\SnapCenter WebApp aktualisieren, um die Standardwerte zu ändern. Wenn der Fehler mit anderen Parametern zusammenhängt, müssen Sie das Problem beheben.
 
 +

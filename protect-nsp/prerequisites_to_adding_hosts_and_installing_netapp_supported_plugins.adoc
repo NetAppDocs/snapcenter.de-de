@@ -64,6 +64,10 @@ link:https://www.oracle.com/java/technologies/downloads/#java17["Java für Linux
 +
 https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?license=IBM["Java für AIX herunterladen"]
 
++
+
+NOTE: Benutzer ohne Root-Rechte müssen über Ausführungsberechtigungen verfügen, um Java auszuführen.
+
 * Sie müssen sudo-Berechtigungen für den nicht-Root-Benutzer konfigurieren, um Zugriff auf mehrere Pfade zu ermöglichen. Fügen Sie die folgenden Zeilen zur Datei /etc/sudoers mit dem Dienstprogramm visudo Linux hinzu.
 +
 
@@ -145,6 +149,10 @@ NOTE: Sie sollten genügend Festplattenspeicher zuweisen und den Speicherverbrau
 Erforderliche Softwarepakete
  a| 
 * Java 17 für SnapCenter 6.2.1 und höher, IBM Java oder Java 11 für SnapCenter 6.2 und früher, IBM Java
++
+
+NOTE: Benutzer ohne Root-Rechte müssen über Ausführungsberechtigungen verfügen, um Java auszuführen.
+
 
 
 Wenn Sie Java auf die neueste Version aktualisiert haben, müssen Sie sicherstellen, dass die Option JAVA_HOME unter /var/opt/snapcenter/spl/etc/spl.properties auf die richtige Java-Version und den richtigen Pfad eingestellt ist.

@@ -18,6 +18,10 @@ Bevor Sie das SnapCenter-Plug-in für PostgreSQL verwenden, muss der SnapCenter-
 * Konfigurieren Sie die SnapCenter Umgebung, indem Sie Storage-Systemverbindungen hinzufügen und ggf. Anmeldedaten erstellen.
 * Java 17 (für SnapCenter 6.2.1 und höher) oder Java 11 (für SnapCenter 6.2 und früher) auf Ihrem Linux- oder Windows-Host installieren.
 +
+
+NOTE: Benutzer ohne Root-Rechte müssen über Ausführungsberechtigungen verfügen, um Java auszuführen.
+
++
 Sie müssen den Java-Pfad in der Umgebungspfadvariable des Host-Rechners festlegen.
 
 * Richten Sie SnapMirror und SnapVault ein, sofern Sie eine Backup-Replizierung möchten.
