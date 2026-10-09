@@ -13,6 +13,13 @@ summary: Sie erstellen Initiatorgruppen, um anzugeben, welche Hosts auf eine bes
 [role="lead"]
 Sie erstellen Initiatorgruppen, um anzugeben, welche Hosts auf eine bestimmte LUN im Storage-System zugreifen können. Sie können SnapCenter eine Initiatorgruppe auf einem Windows Host erstellen, umbenennen, ändern oder löschen.
 
+[NOTE]
+====
+* SnapCenter erstellt automatisch eine Initiatorgruppe, falls beim Wiederherstellen oder Klonen von LUNs noch keine vorhanden ist. Die Initiatorgruppe wird mit dem folgenden Namensformat erstellt: `snapcenter_<id>_igroup`
+* SnapCenter löscht eine im Rahmen eines Löschklonvorgangs erstellte Initiatorgruppe nicht. Sie bleibt für weitere Klon- oder Wiederherstellungsvorgänge erhalten.
+
+
+====
 
 
 [[create-an-igroup]]
